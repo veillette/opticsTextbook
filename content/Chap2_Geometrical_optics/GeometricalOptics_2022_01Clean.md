@@ -55,7 +55,7 @@ The speed of light in a material with refractive index $n$, is $c/n$, where $c=3
 
 Let $\mathbf{r}(s)$, be a ray with $s$ the length parameter. The ray links two points $S$ and $P$.
 Suppose that the refractive index varies with position: $n(\mathbf{r})$. Over the infinitesimal distance from $s$ to
-$s+\mathrm{d}s$, the speed of the light is
+$s+\mathrm{d}$, the speed of the light is
 
 ```{math}
 :label: eq.defcn
@@ -63,12 +63,12 @@ $s+\mathrm{d}s$, the speed of the light is
 \frac{c}{n(\mathbf{r}(s))}.
 \end{align*}
 ```
-Hence the time it takes for light to go from $\mathbf{r}(s)$ to $\mathbf{r}(s+\mathrm{d}s)$ is:
+Hence the time it takes for light to go from $\mathbf{r}(s)$ to $\mathbf{r}(s+\mathrm{d})$ is:
 
 ```{math}
 :label: eq.defdt
 \begin{align*}
-\mathrm{d}t = \frac{n(\mathbf{r}(s))}{c} \mathrm{d}s,
+\mathrm{d} = \frac{n(\mathbf{r}(s))}{c} \mathrm{d},
 \end{align*}
 ```
 and the total total time to go from $S$ to $P$ is:
@@ -76,7 +76,7 @@ and the total total time to go from $S$ to $P$ is:
 ```{math}
 :label: eq.ttot
 \begin{align*}
-t_{S \rightarrow P} = \int_0^{s_P} \frac{n(\mathbf{r}(s))}{c} \mathrm{d}s,
+t_{S \rightarrow P} = \int_0^{s_P} \frac{n(\mathbf{r}(s))}{c} \mathrm{d},
 \end{align*}
 ```
 where $s_P$ is the distance along the ray from S to P.
@@ -84,7 +84,8 @@ The **optical path length** [m] of the ray between S and P is defined by:
 
 
 ```{math}
-\boxed{\text{OPL} = \int_0^{s_P} n(\mathbf{r}(s)) \mathrm{d}s,}
+:label: eq.defOPL
+\boxed{\text{OPL} = \int_0^{s_P} n(\mathbf{r}(s)) \mathrm{d},}
 ```
 
 So the OPL is the distance weighted by the refractive index. 
@@ -290,7 +291,7 @@ Imaging by a spherical interface between two media with refractive indices $n_2>
 
 (Note: the proof is **not** part of the exam).
 It suffices to show that $P$ is independent of the ray, i.e. of $A$. We will do this by expressing $s_i$ into $s_o$ and showing that the result is independent of $A$. Let $\alpha_1$ and $\alpha_2$ be the angles of the rays $SA$ and $AP$ with the $z$-axis as shown in {numref}`Fig_2_10_Spherical_interface`.
-Let $\theta_i$ be the angle of incidence of ray $SA$ with the local normal $CA$ on the surface and $\theta_t$ be the angle of refraction. By considering the angles in triangle $\mathrm{d}lta \text{SCA}$ we find
+Let $\theta_i$ be the angle of incidence of ray $SA$ with the local normal $CA$ on the surface and $\theta_t$ be the angle of refraction. By considering the angles in triangle $\Delta \text{SCA}$ we find
 
 
 ```{math}
@@ -299,7 +300,7 @@ Let $\theta_i$ be the angle of incidence of ray $SA$ with the local normal $CA$ 
 \theta_i = \alpha_1 + \varphi.
 \end{align*}
 ```
-Similarly, from $\mathrm{d}lta \,\text{CPA}$ we find
+Similarly, from $\Delta \,\text{CPA}$ we find
 
 ```{math}
 :label: eq.lpha2
@@ -376,6 +377,7 @@ Its $z$-coordinate is given by:
 
 
 ```{math}
+:label: eq.def_fi
 \boxed{f_i = \frac{n_2}{{\cal P}}=\frac{n_2 R}{n_2-n_1},}
 ```
 
@@ -384,6 +386,7 @@ and its absolute value (it is negative when $n_2<n_1$) is called the **second fo
 When $s_i\rightarrow \infty$, the rays after refraction are parallel to the $z$-axis and we get $s_o \rightarrow -n_1 R/(n_2-n_1)$. The object point for which the rays in the medium 2 are parallel to the $z$-axis is called the **first focal point** or **object focal point** $F_o$. Its $z$-coordinate is:
 
 ```{math}
+:label: eq.def_fo
 \boxed{f_o=-\frac{n_1}{{\cal P}}= -\frac{n_1 R}{n_2-n_1}.}
 ```
 
@@ -392,6 +395,7 @@ The absolute value $|f_o|$ of $f_o$ is called the **front focal length** or **ob
 With {eq}`eq.def_fi` and {eq}`eq.def_fo`, {eq}`eq.one_surface` can be rewritten as:
 
 ```{math}
+:label: eq.one_surface2
 \boxed{-\frac{n_1}{s_o} + \frac{n_2}{s_i} = {\cal P} =-\frac{n_2}{f_i}= -\frac{n_1}{f_o}.}
 ```
 
@@ -527,6 +531,7 @@ where we have replaced $\alpha_2$ by $-\alpha_2$ in {eq}`eq.n1al1n2al2`, because
 Because furthermore $y_2=y_1$, we conclude
     
 ```{math}
+:label: eq.matsph0
 \begin{align*}
 \left( \begin{array}{c}
     n_2\alpha_2 \\
@@ -542,7 +547,7 @@ Because furthermore $y_2=y_1$, we conclude
     \begin{array}{c}
     n_1 \alpha_1 \\
     y_1
-    \end{array}\right), \quad \text{ \bf spherical surface,}
+    \end{array}\right), \quad \textbf{spherical surface,}
 \end{align*}
 ```
 where
@@ -572,7 +577,7 @@ y_2
 \begin{array}{c}
 n_1 \alpha_1 \\
 y_1
-\end{array}\right), \quad \text{ \bf spherical reflector,}
+\end{array}\right), \quad \textbf{spherical reflector,}
 \end{align*}
 ```
 where
@@ -643,7 +648,7 @@ $\alpha_2=\alpha_1$ and $y_2=y_1 + \alpha_1(z_2-z_1)$, hence
 {\cal M}=\left( \begin{array}{cc}
 1 & 0 \\
 \frac{z_2-z_1}{n} & 1
-\end{array}\right), \quad \text**homogeneous space**.
+\end{array}\right), \quad \textbf{homogeneous space}.
 \end{align*}
 ```
 Note that if the light propagates from the left to the right: $z_2>z_1$ and hence $z_2-z_1$ in the first column and second row of the matrix is positive, i.e. it is the distance between the planes.
@@ -740,7 +745,7 @@ Hence the matrix that maps ray vectors in the plane immediately before the lens 
 &= \left( \begin{array}{cc}
 1 - \frac{d}{n_l}P_2 & -P_1 - P_2 + \frac{d}{n_l} P_1P_2 \\
 \frac{d}{n_l} & 1 -\frac{d}{n_l}P_1
-\end{array}\right), \quad \text**lens**.
+\end{array}\right), \quad \textbf{lens}.
 \end{align*}
 ```
 The quantity
@@ -765,7 +770,7 @@ For a thin lens the vertices $V_1$ and $V_2$ coincide and $d=0$, hence {eq}`eq.m
 {\cal M} = \left( \begin{array}{cc}
 1 & -P\\
 0 & 1
-\end{array}\right), \quad \text**thin lens**,
+\end{array}\right), \quad \textbf{thin lens},
 \end{align*}
 ```
 where
@@ -814,7 +819,7 @@ With the results obtained for the focal coordinates we can rewrite the lens matr
 {\cal M} = \left( \begin{array}{cc}
 1 & -\frac{n_2}{f_i} \\
 0 & 1
-\end{array}\right), \quad \text**thin lens**.
+\end{array}\right), \quad \textbf{thin lens}.
 \end{align*}
 ```
 
@@ -836,7 +841,8 @@ y_2=C n_1\alpha_1 + D y_1,
 This requires that
 
 ```{math}
-\boxed{C=0, \quad \text{ \bf condition for imaging}.}
+:label: eq.condimage
+\boxed{C=0, \quad \textbf{condition for imaging}.}
 ```
 
 The ratio of $y_2$ and $y_1$ IS the magnification $M$. Hence,
@@ -875,8 +881,9 @@ This ray matrix is the product of the matrix for propagation from $z=z_1$ to the
 The imaging condition {eq}`eq.condimage` implies:
 
 ```{math}
+:label: eq.lensmaker
 \boxed{-\frac{n_1}{s_o} + \frac{n_2}{s_i}={\cal P},
-\quad **Lensmaker's \;\; Formula**,}
+\quad \bf{Lensmaker's \;\; Formula},}
 ```
  where we have written $s_o=z_1$ and $s_i=z_2$ for the $z$-coordinates of the object and the image.
 Because for the thin lens matrix {eq}`eq.matz1z2`: $D=1-z_2/f_i$, it follows by using {eq}`eq.lensmaker` that the magnification {eq}`eq.magn` is given by
@@ -907,7 +914,7 @@ Object and image for a thin lens.
 
 Draw the ray through the focal point $F_o$ in object space and the ray through the centre $V$ of the lens. The first ray becomes parallel in image space. The latter intersects both surfaces of the lens almost in their (almost coinciding) vertices and therefore the refraction is opposite at both surfaces and the ray exits the lens parallel to its direction of incidence. Furthermore, its lateral displacement can be neglected because the lens is thin. (Of course, this is not correct when the refractive indices to the left and right of the lens are different). Hence, **the ray through the centre of a thin lens is not refracted**. The intersection in image space of the two rays gives the location of the image point $P_2$ of $S_2$. The image is real if the intersection occurs in image space and is virtual otherwise.
 For the case of a convergent lens with a real object with $y_o>0$ as shown in {numref}`Fig_2_17_Real_Image`, it follows from the similar triangles
-$\mathrm{d}lta\,\text{BV}\text{F}_i$ and $\mathrm{d}lta\, \text{P}_2\text{P}_1\text{F}_i$ that
+$\Delta\,\text{BV}\text{F}_i$ and $\Delta\, \text{P}_2\text{P}_1\text{F}_i$ that
 
 ```{math}
 :label: eq.ratio1
@@ -916,7 +923,7 @@ $\mathrm{d}lta\,\text{BV}\text{F}_i$ and $\mathrm{d}lta\, \text{P}_2\text{P}_1\t
 \end{align*}
 ```
 .
-From the similar triangles $\mathrm{d}lta\, \text{S}_2\text{S}_1\text{F}_o$ and $\mathrm{d}lta\, \text{AVF}_o$:
+From the similar triangles $\Delta\, \text{S}_2\text{S}_1\text{F}_o$ and $\Delta\, \text{AVF}_o$:
 
 ```{math}
 :label: eq.ratio2
@@ -929,6 +936,7 @@ here we used $|f_o|=f_i$.
 By multiplying these two equations we get the **Newtonian form** of the lens equation (valid when $n_2=n_1$):
 
 ```{math}
+:label: eq.newton
 \boxed{x_o x_i =- f_i^2=- f_o^2,}
 ```
 
@@ -950,7 +958,7 @@ The **transverse magnification** is
 M=\frac{y_i}{y_o} = \frac{s_i}{s_o} = -\frac{x_i}{f_i},
 \end{align*}
 ```
-where the second identity follows from considering the similar triangles $\mathrm{d}lta \text{P}_2\text{P}_1\text{F}_i$ and $\mathrm{d}lta \text{BVF}_i$ in {numref}`Fig_2_17_Real_Image`.
+where the second identity follows from considering the similar triangles $\Delta \text{P}_2\text{P}_1\text{F}_i$ and $\Delta \text{BVF}_i$ in {numref}`Fig_2_17_Real_Image`.
 A positive $M$ means that the image is erect, a negative $M$ means that the image is inverted.
 
 All equations are also valid for a thin negative lens and for virtual objects and images.
@@ -1015,7 +1023,7 @@ By solving {eq}`eq.L1` for $s_{1i}$ and substituting the result into {eq}`eq.L2`
 ```{math}
 :label: eq.L1L2
 \begin{align*}
-s_i = \frac{ -d f_{1i}f_{2i} + f_{2i}(f_{i1}-d)s_o }{f_{1i}(f_{2i}-d) + (f_{1i}+f_{2i}-d) s_o}, \;\;\; \quad \text**two thin lenses**.
+s_i = \frac{ -d f_{1i}f_{2i} + f_{2i}(f_{i1}-d)s_o }{f_{1i}(f_{2i}-d) + (f_{1i}+f_{2i}-d) s_o}, \;\;\; \quad \textbf{two thin lenses}.
 \end{align*}
 ```
 By taking the limit $s_o \rightarrow -\infty$, we obtain the $z$-coordinate $f_i$ of the image focal point of the two lenses, while $s_i\rightarrow \infty$ gives the $z$-coordinate $f_o$ of the object focal point:
@@ -1095,7 +1103,7 @@ We recall the result {eq}`eq.matlens` for the ray matrix between the planes thro
 &= \left( \begin{array}{cc}
 1 - \frac{d}{n_l}P_2 & -P \\
 \frac{d}{n_l} & 1 -\frac{d}{n_l}P_1
-\end{array}\right), \quad \text**thick lens**,
+\end{array}\right), \quad \textbf{thick lens},
 \end{align*}
 ```
 where
@@ -1188,6 +1196,7 @@ For a fixed diameter $D$ of the exit pupil and for given $x_o$, the magnificatio
 A larger magnification means a lower energy density, hence a longer exposure time, i.e. **the speed of the lens is reduced**. Camera lenses are usually specified by two numbers: the focal length $f$, measured with respect to the exit pupil and the diameter $D$ of the exit pupil. The **$f$-number** is the ratio of the focal length to this diameter:
 
 ```{math}
+:label: eq.fnumber
 \boxed{\text{f-number}=f/D.}
 ```
 
@@ -1217,15 +1226,11 @@ For high-quality imaging the aberrations have to be reduced by adding more lense
 
 A comprehensive treatment of aberration theory can be found in Braat et al.<sup>[^4]</sup>.
 
-\begin{figure}[!htp]
-
-\centerline{```{figure} Images/Chapter_2/2_27_ASML_EUV
+```{figure} Images/Chapter_2/2_27_ASML_EUV.png
+:name: Fig_2_27_ASML_EUV
+The EUV stepper TWINSCAN NXE:3400B.Lithographic lens system for DUV (192 nm), costing more than € 500.000. Ray paths are shown in purple. The optical system consists of mirrors because there are no suitable lenses for this wavelength \footnotesize{(Courtesy of [ASML](https://www.asml.com/en/news/media-library))}.
 ```
-}
 
-\caption{The EUV stepper TWINSCAN NXE:3400B.Lithographic lens system for DUV (192 nm), costing more than € 500.000. Ray paths are shown in purple. The optical system consists of mirrors because there are no suitable lenses for this wavelength \footnotesize{(Courtesy of [ASML](https://www.asml.com/en/news/media-library))}.}
-\label{Fig_2_27_ASML_EUV}
-\end{figure}
 
 ### Diffraction
 
