@@ -215,8 +215,8 @@ Perfect imaging: a cone of rays which diverge from $S$ and all intersect in poin
 
 We summarise the main examples of stigmatic systems.
 - **1.**
-**Perfect focusing and imaging by refraction.** A parallel bundle of rays propagating in a medium with refractive index $n_2$ can be focused into a point $F$ in a medium $n_1$. If $n_2>n_1$, the interface between the media should be a hyperbole with focus $F$, whereas if $n_2<n_1$ the interface should be an ellipse with focus $F$ (see Figs.&nbsp;{eq}`Fig_2_07_Focus-Right` and
-{eq}`Fig_2_08_Perfect_Imaging`). By reversing the rays we obtain perfect collimation. Therefore, a point $S$ in air can be perfectly imaged onto a point $F$ in air by inserting a piece of glass in between them with hyperbolic surfaces as shown in {numref}`Fig_2_08_Perfect_Imaging`. These properties are derived in Problem 2.2.
+**Perfect focusing and imaging by refraction.** A parallel bundle of rays propagating in a medium with refractive index $n_2$ can be focused into a point $F$ in a medium $n_1$. If $n_2>n_1$, the interface between the media should be a hyperbole with focus $F$, whereas if $n_2<n_1$ the interface should be an ellipse with focus $F$ (see {numref}`Fig_2_07_Focus-Right` and
+{numref}`Fig_2_08_Perfect_Imaging`). By reversing the rays we obtain perfect collimation. Therefore, a point $S$ in air can be perfectly imaged onto a point $F$ in air by inserting a piece of glass in between them with hyperbolic surfaces as shown in {numref}`Fig_2_08_Perfect_Imaging`. These properties are derived in Problem 2.2.
 - **2.** **Perfect focusing of parallel rays by a mirror**. 
 
 A bundle of parallel rays in air can be focused into a point $F$ by a mirror of parabolic shape with $F$ as focus (see {numref}`Fig_2_09_Para_Mirror`). This is derived in Problem 2.3.
@@ -962,7 +962,7 @@ where the second identity follows from considering the similar triangles $\Delta
 A positive $M$ means that the image is erect, a negative $M$ means that the image is inverted.
 
 All equations are also valid for a thin negative lens and for virtual objects and images.
-Examples of real and virtual object and image points for a positive and a negative lens are shown in Figs.&nbsp;{eq}`Fig_2_18_Positive_Lens` and {eq}`Fig_2_19_Negative_Lens`.
+Examples of real and virtual object and image points for a positive and a negative lens are shown in {numref}`Fig_2_18_Positive_Lens` and {numref}`Fig_2_19_Negative_Lens`.
 
 ```{figure} Images/Chapter_2/2_18_Positive_Lens.png
 :name: Fig_2_18_Positive_Lens
@@ -1029,9 +1029,15 @@ s_i = \frac{ -d f_{1i}f_{2i} + f_{2i}(f_{i1}-d)s_o }{f_{1i}(f_{2i}-d) + (f_{1i}+
 By taking the limit $s_o \rightarrow -\infty$, we obtain the $z$-coordinate $f_i$ of the image focal point of the two lenses, while $s_i\rightarrow \infty$ gives the $z$-coordinate $f_o$ of the object focal point:
 
 ```{math}
+:label: eq.2fi
+\begin{align*}
+f_i&= \frac{ (f_{1i}-d) f_{2i}}{f_{1i}+f_{2i}-d},
+\end{align*}
+```
+
+```{math}
 :label: eq.2fo
 \begin{align*}
-f_i&= \frac{ (f_{1i}-d) f_{2i}}{f_{1i}+f_{2i}-d}, \\
 f_o &= -\frac{(f_{2i}-d)f_{1i}}{f_{1i}+f_{2i} - d},
 \end{align*}
 ```
