@@ -9,14 +9,15 @@ parts:
       - file: content/Chap1_Basics/Basics_2022_01Clean.md
       - file: content/Chap1_Basics/Basics_Exercise_2022_01Clean.md
       - file: content/Chap2_Geometrical_optics/GeometricalOptics_2022_01Clean.md
+      - file: content/Chap2_Geometrical_optics/GeometricalOptics_2022_NLClean.md
       - file: content/Chap2_Geometrical_optics/GeometricalOptics_Exercise_2022_01.md
-      - file: content/Chap3_Optical_Instrument/Optical_instruments_2022_01.md
+      - file: content/Chap3_Optical_Instrument/Optical_instruments_2022_01Clean.md
       - file: content/Chap3_Optical_Instrument/Optical_Instruments_Exercice_2022_01.md
-      - file: content/Chap4_Polarisation/Polarization_2022_01.md
+      - file: content/Chap4_Polarisation/Polarization_2022_01Clean.md
       - file: content/Chap4_Polarisation/Polarization_Exercise_2022_01.md
-      - file: content/Chap5_Interference/InterferenceCoherence_2022_01.md
+      - file: content/Chap5_Interference/InterferenceCoherence_2022_01Clean.md
       - file: content/Chap5_Interference/InterferenceCoherence_Exercise_2022_01.md
-      - file: content/Chap6_Diffraction/DiffractiveOptics_2022_01.md
+      - file: content/Chap6_Diffraction/DiffractiveOptics_2022_01Clean.md
       - file: content/Chap6_Diffraction/DiffractiveOptics_Exercise_2022_01.md
       - file: content/Chap7_Lasers/Lasers_2022_01.md
       - file: content/Chap7_Lasers/Lasers_Exercice_2022_01.md
