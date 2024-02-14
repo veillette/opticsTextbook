@@ -16,9 +16,9 @@
 
 
 ## Polarisation States and Jones Vectors
-We have seen in {numref}`chapter.basics` that light is an electromagnetic wave which satisfies Maxwell's equations and the wave equation derived therefrom. Since the electric field is a vector which oscillates as function of time in a certain direction, we say that the wave has a certain polarisation. In this chapter we look at the different types of polarisation and how the polarisation of a light beam can be manipulated.
+We have seen in [](chapter.basics) that light is an electromagnetic wave which satisfies Maxwell's equations and the wave equation derived therefrom. Since the electric field is a vector which oscillates as function of time in a certain direction, we say that the wave has a certain polarisation. In this chapter we look at the different types of polarisation and how the polarisation of a light beam can be manipulated.
 
-We start with Eqs.&nbsp;{eq}`eq.bcE2`, {eq}`eq.defbE` and {eq}`eq.orth` which show that the (real) electric field $\mathbf{\mathcal{E}}(\mathbf{r},t)$ of a time-harmonic plane wave is always perpendicular to the direction of propagation, which is the direction of the wave vector $\mathbf{k}$ as well as the direction of the Poynting vector (the direction of the power flow). Let the wave propagate in the $z$-direction:
+We start with Eqs. {eq}`eq.bcE2`, {eq}`eq.defbE` and {eq}`eq.orth` which show that the (real) electric field $\mathbf{\mathcal{E}}(\mathbf{r},t)$ of a time-harmonic plane wave is always perpendicular to the direction of propagation, which is the direction of the wave vector $\mathbf{k}$ as well as the direction of the Poynting vector (the direction of the power flow). Let the wave propagate in the $z$-direction:
 
 ```{math}
 :label: eq.wavek
@@ -70,8 +70,8 @@ The complex vector
 ```
 is called the **Jones vector**. It is used to characterise the polarisation state.
 Let us see how, at a fixed position in space, the electric field vector behaves as a function of time for different choices of ${\cal A}_x$, ${\cal A}_y$ and $\varphi_y-\varphi_x$.
-\begin{description}
-\item[a) Linear polarisation: $\varphi_y-\varphi_x=0$ or $\varphi_y-\varphi_x=\pi$.]
+
+**a) Linear polarisation:** $\varphi_y-\varphi_x=0$ or $\varphi_y-\varphi_x=\pi$.]
 When $\varphi_y-\varphi_x=0$ we have
 
 ```{math}
@@ -108,7 +108,7 @@ If $\varphi_y-\varphi_x=\pi$ we have
 ```
 In this case ${\cal E}_x(z,t)$ and ${\cal E}_y(z,t)$ are out of phase and the electric field oscillates in the direction given by the real vector ${\cal A}_x \hat{\mathbf{x}} - {\cal A}_y \hat{\mathbf{y}}$.
 
-\item[b) Circular polarisation: $\varphi_y-\varphi_x=\pm \pi/2$, ${\cal A}_x={\cal A}_y$]. 
+**b) Circular polarisation:** $\varphi_y-\varphi_x=\pm \pi/2$, ${\cal A}_x={\cal A}_y$. 
 In this case the Jones vector is:
 
 ```{math}
@@ -139,7 +139,8 @@ The field components ${\cal E}_x(z,t)$ and ${\cal E}_y(z,t)$ are $\pi/2$ radian 
 \end{align*}
 ```
 At a given position, the electric field vector moves along a circle as time proceeds. When for an observer looking towards the source, the electric field is rotating anti-clockwise, the polarisation is called **left-circularly polarised** (+ sign in {eq}`eq.circpol`), while if the electric vector moves clockwise, the polarisation is called **right-circularly polarised** (- sign in {eq}`eq.circpol`).
-\item[c) Elliptical polarisation: $\varphi_y-\varphi_x=\pm \pi/2$, ${\cal A}_x$ and ${\cal A}_y$ arbitrary.]
+
+**c) Elliptical polarisation:** $\varphi_y-\varphi_x=\pm \pi/2$, ${\cal A}_x$ and ${\cal A}_y$ arbitrary.
 The Jones vector is:
 
 ```{math}
@@ -164,9 +165,9 @@ In this case we get instead of {eq}`eq.circpol` (again taking $\varphi_x=0$):
 \end{align*}
 ```
 which shows that the electric vector moves along an ellipse with major and minor axes parallel to the $x$- and $y$-axis. When the + sign applies, the field is called left-elliptically polarised, otherwise it is called right-elliptically polarised.
-\item[d) Elliptical polarisation: $\varphi_y-\varphi_x=$ anything else, ${\cal A}_x$ and ${\cal A}_y$ arbitrary.]
-The Jones \\
-vector is now the most general one:
+
+**d) Elliptical polarisation:** $\varphi_y-\varphi_x=$ anything else, ${\cal A}_x$ and ${\cal A}_y$ arbitrary.
+The Jones vector is now the most general one:
 
 ```{math}
 :label: eq.Jellips2pol
@@ -178,7 +179,7 @@ vector is now the most general one:
 ```
 It can be shown that the electric field vector moves always along an ellipse.
 The exact shape and orientation of this ellipse varies with the difference in phase $\varphi_y-\varphi_x$ and the ratio of the amplitude ${\cal A}_x,{\cal A}_y$ and, except when $\varphi_y-\varphi_x = \pm \pi/2$, the major and minor axis of the ellipse are not parallel to the $x$- and $y$-axis. See {numref}`fig:ellpol`.
-\end{description}
+
 **Remarks**.
 - Frequently the Jones vector is normalised such that
 
@@ -197,20 +198,26 @@ The normalized vector represents of course the same polarisation state as the un
 \end{align*}
 ```
 
-- We will show in {numref}`sec:angularspectrum` that a general time-harmonic electromagnetic field, is a superposition of plane waves with wave vectors of the same length determined by the frequency of the wave but with different directions. An example is the electromagnetic field near the focal plane of a strongly converging lens. There is then no particular direction of propagation to which the electric field should be perpendicular. In other words, there is no obvious choice for a plane in which the electric field oscillates as function of time. It can nevertheless be shown that for every point in space such a plane exists, but the orientation of the plane varies in general with position.
+- We will show in [](sec:angularspectrum) that a general time-harmonic electromagnetic field, is a superposition of plane waves with wave vectors of the same length determined by the frequency of the wave but with different directions. An example is the electromagnetic field near the focal plane of a strongly converging lens. There is then no particular direction of propagation to which the electric field should be perpendicular. In other words, there is no obvious choice for a plane in which the electric field oscillates as function of time. It can nevertheless be shown that for every point in space such a plane exists, but the orientation of the plane varies in general with position.
 Furthermore, the electric field in a certain point moves along an ellipse in the corresponding plane, but the shape of the ellipse and the orientation of its major axis can be arbitrary.
 We can conclude that in any point of an arbitrary time-harmonic electromagnetic field, the electric (and in fact also the magnetic) field vector prescribes as function of time an ellipse in some plane which depends on position<sup>[^2]</sup>. In this chapter we only consider the field and polarisation state of a single plane wave.
 
 
 ```{figure} Images/Chapter_4/4_01_Dphi_000pi_f1_BW.png
 :name: fig:linpol
+Linear polarisation
 ```
+
 ```{figure} Images/Chapter_4/4_02_Dphi_05pi_f1_BW.png
 :name: fig:circpol
+Circular polarisation
 ```
+
 ```{figure} Images/Chapter_4/4_03_Dphi_025pi_f1_BW.png
 :name: fig:ellpol
-Illustration of different types of polarisation. Top: linear polarisation; middle: circular polarisation; bottom: elliptical polarisation. The horizontal and vertical arrows indicate the momentary field components ${\cal E}_x, {\cal E}_y$. The thick arrow indicates the vector $\mathbf{\mathcal{E}}$. The black curve indicates the trajectory of $\mathbf{\mathcal{E}}(t)$.
+Elliptical polarisation
+
+Illustration of different types of polarisation. The horizontal and vertical arrows indicate the momentary field components ${\cal E}_x, {\cal E}_y$. The thick arrow indicates the vector $\mathbf{\mathcal{E}}$. The black curve indicates the trajectory of $\mathbf{\mathcal{E}}(t)$.
 ```
 
 
@@ -329,7 +336,6 @@ $\hat{\mathbf{x}}$, $\hat{\mathbf{y}}$
 \begin{align*}
 \widehat{\mathbf{x}}' &= \cos\theta \, \widehat{\mathbf{x}} + \sin \theta \, \widehat{\mathbf{y}}, \end{align*}
 ```
-
 ```{math}
 :label: eq.hatyprime
 \begin{align*}
@@ -412,7 +418,8 @@ If the matrix ${\cal M}$ describes the Jones matrix as defined in {eq}`eq.defM2a
 	\end{align*}}
 ```
 
-For more information on basis transformations, see {numref}`sec:basistrans`.
+For more information on basis transformations, see [](sec:basistrans).
+
 
 ```{figure} Images/Chapter_4/4_2_Rotation_Polarisation.png
 :name: Fig_4_2_Rotation_Axis
@@ -515,6 +522,7 @@ A half-wave plate introduces a phase shift of $\pi$, so its Jones matrix is
 \end{align*}
 ```
 because $\exp(i\pi)=-1$. An important application of the half-wave plate is to **change the orientation of linearly polarised light**. After all, what this matrix does is mirroring the polarisation state in the $x$-axis. Thus, if we choose our mirroring axis correctly (i.e. if we choose the orientation of the wave plate correctly), we can change the direction in which the light is linearly polarised arbitrarily<sup>[^7]</sup><sup>[^8]</sup>. To give an example: a wave with linear polarisation parallel to the $x$-direction, can be rotated over angle $\alpha$ by rotating the crystal such that the fast axis makes angle $\alpha/2$ with the $x$-axis. Upon propagation through the crystal, the slow axis gets an additional phase of $\pi$, due to which the electric vector makes angle $\alpha$ with the $x$-axis (see {numref}`Fig_4_04_Rotation_Polarisation`). It is not difficult to verify that when the fast and slow axis are interchanged, the same linear state of polarisation results.
+
 ```{figure} Images/Chapter_4/4_04_Rotation_polarisation.png
 :name: Fig_4_04_Rotation_Polarisation
 Rotation of horizontally polarised light over an angle $\alpha$ using a half-wave plate.
@@ -524,15 +532,13 @@ Rotation of horizontally polarised light over an angle $\alpha$ using a half-wav
 ### Full-Wave Plates
 
 A full-wave plate introduces a phase difference of $2\pi$, which is the same as introducing no phase difference between the two field components.
-So what can possibly be an application for a full-wave plate? We recall from Eq.&nbsp;{eq}`waveplate` that the phase difference is $2\pi$ only for a particular wavelength. If we send through linearly (say vertically) polarised light of other wavelengths, these will become elliptically polarised, while the light with the correct wavelength $\lambda_0$ will stay vertically polarised. If we then let all the light pass through a horizontal polariser, the light with wavelength $\lambda_0$ will be completely extinguished, while the light of other wavelengths will be able to pass through at least partially. Therefore, **full-wave plates can be used to filter out specific wavelengths of light**.
+So what can possibly be an application for a full-wave plate? We recall from Eq. {eq}`waveplate` that the phase difference is $2\pi$ only for a particular wavelength. If we send through linearly (say vertically) polarised light of other wavelengths, these will become elliptically polarised, while the light with the correct wavelength $\lambda_0$ will stay vertically polarised. If we then let all the light pass through a horizontal polariser, the light with wavelength $\lambda_0$ will be completely extinguished, while the light of other wavelengths will be able to pass through at least partially. Therefore, **full-wave plates can be used to filter out specific wavelengths of light**.
 
 ## More on Jones matrices
 If the direction of either the slow or fast axis is given and the ordinary and extra-ordinary refractive indices $n_o$ and $n_e$, it is easy to write down the Jones matrix of a birefringent plate of given thickness $d$ using the rotation matrices, see {eq}`eq.Rpmtheta`. Instead of using the rotation matrices, one can also write down a system of equations for the elements of the Jones matrix. Suppose that $\hat{\mathbf{v_o}}=v_{o,x}+\hat{\mathbf{x}}+v_{o,y}\hat{\mathbf{y}}$ and $\hat{\mathbf{v_e}}=v_{e,x}\hat{\mathbf{x}}+ v_{e,y} \hat{\mathbf{y}}$, are in the direction of the ordinary and the extra-ordinary axes, respectively. Then if the Jones matrix is
 
 $$
-{\cal M}=\left( \begin{array}{cc}
-a & b \\
-c & d
+{\cal M}=\left( \begin{array}{cc}a & b \\c & d
 \end{array}\right),
 $$ (eq.MJones)
 
@@ -547,11 +553,7 @@ then
 which implies
 
 $$
-\begin{array}{cc}
-a v_{o,x} + b v_{o,y} & = e^{i k n_o d} v_{o,x}, \\
-c v_{o,x} + d v_{o,y} & = e^{i k n_o d} v_{o,y}, \\
-a v_{e,x} + b v_{e,y} & = e^{i k n_e d} v_{e,x}, \\
-c v_{e,x} + d v_{e,y} & = e^{i k n_e d} v_{e,x}.
+\begin{array}{cc}a v_{o,x} + b v_{o,y} & = e^{i k n_o d} v_{o,x}, \\c v_{o,x} + d v_{o,y} & = e^{i k n_o d} v_{o,y}, \\a v_{e,x} + b v_{e,y} & = e^{i k n_e d} v_{e,x}, \\c v_{e,x} + d v_{e,y} & = e^{i k n_e d} v_{e,x}.
 \end{array}
 $$ (eq.system)
 
@@ -572,10 +574,11 @@ How can one verify whether this matrix corresponds to a linear polariser or to a
 Note that the elements of a Jones matrix are in general complex.
 
 
-- **1.** **Linear Polariser**.
+**1.** **Linear Polariser**.
 The matrix corresponds to a linear polariser if there is a real vector which remains invariant under ${\cal M}$ and all vectors orthogonal to this vector are mapped to zero. In other words, there must be an orthogonal basis of **real** eigenvectors and one of the eigenvalues must be 1 and the other 0.
 Hence, to check that a given matrix corresponds to a linear polariser, one should verify that one eigenvalue is 1 and the other is 0 and furthermore that the eigenvectors are **real** orthogonal vectors. It is important to check that the eigenvectors are real because if they are not, they do not correspond to particular linear polarisation directions and then the matrix does not correspond to a linear polariser.
-- **2/** **Wave plate**.
+
+**2.** **Wave plate**.
 To show that the matrix corresponds to a wave plate, there should exist two **real** orthogonal eigenvectors with, in general, complex eigenvalues of modulus 1. In fact, one of the eigenvectors corresponds to the ordinary axis with refractive index $n_{o}$, and the other to the extra-ordinary axis with refractive index $n_e$. The eigenvalues are then
 
 ```{math}
@@ -584,7 +587,8 @@ e^{i k n_1 d} \;\;\text{ and } \;\; e^{i k n_2 d},
 \end{align*}
 ```
 where $d$ is the thickness of the plate and $k$ is the wave number. Hence to verify that a $(2,2)$-matrix corresponds to a wave plate, one has to compute the eigenvalues and check that these have modulus 1 and that the corresponding eigenvectors are real vectors and orthogonal.
-- **3.** **Jones matrix for propagation through sugars** In sugars, left and right circular-polarised light propagate with their own refractive index. Therefore sugars are called **circular birefringent**. The matrix {eq}`eq.MJones` corresponds to propagation through sugar when there are two real orthogonal unit vectors
+
+**3.** **Jones matrix for propagation through sugars** In sugars, left and right circular-polarised light propagate with their own refractive index. Therefore sugars are called **circular birefringent**. The matrix {eq}`eq.MJones` corresponds to propagation through sugar when there are two real orthogonal unit vectors
 $\hat{\mathbf{v}}$ and $\hat{\mathbf{w}}$ such that the circular polarisation states
 
 $$
@@ -626,12 +630,12 @@ To see what happens to an arbitrary elliptical polarisation state in a circular 
 
 ```{admonition} External sources in recommended order
 1. [Double Vision - Sixty Symbols](https://www.youtube.com/watch?v=k1oh3lXR5PE): Demonstration of double refraction by a calcite crystal due to birefringence.
-1. [MIT OCW - Linear Polarizer](http://ocw.mit.edu/resources/res-6-006-video-demonstrations-in-lasers-and-optics-spring-2008/demonstrations-in-physical-optics/linear-polarizer/): Demonstration of linear polarizers and linear polarisation.
-1. [MIT OCW - Polarization Rotation Using Polarizers](http://ocw.mit.edu/resources/res-6-006-video-demonstrations-in-lasers-and-optics-spring-2008/demonstrations-in-physical-optics/polarisation-rotation-using-polarizers/): Demonstration of polarisation rotation using linear polarisers.
-1. [Demonstration of a QuarterWavePlate](https://www.youtube.com/watch?v=ZhkcKlksV1g) by Andrew Berger.
-1. [MIT OCW - Quarter-wave Plate](http://ocw.mit.edu/resources/res-6-006-video-demonstrations-in-lasers-and-optics-spring-2008/demonstrations-in-physical-optics/quarter-wave-plate/): Demonstration of the quarter-wave plate to create elliptical (in particular circular) polarisation.
-1. [Demonstration of a HalfWavePlate](https://www.youtube.com/watch?v=HriBBJ-6gd8) by Andrew Berger.
-1. [MIT OCW - Half-wave Plate](http://ocw.mit.edu/resources/res-6-006-video-demonstrations-in-lasers-and-optics-spring-2008/demonstrations-in-physical-optics/half-wave-plate/): Demonstration of the half-wave plate.
+2. [MIT OCW - Linear Polarizer](http://ocw.mit.edu/resources/res-6-006-video-demonstrations-in-lasers-and-optics-spring-2008/demonstrations-in-physical-optics/linear-polarizer/): Demonstration of linear polarizers and linear polarisation.
+3. [MIT OCW - Polarization Rotation Using Polarizers](http://ocw.mit.edu/resources/res-6-006-video-demonstrations-in-lasers-and-optics-spring-2008/demonstrations-in-physical-optics/polarisation-rotation-using-polarizers/): Demonstration of polarisation rotation using linear polarisers.
+4. [Demonstration of a QuarterWavePlate](https://www.youtube.com/watch?v=ZhkcKlksV1g) by Andrew Berger.
+5. [MIT OCW - Quarter-wave Plate](http://ocw.mit.edu/resources/res-6-006-video-demonstrations-in-lasers-and-optics-spring-2008/demonstrations-in-physical-optics/quarter-wave-plate/): Demonstration of the quarter-wave plate to create elliptical (in particular circular) polarisation.
+6. [Demonstration of a HalfWavePlate](https://www.youtube.com/watch?v=HriBBJ-6gd8) by Andrew Berger.
+7. [MIT OCW - Half-wave Plate](http://ocw.mit.edu/resources/res-6-006-video-demonstrations-in-lasers-and-optics-spring-2008/demonstrations-in-physical-optics/half-wave-plate/): Demonstration of the half-wave plate.
 ```
 
 

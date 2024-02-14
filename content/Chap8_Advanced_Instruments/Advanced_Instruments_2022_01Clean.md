@@ -45,7 +45,7 @@ $$
 Phase contrast microscopy requires thin samples.
 
 ## Confocal Microscope
-A confocal microscope is a optical microscope which is able to record images with a very small depth of focus (\ 400 nm). By translating the focal plane through the object, it is possible to get a 3D representation of the object. A computer is then needed for the reconstruction.
+A confocal microscope is a optical microscope which is able to record images with a very small depth of focus (~400 nm). By translating the focal plane through the object, it is possible to get a 3D representation of the object. A computer is then needed for the reconstruction.
 The technique is shown in {numref}`Fig_8_01_Confocal`, extracted from the patent filed by Minsky in 1957.
 
 The idea is to illuminate the object with a tightly focused spot, using an objective lens. The object reflects the laser spot and the reflected light is imaged by the same objective. A small pinhole is put in front of the detector in the image plane. The spot is scanned laterally and the total image is obtained by processing all the images for all the lateral scan positions.
@@ -103,7 +103,7 @@ Because in SNOM the fiber is very close to the sample, either to illuminate the 
 
 ```{figure} Images/Chapter_8/NSOM_imageA.jpg
 :name: Fig_8_05_NSOM
-Left: Topographic AFM image of a Photonics Band Gap (PBG) structure, imaged with a 150 \text{nm} AFM/NSOM cantilevered probe. Right: NSOM image of the PBG structure using 532 nm laser wavelength.
+Left: Topographic AFM image of a Photonics Band Gap (PBG) structure, imaged with a 150 nm AFM/NSOM cantilevered probe. Right: NSOM image of the PBG structure using 532 nm laser wavelength.
 ```
 
 
@@ -111,5 +111,5 @@ Left: Topographic AFM image of a Photonics Band Gap (PBG) structure, imaged with
 
 [^1]: Phys Rev. Lett. **85**, 3966, 2000
 
-[^2]: See also Hecht \S 13.2.4 '*Phase Contrast*'.
+[^2]: See also Hecht &sect; 13.2.4 '*Phase Contrast*'.
 

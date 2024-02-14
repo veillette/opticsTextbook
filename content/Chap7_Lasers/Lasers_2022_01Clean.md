@@ -68,7 +68,7 @@ The spherical waves emitted by the atoms (point sources) in the lamp are collima
 ```
 where $2h$ is the size of the source and $f$ is the focal length of the lens as shown in {numref}`Fig_7_01_Gas_Source_Collimation`. Hence the light can be collimated by either choosing a lens with large focal length or by reducing the size of the source, or both. Both methods lead, however, to weak intensities.
 Due to the special configuration of the laser source, which consists of a Fabry-Perot resonator in which the light bounces up and down many times before being emitted, the atomic sources are effectively all at very large distance and hense the effective size of the source is very small. The divergence of the laser beam is therefore not limited by the size of the source but by the size of its emitting surface through the inevitable effect of diffraction.
-As follows from {numref}`chapter.diffraction`, a parallel beam of diameter $D$ and wavelength $\lambda$ has a diffraction limited divergence given by:
+As follows from [](chapter.diffraction), a parallel beam of diameter $D$ and wavelength $\lambda$ has a diffraction limited divergence given by:
 
 ```{math}
 :label: eq.theta2
@@ -84,7 +84,7 @@ A laser beam can almost reach diffraction-limited collimation.
 ```
 
 ### Diffraction-Limited Focused Spot, High Spatial Coherence
-If a perfectly collimated beam is focused with a lens with very small aberrations and with numerical aperture $\text{NA}$, the lateral size of the focused spot is, according to {numref}`chapter.diffraction`, diffraction-limited and given by
+If a perfectly collimated beam is focused with a lens with very small aberrations and with numerical aperture $\text{NA}$, the lateral size of the focused spot is, according to [](chapter.diffraction), diffraction-limited and given by
 
 ```{math}
 :label: eq.diffrspot
@@ -94,7 +94,7 @@ If a perfectly collimated beam is focused with a lens with very small aberration
 ```
 With a laser one can achieve a diffraction-limited spot with a very high intensity.
 
-As has been explained in {numref}`chapter.coherence`, a light wave has **high spatial coherence** if at any given time, its amplitude and phase in different points can be predicted. The spherical waves emitted by a point source have this property. But when there are many point sources (atoms) that each emit bursts of harmonic waves that start at random times, as is the case in a classical light source, the amplitude and phase of the total emitted field at any position in space cannot be predicted. The only way to make the light spatially coherent is by making the light source very small, but then there is hardly any light. As will be explained below, by the design of the laser, the emissions by the atoms of the amplifying medium in a laser are phase-correlated, which leads to a very high temporal and spatial coherence.
+As has been explained in [](chapter.coherence), a light wave has **high spatial coherence** if at any given time, its amplitude and phase in different points can be predicted. The spherical waves emitted by a point source have this property. But when there are many point sources (atoms) that each emit bursts of harmonic waves that start at random times, as is the case in a classical light source, the amplitude and phase of the total emitted field at any position in space cannot be predicted. The only way to make the light spatially coherent is by making the light source very small, but then there is hardly any light. As will be explained below, by the design of the laser, the emissions by the atoms of the amplifying medium in a laser are phase-correlated, which leads to a very high temporal and spatial coherence.
 
 ```{figure} Images/Chapter_7/7_03_Laser_Focus.png
 :name: Fig_7_03_Laser_Focus
@@ -133,7 +133,7 @@ Damped oscillation (left) and frequency spectrum of a damped oscillation (right)
 ```
 
 
-The optical resonator  is a Fabry-Perot resonator filled with some material with refractive index $n$ bounded by two aligned, highly reflective mirrors at a distance $L$. The Fabry-Perot resonator is discussed extensively in {numref}`section.fabryperot` but to understand this chapter a detailed analysis of the Fabry-Perot is not needed.
+The optical resonator  is a Fabry-Perot resonator filled with some material with refractive index $n$ bounded by two aligned, highly reflective mirrors at a distance $L$. The Fabry-Perot resonator is discussed extensively in [](section.fabryperot) but to understand this chapter a detailed analysis of the Fabry-Perot is not needed.
 
 Let the $z$-axis be chosen along the axis of the cavity as shown in {numref}`Fig_7_05_Fabry_Perrot_resonance_mode`, and assume that the transverse directions are so large that the light can be considered a plane wave bouncing back and forth along the $z$-axis between the two mirrors. Let $\omega$ be the frequency and $k_0=\omega/c$ the wave number in vacuum. The plane wave that propagates in the positive $z$-direction is given by:
 
@@ -176,7 +176,8 @@ for $m=1,2,\ldots$. Hence, provided dispersion of the medium can be neglected (.
 which is the so-called **free spectral range**. For a gas laser of length 1 m, the free spectral range is approximately 150 MHz.
 
 **Example**
-Suppose that the cavity is 100 cm long and is filled with a material with refractive index $n=1$. Light with visible wavelength of $\lambda= 500$ nm corresponds to mode number $m=2L/\lambda = 4\times 10^6$ and the free spectral range is $\Delta \nu_f=c/(2L)=150$ MHz.\\
+Suppose that the cavity is 100 cm long and is filled with a material with refractive index $n=1$. Light with visible wavelength of $\lambda= 500$ nm corresponds to mode number $m=2L/\lambda = 4\times 10^6$ and the free spectral range is $\Delta \nu_f=c/(2L)=150$ MHz.
+
 
 The multiple reflections of the laser light inside the resonator make the optical path length very large. For an observer, the atomic sources seem to be at a very large distance and the light that is exiting the cavity resembles a plane wave. As explained above, the divergence of the beam is therefore not limited by the size of the source, but by diffraction due to the aperture of the exit mirror.
 
@@ -311,7 +312,8 @@ For green light of $\lambda=550$ nm, we have $\omega/c=2\pi/\lambda=2.8560 \time
 \frac{A_{21}}{B_{21}} = 1.5640 \times 10^{-15} \text{J s }\text{m}^{-3}.
 \end{align*}
 ```
-Hence the spontaneous and stimulated emission rates are equal if $W(\omega)= 1.5640 \times 10^{-15} $ Js $\text{m}^{-3}$.\\
+Hence the spontaneous and stimulated emission rates are equal if $W(\omega)= 1.5640 \times 10^{-15} $ Js $\text{m}^{-3}$.
+
 
 For a (narrow) frequency band $\mathrm{d}\omega$ the time-averaged energy density is $W(\omega)\mathrm{d}\omega$ and for a plane wave the energy density is related to the intensity $I$ (i.e. the length of the time-averaged Poynting vector) by:
 
@@ -340,7 +342,8 @@ If a beam with frequency width $\mathrm{d}\omega$ and energy density $W(\omega)\
 (N_1-N_2)B_{12} W(\omega).
 \end{align*}
 ```
-According to {eq}`eq.equilibrium` this is equal to the spontaneous emission rate. Indeed, the spontaneously emitted light corresponds to a loss of intensity of the beam, because it is emitted in random directions and with random phase.\\
+According to {eq}`eq.equilibrium` this is equal to the spontaneous emission rate. Indeed, the spontaneously emitted light corresponds to a loss of intensity of the beam, because it is emitted in random directions and with random phase.
+
 When $N_2>N_1$, the light is **amplified**. This state is called **population inversion** and it is essential for the operation of the laser. Note that the ratio of the spontaneous and stimulated emission rates is, according to {eq}`eq.Einstein`, proportional to $\omega^3$. Hence for shorter wavelengths such as x-rays, it is much more difficult to make lasers than for visible light.
 
 ### Population Inversion
@@ -418,7 +421,8 @@ Three types of laser cavity. The shaded region is the amplifier. The middle case
 
 ## Problems with Laser Operation
 In this section we consider some problems that occur with lasers and discuss what can be done to solve them.
-1. **Multiple Resonance Frequencies** \\
+1. **Multiple Resonance Frequencies** 
+
 In many applications such as laser communication and interferometry one needs a single wavelength. Consider a cavity of length $L$ as shown in {numref}`Fig_7_11_Laser_loss` and suppose that the amplifier has a gain curve covering many resonances of the resonator. One way to achieve single-frequency output is by taking care that there is only one frequency for which the gain is larger than the losses. One then says that the laser is above threshold for only one frequency. This can be done by choosing the length $L$ of the cavity to be so small that there is only one mode under the gain curve for which the gain is higher than the losses. However, a small length of the amplifier means less output power and a less collimated output beam. Another method would be to reduce the pumping so that for only one mode the gain compensates the losses. But this implies again that the laser output power is relatively small. A better solution is to add a Fabry-Perot cavity inside the laser cavity as shown in {numref}`Fig_7_12_Laser_extra_Cavity`. The cavity consists e.g. of a piece of glass of a certain thickness $a$. By choosing $a$ sufficiently small, the distance in frequency $c/(2a)$ between the resonances of the Fabry-Perot cavity becomes so large that there is only one Fabry-Perot resonance under the gain curve of the amplifier. Furthermore, by choosing the proper angle for the Fabry-Perot cavity with respect to the axis of the laser cavity, the Fabry-Perot resonance can be coupled to the desired resonance frequency.
 
 ```{figure} Images/Chapter_7/7_11_Laser_loss_a.png
@@ -433,7 +437,8 @@ Laser with cavity of length $L$ and broad amplifier gain curve. Many resonance f
 Laser with cavity of length $L$, a broad amplifier gain curve and an added Fabry-Perot cavity. The FB resonances acts as an extra filter to select only one mode of the laser.
 ```
 
-2.**Multiple Transverse Modes** \\
+2. **Multiple Transverse Modes** 
+
 The best-known laser mode has transverse intensity distribution, which is a Gaussian function of transverse distance to the optical axis. We call a mode with Gaussian transverse shape a **longitudinal mode** and when its frequency satisfies $\nu=m c/(2L)$, it is called the $m$th longitudinal mode. However, inside the laser cavity other modes with different transverse patterns  can also resonate. An example is shown in {numref}`Fig_7_13_Laser_cavity_mode` where mode (1,0) consists of two maxima.
 
 ```{figure} Images/Chapter_7/7_13_Laser_cavity_mode.png
@@ -496,7 +501,7 @@ Examples are the HeNe, Argon, Krypton, Xenon, Nitrogen and Copper lasers. Electr
 
 ```{figure} Images/Chapter_7/7_17_Hene.png
 :name: Fig_7_17_Hene
-HeNe laser with spherical external mirrors, a discharge tube with faces at the Brewster angle to minimise reflections, and an anode and cathode for the discharge pumping{\footnotesize (from [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Hene-1.png) by DrBob / CC BY-SA 3.0)}.
+HeNe laser with spherical external mirrors, a discharge tube with faces at the Brewster angle to minimise reflections, and an anode and cathode for the discharge pumping (from [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Hene-1.png) by DrBob / CC BY-SA 3.0).
 ```
 
 ### Atomic Collision

@@ -12,7 +12,8 @@
 - Understand the modification of the lens model to incorporate a thick lens.
 - Understand the limitations of geometrical optics, in particular when diffraction optics is needed.
 ```
-**Nice software for practicing geometrical optics**:\\
+**Nice software for practicing geometrical optics**:
+
 [https://www.geogebra.org/m/X8RuneVy](https://www.geogebra.org/m/X8RuneVy)
 
 ## Introduction
@@ -32,7 +33,8 @@ Geometrical optics is based on the intuitive idea that light consists of a bundl
 A ray is an oriented curve which is everywhere perpendicular to the surfaces of constant phase and points in the direction of the flow of energy.
 ```
 
-Consider a point source at some distance before an opaque screen with an aperture. According to the ray picture, the light distribution on a second screen further away from the source and parallel to the first screen is simply an enlarged copy of the aperture (see {numref}`Fig_2_01_GeomDiffr`). The copy is enlarged due to the fanning out of the rays. However, this description is only accurate when the wavelength of the light is very small compared to the diameter of the aperture. If the aperture is only ten times the wavelength, the pattern is much broader due to the bending of the rays around the edge of the aperture. This phenomenon is called **diffraction**. Diffraction can not be explained by geometrical optics and will be studied in {numref}`chapter.diffraction`.
+Consider a point source at some distance before an opaque screen with an aperture. According to the ray picture, the light distribution on a second screen further away from the source and parallel to the first screen is simply an enlarged copy of the aperture (see {numref}`Fig_2_01_GeomDiffr`). The copy is enlarged due to the fanning out of the rays. However, this description is only accurate when the wavelength of the light is very small compared to the diameter of the aperture. If the aperture is only ten times the wavelength, the pattern is much broader due to the bending of the rays around the edge of the aperture. This phenomenon is called **diffraction**. Diffraction can not be explained by geometrical optics and will be studied in [](chapter.diffraction).
+
 
 ```{figure} Images/Chapter_2/2_01_Figgeom.png
 :name: Fig_2_01_GeomDiffr
@@ -46,7 +48,8 @@ Although it is possible to incorporate polarisation into geometrical optics <sup
 
 ## Principle of Fermat
 
-The starting point of the treatment of geometrical optics is the \\
+The starting point of the treatment of geometrical optics is the 
+
 ```{note}
 **Principle of Fermat (1657)**. The path followed by a light ray between two points is the one that takes the least amount of time.
 ```
@@ -55,7 +58,7 @@ The speed of light in a material with refractive index $n$, is $c/n$, where $c=3
 
 Let $\mathbf{r}(s)$, be a ray with $s$ the length parameter. The ray links two points $S$ and $P$.
 Suppose that the refractive index varies with position: $n(\mathbf{r})$. Over the infinitesimal distance from $s$ to
-$s+\mathrm{d}$, the speed of the light is
+$s+\mathrm{d}s$, the speed of the light is
 
 ```{math}
 :label: eq.defcn
@@ -63,12 +66,12 @@ $s+\mathrm{d}$, the speed of the light is
 \frac{c}{n(\mathbf{r}(s))}.
 \end{align*}
 ```
-Hence the time it takes for light to go from $\mathbf{r}(s)$ to $\mathbf{r}(s+\mathrm{d})$ is:
+Hence the time it takes for light to go from $\mathbf{r}(s)$ to $\mathbf{r}(s+\mathrm{d}s)$ is:
 
 ```{math}
 :label: eq.defdt
 \begin{align*}
-\mathrm{d} = \frac{n(\mathbf{r}(s))}{c} \mathrm{d},
+\mathrm{d}t = \frac{n(\mathbf{r}(s))}{c} \mathrm{d}s,
 \end{align*}
 ```
 and the total total time to go from $S$ to $P$ is:
@@ -76,16 +79,19 @@ and the total total time to go from $S$ to $P$ is:
 ```{math}
 :label: eq.ttot
 \begin{align*}
-t_{S \rightarrow P} = \int_0^{s_P} \frac{n(\mathbf{r}(s))}{c} \mathrm{d},
+t_{S \rightarrow P} = \int_0^{s_P} \frac{n(\mathbf{r}(s))}{c} \mathrm{d}s,
 \end{align*}
 ```
 where $s_P$ is the distance along the ray from S to P.
 The **optical path length** [m] of the ray between S and P is defined by:
 
 
+
 ```{math}
 :label: eq.defOPL
-\boxed{\text{OPL} = \int_0^{s_P} n(\mathbf{r}(s)) \mathrm{d},}
+\boxed{\begin{align*}
+\text{OPL} = \int_0^{s_P} n(\mathbf{r}(s)) \mathrm{d}s,
+\end{align*}}
 ```
 
 So the OPL is the distance weighted by the refractive index. 
@@ -95,18 +101,21 @@ Fermat's principle is thus equivalent to the statement that a ray follows the pa
 ```
 
 
+
 ```{figure} Images/Chapter_2/2_02_Theory_of_mirage.jpg
 :name: Fig_2_02_Theory_of_mirage
-Because the temperature close to the ground is higher, the refractive index is lower there. Therefore the rays bend upwards, creating a mirror image of the tree below the ground. \footnotesize{(From Popular Science Monthly Volume 5, Public Domain, [link](https://commons.wikimedia.org/w/index.php?curid=10770493)).}
+Because the temperature close to the ground is higher, the refractive index is lower there. Therefore the rays bend upwards, creating a mirror image of the tree below the ground. (From Popular Science Monthly Volume 5, Public Domain, [link](https://commons.wikimedia.org/w/index.php?curid=10770493)).
 ```
 
 **Remark.**
 Actually, Fermat's principle as formulated above is not complete. There are circumstances that a ray can take two paths between two points that have different travel times. Each of these paths then corresponds to a minimum travel time compared to nearby paths, so the travel time is in general a *local minimum*. An example is the reflection by a mirror discussed in the following section.
 
 ## Some Consequences of Fermat's Principle
-- **Homogeneous matter**\\
+- **Homogeneous matter**
+
 In homogenous matter, the refractive index is constant and therefore paths of shortest OPL are straight lines. Hence in homogeneous matter rays are straight lines.
-- **Inhomogeneous matter**\\
+- **Inhomogeneous matter**
+
 When the refractive index is a function of position such as air with a temperature gradient, the rays bend towards regions of higher refractive index. In the case of {numref}`Fig_2_02_Theory_of_mirage` for example, the ray from the top of the tree to the eye of the observer passes on a warm day close to the ground because there the temperature is higher and hence the refractive index is smaller. Although the curved path is longer than the straight path, the total travel time of the light is less because near the ground the light speed is higher (since the refractive index is smaller). The observer gets the impression that the tree is upside down under the ground.
 
 - **Law of reflection**
@@ -147,6 +156,7 @@ or
 ```
 where $\theta_i$ and $\theta_r$ are the angles of incidence and reflection as shown in {numref}`Fig_2_03_Descartes_Reflection`.
 
+
 ```{figure} Images/Chapter_2/2_03_Descartes_Reflection.png
 :name: Fig_2_03_Descartes_Reflection
 Ray from $P$ to $Q$ via the mirror.
@@ -173,7 +183,7 @@ The travel time must be minimum, hence there must hold
 \frac{d}{d x} \left[ n_i d_1(x) + n_t d_2(x)\right] = n_i \frac{(x-x_P)}{d_1(x)} - n_t \frac{(x_Q-x)}{d_2(x)}=0.
 \end{align*}
 ```
-where the travel time has been multiplied by the speed of light in vacuum. Eq.&nbsp;{eq}`eq.refrac2` implies
+where the travel time has been multiplied by the speed of light in vacuum. Eq. {eq}`eq.refrac2` implies
 
 ```{math}
 :label: eq.refrac3
@@ -182,13 +192,14 @@ n_i \sin \theta_i = n_t \sin \theta_t,
 \end{align*}
 ```
 where $\theta_i$ and $\theta_t$ are the angles between the ray and the normal to the surface in the upper half space and the lower half space, respectively ({numref}`Fig_2_04_Descartes_Refraction`).
+
 ```{figure} Images/Chapter_2/2_04_Descartes_Refraction.png
 :name: Fig_2_04_Descartes_Refraction
 Ray from $P$ to $Q$ refracted by an interface.
 ```
 
 
-Hence we have derived the law of reflection and Snell's law from Fermat's principle. In {numref}`chapter.basics` the reflection law and Snell's law have been derived by a different method, namely from the continuity of the tangential electromagnetic field components at the interface.
+Hence we have derived the law of reflection and Snell's law from Fermat's principle. In [](chapter.basics) the reflection law and Snell's law have been derived by a different method, namely from the continuity of the tangential electromagnetic field components at the interface.
 
 ## Perfect Imaging by Conic Sections
 In this section the conic sections ellipse, hyperbole and parabola are important. In {numref}`Fig_2_05_ConicSection` their definitions are shown as a quick reminder<sup>[^3]</sup>.
@@ -205,6 +216,7 @@ Let $S$ be a point source. The rays perpendicular to the spherical wave fronts e
 When there is a point $P$ and a cone of rays coming from point $S$ and all rays in that cone intersect in point $P$, then by Fermat's principle, all these rays have traversed paths of minimum travel time. In particular, their travel times are equal and therefore they **all add up in phase** when they arrive in $P$. Hence at $P$ there is a high light intensity. Hence, if there is a cone of rays from point $S$ which all intersect in a point $P$ as shown in {numref}`Fig_2_06_Perfect_Imaging`, point $P$ is called the **perfect image** of $S$.
 By reversing the direction of the rays, $S$ is similarly a perfect image of $P$. The optical system in which this happens is called **stigmatic for the two points $S$ and $P$**. 
 
+
 ```{figure} Images/Chapter_2/2_06_Perfect_Imaging.png
 :name: Fig_2_06_Perfect_Imaging
 Perfect imaging: a cone of rays which diverge from $S$ and all intersect in point $P$. The rays continue after $P$.
@@ -214,11 +226,13 @@ Perfect imaging: a cone of rays which diverge from $S$ and all intersect in poin
 **Remark**. The concept of a perfect image point exists only in geometrical optics. In reality finite apertures of lenses and other imaging systems cause diffraction due to which image points are never perfect but blurred.
 
 We summarise the main examples of stigmatic systems.
-- **1.**
+
+**1.**
 **Perfect focusing and imaging by refraction.** A parallel bundle of rays propagating in a medium with refractive index $n_2$ can be focused into a point $F$ in a medium $n_1$. If $n_2>n_1$, the interface between the media should be a hyperbole with focus $F$, whereas if $n_2<n_1$ the interface should be an ellipse with focus $F$ (see {numref}`Fig_2_07_Focus-Right` and
 {numref}`Fig_2_08_Perfect_Imaging`). By reversing the rays we obtain perfect collimation. Therefore, a point $S$ in air can be perfectly imaged onto a point $F$ in air by inserting a piece of glass in between them with hyperbolic surfaces as shown in {numref}`Fig_2_08_Perfect_Imaging`. These properties are derived in Problem 2.2.
-- **2.** **Perfect focusing of parallel rays by a mirror**. 
 
+**2.** 
+**Perfect focusing of parallel rays by a mirror**. 
 A bundle of parallel rays in air can be focused into a point $F$ by a mirror of parabolic shape with $F$ as focus (see {numref}`Fig_2_09_Para_Mirror`). This is derived in Problem 2.3.
 By reversing the arrows, we get (within geometrical optics) a perfectly parallel beam.
 Parabolic mirrors are used everywhere, from automobile headlights to radio telescopes.
@@ -235,7 +249,7 @@ Although we found that conic surfaces give perfect imaging for a certain pair of
 
 
 ```{admonition} External sources in recommended order
--{[KhanAcademy - Geometrical Optics](https://www.khanacademy.org/science/physics/geometric-optics): Playlist on elementary geometrical optics.}
+- [KhanAcademy - Geometrical Optics](https://www.khanacademy.org/science/physics/geometric-optics): Playlist on elementary geometrical optics.
 - [Yale Courses - 16. Ray or Geometrical Optics I](https://www.youtube.com/watch?v=bxGgcgSbQBA) - Lecture by Ramamurti Shankar
 - [Yale Courses - 17. Ray or Geometrical Optics II](https://www.youtube.com/watch?v=qm4QR_ycRhY) - Lecture by Ramamurti Shankar
 ```
@@ -259,7 +273,10 @@ Spherical surfaces are not only more simple in the derivations but they are also
 In Gaussian geometrical optics only paraxial rays and spherical surfaces are considered. In Gaussian geometrical optics every point has a perfect image.
 ```
 
-(section.Gaussian_SSS)=
+
+```{index} Gaussian Imaging by a Single Spherical Surface
+:name: section.Gaussian_SSS
+```
 ### Gaussian Imaging by a Single Spherical Surface
 
 We will first show that within Gaussian optics a single spherical surface between two media with refractive indices $n_1< n_2$ images all points perfectly ({numref}`Fig_2_10_Spherical_interface`). The sphere has radius $R$ and centre $C$ which is inside medium 2. We consider a point object $S$ to the left of the surface. We draw a ray from $S$ perpendicular to the surface. The point of intersection is $V$. Since for this ray the angle of incidence with the local normal on the surface vanishes, the ray continues into the second medium without refraction and passes through the centre $C$ of the sphere. Next we draw a ray that hits the spherical surface in some point $A$ and draw the refracted ray in medium 2 using Snell's law in the paraxial form {eq}`eq.Snell3`. Note that the angles of incidence and transmission must be measured with respect to the local normal at $A$, i.e. with respect to $CA$. We assume that this ray intersects the first ray in point $P$. We will show that within the approximation of Gaussian geometrical optics, all rays from $S$ pass through $P$.
@@ -278,6 +295,7 @@ $$
 $$ (eq.power)
 
 is called the power of the surface and where $s_o$ and $s_i$ are the $z$-**coordinates** of $S$ and $P$, respectively, hence $s_0<0$ and $s_i>0$ in {numref}`Fig_2_10_Spherical_interface`.
+
 ```{figure} Images/Chapter_2/2_10_Spherical_interface.png
 :name: Fig_2_10_Spherical_interface
 Imaging by a spherical interface between two media with refractive indices $n_2>n_1$.
@@ -376,37 +394,49 @@ $s_o \rightarrow -\infty$, the incident rays are parallel to the $z$-axis in med
 Its $z$-coordinate is given by:
 
 
+
 ```{math}
 :label: eq.def_fi
-\boxed{f_i = \frac{n_2}{{\cal P}}=\frac{n_2 R}{n_2-n_1},}
+\boxed{\begin{align*}
+	f_i = \frac{n_2}{{\cal P}}=\frac{n_2 R}{n_2-n_1},
+	\end{align*}}
 ```
 
 and its absolute value (it is negative when $n_2<n_1$) is called the **second focal length** or **image focal length**.
 
 When $s_i\rightarrow \infty$, the rays after refraction are parallel to the $z$-axis and we get $s_o \rightarrow -n_1 R/(n_2-n_1)$. The object point for which the rays in the medium 2 are parallel to the $z$-axis is called the **first focal point** or **object focal point** $F_o$. Its $z$-coordinate is:
 
+
 ```{math}
 :label: eq.def_fo
-\boxed{f_o=-\frac{n_1}{{\cal P}}= -\frac{n_1 R}{n_2-n_1}.}
+\boxed{\begin{align*}
+f_o=-\frac{n_1}{{\cal P}}= -\frac{n_1 R}{n_2-n_1}.
+\end{align*}}
 ```
 
 The absolute value $|f_o|$ of $f_o$ is called the **front focal length** or **object focal length**.
 
 With {eq}`eq.def_fi` and {eq}`eq.def_fo`, {eq}`eq.one_surface` can be rewritten as:
 
+
 ```{math}
 :label: eq.one_surface2
-\boxed{-\frac{n_1}{s_o} + \frac{n_2}{s_i} = {\cal P} =-\frac{n_2}{f_i}= -\frac{n_1}{f_o}.}
+\boxed{\begin{align*}
+-\frac{n_1}{s_o} + \frac{n_2}{s_i} = {\cal P} =-\frac{n_2}{f_i}= -\frac{n_1}{f_o}.
+\end{align*}}
 ```
 
 
-(subsection.virtualSSS)=
+```{index} Virtual Images and Virtual Objects of a Single Spherical Surface
+:name: subsection.virtualSSS
+```
 ### Virtual Images and Virtual Objects of a Single Spherical Surface
 
 If we adopt the sign convention listed in
 {numref}`table_signconv` below,
 it turns out that {eq}`eq.one_surface` holds generally. So far we have considered a convex surface of which the centre $C$ is to the right of the surface, but {eq}`eq.one_surface` applies also to a concave surface of which the centre is to the left of the surface, provided that the radius $R$ is chosen negative.
 The convention for the sign of the radius is illustrated in {numref}`Fig_2_11_Radius`.
+
 ```{figure} Images/Chapter_2/2_11_Radius_Convention.png
 :name: Fig_2_11_Radius
 Sign convention for the radius $R$ of a spherical surface
@@ -423,6 +453,7 @@ the diverging ray bundle emitted by S is made more strongly divergent by the sur
 Note that also when the power is positive, a virtual image can occur, namely when the object $S$ is in between the object focal point $F_o$ and the surface. Then the bundle of rays from S is so strongly diverging that the surface can not convert it into a convergent bundle and hence again the rays in image space seem to come from a point $P$ to the left of the surface. This agrees with the fact that when ${\cal P}>0$ and $f_o< s_o<0$,
 {eq}`eq.one_surface2` implies that $s_i<0$.
 
+
 ```{figure} Images/Chapter_2/2_12_Concave_Surface_Real_object_1.png
 :name: Fig_2_12_Surf_Concave
 Imaging by a concave surface ($R<0$) with $n_2>n_1$. All image points are to the left of the surface, i.e. are virtual ($s_i<0$).
@@ -432,30 +463,26 @@ Imaging by a concave surface ($R<0$) with $n_2>n_1$. All image points are to the
 Finally we look at a case that there is a bundle of convergent rays incident from the left on the surface which when extended into the right medium without refraction at the surface, would intersect in a point $S$. Since this point is not actually present, it is called a **virtual object point**, in contrast to **real object points** which are to the left of the surface. The coordinate of a virtual object point is positive: $s_o>0$.
 One may wonder why we look at this case. The reason is that if we have several spherical surfaces behind each other, we can compute the image of an object point by first determining the intermediate image by the most left surface and then use this intermediate image as object for the next surface and so on. In such a case it can easily happen that an intermediate image is to the right of the next surface and hence is a virtual object for that surface. In the case of {numref}`Fig_2_13_Convex_Virtual_Object` at the left, the power is positive, hence the convergent bundle of incident rays is made even more convergent which leads to a real image point. Indeed when $s_o>0$ and ${\cal P}>0$ then {eq}`eq.one_surface` implies that always $s_i>0$. At the right of {numref}`Fig_2_13_Convex_Virtual_Object` the power is negative but is not sufficiently strong to turn the convergent incident bundle into a divergent bundle. So the image is still real. However, the image will be virtual when the virtual object $S$ is to the right of $F_o$ (which in this case is to the right of the surface) since then the bundle of rays converges so weakly that the surface turns is into a divergent bundle.
 
+
 ```{figure} Images/Chapter_2/2_13_Spherical_Interface_Concave.png
 :name: Fig_2_13_Convex_Virtual_Object
 Imaging of a virtual object $S$ by a spherical interface with $R>0$ between two media with refractive indices $n_1>n_2$ (left) and $n_2>n_1$ (right).
 ```
 
 
-In conclusion: provided the sign convention listed in {numref}`table_signconv` is used, formula {eq}`eq.one_surface`)
+In conclusion: provided the sign convention listed in {numref}`table_signconv` is used, formula {eq}`eq.one_surface`
 can always be used to determine the image of a given object by a spherical surface.
 
 ```{table} Sign convention for spherical surfaces and thin lenses. The convention for $s_o$, $f_o$, $s_i$, $f_i$ follows from the fact that these are $z$-coordinates with the origin at vertex $V$ of the spherical surface (or the centre of the thin lens) and the positive $z$-axis is pointing to the right. The convention for the $y$-coordinate follows from the fact that the $y$-axis is positive upwards.
 :name: table_signconv
 | **quantity** | **positive** | **negative** |
 | :--: | :--: | :--: |
-| $s_o$, $s_i$. $f_0$, $f_i$ | corresponding point is | corresponding point is |
-| | to the right of vertex | to left of vertex |
-| $y_o$, $y_i$ | object, image point | object, image point |
-| | above optical axis | below optical axis.|
-| 
-|
-| $R$ | centre of curvature | centre of curvature |
-| | right of vertex | left of vertex |
-| Refractive index $n$ ambient | before reflection | after reflection |
-| medium of a mirror | | |
+| $s_o$, $s_i$. $f_0$, $f_i$ | corresponding point is to the right of vertex | corresponding point is to left of vertex |
+| $y_o$, $y_i$ | object, image point above optical axis | object, image point below optical axis |
+| $R$ | centre of curvature right of vertex | centre of curvature left of vertex |
+| Refractive index $n$ ambient medium of a mirror | before reflection | after reflection |
 ```
+
 
 
 ### Ray Vectors and Ray Matrices
@@ -470,8 +497,9 @@ $$
 \alpha = \frac{ y_2-y_1}{z_2-z_1}.
 $$ (eq.defalpha)
 
-Examples of positive and negative $\alpha$ are given in Fig.\ref{Fig.alpha}. The case $z_2-z_1<0$ occurs when a ray propagates in the negative $z$-direction after it has been reflected by a mirror.
+Examples of positive and negative $\alpha$ are given in {numref}`Fig.alpha`. The case $z_2-z_1<0$ occurs when a ray propagates in the negative $z$-direction after it has been reflected by a mirror.
 According to {numref}`table_signconv` the refractive index of the ambient medium should after the reflection be taken negative. After a second reflection due to which the ray propagates again in the positive $z$-direction the refractive index should be chosen positive again.
+
 ```{figure} Images/Chapter_2/2_14_Angle_definition.png
 :name: Fig.alpha
 Sign convention for the ray angle. In the upper two figures $\alpha>0$ while in the lower two figures $\alpha<0$.
@@ -483,9 +511,7 @@ We define the ray vector
 ```{math}
 :label: eq.rayvector
 \begin{align*}
-\left( \begin{array}{c}
-n\alpha \\
-y
+\left( \begin{array}{c}n\alpha \\y
 \end{array} \right),
 \end{align*}
 ```
@@ -495,13 +521,9 @@ The ray vectors of a ray in any two planes $z=z_1$, $z=z_2$, with $z_2>z_1$, are
 ```{math}
 :label: eq.matgen
 \begin{align*}
-\left( \begin{array}{c}
-n_2\alpha_2 \\
-y_2
+\left( \begin{array}{c}n_2\alpha_2 \\y_2
 \end{array}\right) = {\cal M}
-\left( \begin{array}{c}
-n_1 \alpha_1 \\
-y_1
+\left( \begin{array}{c}n_1 \alpha_1 \\y_1
 \end{array}\right).
 \end{align*}
 ```
@@ -510,9 +532,7 @@ where
 ```{math}
 :label: eq.defM2
 \begin{align*}
-{\cal M} =\left( \begin{array}{cc}
-A & B \\
-C & D
+{\cal M} =\left( \begin{array}{cc}A & B \\C & D
 \end{array}\right).
 \end{align*}
 ```
@@ -533,21 +553,13 @@ Because furthermore $y_2=y_1$, we conclude
 ```{math}
 :label: eq.matsph0
 \begin{align*}
-\left( \begin{array}{c}
-    n_2\alpha_2 \\
-    y_2
-    \end{array}\right) &= \left( \begin{array}{c}
-    n_1 \alpha_1 - \frac{(n_2-n_1)y_1}{R} \\
-    y_1
-    \end{array}\right)  \\
-    &= \left( \begin{array}{cc}
-    1 & -P \\
-    0 & 1
-    \end{array}\right)\left(
-    \begin{array}{c}
-    n_1 \alpha_1 \\
-    y_1
-    \end{array}\right), \quad \textbf{spherical surface,}
+\left( \begin{array}{c}n_2\alpha_2 \\    y_2
+\end{array}\right) &= \left( \begin{array}{c}n_1 \alpha_1 - \frac{(n_2-n_1)y_1}{R} \\    y_1
+\end{array}\right)  \\
+    &= \left( \begin{array}{cc}1 & -P \\    0 & 1
+\end{array}\right)\left(
+    \begin{array}{c}n_1 \alpha_1 \\    y_1
+\end{array}\right), \quad \textbf{spherical surface,}
 \end{align*}
 ```
 where
@@ -566,17 +578,11 @@ We will show that the ray matrix between the planes just before and after the mi
 ```{math}
 :label: eq.sphmirror
 \begin{align*}
-\left( \begin{array}{c}
-n_2\alpha_2 \\
-y_2
+\left( \begin{array}{c}n_2\alpha_2 \\y_2
 \end{array}\right)
-&= \left( \begin{array}{cc}
-1 & -{\cal P} \\
-0 & 1
+&= \left( \begin{array}{cc}1 & -{\cal P} \\0 & 1
 \end{array}\right)\left(
-\begin{array}{c}
-n_1 \alpha_1 \\
-y_1
+\begin{array}{c}n_1 \alpha_1 \\y_1
 \end{array}\right), \quad \textbf{spherical reflector,}
 \end{align*}
 ```
@@ -596,6 +602,7 @@ n_2\alpha_2 = n_1 \alpha_1,
 \end{align*}
 ```
 which agrees with the fact that $n_2=-n_1$ and according to  {eq}`eq.defalpha` $\alpha_2$ and $\alpha_1$ have opposite sign for a mirror.
+
 ```{figure} Images/Chapter_2/2_15_Concave_mirror.png
 :name: Fig_2_15_Mirror
 Reflection by a mirror.
@@ -605,11 +612,15 @@ Reflection by a mirror.
 With all angles positive for the moment, it follows from {numref}`Fig_2_15_Mirror`
 
 ```{math}
+:label: eq.refl1
+\begin{align*}
+\alpha_1&= \theta_i +\varphi, \end{align*}
+```
+```{math}
 :label: eq.refl2
 \begin{align*}
-\alpha_1&= \theta_i +\varphi, \\
-\alpha_2 &= \varphi-\theta_r= \varphi-\theta_i.
-\end{align*}
+\\
+\alpha_2 &= \varphi-\theta_r= \varphi-\theta_i.\end{align*}
 ```
 Hence,
 
@@ -635,7 +646,7 @@ we conclude from {eq}`eq.refl3` and {eq}`eq.varphi3`:
 n_2\alpha_2 = -n \alpha_2 = n \alpha_1 - \frac{2n}{R} y_1 = n_1\alpha_1 - \frac{2n}{R}.
 \end{align*}
 ```
-This proves Eq.&nbsp;{eq}`eq.sphmirror`.
+This proves Eq. {eq}`eq.sphmirror`.
 
 
 We now consider the ray matrix when a ray propagates from a plane $z_1$ to a plane $z_2$ through a medium with with refractive index $n$.
@@ -645,9 +656,7 @@ $\alpha_2=\alpha_1$ and $y_2=y_1 + \alpha_1(z_2-z_1)$, hence
 ```{math}
 :label: eq.mathom
 \begin{align*}
-{\cal M}=\left( \begin{array}{cc}
-1 & 0 \\
-\frac{z_2-z_1}{n} & 1
+{\cal M}=\left( \begin{array}{cc}1 & 0 \\\frac{z_2-z_1}{n} & 1
 \end{array}\right), \quad \textbf{homogeneous space}.
 \end{align*}
 ```
@@ -669,6 +678,7 @@ In the ray matrix approach all rays stay in the same plane, namely the plane thr
 ### The Lens Matrix
 We apply ray matrices to a lens.
 {numref}`Fig_2_16_Spherical_Lens_simplified` shows a lens with two spherical surfaces. The refractive index of the lens is $n_l$ and that of the media to the left and to the right of the lens is $n_1$ and $n_2$, respectively. Let the distance between the vertices be $d$.
+
 ```{figure} Images/Chapter_2/2_16_Spherical_Lens_simplified.png
 :name: Fig_2_16_Spherical_Lens_simplified
 A lens with thickness $d$. The ray matrix is defined between the planes immediately before and after the lens.
@@ -679,14 +689,10 @@ We will first derive the matrix which maps the ray vector in the plane **immedia
 ```{math}
 :label: eq.rayvectors
 \begin{align*}
-\left( \begin{array}{c}
-n_1 \alpha_1 \\
-y_1
+\left( \begin{array}{c}n_1 \alpha_1 \\y_1
 \end{array}\right)
 \;\;\; \text{ and }
-\left( \begin{array}{c}
-n_2 \alpha_2 \\
-y_2
+\left( \begin{array}{c}n_2 \alpha_2 \\y_2
 \end{array}\right)
 \end{align*}
 ```
@@ -695,9 +701,7 @@ be two vectors in the two planes which correspond to the same ray. The ray is fi
 ```{math}
 :label: eq.matsph1
 \begin{align*}
-{\cal M}_1= \left( \begin{array}{cc}
-1 & - {\cal P}_1 \\
-0 & 1
+{\cal M}_1= \left( \begin{array}{cc}1 & - {\cal P}_1 \\0 & 1
 \end{array}\right)
 \end{align*}
 ```
@@ -713,9 +717,7 @@ The ray propagates then over the distance $d$ through the material of which the 
 ```{math}
 :label: eq.matglass
 \begin{align*}
-{\cal M}_2=\left( \begin{array}{cc}
-1 & 0 \\
-\frac{d}{n_l} & 1
+{\cal M}_2=\left( \begin{array}{cc}1 & 0 \\\frac{d}{n_l} & 1
 \end{array}\right).
 \end{align*}
 ```
@@ -724,9 +726,7 @@ Finally, the matrix that maps ray vectors from the plane in the lens immediately
 ```{math}
 :label: eq.matsph2
 \begin{align*}
-{\cal M}_3= \left( \begin{array}{cc}
-1 & -{\cal P}_2 \\
-0 & 1
+{\cal M}_3= \left( \begin{array}{cc}1 & -{\cal P}_2 \\0 & 1
 \end{array}\right).
 \end{align*}
 ```
@@ -742,9 +742,7 @@ Hence the matrix that maps ray vectors in the plane immediately before the lens 
 :label: eq.matlens
 \begin{align*}
 {\cal M}&= {\cal M}_3 {\cal M}_2 {\cal M}_1  \\
-&= \left( \begin{array}{cc}
-1 - \frac{d}{n_l}P_2 & -P_1 - P_2 + \frac{d}{n_l} P_1P_2 \\
-\frac{d}{n_l} & 1 -\frac{d}{n_l}P_1
+&= \left( \begin{array}{cc}1 - \frac{d}{n_l}P_2 & -P_1 - P_2 + \frac{d}{n_l} P_1P_2 \\\frac{d}{n_l} & 1 -\frac{d}{n_l}P_1
 \end{array}\right), \quad \textbf{lens}.
 \end{align*}
 ```
@@ -759,7 +757,9 @@ The quantity
 is called the **power** of the lens. It has dimension 1/length and is given in diopter (${\cal D}$), where $1 \,\, {\cal D}=\text{m}^{-1}$. The power can be positive and negative.
 The space to the left of the lens is called the **object space** and that to the right of the lens is called the **image space**.
 
-(subsection.focthin)=
+```{index} Focusing with a Thin Lens
+:name: subsection.focthin
+```
 ### Focusing with a Thin Lens
 
 For a thin lens the vertices $V_1$ and $V_2$ coincide and $d=0$, hence {eq}`eq.matlens` becomes
@@ -767,9 +767,7 @@ For a thin lens the vertices $V_1$ and $V_2$ coincide and $d=0$, hence {eq}`eq.m
 ```{math}
 :label: eq.matthinlens
 \begin{align*}
-{\cal M} = \left( \begin{array}{cc}
-1 & -P\\
-0 & 1
+{\cal M} = \left( \begin{array}{cc}1 & -P\\0 & 1
 \end{array}\right), \quad \textbf{thin lens},
 \end{align*}
 ```
@@ -816,14 +814,15 @@ With the results obtained for the focal coordinates we can rewrite the lens matr
 ```{math}
 :label: eq.matthinlens2
 \begin{align*}
-{\cal M} = \left( \begin{array}{cc}
-1 & -\frac{n_2}{f_i} \\
-0 & 1
+{\cal M} = \left( \begin{array}{cc}1 & -\frac{n_2}{f_i} \\0 & 1
 \end{array}\right), \quad \textbf{thin lens}.
 \end{align*}
 ```
 
-(subsection.imagingthinlens)=
+
+```{index} Imaging with a Thin Lens
+:name: subsection.imagingthinlens
+```
 ### Imaging with a Thin Lens
 
 We first consider a general ray matrix {eq}`eq.matgen`, {eq}`eq.defM2` between two planes $z=z_1$ and $z=z_2$ and ask the following question:
@@ -840,9 +839,12 @@ y_2=C n_1\alpha_1 + D y_1,
 ```
 This requires that
 
+
 ```{math}
 :label: eq.condimage
-\boxed{C=0, \quad \textbf{condition for imaging}.}
+\boxed{\begin{align*}
+C=0, \quad \textbf{condition for imaging}.
+\end{align*}}
 ```
 
 The ratio of $y_2$ and $y_1$ IS the magnification $M$. Hence,
@@ -861,29 +863,24 @@ This ray matrix is the product of the matrix for propagation from $z=z_1$ to the
 ```{math}
 :label: eq.matz1z2
 \begin{align*}
-{\cal M} &= \left( \begin{array}{cc}
-1 & 0 \\
-\frac{z_2}{n_2} & 1
-\end{array}\right) \left( \begin{array}{cc}
-1 & - {\cal P} \\
-0 & 1
-\end{array}\right) \left( \begin{array}{cc}
-1 & 0 \\
-\frac{-z_1}{n_1} & 1
+{\cal M} &= \left( \begin{array}{cc}1 & 0 \\\frac{z_2}{n_2} & 1
+\end{array}\right) \left( \begin{array}{cc}1 & - {\cal P} \\0 & 1
+\end{array}\right) \left( \begin{array}{cc}1 & 0 \\\frac{-z_1}{n_1} & 1
 \end{array}\right)  \\
 &=
-\left( \begin{array}{cc}
-1+\frac{z_1}{n_1}{\cal P} & -{\cal P} \\
--\frac{z_1}{n_1} + \frac{z_2}{n_2} + \frac{z_1z_2}{n_1 n_2}{\cal P} & 1-\frac{z_2}{n_2} {\cal P}
+\left( \begin{array}{cc}1+\frac{z_1}{n_1}{\cal P} & -{\cal P} \\-\frac{z_1}{n_1} + \frac{z_2}{n_2} + \frac{z_1z_2}{n_1 n_2}{\cal P} & 1-\frac{z_2}{n_2} {\cal P}
 \end{array}\right)
 \end{align*}
 ```
 The imaging condition {eq}`eq.condimage` implies:
 
+
 ```{math}
 :label: eq.lensmaker
-\boxed{-\frac{n_1}{s_o} + \frac{n_2}{s_i}={\cal P},
-\quad \bf{Lensmaker's \;\; Formula},}
+\boxed{\begin{align*}
+-\frac{n_1}{s_o} + \frac{n_2}{s_i}={\cal P},
+\quad \bf{Lensmaker's \;\; Formula},
+\end{align*}}
 ```
  where we have written $s_o=z_1$ and $s_i=z_2$ for the $z$-coordinates of the object and the image.
 Because for the thin lens matrix {eq}`eq.matz1z2`: $D=1-z_2/f_i$, it follows by using {eq}`eq.lensmaker` that the magnification {eq}`eq.magn` is given by
@@ -907,6 +904,7 @@ A convergent lens ($f_i>0$) will then make an image between the lens and the sec
 
 Instead of using ray matrices, one can construct the image with a ruler.
 Consider the imaging of a finite object $S_1S_2$ as shown in {numref}`Fig_2_17_Real_Image` for the case that the media to the left and right lens are the same. Let $y_o$ be the y-coordinate of $S_2$. We have $y_o>0$ when the object is above the optical axis.
+
 ```{figure} Images/Chapter_2/2_17_Real_Image.png
 :name: Fig_2_17_Real_Image
 Object and image for a thin lens.
@@ -935,9 +933,12 @@ here we used $|f_o|=f_i$.
 (the absolute value of $y_i$ is taken because according to our sign convention $y_i$ in {numref}`Fig_2_17_Real_Image` is negative whereas {eq}`eq.ratio2` is a ratio of lengths).
 By multiplying these two equations we get the **Newtonian form** of the lens equation (valid when $n_2=n_1$):
 
+
 ```{math}
 :label: eq.newton
-\boxed{x_o x_i =- f_i^2=- f_o^2,}
+\boxed{\begin{align*}
+x_o x_i =- f_i^2=- f_o^2,
+\end{align*}}
 ```
 
 where $x_o$ and $x_i$ are the $z$-coordinates of the object and image relative to those of the first and second focal point, respectively:
@@ -964,20 +965,24 @@ A positive $M$ means that the image is erect, a negative $M$ means that the imag
 All equations are also valid for a thin negative lens and for virtual objects and images.
 Examples of real and virtual object and image points for a positive and a negative lens are shown in {numref}`Fig_2_18_Positive_Lens` and {numref}`Fig_2_19_Negative_Lens`.
 
+
 ```{figure} Images/Chapter_2/2_18_Positive_Lens.png
 :name: Fig_2_18_Positive_Lens
-Real and virtual objects and images for a convergent thin lens with the same refractive index left and right of the lens, i.e. $-f_o=f_i>0$. In (a) the object is real with $s_o<f_o$ and the image is real as well ($s_i>0$). In (b) the object is between the front focal point and the lens: $f_o< s_o<0$. Then the rays from the object are too divergent for the lens to make them convergent in image space and hence the image is virtual: $s_i<0$. In (c) there is a cone of converging rays incident on the lens from the left which, in the absence of the lens, would converge to point $S$ behind the lens. Therefore $S$ is a virtual object ($s_0>0$). The image is real and can be constructed with the two rays shown.
-		In (d) $s_i$ is shown as function of $s_o$ for a convergent lens (see Eq.&nbsp;{eq}`eq.lensmaker`).
+Real and virtual objects and images for a convergent thin lens with the same refractive index left and right of the lens, i.e. $-f_o=f_i>0$. In (a) the object is real with $s_o<f_o$ and the image is real as well ($s_i>0$). In (b) the object is between the front focal point and the lens: $f_o< s_o<0$. Then the rays from the object are too divergent for the lens to make them convergent in image space and hence the image is virtual: $s_i<0$. In \(c\) there is a cone of converging rays incident on the lens from the left which, in the absence of the lens, would converge to point $S$ behind the lens. Therefore $S$ is a virtual object ($s_0>0$). The image is real and can be constructed with the two rays shown.
+		In (d) $s_i$ is shown as function of $s_o$ for a convergent lens (see Eq. {eq}`eq.lensmaker`).
 ```
+
 
 
 ```{figure} Images/Chapter_2/2_19_Negative_Lens.png
 :name: Fig_2_19_Negative_Lens
-Real and virtual objects and images for a divergent thin lens with the same refractive index to the left and right of the lens, i.e. $-f_o=f_i<0$. In (a) the object is real, i.e. $s_o<0$. The diverging lens makes the cone of rays from the object more divergent so that the image is virtual: $s_i<0$. When the object is virtual, there is a cone of converging rays incident from the left which after extension to the right of the lens (as if the lens is not present) intersect in the virtual object S ($s_o>0$). It depends on how strong the convergence is whether the diverging lens turns this cone into converging rays or whether the rays keep diverging. In (b) $0<s_o<-f_i$, and the image is real. In c) $s_o>-f_i$ and the image is virtual ($s_i<0$). In (d) $s_i$ is shown as function of $s_o$ for a divergent lens ($f_i<0$ (see Eq.&nbsp;{eq}`eq.lensmaker`).
+Real and virtual objects and images for a divergent thin lens with the same refractive index to the left and right of the lens, i.e. $-f_o=f_i<0$. In (a) the object is real, i.e. $s_o<0$. The diverging lens makes the cone of rays from the object more divergent so that the image is virtual: $s_i<0$. When the object is virtual, there is a cone of converging rays incident from the left which after extension to the right of the lens (as if the lens is not present) intersect in the virtual object S ($s_o>0$). It depends on how strong the convergence is whether the diverging lens turns this cone into converging rays or whether the rays keep diverging. In (b) $0<s_o<-f_i$, and the image is real. In c) $s_o>-f_i$ and the image is virtual ($s_i<0$). In (d) $s_i$ is shown as function of $s_o$ for a divergent lens ($f_i<0$ (see Eq. {eq}`eq.lensmaker`).
 ```
 
 
-(subsection.twolenses)=
+```{index} Two Thin Lenses
+:name: subsection.twolenses
+```
 ### Two Thin Lenses
 
 The ray matrix is a suitable method to study the imaging of a system consisting of several thin lenses. For two lenses however, the imaging can still easily be obtained by construction.
@@ -985,6 +990,7 @@ We simply construct the image obtained by the first lens as if the second lens w
 In {numref}`Fig_2_20_Double_Lens` an example is shown where the distance between the lenses is larger than the sum of their focal lengths.
 First the image $P'$ of $S$ is constructed as obtained by $L_1$ as if $L_2$ were not present.
 We construct the intermediate image $P'$ due to lens $L_1$ using ray 2 and 3. $P'$ is a real image for lens $L_1$ and also a real object for lens $L_2$. Ray 3 is parallel to the optical axis between the two lenses and is thus refracted by lens $L_2$ through its back focal point $F_{2i}$. Ray 4 is the ray from $P'$ through the centre of lens $L_2$. The image point $P$ is the intersection of ray 3 and 4.
+
 
 ```{figure} Images/Chapter_2/2_20_Two_Thin_Lenses_Separated.png
 :name: Fig_2_20_Double_Lens
@@ -994,6 +1000,7 @@ Two thin lenses separated by a distance that is larger than the sum of their foc
 
 In the case of {numref}`Fig_2_21_Two_Thin_Lenses_close` the distance $d$ between the two positive lenses is smaller than their focal lengths.
 The intermediate image $P'$ is a real image for $L_1$ obtained as the intersection of rays 2 and 4 passing through the object and image focal points $F_{o1}$ and $F_{i1}$ of lens $L_1$. $P'$ is now a virtual object for lens $L_2$. To find its image by $L_2$, draw ray 3 from $P'$ through the centre of lens $L_2$ back to $S$ (this ray is refracted by lens $L_1$ but not by $L_2$) and draw ray 4 as refracted by lens $L_2$. Since ray 4 is parallel to the optical axis between the lenses, it passes through the back focal point $F_{2i}$ of lens $L_2$. The intersection point of ray 3 and 4 is the final image point $P$.
+
 ```{figure} Images/Chapter_2/2_21_Two_Thin_Lenses_close.png
 :name: Fig_2_21_Two_Thin_Lenses_close
 Two thin lenses at a distance smaller than their focal lengths.
@@ -1041,7 +1048,7 @@ f_i&= \frac{ (f_{1i}-d) f_{2i}}{f_{1i}+f_{2i}-d},
 f_o &= -\frac{(f_{2i}-d)f_{1i}}{f_{1i}+f_{2i} - d},
 \end{align*}
 ```
-We found in {numref}`subsection.focthin` that when the refractive indices of the media before and after the lens are the same, the object and image focal lengths of a thin lens are the identical. However, as follows from {eq}`eq.2fi` and {eq}`eq.2fo` the object and image focal lengths are in general different when there are several lenses.
+We found in [](subsection.focthin) that when the refractive indices of the media before and after the lens are the same, the object and image focal lengths of a thin lens are the identical. However, as follows from {eq}`eq.2fi` and {eq}`eq.2fo` the object and image focal lengths are in general different when there are several lenses.
 
 By construction using the intermediate image, it is clear that the magnification of the two-lens system is the product of the magnifications of the two lenses:
 
@@ -1078,6 +1085,7 @@ In particular, by the using two identical lenses in contact, the focal length is
 ### The Thick Lens
 
 At the left of {numref}`Fig_2_22_Thick_Lens_Principle_plane` a thick lens is shown. The object focal point is defined as the point whose rays are refracted such that the emerging rays are parallel to the optical axis. By extending the incident and emerging rays by straight segments, the points of intersection are found to be on a curved surface, which close to the optical axis, i.e. in the paraxial approximation, is in good approximation a plane perpendicular to the optical axis. This plane is called the **primary principal plane** and its intersection with the optical axis is called the primary principal point $H_1$.
+
 ```{figure} Images/Chapter_2/2_22_Thick_Lens_Principle_plane.png
 :name: Fig_2_22_Thick_Lens_Principle_plane
 Principal planes of a thick lens, with front and back focal lengths: f.f.l and b.f.l.
@@ -1087,6 +1095,7 @@ By considering incident rays which are parallel to the optical axis and therefor
 The principal planes can be outside the lens. For meniscus lenses, this is usually the case as shown in {numref}`Fig_2_23_Principle_planes`.
 It can be seen from {numref}`Fig_2_22_Thick_Lens_Principle_plane`
 that the principal planes are images of each other, with unit magnification. Hence, if an object is placed in the primary principal plane (hypothetically if this plane is inside the lens), its image is in the secondary principal plane. The image is erect and has unit magnification.
+
 
 ```{figure} Images/Chapter_2/2_23_Principle_planes.png
 :name: Fig_2_23_Principle_planes
@@ -1099,16 +1108,15 @@ Now, if the object coordinates and object focal point are defined with respect t
 
 
 
-*Proof* \\
+*Proof* 
+
 We recall the result {eq}`eq.matlens` for the ray matrix between the planes through the front and back vertices $V_1$, $V_2$ of a thick lens with refractive index $n_l$ and thickness $d$:
 
 ```{math}
 :label: eq.matlens_b
 \begin{align*}
 {\cal M}_{V_1V_2}
-&= \left( \begin{array}{cc}
-1 - \frac{d}{n_l}P_2 & -P \\
-\frac{d}{n_l} & 1 -\frac{d}{n_l}P_1
+&= \left( \begin{array}{cc}1 - \frac{d}{n_l}P_2 & -P \\\frac{d}{n_l} & 1 -\frac{d}{n_l}P_1
 \end{array}\right), \quad \textbf{thick lens},
 \end{align*}
 ```
@@ -1133,9 +1141,7 @@ If $h_1$ is the $z$-coordinate of the first principal point $H_1$ with respect t
 ```{math}
 :label: eq.mathom_b
 \begin{align*}
-{\cal M}_1=\left( \begin{array}{cc}
-1 & 0 \\
-\frac{h_1}{n_1} & 1
+{\cal M}_1=\left( \begin{array}{cc}1 & 0 \\\frac{h_1}{n_1} & 1
 \end{array}\right).
 \end{align*}
 ```
@@ -1144,9 +1150,7 @@ Similarly, if $h_2$ is the coordinate of the secondary principal point $H_2$ wit
 ```{math}
 :label: eq.mathom_c
 \begin{align*}
-{\cal M}_2=\left( \begin{array}{cc}
-1 & 0 \\
-\frac{h_2}{n_2} & 1
+{\cal M}_2=\left( \begin{array}{cc}1 & 0 \\\frac{h_2}{n_2} & 1
 \end{array}\right).
 \end{align*}
 ```
@@ -1163,25 +1167,28 @@ The coordinates $h_1$ and $h_2$ can be found by imposing to the resulting matrix
 We omit the details and only give the resulting expressions here:
 
 ```{math}
+:label: eq.V1H1
+\begin{align*}
+h_1 &= \frac{n_1}{n_l} \frac{P_2}{P} d, \end{align*}
+```
+```{math}
 :label: eq.V2H2
 \begin{align*}
-h_1 &= \frac{n_1}{n_l} \frac{P_2}{P} d, \\
-h_2 &= -\frac{n_2}{n_l} \frac{P_1}{P} d.
-\end{align*}
+\\
+h_2 &= -\frac{n_2}{n_l} \frac{P_1}{P} d.\end{align*}
 ```
 With these results, {eq}`eq.matH1H2` becomes
 
 ```{math}
 :label: eq.matH1H2_b
 \begin{align*}
-{\cal M}_{H_1H_2}= \left( \begin{array}{cc}
-1 & -P \\
-0 & 1
+{\cal M}_{H_1H_2}= \left( \begin{array}{cc}1 & -P \\0 & 1
 \end{array}\right).
 \end{align*}
 ```
 We see that **the ray matrix between the principal planes is identical to the ray matrix of a thin lens** {eq}`eq.matthinlens`.
 We therefore conclude that if the coordinates in object space are chosen with respect to the origin in the primary principal point $H_1$, and the coordinates in image space are chosen with respect to the origin in the secondary principal point $H_2$, the expressions for the first and second focal points and for the coordinates of the image point in terms of that of the object point are identical to that for a thin lens. An example of imaging by a thick lens is shown in {numref}`Fig_2_24_Thick_Lens_Imaging`.
+
 ```{figure} Images/Chapter_2/2_24_Thick_Lens_Imaging.png
 :name: Fig_2_24_Thick_Lens_Imaging
 Thick-lens geometry. There holds
@@ -1189,7 +1196,10 @@ Thick-lens geometry. There holds
 ```
 
 
-(section.Stops)=
+```{index} Stops
+:name: sec.stops
+```
+
 ### Stops
 
 An element such as the rim of a lens or a diaphragm which determines the set of rays that can contribute to the image, is called the **aperture stop**. An ordinary camera has a variable diaphragm.
@@ -1201,12 +1211,16 @@ For any object point, the **chief ray** is the ray in the cone that passes throu
 For a fixed diameter $D$ of the exit pupil and for given $x_o$, the magnification of the system is according to {eq}`eq.defM1` and {eq}`eq.newton` given by $M=-x_i/f_i=f_i/x_o$. It follows that when $f_i$ is increased, the magnification increases.
 A larger magnification means a lower energy density, hence a longer exposure time, i.e. **the speed of the lens is reduced**. Camera lenses are usually specified by two numbers: the focal length $f$, measured with respect to the exit pupil and the diameter $D$ of the exit pupil. The **$f$-number** is the ratio of the focal length to this diameter:
 
+
 ```{math}
 :label: eq.fnumber
-\boxed{\text{f-number}=f/D.}
+\boxed{\begin{align*}
+\text{f-number}=f/D.
+\end{align*}}
 ```
 
 For example, f-number$=2$ means $f = 2D$. Since the exposure time is proportional to the square of the f-number, a lens with f-number 1.4 is twice as fast as a lens with f-number 2.
+
 
 ```{figure} Images/Chapter_2/2_25_Aperture_Stop.png
 :name: Fig_2_25_Aperture_Stop
@@ -1221,6 +1235,7 @@ For designing advanced optical systems Gaussian geometrical optics is not suffic
 Instead non-paraxial rays, and among them also non-meridional rays, must be traced using software based on Snell's Law with the sine of the angles of incidence and refraction. Often many thousands of rays are traced to evaluate the quality of an image.
 It is then found that in general the non-paraxial rays do not intersect at the ideal Gaussian image point. Instead of a single spot, a spot diagram is found which is more or less confined. The deviation from an ideal point image is quantified in terms of **aberrations**. One distinguishes between monochromatic and chromatic aberrations. The latter are caused by the fact that the refractive index depends on wavelength.
 Recall that in paraxial geometrical optics Snell's Law {eq}`eq.refrac3` is replaced by: $n_i \theta_i = n_t \theta_t$, i.e. $\sin \theta_i$ and $\sin \theta_t$ are replaced by the linear terms. If instead one retains the first two terms of the Taylor series of the sine, the errors in the image can be quantified by five monochromatic aberrations, the so-called **primary** or **Seidel aberrations**. The best known is **spherical aberration**, which is caused by the fact that for a convergent spherical lens, the rays that makes a large angle with the optical axis are focused closer to the lens than the paraxial rays (see {numref}`Fig_2_26_Aberration_Lens`).
+
 ```{figure} Images/Chapter_2/2_26_Aberration_Lens.png
 :name: Fig_2_26_Aberration_Lens
 Spherical aberration of a planar-convex lens. 
@@ -1232,9 +1247,10 @@ For high-quality imaging the aberrations have to be reduced by adding more lense
 
 A comprehensive treatment of aberration theory can be found in Braat et al.<sup>[^4]</sup>.
 
+
 ```{figure} Images/Chapter_2/2_27_ASML_EUV.png
 :name: Fig_2_27_ASML_EUV
-The EUV stepper TWINSCAN NXE:3400B.Lithographic lens system for DUV (192 nm), costing more than € 500.000. Ray paths are shown in purple. The optical system consists of mirrors because there are no suitable lenses for this wavelength \footnotesize{(Courtesy of [ASML](https://www.asml.com/en/news/media-library))}.
+The EUV stepper TWINSCAN NXE:3400B.Lithographic lens system for DUV (192 nm), costing more than € 500.000. Ray paths are shown in purple. The optical system consists of mirrors because there are no suitable lenses for this wavelength (Courtesy of [ASML](https://www.asml.com/en/news/media-library)).
 ```
 
 
@@ -1242,6 +1258,7 @@ The EUV stepper TWINSCAN NXE:3400B.Lithographic lens system for DUV (192 nm), co
 
 According to a generally accepted criterion formulated first by Rayleigh, aberrations start to deteriorate images considerably if the they cause path length differences of more than a quarter of the wavelength.
 When the aberrations are less than this, the system is called **diffraction limited**..
+
 ```{figure} Images/Chapter_2/2_28_AiryDisk_210308.png
 :name: Fig_2_28_AirySpot
 Left: cross section of the field of the Airy pattern. Right: intensity pattern of the Airy pattern.
@@ -1256,7 +1273,7 @@ Even if the wave transmitted by the exit pupil would be perfectly spherical (no 
 \text{FWHM} = 0.6 \frac{ \lambda}{\text{NA}},
 \end{align*}
 ```
-where NA$=\arcsin(a/s_i)$ is the numerical aperture (i.e. 0<NA<1) with $a$ the radius of the exit pupil and $s_i$ the image distance as predicted by Gaussian geometrical optics. Diffraction depends on the wavelength and hence it cannot be described by geometrical optics, which applies in the limit of vanishing wavelength.  We will treat diffraction by apertures in {numref}`chapter.diffraction`.
+where NA$=\arcsin(a/s_i)$ is the numerical aperture (i.e. 0<NA<1) with $a$ the radius of the exit pupil and $s_i$ the image distance as predicted by Gaussian geometrical optics. Diffraction depends on the wavelength and hence it cannot be described by geometrical optics, which applies in the limit of vanishing wavelength.  We will treat diffraction by apertures in [](chapter.diffraction).
 
 
 

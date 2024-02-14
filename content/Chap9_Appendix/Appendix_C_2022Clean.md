@@ -17,4 +17,5 @@ where $\hat{\mathbf{n}}$ is the outwards pointing unit normal. We assume that th
 \end{align*}
 ```
 where $\mathbf{E}(\mathbf{r})$ is the complex amplitude of the electric field at position $\mathbf{r}$.
+
 2. $F=0$. In this case the net energy flow through the boundary is zero and hence the matter in the volume does not absorb.

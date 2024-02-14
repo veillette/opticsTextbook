@@ -20,8 +20,8 @@ If a film would be used to record the image, very long exposure times are howeve
 
 ```{figure} Images/Chapter_3/3_01_Camera_obscura.jpg
 :name: Fig_3_01_Camera_obscura
-The principle of the camera obscura \footnotesize{(from [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Camera_obscura_1.jpg) in Fizyka z. (1910) / Public Domain). Examples of pictures made with a camera obscura can be found
-		[here](https://www.pinterest.com/bonfoton/camera-obscura-photographs/)}.
+The principle of the camera obscura (from [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Camera_obscura_1.jpg) in Fizyka z. (1910) / Public Domain). Examples of pictures made with a camera obscura can be found
+		[here](https://www.pinterest.com/bonfoton/camera-obscura-photographs/).
 ```
 
 
@@ -31,10 +31,10 @@ In {numref}`Fig_3_02_Reflex_camera` a single-lens reflex (SLR) camera is shown. 
 After traversing the first few lens elements, the light passes through an iris diaphragm with adjustable diameter with which the $f$-number can be changed. After the lenses the light is reflected by a movable mirror tilted at $45^o$, passes through a prism and exits the camera through the finder eyepiece. When the shutter is released, the diaphragm closes to a preset value, the mirror swings up and the CCD is exposed. To focus the camera, the entire lens is moved toward or away from the detection plane. Autofocus is based on maximising the contrast of the images.
 ```{figure} Images/Chapter_3/3_02_Reflex_camera.png
 :name: Fig_3_02_Reflex_camera
-Digital SLR camera. The pixelated digital sensor is behind a movable mirror at angle of 45 degrees with the optical axis. \footnotesize{(from [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Reflex_camera_numeric.svg) by Jean François WITZ / CC BY-SA 3.0)}.
+Digital SLR camera. The pixelated digital sensor is behind a movable mirror at angle of 45 degrees with the optical axis. (from [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Reflex_camera_numeric.svg) by Jean François WITZ / CC BY-SA 3.0).
 ```
 
-The **angular field of view** (AFOV) is defined for scenes at large distances and is equal to the angle subtended at the lens by the detector when the image distance is the focal length $f$, i.e. the object is at infinity ({numref}`Fig_3_03_AFOV`). The AFOV decreases when $f$ increases. A standard SLR has a focal length of around 6 cm with AFOV between 40 \degree and 50\degree.
+The **angular field of view** (AFOV) is defined for scenes at large distances and is equal to the angle subtended at the lens by the detector when the image distance is the focal length $f$, i.e. the object is at infinity ({numref}`Fig_3_03_AFOV`). The AFOV decreases when $f$ increases. A standard SLR has a focal length of around 6 cm with AFOV between 40&deg; and 50&deg;.
 ```{figure} Images/Chapter_3/3_03_AFOV.png
 :name: Fig_3_03_AFOV
 Angular field of view
@@ -48,7 +48,7 @@ The drawback is that less light reaches the sensor, therefore a longer exposure 
 
 ```{figure} Images/Chapter_3/3_04_Lego_Depth.jpg
 :name: Fig_3_04_Lego_Depth
-Four images taken with different diaphragm and different focal plane. The image on bottom right is taken with a small diaphragm and the entire image appears clear \footnotesize{(photos taken by Aur&egrave;le J.L. ADAM / CC BY-SA)}.
+Four images taken with different diaphragm and different focal plane. The image on bottom right is taken with a small diaphragm and the entire image appears clear (photos taken by Aur&egrave;le J.L. ADAM / CC BY-SA).
 ```
 
 
@@ -66,7 +66,7 @@ The eye is an adaptive imaging system.
 The human eye is made of an almost spherical (24 mm long and 22 mm across) gelatinous substance called the **vitreous humor** with refractive index 1.337, surrounded by a white shell, the **sclera** ({numref}`Fig_3_05_Three_Internal_chambers_of_the_Eye`). At the front, the sclera has an opening with a transparent lens called the **cornea**, with for green light an index of refraction of 1.376. Most of the bending of the rays takes place at the air-cornea interface and this is why it is difficult to see under water ($n_{water}=1.33$).
 ```{figure} Images/Chapter_3/3_05_Three_Internal_chambers_of_the_Eye.png
 :name: Fig_3_05_Three_Internal_chambers_of_the_Eye
-Cross section of a human eye \footnotesize{(from [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Three_Internal_chambers_of_the_Eye.png) by Holly Fischer / CC BY)}.
+Cross section of a human eye (from [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Three_Internal_chambers_of_the_Eye.png) by Holly Fischer / CC BY).
 ```
 
 After passing the cornea, the rays reach the **aqueous humour** ($n\approx$1.336) with the **iris** or pupil. It can expand or contract from a 2&nbsp;mm (bright sun) to 8&nbsp;mm (low light) diameter to adapt to the light intensity. The iris gives colour to the eye. After the iris, the rays reach the flexible **crystalline lens** which has the size of a bean (9&nbsp;mm in diameter, and 4&nbsp;mm thick in relaxed condition). Its index of refraction varies from 1.406 in the centre to 1.386 at the edge.
@@ -75,7 +75,7 @@ After passing the cornea, the rays reach the **aqueous humour** ($n\approx$1.336
 ```
 ```{figure} Images/Chapter_3/3_06b_Accomodation_eye.png
 :name: Fig_3_06_Eye
-Left: Optical rays showing how an eye accommodates by changing its focal length. Right: Relaxed and contracted muscle at the crystalline lens needed for this accommodation.\footnotesize{(Left: adapted from [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Focus_in_an_eye.svg) Erin Silversmith / BY-NC-SA 2.5 Generic. Right: adapted from Sjaastad O.V., Sand O. and Hove K. (2010) Physiology of domestic animals, 2nd edn., Oslo: Scandinavian Veterinary Press).}
+Left: Optical rays showing how an eye accommodates by changing its focal length. Right: Relaxed and contracted muscle at the crystalline lens needed for this accommodation.(Left: adapted from [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Focus_in_an_eye.svg) Erin Silversmith / BY-NC-SA 2.5 Generic. Right: adapted from Sjaastad O.V., Sand O. and Hove K. (2010) Physiology of domestic animals, 2nd edn., Oslo: Scandinavian Veterinary Press).
 ```
 
 
@@ -162,7 +162,7 @@ In this case a distant object is imaged by the relaxed eye behind the retina, i.
 hence the power must be $\mathfrak{D}=1/f=+3.2$ diopter.
 ```{figure} Images/Chapter_3/3_07_Eye_correction.png
 :name: Fig_3_07_eye_correction
-Correction of farsighted (left) and nearsighted (right) eye \footnotesize{(adapted from [Wikimedia Commons](https://en.wikipedia.org/wiki/File:Myopia_and_lens_correction.svg) by Gumenyuk I.S. / CC BY-SA 4.0)}.
+Correction of farsighted (left) and nearsighted (right) eye (adapted from [Wikimedia Commons](https://en.wikipedia.org/wiki/File:Myopia_and_lens_correction.svg) by Gumenyuk I.S. / CC BY-SA 4.0).
 ```
 
 
@@ -190,7 +190,7 @@ An example is given in {numref}`Fig_3_08_magnifier_gruffalo`.
 
 ```{figure} Images/Chapter_3/3_08_magnifier_gruffalo_small.png
 :name: Fig_3_08_magnifier_gruffalo
-Example of a positive lens used as a magnifying glass {\footnotesize (picture taken by A.J.L. Adam / CC-BY-SA 4.0)}.
+Example of a positive lens used as a magnifying glass (picture taken by A.J.L. Adam / CC-BY-SA 4.0).
 ```
 
 
@@ -272,7 +272,7 @@ The aperture of the eyepiece is controlled by a field stop.
 An example is given in {numref}`Fig_3_10_EyePiece`.
 ```{figure} Images/Chapter_3/3_10_EyePiece.png
 :name: Fig_3_10_EyePiece
-Example of an eyepiece consisting of three lenses. 1) Real image, 2) field diaphragm, 3) eye relief, 4) eye pupil {\footnotesize (adapted from [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Exitpupil.png) by Tamas-flex / CC BY-SA 3.0).}
+Example of an eyepiece consisting of three lenses. 1) Real image, 2) field diaphragm, 3) eye relief, 4) eye pupil (adapted from [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Exitpupil.png) by Tamas-flex / CC BY-SA 3.0).
 ```
 
 
@@ -301,7 +301,8 @@ Furthermore, according to {eq}`eq.MPinfinity`, the angular magnification is for 
 \text{MP}=\frac{\mathbin{-} x_i}{f_i^{obj}} \frac{d_o}{f_i^e} = \dfrac{\mathbin{-} 16}{f_0}.\dfrac{25}{f_e},
 \end{align*}
 ```
-with the standard near-point $d_o=$25&nbsp;cm. As an example, an Amici objective gives $40 \times$ and combined with a $10\times$ eye piece one gets $MP=400$.\\
+with the standard near-point $d_o=$25&nbsp;cm. As an example, an Amici objective gives $40 \times$ and combined with a $10\times$ eye piece one gets $MP=400$.
+
 The **numerical aperture**
 of a microscope is a measure of the capability to gather light from the object.
 It is defined by:
@@ -323,7 +324,8 @@ A telescope enlarges the retinal image of a distant object. Like a compound micr
 Keplerian astronomical telescope. 
 ```
 
-The object in this figure is at a large but finite distance; therefore, an image is formed by the objective just after its second focal point. The eyepiece makes a virtual magnified image, to be viewed with a relaxed eye. Therefore, the intermediary image of the objective must be within the focal length $f_i^e$ from the eyepiece. The final image is inverted.\\
+The object in this figure is at a large but finite distance; therefore, an image is formed by the objective just after its second focal point. The eyepiece makes a virtual magnified image, to be viewed with a relaxed eye. Therefore, the intermediary image of the objective must be within the focal length $f_i^e$ from the eyepiece. The final image is inverted.
+
 As seen earlier, the angular magnification is:
 $\text{MP} = \alpha_a/\alpha_u$ where $\alpha_u$ is the half angle of the cone of light that would be collected without telescope and $\alpha_a$ is the half angle of the apparent cone of rays coming from the virtual image of the eye piece. For an object at infinity we find considering the triangles $F_{o}^{obj}AB$ and $F_i^{e}CD$ in {numref}`Fig_3_13_Rays_Telescope` that
 

@@ -1,7 +1,9 @@
 (chapter.FourierTransform)=
 # The Fourier Transform
 
-\label{appendixFI}
+```{index} The Fourier Transform
+:name: appendixFI
+```
 ## Definitions
 
 ```{math}

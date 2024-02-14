@@ -1,6 +1,6 @@
 
 # The Lorentz Model for Material Dispersion
-The Lorentz model, which we already mentioned in {numref}`section.maxmat`, leads to a dispersion relation for the susceptibility and hence for the permittivity given by
+The Lorentz model, which we already mentioned in [Maxwell Equations](section.maxmat), leads to a dispersion relation for the susceptibility and hence for the permittivity given by
 
 ```{math}
 :label: eq.epsdisp1
