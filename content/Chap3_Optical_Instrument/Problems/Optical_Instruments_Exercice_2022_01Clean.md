@@ -64,20 +64,20 @@ We require that the virtual images of all distant objects are at distance of at 
 Derive $d$ and the strength of the negative lens in diopter.
 
 
-```{figure} Images/Tutorial_3/Ex_03_Eye.png
+```{figure} ../Images/Tutorial_3/Ex_03_Eye.png
 :name: fig:Eye
-\begin{footnotesize}Angular view $\alpha_u$ without and with the use of a negative lens.\end{footnotesize}
+Angular view $\alpha_u$ without and with the use of a negative lens.
 ```
 
 
-4. Imaging with a planar interface.
+4. \* Imaging with a planar interface.
 In this problem we investigate whether it is possible to image an object with a single planar interface.
 
 - **a)** We have two media with refractive indices $n_1$ and $n_2$, separated by a planar interface. Give the transfer matrix $\mathcal{T}$ for refraction at a planar interface using the paraxial approximation.
 
 - **b)** Suppose we have an object that is a distance $d$ from the interface. Give the system matrix that describes a ray propagating from the object to the plane that is a distance $d$ behind the interface (see {numref}`fig:PlanarInterface`).
 
-```{figure} Images/Tutorial_3/Ex_04_Planar_Interface.png
+```{figure} ../Images/Tutorial_3/Ex_04_Planar_Interface.png
 :name: fig:PlanarInterface
 Planar Interface
 ```

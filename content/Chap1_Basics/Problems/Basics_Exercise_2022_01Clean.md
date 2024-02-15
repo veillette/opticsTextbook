@@ -31,8 +31,7 @@ where $\mathbf{\mathcal{E}}^t(\mathbf{r})$ is the transmitted electric field in 
 - **a)** According to {eq}`eq.Edipolfar` the field radiated by a dipole vanishes in the line of sight parallel to the direction of the dipole. Derive from this the relationship between the angle of reflection $\theta_r$ and the incident angle $\theta_i$ for which the reflected field vanishes.
 - **b)** Show that this relationship is satisfied by the Brewster angle for a $p$-polarised incident wave but that it can not be satisfied for a $s$-polarised incident wave.
 
-8.
-Consider two electric plane waves with wave vectors $\mathbf{k}_1=k_x\hat{\mathbf{x}}+k_z \hat{\mathbf{z}}$ and $\mathbf{k}_2=k_x\hat{\mathbf{x}}-k_z \hat{\mathbf{z}}$, where $k_z=\sqrt{k_0^2\epsilon-k_x^2}$, where $k_0$ is the wave number in vacuum and $\epsilon$ is the permittivity which is assumed to be real. Let both plane waves be polarised parallel to the $y$-direction and let them have real amplitudes $A_1$ and $A_2$ and suppose that they are in phase for $\mathbf{r}=\mathbf{0}$ at $t=0$.
+8. Consider two electric plane waves with wave vectors $\mathbf{k}_1=k_x\hat{\mathbf{x}}+k_z \hat{\mathbf{z}}$ and $\mathbf{k}_2=k_x\hat{\mathbf{x}}-k_z \hat{\mathbf{z}}$, where $k_z=\sqrt{k_0^2\epsilon-k_x^2}$, where $k_0$ is the wave number in vacuum and $\epsilon$ is the permittivity which is assumed to be real. Let both plane waves be polarised parallel to the $y$-direction and let them have real amplitudes $A_1$ and $A_2$ and suppose that they are in phase for $\mathbf{r}=\mathbf{0}$ at $t=0$.
 - **a)** Write the expressions for the total complex and real electric field $\mathbf{E}$, $\mathbf{\mathcal{E}}$ and magnetic field $\mathbf{H}$ and $\mathbf{\mathcal{H}}$.
 - **b)** Compute the square modulus $|\mathbf{\mathcal{E}}|^2$ of the total electric field.
 - **c)** There is a standing wave as function of $z$. What is the period of this standing wave as function of the angle $\theta=2 \arctan(k_z/k_x)$ between the wave vectors? Make a sketch of this period as function of $\theta$. Note: the standing wave occurs in the direction in which the wave vectors are opposite, i.e. in this case the $z$-direction.
@@ -47,7 +46,7 @@ $\mathbf{k}^i=k_x\hat{\mathbf{x}}+k_z^i\hat{\mathbf{z}}$ and let $k_x>k_0n_i$, s
 - **c)** What is the direction of the energy flow in $z>0$?
 - **d)** Explain that when the Poynting vector would have a nonzero $z$-component, this would contradict the conservation of energy.
 
-10.* Let an electric dipole be at the origin and let its dipole vector be parallel to the $z$-direction: $\mathbf{p}=p\hat{\mathbf{z}}$. Then $\hat{\mathbf{R}}=\hat{\mathbf{r}}$ and $R=r$ in {eq}`eq.Hdipolfar` and {eq}`eq.Edipolfar`. Let the frequency be $\omega$ and let the surrounding medium have real permittivity $\epsilon$.
+10. \* Let an electric dipole be at the origin and let its dipole vector be parallel to the $z$-direction: $\mathbf{p}=p\hat{\mathbf{z}}$. Then $\hat{\mathbf{R}}=\hat{\mathbf{r}}$ and $R=r$ in {eq}`eq.Hdipolfar` and {eq}`eq.Edipolfar`. Let the frequency be $\omega$ and let the surrounding medium have real permittivity $\epsilon$.
 - **a)** Show that at large distance to the dipole, the time-averaged Poynting vector is given by
 
 $$
