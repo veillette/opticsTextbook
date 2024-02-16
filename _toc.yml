@@ -2,9 +2,9 @@
 # Learn more at https://jupyterbook.org/customize/toc.html
 
 format: jb-book
-root: intro.md
+root: Preface_2022Clean.md
 parts:
-  - caption: Template Caption
+  - caption: Optics
     chapters:
       - file: content/Chap1_Basics/Basics_2022_01Clean.md
         sections:
@@ -36,7 +36,7 @@ parts:
       - file: content/Chap9_Appendix/Appendix_G_2022Clean.md
       - file: content/Chap9_Appendix/Appendix_H_2022Clean.md
       - file: content/Chap9_Appendix/French_method_01Clean.md
-      - file: content/Preface/Preface_2022Clean.md
+      #- file: content/Preface/Preface_2022Clean.md
       
       
 
