@@ -6,7 +6,7 @@ root: Preface_2022Clean.md
 parts:
   - caption: Optics
     chapters:
-      - file: content/Chap1_Basics/Basics_2022_01Clean.md
+      - file: content/Chap1_Basics/Basics_2022_01Clean.ipynb
         sections:
           - file: content/Chap1_Basics/Problems/Basics_Exercise_2022_01Clean.md
       - file: content/Chap2_Geometrical_optics/GeometricalOptics_2022_01Clean.md

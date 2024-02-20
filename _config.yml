@@ -18,7 +18,7 @@ execute:
   execute_notebooks: force
   cache: ""
   exclude_patterns: [ ]
-  timeout: 30
+  timeout: 300
   run_in_temp: false
   allow_errors: false
   stderr_output: show
