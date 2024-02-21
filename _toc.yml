@@ -4,6 +4,9 @@
 format: jb-book
 root: Preface_2022Clean.md
 parts:
+  - caption: About
+    chapters:
+      - file: content/Authors/authors_01.md
   - caption: Optics
     chapters:
       - file: content/Chap1_Basics/Basics_2022_01Clean.ipynb
