@@ -1,5 +1,5 @@
 (chapter.preface)=
-# Preface
+# Introduction to BSc Optics
 
 This book is about optics for advanced undergraduate and beginning graduate students of physics, electrical engineering and related fields.
 As a student of these subjects you are probably already familiar with many concepts of optics and the nature of light.
@@ -39,9 +39,16 @@ The digital version of the book contains links to websites with useful demonstra
 
 The book has profited from constructive criticisms of many students that have attended the course over the years. The authors like to thank in particular the teaching assistants Yifeng Shao, Marco Mout, Paulo Ansuinelli, Po-Ju Chen, Thomas van den Hooven, Xukang Wei, Alex Heemels and Thomas Kotte for their help in pointing out mistakes and inconsistencies. For the remaining errors solely the authors are responsible.
 
+---
+
+This book is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>. It is part of the collection of [Interactive Open Textbooks](https://textbooks.open.tudelft.nl/textbooks/catalog/category/interactive) of [TU Delft Open](https://textbooks.open.tudelft.nl/textbooks/index).
+
+This website is a [Jupyter Book](https://jupyterbook.org/intro.html). MarkDown source files are available for download using the button on the top right.
+
+
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png"/></a>
+
 Delft, 2022 
-
-
 
 
 A.P.K., A.J.L.A., H.P.U.

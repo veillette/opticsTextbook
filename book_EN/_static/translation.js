@@ -45,11 +45,11 @@ function updateButtonContent(lang) {
 
   if ( lang==="en" ){
     //flag.src = "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Flag_of_the_Netherlands.svg/255px-Flag_of_the_Netherlands.svg.png";
-    flag.src = "_static/img/nl.png";
+    flag.src = "../../_static/img/nl.png";
     console.log("changed the flag to NL");
   } else {
     //flag.src = "https://upload.wikimedia.org/wikipedia/en/thumb/a/ae/Flag_of_the_United_Kingdom.svg/1200px-Flag_of_the_United_Kingdom.svg.png";
-    flag.src = "../_static/img/en.png";
+    flag.src = "../../../_static/img/en.png";
     console.log("changed the flag to EN");
   }
 

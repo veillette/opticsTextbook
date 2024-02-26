@@ -2,7 +2,7 @@
 # Learn more at https://jupyterbook.org/customize/toc.html
 
 format: jb-book
-root: Preface_2022Clean.md
+root: content/Preface/Preface_2022Clean.md
 parts:
   - caption: About
     chapters:
