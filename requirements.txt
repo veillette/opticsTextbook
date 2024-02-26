@@ -1,9 +1,0 @@
-numpy
-scipy
-matplotlib
-plotly
-myst_nb
-jupyterquiz
-sphinx-exercise
-sphinx-proof
-jupyter-book
