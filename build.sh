@@ -1,18 +1,36 @@
 #!/bin/bash
 
-# build the book
+# --------------------------------
+# To run this batch script run this command:
+#
+# ./build.sh
+#
+# before running it FOR THE FIRST TIME make sure to run this command to make the script executable:
+# 
+# chmod +x build.sh
+#
+# also make sure that the python v-env is active
+# kind regards
+# --------------------------------
+
+# remove old build of the books
 rm -r _build
 rm -r book_EN/_build
 rm -r book_NL/_build
 
+# build EN version
 cd book_EN
-# make sure the v-env is activated
 jupyter-book build .
+
+# build NL version
 cd ../book_NL
 jupyter-book build .
 cd _build
+
+# rename NL-html folder and move it in the EN-html folder 
 mv html nl
-cp -r nl ../../book_EN/_build/html
+mv nl ../../book_EN/_build/html/nl
+
 cd ../../book_EN
 mv _build ../_build
 
