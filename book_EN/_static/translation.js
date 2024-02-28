@@ -70,8 +70,15 @@ function updateButtonContent(lang) {
 function changeLanguage(language) {
   var currentUrl         = window.location.href;
   var urlSegments        = currentUrl.split('/');
-  var htmlFolderIndex    = urlSegments.indexOf('html');   // here it is assumed that the book is contained inside a folder named 'html'
-                                                          // as default for jupyter-books.
+
+  // this is for local book
+  // var htmlFolderIndex    = urlSegments.indexOf('html');   // here it is assumed that the book is contained inside a folder named 'html'
+                                                             // as default for jupyter-books.
+
+  // this is for online book
+  var htmlFolderIndex    = urlSegments.indexOf('tn2421');   // here it is assumed that the book is contained inside a folder named 'html'
+                                                            // as default for jupyter-books.
+  
   var lastSlashIndex     = currentUrl.lastIndexOf('/');
   
   if (lastSlashIndex !== -1) {
