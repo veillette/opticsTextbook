@@ -78,7 +78,7 @@ function changeLanguage(language) {
   // this is for online book
   var htmlFolderIndex    = urlSegments.indexOf('tn2421');   // here it is assumed that the book is contained inside a folder named 'html'
                                                             // as default for jupyter-books.
-  
+
   var lastSlashIndex     = currentUrl.lastIndexOf('/');
   
   if (lastSlashIndex !== -1) {
@@ -97,7 +97,7 @@ function changeLanguage(language) {
       window.location.href = modifiedUrl;
       console.log("Modified the URL to " + modifiedUrl);
     } else {
-      console.log("'html' not found in the URL");
+      console.log(htmlFolderIndex + " not found in the URL");
     }
   } else {
     console.log("'/' not found in the URL");
