@@ -40,16 +40,33 @@ document.body.appendChild(button);
 function updateButtonContent(lang) {
   button.innerHTML = ""; // Clear existing content
 
+  var currentUrl         = window.location.href;
+
+  var urlParts           = currentUrl.split("tn2421")[1].split("/");
+  //var urlParts           = currentUrl.split("html")[1].split("/");    // use this to build the book locally
+
+  var slashNumber        = urlParts.length - 1
+
   // Create flag element
   var flag = document.createElement("img");
+  var path = ""
+  var dot_dot_slash = "../"
 
   if ( lang==="en" ){
     //flag.src = "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Flag_of_the_Netherlands.svg/255px-Flag_of_the_Netherlands.svg.png";
-    flag.src = "../../_static/img/nl.png";
+    for ( i=0; i<slashNumber-1; i++ ){
+      path = path + dot_dot_slash
+    }
+    path = path + "_static/img/nl.png"
+    flag.src = path
     console.log("changed the flag to NL");
   } else {
     //flag.src = "https://upload.wikimedia.org/wikipedia/en/thumb/a/ae/Flag_of_the_United_Kingdom.svg/1200px-Flag_of_the_United_Kingdom.svg.png";
-    flag.src = "../../../_static/img/en.png";
+    for ( i=0; i<slashNumber-1; i++ ){
+      path = path + dot_dot_slash
+    }
+    path = path + "_static/img/en.png"
+    flag.src = path
     console.log("changed the flag to EN");
   }
 
@@ -72,7 +89,7 @@ function changeLanguage(language) {
   var urlSegments        = currentUrl.split('/');
 
   // this is for local book
-  // var htmlFolderIndex    = urlSegments.indexOf('html');   // here it is assumed that the book is contained inside a folder named 'html'
+  //var htmlFolderIndex    = urlSegments.indexOf('html');   // here it is assumed that the book is contained inside a folder named 'html'
                                                              // as default for jupyter-books.
 
   // this is for online book
