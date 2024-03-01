@@ -1,5 +1,5 @@
 (chapter.preface)=
-# Introduction to BSc Optics
+# Introduction to Interactive Optics
 
 This book is about optics for advanced undergraduate and beginning graduate students of physics, electrical engineering and related fields.
 As a student of these subjects you are probably already familiar with many concepts of optics and the nature of light.
