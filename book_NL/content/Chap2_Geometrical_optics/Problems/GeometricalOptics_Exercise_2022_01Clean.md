@@ -18,7 +18,7 @@ Tip: stel de partiële afgeleiden van de OPL ten opzichte van $x_A$ en $x_B$ gel
 - **c)** Druk de vergelijkingen die zijn afgeleid onder b) uit in termen van $\sin \theta_1$, $\sin \theta_2$ en $\sin \theta_3$ en leid af dat de wet van Snellius geldt voor de hoeken $\theta_1$ en $\theta_3$:
 
 ```{math}
-:label: eq.Snel13
+:label: eq.Snell13
 \begin{align*}
 n_1 \sin \theta_1 = n_3 \sin \theta_3.
 \end{align*}
