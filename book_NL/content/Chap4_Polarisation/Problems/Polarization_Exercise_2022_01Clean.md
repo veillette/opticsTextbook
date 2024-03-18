@@ -4,7 +4,7 @@
 
 ```{math}
 \begin{align*}
-\mathbf{E}(z,t)= A \sin\left(k z-\omega t + \pi/2\right) \hat**{x**}+ A \sin\left(k z-\omega t \right) \hat**{y**}
+\mathbf{E}(z,t)= A \sin\left(k z-\omega t + \pi/2\right) \hat{\mathbf{x}}+ A \sin\left(k z-\omega t \right) \hat{\mathbf{y}}
 \end{align*}
 ```
 waarbij $A$ een positief reëel getal is.
@@ -15,7 +15,7 @@ waarbij $A$ een positief reëel getal is.
 
 - **c)** Wat is de polarisatie van dit elektrische veld? Maak een tekening van de elektrische veldvector in het $(x,y)$-vlak op $z=0$ als functie van de tijd voor een waarnemer die naar de bron van het veld kijkt.
 
-- **d)** De bundel gaat normaal gesproken door een lineaire polarisator waarvan de transmissie-as een hoek maakt van $45 \degree$ met de positieve $x$-as.
+- **d)** De bundel gaat normaal gesproken door een lineaire polarisator waarvan de transmissie-as een hoek maakt van $45^o$ met de positieve $x$-as.
 Wat is de Jones-matrix van deze lineaire polarisator?
 
 - **e)** Leid het werkelijke elektrische veld af dat door de lineaire polarisator wordt uitgezonden als functie van $z$ en $t$.
@@ -101,7 +101,7 @@ $$
 - **b)**
 
 $$
-\left( \begin{array}{cc}1 & -1 \\-1 en 1
+\left( \begin{array}{cc}1 & -1 \\-1 & 1
 \end{array}\right).
 $$
 
