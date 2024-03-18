@@ -1,5 +1,5 @@
 
-(sec:basistrans)=
+(section.basistrans)=
 # Basistransformaties
 
 In deze paragraaf bespreken we de relevantie van basistransformaties en hoe deze toe te passen. Dus wat zijn basistransformaties eigenlijk? Het komt op het volgende neer: als we een fysiek object $\mathbf{\Psi}$ hebben, kunnen we het beschrijven met een vector (die in principe een continue functie kan zijn). De vorm van de vector waarmee we $\mathbf{\Psi}$ representeren, hangt af van de basis die we kiezen. We kunnen bijvoorbeeld een positievector $\mathbf{R}$ weergeven in Cartesische coördinaten $(x,y,z)$, of in sferische coördinaten $(\rho,\phi,\theta)$, of in cilindrische coördinaten $(r,\phi,z)$. Het is belangrijk op te merken dat **het fysieke object** ongewijzigd blijft, het zijn alleen de **coëfficiënten waarmee het object wordt weergegeven** die veranderen. De formules die beschrijven hoe de coëfficiënten voor de ene basis transformeren naar de coëfficiënten in de andere basis vormen de **basistransformatie**. In het geval dat deze formules kunnen worden beschreven als een matrixbewerking, hebben we een **lineaire basistransformatie**. Dit concept wordt uitgebreid behandeld in cursussen Lineaire Algebra.

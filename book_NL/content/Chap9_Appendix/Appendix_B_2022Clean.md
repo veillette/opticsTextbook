@@ -1,5 +1,5 @@
 # Het Lorentz-model voor materiaalverspreiding
-Het Lorentz-model, dat we al noemden in paragraaf {eq}`section.maxmat`, leidt tot een dispersierelatie voor de susceptibiliteit en dus voor de permittiviteit die wordt gegeven door
+Het Lorentz-model, dat we al noemden in paragraaf [](section.maxmat), leidt tot een dispersierelatie voor de susceptibiliteit en dus voor de permittiviteit die wordt gegeven door
 
 ```{math}
 :label: eq.epsdisp1
