@@ -40,7 +40,7 @@ We zullen twee equivalente methoden beschrijven om de voortplanting van het veld
 Hoewel beide methoden uiteindelijk hetzelfde beschrijven, geven ze fysisch inzicht in verschillende aspecten van voortplanting.
 
 ```{index} Angular Spectrum Methode
-:name: sec:angularspectrum
+:name: section.angularspectrum
 ```
 ### Angular Spectrum Methode
 
@@ -121,7 +121,7 @@ waar nu $k_z$ moet worden beschouwd als een functie van $(\xi, \eta)$:
 k_z = 2\pi \sqrt{ \left( \frac{1}{\lambda}\right)^2- \xi^2-\eta^2}.
 \end{align*}
 ```
-Merk op dat men dit kan interpreteren als een diagonalisatie van de propagatieoperator, zoals uitgelegd in {numref}`sec:basistrans`.
+Merk op dat men dit kan interpreteren als een diagonalisatie van de propagatieoperator, zoals uitgelegd in [](section.basistrans).
 
 We kunnen iets interessants waarnemen: als $k_x^2+k_y^2 > \left(\frac{2\pi }{\lambda}\right)^2$, dan wordt $k_z$ imaginair, en $\exp(i k_z z)$ vervalt exponentieel voor toenemende $z$:
 
@@ -131,7 +131,7 @@ We kunnen iets interessants waarnemen: als $k_x^2+k_y^2 > \left(\frac{2\pi }{\la
 \exp\left\{i\left[k_x x+k_y y +z\sqrt{\left(\frac{2\pi n}{\lambda}\right)^2-k_x^2-k_y^2 }\right]\right\}=e^{i(k_x x+k_y y)}e^{-z\sqrt{ k_x^2+k_y^2- \left(\frac{2\pi n}{\lambda}\right)^2} }.
 \end{align*}
 ```
-Deze exponentieel vervallende golven worden **evanescent in de positieve $z$-richting** genoemd. We zijn al vluchtige golven tegengekomen in de context van totale interne reflectie die wordt besproken in {numref}`subsection.totalrefl`. De fysische gevolgen van vluchtige golven in het hoekspectrum ontleding wordt uitgelegd in sectie {numref}`sec:fourierintuition`.
+Deze exponentieel vervallende golven worden **evanescent in de positieve $z$-richting** genoemd. We zijn al vluchtige golven tegengekomen in de context van totale interne reflectie die wordt besproken in [](subsection.totalrefl). De fysische gevolgen van vluchtige golven in het hoekspectrum ontleding wordt uitgelegd in sectie [](section.fourierintuition).
 
 De golven waarvoor $k_z$ reëel is, hebben een constante amplitude: alleen hun fase verandert door voortplanting. Deze golven worden daarom **voortplantingsgolven** genoemd.
 
@@ -154,10 +154,10 @@ Dit komt overeen met de bewering dat de elektrische vectoren van de vlakke golve
 Als alternatief kan men alleen de $E_x$- en $E_y$-componenten propageren en daarna $E_z$ bepalen uit de voorwaarde dat aan {eq}`eq.devE0` moet worden voldaan.
 
 
-(sec:rayleighsommerfeld)=
+(section.rayleighsommerfeld)=
 ### Rayleigh-Sommerfeld diffractie-integraal
 
-Een andere methode om een golfveld voort te bewegen is door gebruik te maken van de **Rayleigh-Sommerfeld** integraal. Een zeer goede benadering van deze integraal stelt dat elk punt in het vlak $z=0$ sferische golven uitzendt met een amplitude die evenredig is met het veld in het vlak $z=0$. Om het veld in een punt $(x, y,z)$ te vinden, moeten we de bijdragen van al deze puntbronnen bij elkaar optellen. Dit komt overeen met het eerder gepostuleerde Huygens-Fresnel-principe in Sectie {eq}`section.spatcoh`. Omdat een meer rigoureuze afleiding uitgaande van de Helmholtz-vergelijking<sup>[^2]</sup> nogal lang zou zijn, geven we alleen het eindresultaat:
+Een andere methode om een golfveld voort te bewegen is door gebruik te maken van de **Rayleigh-Sommerfeld** integraal. Een zeer goede benadering van deze integraal stelt dat elk punt in het vlak $z=0$ sferische golven uitzendt met een amplitude die evenredig is met het veld in het vlak $z=0$. Om het veld in een punt $(x, y,z)$ te vinden, moeten we de bijdragen van al deze puntbronnen bij elkaar optellen. Dit komt overeen met het eerder gepostuleerde Huygens-Fresnel-principe in Sectie [](section.spatcoh). Omdat een meer rigoureuze afleiding uitgaande van de Helmholtz-vergelijking<sup>[^2]</sup> nogal lang zou zijn, geven we alleen het eindresultaat:
 
 ````{note}
 ```{math}
@@ -186,7 +186,7 @@ $z/r$ die is weggelaten in de tijdharmonische sferische golf zoals gegeven in {e
 
 3. De hoekspectrummethode komt neer op een vermenigvuldiging met $\exp(i z k_z)$ in de Fourierruimte, terwijl de Rayleigh-Sommerfeld-integraal een convolutie is ten opzichte van $(x,y)$. Het is een eigenschap van de Fouriertransformatie dat een vermenigvuldiging in de Fourierruimte overeenkomt met een convolutie in de reële ruimte en vice versa. Inderdaad, een wiskundig resultaat genaamd **Weyl's identiteit** impliceert dat de rigoureuze versie van {eq}`eq.RS` en de vlakke golfexpansie (d.w.z. de hoekspectrummethode) identieke resultaten geven.
 
-(sec:fourierintuition)=
+(section.fourierintuition)=
 ## Intuïtie voor de ruimtelijke Fouriertransformatie in de optica
 
 Aangezien ruimtelijke Fouriertransformaties een belangrijke rol spelen in onze bespreking van de voortplanting van licht, is het belangrijk om ze niet alleen wiskundig, maar ook intuïtief te begrijpen.
@@ -285,7 +285,7 @@ Demonstratie van het onzekerheidsprincipe. Hoe beperkter $U(x,y)$ is, hoe groter
 ```
 
 
-(sec:fresnelfraunhofer)=
+(section.fresnelfraunhofer)=
 ## Fresnel- en Fraunhofer-benaderingen
 
 De Fresnel- en Fraunhofer-benadering zijn twee benaderingen van de Rayleigh-Sommerfeld-integraal {eq}`eq.RS`. De benaderingen zijn nauwkeurig op voorwaarde dat de voortplantingsafstand $z$ voldoende groot is. In de Fraunhofer-benadering moet $z$ *best* groot zijn, d.w.z. groter dan voor de Fresnel-benadering, die al nauwkeurig is voor typische afstanden die voorkomen in optische systemen. Anders gezegd: in volgorde van meest nauwkeurig naar minst nauwkeurig (d.w.z. alleen geldig voor grote voortplantingsafstanden), zouden de diffractie-integralen gerangschikt zijn als:
@@ -370,12 +370,12 @@ Om de Fraunhofer-benadering te verkrijgen, zullen we naast de Fresnel-benadering
 :label: eq.r_fresnel
 \begin{align*}
 r
-&\approx & z+\frac{(x-x')^2+(y-y')^2}{2 z} \quad**Fresnel-benadering** \end{align*}
+&\approx & z+\frac{(x-x')^2+(y-y')^2}{2 z} \quad\textbf{Fresnel-benadering} \end{align*}
 ```
 ```{math}
 :label: eq.r_Fraunhofer
 \begin{align*}
-&\approx & z+\frac{x^2+y^2-2xx'-2yy'}{2 z} \quad**Fraunhofer approximation**.\end{align*}
+&\approx & z+\frac{x^2+y^2-2xx'-2yy'}{2 z} \quad\textbf{Fraunhofer approximation}.\end{align*}
 ```
 Daarom hebben we de kwadratische termen $x'^2+y'^2$ weggelaten, en in vergelijking met de Fresnel-diffractie-integraal, laten we de factor $ \exp\left[ik(x'^2+y'^2)/(2z)\right]$ weg om de **Fraunhofer-diffractie-integraal** te verkrijgen:
 
@@ -835,11 +835,12 @@ Een lens induceert een lokale faseverandering in een invallend veld in verhoudin
 
 We nemen aan dat de lens dun is en kiezen als oorsprong van het coördinatenstelsel het centrum van de dunne lens met de positieve $z$-as langs de optische as. Laat $f_i$ de $z$-coördinaat zijn van het brandpunt van het beeld volgens de Gaussiaanse geometrische optica. Dan is $(0,0,f_i)$ het brandpunt van de afbeelding. Laat $(x,y,z)$ een punt zijn tussen de lens en dit brandpunt. Volgens geometrische optica is het veld in $(x,y,z)$ evenredig met
 
-$$
+```{math}
+:label:eq.sphericalw
 \left\{
 \begin{array}{lr}\frac{e^{- i k \sqrt{x^2 + y^2 + (z-f_i)^2}-i\omega t}}{\sqrt{x^2 + y^2 + (z-f_i)^2}},\\&\text{if } (x,y,z) \text{ bevindt zich in de kegel}, \\0,\\&\text{ if } (x,y,z) \text{ buiten de kegel} ligt,
 \end{array}\right.
-$$ (eq.sphericalw)
+```
 
 waarin we de tijdsafhankelijkheid hebben opgenomen. Inderdaad de oppervlakken van constante fase:
 
@@ -1001,7 +1002,7 @@ Left: dwarsdoorsnede van het veld van het Airy-patroon. Rechts: intensiteit van 
 ```
 
 **Opmerking**.
-In het eenvoudige geval van een enkele dunne lens vallen de in- en uitgangspupillen samen met de lens zelf. Zoals is uitgelegd in Sectie {eq}`section.Stops`, de uittredepupil in systemen die uit meerdere lenzen bestaan, is het reële of virtuele beeld van de diafragmastop onder alle optische lenzen rechts van de stop. Om het effect van diffractie in dergelijke meer gecompliceerde systemen te modelleren, wordt verondersteld dat diffractie volledig in de uittredepupil plaatsvindt. Het veld in de uittredepupil wordt eerst bepaald door niet-paraxiale ray tracing en wordt vervolgens geïntegreerd over de uittredepupil met behulp van de Fresnel-diffractieintegraal.
+In het eenvoudige geval van een enkele dunne lens vallen de in- en uitgangspupillen samen met de lens zelf. Zoals is uitgelegd in Sectie [](section.Stops), de uittredepupil in systemen die uit meerdere lenzen bestaan, is het reële of virtuele beeld van de diafragmastop onder alle optische lenzen rechts van de stop. Om het effect van diffractie in dergelijke meer gecompliceerde systemen te modelleren, wordt verondersteld dat diffractie volledig in de uittredepupil plaatsvindt. Het veld in de uittredepupil wordt eerst bepaald door niet-paraxiale ray tracing en wordt vervolgens geïntegreerd over de uittredepupil met behulp van de Fresnel-diffractieintegraal.
 
 ### Beeldvorming door een lens
 Uit de afleidingen in de vorige paragraaf volgt dat het Airy-patroon het beeld is van een puntbron die oneindig ver voor een lens ligt. In deze sectie bestuderen we de beeldvorming van een algemeen object op eindige afstand tot de lens.
@@ -1067,7 +1068,7 @@ I_i(x,y,s_i) = \ \int\!\int \left|\text{PSF}\left(x-M x_o, y- M x_o \right)\righ
 waarbij $I_o=|U_o|^2$ de intensiteitsverdeling van de uitgebreide bron is.
 Vandaar dat de beeldintensiteit wordt uitgedrukt in de intensiteit van de bron door een convolutie met de intensiteit van de PSF. Dit systeem wordt een **incoherent beeldvormingssysteem** genoemd.
 
-3. Een object wordt vaak verlicht door een ruimtelijk onsamenhangende uitgebreide lichtbron en vervolgens in beeld gebracht. Volgens de discussie in Sectie {eq}`section.scprop` is het veld dat het object verlicht dan gedeeltelijk coherent. Het is coherenter wanneer de hoek die de bron bij het object uitbreidt kleiner is. De intensiteit in het beeldvlak kan worden berekend door de ruimtelijk incoherente bron op te splitsen in voldoende veel onderling incoherente puntbronnen en de intensiteiten in het beeldvlak te berekenen als gevolg van de verlichting van het object door elke afzonderlijke puntbron. De totale intensiteit in het beeldvlak is dan de som van deze intensiteiten.
+3. Een object wordt vaak verlicht door een ruimtelijk onsamenhangende uitgebreide lichtbron en vervolgens in beeld gebracht. Volgens de discussie in Sectie [](section.scprop) is het veld dat het object verlicht dan gedeeltelijk coherent. Het is coherenter wanneer de hoek die de bron bij het object uitbreidt kleiner is. De intensiteit in het beeldvlak kan worden berekend door de ruimtelijk incoherente bron op te splitsen in voldoende veel onderling incoherente puntbronnen en de intensiteiten in het beeldvlak te berekenen als gevolg van de verlichting van het object door elke afzonderlijke puntbron. De totale intensiteit in het beeldvlak is dan de som van deze intensiteiten.
 
 4. We hebben alleen de scalaire diffractietheorie beschouwd. Voor een lens met een numerieke apertuur groter dan 0,6 kan de verandering van polarisatie echter belangrijk zijn. Dan is een meer algemene diffractietheorie nodig <sup>[^8]</sup>.
 
@@ -1089,7 +1090,7 @@ Set-up voor Fourier-filtering. De eerste lens creëert een Fouriertransformatie 
 
 
 ## Superresolutie
-We hebben benadrukt dat vluchtige golven de ultieme grens stellen aan de resolutie in de optica. In Hoofdstuk {eq}`chapter.GeomOptics` werd uitgelegd dat, hoewel men binnen de geometrische optica een enkel punt perfect kan afbeelden met behulp van conische oppervlakken, meerdere punten, laat staan een verlengd object, niet perfect kunnen worden afgebeeld.
+We hebben benadrukt dat vluchtige golven de ultieme grens stellen aan de resolutie in de optica. In Hoofdstuk [](chapter.GeomOptics) werd uitgelegd dat, hoewel men binnen de geometrische optica een enkel punt perfect kan afbeelden met behulp van conische oppervlakken, meerdere punten, laat staan een verlengd object, niet perfect kunnen worden afgebeeld.
 Verder werd uitgelegd dat wanneer alleen paraxiale stralen worden beschouwd, d.w.z. binnen de Gaussiaanse geometrische optica, een perfecte beeldvorming van uitgebreide objecten mogelijk is. Stralen waarvan de hoek met de optische as groot is, veroorzaken echter aberraties. Maar zelfs als perfecte beeldvorming mogelijk zou zijn in geometrische optica, kan een echt beeld nooit perfect zijn vanwege het feit dat informatie in de amplitudes en fase van de vluchtige golven zich niet kan voortplanten.
 De resolutie die kan worden verkregen met een optisch systeem bestaande uit lenzen is minder dan volgt uit het verlies van informatie als gevolg van vluchtige golven, omdat voortplantende golven met ruimtelijke frequenties die te groot zijn om door het optische systeem te worden opgevangen (d.w.z. golven waarvan de hoeken met de optische as groter zijn dan de numerieke apertuur) niet kunnen bijdragen aan het beeld. Daarom heeft de afbeelding van een puntobject de grootte
 
@@ -1147,7 +1148,7 @@ vlek gebruikt voor excitatie (linksboven) en voor uitputting (midden boven). Flu
 
 
 
-[^1]: [Elke afbeelding is gemaakt van golven - Zestig symbolen, 3:33 tot 7:15](https://www.youtube.com/watch?v=mEN7DTdHbAU): Basisuitleg van Fouriertransformaties. Zie ook sectie [](sec:fourierintuition).
+[^1]: [Elke afbeelding is gemaakt van golven - Zestig symbolen, 3:33 tot 7:15](https://www.youtube.com/watch?v=mEN7DTdHbAU): Basisuitleg van Fouriertransformaties. Zie ook sectie [](section.fourierintuition).
 
 [^2]: Voor een rigoureuze afleiding zie b.v. [J. Goodman, *Introduction to Fourier Optics](http://iate.oac.uncor.edu/ manuel/libros/Optics/Introduction\%20to\%20Fourier\%20Optics\%202nd\%20-\%20J.\%20Goodman.pdf), \S3.3, \S3.4, \S3.5* - en *Lecture Notes of Advanced Photonics*, Technische Universiteit Delft. 
 
