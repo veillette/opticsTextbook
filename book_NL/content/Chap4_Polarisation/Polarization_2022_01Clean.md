@@ -16,7 +16,7 @@
 
 
 ## Polarisatietoestanden en Jones-vectoren
-We hebben in hoofdstuk {eq}`chapter.basics` gezien dat licht een elektromagnetische golf is die voldoet aan de vergelijkingen van Maxwell en de daarvan afgeleide golfvergelijking. Aangezien het elektrisch veld een vector is die als functie van de tijd in een bepaalde richting oscilleert, zeggen we dat de golf een bepaalde polarisatie heeft. In dit hoofdstuk kijken we naar de verschillende soorten polarisatie en hoe de polarisatie van een lichtstraal gemanipuleerd kan worden.
+We hebben in hoofdstuk [](chapter.basics) gezien dat licht een elektromagnetische golf is die voldoet aan de vergelijkingen van Maxwell en de daarvan afgeleide golfvergelijking. Aangezien het elektrisch veld een vector is die als functie van de tijd in een bepaalde richting oscilleert, zeggen we dat de golf een bepaalde polarisatie heeft. In dit hoofdstuk kijken we naar de verschillende soorten polarisatie en hoe de polarisatie van een lichtstraal gemanipuleerd kan worden.
 
 We beginnen met Eqs. {eq}`eq.bcE2`, {eq}`eq.defbE` en {eq}`eq.orth` die laten zien dat het (reële) elektrische veld $\mathbf{\mathcal{E}}(\mathbf{r},t)$ van een tijdharmonische vlakke golf altijd loodrecht staat op de voortplantingsrichting, dat is de richting van de golfvector $\mathbf{k}$ en de richting van de Poynting-vector (de richting van de krachtstroom). Laat de golf zich voortplanten in de $z$-richting:
 
@@ -31,7 +31,7 @@ We beginnen met Eqs. {eq}`eq.bcE2`, {eq}`eq.defbE` en {eq}`eq.orth` die laten zi
 Dan heeft de elektrische veldvector geen $z$-component en dus kan het reële elektrische veld op $z$ en op tijdstip $t$ worden geschreven als
 
 ```{math}
-:label: eq. Evec
+:label: eq.Evec
 \begin{align*}
 \mathbf{\mathcal{E}}(z,t) = \left(\begin{array}{c}{\cal A}_x \cos(kz-\omega t + \varphi_x) \\{\cal A}_y \cos(kz-\omega t + \varphi_y) \\0
 \end{array}\right).
@@ -75,7 +75,7 @@ Laten we eens kijken hoe, op een vaste positie in de ruimte, de elektrische veld
 Wanneer $\varphi_y-\varphi_x=0$ hebben we
 
 ```{math}
-:label: eq. Jlinpol
+:label: eq.Jlinpol
 \begin{align*}
 {\mathbf J}=
 \left(\begin{array}{c}{\cal A}_x \\{\cal A}_y
@@ -94,12 +94,12 @@ Gelijkheid van de fasen: $\varphi_y=\varphi_x$, betekent dat de veldcomponenten 
 \end{align*}
 ```
 wat aantoont dat voor $\varphi_y-\varphi_x=0$ het elektrische veld gewoon oscilleert in één richting gegeven door de reële vector ${\cal A}_x \hat{\mathbf{x}} + {\cal A}_y \hat{\mathbf{y}}$.
-Zie afb. {numref}`fig:linpol`.
+Zie afb. {numref}`fig_linpol`.
 
 Als $\varphi_y-\varphi_x=\pi$ hebben we
 
 ```{math}
-:label: eq. Jlinpol2
+:label: eq.Jlinpol2
 \begin{align*}
 {\mathbf J}=
 \left( \begin{array}{c}{\cal A}_x \\-{\cal A}_y
@@ -112,7 +112,7 @@ In dit geval zijn ${\cal E}_x(z,t)$ en ${\cal E}_y(z,t)$ uit fase en oscilleert 
 In dit geval is de Jones-vector:
 
 ```{math}
-:label: eq. Jcircpol
+:label: eq.Jcircpol
 \begin{align*}
 {\mathbf J}=
 \left(\begin{array}{c}1 \\\pm i
@@ -144,7 +144,7 @@ Op een bepaalde positie beweegt de elektrische veldvector langs een cirkel naarm
 De Jones-vector is:
 
 ```{math}
-:label: eq. Jellipspol
+:label: eq.Jellipspol
 \begin{align*}
 {\mathbf J}=
 \left(\begin{array}{c}{\cal A}_x \\\pm i {\cal A}_y
@@ -170,7 +170,7 @@ waaruit blijkt dat de elektrische vector langs een ellips beweegt met grote en k
 De Jones vector is nu de meest algemene:
 
 ```{math}
-:label: eq. Jellips2pol
+:label: eq.Jellips2pol
 \begin{align*}
 {\mathbf J}=
 \left(\begin{array}{c}{\cal A}_x e^{i \varphi_x} \\{\cal A}_y e^{i \varphi_y}
@@ -178,13 +178,13 @@ De Jones vector is nu de meest algemene:
 \end{align*}
 ```
 Het kan worden aangetoond dat de vector van het elektrische veld altijd langs een ellips beweegt.
-De exacte vorm en oriëntatie van deze ellips varieert met het verschil in fase $\varphi_y-\varphi_x$ en de verhouding van de amplitude ${\cal A}_x,{\cal A}_y$ en, behalve wanneer $\varphi_y-\varphi_x = \pm \pi/2$, de lange en korte as van de ellips niet evenwijdig zijn aan de $x$- en $y$-as. Zie afb. {numref}`fig:ellpol`.
+De exacte vorm en oriëntatie van deze ellips varieert met het verschil in fase $\varphi_y-\varphi_x$ en de verhouding van de amplitude ${\cal A}_x,{\cal A}_y$ en, behalve wanneer $\varphi_y-\varphi_x = \pm \pi/2$, de lange en korte as van de ellips niet evenwijdig zijn aan de $x$- en $y$-as. Zie afb. {numref}`fig_ellpol`.
 
 **Opmerkingen**.
 - Vaak wordt de Jones-vector zodanig genormaliseerd dat
 
 ```{math}
-:label: eq. Genormaliseerd
+:label: eq.Genormaliseerd
 \begin{align*}
 |J_x|^2 + |J_y|^2 =1.
 \end{align*}
@@ -198,21 +198,21 @@ De genormaliseerde vector vertegenwoordigt natuurlijk dezelfde polarisatietoesta
 \end{align*}
 ```
 
-- We zullen in sectie {numref}`sec:angularspectrum` laten zien dat een algemeen tijdharmonisch elektromagnetisch veld een superpositie is van vlakke golven met golfvectoren van dezelfde lengte die worden bepaald door de frequentie van de golf, maar met verschillende richtingen. Een voorbeeld is het elektromagnetische veld in de buurt van het brandpuntsvlak van een sterk convergerende lens. Er is dan geen bepaalde voortplantingsrichting waarop het elektrische veld loodrecht moet staan. Met andere woorden, er is geen voor de hand liggende keuze voor een vlak waarin het elektrische veld oscilleert als functie van de tijd. Desalniettemin kan worden aangetoond dat voor elk punt in de ruimte zo'n vlak bestaat, maar dat de oriëntatie van het vlak in het algemeen varieert met de positie.
+- We zullen in sectie [](section.angularspectrum) laten zien dat een algemeen tijdharmonisch elektromagnetisch veld een superpositie is van vlakke golven met golfvectoren van dezelfde lengte die worden bepaald door de frequentie van de golf, maar met verschillende richtingen. Een voorbeeld is het elektromagnetische veld in de buurt van het brandpuntsvlak van een sterk convergerende lens. Er is dan geen bepaalde voortplantingsrichting waarop het elektrische veld loodrecht moet staan. Met andere woorden, er is geen voor de hand liggende keuze voor een vlak waarin het elektrische veld oscilleert als functie van de tijd. Desalniettemin kan worden aangetoond dat voor elk punt in de ruimte zo'n vlak bestaat, maar dat de oriëntatie van het vlak in het algemeen varieert met de positie.
 Bovendien beweegt het elektrische veld in een bepaald punt langs een ellips in het overeenkomstige vlak, maar de vorm van de ellips en de oriëntatie van de hoofdas kunnen willekeurig zijn.
 We kunnen concluderen dat in elk punt van een willekeurig tijdharmonisch elektromagnetisch veld, de elektrische (en in feite ook de magnetische) veldvector als functie van de tijd een ellips in een of ander vlak voorschrijft die afhankelijk is van de positie <sup>[^2]</sup>. In dit hoofdstuk beschouwen we alleen het veld en de polarisatietoestand van een enkele vlakke golf.
 
 
 ```{figure} Images/Chapter_4/4_01_Dphi_000pi_f1_BW.png
-:name: fig:linpol
+:name: fig_linpol
 ```
 
 ```{figure} Images/Chapter_4/4_02_Dphi_05pi_f1_BW.png
-:name: fig:circpol
+:name: fig_circpol
 ```
 
 ```{figure} Images/Chapter_4/4_03_Dphi_025pi_f1_BW.png
-:name: fig:ellpol
+:name: fig_ellpol
 Illustratie van verschillende soorten polarisatie. Boven: lineaire polarisatie; midden: circulaire polarisatie; onder: elliptische polarisatie. De horizontale en verticale pijlen geven de kortstondige veldcomponenten ${\cal E}_x, {\cal E}_y$ aan. De dikke pijl geeft de vector $\mathbf{\mathcal{E}}$ aan. De zwarte curve geeft de baan van $\mathbf{\mathcal{E}}(t)$aan.
 ```
 
@@ -308,7 +308,7 @@ Een andere belangrijke Jones-matrix is de **rotatiematrix**. In de voorgaande be
 Laat $\mathbf{E}$ gegeven worden in termen van zijn componenten op de $\hat{\mathbf{x}}$, $\hat{\mathbf{y}}$ basis:
 
 ```{math}
-:label: eq. Exybasis
+:label: eq.Exybasis
 \begin{align*}
 \mathbf{E}=E_x \widehat{\mathbf{x}} + E_y \widehat{\mathbf{y}}.
 \end{align*}
@@ -316,7 +316,7 @@ Laat $\mathbf{E}$ gegeven worden in termen van zijn componenten op de $\hat{\mat
 Om de componenten $E_{x'}$, $E_{y'}$ te vinden op de $\widehat{\mathbf{x}}'$, $\widehat{\mathbf{y}}'$ basis:
 
 ```{math}
-:label: eq. Exyprime
+:label: eq.Exyprime
 \begin{align*}
 \mathbf{E}=E_{x'} \widehat{\mathbf{x}}' + E_{y'} \widehat{\mathbf{y}}'.
 \end{align*}
@@ -337,10 +337,10 @@ $\hat{\mathbf{x}}$, $\hat{\mathbf{y}}$
 \\
 \widehat{\mathbf{y}}' &= -\sin\theta \, \widehat{\mathbf{x}} + \cos \theta \, \widehat{\mathbf{y}},\end{align*}
 ```
-Door {eq}`eq.hatxprime` en {eq}`eq.hatyprime` te vervangen door {eq}`eq. Exyprime` vinden we
+Door {eq}`eq.hatxprime` en {eq}`eq.hatyprime` te vervangen door {eq}`eq.Exyprime` vinden we
 
 ```{math}
-:label: eq. Etrans1
+:label: eq.Etrans1
 \begin{align*}
 \mathbf{E} &= E_{x'} \widehat{\mathbf{x}}' + E_{y'} \widehat{\mathbf{y}}'  \\
 &= E_{x'} ( \cos\theta \, \widehat{\mathbf{x}} + \sin \theta \, \widehat{\mathbf{y}} )+ E_{y'} (-\sin\theta \, \widehat{\mathbf{x}} + \cos \theta \, \widehat{\mathbf{y}}),
@@ -348,7 +348,7 @@ Door {eq}`eq.hatxprime` en {eq}`eq.hatyprime` te vervangen door {eq}`eq. Exyprim
 &= ( \cos \theta E_{x'} - \sin\theta E_{y'} )\widehat{\mathbf{x}}+ ( \sin\theta E_x + \cos \theta E_y)\widehat{\mathbf{y}}.
 \end{align*}
 ```
-Vergelijken met {eq}`eq. Exybasis` impliceert
+Vergelijken met {eq}`eq.Exybasis` impliceert
 
 ```{math}
 :label: eq.defRtheta
@@ -388,7 +388,7 @@ Aangezien ${\cal R}_\theta^{-1}={\cal R}_{-\theta}$ krijgen we:
 
 
 ```{math}
-:label: eq. Rtheta
+:label: eq.Rtheta
 \boxed{\begin{align*}
 \begin{pmatrix}
 E_{x'} \\
@@ -407,13 +407,13 @@ Als de matrix ${\cal M}$ de Jones-matrix beschrijft zoals gedefinieerd in {eq}`e
 
 
 ```{math}
-:label: eq. Rpmtheta
+:label: eq.Rpmtheta
 \boxed{\begin{align*}
 {\cal M}_{\theta}={\cal R}_{\theta}{\cal M} {\cal R}_{-\theta}.
 \end{align*}}
 ```
 
-Voor meer informatie over basistransformaties, zie {numref}`sec:basistrans`.
+Voor meer informatie over basistransformaties, zie [](section.basistrans).
 
 
 ```{figure} Images/Chapter_4/4_2_Rotation_Polarisation.png
@@ -427,7 +427,7 @@ Als de golfplaat wordt gedraaid, komen de snelle en langzame as niet meer overee
 Een polarisator die alleen horizontaal gepolariseerd licht doorlaat, wordt beschreven door de Jones-matrix:
 
 ```{math}
-:label: eq. MLP
+:label: eq.MLP
 \begin{align*}
 {\cal M}_{LP}=\left( \begin{array}{cc}1&0\\0&0
 \end{array}\right).
@@ -467,7 +467,7 @@ Licht dat een mengsel is van gepolariseerd en ongepolariseerd licht wordt gedeel
 Hierboven is al een kwartgolfplaat geïntroduceerd. Het introduceert een faseverschuiving van $\pi/2$, dus de Jones-matrix is
 
 ```{math}
-:label: eq. MQW
+:label: eq.MQW
 \begin{align*}
 {\cal M}_{QWP}=
 \left(\begin{array}{cc}1&0\\0& ik
@@ -530,12 +530,12 @@ Een vollegolfplaat introduceert een faseverschil van $2\pi$, wat hetzelfde is al
 Dus wat kan een toepassing zijn voor een full-wave plaat? We herinneren ons van Eq. {eq}`waveplate` dat het faseverschil $2\pi$ alleen is voor een bepaalde golflengte. Als we lineair (zeg maar verticaal) gepolariseerd licht van andere golflengten doorsturen, zullen deze elliptisch gepolariseerd worden, terwijl het licht met de juiste golflengte $\lambda_0$ verticaal gepolariseerd blijft. Als we dan al het licht door een horizontale polarisator laten gaan, zal het licht met golflengte $\lambda_0$ volledig worden gedoofd, terwijl het licht van andere golflengten er op zijn minst gedeeltelijk doorheen kan gaan. Daarom kunnen **vollegolfplaten worden gebruikt om specifieke golflengten van licht uit te filteren**.
 
 ## Meer over Jones-matrices
-Als de richting van de langzame of snelle as gegeven is en de ordinary en extraordinary brekingsindices $n_o$ en $n_e$ zijn, is het gemakkelijk om de Jones-matrix van een dubbelbrekende plaat met een gegeven dikte $d$ te noteren met behulp van de rotatiematrices, zie {eq}`eq. Rpmtheta`. In plaats van de rotatiematrices te gebruiken, kan men ook een stelsel van vergelijkingen opschrijven voor de elementen van de Jones-matrix. Stel dat $\hat{\mathbf{v_o}}=v_{o,x}+\hat{\mathbf{x}}+v_{o,y}\hat{\mathbf{y}}$ en $\hat{\mathbf{v_e}}=v_{e,x}\hat{\mathbf{x}}+ v_{e,y} \hat{\mathbf{y}}$, respectievelijk in de richting van de gewone en de buitengewone as staan. Als de Jones-matrix wordt gegeven door
+Als de richting van de langzame of snelle as gegeven is en de ordinary en extraordinary brekingsindices $n_o$ en $n_e$ zijn, is het gemakkelijk om de Jones-matrix van een dubbelbrekende plaat met een gegeven dikte $d$ te noteren met behulp van de rotatiematrices, zie {eq}`eq.Rpmtheta`. In plaats van de rotatiematrices te gebruiken, kan men ook een stelsel van vergelijkingen opschrijven voor de elementen van de Jones-matrix. Stel dat $\hat{\mathbf{v_o}}=v_{o,x}+\hat{\mathbf{x}}+v_{o,y}\hat{\mathbf{y}}$ en $\hat{\mathbf{v_e}}=v_{e,x}\hat{\mathbf{x}}+ v_{e,y} \hat{\mathbf{y}}$, respectievelijk in de richting van de gewone en de buitengewone as staan. Als de Jones-matrix wordt gegeven door
 
 $$
 {\cal M}=\left( \begin{array}{cc}A & B \\C & D
 \end{array}\right),
-$$ (eq. MJones)
+$$ (eq.MJones)
 
 dan
 
@@ -552,7 +552,7 @@ $$
 \end{array}
 $$ (eq.system)
 
-Op dezelfde manier is het voor een lineaire polarisator eenvoudig om de Jones-matrix op te schrijven als men weet in welke richting de polarisator al het licht absorbeert of doorlaat: gebruik {eq}`eq. MLP` in combinatie met de rotatiematrices. Als $\hat{\mathbf{v}}$ in de richting van de lineaire polarisator staat en $\hat{\mathbf{w}}$ er loodrecht op staat, hebben we
+Op dezelfde manier is het voor een lineaire polarisator eenvoudig om de Jones-matrix op te schrijven als men weet in welke richting de polarisator al het licht absorbeert of doorlaat: gebruik {eq}`eq.MLP` in combinatie met de rotatiematrices. Als $\hat{\mathbf{v}}$ in de richting van de lineaire polarisator staat en $\hat{\mathbf{w}}$ er loodrecht op staat, hebben we
 
 ```{math}
 \begin{align*}
@@ -563,7 +563,7 @@ Op dezelfde manier is het voor een lineaire polarisator eenvoudig om de Jones-ma
 dit is een stelsel vergelijkingen van het type {eq}`eq.system` voor de elementen van de Jones-matrix.
 
 Stel nu dat de complexe (2,2)-matrix
-{eq}`eq. MJones` wordt gegeven.
+{eq}`eq.MJones` wordt gegeven.
 Hoe kan men nagaan of deze matrix overeenkomt met een lineaire polarisator of met een golfplaat?
 Merk op dat de elementen van een Jones-matrix over het algemeen complex zijn.
 
@@ -582,7 +582,7 @@ e^{i k n_1 d} \;\;\text{ en } \;\; e^{i k n_2 d},
 ```
 waarbij $d$ de dikte van de plaat is en $k$ het golfgetal. Om te verifiëren dat een $(2,2)$-matrix overeenkomt met een golfplaat, moet men dus de eigenwaarden berekenen en controleren of deze modulus 1 hebben en of de corresponderende eigenvectoren reële, orthogonale vectoren zijn.
 
-**3.** **Jones-matrix voor voortplanting door suikers** In suikers planten links en rechts circulair gepolariseerd licht zich voort met hun eigen brekingsindex. Daarom worden suikers **circulair dubbelbrekend** genoemd. De matrix {eq}`eq. MJonen` komt overeen met voortplanting door suiker wanneer er twee reële orthogonale eenheidsvectoren zijn
+**3.** **Jones-matrix voor voortplanting door suikers** In suikers planten links en rechts circulair gepolariseerd licht zich voort met hun eigen brekingsindex. Daarom worden suikers **circulair dubbelbrekend** genoemd. De matrix {eq}`eq.MJonen` komt overeen met voortplanting door suiker wanneer er twee reële orthogonale eenheidsvectoren zijn
 $\hat{\mathbf{v}}$ en $\hat{\mathbf{w}}$ zodanig dat de circulaire polarisatietoestanden:
 
 $$
@@ -597,7 +597,7 @@ eigentoestanden zijn van ${\cal M}$ met complexe eigenwaarden met modulus 1.
 Elke elliptische polarisatietoestand kan worden geschreven als de som van twee loodrechte lineaire gepolariseerde toestanden:
 
 ```{math}
-:label: eq. JEllipsLin
+:label: eq.JEllipsLin
 \begin{align*}
 J=
 \left(\begin{array}{cc}{\cal A}_x e^{i \varphi_x} \\{\cal A}_y e^{i \varphi_y}
@@ -609,7 +609,7 @@ J=
 Bovendien kan elke elliptische polarisatietoestand worden geschreven als de som van twee circulaire polarisatietoestanden, de ene rechts- en de andere links-circulair gepolariseerd:
 
 ```{math}
-:label: eq. JEllipsCirc
+:label: eq.JEllipsCirc
 \begin{align*}
 J=
 \left(\begin{array}{c}{\cal A}_x e^{i \varphi_x} \\{\cal A}_y e^{i \varphi_y}
