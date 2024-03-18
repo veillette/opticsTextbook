@@ -258,7 +258,7 @@ waarbij $\mathbf{a}r{\lambda}$ en $\mathbf{a}r{\omega}$ de golflengte en de freq
 \Delta \ell_c = c \frac{2\pi}{\Delta \omega} = 2\pi \frac{c}{\mathbf{a}r{\omega}} \frac{\mathbf{a}r{\omega}}{\Delta \omega} = \frac{\mathbf{a}r{\lambda}^2}{\Delta \lambda}.
 \end{align*}
 ```
-De coherentielengte en coherentietijd van een aantal bronnen staan vermeld in {numref}`Table.coh`. Voor een laser is de lijnbreedte extreem klein en de coherentietijd erg lang. Dit komt omdat de fotonen in een laser niet voornamelijk worden gegenereerd door spontane emissie zoals klassieke bronnen, maar in plaats daarvan door **gestimuleerde emissie**. Lasers worden besproken in hoofdstuk {eq}`chapter.lasers`.
+De coherentielengte en coherentietijd van een aantal bronnen staan vermeld in {numref}`Table.coh`. Voor een laser is de lijnbreedte extreem klein en de coherentietijd erg lang. Dit komt omdat de fotonen in een laser niet voornamelijk worden gegenereerd door spontane emissie zoals klassieke bronnen, maar in plaats daarvan door **gestimuleerde emissie**. Lasers worden besproken in hoofdstuk [](chapter.lasers).
 
 ```{table} Coherentietijd en coherentielengte van verschillende bronnen
 :name: Table.coh
@@ -528,8 +528,6 @@ $$ (eq.Gammaomegsa)
 
 'Met behulp van het onzekerheidsprincipe kunnen we zien dat hoe groter de spreiding van de frequenties van $U(t)$ (d.w.z. hoe groter de bandbreedte), hoe scherper de piek $\Gamma(\tau)$ is. Het licht wordt dus tijdelijk minder coherent wanneer het uit een breder frequentiebereik bestaat. Het meten van de spectrale vermogensdichtheid met een spectroscoop en het toepassen van een terug-Fouriertransformatie is een alternatieve methode om de complexe zelfcoherentiefunctie te verkrijgen.
 
-Merk op dat, zelfs als de bron niet monochromatisch is en de coherentietijd van de bron kort is, de velden in de dwars gescheiden punten $P_1$ en $P_4$ aan de linkerkant van {numref}`Fig_Hechtcoh` altijd volledig gecorreleerd zijn omdat ze zich voor alle frequenties op hetzelfde golffront bevinden. In feite zijn de afstanden tussen de bron en deze punten identiek. Echter, in plaats van tegelijkertijd naar de velden in deze punten te kijken, zou men het veld in het ene punt vergelijken met een vertraagde versie van het veld in het andere punt, en die tijdsvertraging zou groter zijn dan de coherentietijd, dan zal de interferentie van de twee velden zwak zijn.
-
 (section.spatcoh)=
 ## ruimtelijke coherentie en Young's experiment
 
@@ -538,7 +536,7 @@ Temporele coherentie betreft de coherentie van het veld in één punt. De absolu
 Terwijl we voor temporele coherentie een **Michelson-interferometer** gebruikten, is de natuurlijke keuze om ruimtelijke coherentie te karakteriseren
 **Young's experiment**, omdat het de velden in twee punten $P_1$, $P_2$ die in de ruimte gescheiden zijn, met elkaar laat interfereren.
 
-```{figure} Images/Chapter_5/5_04_Spatial Coherence.png
+```{figure} Images/Chapter_5/5_04_Spatial_Coherence.png
 :name: Fig_5_04_Spatial Coherentie
 Young's experiment om de ruimtelijke coherentie van twee punten te evalueren. Een masker met twee gaten op de twee aandachtspunten, $\mathbf{r}_1$ en $\mathbf{r}_2$, wordt gebruikt om de velden op deze punten op een scherm op grote afstand te laten interfereren. Omdat het licht zich voortplant over verschillende afstanden van de twee gaten naar de waarnemingspunten, interfereert $U(\mathbf{r}_1,t)$ met $U(\mathbf{r}_2,t+\tau)$, waarbij $\tau$ het verschil in voortplantingstijd is.
 ```
@@ -742,7 +740,7 @@ In dat geval is het zo dat de velden in twee punten $P_1$, $P_2$
 ergens in de ruimte coherent zijn dan en slechts dan als het verschil in tijd dat licht nodig heeft om zich voort te planten van $S$ tot $P_1$ en van $S$ tot $P_2$ kleiner is dan de coherentietijd $\Delta\tau_c$. Voor coherentie moet het verschil tussen de afstanden $SP_1$ en $SP_2$ kleiner zijn dan de coherentielengte $\Delta l_c$.
 
 Een uitgebreide klassieke lichtbron bestaat uit een groot aantal emitterende puntbronnen die uitzenden door spontane emissie.
-Zoals we hebben uitgelegd in Sectie {eq}`subsection.cohsources`, ondergaan de golftreinen die worden uitgezonden door verschillende atomen (puntbronnen) in de bron willekeurige fasesprongen als gevolg van b.v. botsingen en daarom kunnen de velden die worden uitgezonden door verschillende puntbronnen in een uitgebreide klassieke lichtbron niet interfereren. Zo'n lichtbron wordt **ruimtelijk incoherent** genoemd. Voor een ruimtelijk incoherente lichtbron wordt de
+Zoals we hebben uitgelegd in Sectie [](subsection.cohsources), ondergaan de golftreinen die worden uitgezonden door verschillende atomen (puntbronnen) in de bron willekeurige fasesprongen als gevolg van b.v. botsingen en daarom kunnen de velden die worden uitgezonden door verschillende puntbronnen in een uitgebreide klassieke lichtbron niet interfereren. Zo'n lichtbron wordt **ruimtelijk incoherent** genoemd. Voor een ruimtelijk incoherente lichtbron wordt de
 ruimtelijke coherentie in twee willekeurige punten $P_1$ en $P_2$ bepaald door het randcontrast te meten op een afstandsscherm wanneer een masker wordt gebruikt dat loodrecht staat op de gemiddelde voortplantingsrichting van het licht en dat gaatjes bevat op $P_1$ en $P_2$. Het marginale contrast en dus de onderlinge coherentie bij $P_1$ en $P_2$ wordt bepaald door twee effecten:
 
 
@@ -1260,7 +1258,7 @@ moet daarom groot zijn.
 
 
 **Voorbeeld.**
-Voor een golflengte van $\lambda_0=600\text{nm}$ en $n_f d= 12 \text{mm}$ hebben we voor loodrechte inval $m=40000$. Als de reflectiecoëfficiënten voldoen aan $|r_{12}|^2=|r_{23}|^2=0,9$, hebben we $F=360$ en $G=0$. De resolutie is meer dan een miljoen, wat beter is dan de roosterspectrometers, die zullen worden besproken in sectie {eq}`secton.examples`.
+Voor een golflengte van $\lambda_0=600\text{nm}$ en $n_f d= 12 \text{mm}$ hebben we voor loodrechte inval $m=40000$. Als de reflectiecoëfficiënten voldoen aan $|r_{12}|^2=|r_{23}|^2=0,9$, hebben we $F=360$ en $G=0$. De resolutie is meer dan een miljoen, wat beter is dan de roosterspectrometers, die zullen worden besproken in sectie [](section.examples).
 
 
 
