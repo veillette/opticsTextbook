@@ -68,7 +68,7 @@ De bolvormige golven die door de atomen (puntbronnen) in de lamp worden uitgezon
 ```
 waarbij $2h$ de grootte van de bron is en $f$ de brandpuntsafstand van de lens is, zoals weergegeven in {numref}`Fig_7_01_Gas_Source_Collimation`. Daarom kan het licht worden gecollimeerd door een lens met een grote brandpuntsafstand te kiezen of door de grootte van de bron te verkleinen, of beide. Beide methoden leiden echter tot zwakke intensiteiten.
 Door de speciale configuratie van de laserbron, die bestaat uit een Fabry-Perot resonator waarbij het licht vele malen op en neer kaatst voordat het wordt uitgezonden, bevinden de atomaire bronnen zich in feite allemaal op zeer grote afstand en is de effectieve grootte van de bron zeer klein. De divergentie van de laserstraal wordt dus niet beperkt door de grootte van de bron, maar door de grootte van het emitterende oppervlak door het onvermijdelijke effect van diffractie.
-Zoals volgt uit hoofdstuk {eq}`chapter.diffcraction`, heeft een evenwijdige bundel met een diameter $D$ en golflengte $\lambda$
+Zoals volgt uit hoofdstuk [](chapter.diffraction), heeft een evenwijdige bundel met een diameter $D$ en golflengte $\lambda$
 een diffractiebeperkte divergentie die wordt gegeven door:
 
 ```{math}
@@ -85,7 +85,7 @@ Een laserstraal kan bijna diffractiebeperkte collimatie bereiken.
 ```
 
 ### Diffractie-beperkte focusspot, hoge ruimtelijke coherentie
-Als een perfect gecollimeerde bundel wordt gefocusseerd met een lens met zeer kleine aberraties en met numerieke apertuur $\text{NA}$, is de laterale grootte van de focusvlek, volgens hoofdstuk {eq}`chapter.diffraction`, diffractie-beperkt en gegeven door
+Als een perfect gecollimeerde bundel wordt gefocusseerd met een lens met zeer kleine aberraties en met numerieke apertuur $\text{NA}$, is de laterale grootte van de focusvlek, volgens hoofdstuk [](chapter.diffraction), diffractie-beperkt en gegeven door
 
 ```{math}
 :label: eq.diffrspot
@@ -95,7 +95,7 @@ Als een perfect gecollimeerde bundel wordt gefocusseerd met een lens met zeer kl
 ```
 Met een laser kan men een diffractie-beperkte plek bereiken met een zeer hoge intensiteit.
 
-Zoals is uitgelegd in {numref}`chapter.coherence`, heeft een lichtgolf **hoge ruimtelijke coherentie**  als op een bepaald moment de amplitude en fase op verschillende punten kunnen worden voorspeld. De bolvormige golven die door een puntbron worden uitgezonden, hebben deze eigenschap. Maar wanneer er veel puntbronnen (atomen) zijn die elk uitbarstingen van harmonische golven uitzenden die op willekeurige tijdstippen beginnen, zoals het geval is in een klassieke lichtbron, kunnen de amplitude en fase van het totale uitgezonden veld op elke positie in de ruimte niet worden voorspeld. De enige manier om het licht ruimtelijk coherent te maken is door de lichtbron heel klein te maken, maar dan is er nauwelijks licht. Zoals hieronder zal worden uitgelegd, zijn door het ontwerp van de laser de emissies door de atomen van het versterkende medium in een laser fasegecorreleerd, wat leidt tot een zeer hoge temporele en ruimtelijke coherentie.
+Zoals is uitgelegd in [](chapter.coherence), heeft een lichtgolf **hoge ruimtelijke coherentie**  als op een bepaald moment de amplitude en fase op verschillende punten kunnen worden voorspeld. De bolvormige golven die door een puntbron worden uitgezonden, hebben deze eigenschap. Maar wanneer er veel puntbronnen (atomen) zijn die elk uitbarstingen van harmonische golven uitzenden die op willekeurige tijdstippen beginnen, zoals het geval is in een klassieke lichtbron, kunnen de amplitude en fase van het totale uitgezonden veld op elke positie in de ruimte niet worden voorspeld. De enige manier om het licht ruimtelijk coherent te maken is door de lichtbron heel klein te maken, maar dan is er nauwelijks licht. Zoals hieronder zal worden uitgelegd, zijn door het ontwerp van de laser de emissies door de atomen van het versterkende medium in een laser fasegecorreleerd, wat leidt tot een zeer hoge temporele en ruimtelijke coherentie.
 
 ```{figure} Images/Chapter_7/7_03_Laser_Focus.png
 :name: Fig_7_03_Laser_Focus
@@ -134,7 +134,7 @@ Gedempte oscillatie (links) en frequentiespectrum van een gedempte oscillatie (r
 ```
 
 
-De optische resonator is een Fabry-Perot resonator gevuld met wat materiaal met brekingsindex $n$ begrensd door twee uitgelijnde, sterk reflecterende spiegels op een afstand $L$. De Fabry-Perot resonator wordt uitgebreid besproken in Sectie {eq}`section.fabryperot` maar om dit hoofdstuk te begrijpen is een gedetailleerde analyse van de Fabry-Perot niet nodig.
+De optische resonator is een Fabry-Perot resonator gevuld met wat materiaal met brekingsindex $n$ begrensd door twee uitgelijnde, sterk reflecterende spiegels op een afstand $L$. De Fabry-Perot resonator wordt uitgebreid besproken in Sectie [](section.fabryperot) maar om dit hoofdstuk te begrijpen is een gedetailleerde analyse van de Fabry-Perot niet nodig.
 
 Laat de $z$-as gekozen worden langs de as van de holte, zoals weergegeven in {numref}`Fig_7_05_Fabry_Perrot_resonance_mode`, en neem aan dat de dwarsrichtingen zo groot zijn dat het licht kan worden beschouwd als een vlakke golf die heen en weer stuitert langs de $z$-as tussen de twee spiegels. Laat $\omega$ de frequentie zijn en $k_0=\omega/c$ het golfgetal in vacuüm. De vlakke golf die zich voortplant in de positieve $z$-richting wordt gegeven door:
 
@@ -261,9 +261,8 @@ W_T(\omega) = \frac{\hbar \omega^3}{\pi^2 c^3} \frac{1}{ \exp\left(\frac{\hbar \
 waarin $k_B$ de constante van Boltzmann is:
 
 ```{math}
-:label: eq.kBoltzmann
 \begin{align*}
-k_B = 1.38064852 \times 10^{-23} \text{mbox{m}^2 \mbox{kg} \mbox{s}^{-2} \mbox{K}^{-1}.
+k_B = 1.38064852 \times 10^{-23} \text{m}^2 \text{kg} \text{s}^{-2} \text{K}^{-1}.
 \end{align*}
 ```
 De snelheden van opwaartse en neerwaartse overgangen van de atomen in de wand van de doos moeten identiek zijn:
@@ -319,7 +318,7 @@ Voor een (smalle) frequentieband $\mathrm{d}\omega$ is de tijdgemiddelde energie
 W(\omega) \mathrm{d}\omega = I /c.
 \end{align*}
 ```
-Een typische waarde voor de frequentiebreedte van een smalle emissielijn van een gewone lichtbron is: $10^{10}$ Hz, d.w.z. $\mathrm{d}\omega = 2\pi \times 10^{10}$ Hz. De spontane en gestimuleerde emissiewaarden zijn dan identiek als de intensiteit $I=2.95 \times 10^4$ W/m$^2$ is. Zoals te zien is in tabel {eq}`table_laser2`, is alleen voor laserlicht gestimuleerde emissie groter dan spontane emissie. Voor klassieke lichtbronnen is de spontane emissiesnelheid veel groter dan de gestimuleerde emissiesnelheid.
+Een typische waarde voor de frequentiebreedte van een smalle emissielijn van een gewone lichtbron is: $10^{10}$ Hz, d.w.z. $\mathrm{d}\omega = 2\pi \times 10^{10}$ Hz. De spontane en gestimuleerde emissiewaarden zijn dan identiek als de intensiteit $I=2.95 \times 10^4$ W/m$^2$ is. Zoals te zien is in tabel {eqref}`table_laser2`, is alleen voor laserlicht gestimuleerde emissie groter dan spontane emissie. Voor klassieke lichtbronnen is de spontane emissiesnelheid veel groter dan de gestimuleerde emissiesnelheid.
 ```{table} Typische intensiteiten van lichtbronnen.
 :name: table_laser2
 | | $I$ (W $\mbox{m}^{-2}$) |
@@ -495,7 +494,7 @@ Laat $B^m$ atoom $B$ zijn in een opgewekte, zogenaamde metastabiele toestand. Di
 ```{math}
 :label: eq.atomcollission
 \begin{align*}
-B^m + A \pijl naar rechts
+B^m + A \rightarrow
 B + A^*,
 \end{align*}
 ```
@@ -525,7 +524,7 @@ In sommige chemische reacties wordt een molecuul gecreëerd in een aangeslagen t
 ```{math}
 :label: eq.chemical
 \begin{align*}
-A + B_2 \pijl naar rechts (AB)^* + B.
+A + B_2 \rightarrow (AB)^* + B.
 \end{align*}
 ```
 Dus in dit geval zal de lasing plaatsvinden voor een overdracht tussen toestanden van molecuul $AB$.
