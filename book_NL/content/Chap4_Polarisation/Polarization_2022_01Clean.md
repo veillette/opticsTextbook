@@ -1,4 +1,4 @@
-(hoofdstuk.polarisatie)=
+(chapter.polarisation)=
 # Polarisatie
 
 ```{admonition} Wat je moet weten en kunnen na het bestuderen van dit hoofdstuk

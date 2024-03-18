@@ -1,4 +1,4 @@
-(chapter.diffractie)=
+(chapter.diffraction)=
 # Scalaire diffractie-optica
 
 

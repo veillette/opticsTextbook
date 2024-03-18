@@ -1,4 +1,4 @@
-(hoofdstuk.coherentie)=
+(chapter.coherence)=
 # Interferentie en coherentie
 
 ```{admonition} Wat je moet weten en kunnen na het bestuderen van dit hoofdstuk
