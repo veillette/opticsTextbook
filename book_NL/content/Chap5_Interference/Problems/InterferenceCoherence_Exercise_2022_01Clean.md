@@ -24,7 +24,7 @@ Stel dat de bronnen onderling incoherent zijn. De afstand is weer 3 m en de midd
 
 3. Reflectie coating.
 
-Een dunne vlakke film met een brekingsindex van $n_2=1,5$ wordt ondergedompeld in lucht met $n_1=1$ zoals weergegeven in {numref}`fig:ex5_2`. Een vlakke golf met een golflengte van $\lambda=632$ nm raakt de film onder een invalshoek van $\theta_1=30\degree$ ten opzichte van de normaal op het oppervlak. Een deel van het licht zal direct reflecteren op het grensvlak tussen lucht en film, en een deel van het licht zal een of meer rondjes door de film maken en vervolgens bijdragen aan het direct gereflecteerde licht. In deze oefening kijken we alleen naar het direct gereflecteerde licht op het grensvlak tussen lucht en film en het licht dat een rondje in de film maakt.
+Een dunne vlakke film met een brekingsindex van $n_2=1,5$ wordt ondergedompeld in lucht met $n_1=1$ zoals weergegeven in {numref}`fig:ex5_2`. Een vlakke golf met een golflengte van $\lambda=632$ nm raakt de film onder een invalshoek van $\theta_1=30^o$ ten opzichte van de normaal op het oppervlak. Een deel van het licht zal direct reflecteren op het grensvlak tussen lucht en film, en een deel van het licht zal een of meer rondjes door de film maken en vervolgens bijdragen aan het direct gereflecteerde licht. In deze oefening kijken we alleen naar het direct gereflecteerde licht op het grensvlak tussen lucht en film en het licht dat een rondje in de film maakt.
 
 
 ```{figure} Images/Chapter_5/Ex_5_2_Planar_film.png
