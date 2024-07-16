@@ -30,6 +30,7 @@ parts:
       - file: content/Chap7_Lasers/Lasers_2022_01Clean.md
         sections:
           - file: content/Chap7_Lasers/Problems/Lasers_Exercice_2022_01Clean.md
+      - file: content/Chap10_Fiber/Fiber.md
   - caption: Appendix
     chapters:
       - file: content/Chap9_Appendix/Appendix_A_2022Clean.md
