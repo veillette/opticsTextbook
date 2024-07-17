@@ -1,0 +1,122 @@
+Traceback (most recent call last):
+  File "/Users/aurele/.pyenv/versions/3.12.4/envs/new-env/lib/python3.12/site-packages/jupyter_cache/executors/utils.py", line 58, in single_nb_execution
+    executenb(
+  File "/Users/aurele/.pyenv/versions/3.12.4/envs/new-env/lib/python3.12/site-packages/nbclient/client.py", line 1314, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aurele/.pyenv/versions/3.12.4/envs/new-env/lib/python3.12/site-packages/jupyter_core/utils/__init__.py", line 165, in wrapped
+    return loop.run_until_complete(inner)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aurele/.pyenv/versions/3.12.4/lib/python3.12/asyncio/base_events.py", line 687, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/Users/aurele/.pyenv/versions/3.12.4/envs/new-env/lib/python3.12/site-packages/nbclient/client.py", line 709, in async_execute
+    await self.async_execute_cell(
+  File "/Users/aurele/.pyenv/versions/3.12.4/envs/new-env/lib/python3.12/site-packages/nbclient/client.py", line 1062, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "/Users/aurele/.pyenv/versions/3.12.4/envs/new-env/lib/python3.12/site-packages/nbclient/client.py", line 918, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+import numpy as np
+import plotly.graph_objects as go
+
+# Create plot
+fig = go.Figure()
+
+# Sample data (you can replace this with your data)
+n1 = 1.0
+
+n2_range = np.linspace(1, 2, 11)
+a = 0
+base_traces = 0  # Number of traces that are always visible
+
+# Add traces, one for each slider step
+for n2 in n2_range:
+    aone = np.arctan(a + 1)
+    atwo = np.arctan(a - 1)
+
+    # Draw polygons and lines
+    fig.add_trace(go.Scatter(visible=False, x=[-1, 1, 1, -1, -1], y=[0, 0, 1, 1, 0],
+                             fill='toself', fillcolor='rgba(0,0,255,0.33)', line=dict(color='blue'), name='Polygon 1', showlegend=False))
+    fig.add_trace(go.Scatter(visible=False, x=[-1, 1, 1, -1, -1], y=[0, 0, -1, -1, 0],
+                             fill='toself', fillcolor='rgba(0,0,255,0.33)', line=dict(color='blue'), name='Polygon 2', showlegend=False))
+    fig.add_trace(go.Scatter(visible=False, x=[-1, 1], y=[0, 0], line=dict(color='blue'), name='Line 1'))
+
+    x = np.linspace(0, 2, 2000)
+    y = 1
+    t = np.sqrt(x**2 + y**2) * n1 + np.sqrt((2 - x)**2 + y**2) * n2
+    __x = x[np.argmin(t)] - 1
+
+    fig.add_trace(go.Scatter(visible=False, x=[__x, __x], y=[-1, 1], line=dict(color='blue', dash='dash'),
+                             name='Dashed Line', showlegend=False))
+
+    fig.add_trace(go.Scatter(visible=False, x=[-1, __x], y=[1, 0], line=dict(color='red', width=2), name='Line 2', showlegend=False))
+
+    fig.add_trace(go.Scatter(visible=False, x=[__x, 1], y=[0, -1], line=dict(color='purple', width=2), name='Line 3', showlegend=False))
+
+    # Add labels
+    fig.add_trace(go.Scatter(visible=False, x=[__x - 0.25], y=[0.5], text=[str(np.round(np.degrees(np.arctan((__x + 1) / y)), 1)) + "°"],
+                             mode='text', showlegend=False, name='Label 1'))
+    fig.add_trace(go.Scatter(visible=False, x=[__x + (1 - __x) / 4], y=[-0.5],
+                             text=[str(np.round(np.degrees(np.arctan((2 - __x - 1) / y)), 1)) + "°"],
+                             mode='text', showlegend=False, name='Label 2'))
+
+    fig.add_trace(go.Scatter(visible=False, x=[-0.75], y=[0.1], text=["n1 = " + str(np.round(n1, 1))],
+                             mode='text', showlegend=False, name='Label 3'))
+    fig.add_trace(go.Scatter(visible=False, x=[-0.75], y=[-0.1], text=["n2 = " + str(np.round(n2, 1))],
+                             mode='text', showlegend=False, name='Label 4'))
+
+# Set plot properties
+fig.update_layout(
+    title="Fermat's Principle and Snell's Law",
+    showlegend=False,
+    title_x=0.5,  # Center the title horizontally
+    title_y=0.95  # Adjust the vertical position of the title
+)
+
+traces_per_step = 10  # Number of traces per value of n2
+active_n2_index = 0
+
+for i in range(traces_per_step):
+    curr_idx = int(base_traces + active_n2_index * traces_per_step + i)
+    fig.data[curr_idx].visible = True
+
+# Create and add slider
+steps = []
+for i in range(0, n2_range.shape[0]):
+    visarray = [False] * len(fig.data)
+    curr_idx = int(i * traces_per_step)
+    next_idx = int((i + 1) * traces_per_step)
+    visarray[curr_idx:next_idx] = [True] * traces_per_step
+    step = dict(
+        method="update",
+        args=[{"visible": visarray}],
+        label=round(n2_range[i], 1)
+    )
+    steps.append(step)
+
+sliders = [dict(
+    active=active_n2_index,
+    currentvalue={"prefix": "n2 = "},
+    steps=steps
+)]
+
+fig.update_layout(
+    sliders=sliders,
+    legend_title="Legend",
+)
+
+fig.show()
+------------------
+
+
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mModuleNotFoundError[0m                       Traceback (most recent call last)
+Cell [0;32mIn[1], line 1[0m
+[0;32m----> 1[0m [38;5;28;01mimport[39;00m [38;5;21;01mnumpy[39;00m [38;5;28;01mas[39;00m [38;5;21;01mnp[39;00m
+[1;32m      2[0m [38;5;28;01mimport[39;00m [38;5;21;01mplotly[39;00m[38;5;21;01m.[39;00m[38;5;21;01mgraph_objects[39;00m [38;5;28;01mas[39;00m [38;5;21;01mgo[39;00m
+[1;32m      4[0m [38;5;66;03m# Create plot[39;00m
+
+[0;31mModuleNotFoundError[0m: No module named 'numpy'
+

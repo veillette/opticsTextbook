@@ -31,16 +31,18 @@ parts:
         sections:
           - file: content/Chap7_Lasers/Problems/Lasers_Exercice_2022_01Clean.md
       - file: content/Chap10_Fiber/Fiber.md
+        sections:
+            - file: content/Chap10_Fiber/Fiber_exercice_2024.md
   - caption: Appendix
     chapters:
-      - file: content/Chap9_Appendix/Appendix_A_2022Clean.md
-      - file: content/Chap9_Appendix/Appendix_B_2022Clean.md
-      - file: content/Chap9_Appendix/Appendix_C_2022Clean.md
-      - file: content/Chap9_Appendix/Appendix_D_2022Clean.md
-      - file: content/Chap9_Appendix/Appendix_G_2022Clean.md
-      - file: content/Chap9_Appendix/Appendix_H_2022Clean.md
-      - file: content/Chap9_Appendix/French_method_01Clean.md
-      #- file: content/Preface/Preface_2022Clean.md
+        - file: content/Chap9_Appendix/Appendix_A_2022Clean.md
+        - file: content/Chap9_Appendix/Appendix_B_2022Clean.md
+        - file: content/Chap9_Appendix/Appendix_C_2022Clean.md
+        - file: content/Chap9_Appendix/Appendix_D_2022Clean.md
+        - file: content/Chap9_Appendix/Appendix_G_2022Clean.md
+        - file: content/Chap9_Appendix/Appendix_H_2022Clean.md
+        - file: content/Chap9_Appendix/French_method_01Clean.md
+        #- file: content/Preface/Preface_2022Clean.md
       
       
 

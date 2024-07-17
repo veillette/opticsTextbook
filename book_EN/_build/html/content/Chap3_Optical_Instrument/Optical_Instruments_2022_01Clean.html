@@ -1,0 +1,850 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Optical Instruments &#8212; Interactive Optics</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/proof.css?v=ca93fcec" />
+    <link rel="stylesheet" type="text/css" href="../../_static/exercise.css?v=20b57f81" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=87e54e7c" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"loader": {"load": ["[tex]/autoload", "[tex]/ams"]}, "tex": {"packages": {"[+]": ["autoload", "ams", "physics", "boldsymbol"]}, "tags": "ams", "macros": {"kB": "k_\\mathrm{B}", "bm": "\\mathbf", "inprod": "\\innerproduct", "diff": "\\pdv"}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'content/Chap3_Optical_Instrument/Optical_Instruments_2022_01Clean';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/loading-attribute-polyfill@2.1.0/dist/loading-attribute-polyfill.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/loading-attribute-polyfill@2.1.0/dist/loading-attribute-polyfill.min.css"></script>
+    <script src="../../_static/translation.js?v=6568e22d"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Problems" href="Problems/Optical_Instruments_Exercice_2022_01Clean.html" />
+    <link rel="prev" title="Problems" href="../Chap2_Geometrical_optics/Problems/GeometricalOptics_Exercise_2022_01Clean.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../Preface/Preface_2022Clean.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/tudelft.png" class="logo__image only-light" alt="Interactive Optics - Home"/>
+    <script>document.write(`<img src="../../_static/tudelft-dark.png" class="logo__image only-dark" alt="Interactive Optics - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">About</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Authors/authors_01.html">About the authors</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Interactive Optics</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Chap1_Basics/Basics_2022_01Clean.html">Basic Electromagnetic and Wave Optics</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Chap1_Basics/Problems/Basics_Exercise_2022_01Clean.html">Problems</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Chap2_Geometrical_optics/GeometricalOptics_2022_01Clean.html">Geometrical Optics</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Chap2_Geometrical_optics/Problems/GeometricalOptics_Exercise_2022_01Clean.html">Problems</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Optical Instruments</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="Problems/Optical_Instruments_Exercice_2022_01Clean.html">Problems</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Chap4_Polarisation/Polarization_2022_01Clean.html">Polarisation</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Chap4_Polarisation/Problems/Polarization_Exercise_2022_01Clean.html">Problems</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Chap5_Interference/InterferenceCoherence_2022_01Clean.html">Interference and Coherence</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Chap5_Interference/Problems/InterferenceCoherence_Exercise_2022_01Clean.html">Problems</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Chap6_Diffraction/DiffractiveOptics_2022_01Clean.html">Scalar Diffraction Optics</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Chap6_Diffraction/Problems/DiffractiveOptics_Exercise_2022_01Clean.html">Problems</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Chap7_Lasers/Lasers_2022_01Clean.html">Lasers</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Chap7_Lasers/Problems/Lasers_Exercice_2022_01Clean.html">Problems</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Chap10_Fiber/Fiber.html">Fiber Optics</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Chap10_Fiber/Fiber_exercice_2024.html">Problems</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendix</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Chap9_Appendix/Appendix_A_2022Clean.html">Vector Calculus</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Chap9_Appendix/Appendix_B_2022Clean.html">The Lorentz Model for Material Dispersion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Chap9_Appendix/Appendix_C_2022Clean.html">About the Conservation of Electromagnetic Energy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Chap9_Appendix/Appendix_D_2022Clean.html">Electromagnetic Momentum</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Chap9_Appendix/Appendix_G_2022Clean.html">The Fourier Transform</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Chap9_Appendix/Appendix_H_2022Clean.html">Basis transformations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Chap9_Appendix/French_method_01Clean.html">Algebraic Distance in Geometrical Optics</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/content/Chap3_Optical_Instrument/Optical_Instruments_2022_01Clean.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Optical Instruments</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-camera-obscura">The Camera Obscura</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-camera">The Camera</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#camera-in-a-smart-phone">Camera in a Smart Phone</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-human-eye">The Human Eye</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#anatomy">Anatomy</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#working-of-the-eye">Working of the eye</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#retina">Retina</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dioptric-power-of-a-lens">Dioptric Power of a lens</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#eyeglasses">Eyeglasses</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#new-correction-technique">New Correction Technique</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#magnifying-glasses">Magnifying Glasses</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#magnifying-power">Magnifying Power</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nomenclature">Nomenclature</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#eyepieces">Eyepieces</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-compound-microscope">The Compound Microscope</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-telescope">The Telescope</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="optical-instruments">
+<span id="chapter-instrument"></span><h1>Optical Instruments<a class="headerlink" href="#optical-instruments" title="Link to this heading">#</a></h1>
+<div class="admonition-what-you-should-know-and-be-able-to-do-after-studying-this-chapter admonition">
+<p class="admonition-title">What you should know and be able to do after studying this chapter</p>
+<ul class="simple">
+<li><p>Understand the working principle of a camera.</p></li>
+<li><p>Understand the optics of the eye and its accommodation with the near and far point.</p></li>
+<li><p>The working of eye glasses.</p></li>
+<li><p>Understand the principle of the magnifier and the eyepiece and its use in the microscope and the telescope.</p></li>
+<li><p>Understand the microscope and the telescope concept and the (angular) magnification in both cases.</p></li>
+</ul>
+</div>
+<p>After the treatment in the preceding chapter of the laws of Gaussian geometrical optics, more complex systems based on lenses and reflectors can now be considered.</p>
+<section id="the-camera-obscura">
+<h2>The Camera Obscura<a class="headerlink" href="#the-camera-obscura" title="Link to this heading">#</a></h2>
+<p>The camera obscura or pinhole camera is the simplest image forming system.
+It consists of a closed box with a pinhole on one side. An inverted image is cast on the opposite side of the box as shown in <a class="reference internal" href="#fig-3-01-camera-obscura"><span class="std std-numref">Fig. 49</span></a>.
+If the hole is too large, the image is very blurred. At the cost of less light, the image can be made sharper by reducing the aperture.
+The camera obscura can form images of objects across an extremely wide angular field due to great depth of focus and over a large range of distances (great depth of field) as you can see in the right picture of <a class="reference internal" href="#fig-3-01-camera-obscura"><span class="std std-numref">Fig. 49</span></a>.
+If a film would be used to record the image, very long exposure times are however needed because only a small amount of light enters the pinhole, (f-number= 500). It is believed that painters such as Johannes Vermeer have used the camera obscura to make paintings of external scenes.</p>
+<figure class="align-default" id="fig-3-01-camera-obscura">
+<img alt="../../_images/3_01_Camera_obscura.jpg" src="../../_images/3_01_Camera_obscura.jpg" />
+<figcaption>
+<p><span class="caption-number">Fig. 49 </span><span class="caption-text">The principle of the camera obscura (from <a class="reference external" href="https://commons.wikimedia.org/wiki/File:Camera_obscura_1.jpg">Wikimedia Commons</a> in Fizyka z. (1910) / Public Domain). Examples of pictures made with a camera obscura can be found
+<a class="reference external" href="https://www.pinterest.com/bonfoton/camera-obscura-photographs/">here</a>.</span><a class="headerlink" href="#fig-3-01-camera-obscura" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="the-camera">
+<h2>The Camera<a class="headerlink" href="#the-camera" title="Link to this heading">#</a></h2>
+<p>In <a class="reference internal" href="#fig-3-02-reflex-camera"><span class="std std-numref">Fig. 50</span></a> a single-lens reflex (SLR) camera is shown. The name does not mean that there is only one lens in the optical system, but that the photographer looks through the same lenses that the picture is taken with, instead of looking through a separate parallel optical system as in the twin reflex camera.
+After traversing the first few lens elements, the light passes through an iris diaphragm with adjustable diameter with which the <span class="math notranslate nohighlight">\(f\)</span>-number can be changed. After the lenses the light is reflected by a movable mirror tilted at <span class="math notranslate nohighlight">\(45^o\)</span>, passes through a prism and exits the camera through the finder eyepiece. When the shutter is released, the diaphragm closes to a preset value, the mirror swings up and the CCD is exposed. To focus the camera, the entire lens is moved toward or away from the detection plane. Autofocus is based on maximising the contrast of the images.</p>
+<figure class="align-default" id="fig-3-02-reflex-camera">
+<img alt="../../_images/3_02_Reflex_camera.png" src="../../_images/3_02_Reflex_camera.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 50 </span><span class="caption-text">Digital SLR camera. The pixelated digital sensor is behind a movable mirror at angle of 45 degrees with the optical axis. (from <a class="reference external" href="https://commons.wikimedia.org/wiki/File:Reflex_camera_numeric.svg">Wikimedia Commons</a> by Jean François WITZ / CC BY-SA 3.0).</span><a class="headerlink" href="#fig-3-02-reflex-camera" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>The <strong>angular field of view</strong> (AFOV) is defined for scenes at large distances and is equal to the angle subtended at the lens by the detector when the image distance is the focal length <span class="math notranslate nohighlight">\(f\)</span>, i.e. the object is at infinity (<a class="reference internal" href="#fig-3-03-afov"><span class="std std-numref">Fig. 51</span></a>). The AFOV decreases when <span class="math notranslate nohighlight">\(f\)</span> increases. A standard SLR has a focal length of around 6 cm with AFOV between 40° and 50°.</p>
+<figure class="align-default" id="fig-3-03-afov">
+<img alt="../../_images/3_03_AFOV.png" src="../../_images/3_03_AFOV.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 51 </span><span class="caption-text">Angular field of view</span><a class="headerlink" href="#fig-3-03-afov" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>More complex systems can have a variable focal length by changing the distance between the lenses, i.e. they are able to <em>zoom</em> into a scene.</p>
+<p>The <strong>depth of focus</strong> is a range of object distances around a given distance for which the images on the sensor are sharp. The depth of focus depends on the diaphragm.
+When the aperture is wide open, rays forming the image will make larger angles with the optical axis. When these rays come from objects at various distances they will for a large diaphragm cause more blurred images on the sensor (see <a class="reference internal" href="#fig-3-04-lego-depth"><span class="std std-numref">Fig. 52</span></a>). When the aperture is reduced, this effect is less and therefore a smaller diaphragm implies a larger depth of focus.
+The drawback is that less light reaches the sensor, therefore a longer exposure time is needed.</p>
+<figure class="align-default" id="fig-3-04-lego-depth">
+<img alt="../../_images/3_04_Lego_Depth.jpg" src="../../_images/3_04_Lego_Depth.jpg" />
+<figcaption>
+<p><span class="caption-number">Fig. 52 </span><span class="caption-text">Four images taken with different diaphragm and different focal plane. The image on bottom right is taken with a small diaphragm and the entire image appears clear (photos taken by Aurèle J.L. ADAM / CC BY-SA).</span><a class="headerlink" href="#fig-3-04-lego-depth" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="camera-in-a-smart-phone">
+<h2>Camera in a Smart Phone<a class="headerlink" href="#camera-in-a-smart-phone" title="Link to this heading">#</a></h2>
+<p>A camera in a smart phone can contain standard <strong>double Gauss</strong> or <strong>Cook triplet</strong> lenses and sometimes more advanced aspheres. The image sensor is CMOS device.
+Nowadays smart phones have auto-focus systems where the lens is moved towards or away from the sensor using different criteria. In the standard contrast detection auto-focus the lens is moved until the contrast in the image is largest. This trial-and-error method is relatively slow: it usually takes 1 second to focus. In high-end cameras so-called phase detection auto-focus is used where the relative position of two spots obtained by focusing of two small diaphragms on either side of the optical axis is analysed.
+A third auto-focus system is similar to radar. An infrared laser pulse is emitted and the distance of the object of interest is determined from the return time of the reflected pulse.
+The method works very well under low light conditions, but is not accurate for objects at distances of more than 5 m. In all smart phone cameras, blurry images are sharpened by post-processing using software.</p>
+</section>
+<section id="the-human-eye">
+<h2>The Human Eye<a class="headerlink" href="#the-human-eye" title="Link to this heading">#</a></h2>
+<p>The eye is an adaptive imaging system.</p>
+<section id="anatomy">
+<h3>Anatomy<a class="headerlink" href="#anatomy" title="Link to this heading">#</a></h3>
+<p>The human eye is made of an almost spherical (24 mm long and 22 mm across) gelatinous substance called the <strong>vitreous humor</strong> with refractive index 1.337, surrounded by a white shell, the <strong>sclera</strong> (<a class="reference internal" href="#fig-3-05-three-internal-chambers-of-the-eye"><span class="std std-numref">Fig. 53</span></a>). At the front, the sclera has an opening with a transparent lens called the <strong>cornea</strong>, with for green light an index of refraction of 1.376. Most of the bending of the rays takes place at the air-cornea interface and this is why it is difficult to see under water (<span class="math notranslate nohighlight">\(n_{water}=1.33\)</span>).</p>
+<figure class="align-default" id="fig-3-05-three-internal-chambers-of-the-eye">
+<img alt="../../_images/3_05_Three_Internal_chambers_of_the_Eye.png" src="../../_images/3_05_Three_Internal_chambers_of_the_Eye.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 53 </span><span class="caption-text">Cross section of a human eye (from <a class="reference external" href="https://commons.wikimedia.org/wiki/File:Three_Internal_chambers_of_the_Eye.png">Wikimedia Commons</a> by Holly Fischer / CC BY).</span><a class="headerlink" href="#fig-3-05-three-internal-chambers-of-the-eye" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>After passing the cornea, the rays reach the <strong>aqueous humour</strong> (<span class="math notranslate nohighlight">\(n\approx\)</span>1.336) with the <strong>iris</strong> or pupil. It can expand or contract from a 2 mm (bright sun) to 8 mm (low light) diameter to adapt to the light intensity. The iris gives colour to the eye. After the iris, the rays reach the flexible <strong>crystalline lens</strong> which has the size of a bean (9 mm in diameter, and 4 mm thick in relaxed condition). Its index of refraction varies from 1.406 in the centre to 1.386 at the edge.</p>
+<figure class="align-default">
+<img alt="../../_images/3_06_Focus_in_an_eye_a.png" src="../../_images/3_06_Focus_in_an_eye_a.png" />
+</figure>
+<figure class="align-default" id="fig-3-06-eye">
+<img alt="../../_images/3_06b_Accomodation_eye.png" src="../../_images/3_06b_Accomodation_eye.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 54 </span><span class="caption-text">Left: Optical rays showing how an eye accommodates by changing its focal length. Right: Relaxed and contracted muscle at the crystalline lens needed for this accommodation.(Left: adapted from <a class="reference external" href="https://commons.wikimedia.org/wiki/File:Focus_in_an_eye.svg">Wikimedia Commons</a> Erin Silversmith / BY-NC-SA 2.5 Generic. Right: adapted from Sjaastad O.V., Sand O. and Hove K. (2010) Physiology of domestic animals, 2nd edn., Oslo: Scandinavian Veterinary Press).</span><a class="headerlink" href="#fig-3-06-eye" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="working-of-the-eye">
+<h3>Working of the eye<a class="headerlink" href="#working-of-the-eye" title="Link to this heading">#</a></h3>
+<p>The entire eye can accurately be treated as two lenses in contact, of which the second lens can change its focal length. But often the system is approximated by only a single lens and this is also what we will do below.
+In relaxed condition, the object focal distance of the lens system is <span class="math notranslate nohighlight">\(f_o=16\)</span> mm as measured from the cornea while the image focal distance is equal to the length of the eye: <span class="math notranslate nohighlight">\(f_i=24\)</span> mm. These focal distances are different, because the refractive indices of the surrounding medium (air and vitreous humour) differ. The power of the healthy relaxed eye is according to <a class="reference internal" href="../Chap2_Geometrical_optics/GeometricalOptics_2022_01Clean.html#equation-eq-matthinlens">(206)</a>, <a class="reference internal" href="../Chap2_Geometrical_optics/GeometricalOptics_2022_01Clean.html#equation-eq-matthinlens2">(210)</a>:</p>
+<div class="math notranslate nohighlight" id="equation-eq-eyepower">
+<span class="eqno">(254)<a class="headerlink" href="#equation-eq-eyepower" title="Link to this equation">#</a></span>\[\begin{align*}
+\mathfrak{D} =\frac{n_{vh}}{f_i}= \frac{1.337}{0.024}= 55 \text{ Diopter}.
+\end{align*}\]</div>
+<p>In relaxed condition the lens focuses light coming from infinity on the retina. When the object is closer, the eye muscles contract due to which the crystalline lens becomes more convex and the focal length of the system decreases,
+as seen on the right of <a class="reference internal" href="#fig-3-06-eye"><span class="std std-numref">Fig. 54</span></a>.
+At a certain point, the object will be too close to be focused on the retina. This is called the <strong>near point</strong> of the eye.
+Due to the loss of elasticity of the muscle, the near point moves from 7 cm for teens to 100 cm for a 60-year-old. <a class="reference internal" href="#fig-3-06-eye"><span class="std std-numref">Fig. 54</span></a> shows the optical rays entering the eyes, for two configurations: an object at infinity and an object nearby. The <strong>normal near point</strong> is defined to be at the distance of 25 cm from the eye. The <strong>far point</strong> is the furthest object which is imaged on the retina by the relaxed eye. For a normal eye the far point is at infinity.</p>
+</section>
+<section id="retina">
+<h3>Retina<a class="headerlink" href="#retina" title="Link to this heading">#</a></h3>
+<p>The retina is composed of approximately 125 million photoreceptor cells: the <strong>rods</strong> and the <strong>cones</strong>. The rods are highly sensitive black and white (intensity) sensors, while the cones are colour sensitive for the wavelengths 390 nm - 780 nm. UV light is absorbed by the lens (people whose lens is removed because of cataract can “see” UV light). The <strong>fovea centralis</strong> is the most sensitive centre of the retina with a high density of cones. The eyes move continuously to focus the image on this area. The information is transferred by the optical nerve, placed at the back of the eye, where it causes a blind spot.</p>
+</section>
+<section id="dioptric-power-of-a-lens">
+<h3>Dioptric Power of a lens<a class="headerlink" href="#dioptric-power-of-a-lens" title="Link to this heading">#</a></h3>
+<p>For a single lens the dioptric power is defined by:</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}
+\mathfrak{D} = \dfrac{n_m}{f}=(n_l-n_m)\left(\dfrac{1}{R_1}-\dfrac{1}{R_2}\right)
+\end{align*}\]</div>
+<p>with <span class="math notranslate nohighlight">\(R_1\)</span> and <span class="math notranslate nohighlight">\(R_2\)</span> the radii of the thin lens measured in meter, <span class="math notranslate nohighlight">\(n_l\)</span> is the index of refraction of the lens and <span class="math notranslate nohighlight">\(n_m\)</span> that of the ambient medium.
+(When the media to the left and right of the lens are different, the refractive index to the right of lens and the right focal distance should be taken).
+For two lenses in contact, the focal length is given by:</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}
+\dfrac{1}{f}=\dfrac{1}{f_1}+\dfrac{1}{f_2},
+\end{align*}\]</div>
+<p>hence the combined power of the two lenses in contact is the sum of the individual powers:</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}
+\mathfrak{D} = \mathfrak{D_1}+\mathfrak{D_2}
+\end{align*}\]</div>
+<p>A positive lens of focal length <span class="math notranslate nohighlight">\(f_1\)</span>=10 cm air has a dioptric power <span class="math notranslate nohighlight">\(\mathfrak{D_1}=10\)</span> diopter. If it is in contact with a negative lens of dioptric power <span class="math notranslate nohighlight">\(\mathfrak{D_2}=-10\)</span> diopter, the resulting power is <span class="math notranslate nohighlight">\(\mathfrak{D}=0\)</span>, equivalent to a parallel sheet of glass.</p>
+</section>
+<section id="eyeglasses">
+<h3>Eyeglasses<a class="headerlink" href="#eyeglasses" title="Link to this heading">#</a></h3>
+<p>The eye can suffer from imperfections as seen in <a class="reference internal" href="#fig-3-07-eye-correction"><span class="std std-numref">Fig. 55</span></a>. We discuss the most common imperfections and their solutions.</p>
+<p><strong>a. Myopia or nearsightedness</strong>.
+A myopic eye has too short focal distances (has too high power). Distant objects are focused in front of the retina by the relaxed eye. The far point is thus not at infinity, but closer. This can be corrected by a negative lens. Suppose the far point is at 2 m. If the concave lens makes a virtual image of a distant object at distance 2 m in front of the cornea, the relaxed eye can see it clearly. The lens Law <a class="reference internal" href="../Chap2_Geometrical_optics/GeometricalOptics_2022_01Clean.html#equation-eq-lensmaker">(215)</a>, with <span class="math notranslate nohighlight">\(s_o=-\infty\)</span> implies then <span class="math notranslate nohighlight">\(f_i=s_i= -2\)</span> m. Hence the required power of the lens is:</p>
+<div class="math notranslate nohighlight" id="equation-eq-myopia">
+<span class="eqno">(255)<a class="headerlink" href="#equation-eq-myopia" title="Link to this equation">#</a></span>\[\begin{align*}
+\mathfrak{D} =\frac{1}{f}= -0.5 \; \text{diopter}.
+\end{align*}\]</div>
+<p>The lens is best put in the front focal plane of the relaxed eye, i.e. at approximately 16 mm in front of the cornea. This follows from <a class="reference internal" href="../Chap2_Geometrical_optics/GeometricalOptics_2022_01Clean.html#equation-eq-lensmaker">(215)</a> and the fact that the distance of the retina to the eye lens is roughly 22 mm while the refractive index of the vitrous humor is 1.337. Hence, the focal distance in air of the relaxed eye of <span class="math notranslate nohighlight">\(22/1.337 \approx 16 \text{ mm}\)</span>. The reason for putting the lens at the focal distance is that in this case the magnification of the eye and the negative lens together are the same as for the uncorrected eye. To see this, draw a ray from the top of the object through the centre of the negative lens. This will then be made parallel to the optical axis by the eye lens; the distance of this ray to the optical axis is the image size on the retina. This ray will end up at the same point of the retina as when the negative lens is taken out, because it is not refracted by this lens.</p>
+<p>Contact lenses are very close to the eye lens and hence the total power of the eye with a contact lens is simply the sum of the power of the eye and the contact lens.</p>
+<p><strong>b. Hyperopia or farsightedness</strong>.
+In this case a distant object is imaged by the relaxed eye behind the retina, i.e. the back focal distance of the relaxed eye is larger than the depth of the eye. Close objects can not be imaged on the retina, hence the near point is relatively far from the cornea. In order to bend the rays more, a positive lens is placed in front of the eye. Suppose that a hyperopic eye has near point at distance 125 cm. For an object at the normal near point <span class="math notranslate nohighlight">\(s_o=-25\)</span> cm to have virtual image at <span class="math notranslate nohighlight">\(s_i=-125\)</span> cm, so that it can be seen, the focal length of the positive lens must satisfy</p>
+<div class="math notranslate nohighlight" id="equation-eq-fconv">
+<span class="eqno">(256)<a class="headerlink" href="#equation-eq-fconv" title="Link to this equation">#</a></span>\[\begin{align*}
+\frac{1}{f}=-\frac{1}{s_o}+\frac{1}{s_i}= \frac{1}{0.25}-\frac{1}{1.25} =\frac{1}{0.31},
+\end{align*}\]</div>
+<p>hence the power must be <span class="math notranslate nohighlight">\(\mathfrak{D}=1/f=+3.2\)</span> diopter.</p>
+<figure class="align-default" id="fig-3-07-eye-correction">
+<img alt="../../_images/3_07_Eye_correction.png" src="../../_images/3_07_Eye_correction.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 55 </span><span class="caption-text">Correction of farsighted (left) and nearsighted (right) eye (adapted from <a class="reference external" href="https://en.wikipedia.org/wiki/File:Myopia_and_lens_correction.svg">Wikimedia Commons</a> by Gumenyuk I.S. / CC BY-SA 4.0).</span><a class="headerlink" href="#fig-3-07-eye-correction" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p><strong>c. Presbyopia.</strong>
+This is the lack of accommodation of the eye as is common in people over 40. It results in an increase in the distance between the near point and the cornea. This defect affects all images. Presbyopia is usually corrected by glasses with progressive correction, the upper part of glass used for distance vision and the lower part for near vision.</p>
+<p><strong>d. Astigmatism.</strong>
+In this case the focal distances for two directions perpendicular to the optical axis are different.
+It is attributed to a lack of symmetry of revolution of the cornea. This is compensated by using glasses which themselves are astigmatic.</p>
+</section>
+<section id="new-correction-technique">
+<h3>New Correction Technique<a class="headerlink" href="#new-correction-technique" title="Link to this heading">#</a></h3>
+<p>In recent years, to correct eye defects such as myopia and astigmatism, technology has been developed to change the local curvatures of the surface of the cornea using an excimer laser. The laser is computer-controlled and causes photo-ablation in parts of the cornea.</p>
+</section>
+</section>
+<section id="magnifying-glasses">
+<h2>Magnifying Glasses<a class="headerlink" href="#magnifying-glasses" title="Link to this heading">#</a></h2>
+<p>A magnifying glass causes an image on the retina which is larger than without the magnifier. In principle, the image on the retina can be increased by simply bringing the object closer to the eye (reduce <span class="math notranslate nohighlight">\(|s_o|\)</span> at fixed <span class="math notranslate nohighlight">\(s_i\)</span>). But <span class="math notranslate nohighlight">\(|s_o|\)</span> can not be smaller than the near point <span class="math notranslate nohighlight">\(d_o\)</span>, which we take here to be 25 cm. It is desirable to use a lens that makes a magnified erect image at a distance to the eye greater than <span class="math notranslate nohighlight">\(d_o\)</span>. This can be achieved by a positive lens with the object closer to the lens than the first focal point, thereby producing a magnified virtual image.
+An example is given in <a class="reference internal" href="#fig-3-08-magnifier-gruffalo"><span class="std std-numref">Fig. 56</span></a>.</p>
+<figure class="align-default" id="fig-3-08-magnifier-gruffalo">
+<img alt="../../_images/3_08_magnifier_gruffalo_small.png" src="../../_images/3_08_magnifier_gruffalo_small.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 56 </span><span class="caption-text">Example of a positive lens used as a magnifying glass (picture taken by A.J.L. Adam / CC-BY-SA 4.0).</span><a class="headerlink" href="#fig-3-08-magnifier-gruffalo" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<section id="magnifying-power">
+<h3>Magnifying Power<a class="headerlink" href="#magnifying-power" title="Link to this heading">#</a></h3>
+<p>The <strong>magnifying power</strong> <span class="math notranslate nohighlight">\(\text{MP}\)</span> or <strong>angular magnification</strong> <span class="math notranslate nohighlight">\(M_a\)</span> is defined as the ratio of the size of the retinal image obtained with the instrument and the size of the retinal image as seen by the unaided eye at normal viewing distance <span class="math notranslate nohighlight">\(d_o\)</span>.
+To estimate the size of the retinal image, we compare in both cases where <strong>the chief ray through the top of the object and the centre of the pupil of the eye hits the retina</strong>. Since the distance between the eye lens and the retina is fixed, the ratio of the image size on the retina for the eye with and without magnifying glass is:</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}
+\text{MP}=\dfrac{\alpha_a}{\alpha_u},
+\end{align*}\]</div>
+<p>where <span class="math notranslate nohighlight">\(\alpha_a\)</span> and <span class="math notranslate nohighlight">\(\alpha_u\)</span> are the angles between the optical axis and the chief rays for the aided and the unaided eye, respectively, as shown in <a class="reference internal" href="#fig-3-09-magnifier"><span class="std std-numref">Fig. 57</span></a>. Working with these angles instead of distances is in particular useful when the virtual image of the magnifying glass is at infinity.
+Using <span class="math notranslate nohighlight">\(\alpha_a\approx y_i/L\)</span> and <span class="math notranslate nohighlight">\(\alpha_u\approx y_0/d_0\)</span> with <span class="math notranslate nohighlight">\(y_i\)</span> and <span class="math notranslate nohighlight">\(y_0\)</span> positive and <span class="math notranslate nohighlight">\(L\)</span> the positive distance from the image to the eye (with as requirement : <span class="math notranslate nohighlight">\(L\geq d_o\)</span>), we find</p>
+<div class="math notranslate nohighlight" id="equation-eq-mp">
+<span class="eqno">(257)<a class="headerlink" href="#equation-eq-mp" title="Link to this equation">#</a></span>\[\begin{align*}
+\text{MP}=\dfrac{y_id_0}{y_0 L}.
+\end{align*}\]</div>
+<p>Since <span class="math notranslate nohighlight">\(s_i&lt;0\)</span> and <span class="math notranslate nohighlight">\(f_o&lt;0\)</span> we have,</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{y_i}{y_o} = \frac{s_i}{s_o} = 1 + \frac{s_i}{f_o},\]</div>
+<p>where we used the lens equation for the magnifying glass. We have <span class="math notranslate nohighlight">\(s_i = -|s_i|=-(L-\mathcal{l})\)</span>, where
+<span class="math notranslate nohighlight">\(\mathcal{l}\)</span> is the distance between the magnifying glass and the eye. Hence,
+<a class="reference internal" href="#equation-eq-mp">(257)</a> becomes:</p>
+<div class="math notranslate nohighlight" id="equation-eq-mp2">
+<span class="eqno">(258)<a class="headerlink" href="#equation-eq-mp2" title="Link to this equation">#</a></span>\[\begin{split}\begin{align*}
+\text{MP} &amp;= \frac{d_0}{L} \left[ 1 + \frac{L-\mathcal{l}}{|f_o|} \right]  \\
+&amp;= \frac{d_0}{L} \left[ 1 + {\cal P}\left(L-\mathcal{l}\right) \right],
+\end{align*}\end{split}\]</div>
+<p>where <span class="math notranslate nohighlight">\({\cal P}\)</span> is the power of the magnifying glass.</p>
+<figure class="align-default" id="fig-3-09-magnifier">
+<img alt="../../_images/3_09_Magnifier.png" src="../../_images/3_09_Magnifier.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 57 </span><span class="caption-text">An unaided view (top) and an aided view using a magnifier.</span><a class="headerlink" href="#fig-3-09-magnifier" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>We distinguish three situations:</p>
+<ol class="arabic simple">
+<li><p><span class="math notranslate nohighlight">\(\mathcal{l}=|f_o|\)</span>: the magnifying power is then <span class="math notranslate nohighlight">\(\text{MP}=d_0{\cal P}\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(\mathcal{l}=0\)</span>: hence <span class="math notranslate nohighlight">\(L=d_0\)</span> is smallest while <span class="math notranslate nohighlight">\(\text{MP}\)</span> is maximum:</p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[\begin{align*}
+\text{MP}|_{\mathcal{l}=0,L=d_0}=d_0{\cal P}+1.
+\end{align*}\]</div>
+<ol class="arabic simple">
+<li><p>The object is at the focal point of the magnifier (<span class="math notranslate nohighlight">\(s_0=f_o\)</span>), so that the virtual image is at infinity (<span class="math notranslate nohighlight">\(L=\infty\)</span>) and hence</p></li>
+</ol>
+<div class="math notranslate nohighlight" id="equation-eq-mpinfinity">
+<span class="eqno">(259)<a class="headerlink" href="#equation-eq-mpinfinity" title="Link to this equation">#</a></span>\[\begin{align*}
+\text{MP}|_{L=\infty}=d_0{\cal P},
+\end{align*}\]</div>
+<p>for every distance <span class="math notranslate nohighlight">\(\mathcal{l}\)</span> between the eye and the magnifying glass. The rays are parallel, so that the eye views the object in a relaxed way. This is the most common use of the magnifier.</p>
+<p>In practice <span class="math notranslate nohighlight">\(d_0 {\cal P}=d_o/|f_o|\)</span> is much larger than 1, so that <span class="math notranslate nohighlight">\(\text{MP}\)</span> is similar in the three cases.</p>
+</section>
+<section id="nomenclature">
+<h3>Nomenclature<a class="headerlink" href="#nomenclature" title="Link to this heading">#</a></h3>
+<p>Normally magnifiers are expressed in terms of the magnifying power when <span class="math notranslate nohighlight">\(L=\infty\)</span> (case 3 above). For example, a magnifier with a power of 10 Diopter has a <span class="math notranslate nohighlight">\(\text{MP}\)</span> equal to 2.5 or <span class="math notranslate nohighlight">\(2.5\times\)</span>. In other words, the image is 2.5 times larger than it would be if the object would be at the near point of the unaided eye.</p>
+</section>
+</section>
+<section id="eyepieces">
+<h2>Eyepieces<a class="headerlink" href="#eyepieces" title="Link to this heading">#</a></h2>
+<p>An <strong>eyepiece</strong> or <strong>ocular</strong> is a magnifier used before the eye at the end of an other optical instrument such as a microscope or a telescope. The eye looks into the ocular and the ocular “looks” into the optical instrument.
+The ocular provides a magnified virtual image of the image produced by the optical instrument. Similar to the magnifying glass, the virtual image should preferably be at or near infinity to be viewed by a relaxed eye. Several types of eye pieces exist and most of them are made out of two lenses:</p>
+<ol class="arabic simple">
+<li><p>the field lens, which is the first lens in the ocular;</p></li>
+<li><p>the eye-lens, which is closest to the eye at a fixed distance called the <strong>eye relief</strong>.
+The aperture of the eyepiece is controlled by a field stop.
+An example is given in <a class="reference internal" href="#fig-3-10-eyepiece"><span class="std std-numref">Fig. 58</span></a>.</p></li>
+</ol>
+<figure class="align-default" id="fig-3-10-eyepiece">
+<img alt="../../_images/3_10_EyePiece.png" src="../../_images/3_10_EyePiece.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 58 </span><span class="caption-text">Example of an eyepiece consisting of three lenses. 1) Real image, 2) field diaphragm, 3) eye relief, 4) eye pupil (adapted from <a class="reference external" href="https://commons.wikimedia.org/wiki/File:Exitpupil.png">Wikimedia Commons</a> by Tamas-flex / CC BY-SA 3.0).</span><a class="headerlink" href="#fig-3-10-eyepiece" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="the-compound-microscope">
+<h2>The Compound Microscope<a class="headerlink" href="#the-compound-microscope" title="Link to this heading">#</a></h2>
+<p>A magnifier alone can provide very high magnification only at the cost of intolerable aberrations.
+The <strong>compound microscope</strong> is a magnifier of close objects with a high angular magnification, generally more than <span class="math notranslate nohighlight">\(30\times\)</span>. It was invented by Zacharias Janssen in Middelburg in 1590 (but this claim is disputed). The first element of the compound microscope is an objective (in <a class="reference internal" href="#fig-3-11-compound-microscope"><span class="std std-numref">Fig. 59</span></a> a simple positive lens) which makes a real, inverted and magnified image of the object in the front focal plane of an eyepiece (where there is also the field stop). The eyepiece will make a virtual image at infinity, as explained above.</p>
+<figure class="align-default" id="fig-3-11-compound-microscope">
+<img alt="../../_images/3_11_Compound_Microscope.png" src="../../_images/3_11_Compound_Microscope.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 59 </span><span class="caption-text">Simple compound microscope. The objective forms a real image of a nearby object. The eyepiece enlarges this intermediate image. The final image can be bigger than the barrel of the device, since it is virtual.</span><a class="headerlink" href="#fig-3-11-compound-microscope" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>The magnifying power of the entire system is the product of the transverse linear magnification of the objective <span class="math notranslate nohighlight">\(M_{T}\)</span> and the angular magnification of the eyepiece <span class="math notranslate nohighlight">\(M_{Ae}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}
+\text{MP}=M_{T}M_{Ae}.
+\end{align*}\]</div>
+<p>According to <a class="reference internal" href="../Chap2_Geometrical_optics/GeometricalOptics_2022_01Clean.html#equation-eq-defm1">(221)</a>: <span class="math notranslate nohighlight">\(M_{T}=\mathbin{-} x_i/f_i^{obj}\)</span>, where <span class="math notranslate nohighlight">\(x_i\)</span> is the distance of the image made by the objective to its back focal plane with focal distance <span class="math notranslate nohighlight">\(f_i^{obj}\)</span>. We have <span class="math notranslate nohighlight">\(x_i=L\)</span> which is the tube length, i.e. the distance between the second focal point of the objective and the first focal point of the eyepiece. The tube length is standardised at 16 cm.
+Furthermore, according to <a class="reference internal" href="#equation-eq-mpinfinity">(259)</a>, the angular magnification is for a virtual image at infinity is : <span class="math notranslate nohighlight">\(M_{Ae}=d_o/f_i^e\)</span>. Hence, we obtain:</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}
+\text{MP}=\frac{\mathbin{-} x_i}{f_i^{obj}} \frac{d_o}{f_i^e} = \dfrac{\mathbin{-} 16}{f_0}.\dfrac{25}{f_e},
+\end{align*}\]</div>
+<p>with the standard near-point <span class="math notranslate nohighlight">\(d_o=\)</span>25 cm. As an example, an Amici objective gives <span class="math notranslate nohighlight">\(40 \times\)</span> and combined with a <span class="math notranslate nohighlight">\(10\times\)</span> eye piece one gets <span class="math notranslate nohighlight">\(MP=400\)</span>.</p>
+<p>The <strong>numerical aperture</strong>
+of a microscope is a measure of the capability to gather light from the object.
+It is defined by:</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}
+\text{NA} = n_{im} \sin\theta_{max}
+\end{align*}\]</div>
+<p>with <span class="math notranslate nohighlight">\(n_{im}\)</span> the refractive index of the immersing medium, usually air, but it could be water or oil, and <span class="math notranslate nohighlight">\(\theta_{max}\)</span> the half-angle of the maximum cone of light accepted by the lens. The numerical aperture is the second number etched in the barrel of the objective. It ranges from 0.07 (low-power objectives) to 1.4 for high-power objectives. Note that it depends on the object distance. In Chapter 7 it will be explained that <span class="math notranslate nohighlight">\(\text{NA}\)</span> is, for a given object distance, proportional to the resolving power which is the minimum transverse distance between two object points that can be resolved in the image.</p>
+</section>
+<section id="the-telescope">
+<h2>The Telescope<a class="headerlink" href="#the-telescope" title="Link to this heading">#</a></h2>
+<p>A telescope enlarges the retinal image of a distant object. Like a compound microscope, it is also composed of an objective and an eyepiece as seen in <a class="reference internal" href="#fig-3-12-kepler-telescope"><span class="std std-numref">Fig. 60</span></a>.</p>
+<figure class="align-default" id="fig-3-12-kepler-telescope">
+<img alt="../../_images/3_12_Kepler_Telescope.png" src="../../_images/3_12_Kepler_Telescope.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 60 </span><span class="caption-text">Keplerian astronomical telescope.</span><a class="headerlink" href="#fig-3-12-kepler-telescope" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>The object in this figure is at a large but finite distance; therefore, an image is formed by the objective just after its second focal point. The eyepiece makes a virtual magnified image, to be viewed with a relaxed eye. Therefore, the intermediary image of the objective must be within the focal length <span class="math notranslate nohighlight">\(f_i^e\)</span> from the eyepiece. The final image is inverted.</p>
+<p>As seen earlier, the angular magnification is:
+<span class="math notranslate nohighlight">\(\text{MP} = \alpha_a/\alpha_u\)</span> where <span class="math notranslate nohighlight">\(\alpha_u\)</span> is the half angle of the cone of light that would be collected without telescope and <span class="math notranslate nohighlight">\(\alpha_a\)</span> is the half angle of the apparent cone of rays coming from the virtual image of the eye piece. For an object at infinity we find considering the triangles <span class="math notranslate nohighlight">\(F_{o}^{obj}AB\)</span> and <span class="math notranslate nohighlight">\(F_i^{e}CD\)</span> in <a class="reference internal" href="#fig-3-13-rays-telescope"><span class="std std-numref">Fig. 61</span></a> that</p>
+<div class="math notranslate nohighlight" id="equation-eq-mptelescope">
+<span class="eqno">(260)<a class="headerlink" href="#equation-eq-mptelescope" title="Link to this equation">#</a></span>\[\begin{align*}
+\text{MP} = -\frac{f_i^{obj}}{f_i^e}.
+\end{align*}\]</div>
+<p>(The minus sign is because the image is inverted).</p>
+<figure class="align-default" id="fig-3-13-rays-telescope">
+<img alt="../../_images/3_13_Rays_Telescope.png" src="../../_images/3_13_Rays_Telescope.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 61 </span><span class="caption-text">Ray angles for a telescope</span><a class="headerlink" href="#fig-3-13-rays-telescope" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<div class="toctree-wrapper compound">
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./content/Chap3_Optical_Instrument"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../Chap2_Geometrical_optics/Problems/GeometricalOptics_Exercise_2022_01Clean.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Problems</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="Problems/Optical_Instruments_Exercice_2022_01Clean.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Problems</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-camera-obscura">The Camera Obscura</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-camera">The Camera</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#camera-in-a-smart-phone">Camera in a Smart Phone</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-human-eye">The Human Eye</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#anatomy">Anatomy</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#working-of-the-eye">Working of the eye</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#retina">Retina</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dioptric-power-of-a-lens">Dioptric Power of a lens</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#eyeglasses">Eyeglasses</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#new-correction-technique">New Correction Technique</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#magnifying-glasses">Magnifying Glasses</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#magnifying-power">Magnifying Power</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nomenclature">Nomenclature</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#eyepieces">Eyepieces</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-compound-microscope">The Compound Microscope</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-telescope">The Telescope</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By A.P. Konijnenberg, A.J.L. Adam, H.P. Urbach
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright Delft University of Technology, CC BY-SA 4.0.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

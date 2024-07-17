@@ -1,0 +1,693 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Problems &#8212; Interactive Optics</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/proof.css?v=ca93fcec" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/exercise.css?v=20b57f81" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-design.min.css?v=87e54e7c" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"loader": {"load": ["[tex]/autoload", "[tex]/ams"]}, "tex": {"packages": {"[+]": ["autoload", "ams", "physics", "boldsymbol"]}, "tags": "ams", "macros": {"kB": "k_\\mathrm{B}", "bm": "\\mathbf", "inprod": "\\innerproduct", "diff": "\\pdv"}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'content/Chap6_Diffraction/Problems/DiffractiveOptics_Exercise_2022_01Clean';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/loading-attribute-polyfill@2.1.0/dist/loading-attribute-polyfill.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/loading-attribute-polyfill@2.1.0/dist/loading-attribute-polyfill.min.css"></script>
+    <script src="../../../_static/translation.js?v=6568e22d"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Lasers" href="../../Chap7_Lasers/Lasers_2022_01Clean.html" />
+    <link rel="prev" title="Scalar Diffraction Optics" href="../DiffractiveOptics_2022_01Clean.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../Preface/Preface_2022Clean.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../../_static/tudelft.png" class="logo__image only-light" alt="Interactive Optics - Home"/>
+    <script>document.write(`<img src="../../../_static/tudelft-dark.png" class="logo__image only-dark" alt="Interactive Optics - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">About</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../Authors/authors_01.html">About the authors</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Interactive Optics</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../Chap1_Basics/Basics_2022_01Clean.html">Basic Electromagnetic and Wave Optics</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Chap1_Basics/Problems/Basics_Exercise_2022_01Clean.html">Problems</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../Chap2_Geometrical_optics/GeometricalOptics_2022_01Clean.html">Geometrical Optics</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Chap2_Geometrical_optics/Problems/GeometricalOptics_Exercise_2022_01Clean.html">Problems</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../Chap3_Optical_Instrument/Optical_Instruments_2022_01Clean.html">Optical Instruments</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Chap3_Optical_Instrument/Problems/Optical_Instruments_Exercice_2022_01Clean.html">Problems</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../Chap4_Polarisation/Polarization_2022_01Clean.html">Polarisation</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Chap4_Polarisation/Problems/Polarization_Exercise_2022_01Clean.html">Problems</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../Chap5_Interference/InterferenceCoherence_2022_01Clean.html">Interference and Coherence</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Chap5_Interference/Problems/InterferenceCoherence_Exercise_2022_01Clean.html">Problems</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../DiffractiveOptics_2022_01Clean.html">Scalar Diffraction Optics</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Problems</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../Chap7_Lasers/Lasers_2022_01Clean.html">Lasers</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Chap7_Lasers/Problems/Lasers_Exercice_2022_01Clean.html">Problems</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../Chap10_Fiber/Fiber.html">Fiber Optics</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Chap10_Fiber/Fiber_exercice_2024.html">Problems</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendix</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../Chap9_Appendix/Appendix_A_2022Clean.html">Vector Calculus</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Chap9_Appendix/Appendix_B_2022Clean.html">The Lorentz Model for Material Dispersion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Chap9_Appendix/Appendix_C_2022Clean.html">About the Conservation of Electromagnetic Energy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Chap9_Appendix/Appendix_D_2022Clean.html">Electromagnetic Momentum</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Chap9_Appendix/Appendix_G_2022Clean.html">The Fourier Transform</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Chap9_Appendix/Appendix_H_2022Clean.html">Basis transformations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Chap9_Appendix/French_method_01Clean.html">Algebraic Distance in Geometrical Optics</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../../_sources/content/Chap6_Diffraction/Problems/DiffractiveOptics_Exercise_2022_01Clean.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Problems</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="problems">
+<h1>Problems<a class="headerlink" href="#problems" title="Link to this heading">#</a></h1>
+<ol class="arabic simple">
+<li><p>Consider a radiating time-harmonic point source in <span class="math notranslate nohighlight">\(\mathbf{r}_1=(x_1,0,0)\)</span>. The complex field in the point of observation <span class="math notranslate nohighlight">\(\mathbf{r}=(x,y,z)\)</span>, where <span class="math notranslate nohighlight">\(z&gt;0\)</span>, is given by:</p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[\begin{align*}
+U_1(x,y,z) = Q_1 \frac{e^{ik \sqrt{(x-x_1)^2 + y^2 + z^2}}}{\sqrt{(x-x_1)^2 + y^2 + z^2}}.
+\end{align*}\]</div>
+<p>where <span class="math notranslate nohighlight">\(Q_1\)</span> is a given complex number of which the modulus is proportional to the source strength.</p>
+<ul class="simple">
+<li><p><strong>a)</strong> Derive that for fixed <span class="math notranslate nohighlight">\(z_1\)</span> and for sufficiently large <span class="math notranslate nohighlight">\(z&gt;0\)</span> the field can be approximated by</p></li>
+</ul>
+<div class="math notranslate nohighlight" id="equation-eq-cohps">
+<span class="eqno">(435)<a class="headerlink" href="#equation-eq-cohps" title="Link to this equation">#</a></span>\[\begin{align*}
+U_{1,far}(x,y,z) = Q_1 \frac{e^{ik z}}{z} e^{i k\frac{x^2+ y^2}{2z}} e^{-i \frac{k x_1 x}{z}}.
+\end{align*}\]</div>
+<ul class="simple">
+<li><p><strong>b)</strong> Let there be a second point source at <span class="math notranslate nohighlight">\(\mathbf{r}_2=(x_2,0,0)\)</span>, with complex source strength <span class="math notranslate nohighlight">\(Q_2\)</span> with
+<span class="math notranslate nohighlight">\(|Q_2|=|Q_1|\)</span>. We assume that both point sources are coherent. This means that there is <span class="math notranslate nohighlight">\(\phi\)</span> such that
+<span class="math notranslate nohighlight">\(Q_2=Q_1 e^{i \phi}\)</span>.
+Show that the field in <span class="math notranslate nohighlight">\((x,y,z)\)</span> for <span class="math notranslate nohighlight">\(z&gt;0\)</span> large due to the two point sources can be written as</p></li>
+</ul>
+<div class="math notranslate nohighlight" id="equation-eq-cohps-2">
+<span class="eqno">(436)<a class="headerlink" href="#equation-eq-cohps-2" title="Link to this equation">#</a></span>\[\begin{align*}
+U(x,y,z) \approx U_{1,far}(x,y,z)\left( 1 + e^{i\phi} e^{i \frac{k \Delta x x}{z}} \right),
+\end{align*}\]</div>
+<p>where <span class="math notranslate nohighlight">\(\Delta x = x_1-x_2\)</span>.</p>
+<ul class="simple">
+<li><p><strong>c)</strong> For which angles <span class="math notranslate nohighlight">\(\theta=x/z\)</span> does the intensity in far field vanish? Show that the distance between the point sources <span class="math notranslate nohighlight">\(\Delta x\)</span> can be determined from the angular separation of the zeros of the intensity. Does the angular separation depend on the phase difference <span class="math notranslate nohighlight">\(\phi\)</span>?</p></li>
+<li><p><strong>d)</strong> What should be the phase difference between the point sources such that for <span class="math notranslate nohighlight">\(x/z=0\)</span> on the screen at large distance <span class="math notranslate nohighlight">\(z\)</span> the intensity vanishes?</p></li>
+</ul>
+<ol class="arabic simple" start="2">
+<li><p>Consider two slits of equal width <span class="math notranslate nohighlight">\(a\)</span> in a non-transparent screen of thickness <span class="math notranslate nohighlight">\(d\)</span> in the plane <span class="math notranslate nohighlight">\(z=0\)</span> as shown in <a class="reference internal" href="#fig-7-24-two-slits"><span class="std std-numref">Fig. 108</span></a>. The screen is illuminated by a plane wave with unit amplitude and propagating in the positive <span class="math notranslate nohighlight">\(z\)</span>-direction.
+In the second slit there is a piece of glass with refractive index <span class="math notranslate nohighlight">\(n\)</span> and thickness <span class="math notranslate nohighlight">\(d\)</span>.
+In the first slit there is vacuum.</p></li>
+</ol>
+<figure class="align-default" id="fig-7-24-two-slits">
+<img alt="content/Chap6_Diffraction/Images/Tutorial_6/Ex_6_01_Two_slits_glass.png" src="content/Chap6_Diffraction/Images/Tutorial_6/Ex_6_01_Two_slits_glass.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 108 </span><span class="caption-text">Two slits centred at <span class="math notranslate nohighlight">\(y=0\)</span> and very long in the <span class="math notranslate nohighlight">\(y\)</span>-direction in a dark screen of thickness <span class="math notranslate nohighlight">\(d\)</span>. The lower slit is filled with glass, the upper is in vacuum.</span><a class="headerlink" href="#fig-7-24-two-slits" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<ul class="simple">
+<li><p><strong>a)</strong> If the field immediately behind slit 1 has complex amplitude equal to <span class="math notranslate nohighlight">\(1\)</span>, explain that the field immediately after behind 2 is given by</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\begin{align*}
+e^{ i \phi}
+\end{align*}\]</div>
+<p>with
+<span class="math notranslate nohighlight">\(\phi= k (n-1)d\)</span>.</p>
+<ul class="simple">
+<li><p><strong>b)</strong> Derive (using <a class="reference internal" href="#equation-eq-cohps">(435)</a> or in another way) that the Fraunhofer intensity pattern on a screen along the line <span class="math notranslate nohighlight">\(y=0\)</span>
+at large distance <span class="math notranslate nohighlight">\(z\)</span> is given by (upto factors that do not depend on <span class="math notranslate nohighlight">\(x/z\)</span>).</p></li>
+</ul>
+<div class="math notranslate nohighlight" id="equation-eq-2cohps-3">
+<span class="eqno">(437)<a class="headerlink" href="#equation-eq-2cohps-3" title="Link to this equation">#</a></span>\[\begin{align*}
+I_{far}(x,0,z) = 2 \frac{a^2}{z^2} \left[ \frac{\sin \left(\frac{kax}{2z}\right)}{\frac{kax}{2z}}\right]^2 \left[ 1 + \cos\left( \frac{k b x}{z} +\phi\right)\right].
+\end{align*}\]</div>
+<p>In deriving this result you may omit all factors that are independent of <span class="math notranslate nohighlight">\(x/z\)</span>.
+5and <span class="math notranslate nohighlight">\(y/z\)</span>.
+If you use <a class="reference internal" href="#equation-eq-cohps-2">(436)</a> you may take <span class="math notranslate nohighlight">\(Q_1=1\)</span>, <span class="math notranslate nohighlight">\(Q_2=e^{i \phi}\)</span>.</p>
+<ul class="simple">
+<li><p><strong>c)</strong> Make a sketch of this intensity pattern, showing the zeros and maxima as function of <span class="math notranslate nohighlight">\(\theta=x/z\)</span> when <span class="math notranslate nohighlight">\(a=2 \lambda\)</span>,
+<span class="math notranslate nohighlight">\(b=4 \lambda\)</span> and <span class="math notranslate nohighlight">\(\phi=-\pi/2\)</span>. Explain where the the envelope and the other factor that depends on <span class="math notranslate nohighlight">\(x/z\)</span> are caused by.</p></li>
+</ul>
+<ol class="arabic simple" start="3">
+<li><p>We consider the optical set-up shown at the left of <a class="reference internal" href="#fig-7-25-lloyd-mirror"><span class="std std-numref">Fig. 109</span></a> where a point source at point <span class="math notranslate nohighlight">\(\mathbf{r}_s=(a, 0,0)\)</span> is above a plane mirror in the plane <span class="math notranslate nohighlight">\(x=0\)</span>.
+The time-harmonic field emitted by the point source <strong>without the mirror being present</strong> is in complex notation given by:</p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[\begin{align*}
+U_s(x,y,z,t)= \frac{e^{i k \sqrt{ (x-a)^2 + y^2 + z^2}-i \omega t}}{\sqrt{(x-a)^2 + y^2 + z^2}}.
+\end{align*}\]</div>
+<figure class="align-default" id="fig-7-25-lloyd-mirror">
+<img alt="content/Chap6_Diffraction/Images/Tutorial_6/Ex_6_02_Lloyd_Mirror.png" src="content/Chap6_Diffraction/Images/Tutorial_6/Ex_6_02_Lloyd_Mirror.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 109 </span><span class="caption-text">Lloyd mirror configuration with a point source (left) and a rectangular aperture in a dark screen (right), above a mirror and with a screen at distance <span class="math notranslate nohighlight">\(z\)</span> where the field is observed.</span><a class="headerlink" href="#fig-7-25-lloyd-mirror" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<ul class="simple">
+<li><p><strong>a)</strong> Let <span class="math notranslate nohighlight">\(U_r\)</span> be the field reflected by the mirror. Assume that the mirror is perfect so that the total field
+<span class="math notranslate nohighlight">\(U_s(x,y,z)+U_r(x,y,z)\)</span> is zero on the surface of the mirror, i.e. when <span class="math notranslate nohighlight">\(x=0\)</span>. Show that the reflected field <span class="math notranslate nohighlight">\(U_r\)</span>
+can be considered to be emitted by a point source in <span class="math notranslate nohighlight">\((-a,0,0)\)</span>, which is the image of the original point source by the mirror, and which is <strong>out of phase</strong> with the original point source and has the <strong>same strength</strong>.</p></li>
+<li><p><strong>b)</strong> Consider the field on a screen at <span class="math notranslate nohighlight">\(z&gt;0\)</span>. According to (a) the field in the presence of the mirror can be considered to be radiated by two point sources, namely at <span class="math notranslate nohighlight">\((a,0,0)\)</span> and <span class="math notranslate nohighlight">\((-a,0,0)\)</span>, that are of equal strength and out of phase with each other. Assume that <span class="math notranslate nohighlight">\(z\)</span> is so large that the spherical waves emitted by these point sources and arriving at the screen can both be considered to be plane waves. Derive that the point on the screen
+<span class="math notranslate nohighlight">\((x,0,z)\)</span> with smallest <span class="math notranslate nohighlight">\(x&gt;0\)</span> where the field is zero is given by</p></li>
+</ul>
+<div class="math notranslate nohighlight" id="equation-eq-lloyd1">
+<span class="eqno">(438)<a class="headerlink" href="#equation-eq-lloyd1" title="Link to this equation">#</a></span>\[\begin{align*}
+x= \frac{\lambda}{2a} z,
+\end{align*}\]</div>
+<p>where <span class="math notranslate nohighlight">\(\lambda\)</span> is the wavelength. In your derivation use path length differences of interfering rays and make a drawing.</p>
+<ul class="simple">
+<li><p><strong>c)</strong> What happens with this zero and with the fringe patten on the screen when the perfect mirror is replaced by a dielectric such as a piece of glass?</p></li>
+<li><p><strong>d)</strong> Suppose now that there is a second point source at <span class="math notranslate nohighlight">\((2a,0,0)\)</span> above the mirror and suppose that it has the same strength and is in phase with the point source in <span class="math notranslate nohighlight">\((a,0,0)\)</span>.
+Assume again that the mirror is perfectly reflecting and derive (again by considering path length differences and using a drawing) that the smallest <span class="math notranslate nohighlight">\(x&gt;0\)</span> for which a zero occurs in point <span class="math notranslate nohighlight">\((x,0,z)\)</span> on the screen is given by</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\begin{align*}
+x= \frac{\lambda}{3a}z
+\end{align*}\]</div>
+<ul class="simple">
+<li><p><strong>e)</strong> Derive the smallest <span class="math notranslate nohighlight">\(x&gt;0\)</span> for which the field is zero in <span class="math notranslate nohighlight">\((x,0,z)\)</span> when the two point sources at <span class="math notranslate nohighlight">\((a,0,0)\)</span> and <span class="math notranslate nohighlight">\((2a,0,0)\)</span> are mutually incoherent. Use again path length differences and make a drawing.</p></li>
+<li><p><strong>f)</strong> Next suppose that there is a square aperture with centre at <span class="math notranslate nohighlight">\((a,0,0)\)</span> and sides of length <span class="math notranslate nohighlight">\(b&lt;a\)</span> parallel to the <span class="math notranslate nohighlight">\(x\)</span>- and <span class="math notranslate nohighlight">\(y\)</span>-directions in an opaque (i.e. dark) screen above the mirror as shown at the right of
+<a class="reference internal" href="#fig-7-25-lloyd-mirror"><span class="std std-numref">Fig. 109</span></a>. The aperture is illuminated by a plane wave that propagates parallel to the <span class="math notranslate nohighlight">\(z\)</span>-axis, hence the field in the aperture has constant phase and amplitude. Compute the smallest positive <span class="math notranslate nohighlight">\(x\)</span> for which a zero occurs at <span class="math notranslate nohighlight">\((x,0,z)\)</span> on the screen at large distance <span class="math notranslate nohighlight">\(z&gt;0\)</span>.
+Use again path length differences and a drawing in your derivation.</p></li>
+</ul>
+<ol class="arabic simple" start="4">
+<li><p>Note: to answer the following questions it is <strong>NOT</strong> necessary to compute diffraction integrals.</p></li>
+</ol>
+<ul class="simple">
+<li><p><strong>a)</strong> Consider two equally strong point sources which with respect to a coordinate system <span class="math notranslate nohighlight">\((x,y,z)\)</span> are at <span class="math notranslate nohighlight">\((-a/2,0,0)\)</span> and <span class="math notranslate nohighlight">\((a/2,0,0)\)</span>, where the <span class="math notranslate nohighlight">\(z\)</span>-axis is the optical axis. Suppose the point sources are mutually coherent and suppose that they emit in phase. The maximum intensity on a screen at large (i.e. Fraunhofer) distance is then on the optical axis.
+Show that the smallest angle with the optical axis at which there is a zero on this screen is given by <span class="math notranslate nohighlight">\(\lambda/(2a)\)</span>.</p></li>
+<li><p><strong>b)</strong> What is the smallest angle with the optical axis at which there is a zero on the screen when the two point sources emit with phase difference <span class="math notranslate nohighlight">\(\pi/2\)</span>?</p></li>
+<li><p><strong>c)</strong> Are there any zeros on the screen when the two point sources are mutually incoherent?</p></li>
+<li><p><strong>d)</strong> Consider now two identical apertures in an opaque screen at <span class="math notranslate nohighlight">\(z=0\)</span>. One aperture has its centre at <span class="math notranslate nohighlight">\((-a/2,0,0)\)</span> and the other has its centre at <span class="math notranslate nohighlight">\((a/2,0,0)\)</span>.
+The apertures are illuminated by a time-harmonic plane wave at perpendicular incidence to the screen (i.e. propagating parallel to the <span class="math notranslate nohighlight">\(z\)</span>-axis).
+Explain that whatever the shape of these apertures, the smallest angle for which a zero occurs in the far field intensity is at <span class="math notranslate nohighlight">\(\lambda/(2a)\)</span>.</p></li>
+<li><p><strong>e)</strong> Suppose that the plane wave is incident at some angle different from <span class="math notranslate nohighlight">\(90^o\)</span>. Let its complex field be given by</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\begin{align*}
+U(x,z)= e^{i (k_x x + k_z z)}
+\end{align*}\]</div>
+<p>where <span class="math notranslate nohighlight">\(\sqrt{k_x^2+k_z^2}=k\)</span>. Suppose that <span class="math notranslate nohighlight">\(k_x a =\pi/2\)</span> (modulo <span class="math notranslate nohighlight">\(2\pi\)</span>). What is now the smallest angle where a zero occurs on the screen in far field? Explain your answer.</p>
+<ul class="simple">
+<li><p><strong>f)</strong> Now imagine that both (identical) apertures are filled with glass plates with thickness that varies with position. The two glass plates are identical and they are identically positioned in each of the two apertures. Imagine that we illuminate the apertures with a plane wave at perpendicular incidence. The field transmitted by each aperture is now a rather complicated function of position, however the transmitted fields behind both apertures are identical. Does the far field intensity still vanish for angle <span class="math notranslate nohighlight">\(\lambda/(2a)\)</span> or will it be modified by the presence of the glass plates? Explain your answer.</p></li>
+</ul>
+<ol class="arabic simple" start="5">
+<li><p>Bessel beams.</p></li>
+</ol>
+<p>Suppose there is a mask in the entrance pupil of radius <span class="math notranslate nohighlight">\(a\)</span> of a positive thin lens with image focal length <span class="math notranslate nohighlight">\(f_i\)</span> with a thin ring-shaped aperture at <span class="math notranslate nohighlight">\(r=b\)</span> with width <span class="math notranslate nohighlight">\(\Delta r\)</span>. If a plane wave with amplitude <span class="math notranslate nohighlight">\(A\)</span> is at perpendicular incidence on the mask, the field immediately behind the mask is given by</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align*}
+U_{Bessel}(x,y)= \left\{ \begin{array}{l}A, \;\;\; \text{ if } b-\Delta r &lt; \sqrt{x^2+y^2}&lt;b, \\0, \;\;\; \text{ otherwise}
+\end{array}\right.
+\end{align*}\end{split}\]</div>
+<ul class="simple">
+<li><p><strong>a)</strong> Use the integral</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\begin{align*}
+\int_0^{2\pi} e^{i \zeta \cos \psi} \mathrm{d}\psi = 2\pi J_0(\zeta).
+\end{align*}\]</div>
+<p>to derive that for sufficiently small <span class="math notranslate nohighlight">\(\Delta r\)</span>, the field in the focal plane is in good approximation given by</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}
+U_{Bessel}(x,y,f_i)= 2\pi A b \Delta r J_0\left( k \frac{b r}{f}\right).
+\end{align*}\]</div>
+<ul class="simple">
+<li><p><strong>b)</strong> The beam obtained this way is called a Bessel beam. Explain why this beam has a very long focal depth.</p></li>
+<li><p><strong>c)</strong> Suppose that the Airy spot obtained by focussing of a unit amplitude plane wave and the Bessel beam carry the same amount of energy. Show that then the amplitude of the Bessel beam is given by</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\begin{align*}
+A = \frac{a}{\sqrt{2 b \Delta r}}
+\end{align*}\]</div>
+<ul class="simple">
+<li><p><strong>d)</strong> Derive that the ratio of the field amplitudes in the focal point of the Bessel beam i: <span class="math notranslate nohighlight">\(U_{Bessel}(0,0,f_i)\)</span> and the Airy spot: <span class="math notranslate nohighlight">\(U_{Airy}(0,0,f_i)\)</span> is given by</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\begin{align*}
+\frac{U_{Bessel}}{U_{Airy}} = \frac{\sqrt{2 b \Delta r}}{ a}.
+\end{align*}\]</div>
+<p>If <span class="math notranslate nohighlight">\(b=a\)</span> and <span class="math notranslate nohighlight">\(\Delta r=0.1 a\)</span> this becomes</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}
+\frac{U_{Bessel }}{U_{Airy}} = \sqrt{\frac{2 \Delta r}{ a}} \approx 0.44,
+\end{align*}\]</div>
+<p>which is the case shown in <a class="reference internal" href="#fig-besselplot"><span class="std std-numref">Fig. 110</span></a>.</p>
+<figure class="align-default" id="fig-besselplot">
+<img alt="content/Chap6_Diffraction/Images/Tutorial_6/Ex_6_03_BesselPlot.png" src="content/Chap6_Diffraction/Images/Tutorial_6/Ex_6_03_BesselPlot.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 110 </span><span class="caption-text">Amplitude in the focal plane of a Bessel beam and of an Airy spot with the same total energy. The lens pupil has diameter <span class="math notranslate nohighlight">\(a=10000 \lambda\)</span>, the ring aperture of the Bessel beam case is at the outer edge of the pupil (<span class="math notranslate nohighlight">\(b=a\)</span>) and has width <span class="math notranslate nohighlight">\(\Delta r = 0.1 a\)</span> and the <span class="math notranslate nohighlight">\(\text{NA}=0.1\)</span>.</span><a class="headerlink" href="#fig-besselplot" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<ul class="simple">
+<li><p><strong>e)</strong> The Bessel beam has stronger side lobes than the Airy spot. Explain the reason.</p></li>
+</ul>
+<ol class="arabic simple" start="6">
+<li><p>* Stellar interferometry.</p></li>
+</ol>
+<p>We consider the emission by a star of light of a narrow frequency band with centre frequency <span class="math notranslate nohighlight">\(\mathbf{a}r{\omega}\)</span> and corresponding wavelength <span class="math notranslate nohighlight">\(\mathbf{a}r{\lambda}=c 2\pi/\mathbf{a}r{\omega}\)</span>
+The star is an extended spatially incoherent source. Let <span class="math notranslate nohighlight">\(I(x,y)\)</span> be the intensity on the star’s surface orientated towards the earth. The aim of the exercise is to determine <span class="math notranslate nohighlight">\(I(x,y)\)</span> by stellar interferometry.</p>
+<p>Let <span class="math notranslate nohighlight">\(U_0(x,y,t)\)</span> be the field emitted at the surface of the star. Then the mutual coherence function at points <span class="math notranslate nohighlight">\(S_1=(x_1,y_1)\)</span>, <span class="math notranslate nohighlight">\(S_2=(x_2, y_2)\)</span> on the surface of the star is:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align*}
+\Gamma(S_1,S_2, \tau)&amp;= \braket{ U_0(S_1,t)^* U_0(S_2,t+\tau)}  \\
+&amp;=
+I(x_1,y_1) e^{i \omega \tau} \delta(x_1- x_2)\delta(y_1- y_2) \;\;\; \text{ for all } \tau.
+\end{align*}\end{split}\]</div>
+<ul class="simple">
+<li><p><strong>a)</strong> Let <span class="math notranslate nohighlight">\(z_e\)</span> be the distance of the star from earth. Use the quasi-monochromatic approximation to derive the field in a point <span class="math notranslate nohighlight">\(P_e=(x_e,y_e)\)</span> on earth.</p></li>
+<li><p><strong>b)</strong> Show that the mutual coherence function in two points <span class="math notranslate nohighlight">\(P_e=(x_e,y_e)\)</span> and <span class="math notranslate nohighlight">\(\tilde{P}_2=(\tilde{x}_e, \tilde{y}_e)\)</span> on earth is for <span class="math notranslate nohighlight">\(\tau=0\)</span> given by</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\begin{align*}
+\Gamma(P_e, \tilde{P}_e,\tau=0) = \int\int I(x_1,y_1) e^{2\pi i \left( \frac{x_e - \tilde{x}_e }{\mathbf{a}r{\lambda} z_e} x_1 +
+\frac{y_e -\tilde{y}_e }{\mathbf{a}r{\lambda} z_e}y_1\right) } \, dx_1 dy_1.
+\end{align*}\]</div>
+<p>i.e. the mutual coherence function between points on earth for time delay <span class="math notranslate nohighlight">\(\tau=0\)</span> can be expressed in the Fourier transform of the intensity <span class="math notranslate nohighlight">\(I(x,y)\)</span> emitted by the star, evaluated at spatial frequencies <span class="math notranslate nohighlight">\(\xi=\frac{x_e - \tilde{x}_e }{\mathbf{a}r{\lambda} z_e} \)</span> and <span class="math notranslate nohighlight">\(\eta=\frac{y_e -\tilde{y}_e }{\mathbf{a}r{\lambda} z_e}\)</span>.</p>
+<ul class="simple">
+<li><p><strong>c)</strong> Explain how the mutual coherence for time delay <span class="math notranslate nohighlight">\(\tau=0\)</span> can be measured on earth using interferometry and how this can lead to retrieving the intensity of the star.</p></li>
+<li><p><strong>d)</strong> What determines the resolution that can be achieved?</p></li>
+</ul>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./content/Chap6_Diffraction/Problems"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../DiffractiveOptics_2022_01Clean.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Scalar Diffraction Optics</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../../Chap7_Lasers/Lasers_2022_01Clean.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Lasers</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By A.P. Konijnenberg, A.J.L. Adam, H.P. Urbach
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright Delft University of Technology, CC BY-SA 4.0.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

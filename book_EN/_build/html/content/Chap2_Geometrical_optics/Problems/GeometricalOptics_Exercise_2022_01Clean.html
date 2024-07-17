@@ -1,0 +1,823 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Problems &#8212; Interactive Optics</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/proof.css?v=ca93fcec" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/exercise.css?v=20b57f81" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-design.min.css?v=87e54e7c" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"loader": {"load": ["[tex]/autoload", "[tex]/ams"]}, "tex": {"packages": {"[+]": ["autoload", "ams", "physics", "boldsymbol"]}, "tags": "ams", "macros": {"kB": "k_\\mathrm{B}", "bm": "\\mathbf", "inprod": "\\innerproduct", "diff": "\\pdv"}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'content/Chap2_Geometrical_optics/Problems/GeometricalOptics_Exercise_2022_01Clean';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/loading-attribute-polyfill@2.1.0/dist/loading-attribute-polyfill.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/loading-attribute-polyfill@2.1.0/dist/loading-attribute-polyfill.min.css"></script>
+    <script src="../../../_static/translation.js?v=6568e22d"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Optical Instruments" href="../../Chap3_Optical_Instrument/Optical_Instruments_2022_01Clean.html" />
+    <link rel="prev" title="Geometrical Optics" href="../GeometricalOptics_2022_01Clean.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../Preface/Preface_2022Clean.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../../_static/tudelft.png" class="logo__image only-light" alt="Interactive Optics - Home"/>
+    <script>document.write(`<img src="../../../_static/tudelft-dark.png" class="logo__image only-dark" alt="Interactive Optics - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">About</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../Authors/authors_01.html">About the authors</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Interactive Optics</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../Chap1_Basics/Basics_2022_01Clean.html">Basic Electromagnetic and Wave Optics</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Chap1_Basics/Problems/Basics_Exercise_2022_01Clean.html">Problems</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../GeometricalOptics_2022_01Clean.html">Geometrical Optics</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Problems</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../Chap3_Optical_Instrument/Optical_Instruments_2022_01Clean.html">Optical Instruments</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Chap3_Optical_Instrument/Problems/Optical_Instruments_Exercice_2022_01Clean.html">Problems</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../Chap4_Polarisation/Polarization_2022_01Clean.html">Polarisation</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Chap4_Polarisation/Problems/Polarization_Exercise_2022_01Clean.html">Problems</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../Chap5_Interference/InterferenceCoherence_2022_01Clean.html">Interference and Coherence</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Chap5_Interference/Problems/InterferenceCoherence_Exercise_2022_01Clean.html">Problems</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../Chap6_Diffraction/DiffractiveOptics_2022_01Clean.html">Scalar Diffraction Optics</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Chap6_Diffraction/Problems/DiffractiveOptics_Exercise_2022_01Clean.html">Problems</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../Chap7_Lasers/Lasers_2022_01Clean.html">Lasers</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Chap7_Lasers/Problems/Lasers_Exercice_2022_01Clean.html">Problems</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../Chap10_Fiber/Fiber.html">Fiber Optics</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Chap10_Fiber/Fiber_exercice_2024.html">Problems</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendix</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../Chap9_Appendix/Appendix_A_2022Clean.html">Vector Calculus</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Chap9_Appendix/Appendix_B_2022Clean.html">The Lorentz Model for Material Dispersion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Chap9_Appendix/Appendix_C_2022Clean.html">About the Conservation of Electromagnetic Energy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Chap9_Appendix/Appendix_D_2022Clean.html">Electromagnetic Momentum</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Chap9_Appendix/Appendix_G_2022Clean.html">The Fourier Transform</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Chap9_Appendix/Appendix_H_2022Clean.html">Basis transformations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Chap9_Appendix/French_method_01Clean.html">Algebraic Distance in Geometrical Optics</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../../_sources/content/Chap2_Geometrical_optics/Problems/GeometricalOptics_Exercise_2022_01Clean.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Problems</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="problems">
+<h1>Problems<a class="headerlink" href="#problems" title="Link to this heading">#</a></h1>
+<ol class="arabic simple">
+<li><p>Principle of Fermat and Snell’s Law.</p></li>
+</ol>
+<p>Consider a layer of thickness <span class="math notranslate nohighlight">\(d\)</span> and refractive index <span class="math notranslate nohighlight">\(n_2\)</span> which is sandwiched between two half spaces with refractive index <span class="math notranslate nohighlight">\(n_1\)</span> and <span class="math notranslate nohighlight">\(n_3\)</span> as shown in <a class="reference internal" href="#fig-2-29-slab"><span class="std std-numref">Fig. 39</span></a>.
+A ray from point <span class="math notranslate nohighlight">\(P=(x_P,y_P)\)</span> with <span class="math notranslate nohighlight">\(y_P&gt;d\)</span> passes through point <span class="math notranslate nohighlight">\(Q=(x_Q,y_Q)\)</span> with <span class="math notranslate nohighlight">\(y_Q&lt;0\)</span>.</p>
+<figure class="align-default" id="fig-2-29-slab">
+<img alt="content/Chap2_Geometrical_optics/Images/Tutorial_2/2_29_Slab.png" src="content/Chap2_Geometrical_optics/Images/Tutorial_2/2_29_Slab.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 39 </span><span class="caption-text">A ray through points <span class="math notranslate nohighlight">\(P\)</span> and <span class="math notranslate nohighlight">\(Q\)</span>.</span><a class="headerlink" href="#fig-2-29-slab" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<ul class="simple">
+<li><p><strong>a)</strong> Write a formula for the OPL of the ray from <span class="math notranslate nohighlight">\(P\)</span> to <span class="math notranslate nohighlight">\(Q\)</span> as shown in <a class="reference internal" href="#fig-2-29-slab"><span class="std std-numref">Fig. 39</span></a>.</p></li>
+<li><p><strong>b)</strong> Find the equations to be satisfied by <span class="math notranslate nohighlight">\(x_A\)</span> and <span class="math notranslate nohighlight">\(x_B\)</span> such that the OPL is minimum.
+Hint: set the partial derivatives of the OPL with respect to <span class="math notranslate nohighlight">\(x_A\)</span> and <span class="math notranslate nohighlight">\(x_B\)</span> equal to zero.</p></li>
+<li><p><strong>c)</strong> Express the equations derived under b) in terms of <span class="math notranslate nohighlight">\(\sin \theta_1\)</span>, <span class="math notranslate nohighlight">\(\sin \theta_2\)</span> and <span class="math notranslate nohighlight">\(\sin \theta_3\)</span> and derive that Snell’s Law holds for the angles <span class="math notranslate nohighlight">\(\theta_1\)</span> and <span class="math notranslate nohighlight">\(\theta_3\)</span>:</p></li>
+</ul>
+<div class="math notranslate nohighlight" id="equation-eq-snell13">
+<span class="eqno">(241)<a class="headerlink" href="#equation-eq-snell13" title="Link to this equation">#</a></span>\[\begin{align*}
+n_1 \sin \theta_1 = n_3 \sin \theta_3.
+\end{align*}\]</div>
+<p>Note that the relationship between <span class="math notranslate nohighlight">\(\theta_3\)</span> and <span class="math notranslate nohighlight">\(\theta_1\)</span> is independent of the refractive index <span class="math notranslate nohighlight">\(n_2\)</span> and the thickness <span class="math notranslate nohighlight">\(d\)</span> of the middle layer.</p>
+<ul class="simple">
+<li><p><strong>d)</strong> Does Snell’s Law <a class="reference internal" href="#equation-eq-snell13">(241)</a>) hold irrespective of the number of layers and their thicknesses in between the two half spaces?
+Explain your answer.</p></li>
+<li><p><strong>e)</strong> Derive <a class="reference internal" href="#equation-eq-snell13">(241)</a> by using the boundary conditions for the tangential components of the electromagnetic field, as described in <a class="reference internal" href="../../Chap1_Basics/Basics_2022_01Clean.html#section-bcmaxwell"><span class="std std-ref">Maxwell Boundary Conditions</span></a>.</p></li>
+</ul>
+<ol class="arabic simple" start="2">
+<li><p>Perfect focusing by an ellipsoid and a hyperboloid.</p></li>
+</ol>
+<p>Suppose that there are two media with refractive indices <span class="math notranslate nohighlight">\(n_1&gt;n_2\)</span> and that point <span class="math notranslate nohighlight">\(S\)</span> is at infinity in the medium with refractive index <span class="math notranslate nohighlight">\(n_2\)</span>. We will construct a surface (interface) between the two media such that all rays from <span class="math notranslate nohighlight">\(S\)</span> are focused into the same point <span class="math notranslate nohighlight">\(F\)</span> (see <a class="reference internal" href="#fig-2-07-focus-right"><span class="std std-numref">Fig. 40</span></a>a). Because <span class="math notranslate nohighlight">\(S\)</span> is at very large distance, the rays entering from the right are parallel. Since all parallel rays have travelled the same distance when they hit the surface <span class="math notranslate nohighlight">\(DD'\)</span> perpendicular to the rays, all parallel rays have the same phase at their intersection points with the plane <span class="math notranslate nohighlight">\(DD'\)</span>.</p>
+<ul class="simple">
+<li><p><strong>a)</strong> If point <span class="math notranslate nohighlight">\(A\)</span> is on the interface sought, derive that</p></li>
+</ul>
+<div class="math notranslate nohighlight" id="equation-eq-hyper1">
+<span class="eqno">(242)<a class="headerlink" href="#equation-eq-hyper1" title="Link to this equation">#</a></span>\[\begin{align*}
+\frac{n_2}{c} |DA| + \frac{n_1}{c}|AF| = \text{constant},
+\end{align*}\]</div>
+<p>the constant is the same for all points <span class="math notranslate nohighlight">\(A\)</span> on the interface.</p>
+<ul class="simple">
+<li><p><strong>b)</strong> Show that by moving the plane <span class="math notranslate nohighlight">\(DD'\)</span> parallel to itself we can achieve that for the new plane <span class="math notranslate nohighlight">\(DD'\)</span> we get:</p></li>
+<li><p><strong>c)</strong> Suppose next that <span class="math notranslate nohighlight">\(n_2&gt;n_1\)</span>. as shown at the right of <a class="reference internal" href="#fig-2-07-focus-right"><span class="std std-numref">Fig. 40</span></a>. Show that now, by the same argument as above, the interface is a hyperboloid with <span class="math notranslate nohighlight">\(F\)</span> as one of its focal points.</p></li>
+</ul>
+<figure class="align-default" id="fig-2-07-focus-right">
+<img alt="../../../_images/2_07_Focus-Left.png" src="../../../_images/2_07_Focus-Left.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 40 </span><span class="caption-text">(a) Ellipsoid (<span class="math notranslate nohighlight">\(n_2&lt;n_1\)</span>) and (b) hyperboloid (<span class="math notranslate nohighlight">\(n_2&gt;n_1\)</span>) to perfectly focus a parallel beam incident from the medium with refractive index <span class="math notranslate nohighlight">\(n_2\)</span> into a point in a medium with refractive index <span class="math notranslate nohighlight">\(n_1\)</span>.</span><a class="headerlink" href="#fig-2-07-focus-right" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<ul class="simple">
+<li><p><strong>d)</strong> Use the previous results to describe a lens with refractive index <span class="math notranslate nohighlight">\(n_2&gt;n_1\)</span> and having hyperboloid surfaces which perfectly images two given points S and P in the ambient medium with refractive index <span class="math notranslate nohighlight">\(n_1\)</span>.</p></li>
+</ul>
+<figure class="align-default" id="fig-2-08-perfect-imaging">
+<img alt="../../../_images/2_08_Perfect_Imaging.png" src="../../../_images/2_08_Perfect_Imaging.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 41 </span><span class="caption-text">Lens with hyperboloid surfaces for perfect imaging of a pair of points.</span><a class="headerlink" href="#fig-2-08-perfect-imaging" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<ol class="arabic simple" start="3">
+<li><p>Perfect focussing by a parabolic mirror</p></li>
+</ol>
+<p>Next we consider perfect focusing of parallel rays in air (<span class="math notranslate nohighlight">\(n=1\)</span>) by a mirror.
+Let there be a parallel bundle of rays in air (<span class="math notranslate nohighlight">\(n=1\)</span>) and suppose we want to focus all rays in point <span class="math notranslate nohighlight">\(F\)</span>.</p>
+<ul class="simple">
+<li><p><strong>a)</strong> We draw a plane <span class="math notranslate nohighlight">\(\Sigma_1\)</span> perpendicular to the rays as shown in <a class="reference internal" href="#fig-2-09-para-mirror"><span class="std std-numref">Fig. 42</span></a>. The rays that hit <span class="math notranslate nohighlight">\(\Sigma_1\)</span> have traversed the same optical path length.
+Draw a second surface <span class="math notranslate nohighlight">\(\Sigma_2\)</span> parallel to <span class="math notranslate nohighlight">\(\Sigma_1\)</span>. Consider rays hitting the mirror in <span class="math notranslate nohighlight">\(A_1\)</span> and <span class="math notranslate nohighlight">\(A_2\)</span>.
+Derive that</p></li>
+</ul>
+<div class="math notranslate nohighlight" id="equation-eq-parmir1">
+<span class="eqno">(243)<a class="headerlink" href="#equation-eq-parmir1" title="Link to this equation">#</a></span>\[\begin{align*}
+\text{OPL}=|W_1A_1| + |A_1F|= |W_2A_2| + |A_2F|.
+\end{align*}\]</div>
+<ul class="simple">
+<li><p><strong>b)</strong> Derive that</p></li>
+</ul>
+<div class="math notranslate nohighlight" id="equation-eq-parmir2">
+<span class="eqno">(244)<a class="headerlink" href="#equation-eq-parmir2" title="Link to this equation">#</a></span>\[\begin{align*}
+|W_1A_1| + |A_1D_1|= |W_2A_2| + |A_2D_2|.
+\end{align*}\]</div>
+<ul class="simple">
+<li><p><strong>c)</strong> Show that
+<a class="reference internal" href="#equation-eq-parmir1">(243)</a> is satisfied for points <span class="math notranslate nohighlight">\(A\)</span> for which <span class="math notranslate nohighlight">\(|AF|=|AD|\)</span>,
+and conclude that the mirror is a paraboloid with <span class="math notranslate nohighlight">\(f\)</span> as focus and <span class="math notranslate nohighlight">\(\Sigma_2\)</span> as diretrix.</p></li>
+</ul>
+<figure class="align-default" id="fig-2-09-para-mirror">
+<img alt="../../../_images/2_09a_Paraboloid_mirror_BW.png" src="../../../_images/2_09a_Paraboloid_mirror_BW.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 42 </span><span class="caption-text">A paraboloid mirror.</span><a class="headerlink" href="#fig-2-09-para-mirror" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<ol class="arabic simple" start="4">
+<li><p>Imaging of a virtual object.</p></li>
+</ol>
+<p>A virtual object is at a distance <span class="math notranslate nohighlight">\(d_0\)</span> behind a converging lens. The converging incident rays to the left of the lens, that correspond to the virtual object, are shown in <a class="reference internal" href="#fig-2-30-virtual-object"><span class="std std-numref">Fig. 43</span></a>. The lens has focal length <span class="math notranslate nohighlight">\(f\)</span>.</p>
+<figure class="align-default" id="fig-2-30-virtual-object">
+<img alt="content/Chap2_Geometrical_optics/Images/Tutorial_2/2_30_VirtualObject.png" src="content/Chap2_Geometrical_optics/Images/Tutorial_2/2_30_VirtualObject.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 43 </span><span class="caption-text">An object is created by incoming rays.</span><a class="headerlink" href="#fig-2-30-virtual-object" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<ul class="simple">
+<li><p><strong>a)</strong> Construct the image when <span class="math notranslate nohighlight">\(f=2\)</span> cm, <span class="math notranslate nohighlight">\(d_0=4\)</span> cm and the height of the object 1 cm.</p></li>
+<li><p><strong>b)</strong> Is the image real or virtual? Inverted or upright?</p></li>
+<li><p><strong>c)</strong> Calculate the location of the image using the lens formula and compare it with your drawing. What is the magnification?</p></li>
+</ul>
+<ol class="arabic simple" start="5">
+<li><p>Suppose we have two thin lenses <span class="math notranslate nohighlight">\({\cal L}_1\)</span> and <span class="math notranslate nohighlight">\({\cal L}_2\)</span>. Lens <span class="math notranslate nohighlight">\({\cal L}_1\)</span> is convergent (i.e. positive) with focal distance <span class="math notranslate nohighlight">\(f_1&gt;0 \)</span> and lens <span class="math notranslate nohighlight">\({\cal L}_2\)</span>
+is divergent (i.e. negative) with focal distance <span class="math notranslate nohighlight">\(f_2&lt;0\)</span>. The distance between the lenses is <span class="math notranslate nohighlight">\(d\)</span>.
+Let there be an object at distance <span class="math notranslate nohighlight">\(2f_1\)</span> in front of lens <span class="math notranslate nohighlight">\({\cal L}_1\)</span>, as shown in
+<a class="reference internal" href="#fig-2-32-two-thin-lenses-c-d"><span class="std std-numref">Fig. 44</span></a>.</p></li>
+</ol>
+<figure class="align-default" id="fig-2-32-two-thin-lenses-c-d">
+<img alt="content/Chap2_Geometrical_optics/Images/Tutorial_2/2_32_Two_Thin_Lenses_C_D.png" src="content/Chap2_Geometrical_optics/Images/Tutorial_2/2_32_Two_Thin_Lenses_C_D.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 44 </span><span class="caption-text">Figure corresponding to Exercise “A convergent and divergent lens”.</span><a class="headerlink" href="#fig-2-32-two-thin-lenses-c-d" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<ul class="simple">
+<li><p><strong>a)</strong> Derive the condition on the distance <span class="math notranslate nohighlight">\(d\)</span> between the lenses such that the final image is real.</p></li>
+<li><p><strong>b)</strong> Let <span class="math notranslate nohighlight">\(f_1=3 \text{ cm}\)</span> and <span class="math notranslate nohighlight">\(f_2=-2 \text{ cm}\)</span>.
+What should be the distance <span class="math notranslate nohighlight">\(d\)</span> such that the final image is real and the magnification is 2?</p></li>
+</ul>
+<ol class="arabic simple" start="6">
+<li><p>System matrix for imaging by a spherical surface.</p></li>
+</ol>
+<p>Consider a spherical surface with radius of curvature <span class="math notranslate nohighlight">\(R\)</span> with to the left (right) of the surface a medium with refractive index <span class="math notranslate nohighlight">\(n_1\)</span> (<span class="math notranslate nohighlight">\(n_2\)</span>).</p>
+<ul class="simple">
+<li><p><strong>a)</strong>
+Derive the ray matrix between a plane to the left of the surface and at distance <span class="math notranslate nohighlight">\(d_1\)</span> to the vertex, and a plane to the right of the surface with distance of <span class="math notranslate nohighlight">\(d_2\)</span> to the vertex. (As always the rays are assumed to propagate from the left to the right).</p></li>
+<li><p><strong>b)</strong> Derive the conditions such that the plane at distance <span class="math notranslate nohighlight">\(d_2\)</span> is the image of the plane at distance <span class="math notranslate nohighlight">\(d_1\)</span>. Express the formula in coordinates <span class="math notranslate nohighlight">\(s_o=-d_1\)</span>, <span class="math notranslate nohighlight">\(s_i=d_2\)</span> with respect to the vertex as origin and show that the result is identical to formula <a class="reference internal" href="../GeometricalOptics_2022_01Clean.html#equation-eq-one-surface2">(182)</a></p></li>
+<li><p><strong>c)</strong> Assume that
+<span class="math notranslate nohighlight">\(n_1=1\)</span>, <span class="math notranslate nohighlight">\(n_2=2\)</span> and <span class="math notranslate nohighlight">\(R= 2\)</span> cm.
+Show by construction using the paraxial version of Snell’s Law that when the object is virtual with <span class="math notranslate nohighlight">\(s_o=-4\)</span> cm, the coordinate of the image point is given by <span class="math notranslate nohighlight">\(s_i= 8\)</span> cm, in agreement with the formula derived in b).</p></li>
+<li><p><strong>d)</strong> Construct again the image when <span class="math notranslate nohighlight">\(s_o=-4\)</span> cm but now for the case that <span class="math notranslate nohighlight">\(R=-2\)</span> cm and verify that the coordinate <span class="math notranslate nohighlight">\(s_i\)</span> of the image point agrees with the formula derived in b).</p></li>
+</ul>
+<ol class="arabic simple" start="7">
+<li><p>The purpose of this problem is to derive the Lensmaker’s formula for a thin lens by applying the imaging formula of a spherical surface twice.
+The image <span class="math notranslate nohighlight">\(P\)</span> of a point <span class="math notranslate nohighlight">\(S\)</span> as shown in <a class="reference internal" href="#fig-2-33-spherical-lens"><span class="std std-numref">Fig. 45</span></a> is computed in two steps. First the intermediate image <span class="math notranslate nohighlight">\(P'\)</span> of <span class="math notranslate nohighlight">\(S\)</span> by the spherical surface with vertex <span class="math notranslate nohighlight">\(V_1\)</span> is computed and then this intermediate image is imaged by the spherical surface with vertex <span class="math notranslate nohighlight">\(V_2\)</span>.</p></li>
+</ol>
+<figure class="align-default" id="fig-2-33-spherical-lens">
+<img alt="content/Chap2_Geometrical_optics/Images/Tutorial_2/2_33_Spherical_Lens.png" src="content/Chap2_Geometrical_optics/Images/Tutorial_2/2_33_Spherical_Lens.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 45 </span><span class="caption-text">A spherical lens made of glass of index <span class="math notranslate nohighlight">\(n_l\)</span> in a medium of index <span class="math notranslate nohighlight">\(n_m\)</span>. The point <span class="math notranslate nohighlight">\(S\)</span> is imaged in <span class="math notranslate nohighlight">\(P\)</span>.</span><a class="headerlink" href="#fig-2-33-spherical-lens" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<ul class="simple">
+<li><p><strong>a)</strong> Use <a class="reference internal" href="../GeometricalOptics_2022_01Clean.html#equation-eq-one-surface2">(182)</a> to deduce that when <span class="math notranslate nohighlight">\(S\)</span> is imaged by the first spherical surface as if the second spherical surface were absent, the image <span class="math notranslate nohighlight">\(P'\)</span> has <span class="math notranslate nohighlight">\(z\)</span>-coordinate <span class="math notranslate nohighlight">\(s_{i1}\)</span> with respect to the origin in <span class="math notranslate nohighlight">\(V\)</span>, of <span class="math notranslate nohighlight">\(S\)</span>, satisfies:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+-\frac{n_m}{s_{o1}}+\frac{n_l}{s_{i1}} =\frac{n_l-n_m}{R_1},\]</div>
+<p>where <span class="math notranslate nohighlight">\(s_{o1}\)</span> is the <span class="math notranslate nohighlight">\(z\)</span>-coordinate of <span class="math notranslate nohighlight">\(S\)</span> with respect to the origin in <span class="math notranslate nohighlight">\(V\)</span>.</p>
+<ul class="simple">
+<li><p><strong>b)</strong> Show that with respect to the origin at <span class="math notranslate nohighlight">\(V_2\)</span> the <span class="math notranslate nohighlight">\(z\)</span>-coordinate of <span class="math notranslate nohighlight">\(P'\)</span> is</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+s_{o2}= s_{i1}-d.\]</div>
+<ul class="simple">
+<li><p><strong>c)</strong> Show that the <span class="math notranslate nohighlight">\(z\)</span>-coordinate <span class="math notranslate nohighlight">\(s_{i2}\)</span> of P with respect to the origin at <span class="math notranslate nohighlight">\(V_2\)</span> satisfies</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+-\frac{n_l}{s_{o2}}+\frac{n_m}{s_{i2}}=\frac{n_m-n_l}{R_2}.\]</div>
+<ul class="simple">
+<li><p><strong>d)</strong> Add the results of a) and c) to derive</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+-\frac{n_m}{s_{o1}} + \frac{n_m}{s_{i2}}
+= (n_l-n_m)\left( \frac{1}{R_1}-\frac{1}{R_2}\right) + \frac{n_l d}{(s_{i1}-d) s_{i1}}.\]</div>
+<ul class="simple">
+<li><p><strong>e)</strong> Derive the Lensmaker’s formula for the thin lens
+<a class="reference internal" href="../GeometricalOptics_2022_01Clean.html#equation-eq-lensmaker">(215)</a> by taking the limit <span class="math notranslate nohighlight">\(d\rightarrow 0\)</span> in d).</p></li>
+</ul>
+<ol class="arabic simple" start="8">
+<li><p>System matrix for focusing.</p></li>
+</ol>
+<p>Consider a ray transfer matrix</p>
+<div class="math notranslate nohighlight" id="equation-eq-matrix">
+<span class="eqno">(245)<a class="headerlink" href="#equation-eq-matrix" title="Link to this equation">#</a></span>\[\begin{split}\begin{align*}
+\left( \begin{array}{cc}A &amp; B \\C &amp; D
+\end{array}\right)
+\end{align*}\end{split}\]</div>
+<p>between two planes.</p>
+<ul class="simple">
+<li><p><strong>a)</strong> Suppose that any ray that is parallel to the optical axis in the first plane goes through a point on the optical axis in the second plane. This means that the second plane is the image focal plane of the system. What does this imply for the elements of the transfer matrix?</p></li>
+<li><p><strong>b)</strong> Suppose that the first plane is the object focal plane, so that any ray emitted by the point on the optical axis in the first plane becomes collimated in the second plane. What does this imply for the elements for the transfer matrix?</p></li>
+<li><p><strong>c)</strong> Consider two thin lenses with distance <span class="math notranslate nohighlight">\(d\)</span> and focal distances <span class="math notranslate nohighlight">\(f_{1i}\)</span> and <span class="math notranslate nohighlight">\(f_{2i}\)</span>. Derive the transfer matrix linking the plane immediately before the first lens with the plane immediately behind the second lens. You may assume that the lenses are in air with refractive index <span class="math notranslate nohighlight">\(n=1\)</span>.</p></li>
+<li><p><strong>d)</strong> Use the condition that you found in a) to derive the image focal distance of a system consisting of two thin lenses with image focal distances <span class="math notranslate nohighlight">\(f_{1i}\)</span> and <span class="math notranslate nohighlight">\(f_{2i}\)</span> and distance <span class="math notranslate nohighlight">\(d\)</span>. Verify that the result agrees with the distance for the image focal plane <a class="reference internal" href="../GeometricalOptics_2022_01Clean.html#equation-eq-2fi">(225)</a>.
+Hint: let <span class="math notranslate nohighlight">\(f_i\)</span> be the distance of the image focal point of the two-lens system to the second lens. Write the transfer matrix between the lens immediately before the first lens and the plane through the image focal point.</p></li>
+<li><p><strong>e)</strong> Add a third thin lens with image focal distance <span class="math notranslate nohighlight">\(f_{3i}\)</span> is in contact to the second lens. Derive the ray matrix of this system.</p></li>
+<li><p><strong>f)</strong> Let <span class="math notranslate nohighlight">\(f_i\)</span> be the distance from the image focal plane to the third lens. Use the condition derived in a) and the ray matrix derived in e) to derive <span class="math notranslate nohighlight">\(f_i\)</span>.</p></li>
+</ul>
+<ol class="arabic simple" start="9">
+<li><p>Matrix for two thin lenses.</p></li>
+</ol>
+<ul class="simple">
+<li><p><strong>a)</strong> Consider two thin lenses which are surrounded by a medium with refractive index <span class="math notranslate nohighlight">\(n\)</span>. Let the left and right lens have power <span class="math notranslate nohighlight">\({\cal P}_1\)</span> and <span class="math notranslate nohighlight">\({\cal P}_2\)</span>, respectively and let the distance between their vertices be <span class="math notranslate nohighlight">\(d\)</span>.
+Derive that the matrix between the planes immediately to the left of the first lens and the plane immediately to the right of the second lens is given by</p></li>
+</ul>
+<div class="math notranslate nohighlight" id="equation-eq-matrix2">
+<span class="eqno">(246)<a class="headerlink" href="#equation-eq-matrix2" title="Link to this equation">#</a></span>\[\begin{split}
+\left( \begin{array}{cc}1-\frac{d}{n}{\cal P}_1 &amp; -{\cal P}_1-{\cal P}_2 - \frac{d}{n}{\cal P}_1{\cal P}_2 \\\frac{d}{n} &amp; 1-\frac{d}{n}{\cal P}_2
+\end{array}\right).
+\end{split}\]</div>
+<ul class="simple">
+<li><p><strong>b)</strong>
+Show that the coordinates of the image and object focal points are given by:</p></li>
+</ul>
+<div class="math notranslate nohighlight" id="equation-eq-fi">
+<span class="eqno">(247)<a class="headerlink" href="#equation-eq-fi" title="Link to this equation">#</a></span>\[
+f_i = \frac{P_1+P_2 + \frac{d}{n} {\cal P}_1{\cal P}_2}{n \left( 1 - \frac{d}{n}\right){\cal P}_2 }
+\]</div>
+<div class="math notranslate nohighlight" id="equation-eq-fo">
+<span class="eqno">(248)<a class="headerlink" href="#equation-eq-fo" title="Link to this equation">#</a></span>\[
+f_o = \frac{P_1+P_2 + \frac{d}{n} {\cal P}_1{\cal P}_2}{n \left( 1 - \frac{d}{n}\right){\cal P}_1 }.
+\]</div>
+<ul class="simple">
+<li><p><strong>c)</strong> Verfify that these formulae are equivalent to <a class="reference internal" href="../GeometricalOptics_2022_01Clean.html#equation-eq-2fo">(226)</a>,<a class="reference internal" href="../GeometricalOptics_2022_01Clean.html#equation-eq-2fi">(225)</a>.</p></li>
+</ul>
+<ol class="arabic simple" start="10">
+<li><p>Entrance pupil of a system of two lenses.
+Consider a system of two lenses <span class="math notranslate nohighlight">\(L_1\)</span> and <span class="math notranslate nohighlight">\(L_2\)</span> with distance <span class="math notranslate nohighlight">\(d\)</span>. The left lens <span class="math notranslate nohighlight">\(L_1\)</span> has image focal distance <span class="math notranslate nohighlight">\(f_{1i}\)</span> and <span class="math notranslate nohighlight">\(a_1\)</span>, <span class="math notranslate nohighlight">\(a_2\)</span> are the radii of the lens apertures of <span class="math notranslate nohighlight">\(L_1\)</span> and <span class="math notranslate nohighlight">\(L_2\)</span>.</p></li>
+</ol>
+<ul class="simple">
+<li><p><strong>a)</strong> Let lens <span class="math notranslate nohighlight">\(L_1\)</span> be convergent with <span class="math notranslate nohighlight">\(f_{1i}=2 \text{ cm}\)</span> and let the distance be <span class="math notranslate nohighlight">\(d=1 \text{cm}\)</span>. Furthermore, let <span class="math notranslate nohighlight">\(a_1=2 \text{cm}\)</span> and <span class="math notranslate nohighlight">\(a_2= 1\text{cm} \)</span>. Determine by construction with a ruler the entrance pupil. Compute also its position and radius using the Lensmakers’ formula and derive the tangent of the angle that the marginal ray makes with the optical axis for an object on the optical axis at 4 cm to the left of <span class="math notranslate nohighlight">\(L_1\)</span>.</p></li>
+<li><p><strong>b)</strong> Same question when <span class="math notranslate nohighlight">\(L_1\)</span> is a divergent lens with <span class="math notranslate nohighlight">\(f_{1i}=-6 \text{ cm}\)</span>, <span class="math notranslate nohighlight">\(d=3 \text{ cm}\)</span> and <span class="math notranslate nohighlight">\(a_1=a_2=1 \text{cm}\)</span>.</p></li>
+</ul>
+<ol class="arabic simple" start="11">
+<li><p>Diaphragm in a system of two thin lenses. The purpose of this problem is to determine the entrance and exit apertures of a system consisting of two thin lenses with a diaphragm using three methods: construction, applying the Lensmaker’s formula and the matrix method.
+The situation is as shown in <a class="reference internal" href="#fig-2-34-two-thin-lenses"><span class="std std-numref">Fig. 46</span></a>. The focal distances of the two thin lenses are <span class="math notranslate nohighlight">\(f_1=10\)</span> cm and <span class="math notranslate nohighlight">\(f_2=12\)</span> cm and their distance
+<span class="math notranslate nohighlight">\(d = 6\)</span> cm. Suppose that the aperture stop is as shown in <a class="reference internal" href="#fig-2-34-two-thin-lenses"><span class="std std-numref">Fig. 46</span></a>. It is at a distance of <span class="math notranslate nohighlight">\( 1.5\)</span> cm in front of the lens <span class="math notranslate nohighlight">\(L_1\)</span> and has a diameter <span class="math notranslate nohighlight">\(D_a=5\)</span> cm.</p></li>
+</ol>
+<figure class="align-default" id="fig-2-34-two-thin-lenses">
+<img alt="content/Chap2_Geometrical_optics/Images/Tutorial_2/2_34_Two_Thin_Lenses.png" src="content/Chap2_Geometrical_optics/Images/Tutorial_2/2_34_Two_Thin_Lenses.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 46 </span><span class="caption-text">Two thin lenses</span><a class="headerlink" href="#fig-2-34-two-thin-lenses" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<ul class="simple">
+<li><p><strong>a)</strong> Determine the position of the entrance pupil and its diameter <span class="math notranslate nohighlight">\(D_{e}\)</span> by the mentioned three methods.</p></li>
+<li><p><strong>b)</strong> Determine the position of the exit pupil and its diameter <span class="math notranslate nohighlight">\(D_{exit}\)</span> by the mentioned three methods.</p></li>
+<li><p><strong>c)</strong> Compute the <span class="math notranslate nohighlight">\(f\)</span>-number of the system.</p></li>
+</ul>
+<ol class="arabic simple" start="12">
+<li><p>* <strong>Principal planes for a thick lens.</strong></p></li>
+</ol>
+<p>In this problem the transfer matrix for a thick lens is derived. By finding the positions of the principal planes, you will derive that the transfer matrix has the same form as for a thin lens when object, image and focal distances are measured with respect to principle planes.</p>
+<p>The transfer matrices which you should use are those for refraction through a spherical interface between two media with refractive indices <span class="math notranslate nohighlight">\(n\)</span>, <span class="math notranslate nohighlight">\(n'\)</span>
+to the left and right of the interface, respectively, and with radius of curvature <span class="math notranslate nohighlight">\(R\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+{\cal S} = \left(
+\begin{array}{cc}1 &amp; -k \\0 &amp; 1
+\end{array}\right)
+\nonumber
+\end{split}\]</div>
+<p>where
+<span class="math notranslate nohighlight">\(k=(n'-n)/R\)</span>, and secondly the matrix <span class="math notranslate nohighlight">\({\cal M}_d\)</span> for propagation through a medium with refractive index <span class="math notranslate nohighlight">\(n\)</span> over a distance <span class="math notranslate nohighlight">\(d\)</span>.</p>
+<p>Consider a thick lens made of a glass of refractive index <span class="math notranslate nohighlight">\(n\)</span> with thickness <span class="math notranslate nohighlight">\(d\)</span>. For paraxial rays, the thickness can be identified with the distance between the vertices <span class="math notranslate nohighlight">\(V_1\)</span> and <span class="math notranslate nohighlight">\(V_2\)</span> of the surfaces of the lens.</p>
+<figure class="align-default" id="fig-thicklens1">
+<img alt="content/Chap2_Geometrical_optics/Images/Tutorial_3/Ex_01_Thick_lens.png" src="content/Chap2_Geometrical_optics/Images/Tutorial_3/Ex_01_Thick_lens.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 47 </span><span class="caption-text">Thick lens.</span><a class="headerlink" href="#fig-thicklens1" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<ul class="simple">
+<li><p><strong>a)</strong> Derive that the transfer matrix between the surfaces through the two vertices of the thick lens is given by:</p></li>
+</ul>
+<div class="math notranslate nohighlight" id="equation-eq-lv1v2">
+<span class="eqno">(249)<a class="headerlink" href="#equation-eq-lv1v2" title="Link to this equation">#</a></span>\[\begin{split}\begin{align*}
+{\cal L}_{V_2V_1} =
+\left( \begin{array}{cc}1 - k_2 \frac{d}{n} &amp; -k_1 -k_2 + k_1 k_2 \frac{d}{n} \\\frac{d}{n} &amp; 1-k_1 \frac{d}{n}
+\end{array}\right)
+\end{align*}\end{split}\]</div>
+<p>where <span class="math notranslate nohighlight">\(k_1= (n-1)/R_1\)</span> and <span class="math notranslate nohighlight">\(k_2= (1-n)/R_2\)</span></p>
+<ul class="simple">
+<li><p><strong>b)</strong> Show that for <span class="math notranslate nohighlight">\(d=0\)</span> the transfer matrix is identical to that for a thin lens given by
+Eq. <a class="reference internal" href="../GeometricalOptics_2022_01Clean.html#equation-eq-matthinlens">(206)</a>.</p></li>
+</ul>
+<p>In Section 3.5.7 of the Lecture Notes the primary and secondary principle planes were defined. Let the distance between the primary principle plane <span class="math notranslate nohighlight">\({\cal H}_1\)</span> and vertex <span class="math notranslate nohighlight">\(V_1\)</span> be <span class="math notranslate nohighlight">\(T_1\)</span>, and let the distance of the second principle plane <span class="math notranslate nohighlight">\({\cal H}_2\)</span> to vertex <span class="math notranslate nohighlight">\(V_2\)</span> be <span class="math notranslate nohighlight">\(T_2\)</span> as shown in <a class="reference internal" href="#fig-thicklens2"><span class="std std-numref">Fig. 48</span></a>). <span class="math notranslate nohighlight">\(T_1&gt;0\)</span> and <span class="math notranslate nohighlight">\(T_2&gt;0\)</span> if the first principle plane is to the left of <span class="math notranslate nohighlight">\(V_1\)</span> and the second principle plane is to the right of <span class="math notranslate nohighlight">\(V_2\)</span>, respectively, while <span class="math notranslate nohighlight">\(T_1\)</span> and <span class="math notranslate nohighlight">\(T_2\)</span> are negative otherwise.</p>
+<figure class="align-default" id="fig-thicklens2">
+<img alt="content/Chap2_Geometrical_optics/Images/Tutorial_3/Ex_02_Thick_lens.png" src="content/Chap2_Geometrical_optics/Images/Tutorial_3/Ex_02_Thick_lens.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 48 </span><span class="caption-text">Thick lens with principle planes.</span><a class="headerlink" href="#fig-thicklens2" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>The transformation of a ray from the primary principle plane <span class="math notranslate nohighlight">\({\cal H}_1\)</span> to the secondary principle plane <span class="math notranslate nohighlight">\({\cal H}_2\)</span> is:</p>
+<div class="math notranslate nohighlight" id="equation-eq-math1h2a">
+<span class="eqno">(250)<a class="headerlink" href="#equation-eq-math1h2a" title="Link to this equation">#</a></span>\[\begin{split}
+\left( \begin{array}{c}\alpha_1 \\y_1
+\end{array}\right) = {\cal L}_{{\cal H}_1{\cal H}_2} \left( \begin{array}{c}\alpha_2 \\y_2
+\end{array}\right),
+\end{split}\]</div>
+<p>where</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}
+{\cal L}_{{\cal H}_2{\cal H}_1} = {\cal M}_{ T_2} {\cal L}_{V_2 V_1} {\cal M}_{T_1},
+\end{align*}\]</div>
+<ul class="simple">
+<li><p><strong>c)</strong> By using the following abbreviation for the matrix <a class="reference internal" href="#equation-eq-lv1v2">(249)</a>:</p></li>
+</ul>
+<div class="math notranslate nohighlight" id="equation-eq-abbrev">
+<span class="eqno">(251)<a class="headerlink" href="#equation-eq-abbrev" title="Link to this equation">#</a></span>\[\begin{split}\begin{align*}
+\left( \begin{array}{cc}1 - k_2 \frac{d}{n} &amp; -k_1 -k_2 + k_1 k_2 \frac{d}{n} \\\frac{d}{n} &amp; 1-k_1 \frac{d}{n}
+\end{array}\right) = \left(
+\begin{array}{cc}a_{11} &amp; a_{12} \\a_{21} &amp; a_{22}
+\end{array}\right),
+\end{align*}\end{split}\]</div>
+<p>derive that:</p>
+<div class="math notranslate nohighlight" id="equation-eq-math1h2b">
+<span class="eqno">(252)<a class="headerlink" href="#equation-eq-math1h2b" title="Link to this equation">#</a></span>\[\begin{split}\begin{align*}
+{\cal L}_{{\cal H}_2{\cal H}_1} = \left( \begin{array}{cc}a_{11} + T_1 a_{12} &amp; \; a_{12} \\T_2 (a_{11} +T_1 a_{12}) + a_{21} + T_1 a_{22} &amp; \; a_{22} + T_2 a_{12}
+\end{array}\right)
+\end{align*}\end{split}\]</div>
+<ul class="simple">
+<li><p><strong>d)</strong> The principle planes are conjugate (i.e. they are each other images) with unit magnification. Derive from this fact that the locations of the principle planes are given by:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align*}
+T_2&amp;=\frac{1-a_{22}}{a_{12} }\\
+T_1&amp;= \frac{1-a_{11}}{a_{12}}
+\end{align*}\end{split}\]</div>
+<p>With the solutions for <span class="math notranslate nohighlight">\(T_1\)</span> and <span class="math notranslate nohighlight">\(T_2\)</span> the system matrix between the principal planes becomes:</p>
+<div class="math notranslate nohighlight" id="equation-eq-math1h2c">
+<span class="eqno">(253)<a class="headerlink" href="#equation-eq-math1h2c" title="Link to this equation">#</a></span>\[\begin{split}
+{\cal L}_{{\cal H}_2{\cal H}_1} = \left( \begin{array}{cc}1 &amp; a_{12} \\0 &amp; 1
+\end{array}\right)
+\end{split}\]</div>
+<p>which has the same shape as the transfer matrix for a thin lens.</p>
+<ul class="simple">
+<li><p><strong>e)</strong> Show that the back focal point is at distance <span class="math notranslate nohighlight">\(1/a_{12}\)</span> from the secondary principle plane and that the front focal plane is at distance <span class="math notranslate nohighlight">\(1/a_{12}\)</span> from the primary principle plane.</p></li>
+</ul>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./content/Chap2_Geometrical_optics/Problems"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../GeometricalOptics_2022_01Clean.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Geometrical Optics</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../../Chap3_Optical_Instrument/Optical_Instruments_2022_01Clean.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Optical Instruments</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By A.P. Konijnenberg, A.J.L. Adam, H.P. Urbach
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright Delft University of Technology, CC BY-SA 4.0.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

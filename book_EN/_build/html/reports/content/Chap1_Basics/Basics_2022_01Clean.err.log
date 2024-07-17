@@ -1,0 +1,100 @@
+Traceback (most recent call last):
+  File "/Users/aurele/.pyenv/versions/3.12.4/envs/new-env/lib/python3.12/site-packages/jupyter_cache/executors/utils.py", line 58, in single_nb_execution
+    executenb(
+  File "/Users/aurele/.pyenv/versions/3.12.4/envs/new-env/lib/python3.12/site-packages/nbclient/client.py", line 1314, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aurele/.pyenv/versions/3.12.4/envs/new-env/lib/python3.12/site-packages/jupyter_core/utils/__init__.py", line 165, in wrapped
+    return loop.run_until_complete(inner)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aurele/.pyenv/versions/3.12.4/lib/python3.12/asyncio/base_events.py", line 687, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/Users/aurele/.pyenv/versions/3.12.4/envs/new-env/lib/python3.12/site-packages/nbclient/client.py", line 709, in async_execute
+    await self.async_execute_cell(
+  File "/Users/aurele/.pyenv/versions/3.12.4/envs/new-env/lib/python3.12/site-packages/nbclient/client.py", line 1062, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "/Users/aurele/.pyenv/versions/3.12.4/envs/new-env/lib/python3.12/site-packages/nbclient/client.py", line 918, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+import numpy as np
+import matplotlib.pyplot as plt
+from matplotlib.animation import FuncAnimation
+from IPython.display import HTML
+
+# Function to initialize the plot
+def init():
+    im.set_data(wave(r, 0))
+    line1.set_ydata(wave(x, 0))
+    line2.set_ydata(np.flip(wave(x, 0)))
+    return [im, line1, line2]
+
+# Function to update the plot for each frame
+def update(frame):
+    im.set_array(wave(r, frame))
+    line1.set_ydata(wave1d(x, frame))
+    line2.set_ydata(np.flip(wave1d(x, frame)))
+    return [im, line1, line2]
+
+def wave(r, t):
+    A = 1
+    k = 5
+
+    omega = 2*np.pi/total_frames
+    phi = 0
+    #return A*1/(r+eps)*np.cos(k*r - omega*t + phi)
+    return A*np.exp(-r/tau)*np.cos(k*r - omega*t + phi)
+
+def wave1d(r,t):
+    A = ly
+    k = 5
+    tau = 2
+    omega = 2*np.pi/total_frames
+    phi = 0
+    return A*np.exp(-r/tau)*np.cos(k*r - omega*t + phi)
+
+lx = 5
+ly = 2.5
+color = "dodgerblue"
+lw = 0.3
+tau = 2
+total_frames = 60
+eps = 1E-1
+
+# Create a figure and axis
+fig, ax = plt.subplots(figsize=(10,5))
+x = np.linspace(0, lx, 800)
+xx = np.linspace(-lx, lx, 800)
+yy = np.linspace(-ly, ly, 800)
+X, Y = np.meshgrid(xx, yy)
+r = np.sqrt(X**2 + Y**2)
+
+im = ax.imshow(wave(r, 0), cmap='twilight', clim=[-ly, ly],extent=[xx.min(), xx.max(), yy.min(), yy.max()])
+line1, = ax.plot(x, wave1d(x, 0), color=color)
+line2, = ax.plot(x - lx, np.flip(wave1d(x, 0)), color=color)
+line3, = ax.plot(x, ly*np.exp(-x/tau), "-.k", linewidth=lw)
+line4, = ax.plot(x, -ly*np.exp(-x/tau), "-.k", linewidth=lw)
+line5, = ax.plot(x - lx, np.flip(ly*np.exp(-x/tau)), "-.k", linewidth=lw)
+line6, = ax.plot(x - lx, -np.flip(ly*np.exp(-x/tau)), "-.k", linewidth=lw)
+ax.axis('off')
+
+# Set up the animation
+ani = FuncAnimation(fig, update, frames=range(total_frames), init_func=init, blit=True)
+plt.close()
+
+# Show the plot
+HTML(ani.to_jshtml(fps=30))
+
+------------------
+
+
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mModuleNotFoundError[0m                       Traceback (most recent call last)
+Cell [0;32mIn[1], line 1[0m
+[0;32m----> 1[0m [38;5;28;01mimport[39;00m [38;5;21;01mnumpy[39;00m [38;5;28;01mas[39;00m [38;5;21;01mnp[39;00m
+[1;32m      2[0m [38;5;28;01mimport[39;00m [38;5;21;01mmatplotlib[39;00m[38;5;21;01m.[39;00m[38;5;21;01mpyplot[39;00m [38;5;28;01mas[39;00m [38;5;21;01mplt[39;00m
+[1;32m      3[0m [38;5;28;01mfrom[39;00m [38;5;21;01mmatplotlib[39;00m[38;5;21;01m.[39;00m[38;5;21;01manimation[39;00m [38;5;28;01mimport[39;00m FuncAnimation
+
+[0;31mModuleNotFoundError[0m: No module named 'numpy'
+

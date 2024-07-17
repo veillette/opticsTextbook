@@ -1,0 +1,1473 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Scalar Diffraction Optics &#8212; Interactive Optics</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/proof.css?v=ca93fcec" />
+    <link rel="stylesheet" type="text/css" href="../../_static/exercise.css?v=20b57f81" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=87e54e7c" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"loader": {"load": ["[tex]/autoload", "[tex]/ams"]}, "tex": {"packages": {"[+]": ["autoload", "ams", "physics", "boldsymbol"]}, "tags": "ams", "macros": {"kB": "k_\\mathrm{B}", "bm": "\\mathbf", "inprod": "\\innerproduct", "diff": "\\pdv"}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'content/Chap6_Diffraction/DiffractiveOptics_2022_01Clean';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/loading-attribute-polyfill@2.1.0/dist/loading-attribute-polyfill.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/loading-attribute-polyfill@2.1.0/dist/loading-attribute-polyfill.min.css"></script>
+    <script src="../../_static/translation.js?v=6568e22d"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Problems" href="Problems/DiffractiveOptics_Exercise_2022_01Clean.html" />
+    <link rel="prev" title="Problems" href="../Chap5_Interference/Problems/InterferenceCoherence_Exercise_2022_01Clean.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../Preface/Preface_2022Clean.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/tudelft.png" class="logo__image only-light" alt="Interactive Optics - Home"/>
+    <script>document.write(`<img src="../../_static/tudelft-dark.png" class="logo__image only-dark" alt="Interactive Optics - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">About</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Authors/authors_01.html">About the authors</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Interactive Optics</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Chap1_Basics/Basics_2022_01Clean.html">Basic Electromagnetic and Wave Optics</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Chap1_Basics/Problems/Basics_Exercise_2022_01Clean.html">Problems</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Chap2_Geometrical_optics/GeometricalOptics_2022_01Clean.html">Geometrical Optics</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Chap2_Geometrical_optics/Problems/GeometricalOptics_Exercise_2022_01Clean.html">Problems</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Chap3_Optical_Instrument/Optical_Instruments_2022_01Clean.html">Optical Instruments</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Chap3_Optical_Instrument/Problems/Optical_Instruments_Exercice_2022_01Clean.html">Problems</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Chap4_Polarisation/Polarization_2022_01Clean.html">Polarisation</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Chap4_Polarisation/Problems/Polarization_Exercise_2022_01Clean.html">Problems</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Chap5_Interference/InterferenceCoherence_2022_01Clean.html">Interference and Coherence</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Chap5_Interference/Problems/InterferenceCoherence_Exercise_2022_01Clean.html">Problems</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Scalar Diffraction Optics</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="Problems/DiffractiveOptics_Exercise_2022_01Clean.html">Problems</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Chap7_Lasers/Lasers_2022_01Clean.html">Lasers</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Chap7_Lasers/Problems/Lasers_Exercice_2022_01Clean.html">Problems</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Chap10_Fiber/Fiber.html">Fiber Optics</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Chap10_Fiber/Fiber_exercice_2024.html">Problems</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendix</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Chap9_Appendix/Appendix_A_2022Clean.html">Vector Calculus</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Chap9_Appendix/Appendix_B_2022Clean.html">The Lorentz Model for Material Dispersion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Chap9_Appendix/Appendix_C_2022Clean.html">About the Conservation of Electromagnetic Energy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Chap9_Appendix/Appendix_D_2022Clean.html">Electromagnetic Momentum</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Chap9_Appendix/Appendix_G_2022Clean.html">The Fourier Transform</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Chap9_Appendix/Appendix_H_2022Clean.html">Basis transformations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Chap9_Appendix/French_method_01Clean.html">Algebraic Distance in Geometrical Optics</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/content/Chap6_Diffraction/DiffractiveOptics_2022_01Clean.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Scalar Diffraction Optics</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#propagation-of-light-through-a-homogenous-medium">Propagation of light through a homogenous medium</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#angular-spectrum-method">Angular Spectrum Method</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rayleigh-sommerfeld-diffraction-integral">Rayleigh-Sommerfeld Diffraction Integral</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#intuition-for-the-spatial-fourier-transform-in-optics">Intuition for the Spatial Fourier Transform in Optics</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fresnel-and-fraunhofer-approximations">Fresnel and Fraunhofer Approximations</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fresnel-approximation">Fresnel Approximation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fraunhofer-approximation">Fraunhofer Approximation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#examples-of-fresnel-and-fraunhofer-approximations">Examples of Fresnel and Fraunhofer approximations</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fraunhofer-diffraction-revisited">Fraunhofer Diffraction Revisited</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fourier-optics">Fourier Optics</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#focusing-of-a-parallel-beam">Focusing of a Parallel Beam</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#imaging-by-a-lens">Imaging by a lens</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#spatial-light-modulators-and-optical-fourier-filtering">Spatial Light Modulators and Optical Fourier Filtering</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#super-resolution">Super-resolution</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="scalar-diffraction-optics">
+<span id="chapter-diffraction"></span><h1>Scalar Diffraction Optics<a class="headerlink" href="#scalar-diffraction-optics" title="Link to this heading">#</a></h1>
+<div class="admonition-what-you-should-know-and-be-able-to-do-after-studying-this-chapter admonition">
+<p class="admonition-title">What you should know and be able to do after studying this chapter</p>
+<ul class="simple">
+<li><p>Be able to derive the angular spectrum decomposition, also known as the plane wave expansion, and understand its physical interpretation.</p></li>
+<li><p>Know the Rayleigh-Sommerfeld formula; in particular be able to write down the integral over spherical waves with amplitudes proportional to the field in the starting plane.</p></li>
+<li><p>Know how to deduce the Fresnel and Fraunhofer approximation of the Rayleigh-Sommerfeld integral and understand their relation to the Fourier transformation.</p></li>
+<li><p>Understand intuitively in what sense the Fourier transform is linked to resolution.</p></li>
+<li><p>Understand why propagation of light leads to loss of resolution (i.e. the evanescent waves disappear).</p></li>
+<li><p>Understand why propagation to the focal plane of a lens corresponds to taking the Fourier transform.</p></li>
+<li><p>Understand how the Numerical Aperture (NA) of a lens ultimately determines the resolution of images.</p></li>
+<li><p>Understand how a lens can be used for Fourier filtering.</p></li>
+</ul>
+</div>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading">#</a></h2>
+<p>In this chapter we will study how light propagates as a wave. In the study of the double-slit experiment we concluded from the interference pattern observed on a screen that light is a wave. To demonstrate more convincingly that light is indeed a wave, we require a detailed quantitative model of the propagation of light, which gives experimentally verifiable predictions.</p>
+<p>But a precise description of the propagation of light is not only important for fundamental science, it also has many practical applications. For example, if a sample must be analysed by illuminating it and measuring the scattered light, the fact that the detected light has not only been affected by the sample, but by both the sample and propagation has to be taken into account. Another example is lithography. If a pattern has to be printed onto a substrate using a mask that is illuminated and there is a certain distance between the mask and the photoresist, the light which reaches the resist does not have the exact shape of the mask due to propagation effects. Thus, the mask needs to be designed to compensate for these effects.</p>
+<figure class="align-default" id="fig-6-01-propagation-example">
+<img alt="../../_images/6_01_Propagation_Example.png" src="../../_images/6_01_Propagation_Example.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 85 </span><span class="caption-text">A quantitative model of the propagation of light is required to predict the properties of propagation and to apply it in sample analyses and lithography.</span><a class="headerlink" href="#fig-6-01-propagation-example" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>In <a class="reference internal" href="#section.scalvecwave"><code class="xref myst docutils literal notranslate"><span class="pre">section.scalvecwave</span></code></a> we have derived that in homogeneous matter (i.e. the permittivity is constant), every component <span class="math notranslate nohighlight">\(U\)</span> of a time-harmonic electromagnetic field satisfies the scalar Helmholtz equation <a class="reference internal" href="../Chap1_Basics/Basics_2022_01Clean.html#equation-eq-complh">(45)</a>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}
+\left( \nabla ^2 + k^2\right) U(\mathbf{r})=0,
+\end{align*}\]</div>
+<p>where <span class="math notranslate nohighlight">\(k=\omega\sqrt{\epsilon \mu_0}\)</span> is the wave number of the light in matter with permittivity <span class="math notranslate nohighlight">\(\epsilon\)</span> and refractive index <span class="math notranslate nohighlight">\(n=\sqrt{\epsilon/\epsilon_0}\)</span>.</p>
+<p>When the refractive index is not constant, Maxwell’s equations are no longer equivalent to the wave equation for the individual electromagnetic field components and there is then coupling between the components due to the curl operators in Maxwell’s equation. When the variation of the refractive index is slow on the scale of the wavelength, the scalar wave equation may still be a good approximation, but for structures that vary on the scale of the wavelength (i.e. on the scale of ten microns or less), the scalar wave equation is not sufficiently accurate.</p>
+</section>
+<section id="propagation-of-light-through-a-homogenous-medium">
+<h2>Propagation of light through a homogenous medium<a class="headerlink" href="#propagation-of-light-through-a-homogenous-medium" title="Link to this heading">#</a></h2>
+<p>We will describe two equivalent methods to compute the propagation of the field through homogeneous matter, namely the angular spectrum method and the Rayleigh-Sommerfeld diffraction formula. Our goal is to derive the field in some point <span class="math notranslate nohighlight">\((x,y,z)\)</span> with <span class="math notranslate nohighlight">\(z&gt;0\)</span>, given the field in the plane <span class="math notranslate nohighlight">\(z=0\)</span>, as is illustrated in <a class="reference internal" href="#fig-6-02-propagation-math"><span class="std std-numref">Fig. 86</span></a>.
+Although both methods in the end describe the same, they give physical insight into different aspects of propagation.</p>
+<section id="angular-spectrum-method">
+<span id="sec-angularspectrum"></span><h3>Angular Spectrum Method<a class="headerlink" href="#angular-spectrum-method" title="Link to this heading">#</a></h3>
+<figure class="align-default" id="fig-6-02-propagation-math">
+<img alt="../../_images/6_02_Propagation_Math.png" src="../../_images/6_02_Propagation_Math.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 86 </span><span class="caption-text">Given the field <span class="math notranslate nohighlight">\(U(x,y,0)\)</span>, we want to find <span class="math notranslate nohighlight">\(U\)</span> in a point <span class="math notranslate nohighlight">\((x,y,z)\)</span> with <span class="math notranslate nohighlight">\(z&gt;0\)</span>. It is assumed that the field propagates in the positive <span class="math notranslate nohighlight">\(z\)</span>-direction, which means that all sources are in the region <span class="math notranslate nohighlight">\(z&lt;0\)</span>.</span><a class="headerlink" href="#fig-6-02-propagation-math" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<div class="math notranslate nohighlight" id="equation-eq-fu0">
+<span class="eqno">(371)<a class="headerlink" href="#equation-eq-fu0" title="Link to this equation">#</a></span>\[\begin{align*}
+\mathcal{F}(U_0)(\xi,\eta) = \int\!\int U_0(x,y) e^{-2\pi i(\xi x + \eta y)} \, \text{d}x \text{d} y,
+\end{align*}\]</div>
+<p>The inverse Fourier transform implies:</p>
+<div class="math notranslate nohighlight" id="equation-eq-finv">
+<span class="eqno">(372)<a class="headerlink" href="#equation-eq-finv" title="Link to this equation">#</a></span>\[\begin{split}\begin{align*}
+U_0(x,y)&amp;= \int\!\int {\cal F}(U_0)(\xi,\eta) e^{2\pi i (\xi x + \eta y)}\, \text{d}\xi \text{d} \eta \\
+&amp;= \mathcal{F}^{-1}\{{\cal F}(U_0)\}(x,y).
+\end{align*}\end{split}\]</div>
+<p>Important properties of the Fourier transform are listed in <a class="reference internal" href="../Chap9_Appendix/Appendix_G_2022Clean.html#chapter-fouriertransform"><span class="std std-ref">The Fourier Transform</span></a>.
+By defining <span class="math notranslate nohighlight">\(k_x=2\pi \xi\)</span>, <span class="math notranslate nohighlight">\(k_y=2\pi \eta\)</span>, <a class="reference internal" href="#equation-eq-finv">(372)</a> can be written as</p>
+<div class="math notranslate nohighlight" id="equation-eq-fku0">
+<span class="eqno">(373)<a class="headerlink" href="#equation-eq-fku0" title="Link to this equation">#</a></span>\[\begin{align*}
+U_0(x,y)= \frac{1}{4\pi^2} \int\!\int {\cal F}(U_0)\left(\frac{k_x}{2\pi},\frac{k_y}{2\pi}\right) e^{ i (k_x x + k_y y)}\, \text{d} k_x \text{d} k_y.
+\end{align*}\]</div>
+<p>The variables in the Fourier plane: <span class="math notranslate nohighlight">\((\xi,\eta)\)</span> and <span class="math notranslate nohighlight">\((k_x, k_y)\)</span> are called <strong>spatial frequencies</strong>.</p>
+<p>Equation <a class="reference internal" href="#equation-eq-fku0">(373)</a> says that we can write <span class="math notranslate nohighlight">\(U_0(x,y)=U(x,y,z=0)\)</span> as an integral (a sum) of plane waves<sup><a class="footnote-reference brackets" href="#id11" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a></sup> with wave vector <span class="math notranslate nohighlight">\(\mathbf{k}=(k_x,k_y, k_z)^T\)</span>, each with its own weight (i.e. complex amplitude) <span class="math notranslate nohighlight">\({\cal F}(U_0)\left(\frac{k_x}{2\pi},\frac{k_y}{2\pi}\right)\)</span>.
+We know how each plane wave with complex amplitude <span class="math notranslate nohighlight">\({\cal F}(U_0)\left(\frac{k_x}{2\pi},\frac{k_y}{2\pi}\right)\)</span> and wave vector <span class="math notranslate nohighlight">\(\mathbf{k}=(k_x,k_y,k_z)^T\)</span> propagates over a distance <span class="math notranslate nohighlight">\(z&gt;0\)</span></p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}
+{\cal F}(U_0)\left(\frac{k_x}{2\pi},\frac{k_y}{2\pi}\right)e^{i (k_x x + k_y y)} \to \mathcal{F}(U_0)\left(\frac{k_x}{2\pi},\frac{k_y}{2\pi}\right) e^{i (k_x x + k_y y + k_z z)},
+\end{align*}\]</div>
+<p>Therefore, the field <span class="math notranslate nohighlight">\(U(x,y,z)\)</span> in the plane <span class="math notranslate nohighlight">\(z\)</span> (for some <span class="math notranslate nohighlight">\(z&gt;0\)</span>) is given by</p>
+<div class="math notranslate nohighlight" id="equation-eq-planewave1">
+<span class="eqno">(374)<a class="headerlink" href="#equation-eq-planewave1" title="Link to this equation">#</a></span>\[\boxed{\begin{align*}
+U(x,y,z)=\frac{1}{4\pi^2} \int\int {\cal F}(U_0)\left(\frac{k_x}{2\pi},\frac{k_y}{2\pi}\right)e^{i (k_x x + k_y y+k_z z)} \,\text{d}k_x\,\text{d}k_y,
+\end{align*}}\]</div>
+<p>where</p>
+<div class="math notranslate nohighlight" id="equation-eq-kz">
+<span class="eqno">(375)<a class="headerlink" href="#equation-eq-kz" title="Link to this equation">#</a></span>\[\begin{align*}
+k_z =\sqrt{\left(\frac{2\pi }{\lambda}\right)^2-k_x^2-k_y^2},
+\end{align*}\]</div>
+<p>with <span class="math notranslate nohighlight">\(\lambda\)</span> the wavelength of the light as measured <strong>in the material</strong> (hence, <span class="math notranslate nohighlight">\(\lambda=\lambda_0/n\)</span>, with <span class="math notranslate nohighlight">\(\lambda_0\)</span> the wavelength in vacuum).
+The sign in front of the square root in <a class="reference internal" href="#equation-eq-kz">(375)</a> could in principle be chosen negative: one would then also obtain a solution of the Helmholtz equation. The choice of the sign of <span class="math notranslate nohighlight">\(k_z\)</span> is determined by the direction in which the light propagates, which in turn depends on the location of the sources <strong>and</strong> on the convention chosen for the time dependance. We have to choose here the + sign in front of the square root because the sources are in <span class="math notranslate nohighlight">\(z&lt;0\)</span> and the time dependence of time-harmonic fields is (as always in this book) given by <span class="math notranslate nohighlight">\(e^{-i\omega t}\)</span> with <span class="math notranslate nohighlight">\(\omega &gt;0\)</span>.</p>
+<p>Eq. <a class="reference internal" href="#equation-eq-planewave1">(374)</a> can be written alternatively as</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}
+U(x,y,z)=\mathcal{F}^{-1}\{\mathcal{F}(U_0)(\xi,\eta)e^{i k_z z}\}(x,y),
+\end{align*}\]</div>
+<p>where now <span class="math notranslate nohighlight">\(k_z\)</span> has to be considered as a function of <span class="math notranslate nohighlight">\((\xi, \eta)\)</span>:</p>
+<div class="math notranslate nohighlight" id="equation-eq-kzxieta">
+<span class="eqno">(376)<a class="headerlink" href="#equation-eq-kzxieta" title="Link to this equation">#</a></span>\[\begin{align*}
+k_z = 2\pi \sqrt{ \left( \frac{1}{\lambda}\right)^2- \xi^2-\eta^2}.
+\end{align*}\]</div>
+<p>Note that one can interpret this as a diagonalisation of the propagation operator, as explained in <a class="reference internal" href="../Chap9_Appendix/Appendix_H_2022Clean.html#sec-basistrans"><span class="std std-ref">Basis transformations</span></a>.</p>
+<p>We can observe something interesting: if <span class="math notranslate nohighlight">\(k_x^2+k_y^2 &gt; \left(\frac{2\pi }{\lambda}\right)^2\)</span>, then <span class="math notranslate nohighlight">\(k_z\)</span> becomes imaginary, and <span class="math notranslate nohighlight">\(\exp(i k_z z)\)</span> decays exponentially for increasing <span class="math notranslate nohighlight">\(z\)</span>:</p>
+<div class="math notranslate nohighlight" id="equation-evanescent">
+<span class="eqno">(377)<a class="headerlink" href="#equation-evanescent" title="Link to this equation">#</a></span>\[\begin{align*}
+\exp\left\{i\left[k_x x+k_y y +z\sqrt{\left(\frac{2\pi n}{\lambda}\right)^2-k_x^2-k_y^2 }\right]\right\}=e^{i(k_x x+k_y y)}e^{-z\sqrt{ k_x^2+k_y^2- \left(\frac{2\pi n}{\lambda}\right)^2} }.
+\end{align*}\]</div>
+<p>These exponentially decaying waves are called <strong>evanescent in the positive <span class="math notranslate nohighlight">\(z\)</span>-direction</strong>. We have met evanescent waves already in the context of total internal reflection discussed in <a class="reference internal" href="../Chap1_Basics/Basics_2022_01Clean.html#subsection-totalrefl"><span class="std std-ref">Total Internal Reflection and Evanescent Waves</span></a>. The physical consequences of evanescent waves in the angular spectrum decomposition will be explained in <a class="reference internal" href="#sec-fourierintuition"><span class="std std-ref">Intuition for the Spatial Fourier Transform in Optics</span></a>.</p>
+<p>The waves for which <span class="math notranslate nohighlight">\(k_z\)</span> is real have constant amplitude: only their phase changes due to propagation. These waves therefore are called <strong>propagating waves</strong>.</p>
+<figure class="align-default" id="fig-6-03-angular-spectrum">
+<img alt="../../_images/6_03_Angular_Spectrum.png" src="../../_images/6_03_Angular_Spectrum.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 87 </span><span class="caption-text">The spatial frequencies <span class="math notranslate nohighlight">\(k_x\)</span>, <span class="math notranslate nohighlight">\(k_y\)</span> of the plane waves in the angular spectrum of a time-harmonic field which propagates in the <span class="math notranslate nohighlight">\(z\)</span>-direction. There are two types of waves: the propagating waves with spatial frequencies inside the circle <span class="math notranslate nohighlight">\(\sqrt{k_x^2+k_y^2}&lt;k=2\pi/\lambda \)</span> and which have phase depending on the propagation distance <span class="math notranslate nohighlight">\(z\)</span> but constant amplitude, and the evanescent waves for which <span class="math notranslate nohighlight">\(\sqrt{k_x^2+k_y^2}&gt;k\)</span> and of which the amplitude decreases exponentially during propagation.</span><a class="headerlink" href="#fig-6-03-angular-spectrum" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p><strong>Remark</strong>. In homogeneous space, the scalar Helmholtz equation for every electric field component is equivalent to Maxwell’s equations and hence we may propagate each component <span class="math notranslate nohighlight">\(E_x\)</span>, <span class="math notranslate nohighlight">\(E_y\)</span> and <span class="math notranslate nohighlight">\(E_z\)</span> individually using the angular spectrum method. If the data in the plane <span class="math notranslate nohighlight">\(z=0\)</span> of these field components are physically consistent, the electric field thus obtained will automatically satisfy the condition that the electric field is free of divergence, i.e.</p>
+<div class="math notranslate nohighlight" id="equation-eq-deve0">
+<span class="eqno">(378)<a class="headerlink" href="#equation-eq-deve0" title="Link to this equation">#</a></span>\[\begin{align*}
+\mathbf{\nabla} \cdot \mathbf{E}=0,
+\end{align*}\]</div>
+<p>everywhere in <span class="math notranslate nohighlight">\(z&gt;0\)</span>.
+This is equivalent to the statement that the electric vectors of the plane waves in the angular spectrum are perpendicular to their wave vectors.
+Alternatively, one can propagate only the <span class="math notranslate nohighlight">\(E_x\)</span>- and <span class="math notranslate nohighlight">\(E_y\)</span>-components and afterwards determine <span class="math notranslate nohighlight">\(E_z\)</span> from the condition that <a class="reference internal" href="#equation-eq-deve0">(378)</a> must be satisfied.</p>
+</section>
+<section id="rayleigh-sommerfeld-diffraction-integral">
+<span id="sec-rayleighsommerfeld"></span><h3>Rayleigh-Sommerfeld Diffraction Integral<a class="headerlink" href="#rayleigh-sommerfeld-diffraction-integral" title="Link to this heading">#</a></h3>
+<p>Another method to propagate a wave field is by using the <strong>Rayleigh-Sommerfeld</strong> integral. A very good approximation of this integral states that each point in the plane <span class="math notranslate nohighlight">\(z=0\)</span> emits spherical waves with amplitude proportional to the field in the plane <span class="math notranslate nohighlight">\(z=0\)</span>. To find the field in a point <span class="math notranslate nohighlight">\((x, y,z)\)</span>, we have to add the contributions from all these point sources together. This corresponds to the Huygens-Fresnel principle postulated earlier in <a class="reference internal" href="../Chap5_Interference/InterferenceCoherence_2022_01Clean.html#section-spatcoh"><span class="std std-ref">Spatial Coherence and Young’s Experiment</span></a>. Because a more rigorous derivation starting from the Helmholtz equation<sup><a class="footnote-reference brackets" href="#id12" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a></sup> would be rather lengthy, we will just give the final result:</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<div class="math notranslate nohighlight" id="equation-eq-rs">
+<span class="eqno">(379)<a class="headerlink" href="#equation-eq-rs" title="Link to this equation">#</a></span>\[\begin{align*}
+U(x,y,z)&amp;= \frac{1}{i\lambda}\int\int U_0(x',y')\frac{ z \, e^{ik\sqrt{(x-x')^2+(y-y')^2+z^2}}}{(x-x')^2+(y-y')^2+z^2}\,\text{d}x'\,\text{d}y' 
+&amp;= \frac{1}{i\lambda}\int\int U_0(x',y')\frac{z}{r} \frac{e^{ikr}}{r}\,\text{d}x'\,\text{d}y',
+\end{align*}\]</div>
+</div>
+<p>where we wrote again <span class="math notranslate nohighlight">\(U_0(x,y)=U(x,y,0)\)</span> and where</p>
+<div class="math notranslate nohighlight" id="equation-eq-defr">
+<span class="eqno">(380)<a class="headerlink" href="#equation-eq-defr" title="Link to this equation">#</a></span>\[\begin{align*}
+r=\sqrt{(x-x')^2+(y-y')^2+z^2}.
+\end{align*}\]</div>
+<p><strong>Remarks</strong>.</p>
+<ol class="arabic simple">
+<li><p>The formula <a class="reference internal" href="#equation-eq-rs">(379)</a> is not completely rigorous because a term that is a factor <span class="math notranslate nohighlight">\(1/(kr)\)</span> smaller (and which in practice therefore is very much smaller) has been omitted.</p></li>
+<li><p>In <a class="reference internal" href="#equation-eq-rs">(379)</a> there is an additional factor
+<span class="math notranslate nohighlight">\(z/r\)</span> that has been omitted in the time-harmonic spherical wave as given in <a class="reference internal" href="../Chap1_Basics/Basics_2022_01Clean.html#equation-eq-ths6">(52)</a> and at the right-hand side of <a class="reference internal" href="../Chap5_Interference/InterferenceCoherence_2022_01Clean.html#equation-eq-timeharm">(321)</a>. This factor means that the amplitudes of the spherical waves in the Rayleigh-Sommerfeld diffraction integral depend on direction (although their wave fronts are spherical), the amplitudes being largest in the forward direction.</p></li>
+<li><p>The angular spectrum method amounts to a multiplication by <span class="math notranslate nohighlight">\(\exp(i z k_z)\)</span> in Fourier space, while the Rayleigh-Sommerfeld integral is a convolution with respect to <span class="math notranslate nohighlight">\((x,y)\)</span>. It is a property of the Fourier transform that a multiplication in Fourier space corresponds to a convolution in real space and vice versa. Indeed a mathematical result called <strong>Weyl’s identity</strong> implies that the rigorous version of <a class="reference internal" href="#equation-eq-rs">(379)</a> and the plane wave expansion (i.e. the angular spectrum method) give identical results.</p></li>
+</ol>
+</section>
+</section>
+<section id="intuition-for-the-spatial-fourier-transform-in-optics">
+<span id="sec-fourierintuition"></span><h2>Intuition for the Spatial Fourier Transform in Optics<a class="headerlink" href="#intuition-for-the-spatial-fourier-transform-in-optics" title="Link to this heading">#</a></h2>
+<p>Since spatial Fourier transformations play an important role in our discussion of the propagation of light, it is important to understand them not just mathematically, but also intuitively.</p>
+<p>What happens when an object is illuminated and the reflected or transmitted light is detected at some distance from the object? Let us look at transmission for example. When the object is much larger than the wavelength, a transmission function <span class="math notranslate nohighlight">\(\tau(x,y)\)</span> is often defined and the field transmitted by the object is then assumed to be simply the product of the incident field and the function <span class="math notranslate nohighlight">\(\tau(x,y)\)</span>. For example, for a hole in a metallic screen with diameter large compared to the wavelength, the transmission function would be 1 inside the hole and 0 outside. However, if the object has features of the size of the order of the wavelength, this simple model of multiplying by a transmission function breaks down and the transmitted field must instead be determined by solving Maxwell’s equations. This is not easy, but some software packages can do it.</p>
+<p>Now suppose that the transmitted electric field has been obtained in a plane <span class="math notranslate nohighlight">\(z=0\)</span> very close to the object (a distance within a fraction of a wavelength). This field is called the <strong>transmitted near field</strong> and it may have been obtained by simply multiplying the incident field with a transmission function <span class="math notranslate nohighlight">\(\tau(x,y)\)</span> or by solving Maxwell’s equations. This transmitted near field is a kind of footprint of the object.
+But it should be clear that, although it is quite common in optics to speak in terms of “imaging an object”, strictly speaking we do not image an object as such, but we image the transmitted or reflected near fields which are a kind of copy of the object.
+After the transmitted near field has been obtained, we apply the angular spectrum method to propagate the individual plane waves through homogeneous matter (e.g. air) from the object to the detector plane or to an optical element like a lens.</p>
+<p>Let <span class="math notranslate nohighlight">\(U_0(x,y)=U(x,y,0)\)</span> be a component of the transmitted near field.
+The first step is to Fourier transform it, by which the field component is decomposed in plane waves.
+To each plane wave, characterised by the wave numbers <span class="math notranslate nohighlight">\(k_x\)</span> and <span class="math notranslate nohighlight">\(k_y\)</span>, the Fourier transform assigns a complex amplitude
+<span class="math notranslate nohighlight">\(\mathcal{F}(U_0)\left(\frac{k_x}{2\pi},\frac{k_y}{2\pi}\right)\)</span>, the magnitude of which indicates how important the role is which this particular wave plays in the formation of the near field. So what can be said about the object field <span class="math notranslate nohighlight">\(U_0(x,y)\)</span>,
+by looking at the magnitude of its spatial Fourier transform <span class="math notranslate nohighlight">\(|\mathcal{F}(U_0)\left(\frac{k_x}{2\pi},\frac{k_y}{2\pi}\right)|\)</span>?</p>
+<p>Suppose <span class="math notranslate nohighlight">\(U_0(x,y)\)</span> has sharp features, i.e. there are regions where <span class="math notranslate nohighlight">\(U_0(x,y)\)</span> varies rapidly as a function of <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span>. To describe these features as a combination of plane waves, these waves must also vary rapidly as a function of <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span>, which means that the length of their wave vectors <span class="math notranslate nohighlight">\(\sqrt{k_x^2+k_y^2}\)</span> must be large. Thus, the sharper the features that <span class="math notranslate nohighlight">\(U_0(x,y)\)</span> has, the larger we can expect
+<span class="math notranslate nohighlight">\(|\mathcal{F}(U_0)\left(\frac{k_x}{2\pi},\frac{k_y}{2\pi}\right)|\)</span> to be for large <span class="math notranslate nohighlight">\(\sqrt{k_x^2+k_y^2}\)</span>, i.e. high spatial frequencies can be expected to have large amplitude. Similarly, the slowly varying, broad features of <span class="math notranslate nohighlight">\(U_0(x,y)\)</span> are described by slowly fluctuating waves, i.e. by
+<span class="math notranslate nohighlight">\(\mathcal{F}(U_0)\left(\frac{k_x}{2\pi},\frac{k_y}{2\pi}\right)\)</span> for small <span class="math notranslate nohighlight">\(\sqrt{k_x^2+k_y^2}\)</span>, i.e. for low spatial frequencies. This is illustrated in <a class="reference internal" href="#fig-6-04-spatial-fourier-transform"><span class="std std-numref">Fig. 88</span></a>.</p>
+<p>To investigate these concepts further we choose a certain field, take its Fourier transform, remove the higher spatial frequencies and then invert the Fourier transform. We then expect that the resulting field has lost its sharp features and only retains its broad features, i.e. the image is blurred. Conversely, if we remove the lower spatial frequencies but retain the higher, then the result will only show its sharp features, i.e. its contours. These effects are shown in <a class="reference internal" href="#fig-6-05-fourierfilter"><span class="std std-numref">Fig. 90</span></a>.
+Recall that when <span class="math notranslate nohighlight">\(k_x^2+k_y^2 &gt; \left(\frac{2\pi}{\lambda}\right)^2\)</span>, the plane wave decays exponentially as the field propagates. Because by propagation through homogeneous space, the information contained in the high spatial frequencies corresponding to evanescent waves is lost (only exponentially small amplitudes of the evanescent waves remain), perfect imaging is impossible, no matter how well-designed an optical system is.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Propagation of light leads to irrecoverable loss of resolution.</p>
+</div>
+<p>It is this fact that motivates near-field microscopy, which tries to detect these evanescent waves by scanning close to the sample, thus obtaining subwavelength resolution.</p>
+<p>So we have seen how we can guess properties of some object field <span class="math notranslate nohighlight">\(U_0(x,y)\)</span> given the amplitude of its spatial Fourier transform <span class="math notranslate nohighlight">\(|\mathcal{F}(U_0)\left(\frac{k_x}{2\pi},\frac{k_y}{2\pi}\right)|\)</span>. But what about the phase of <span class="math notranslate nohighlight">\(\mathcal{F}(U_0)\left(\frac{k_x}{2\pi},\frac{k_y}{2\pi}\right)\)</span>? Although one cannot really guess properties of <span class="math notranslate nohighlight">\(U_0(x,y)\)</span> by looking at the phase of <span class="math notranslate nohighlight">\(\mathcal{F}(U_0)\left(\frac{k_x}{2\pi},\frac{k_y}{2\pi}\right)\)</span> the same way as we can by looking at its amplitude, it is in fact the phase that plays a larger role in defining <span class="math notranslate nohighlight">\(U_0(x,y)\)</span>. This is illustrated in <a class="reference internal" href="#fig-6-06-fourierphase"><span class="std std-numref">Fig. 92</span></a>: if the amplitude information of <span class="math notranslate nohighlight">\(\mathcal{F}(U_0)\left(\frac{k_x}{2\pi},\frac{k_y}{2\pi}\right)\)</span> is removed, features of the original <span class="math notranslate nohighlight">\(U_0(x,y)\)</span> may still be retrieved. However, if we only know the amplitude <span class="math notranslate nohighlight">\(|\mathcal{F}(U_0)(k_x,k_y)|\)</span> but not the phase, then the original object is completely lost. Thus, the phase of a field <span class="math notranslate nohighlight">\(\mathcal{F}(U_0)\)</span> is very important, arguably often more important than its amplitude. However, we cannot measure the phase of a field directly, only its intensity <span class="math notranslate nohighlight">\(I=|\mathcal{F}(U_0)|^2\)</span> from which we can calculate the amplitude <span class="math notranslate nohighlight">\(|\mathcal{F}(U_0)|\)</span>. It is this fact that makes <strong>phase retrieval</strong> an entire field of study on its own: how can we find the phase of a field, given that we can only perform intensity measurements? This question is related to a new field of optics called “lensless imaging”, where amplitudes and phases are retrieved from intensity measurements and the image is reconstructed <strong>computationally</strong>. Interesting as this topic may be, we will not treat it in these notes and refer instead to master courses in optics <sup><a class="footnote-reference brackets" href="#id13" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a></sup>.</p>
+<p><strong>Remark</strong>. The importance of the phase for the field can also be seen by looking at the plane wave expansion <a class="reference internal" href="#equation-eq-planewave1">(374)</a>. We have seen that the field in a plane <span class="math notranslate nohighlight">\(z=\text{constant}\)</span> can be obtained by propagating the plane waves by multiplying their amplitudes by the phase factors <span class="math notranslate nohighlight">\(\exp(i z k_z)\)</span>, which depends on the propagation distance <span class="math notranslate nohighlight">\(z\)</span>. If one leaves the evanescent waves out of consideration (since after some distance they hardly contribute to the field anyway), it follows that only the phases of the plane waves change upon propagation, while their amplitudes (the moduli of their complex amplitudes) do not change. Yet, depending on the propagation distance <span class="math notranslate nohighlight">\(z\)</span>, widely differing light patterns are obtained (see e.g. <a class="reference internal" href="#fig-6-08-fresnelfraunhoferslit"><span class="std std-numref">Fig. 96</span></a>).</p>
+<figure class="align-default" id="fig-6-04-spatial-fourier-transform">
+<img alt="../../_images/6_04_Spatial_Fourier_Transform.png" src="../../_images/6_04_Spatial_Fourier_Transform.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 88 </span><span class="caption-text">A qualitative interpretation of spatial Fourier transforms. The low spatial frequencies (i.e. small <span class="math notranslate nohighlight">\(\sqrt{k_x^2+k_y^2}\)</span>) represent slow fluctuations, and therefore contribute to the broad features of the real-space object. The high spatial frequencies (i.e. large <span class="math notranslate nohighlight">\(\sqrt{k_x^2+k_y^2}\)</span>) fluctuate rapidly, and can therefore form sharp features in the real-space object.</span><a class="headerlink" href="#fig-6-04-spatial-fourier-transform" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="id21">
+<img alt="content/Chap6_Diffraction/Images/Chapter_6/6_05_RemoveHigh.png" src="content/Chap6_Diffraction/Images/Chapter_6/6_05_RemoveHigh.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 89 </span><span class="caption-text">(a) Removing the high spatial frequencies</span><a class="headerlink" href="#id21" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="fig-6-05-fourierfilter">
+<img alt="content/Chap6_Diffraction/Images/Chapter_6/6_05_RemoveLow.png" src="content/Chap6_Diffraction/Images/Chapter_6/6_05_RemoveLow.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 90 </span><span class="caption-text">(b) Removing the low spatial frequencies</span><a class="headerlink" href="#fig-6-05-fourierfilter" title="Link to this image">#</a></p>
+<div class="legend">
+<p>Demonstration of the roles of different spatial frequencies. By removing the high spatial frequencies, only the broad features of the image remain and resolution s lost. If the low spatial frequencies are removed, only the sharp features (i.e. the contours) remain.</p>
+</div>
+</figcaption>
+</figure>
+<figure class="align-default" id="id22">
+<img alt="content/Chap6_Diffraction/Images/Chapter_6/6_06_RemoveAmp.png" src="content/Chap6_Diffraction/Images/Chapter_6/6_06_RemoveAmp.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 91 </span><span class="caption-text">(a) Removing the amplitude information by setting the amplitude of propagating and evanescent waves to 1 and 0, respectively.</span><a class="headerlink" href="#id22" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="fig-6-06-fourierphase">
+<img alt="content/Chap6_Diffraction/Images/Chapter_6/6_06_RemovePhase.png" src="content/Chap6_Diffraction/Images/Chapter_6/6_06_RemovePhase.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 92 </span><span class="caption-text">(b) Removing the phase information by setting the phase equal to 0.</span><a class="headerlink" href="#fig-6-06-fourierphase" title="Link to this image">#</a></p>
+<div class="legend">
+<p>Demonstration of the role of the phase of the spatial Fourier transform. If the amplitude information is removed, but phase information is kept, some features of the original image are still recognizable. However, if the phase information is removed but amplitude information is kept, the original image is completely lost.</p>
+</div>
+</figcaption>
+</figure>
+<p>Another aspect of the Fourier transform is the <strong>uncertainty principle</strong>. It states that many waves of different frequencies have to be added to get a function that is confined to a small space<sup><a class="footnote-reference brackets" href="#id14" id="id4" role="doc-noteref"><span class="fn-bracket">[</span>4<span class="fn-bracket">]</span></a></sup>. Stated differently, if <span class="math notranslate nohighlight">\(U(x,y)\)</span> is confined to a very small region, then <span class="math notranslate nohighlight">\(\mathcal{F}(U)(k_x,k_y)\)</span> must be very spread out. This can also be illustrated by the scaling property of the Fourier transform:</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}
+\text{if} \quad h(x)=f(ax) \quad \text{then} \quad \mathcal{F}(h)\left(\frac{k_x}{2\pi}\right)=\frac{1}{|a|}\mathcal{F}(f)\left(\frac{k_x}{2\pi a}\right),
+\end{align*}\]</div>
+<p>which simply states that the more <span class="math notranslate nohighlight">\(h(x)\)</span> is squeezed by increasing <span class="math notranslate nohighlight">\(a\)</span>, the more its Fourier transform
+<span class="math notranslate nohighlight">\(\mathcal{F}(h)\)</span> spreads out. This principle is illustrated in <a class="reference internal" href="#fig-6-07-uncertainty"><span class="std std-numref">Fig. 93</span></a>. The uncertainty principle is familiar from quantum physics where it is stated that a particle cannot have both a definite momentum and a definite position. In fact, this is just one particular manifestation of the uncertainty principle just described. A quantum state <span class="math notranslate nohighlight">\(\ket{\psi}\)</span> can be described in the position basis <span class="math notranslate nohighlight">\(\psi_{x}(x)\)</span> as well as in the momentum basis <span class="math notranslate nohighlight">\(\psi_p(p)\)</span>. The basis transformation that links these two expressions is the Fourier transform</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}
+\psi_p(p)=\mathcal{F}\{\psi_x(x)\}(p).
+\end{align*}\]</div>
+<p>Hence, the two are obviously subject to the uncertainty principle! In fact, any two quantum observables which are related by a Fourier transform (also called conjugate variables), such as position and momentum, obey this uncertainty relation.
+The <strong>uncertainty relation</strong> states:</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If a function <span class="math notranslate nohighlight">\(f(x)\)</span> has width <span class="math notranslate nohighlight">\(\Delta x\)</span>, its Fourier transform has a width <span class="math notranslate nohighlight">\(\Delta k_x \approx 2\pi/ \Delta x\)</span>.</p>
+</div>
+<p>Since after propagation over a distance <span class="math notranslate nohighlight">\(z\)</span>,
+the evanescent waves do not contribute to the Fourier transform of the field, it follows that this Fourier transform has maximum width <span class="math notranslate nohighlight">\(\Delta k_x = k\)</span>. By the uncertainty principle it follows that after propagation, the minimum width of the field is <span class="math notranslate nohighlight">\(\Delta x, \Delta y \approx 2\pi/k=\lambda\)</span>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The minimum feature size of a field after propagation is of the order of the wavelength.</p>
+</div>
+<p>This poses a fundamental limit to resolution given by the wavelength of the light.</p>
+<figure class="align-default" id="fig-6-07-uncertainty">
+<img alt="content/Chap6_Diffraction/Images/Chapter_6/6_07_UncertaintyPrinciple.png" src="content/Chap6_Diffraction/Images/Chapter_6/6_07_UncertaintyPrinciple.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 93 </span><span class="caption-text">Demonstration of the uncertainty principle. The more confined <span class="math notranslate nohighlight">\(U(x,y)\)</span> is, the larger the spread of <span class="math notranslate nohighlight">\(\mathcal{F}(U)\left(\frac{k_x}{2\pi},\frac{k_y}{2\pi}\right)\)</span>.</span><a class="headerlink" href="#fig-6-07-uncertainty" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="fresnel-and-fraunhofer-approximations">
+<span id="sec-fresnelfraunhofer"></span><h2>Fresnel and Fraunhofer Approximations<a class="headerlink" href="#fresnel-and-fraunhofer-approximations" title="Link to this heading">#</a></h2>
+<p>The Fresnel and Fraunhofer approximation are two approximations of the Rayleigh-Sommerfeld integral <a class="reference internal" href="#equation-eq-rs">(379)</a>. The approximations are accurate provided the propagation distance <span class="math notranslate nohighlight">\(z\)</span> is sufficiently large. In the Fraunhofer approximation, <span class="math notranslate nohighlight">\(z\)</span> has to be <em>quite</em> large, i.e. larger than for the Fresnel approximation, which is already accurate for typical distances occuring in optical systems. Putting it differently: in order of most accurate to least accurate (i.e. only valid for large propagation distances), the diffraction integrals would rank as:</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>[Most accurate]</strong> Rayleigh-Sommerfeld <span class="math notranslate nohighlight">\(\rightarrow\)</span> Fresnel <span class="math notranslate nohighlight">\(\rightarrow\)</span> Fraunhofer <strong>[Least accurate]</strong>.</p>
+</div>
+<section id="fresnel-approximation">
+<h3>Fresnel Approximation<a class="headerlink" href="#fresnel-approximation" title="Link to this heading">#</a></h3>
+<p>We assume that <span class="math notranslate nohighlight">\(z\)</span> in Eq. <a class="reference internal" href="#equation-eq-rs">(379)</a> is so large that in the denominator we can approximate <span class="math notranslate nohighlight">\(r\)</span> by <span class="math notranslate nohighlight">\(z\)</span>:</p>
+<div class="math notranslate nohighlight" id="equation-eq-fesnel1">
+<span class="eqno">(381)<a class="headerlink" href="#equation-eq-fesnel1" title="Link to this equation">#</a></span>\[\begin{align*}
+U(x,y,z)&amp;= \frac{1}{i\lambda}\int\int U_0(x',y')\frac{z}{r} \frac{e^{ikr}}{r}\,\text{d}x'\,\text{d}y'
+&amp;\approx &amp; \frac{1}{i\lambda z}\int\int U_0(x',y')e^{ikr}\,\text{d}x'\,\text{d}y'.
+\end{align*}\]</div>
+<p>The reason why we can not apply the same approximation for <span class="math notranslate nohighlight">\(r\)</span> in the exponent, is that in the exponent <span class="math notranslate nohighlight">\(r\)</span> is multiplied by <span class="math notranslate nohighlight">\(k= 2\pi /\lambda\)</span>, which is a very large number at optical frequencies, so any error introduced by approximating <span class="math notranslate nohighlight">\(r\)</span> would be drastically magnified by multiplying by <span class="math notranslate nohighlight">\(k\)</span> which can easily lead to a completely different value of <span class="math notranslate nohighlight">\(\exp(ikr)=\cos(kr)+i\sin(kr)\)</span>. To approximate <span class="math notranslate nohighlight">\(r\)</span> in <span class="math notranslate nohighlight">\(\exp(ikr)\)</span> we must be more careful and apply a Taylor expansion. Recall that</p>
+<div class="math notranslate nohighlight" id="equation-eq-r1">
+<span class="eqno">(382)<a class="headerlink" href="#equation-eq-r1" title="Link to this equation">#</a></span>\[\begin{align*}
+r&amp;= \sqrt{(x-x')^2+(y-y')^2+z^2} 
+&amp;= z\, \sqrt{\frac{(x-x')^2+(y-y')^2}{z^2}+1}.
+\end{align*}\]</div>
+<p>We know that the Taylor expansion around <span class="math notranslate nohighlight">\(s=0\)</span> implies:</p>
+<div class="math notranslate nohighlight" id="equation-eq-approxpar">
+<span class="eqno">(383)<a class="headerlink" href="#equation-eq-approxpar" title="Link to this equation">#</a></span>\[\begin{align*}
+\sqrt{s+1}=1+\frac{s}{2}-\frac{s^2}{8}+\dots.
+\end{align*}\]</div>
+<p>Since we assume that <span class="math notranslate nohighlight">\(z\)</span> is large, <span class="math notranslate nohighlight">\(\frac{(x-x')^2+(y-y')^2}{z^2}\)</span> is small, so we have</p>
+<div class="math notranslate nohighlight" id="equation-eq-fresnel2">
+<span class="eqno">(384)<a class="headerlink" href="#equation-eq-fresnel2" title="Link to this equation">#</a></span>\[\begin{align*}
+r&amp;= z\sqrt{\frac{(x-x')^2+(y-y')^2}{z^2}+1} 
+&amp;\approx&amp; z\left[1+\frac{(x-x')^2+(y-y')^2}{2 z^2}\right] 
+&amp;= z+\frac{(x-x')^2+(y-y')^2}{2 z}, \quad \quad**Fresnel approximation**.
+\end{align*}\]</div>
+<p>With this approximation, we arrive at the <strong>Fresnel diffraction integral</strong>, which can be written in the following equivalent forms:</p>
+<div class="math notranslate nohighlight" id="equation-eq-fresnelf">
+<span class="eqno">(385)<a class="headerlink" href="#equation-eq-fresnelf" title="Link to this equation">#</a></span>\[ \begin{align}\begin{aligned}\boxed{\begin{align*}
+\begin{split}
+U(x,y,z)&amp;\approx
+\frac{e^{ikz}}{i\lambda z}\int\!\int U_0(x',y')e^{\frac{ik}{2z}\left[(x-x')^2+(y-y')^2\right]}\,\text{d}x'\,\text{d}y'\\
+&amp;=
+\frac{ e^{ikz}e^{\frac{ik(x^2+y^2)}{2z}}}{i\lambda z}\int\!\int U_0(x',y') e^{\frac{ik(x'^2+y'^2)}{2z}}e^{-ik\left(\frac{x}{z}x'+\frac{y}{z}y'\right)}\,\text{d}x'\,\text{d}y'\\
+&amp;= \frac{e^{ikz}e^{\frac{ik(x^2+y^2)}{2z}}}{i\lambda z} \mathcal{F}\left\{U_0(x',y')e^{\frac{ik(x'^2+y'^2)}{2z}}\right\}\left(\frac{x}{ \lambda z },\frac{y}{\lambda z}\right).
+\end{split}
+\end{align*}}\end{aligned}\end{align} \]</div>
+<p>Especially the last expression is interesting, because it shows that</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The Fresnel approximation is proportional to the Fourier transform of the field <span class="math notranslate nohighlight">\(U_0(x',y')\)</span> multiplied by the Fresnel propagator <span class="math notranslate nohighlight">\(\exp\left(\frac{ik(x'^2+y'^2)}{2z}\right)\)</span>.</p>
+</div>
+<p>Note that this propagator depends on the distance of propagation <span class="math notranslate nohighlight">\(z\)</span>.</p>
+<p><strong>Remark</strong>. By Fourier transforming <a class="reference internal" href="#equation-eq-fresnelf">(385)</a>, one can get the plane wave amplitudes of the Fresnel approximation.
+It turns out that these amplitudes are equal to <span class="math notranslate nohighlight">\({\cal F}(U_0)\)</span> multiplied by a phase factor which is obtained from a paraxial approximation of the exact phase factor <span class="math notranslate nohighlight">\(\exp(i z k_z)\)</span>, i.e. <span class="math notranslate nohighlight">\(k_z\)</span> is approximated by a quadratic function of <span class="math notranslate nohighlight">\(k_x, k_y\)</span>. Therefore the Fresnel approximation is also called the paraxial approximation. In fact, it can be shown that the Fresnel diffraction integral is a solution of the
+<strong>paraxial wave equation</strong> and conversely, that every solution of the paraxial wave equation can be written as a Fresnel diffraction integral<sup><a class="footnote-reference brackets" href="#id15" id="id5" role="doc-noteref"><span class="fn-bracket">[</span>5<span class="fn-bracket">]</span></a></sup>.</p>
+</section>
+<section id="fraunhofer-approximation">
+<h3>Fraunhofer Approximation<a class="headerlink" href="#fraunhofer-approximation" title="Link to this heading">#</a></h3>
+<p>To obtain the Fraunhofer approximation, we will make one further approximation to <span class="math notranslate nohighlight">\(r\)</span> in <span class="math notranslate nohighlight">\(\exp(ikr)\)</span> in addition to the Fresnel approximation:</p>
+<div class="math notranslate nohighlight" id="equation-eq-r-fresnel">
+<span class="eqno">(386)<a class="headerlink" href="#equation-eq-r-fresnel" title="Link to this equation">#</a></span>\[\begin{align*}
+r
+&amp;\approx &amp; z+\frac{(x-x')^2+(y-y')^2}{2 z} \quad\textbf{Fresnel approximation} \end{align*}\]</div>
+<div class="math notranslate nohighlight" id="equation-eq-r-fraunhofer">
+<span class="eqno">(387)<a class="headerlink" href="#equation-eq-r-fraunhofer" title="Link to this equation">#</a></span>\[\begin{align*}
+&amp;\approx &amp; z+\frac{x^2+y^2-2xx'-2yy'}{2 z} \quad\textbf{Fraunhofer approximation}.\end{align*}\]</div>
+<p>Hence we have omitted the quadratic terms <span class="math notranslate nohighlight">\(x'^2+y'^2\)</span>, and in comparison with the Fresnel diffraction integral, we omit the factor <span class="math notranslate nohighlight">\( \exp\left[ik(x'^2+y'^2)/(2z)\right]\)</span> to obtain the <strong>Fraunhofer diffraction integral</strong>:</p>
+<div class="math notranslate nohighlight" id="equation-eq-fraunhofer">
+<span class="eqno">(388)<a class="headerlink" href="#equation-eq-fraunhofer" title="Link to this equation">#</a></span>\[\boxed{\begin{align*}
+U(x,y,z)\approx \frac{e^{ikz}e^{\frac{ik(x^2+y^2)}{2z}}}{i\lambda z} \mathcal{F}(U_0)\left(\frac{x }{ \lambda z},
+\frac {y}{\lambda z }\right).
+\end{align*}}\]</div>
+<p>This leads to the following important observation:</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The Fraunhofer far field of <span class="math notranslate nohighlight">\(U_0(x',y')\)</span> is proportional to the Fourier transform of <span class="math notranslate nohighlight">\(U_0\)</span>.</p>
+</div>
+<p>Note that to obtain the Fraunhofer field in <span class="math notranslate nohighlight">\((x,y,z)\)</span>, the Fourier transform has to be evaluated at spatial frequencies <span class="math notranslate nohighlight">\(x/(\lambda z)\)</span> and <span class="math notranslate nohighlight">\(y/(\lambda z)\)</span>. These spatial frequencies scale with <span class="math notranslate nohighlight">\(1/z\)</span> and the overall field <span class="math notranslate nohighlight">\(U(x,y,z)\)</span> is proportional to <span class="math notranslate nohighlight">\(1/z\)</span>. This implies that when <span class="math notranslate nohighlight">\(z\)</span> is increased the field pattern spreads out without changing its shape while its amplitude goes down so that the total energy is preserved. Stated differently, apart from the factor <span class="math notranslate nohighlight">\(1/z\)</span> in front of the integral, the Fraunhofer field depends on the angles <span class="math notranslate nohighlight">\(x/z\)</span> and <span class="math notranslate nohighlight">\(y/z\)</span>. Therefore for large propagation distances <span class="math notranslate nohighlight">\(z\)</span> for which the Fraunhofer approximation is accurate, the field becomes broader (it diverges) when the propagation distance increases.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Eventually, for sufficiently large propagation distances, i.e. in the Fraunhofer limit, light always spreads out without change of shape of the light distribution.</p>
+</div>
+<p><strong>Remarks</strong>.</p>
+<ol class="arabic simple">
+<li><p>The Fresnel approximation is, like the Fraunhofer approximation, a Fourier transform of the field in the starting plane (<span class="math notranslate nohighlight">\(z=0\)</span>), evaluated in spatial frequencies which depend on the point of observation:</p></li>
+</ol>
+<div class="math notranslate nohighlight" id="equation-eq-spatial">
+<span class="eqno">(389)<a class="headerlink" href="#equation-eq-spatial" title="Link to this equation">#</a></span>\[\begin{align*}
+\xi = \frac{x}{\lambda z}, \quad \eta=\frac{y}{\lambda z}.
+\end{align*}\]</div>
+<p>However, in contrast to the Fraunhofer approximation, the Fresnel approximation depends additionally in a different way on the propagation distance <span class="math notranslate nohighlight">\(z\)</span>, namely through the exponent of the Fresnel propagator in the integrand.
+Therefore the Fresnel approximation gives quite diverse patterns depending on the propagation distance <span class="math notranslate nohighlight">\(z\)</span>, as is shown in <a class="reference internal" href="#fig-6-08-fresnelfraunhoferslit"><span class="std std-numref">Fig. 96</span></a>.</p>
+<ol class="arabic simple" start="2">
+<li><p>In the Rayleigh-Sommerfeld diffraction integral, the field is written as a superposition of spherical waves. In the Fresnel approximation the spherical waves are approximated by parabolic waves. Finally, in the Fraunhofer approximation the propagation distance is so large that the parabolic waves can be approximated by plane waves.</p></li>
+<li><p>Let <span class="math notranslate nohighlight">\(f_{a,b}(x,y)=f(x-a,y-b)\)</span> be the function obtained from <span class="math notranslate nohighlight">\(f\)</span> by translation. From the general property of the Fourier transform:</p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[\begin{align*}
+{\cal F}(f_{a,b})(\xi,\eta) = e^{ -2\pi i (\xi a + \eta b)} {\cal F}(f)(\xi,\eta),
+\end{align*}\]</div>
+<p>it follows that when the field <span class="math notranslate nohighlight">\(U_0\)</span> is translated, the intensity in the Fraunhofer far field is not changed.
+In contrast, due to the additional quadratic phase factor in the integrand of the Fresnel integral, the intensity of the Fresnel field in general changes when <span class="math notranslate nohighlight">\(U_0\)</span> is translated.</p>
+<ol class="arabic simple" start="4">
+<li><p>Suppose that <span class="math notranslate nohighlight">\(U_0\)</span> is the field immediately behind an aperture <span class="math notranslate nohighlight">\({\cal A}\)</span> with diameter <span class="math notranslate nohighlight">\(D\)</span> in an opaque screen. It can then be shown that points <span class="math notranslate nohighlight">\((x,y,z)\)</span> of observation, for which the Fresnel and Fraunhofer diffraction integrals are sufficiently accurate, satisfy:</p></li>
+</ol>
+<div class="math notranslate nohighlight" id="equation-eq-eisfresnel">
+<span class="eqno">(390)<a class="headerlink" href="#equation-eq-eisfresnel" title="Link to this equation">#</a></span>\[\begin{align*}
+\frac{z}{\lambda} &amp; \gg &amp; \left( \frac{\max_{(x',y')\in{\cal A}}\sqrt{(x-x')^2+(y-y')^2}}{\lambda}\right)^{4/3}, \;\; \textbf{Fresnel} \end{align*}\]</div>
+<div class="math notranslate nohighlight" id="equation-eq-eisfraunhofer">
+<span class="eqno">(391)<a class="headerlink" href="#equation-eq-eisfraunhofer" title="Link to this equation">#</a></span>\[\begin{split}\begin{align*}
+\\
+\frac{z}{\lambda} &amp; \gg &amp; \left( \frac{D}{\lambda}\right)^{2}, \;\; \textbf{Fraunhofer}\end{align*}\end{split}\]</div>
+<p>The Fresnel number is defined by</p>
+<div class="math notranslate nohighlight" id="equation-eq-nf">
+<span class="eqno">(392)<a class="headerlink" href="#equation-eq-nf" title="Link to this equation">#</a></span>\[\boxed{\begin{align*}
+N_F = \frac{D^2}{\lambda z}, \;\;\; \textbf{Fresnel number}.
+\end{align*}}\]</div>
+<p>When <span class="math notranslate nohighlight">\(N_F &lt; 0.1\)</span> the Fraunhofer approximation is accurate, while for <span class="math notranslate nohighlight">\(N_F&gt;0.1\)</span> it is better to use the Fresnel approximation (see <a class="reference internal" href="#fig-6-08-fresnelfraunhoferslit"><span class="std std-numref">Fig. 96</span></a>).
+Suppose that <span class="math notranslate nohighlight">\(D= 1\text{ mm}\)</span> and the wavelength is that of green light: <span class="math notranslate nohighlight">\(\lambda=550 \text{ nm}\)</span>, then Fraunhofer’s approximation is accurate if <span class="math notranslate nohighlight">\(z&gt; 10 \text{ m}\)</span>.</p>
+<ol class="arabic simple" start="5">
+<li><p>The points of observation where the Fraunhofer approximation can be used must in any case satisfy:</p></li>
+</ol>
+<div class="math notranslate nohighlight" id="equation-eq-condition">
+<span class="eqno">(393)<a class="headerlink" href="#equation-eq-condition" title="Link to this equation">#</a></span>\[\begin{align*}
+\frac{x}{z} &lt; 1, \quad \frac{y}{z} &lt;1.
+\end{align*}\]</div>
+<p>When <span class="math notranslate nohighlight">\(x/z&gt;1\)</span>, the spatial frequency <span class="math notranslate nohighlight">\(k_x = \frac{2 \pi x}{z \lambda} &gt; k\)</span> associated with this point corresponds to an evanescent wave. An evanescent wave obviously cannot contribute to the Fraunhofer far field because it exponentially decreases with distance <span class="math notranslate nohighlight">\(z\)</span>. In practice the Fresnel and Fraunhofer approximations are used only when <span class="math notranslate nohighlight">\(x/z\)</span> and <span class="math notranslate nohighlight">\(y/z\)</span> are smaller than 0.3.</p>
+<ol class="arabic simple" start="6">
+<li><p>In any expression for an optical field, one may always omit factors of constant phase, i.e. an overall phase which does not depend on position. If one is only interested in the field in certain planes <span class="math notranslate nohighlight">\(z=\text{constant}\)</span>, then a factor like <span class="math notranslate nohighlight">\(\exp(ikz)\)</span> may also be omitted. Further, in some cases also a position dependent phase factor in front of the Fresnel and Fraunhofer diffraction integrals is omitted, namely when only the intensity is of interest. In exercises it is usually mentioned that this factor may be omitted: if this is not stated, it should be retained in the formulae.</p></li>
+</ol>
+</section>
+<section id="examples-of-fresnel-and-fraunhofer-approximations">
+<span id="secton-examples"></span><h3>Examples of Fresnel and Fraunhofer approximations<a class="headerlink" href="#examples-of-fresnel-and-fraunhofer-approximations" title="Link to this heading">#</a></h3>
+<p><strong>Fresnel approximation of the field of two point sources.</strong></p>
+<p>Consider two mutual coherent time-harmonic point sources in <span class="math notranslate nohighlight">\(\mathbf{r}_s^+=(a/2,0,0)\)</span> and <span class="math notranslate nohighlight">\(\mathbf{r}_s^-=(-a/2,0,0)\)</span>. The fields in <span class="math notranslate nohighlight">\(\mathbf{r}=(x,y,z)\)</span> emitted are according to <a class="reference internal" href="../Chap5_Interference/InterferenceCoherence_2022_01Clean.html#equation-eq-timeharm">(321)</a> proportional to</p>
+<div class="math notranslate nohighlight" id="equation-eq-upm">
+<span class="eqno">(394)<a class="headerlink" href="#equation-eq-upm" title="Link to this equation">#</a></span>\[
+U_{\pm}(\mathbf{r}) = \frac{e^{i k |\mathbf{r}-\mathbf{r}_s^\pm|}}{|\mathbf{r} -\mathbf{r}_s^\pm|}.
+\]</div>
+<p>We apply the Fresnel approximation for large <span class="math notranslate nohighlight">\(z\)</span>:</p>
+<div class="math notranslate nohighlight" id="equation-eq-fresnelps">
+<span class="eqno">(395)<a class="headerlink" href="#equation-eq-fresnelps" title="Link to this equation">#</a></span>\[\begin{split}\begin{align*}
+|\mathbf{r}-\mathbf{r}_s^\pm| &amp;= z \sqrt{ 1 + \frac{(x\mp a/2)^2 + y^2}{z^2}}  \\
+&amp; \approx &amp; z + \frac{(x\mp a/2)^2 + y^2}{2 z}  \\
+&amp;= z + \frac{x^2+ y^2+a^2/4}{2z} \mp \frac{a x}{2z}.
+\end{align*}\end{split}\]</div>
+<p>Hence,</p>
+<div class="math notranslate nohighlight" id="equation-eq-ufresnel">
+<span class="eqno">(396)<a class="headerlink" href="#equation-eq-ufresnel" title="Link to this equation">#</a></span>\[
+U_\pm(\mathbf{r}) \approx \frac{e^{ikz}}{z} e^{i k \frac{x^2+y^2}{2z} } e^{ i k\frac{ a^2}{8z}} \, e^{\mp i k \frac{a x}{2z}},
+\]</div>
+<p>where in the denominator we replaced <span class="math notranslate nohighlight">\(|\mathbf{r}-\mathbf{r}_s^\pm|\)</span> by <span class="math notranslate nohighlight">\(z\)</span>. Note that the Fraunhofer approximation amounts to <span class="math notranslate nohighlight">\(e^{ i k a^2/(8z)} \approx 1\)</span> while the phase factor <span class="math notranslate nohighlight">\(e^{i k \frac{x^2+y^2}{2z} } \)</span> remains. The intensity on a screen <span class="math notranslate nohighlight">\(z=\text{constant}\)</span> of the sum of the two fields for the case that the sources have equal strength and emit in phase is:</p>
+<div class="math notranslate nohighlight" id="equation-eq-itot">
+<span class="eqno">(397)<a class="headerlink" href="#equation-eq-itot" title="Link to this equation">#</a></span>\[\begin{split}\begin{align*}
+I_{tot}(\mathbf{r}) &amp;= | U_+(\mathbf{r})+U_{-}(\mathbf{r}) |^2 = \frac{1}{z^2} |e^{-i k \frac{a x}{2z}} + e^{i k \frac{a x}{2z}}|^2  \\
+&amp;= \frac{2}{z^2} \left[ 1 + \cos\left(2 \pi \frac{a x}{\lambda z}\right)\right].
+\end{align*}\end{split}\]</div>
+<p>It is seen that the intensity results from the interference of two plane waves: <span class="math notranslate nohighlight">\(\exp[\pm i k ax/(\lambda z)]\)</span> and is given by a cosine function (see <a class="reference internal" href="#fig-6-09-2-point-source"><span class="std std-numref">Fig. 94</span></a>).
+Note that for two point sources, the intensity pattern is the same in the Fresnel and the Fraunhofer approximation. However, this is special for two point sources: when more than two point sources are considered, the Fresnel and Fraunhofer patterns are different. The intensity pattern is independent of <span class="math notranslate nohighlight">\(y\)</span>, and vanishes on lines</p>
+<div class="math notranslate nohighlight" id="equation-eq-lines2">
+<span class="eqno">(398)<a class="headerlink" href="#equation-eq-lines2" title="Link to this equation">#</a></span>\[\begin{align*}
+\frac{x}{z} = (2m+1)\frac{\lambda}{2a},
+\end{align*}\]</div>
+<p>and has maxima on lines</p>
+<div class="math notranslate nohighlight" id="equation-eq-lines3">
+<span class="eqno">(399)<a class="headerlink" href="#equation-eq-lines3" title="Link to this equation">#</a></span>\[\begin{align*}
+\frac{x}{z} = m\frac{\lambda}{a},
+\end{align*}\]</div>
+<p>for integer <span class="math notranslate nohighlight">\(m\)</span>.</p>
+<figure class="align-default" id="fig-6-09-2-point-source">
+<img alt="../../_images/6_09_Fraunhofer_2_point_source_light.png" src="../../_images/6_09_Fraunhofer_2_point_source_light.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 94 </span><span class="caption-text">Intensity pattern of two mutually coherent point sources of equal strength and emitting in phase at the wavelength <span class="math notranslate nohighlight">\(\lambda =600\)</span> nm from Eq. <a class="reference internal" href="#equation-eq-itot">(397)</a>. The distance between the point source is 200 nm. On the top the cross-section along along the <span class="math notranslate nohighlight">\(z\)</span>-axis is shown.</span><a class="headerlink" href="#fig-6-09-2-point-source" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p><strong>Fraunhofer approximation of a rectangular aperture in a screen.</strong></p>
+<p>Let the screen be <span class="math notranslate nohighlight">\(z=0\)</span> and the aperture be given by <span class="math notranslate nohighlight">\(-a/2 &lt; x &lt; a/2\)</span>, <span class="math notranslate nohighlight">\(-b/2 &lt; y &lt; b/2\)</span>. The transmission function <span class="math notranslate nohighlight">\(\tau(x,y)\)</span> is:</p>
+<div class="math notranslate nohighlight" id="equation-eq-tauslit">
+<span class="eqno">(400)<a class="headerlink" href="#equation-eq-tauslit" title="Link to this equation">#</a></span>\[\begin{align*}
+\tau(x,y)= 1_{[-a/2,a/2]}(x) 1_{[-b/2, b/2]}(y),
+\end{align*}\]</div>
+<p>where</p>
+<div class="math notranslate nohighlight" id="equation-eq-indicator">
+<span class="eqno">(401)<a class="headerlink" href="#equation-eq-indicator" title="Link to this equation">#</a></span>\[\begin{split}\begin{align*}
+1_{[-a/2, a/2]}(x) = \left\{ \begin{array}{l}1, \text{ if } -\frac{a}{2} \leq x \leq\frac{a}{2}, \\0, \text{ otherwise},
+\end{array}\right.
+\end{align*}\end{split}\]</div>
+<p>and similarly for <span class="math notranslate nohighlight">\(1_{[-b/2, b/2]}(y)\)</span>.
+Let the aperture be illuminated by a perpendicular incident plane wave with unit amplitude. Then the field immediately behind the screen is:</p>
+<div class="math notranslate nohighlight" id="equation-eq-u0slit">
+<span class="eqno">(402)<a class="headerlink" href="#equation-eq-u0slit" title="Link to this equation">#</a></span>\[\begin{align*}
+U_0(x,y)=\tau(x,y) = 1_{[-a/2,a/2]}(x) 1_{[-b/2, b/2]}(y),
+\end{align*}\]</div>
+<p>We have</p>
+<div class="math notranslate nohighlight" id="equation-eq-fspleet">
+<span class="eqno">(403)<a class="headerlink" href="#equation-eq-fspleet" title="Link to this equation">#</a></span>\[\begin{split}\begin{align*}
+{\cal F}\left( 1_{[-a/2,a/2] }\right)(\xi) &amp;= \int_{-a/2}^{a/2} e^{-2\pi i\xi x} \, \text{d} x  \\
+&amp;= \frac{ e^{\pi i a \xi}-e^{-\pi i a\xi}}{2\pi i \xi}  \\
+&amp;= a \text{ sinc}(\pi a \xi),
+\end{align*}\end{split}\]</div>
+<p>where <span class="math notranslate nohighlight">\(\text{ sinc}(u)=\sin(u)/u\)</span>.
+Hence,</p>
+<div class="math notranslate nohighlight" id="equation-eq-fu02">
+<span class="eqno">(404)<a class="headerlink" href="#equation-eq-fu02" title="Link to this equation">#</a></span>\[\begin{align*}
+{\cal F}(U_0)\left(\frac{x}{\lambda z},\frac{y}{\lambda z}\right) = a b \text{ sinc}\left(\frac{\pi a x}{\lambda z}\right) \text{ sinc}\left(\frac{\pi b y}{\lambda z}\right).
+\end{align*}\]</div>
+<p>The Fraunhofer far field at large distance <span class="math notranslate nohighlight">\(z\)</span> from a rectangular aperture in mask is obtained by substituting <a class="reference internal" href="#equation-eq-fu02">(404)</a> into <a class="reference internal" href="#equation-eq-fraunhofer">(388)</a>.</p>
+<p><strong>Remarks</strong>.</p>
+<ol class="arabic simple">
+<li><p>The first zero along the <span class="math notranslate nohighlight">\(x\)</span>-direction from the centre <span class="math notranslate nohighlight">\(x=0\)</span> occurs for</p></li>
+</ol>
+<div class="math notranslate nohighlight" id="equation-eq-zero">
+<span class="eqno">(405)<a class="headerlink" href="#equation-eq-zero" title="Link to this equation">#</a></span>\[\begin{align*}
+x= \pm \frac{\lambda z}{a}.
+\end{align*}\]</div>
+<p>The distance between the first two zeros along the <span class="math notranslate nohighlight">\(x\)</span>-axis is <span class="math notranslate nohighlight">\(2\lambda z/a\)</span> and is thus larger when the width along the <span class="math notranslate nohighlight">\(x\)</span>-direction of the aperture is smaller.</p>
+<ol class="arabic simple" start="2">
+<li><p>The inequalities <a class="reference internal" href="#equation-eq-condition">(393)</a> imply that when <span class="math notranslate nohighlight">\( a&lt; \lambda\)</span>, the far field pattern does not have any zeros as function of <span class="math notranslate nohighlight">\(x\)</span>. When <span class="math notranslate nohighlight">\(a\)</span> is further decreased it becomes more and more difficult to deduce the width <span class="math notranslate nohighlight">\(a\)</span> from the Fraunhofer intensity. This is an illustration of the fact that information about features that are than the wavelength cannot propagate to the far field.</p></li>
+<li><p>As illustrated in <a class="reference internal" href="#fig-6-10-fraunhofer"><span class="std std-numref">Fig. 95</span></a>, the Fraunhofer diffraction pattern as function of diffraction angle is narrowest in the direction in which the aperture is widest.</p></li>
+</ol>
+<figure class="align-default" id="fig-6-10-fraunhofer">
+<img alt="../../_images/6_10_Fraunhofer_diffraction_aperture.png" src="../../_images/6_10_Fraunhofer_diffraction_aperture.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 95 </span><span class="caption-text">Fraunhofer diffraction pattern of a rectangular aperture in an opaque screen.Left: the width of the aperture in the <span class="math notranslate nohighlight">\(y\)</span>-direction is twice that in the <span class="math notranslate nohighlight">\(x\)</span>-direction; middle: the width in the <span class="math notranslate nohighlight">\(y\)</span>-direction is 5 times that in the <span class="math notranslate nohighlight">\(x\)</span>-direction; right: the width in the <span class="math notranslate nohighlight">\(y\)</span>-direction is 10 times that in the <span class="math notranslate nohighlight">\(x\)</span>-direction.</span><a class="headerlink" href="#fig-6-10-fraunhofer" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p><strong>Fresnel approximation of a rectangular aperture in a mask</strong></p>
+<p>The integral in the Fresnel approximation for the field of a rectangular aperture in a mask can be computed analytically and leads to functions that are actually called “Fresnel integrals” which can be studied using the Cornu spirals. We will not go deeper in this matter but simply show the results of the simulations in
+<a class="reference internal" href="#fig-6-08-fresnelfraunhoferslit"><span class="std std-numref">Fig. 96</span></a>. The distance to the mask increases (<span class="math notranslate nohighlight">\(N_F\)</span> decreases), from very close to the mask at the bottom right, to further from the mask at the bottom left, to rather far from the mask in the upper right, to Fraunhofer distance in the upper left figures. Note the change in scale along the axis in the figures and the decrease of intensity with propagation distance. It is seen that the pattern changes and broadens drastically with distance from what is more or less a copy of the aperture, to a patterns that is equal to the Fourier transform of the aperture. Once the Fraunhofer approximation is accurate, a further increase of distance only results in a widening of the pattern and a decrease of overall amplitude without change of shape. In contrast, in the region where the Fresnel approximation is accurate, the shape of the pattern is seen to change a lot with distance to the mask.</p>
+<figure class="align-default" id="fig-6-08-fresnelfraunhoferslit">
+<img alt="../../_images/6_08_FresnelDiffraction_L_distance.png" src="../../_images/6_08_FresnelDiffraction_L_distance.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 96 </span><span class="caption-text">Diffraction patterns of a square opening in a mask with corresponding cross-sections along the <span class="math notranslate nohighlight">\(x\)</span>-axis, showing the transition from Fresnel to Fraunhofer approximations. The distance to the mask increases with the Fresnel number <span class="math notranslate nohighlight">\(N_F\)</span> from the near field pattern close to the mask in the right bottom figures to the Fraunhofer diffraction pattern in the upper left. Note the different scales along the axis in the figures.</span><a class="headerlink" href="#fig-6-08-fresnelfraunhoferslit" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p><strong>Fraunhofer approximation of a periodic array of slits</strong></p>
+<p>We can now predict what is the diffraction pattern of an array of slits of finite width.
+It follows from the Fraunhofer pattern of a single rectangular aperture that, if the sides parallel to the <span class="math notranslate nohighlight">\(y\)</span>-direction are very long, the Fraunhofer diffraction pattern as function of angle in the <span class="math notranslate nohighlight">\(y\)</span>-direction is very narrow.
+In <a class="reference internal" href="#fig-6-10-fraunhofer"><span class="std std-numref">Fig. 95</span></a>b the Fraunhofer diffraction pattern of a rectangular aperture is shown, of which the width in the <span class="math notranslate nohighlight">\(y\)</span>-direction is 10 times that in the <span class="math notranslate nohighlight">\(x\)</span>-direction. The diffraction pattern is then strongly concentrated along the <span class="math notranslate nohighlight">\(x\)</span>-axis.
+If we only consider the Fraunhofer pattern for <span class="math notranslate nohighlight">\(y/z=0\)</span> while still considering it as a function of <span class="math notranslate nohighlight">\(x/z\)</span>, it suffices to compute the Fourier transform only with respect to <span class="math notranslate nohighlight">\(x\)</span>. The problem then becomes a diffraction problem for a one-dimensional slit.</p>
+<p>We consider now an array of such slits of which the long sides are all parallel to the <span class="math notranslate nohighlight">\(y\)</span>-axis and we neglect from now on the <span class="math notranslate nohighlight">\(y\)</span>-variable.
+Suppose <span class="math notranslate nohighlight">\(W_{\text{slit}}(x)\)</span> is the function that describes the transmission of a single slit. Then the transmission function of <span class="math notranslate nohighlight">\(M\)</span> equidistant slits is</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}
+\tau(x)=\sum_{m=1}^{M} W_{\text{slit}}\left(x+ (M+1)\frac{p}{2}- mp\right),
+\end{align*}\]</div>
+<p>where <span class="math notranslate nohighlight">\(p\)</span> is the distance of neighbouring slits, i.e. <span class="math notranslate nohighlight">\(p\)</span> is the period of the row. If the illumination is by a perpendicular incident plane wave with unit amplitude, the transmitted near field <span class="math notranslate nohighlight">\(U_0(x)\)</span> is simply <span class="math notranslate nohighlight">\(\tau(x)\)</span>.
+Then</p>
+<div class="math notranslate nohighlight" id="equation-eq-fsum">
+<span class="eqno">(406)<a class="headerlink" href="#equation-eq-fsum" title="Link to this equation">#</a></span>\[\begin{align*}
+{\cal F}(U_0)(\xi) = {\cal F}(\tau)(\xi)=\sum_{m=1}^M {\cal F}(W_{slit})(\xi)\, e^{\pi i (M+1)p\xi } e^{-2\pi i m p \, \xi},
+\end{align*}\]</div>
+<p>where for a slit with width <span class="math notranslate nohighlight">\(a\)</span> we have according to <a class="reference internal" href="#equation-eq-fspleet">(403)</a>:</p>
+<div class="math notranslate nohighlight">
+\[
+{\cal F}(W_{slit})(\xi) = a \frac{\sin(\pi a \xi)}{\pi a \xi}.\]</div>
+<p>There must obviously hold <span class="math notranslate nohighlight">\(a&lt; p\)</span>.
+Using</p>
+<div class="math notranslate nohighlight" id="equation-eq-geom">
+<span class="eqno">(407)<a class="headerlink" href="#equation-eq-geom" title="Link to this equation">#</a></span>\[\begin{split}\begin{align*}
+\sum_{m=1}^M e^{-2\pi i m p \, \xi } &amp;= e^{-2\pi i p\xi } \frac{ 1- e^{-2\pi i M p \, \xi}}{1-e^{-2\pi i p \, \xi}}  \\
+&amp;= e^{-\pi i (M +1) p \, \xi}\, \frac{ e^{i \pi M p \, \xi} - e^{-i \pi M p \, \xi}}{e^{i \pi p \, \xi}- e^{-i \pi p \, \xi}}  \\
+&amp;= e^{-\pi i (M+1) p \, \xi} \, \frac{ \sin( \pi Mp \, \xi)}{\sin(\pi p \, \xi)},
+\end{align*}\end{split}\]</div>
+<p>we get</p>
+<div class="math notranslate nohighlight" id="equation-eq-ftau">
+<span class="eqno">(408)<a class="headerlink" href="#equation-eq-ftau" title="Link to this equation">#</a></span>\[
+{\cal F}(U_0)(\xi) =
+{\cal F}(W_{slit})(\xi) \frac{\sin( \pi M p \xi)}{ \sin(\pi p \xi)}.
+\]</div>
+<p>The intensity of the Fraunhofer far ield is:</p>
+<div class="math notranslate nohighlight" id="equation-eq-ftau3">
+<span class="eqno">(409)<a class="headerlink" href="#equation-eq-ftau3" title="Link to this equation">#</a></span>\[\begin{align*}
+I(x,z)= \left| \frac{1}{\lambda z}\mathcal{F}(U_0)\left(\frac{x}{\lambda z}\right) \right|^2 = \frac{1}{\lambda^2 z^2}\,
+\left|{\cal F}(W_{slit})\left(\frac{\theta}{\lambda}\right)\right|^2 \,
+\frac{\sin^2\left( \pi M\frac{p}{\lambda} \, \theta \right)}{ \sin^2\left(\pi \frac{p}{\lambda}\, \theta \right)}.
+\end{align*}\]</div>
+<p>where <span class="math notranslate nohighlight">\(\theta=x/z\)</span> is the diffraction angle. The factor</p>
+<div class="math notranslate nohighlight" id="equation-eq-fastosc">
+<span class="eqno">(410)<a class="headerlink" href="#equation-eq-fastosc" title="Link to this equation">#</a></span>\[
+\frac{\sin^2\left( \pi M \frac{p}{\lambda} \, \theta \right)}{ \sin^2\left(\pi \frac{p}{\lambda}\, \theta \right)},
+\]</div>
+<p>is, due to the factor <span class="math notranslate nohighlight">\(M\)</span> under the sinus in the numerator, a fast oscillating function of <span class="math notranslate nohighlight">\(\theta\)</span> while <span class="math notranslate nohighlight">\(|{\cal F}(W_{slit})(\theta/\lambda)|^2\)</span> is a slowly varying envelope.
+This is a manifestation of the property of the Fourier transform that small details of a structure (e.g. the size of a single slit) cause large scale features of the far field pattern, whereas large scale properties such as the length <span class="math notranslate nohighlight">\(M p\)</span> of the total structure, cause quickly changing features. This is illustrated in <a class="reference internal" href="#fig-6-11-multipleslits712"><span class="std std-numref">Fig. 97</span></a>.</p>
+<p>The diffraction amplitude is maximum for angles where both the denominator and numerator of <a class="reference internal" href="#equation-eq-fastosc">(410)</a> vanish:</p>
+<div class="math notranslate nohighlight" id="equation-eq-orderm">
+<span class="eqno">(411)<a class="headerlink" href="#equation-eq-orderm" title="Link to this equation">#</a></span>\[\boxed{\begin{align*}
+\theta_m= \frac{ m \lambda}{ p },\;\;\; m=0,\pm1, \pm 2, \ldots, \hspace{0.6cm} \textbf{diffraction orders.}
+\end{align*}}\]</div>
+<p>These directions are called diffraction orders and since</p>
+<div class="math notranslate nohighlight" id="equation-eq-maxm">
+<span class="eqno">(412)<a class="headerlink" href="#equation-eq-maxm" title="Link to this equation">#</a></span>\[
+\frac{\sin^2\left( \pi M\frac{p}{\lambda} \, \theta_m \right)}{ \sin^2\left(\pi \frac{p}{\lambda}\, \theta_m \right)} = M^2,
+\]</div>
+<p>which follows by applying l’H^{o}pital’s rule, the intensity of the m<span class="math notranslate nohighlight">\(^{th}\)</span> order is</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}
+\frac{M^2}{\lambda^2 z^2} \, \left| {\cal F}(W_{slit})\left(\frac{m}{p}\right) \right|^2,
+\end{align*}\]</div>
+<p>hence it is proportional to the square of the number of periods and to the squared modulus of the envelope in <span class="math notranslate nohighlight">\(\theta_m\)</span>.</p>
+<p>Between two adjacent diffraction orders, <a class="reference internal" href="#equation-eq-fastosc">(410)</a> has <span class="math notranslate nohighlight">\(M-1\)</span> zeros and <span class="math notranslate nohighlight">\(M-2\)</span> secondary maxima (see <a class="reference internal" href="#fig-6-11-multipleslits712"><span class="std std-numref">Fig. 97</span></a>).
+The angular width of a diffraction order is half the angular distance to the nearest zeros next to the order, i.e.</p>
+<div class="math notranslate nohighlight" id="equation-eq-widthorder">
+<span class="eqno">(413)<a class="headerlink" href="#equation-eq-widthorder" title="Link to this equation">#</a></span>\[\boxed{\begin{align*}
+\Delta \theta = \frac{\lambda}{M p},
+\hspace{1cm} \textbf{angular width of a diffraction order.}
+\end{align*}}\]</div>
+<p>If there are more slits the intensity peaks into which the energy is diffracted are narrower and the peaks are higher.</p>
+<figure class="align-default" id="fig-6-11-multipleslits712">
+<img alt="../../_images/6_11_MultipleSlits712.png" src="../../_images/6_11_MultipleSlits712.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 97 </span><span class="caption-text">An illustration of a diffraction pattern of a series of five slits.</span><a class="headerlink" href="#fig-6-11-multipleslits712" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>As explained above, there holds in the Fraunhofer far field: <span class="math notranslate nohighlight">\(\theta= x/z&lt;1\)</span>. This sets a limit to the number of diffracted orders:</p>
+<div class="math notranslate nohighlight" id="equation-eq-finite">
+<span class="eqno">(414)<a class="headerlink" href="#equation-eq-finite" title="Link to this equation">#</a></span>\[\begin{align*}
+|m|\leq p/\lambda.
+\end{align*}\]</div>
+<p>Hence, the larger the ratio of the period and the wavelength, the more diffraction orders.</p>
+<p>The property <a class="reference internal" href="#equation-eq-orderm">(411)</a> that the diffraction orders <span class="math notranslate nohighlight">\( m\neq 0\)</span> depend on wavelength is used to separate wavelengths. <strong>Grating spectrometers</strong> use periodic structures such as an array of slits to very accurately separate and measure wavelengths. The <span class="math notranslate nohighlight">\(m\)</span>th diffraction order of two wavelengths <span class="math notranslate nohighlight">\(\lambda_1\)</span> and <span class="math notranslate nohighlight">\(\lambda_2&gt;\lambda_1\)</span> are just separated if</p>
+<div class="math notranslate nohighlight">
+\[
+m\frac{\lambda_2}{p} &gt; m\frac{\lambda_1}{p} + \Delta \theta =
+m\frac{\lambda_1}{p } + \frac{\lambda_1}{M p},\]</div>
+<p>which implies with <span class="math notranslate nohighlight">\(\Delta \lambda=\lambda_2-\lambda_1\)</span> and <span class="math notranslate nohighlight">\(\lambda=\lambda_1\)</span> that</p>
+<div class="math notranslate nohighlight" id="equation-eq-gratres">
+<span class="eqno">(415)<a class="headerlink" href="#equation-eq-gratres" title="Link to this equation">#</a></span>\[
+\frac{\Delta \lambda}{\lambda}&gt; \frac{1}{m M}.
+\]</div>
+<p>It follows that the resolution is higher when there are more slits and for larger diffraction order. However, the disadvantage of using higer diffraction orders is that often their intensity is less.
+For a grating with 1000 periods one can obtain a resolution of <span class="math notranslate nohighlight">\(\Delta \lambda/\lambda =10^{-3}\)</span> in the first order.</p>
+<p>It should be remarked that a grating is obtained for any periodic variation of the refractive index. If the proper transmission function for the unit cell of the grating is substituted for <span class="math notranslate nohighlight">\(W_{slit}\)</span>, the formulae above also give the Fraunhofer far field of such more general diffraction gratings. By changing the unit cell, the envelope of the diffraction pattern can be changed and a certain order can be given more intensity. In <a class="reference internal" href="#fig-6-12-blazed-grating"><span class="std std-numref">Fig. 98</span></a> a so-called blazed grating is shown which is used in reflection and which has a strong first diffracted order for a certain angle of incidence.</p>
+<figure class="align-default" id="fig-6-12-blazed-grating">
+<img alt="../../_images/6_12_Blazed_grating.png" src="../../_images/6_12_Blazed_grating.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 98 </span><span class="caption-text">Diffraction grating used in reflection with a so-called blazed unit cell.</span><a class="headerlink" href="#fig-6-12-blazed-grating" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p><strong>Remark</strong>. A periodic row of slits is an example of a diffraction grating. A grating is a periodic structure, i.e. the refractive index is a periodic function of position.
+Structures can be periodic in one, two and three directions.
+A crystal acts as a three-dimensional grating whose period is the period of the crystal, which typically is a few Angstrom.
+Electromagnetic waves with wavelength less than one Angstrom are called x-rays. When a beam of x-rays illuminates a crystal, a detector in the far field measures the Fraunhofer diffraction pattern given by the intensity of the Fourier transform of the refracted near field. These diffraction orders of crystals for x-rays where discovered by Von Laue and are used to study the atomic structure of crystals.</p>
+</section>
+</section>
+<section id="fraunhofer-diffraction-revisited">
+<h2>Fraunhofer Diffraction Revisited<a class="headerlink" href="#fraunhofer-diffraction-revisited" title="Link to this heading">#</a></h2>
+<p>Fraunhofer diffraction patterns can qualitatively be explained by considering directions in which destructive and constructive interferences occur.
+Consider two mutually coherent point sources <span class="math notranslate nohighlight">\(S_1\)</span>, <span class="math notranslate nohighlight">\(S_2\)</span> on the <span class="math notranslate nohighlight">\(x\)</span>-axis as shown in <a class="reference internal" href="#fig-6-13-2sources"><span class="std std-numref">Fig. 99</span></a>. We assume that these point sources are in phase. On a screen at large distance <span class="math notranslate nohighlight">\(z\)</span> an interference pattern is observed. If the distance <span class="math notranslate nohighlight">\(z\)</span> of the screen is very large, the spherical wave fronts emitted by the point sources are almost plane at the screen and the field is the Fraunhofer far field of the two point sources. In point <span class="math notranslate nohighlight">\(P\)</span> on the screen at a distance <span class="math notranslate nohighlight">\(x\)</span> above the <span class="math notranslate nohighlight">\(z\)</span>-axis the optical path differences of the waves emitted by the two sources is approximately given by <span class="math notranslate nohighlight">\(S_2Q=a \theta\)</span>, where <span class="math notranslate nohighlight">\(\theta=x/z\)</span> is assumed small. Hence constructive interference occurs for angles <span class="math notranslate nohighlight">\(\theta\)</span> such that
+<span class="math notranslate nohighlight">\(S_2Q=m\lambda\)</span> for some integer <span class="math notranslate nohighlight">\(m\)</span>, i.e. when</p>
+<div class="math notranslate nohighlight" id="equation-eq-constr">
+<span class="eqno">(416)<a class="headerlink" href="#equation-eq-constr" title="Link to this equation">#</a></span>\[\begin{align*}
+\theta = m \frac{\lambda}{a}, \hspace{1cm} \text{constructive interference}.
+\end{align*}\]</div>
+<p>Destructive interference occurs when the path length difference satisfies <span class="math notranslate nohighlight">\(S_2Q=\lambda/2 + m \lambda\)</span> for some integer <span class="math notranslate nohighlight">\(m\)</span>, hence for angles</p>
+<div class="math notranslate nohighlight" id="equation-eq-destruct">
+<span class="eqno">(417)<a class="headerlink" href="#equation-eq-destruct" title="Link to this equation">#</a></span>\[\begin{align*}
+\theta = ( 1/2 + m)\frac{\lambda}{a} \hspace{1cm} \text{destructive interference}.
+\end{align*}\]</div>
+<p>If the point sources have the same strength, their fields perfectly cancel for these angles.</p>
+<figure class="align-default" id="fig-6-13-2sources">
+<img alt="../../_images/6_13_2Sources.png" src="../../_images/6_13_2Sources.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 99 </span><span class="caption-text">Interference of to mutually coherent point sources. For <span class="math notranslate nohighlight">\(z\)</span> very large points <span class="math notranslate nohighlight">\(P\)</span> where constructive and destructive interference occurs are such that for some integer <span class="math notranslate nohighlight">\(m\)</span>: <span class="math notranslate nohighlight">\(S_2Q=m \lambda\)</span> and <span class="math notranslate nohighlight">\(S_2Q=(1/2 + m) \lambda\)</span>, respectively.</span><a class="headerlink" href="#fig-6-13-2sources" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Now consider a slit as shown in <a class="reference internal" href="#fig-6-14-slits"><span class="std std-numref">Fig. 100</span></a> which is illuminated by a perpendicular incident plane wave.
+By the Huygens-Fresnel principle, the field at a screen far from the slit is the sum of the fields of point sources in the aperture, with strengths proportional to the field in the slit at the position of the point sources. When the slit is illuminated by a plane wave at perpendicular incidence, all point sources are in phase and have equal strength. Divide the slit in two equal halves as shown in <a class="reference internal" href="#fig-6-14-slits"><span class="std std-numref">Fig. 100</span></a>.
+The point sources in the slit can be arranged into pairs, of which one point source is in the upper half of the slit and the other is at the equivalent position (at distance <span class="math notranslate nohighlight">\(a/2\)</span> from the other point source) in the lower half of the slit. Let <span class="math notranslate nohighlight">\(\theta\)</span> be an angle for which the two point sources of a pair cancel each other i.e.</p>
+<div class="math notranslate nohighlight" id="equation-eq-destruct2">
+<span class="eqno">(418)<a class="headerlink" href="#equation-eq-destruct2" title="Link to this equation">#</a></span>\[\begin{align*}
+\theta= (1/2+ m) \frac{\lambda}{a/2} = (1+ 2m)\frac{\lambda}{a},
+\end{align*}\]</div>
+<p>since the distance between the point sources is <span class="math notranslate nohighlight">\(a/2\)</span>.
+By translating the pair of point sources through the slits, it follows that both half slits perfectly cancel each other for these angles. In this way we have found the angles <span class="math notranslate nohighlight">\(\theta = m\lambda/a\)</span> with <span class="math notranslate nohighlight">\(m\)</span> odd for which destructive interference occurs. Destructive interference for <span class="math notranslate nohighlight">\(m\)</span> even can be derived by further subdivisions of the aperture.</p>
+<figure class="align-default" id="fig-6-14-slits">
+<img alt="../../_images/6_14_Slit.png" src="../../_images/6_14_Slit.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 100 </span><span class="caption-text">By dividing the slit into two slits of size <span class="math notranslate nohighlight">\(a/2\)</span> each and considering pairs of point sources of which one is in the upper half of the slit and the other is at the corresponding position in the lower half, angles where destructive interference occurs between these point sources lead to minima in the diffraction pattern. Note that the point sources have corresponding positions in the two parts of the slit if their distance is <span class="math notranslate nohighlight">\(a/2\)</span>.</span><a class="headerlink" href="#fig-6-14-slits" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>In general it is easier to find the angles for which the far field vanishes than to find (local) maxima of the field. An exception is the case of a diffraction grating. It follows from <a class="reference internal" href="#fig-6-15-grating"><span class="std std-numref">Fig. 101</span></a> that there will be constructive interference between adjacent periods, and hence for all periods, for angles for which the distance <span class="math notranslate nohighlight">\(SQ\)</span> in <a class="reference internal" href="#fig-6-15-grating"><span class="std std-numref">Fig. 101</span></a> is a multiple of the wavelength, i.e. for</p>
+<div class="math notranslate nohighlight" id="equation-eq-order">
+<span class="eqno">(419)<a class="headerlink" href="#equation-eq-order" title="Link to this equation">#</a></span>\[\begin{align*}
+\theta = m \frac{\lambda}{p},
+\end{align*}\]</div>
+<p>which corresponds to the direction of the diffraction orders. For other angles the phases of the fields of the different periods differ widely and therefore the fields almost cancel at these angles when there are many periods. This explains that for a diffraction grating of many periods, the far field intensity is highly concentrated in particular directions given by the orders <a class="reference internal" href="#equation-eq-order">(419)</a> which depend only on the ratio of the wavelength and the period.</p>
+<figure class="align-default" id="fig-6-15-grating">
+<img alt="../../_images/6_15_Grating.png" src="../../_images/6_15_Grating.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 101 </span><span class="caption-text">If the angle <span class="math notranslate nohighlight">\(\theta\)</span> is such that <span class="math notranslate nohighlight">\(SQ\)</span> is a multiple of the wavelength, two adjacent periods, and hence all periods of the grating, constructively interfere. These angles correspond to the diffraction orders.</span><a class="headerlink" href="#fig-6-15-grating" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="fourier-optics">
+<h2>Fourier Optics<a class="headerlink" href="#fourier-optics" title="Link to this heading">#</a></h2>
+<p>In this section we apply diffraction theory to a lens.
+We consider in particular the focusing of a parallel beam and the imaging of an object.</p>
+<section id="focusing-of-a-parallel-beam">
+<h3>Focusing of a Parallel Beam<a class="headerlink" href="#focusing-of-a-parallel-beam" title="Link to this heading">#</a></h3>
+<p>A lens induces a local phase change to an incident field in proportion to the local thickness of the lens. Let a plane wave which propagates parallel to the optical axis be incident on a positive lens. In Gaussian geometrical optics the incident rays are all focused into the image focal point. According to the Principle of Fermat, all rays have travelled the <strong>same optical distance</strong> when they intersect in the image focal point where they constructively interfere and cause an intensity maximum. The wavefronts are in the focal region pats of <strong>spheres with centre the focal point</strong> and cut off by the cone with the focal point as top and opening angle <span class="math notranslate nohighlight">\(2 a/f\)</span>, as shown in <a class="reference internal" href="#fig-6-16-focusing-lens"><span class="std std-numref">Fig. 102</span></a>. Behind the focal point, there is a second cone with again spherical wavefronts, but there the light is propagating <em>away</em> from the focal point. According to Gaussian geometrical optics it is in image space completely dark outside of the two cones in <a class="reference internal" href="#fig-6-16-focusing-lens"><span class="std std-numref">Fig. 102</span></a>. However, as we will show, in diffraction optics this is not true.</p>
+<p>We assume that the lens is thin and choose as origin of the coordinate system the centre of the thin lens with the positive <span class="math notranslate nohighlight">\(z\)</span>-axis along the optical axis. Let <span class="math notranslate nohighlight">\(f_i\)</span> be the <span class="math notranslate nohighlight">\(z\)</span>-coordinate of the image focal point according to Gaussian geometrical optics. Then <span class="math notranslate nohighlight">\((0,0,f_i)\)</span> is the image focal point. Let <span class="math notranslate nohighlight">\((x,y,z)\)</span> be a point between the lens and this focal point. According to geometrical optics the field in <span class="math notranslate nohighlight">\((x,y,z)\)</span> is proportional to</p>
+<div class="math notranslate nohighlight" id="equation-eq-sphericalw">
+<span class="eqno">(420)<a class="headerlink" href="#equation-eq-sphericalw" title="Link to this equation">#</a></span>\[\begin{split}
+\left\{
+\begin{array}{lr}
+\frac{e^{- i k \sqrt{x^2 + y^2 + (z-f_i)^2}-i\omega t}}{\sqrt{x^2 + y^2 + (z-f_i)^2}},
+&amp;\text{if } (x,y,z) \text{ is inside the cone}, \\
+0,
+&amp;\text{ if } (x,y,z) \text{ is outside the cone},
+\end{array}\right.
+\end{split}\]</div>
+<p>where we have included the time-dependence. Indeed the surfaces of constant phase:</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}
+-\sqrt{x^2 + y^2 + (z-f_i)^2}-\omega t=\text{constant},
+\end{align*}\]</div>
+<p>are spheres with centre the focal point. For increasing time, these spheres converge to the focal point, while the amplitude increases as the distance to the focal point decreases, so that energy is preserved.</p>
+<p><strong>Remark</strong>.
+For a point <span class="math notranslate nohighlight">\((x,y,z)\)</span> to the <strong>right</strong> of the focal point, i.e. for <span class="math notranslate nohighlight">\(z&gt;f_i\)</span>, the spherical wave fronts propagate away from the focal point and therefore there <span class="math notranslate nohighlight">\(-ik\)</span> should be replaced by <span class="math notranslate nohighlight">\(+ik\)</span> in the exponent in <a class="reference internal" href="#equation-eq-sphericalw">(420)</a>.</p>
+<p>The exit pupil of the lens is in the plane <span class="math notranslate nohighlight">\(z=0\)</span> where, according to <a class="reference internal" href="#equation-eq-sphericalw">(420)</a>, the field is</p>
+<div class="math notranslate nohighlight" id="equation-eq-lens1">
+<span class="eqno">(421)<a class="headerlink" href="#equation-eq-lens1" title="Link to this equation">#</a></span>\[\begin{align*}
+1_{\bigodot_a}(x,y) \frac{e^{-i k \sqrt{x^2 + y^2 + f_i^2}}}{
+\sqrt{ x^2 + y^2 + f_i^2}},
+\end{align*}\]</div>
+<p>where the time dependence has been omitted and</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align*}
+1_{\bigodot_a}(x,y)= \left\{ \begin{array}{l}1 \;\;\; \text{ if } x^2+y^2&lt; a^2, \\0 \;\;\; \text{ otherwise}
+\end{array}
+\right.
+\end{align*}\end{split}\]</div>
+<p>i.e. <span class="math notranslate nohighlight">\(1_{\bigodot_a}(x,y)=1\)</span> for <span class="math notranslate nohighlight">\((x,y)\)</span> in the exit pupil of the lens and <span class="math notranslate nohighlight">\(=0\)</span> otherwise.
+If <span class="math notranslate nohighlight">\(a/f_i\)</span> is sufficiently small, we may replace the distance <span class="math notranslate nohighlight">\(\sqrt{x^2 +y^2 + f_i^2}\)</span> between a point in the exit pupil and the image focal point in the denominator of <a class="reference internal" href="#equation-eq-lens1">(421)</a> by <span class="math notranslate nohighlight">\(f_i\)</span>. This is not allowed in the exponent, however, because of the multiplication by the large wave number <span class="math notranslate nohighlight">\(k\)</span>. In the exponent we therefore use instead the first two terms of the Taylor series <a class="reference internal" href="#equation-eq-approxpar">(383)</a>:</p>
+<div class="math notranslate nohighlight" id="equation-eq-parax1">
+<span class="eqno">(422)<a class="headerlink" href="#equation-eq-parax1" title="Link to this equation">#</a></span>\[\begin{align*}
+\sqrt{x^2 + y^2 + f_i^2} = f_i \sqrt{ 1 + \frac{x^2 + y^2 }{f_i^2}} \approx f_i + \frac{x^2 + y^2}{2f_i},
+\end{align*}\]</div>
+<p>which is valid for <span class="math notranslate nohighlight">\(a/f_i\)</span> sufficiently small. Then <a class="reference internal" href="#equation-eq-lens1">(421)</a> becomes:</p>
+<div class="math notranslate nohighlight" id="equation-eq-lens2">
+<span class="eqno">(423)<a class="headerlink" href="#equation-eq-lens2" title="Link to this equation">#</a></span>\[\begin{align*}
+1_{\bigodot_a}(x,y) e^{-i k \frac{x^2 + y^2}{2 f_i}},
+\end{align*}\]</div>
+<p>where we dropped the constant factors <span class="math notranslate nohighlight">\(e^{i k f_i}\)</span> and <span class="math notranslate nohighlight">\(1/f_i\)</span>.
+For a general field <span class="math notranslate nohighlight">\(U_0(x,y)\)</span> incident on the lens, i.e. in the entrance pupil, the lens applies a transformation such that the field in the exit plane becomes:\</p>
+<div class="math notranslate nohighlight" id="equation-eq-lens3">
+<span class="eqno">(424)<a class="headerlink" href="#equation-eq-lens3" title="Link to this equation">#</a></span>\[\boxed{\begin{align*}
+&amp; U_0(x,y) \to U_0(x,y) 1_{\bigodot_a}(x,y) e^{- i k \frac{x^2 + y^2}{2 f_i}}, \end{align*}}\]</div>
+<p>The function that multiplies <span class="math notranslate nohighlight">\(U_0(x,y)\)</span> is the <strong>transmission function of the lens</strong>:</p>
+<div class="math notranslate nohighlight" id="equation-eq-translens">
+<span class="eqno">(425)<a class="headerlink" href="#equation-eq-translens" title="Link to this equation">#</a></span>\[\begin{align*}
+\tau_{\text{lens}}(x,y) = 1_{\bigodot_a}(x,y) e^{-ik \frac{x^2 + y^2}{2 f_i}}.
+\end{align*}\]</div>
+<p>This result makes sense: in the centre <span class="math notranslate nohighlight">\((x,y)=0\)</span> the lens is thickest, so the phase is shifted the most
+(but we can define this phase shift to be zero because only phase <em>differences</em> matter, not absolute phase).
+As is indicated by the minus-sign in the exponent, the further you move away from the centre of the lens, the less the phase is shifted. For shorter <span class="math notranslate nohighlight">\(f_i\)</span>, the lens focuses more strongly, so the phase shift changes more rapidly as a function of the radial coordinate. Note that transmission function <a class="reference internal" href="#equation-eq-translens">(425)</a> has modulus 1 so that energy is conserved.</p>
+<p>The field at the right of <a class="reference internal" href="#equation-eq-lens3">(424)</a> is used in diffraction optics as the field in the exit pupil. But instead of using ray tracing, the field in the focal region is computed using diffraction integrals.
+We substitute the field in the exit pupil in the Fresnel diffraction integral <a class="reference internal" href="#equation-eq-fresnelf">(385)</a> and obtain:</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}
+U(x,y,z)=\frac{e^{ikz}e^{\frac{ik(x^2+y^2)}{2z}}}{i\lambda z} \mathcal{F}\left\{U_0(x',y') 1_{\bigodot_a}(x',y') e^{ik\frac{x'^2+y'^2}{2}\left(\frac{1}{z}-\frac{1}{f_i}\right)}\right\}\left(\frac{x}{\lambda z },\frac{y}{ \lambda z }\right).
+\end{align*}\]</div>
+<p>The intensity <span class="math notranslate nohighlight">\(I=|U|^2\)</span> is shown at the bottom left of <a class="reference internal" href="#fig-6-16-focusing-lens"><span class="std std-numref">Fig. 102</span></a>. It is seen that the intensity does not monotonically increase for decreasing distance to the focal point. Instead, secondary maxima occur along the optical axis. Also the boundary of the light cone is not sharp, as predicted by geometrical optics, but diffuse. The bottom right of <a class="reference internal" href="#fig-6-16-focusing-lens"><span class="std std-numref">Fig. 102</span></a> shows the phase in the focal region. The wave fronts are close to but not exactly spherical inside the cones.</p>
+<figure class="align-default" id="fig-6-16-focusing-lens">
+<img alt="../../_images/6_16_Focusing_Lens_Sketch_BW.png" src="../../_images/6_16_Focusing_Lens_Sketch_BW.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 102 </span><span class="caption-text">Top: wavefronts of the incident plane wave and the focused field according to Gaussian geometrical optics. There is no light outside of the two cones. Bottom left: amplitude as predicted by diffraction optics. The boundary of the cones is diffuse and it is not absolutely dark outside of the cones. Furthermore, the intensity does not increase monotonically with decreasing distance to the focal point, as predicted by geometrical optics. Bottom right: phase of the focused field as predicted by diffraction optics.</span><a class="headerlink" href="#fig-6-16-focusing-lens" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>For points in the image focal plane of the lens, i.e. <span class="math notranslate nohighlight">\(z=f_i\)</span>, we have</p>
+<div class="math notranslate nohighlight" id="equation-fourierlens">
+<span class="eqno">(426)<a class="headerlink" href="#equation-fourierlens" title="Link to this equation">#</a></span>\[\begin{align*}
+U(x,y,f_i)= \frac{e^{ikf_i}e^{\frac{ik(x^2+y^2)}{2f_i}}}{i\lambda f_i} \mathcal{F}\left\{U_0(x',y')1_{\bigodot_a}(x',y') \right\}\left(\frac{ x}{ \lambda f_i},\frac{ y}{ \lambda f_i }\right),
+\end{align*}\]</div>
+<p>which is the same as the Fraunhofer integral for propagation over the distance <span class="math notranslate nohighlight">\(f_i\)</span>!</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The field in the entrance pupil of the lens and the field in the focal plane are related by a Fourier transform (apart from a quadratic phase factor in front of the integral).</p>
+</div>
+<p>It can be shown that the fields in the front focal plane <span class="math notranslate nohighlight">\(U(x,y,-f_i)\)</span> and the back focal plane <span class="math notranslate nohighlight">\(U(x,y,f_i)\)</span> are related <strong>exactly</strong> by a Fourier transform, i.e. without the quadratic phase factor<sup><a class="footnote-reference brackets" href="#id16" id="id6" role="doc-noteref"><span class="fn-bracket">[</span>6<span class="fn-bracket">]</span></a></sup>.
+So a lens performs a Fourier transform. Let us see if that agrees with some of the facts we know from geometrical optics.</p>
+<ol class="arabic simple">
+<li><p>We know from Gaussian geometrical optics that if we illuminate a positive lens with rays parallel to the optical axis, these rays all intersect in the image focal point. This corresponds with the fact that for <span class="math notranslate nohighlight">\(U_0(x,y)=1\)</span> (i.e. plane wave illumination, neglecting the finite aperture of the lens, i.e. neglecting diffraction due to the finite size of the pupil), the Fourier transform of the pupil field is a delta peak:</p></li>
+</ol>
+<div class="math notranslate nohighlight" id="equation-eq-f1">
+<span class="eqno">(427)<a class="headerlink" href="#equation-eq-f1" title="Link to this equation">#</a></span>\[\begin{align*}
+\mathcal{F}(U_0)\left(\frac{k_x}{2\pi},\frac{k_y}{2\pi}\right)=\delta\left(\frac{k_x}{2\pi}\right)\delta\left(\frac{k_y}{2\pi}\right),
+\end{align*}\]</div>
+<p>which represents the perfect focused spot (without diffraction).</p>
+<ol class="arabic simple" start="2">
+<li><p>If in Gaussian geometrical optics we illuminate a lens with tilted parallel rays of light (a plane wave propagating in an oblique direction), then the point in the back focal plane where the rays intersect is laterally displaced. A tilted plane wave is described by <span class="math notranslate nohighlight">\(U_0(\mathbf{r})=\exp(i\mathbf{k}_0\cdot\mathbf{r})\)</span>, and its Fourier transform with respect to <span class="math notranslate nohighlight">\((x,y)\)</span>
+is given by</p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[
+\mathcal{F}\{U_0\}\left(\frac{k_x}{2\pi},\frac{k_y}{2\pi},z\right)=\delta\left(\frac{k_x-k_{0,x}}{2\pi}\right)\delta\left(\frac{k_y-k_{0,y}}{2\pi}\right),\]</div>
+<p>which is indeed a shifted delta peak (i.e. a shifted focal spot).</p>
+<p>It seems that the diffraction model of light confirms what we know from geometrical optics. But in the previous two examples we discarded the influence of the finite size of the pupil, i.e. we have left out of consideration the function <span class="math notranslate nohighlight">\(1_{\bigodot_a}\)</span> in calculating the Fourier transform. If <span class="math notranslate nohighlight">\(U_0(x,y)=1\)</span> in the entrance pupil and we take the finite size of the pupil properly into account, the <span class="math notranslate nohighlight">\(\delta\)</span>-peaks become blurred: the focused field is then given by the Fourier transform of the circular disc with radius <span class="math notranslate nohighlight">\(a\)</span>, evaluated at spatial frequencies
+<span class="math notranslate nohighlight">\(\xi = \frac{x}{\lambda f_i}\)</span>, <span class="math notranslate nohighlight">\(\eta =\frac{ y}{\lambda f_i}\)</span>. This field is called the <strong>Airy spot</strong> and is given by (See <a class="reference internal" href="../Chap9_Appendix/Appendix_G_2022Clean.html#equation-eq-fi13">(525)</a>):</p>
+<div class="math notranslate nohighlight" id="equation-eq-airy-image">
+<span class="eqno">(428)<a class="headerlink" href="#equation-eq-airy-image" title="Link to this equation">#</a></span>\[\boxed{\begin{align*}
+U(x,y,z)=\frac{ \pi a^2}{\lambda f_i} \, \frac{ 2 J_1\left(2\pi \frac{ a }{\lambda f_i } \sqrt{x^2 + y^2} \right) }
+{ \frac{2\pi a }{\lambda f_i } \sqrt{x^2 + y^2} }, \hspace{1cm} \textbf{Airy pattern for focusing},
+\end{align*}}\]</div>
+<p>where <span class="math notranslate nohighlight">\(J_1\)</span> is the Bessel function of the first kind and where the phase factors in front of the Fourier transform have been omitted. The pattern is shown in <a class="reference internal" href="#fig-6-17-airyspot"><span class="std std-numref">Fig. 103</span></a>. It is circular symmetric and consists of a central maximum surrounded by concentric rings of alternating zeros and secondary maxima with decreasing amplitudes. In cross-section, as function of <span class="math notranslate nohighlight">\(r=\sqrt{x^2+y^2}\)</span>, the Airy pattern is similar (but not identical) to the <span class="math notranslate nohighlight">\(\text{ sinc}\)</span>-function. From the uncertainty principle illustrated in <a class="reference internal" href="#fig-6-07-uncertainty"><span class="std std-numref">Fig. 93</span></a> it follows that the size of the focal spot decreases as <span class="math notranslate nohighlight">\(a\)</span> increases, and from <a class="reference internal" href="#equation-eq-airy-image">(428)</a> we see that the Airy function is a function of the dimensionless variable <span class="math notranslate nohighlight">\(a r/(\lambda f_i)\)</span>. Hence the focal spot becomes narrower as <span class="math notranslate nohighlight">\(a/(\lambda f_i)\)</span> increases. The Numerical Aperture (<span class="math notranslate nohighlight">\(\textit{NA}\)</span>) is defined by</p>
+<div class="math notranslate nohighlight">
+\[\boxed{ \begin{align*}
+\text{NA}=\frac{a}{f_i}, \hspace{1cm} \textbf{numerical aperture}.
+\end{align*}}\]</div>
+<p>Since the first zero of the Airy pattern occurs for <span class="math notranslate nohighlight">\(a r/(\lambda f_i)= 0.61\)</span>, the width of the focal spot can be estimated by</p>
+<div class="math notranslate nohighlight" id="equation-eq-resolution">
+<span class="eqno">(429)<a class="headerlink" href="#equation-eq-resolution" title="Link to this equation">#</a></span>\[\boxed{\begin{align*}
+\textbf{Size of focal spot} \approx 0.61 \frac{\lambda}{\text{NA}}
+\end{align*}}\]</div>
+<figure class="align-default" id="fig-6-17-airyspot">
+<img alt="../../_images/AiryDisk_Color_220405.png" src="../../_images/AiryDisk_Color_220405.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 103 </span><span class="caption-text">Left: cross section of the field of the Airy pattern. Right: intensity of the Airy pattern.</span><a class="headerlink" href="#fig-6-17-airyspot" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p><strong>Remark</strong>.
+In the simple case of a single thin lens, the entrance and exit pupils coincide with the lens itself. As has been explained in <a class="reference internal" href="../Chap2_Geometrical_optics/GeometricalOptics_2022_01Clean.html#sec-stops"><span class="std std-ref">Stops</span></a>, the exit pupil in systems consisting of several lenses is the real or virtual image of the aperture stop under all optical lenses to the right of the stop. To model the effect of diffraction in such more complicated systems, diffraction is assumed to take place entirely in the exit pupil. The field in the exit pupil is first determined by non-paraxial ray tracing and is then integrated over the exit pupil using the Fresnel diffraction integral.</p>
+</section>
+<section id="imaging-by-a-lens">
+<h3>Imaging by a lens<a class="headerlink" href="#imaging-by-a-lens" title="Link to this heading">#</a></h3>
+<p>It follows from the derivations in the previous section that the Airy pattern is the image of a point source infinitely far in front of a lens. In this section we study the imaging of a general object at finite distance to the lens.
+Consider first a real point object on the optical axis with coordinate <span class="math notranslate nohighlight">\(z=s_o&lt;f_o\)</span> to the left of the object focal point of a positive lens with image focal coordinate <span class="math notranslate nohighlight">\(f_i&gt;0\)</span>. This lens will form a real image with positive coordinate <span class="math notranslate nohighlight">\(s_i&gt;0\)</span>.</p>
+<p>The field in image space is derived using the Fresnel diffraction integral, similar to the focused field in the previous section. We postulate that the lens transforms the field radiated by the point object into a spherical wave in the exit pupil, which converges to the ideal image point of Gaussian geometrical optics. We substitute this spherical pupil field in the Fresnel diffraction integral to compute the field in image space. Then for an object point on the optical axis we find the same Airy pattern as in <a class="reference internal" href="#fig-6-17-airyspot"><span class="std std-numref">Fig. 103</span></a>, except that the variable <span class="math notranslate nohighlight">\(a r/(\lambda f_i)\)</span> is replaced by
+<span class="math notranslate nohighlight">\(a r/(\lambda s_i)\)</span>,
+where <span class="math notranslate nohighlight">\(s_i\)</span> is the image coordinate as given by the Lensmaker’s Formula. This field is called the Point Spread Function (PSF):</p>
+<div class="math notranslate nohighlight" id="equation-eq-psf">
+<span class="eqno">(430)<a class="headerlink" href="#equation-eq-psf" title="Link to this equation">#</a></span>\[\boxed{\begin{align*}
+\text{PSF}(x,y) =\frac{ \pi a^2}{\lambda s_i} \frac{J_1\left(2\pi \frac{ a }{\lambda s_i } \sqrt{x^2 + y^2} \right) }{ \frac{2\pi a }{\lambda s_i } \sqrt{x^2 + y^2} }, \hspace{1cm} \textbf{Airy pattern for imaging}.
+\end{align*}}\]</div>
+<p>For object points that are not on the optical axis, the PSF is translated such that it remains centred on the ideal Gaussian image point.</p>
+<p>A general object field <span class="math notranslate nohighlight">\(U_o(x,y) \)</span> can be considered a superposition of point objects and the images of these points are given by translated PSFs:</p>
+<div class="math notranslate nohighlight">
+\[
+\text{PSF}(x-x_i, y-y_i),\]</div>
+<p>where <span class="math notranslate nohighlight">\((x_i, y_i)\)</span> are the transverse coordinates of the image point according to Gaussian geometrical optics.
+The total image field is obtained by summing (integrating) over these PSFs, weighted by the field at the object points:</p>
+<div class="math notranslate nohighlight" id="equation-eq-imaging">
+<span class="eqno">(431)<a class="headerlink" href="#equation-eq-imaging" title="Link to this equation">#</a></span>\[\begin{align*}
+U_{i}(x,y,s_i) =
+\int\!\int \text{PSF}\left(x-Mx_o, x-My_o \right) U_o(x_o,y_o,s_o)\, \text{d}x_o \text{d}y_o.
+\end{align*}\]</div>
+<p>where <span class="math notranslate nohighlight">\(x_o=x_i/M\)</span>, <span class="math notranslate nohighlight">\(y_o=y_i/M\)</span> is the image point and <span class="math notranslate nohighlight">\(M\)</span> is the magnification.
+The integral can be made into a convolution by using the coordinates <span class="math notranslate nohighlight">\(x_i, y_i\)</span> as integration variables.</p>
+<p>It is clear from <a class="reference internal" href="#equation-eq-psf">(430)</a> that larger radius <span class="math notranslate nohighlight">\(a\)</span> of the lens and smaller wavelength <span class="math notranslate nohighlight">\(\lambda\)</span> imply a narrower PSF.
+This in turn implies that the kernel in the convolution is more sharply peaked and hence that the resolution of the image is higher
+<sup><a class="footnote-reference brackets" href="#id17" id="id7" role="doc-noteref"><span class="fn-bracket">[</span>7<span class="fn-bracket">]</span></a></sup>.</p>
+<p><strong>Remark.</strong></p>
+<ol class="arabic simple">
+<li><p>If laser light is used to illuminate the object, the object field may be considered perfectly coherent. This implies that a detector in the image plane would measure the squared modulus of the complex field <a class="reference internal" href="#equation-eq-imaging">(431)</a>:</p></li>
+</ol>
+<div class="math notranslate nohighlight" id="equation-eq-intenscoh">
+<span class="eqno">(432)<a class="headerlink" href="#equation-eq-intenscoh" title="Link to this equation">#</a></span>\[\begin{align*}
+I_i(x,y,s_i) = \left| \int\!\int \text{PSF}\left(x-M x_o, y- My_o \right) U_o(x_o,y_o,s_o)\, \text{d}x_o \text{d}y_o \right|^2.
+\end{align*}\]</div>
+<p>In this case the system is called a <strong>coherent imaging system</strong>.</p>
+<ol class="arabic simple" start="2">
+<li><p>If the object is a spatially incoherent extended source, the fields emitted by the point sources of which extended source consists cannot interfere in the image plane. Therefore, in this case the intensity in the image plane is given by the incoherent sum:</p></li>
+</ol>
+<div class="math notranslate nohighlight" id="equation-eq-intensincoh">
+<span class="eqno">(433)<a class="headerlink" href="#equation-eq-intensincoh" title="Link to this equation">#</a></span>\[\begin{align*}
+I_i(x,y,s_i) = \ \int\!\int \left|\text{PSF}\left(x-M x_o, y- M x_o \right)\right|^2 \, I_o(x_o,y_o,s_o)\, \text{d}x_o \text{d}y_o,
+\end{align*}\]</div>
+<p>where <span class="math notranslate nohighlight">\(I_o=|U_o|^2\)</span> is the intensity distribution of the extended source.
+Hence the image intensity is expressed in the intensity of the source by a convolution with the intensity of the PSF. This system is called a <strong>incoherent imaging system</strong>.</p>
+<ol class="arabic simple" start="3">
+<li><p>An object is often illuminated by a spatially incoherent extended light source and then imaged. According to the discussion in <a class="reference internal" href="../Chap5_Interference/InterferenceCoherence_2022_01Clean.html#section-scprop"><span class="std std-ref">More on Spatial Coherence</span></a>, the field that illuminates the object is then partially coherent. It is more coherent when the angle that the source extends at the object is smaller. The intensity in the image plane can be computed by splitting the spatially incoherent source into sufficiently many mutually incoherent point sources and computing the intensities in the image plane due to the illuminaton of the object by each individual point source. The total intensity in the image plane is then the sum of these intensities.</p></li>
+<li><p>We have considered only scalar diffraction theory. However, for a lens with numerical aperture larger than 0.6, the change of polarisation can be important. Then a more general diffraction theory is needed <sup><a class="footnote-reference brackets" href="#id18" id="id8" role="doc-noteref"><span class="fn-bracket">[</span>8<span class="fn-bracket">]</span></a></sup>.</p></li>
+</ol>
+</section>
+<section id="spatial-light-modulators-and-optical-fourier-filtering">
+<h3>Spatial Light Modulators and Optical Fourier Filtering<a class="headerlink" href="#spatial-light-modulators-and-optical-fourier-filtering" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>SLM.</strong> The field in the entrance pupil of a lens, in particular its phase can be changed spatially by a so-called <strong>spatial light modulator</strong> (SLM). A SLM has thousands of pixels by which very general focused fields can be made.
+An example is a focused fields with only a longitudinal component in the focal point (i.e. only the <span class="math notranslate nohighlight">\(E_z\)</span>-component is nonzero at the focal point) <sup><a class="footnote-reference brackets" href="#id19" id="id9" role="doc-noteref"><span class="fn-bracket">[</span>9<span class="fn-bracket">]</span></a></sup>.</p></li>
+<li><p><strong>Fourier filtering.</strong> Suppose we have the setup as shown in <a class="reference internal" href="#fig-6-18-fourier-filtering"><span class="std std-numref">Fig. 104</span></a>. With one lens we can create the Fourier transform of some field <span class="math notranslate nohighlight">\(U(x,y)\)</span>. Let a mask be put in the focal plane and a second lens be used to refocus the light.
+This implies that the amplitude and/pf phase of the plane waves in the angular spectrum of the field are manipulated.
+The procedure is called Fourier filtering using lenses. An application of this idea is the phase contrast microscope.</p></li>
+</ul>
+<figure class="align-default" id="fig-6-18-fourier-filtering">
+<img alt="../../_images/6_18_Fourier_Filtering.png" src="../../_images/6_18_Fourier_Filtering.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 104 </span><span class="caption-text">Set-up for Fourier filtering. The first lens creates a Fourier transform of <span class="math notranslate nohighlight">\(U(x,y)\)</span>, to which we can apply some operation (e.g. applying different phase shifts to different parts of the field). The second lens then applies another Fourier transform (which is the same as the inverse Fourier transform and a mirror transformation).</span><a class="headerlink" href="#fig-6-18-fourier-filtering" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+<section id="super-resolution">
+<h2>Super-resolution<a class="headerlink" href="#super-resolution" title="Link to this heading">#</a></h2>
+<p>We have emphasised that evanescent waves set the ultimate limit to resolution in optics. In <a class="reference internal" href="../Chap2_Geometrical_optics/GeometricalOptics_2022_01Clean.html#chapter-geomoptics"><span class="std std-ref">Geometrical Optics</span></a> it was explained that, although within geometrical optics one can image a single point perfectly using conical surfaces, several points, let alone an extended object, cannot be imaged perfectly.
+It was furthermore explained that when only paraxial rays are considered, i.e. within Gaussian geometrical optics, perfect imaging of extended objects <em>is</em> possible. However, rays of which the angle with the optical axis is large cause aberrations. But even when perfect imaging would be possible in geometrical optics, a real image can never be perfect due to the fact that information contained in the amplitudes and phase of the evanescent waves cannot propagate.
+The resolution that can be obtained with an optical system consisting of lenses is less than follows from considering the loss of information due to evanescent waves, because propagating waves with spatial frequencies that are too large to be captured by the optical system (i.e. waves of which the angles with the optical axis are larger than the numerical aperture) cannot contribute to the image. Therefore the image of a point object has the size</p>
+<div class="math notranslate nohighlight" id="equation-eq-resol">
+<span class="eqno">(434)<a class="headerlink" href="#equation-eq-resol" title="Link to this equation">#</a></span>\[\begin{align*}
+\lambda/\textit{NA}_i,
+\end{align*}\]</div>
+<p>where <span class="math notranslate nohighlight">\(\textit{NA}_i=a/s_i\)</span> is the numerical aperture in image space, i.e. it is the sinus of half the opening angle of the cone extended by the exit pupil at the Gaussian image point on the optical axis. This resolution limit is called the diffraction limit.</p>
+<p>The size of the image of a point as given by the PSF in <a class="reference internal" href="#equation-eq-psf">(430)</a> is influenced by the magnification of the system. To characterise the resolution of a diffraction-limited system, it is therefore better to consider the numerical aperture on the object side: <span class="math notranslate nohighlight">\(\textit{NA}_o = \textit{NA}_i |M| = a/s_o\)</span>. The value of <span class="math notranslate nohighlight">\(\textit{NA}_o\)</span> is the sinus of the half angle of the cone subtended by the entrance pupil of the system on the object point on the optical axis. This is the cone of wave vectors emitted by this object point that can contribute to the image (they are “accepted” by the optical system). The larger the half angle of this cone, the more spatial frequencies can contribute to the image and hence the larger the information about finer details of the object that can reach the image plane.</p>
+<p>It should be clear by now that beating the diffraction limit is extremely difficult. Nevertheless, a lot of research in optics is directed towards realising this goal. Many attempts have been made, some successful, others not so, but, whether successful or not, most were based on very ingenious ideas. To close this chapter on diffraction theory, we will give examples of attempts to achieve what is called super-resolution.</p>
+<ul class="simple">
+<li><p><strong>Confocal microscopy.</strong> A focused spot is used to scan the object and the reflected field is imaged onto a small detector (‘‘point detector’’).
+The resolution is roughly a factor 1.5 better than for normal imaging with full field of view using the same objective. The higher resolution is achieved thanks to the illumination by oblique plane waves that are present in the spatial Fourier transform of the illuminating spot. By illumination with plane waves with large angles of incidence, higher spatial frequencies of the object which under normal incidence are not accepted by the objective, are now ‘‘folded back’’ into the cone of plane waves accepted by the objective. The higher resolution comes at the prize of longer imaging time because of scanning. The confocal microscope was invented by Marvin Minsky in 1957.</p></li>
+<li><p><strong>The Perfect Lens based on negative refraction.</strong> It can be shown that a slab of a material with <strong>negative permittivity</strong> and <strong>negative permeability</strong>, which are opposite to the permittivity and permeability of the surrounding medium, there is no reflection at the interfaces. Furthermore, the phase velocity in a material with negative permittivity and negative permeability is opposite to the direction of the flow of energy and plane waves are refracted at the interface as if the refractive index in Snell’s Law is negative. Therefore these media are called negative index media. Because the phase velocity is opposite to the energy velocity, it is as if time is reversed inside the slab. The change of phase of propagating waves of the field of point source due to propagating in the surrounding medium is reversed inside the slab and at some distance on the other side of the slab there is an image point where all propagating waves are in phase, as illustrated in
+<a class="reference internal" href="#fig-6-19-pendry-lens"><span class="std std-numref">Fig. 105</span></a>. Furthermore, evanescent waves <strong>gain</strong> amplitude inside the slab and it turns out they have the same amplitude in the image point as in the source, hence the image point is perfect. Note that the increase of amplitude of an evanescent wave does not violate the conservation of energy, because an evanescent wave does not propagate energy in the direction in which it is evanescent.</p></li>
+</ul>
+<figure class="align-default" id="fig-6-19-pendry-lens">
+<img alt="../../_images/6_19_Pendry_Lens.png" src="../../_images/6_19_Pendry_Lens.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 105 </span><span class="caption-text">Pendry’s perfect lens consists of a slab of a material with negative permittivity and negative permeability such that its absolute values are equal to the positive permittivity and positive permeability of the surrounding medium. Points outside the slab are imaged perfectly in two planes: one inside the slab and the other on the opposite side of the slab.</span><a class="headerlink" href="#fig-6-19-pendry-lens" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>The simple slab geometry seen in <a class="reference internal" href="#fig-6-19-pendry-lens"><span class="std std-numref">Fig. 105</span></a> which acts as a perfect lens was proposed by John Pendry in 2000 <sup><a class="footnote-reference brackets" href="#id20" id="id10" role="doc-noteref"><span class="fn-bracket">[</span>10<span class="fn-bracket">]</span></a></sup>. Unfortunately, a material with negative permittivity and negative permeability has not been found in nature. Therefore, many researchers have attempted to mimic such a material by mixing metals and dielectrics on a sub-wavelength scale. It seems that a negative index without absorption violates causality. But when there is absorption, the image is not anymore perfect.</p>
+<ul class="simple">
+<li><p><strong>Hyperbolic materials.</strong> Hyperbolic materials are anisotropic, i.e. the phase velocity of a plane wave depends on the polarisation and on the direction of the wave vector. The permittivity of an anisotropic material is a tensor (loosely speaking a (3,3)-matrix). Normally the eigenvalues of the permittivity matrix are positive; however, in a hyperbolic material two eigenvalues are of equal sign and the third has opposite sign. In such a medium all waves with the so-called extraordinary state of polarisation propagate, no matter how high the spatial frequencies are. Hence, for the extraordinary state of polarisation evanescent waves do not exist and therefore super-resolution and perfect imaging should be possible in such a medium.</p></li>
+</ul>
+<figure class="align-default" id="fig-6-20-multilayers">
+<img alt="../../_images/6_20_Metamaterials.jpg" src="../../_images/6_20_Metamaterials.jpg" />
+<figcaption>
+<p><span class="caption-number">Fig. 106 </span><span class="caption-text">Examples of composite materials consisting of thin (sub-wavelength) layers of metals and dielectrics. These artificial materials are called metamaterials. (A. Poddubny, I. Iorsh, P. Belov, &amp; Y. Kivshar, <em>Hyperbolic Metamaterials</em>, {N}at. {P}hoton., 7(12), 948-957 <a class="reference external" href="https://doi.org/10.1038/nphoton.2013.243">(2013)</a>).</span><a class="headerlink" href="#fig-6-20-multilayers" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>A few natural hyperbolic media exist for visible frequencies, but there are more in the mid-infrared. Researchers try to approximate hyperbolic media by metamaterials, made e.g. multilayers consisting of alternating thin metallic and dielectric layers, so that the effective permittivity has the desired hyperbolic property. Also metallic nanopilars embedded in a dielectric are used.</p>
+<ul class="simple">
+<li><p><strong>Nonlinear effects.</strong> When the refractive index of a material depends on the local electric field, the material is nonlinear. At optical frequencies nonlinear effects are in general very small, but with a strong laser they can become significant. One effect is self-focusing, where the refractive index is proportional to the local light intensity. The locally higher intensity causes an increase of the refractive index, leading to a waveguiding effect due to which the beam focuses even more strongly. Hence the focused beam becomes more and more narrow while propagating, until finally the material breaks down.</p></li>
+<li><p><strong>Stimulated Emission Depletion Microscopy (STED).</strong> This technique was invented by V. A. Okhonin in 1986 in the USSR and was further developed by Stefan Hell and his co-workers in the nineties. Hell received the Nobel Prize in chemistry for his work in 2014. STED is a non-linear technique with which super-resolution in fluorescence microscopy can be achieved. Images made with a fluorescence microscope are blurred when the fluorescent molecules are very close together. In the STED microscope a special trick is used to ensure that molecules which fluoresce at the same time are sufficiently distant from each other so that they can be imaged individually. To achieve this two focused spots are used: the first spot excites the molecules to a higher level. The second spot is slightly red-shifted and has a doughnut shape (see <a class="reference internal" href="#fig-6-21-sted-small"><span class="std std-numref">Fig. 107</span></a>). It causes decay of the excited molecules to the lower level by stimulated emission (the excited state is depleted). Because of the doughnut shape of the second spot, the molecule in the centre of the spot is not affected and will still fluoresce. Crucial is that a doughnut spot has a central dark region which is very narrow, i.e. it can be much smaller than the Airy spot and this is the reason for the super-resolution.</p></li>
+</ul>
+<figure class="align-default" id="fig-6-21-sted-small">
+<img alt="../../_images/6_21_STED_Large.png" src="../../_images/6_21_STED_Large.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 107 </span><span class="caption-text">Spot used for excitation (top left) and for depletion (top middle). Fluorescence signal top right.	In the lower figure the confocal image is compared to the STED image. (P.F. Rodriguez and al., <em>Building a fast scanning stimulated emission depletion microscope</em>, Materials Science <a class="reference external" href="https://www.semanticscholar.org/paper/Building-a-fast-scanning-stimulated-emission-a-step-Rodriguez-Wu/46d8c4148e93f30cf11e1ae4356620bd5fcd0475">(2012)</a>)</span><a class="headerlink" href="#fig-6-21-sted-small" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<div class="admonition-external-sources-in-recommended-order admonition">
+<p class="admonition-title">External sources in recommended order</p>
+<ol class="arabic simple">
+<li><p><a class="reference external" href="https://www.youtube.com/watch?v=mEN7DTdHbAU">Every picture is made of waves - Sixty Symbols, 3:33 to 7:15</a>: Basic explanation of Fourier transforms.</p></li>
+<li><p><a class="reference external" href="https://www.youtube.com/watch?v=dgoA_jmGIcA">Heisenberg’s Microscope - Sixty Symbols, 0:20 to 2:38</a>: Basic explanation of the uncertainty principle (though in the context of quantum physics).</p></li>
+<li><p>E. Hecht, <em>Optics</em>, § 7.4.4, subsection ‘<em>Fourier Analysis and Diffraction</em>’.</p></li>
+<li><p>J. Goodman, <em>Introduction to Fourier Optics</em>, §5.2.2: Several calculations on the Fourier transforming properties of lenses.</p></li>
+<li><p>E. Hecht, <em>Optics</em>, § 10.2.6, subsection ‘<em>Resolution of imaging systems</em>’.</p></li>
+</ol>
+</div>
+<hr class="footnotes docutils" />
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="id11" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">1</a><span class="fn-bracket">]</span></span>
+<p><a class="reference external" href="https://www.youtube.com/watch?v=mEN7DTdHbAU">Every picture is made of waves - Sixty Symbols, 3:33 to 7:15</a>: Basic explanation of Fourier transforms. Also see <a class="reference internal" href="#sec-fourierintuition"><span class="std std-ref">Intuition for the Spatial Fourier Transform in Optics</span></a>.</p>
+</aside>
+<aside class="footnote brackets" id="id12" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">2</a><span class="fn-bracket">]</span></span>
+<p>For a rigorous derivation see e.g. <a class="reference external" href="http://iate.oac.uncor.edu/%C2%A0manuel/libros/Optics/Introduction%20to%20Fourier%20Optics%202nd%20-%20J.%20Goodman.pdf">J. Goodman, *Introduction to Fourier Optics</a>, §3.3, §3.4, §3.5* - and <em>Lecture Notes of Advanced Photonics</em>, Delft University of Technology.</p>
+</aside>
+<aside class="footnote brackets" id="id13" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id3">3</a><span class="fn-bracket">]</span></span>
+<p>See the course Advanced Photonics given at TUDelft.</p>
+</aside>
+<aside class="footnote brackets" id="id14" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id4">4</a><span class="fn-bracket">]</span></span>
+<p><a class="reference external" href="https://www.youtube.com/watch?v=dgoA_jmGIcA">Heisenberg’s Microscope - Sixty Symbols, 0:20 to 2:38</a>: Basic explanation of the uncertainty principle (though in the context of quantum physics)</p>
+</aside>
+<aside class="footnote brackets" id="id15" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id5">5</a><span class="fn-bracket">]</span></span>
+<p>For a proof see
+A.E. Siegman, <em>Lasers</em></p>
+</aside>
+<aside class="footnote brackets" id="id16" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id6">6</a><span class="fn-bracket">]</span></span>
+<p>J.W. Goodman, <a class="reference external" href="http://iate.oac.uncor.edu/%C2%A0manuel/libros/Optics/Introduction%20to%20Fourier%20Optics%202nd%20-%20J.%20Goodman.pdf">Introduction to Fourier Optics</a>, §5.2.2* - Several calculations on the Fourier transforming properties of lenses.</p>
+</aside>
+<aside class="footnote brackets" id="id17" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id7">7</a><span class="fn-bracket">]</span></span>
+<p>Hecht § 10.2.6 ‘<em>Resolution of imaging systems</em>’.</p>
+</aside>
+<aside class="footnote brackets" id="id18" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id8">8</a><span class="fn-bracket">]</span></span>
+<p>J.Braat et al. Imaging Optics, Cambridge University Press, 2019</p>
+</aside>
+<aside class="footnote brackets" id="id19" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id9">9</a><span class="fn-bracket">]</span></span>
+<p>See Phys. Rev. Lett. 100, 123904, 2008</p>
+</aside>
+<aside class="footnote brackets" id="id20" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id10">10</a><span class="fn-bracket">]</span></span>
+<p>J.B. Pendry, PRL 18, 2000</p>
+</aside>
+</aside>
+</section>
+<div class="toctree-wrapper compound">
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./content/Chap6_Diffraction"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../Chap5_Interference/Problems/InterferenceCoherence_Exercise_2022_01Clean.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Problems</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="Problems/DiffractiveOptics_Exercise_2022_01Clean.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Problems</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#propagation-of-light-through-a-homogenous-medium">Propagation of light through a homogenous medium</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#angular-spectrum-method">Angular Spectrum Method</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rayleigh-sommerfeld-diffraction-integral">Rayleigh-Sommerfeld Diffraction Integral</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#intuition-for-the-spatial-fourier-transform-in-optics">Intuition for the Spatial Fourier Transform in Optics</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fresnel-and-fraunhofer-approximations">Fresnel and Fraunhofer Approximations</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fresnel-approximation">Fresnel Approximation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fraunhofer-approximation">Fraunhofer Approximation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#examples-of-fresnel-and-fraunhofer-approximations">Examples of Fresnel and Fraunhofer approximations</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fraunhofer-diffraction-revisited">Fraunhofer Diffraction Revisited</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fourier-optics">Fourier Optics</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#focusing-of-a-parallel-beam">Focusing of a Parallel Beam</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#imaging-by-a-lens">Imaging by a lens</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#spatial-light-modulators-and-optical-fourier-filtering">Spatial Light Modulators and Optical Fourier Filtering</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#super-resolution">Super-resolution</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By A.P. Konijnenberg, A.J.L. Adam, H.P. Urbach
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright Delft University of Technology, CC BY-SA 4.0.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
