@@ -1,9 +1,13 @@
+--extra-index-url https://gitlab.tudelft.nl/api/v4/projects/11239/packages/pypi/simple
 numpy
 scipy
 matplotlib
 plotly
 myst_nb
 jupyterquiz
+teachbooks
+jupyterlite-sphinx
 sphinx-exercise
 sphinx-proof
+sphinx-thebe
 jupyter-book

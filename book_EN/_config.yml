@@ -75,6 +75,7 @@ latex:
 # Launch button settings
 launch_buttons:
   notebook_interface: classic
+  thebe: true
 
 
 #######################################################################################
@@ -103,9 +104,10 @@ sphinx:
 
   config:
     html_js_files:
-      - https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js
+#      - https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js
       - https://cdn.jsdelivr.net/npm/loading-attribute-polyfill@2.1.0/dist/loading-attribute-polyfill.min.js
       - https://cdn.jsdelivr.net/npm/loading-attribute-polyfill@2.1.0/dist/loading-attribute-polyfill.min.css
+      - https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js
     mathjax3_config:
       loader: { load: [ '[tex]/autoload', '[tex]/ams' ] }
       tex:
@@ -116,7 +118,12 @@ sphinx:
           "bm": "\\mathbf"
           "inprod": "\\innerproduct"
           "diff": "\\pdv"
-    html_theme_options:
-        logo:
-            image_light: img/tudelft.png
-            image_dark: img/tudelft-dark.png
+#    html_theme_options:
+#        logo:
+#            image_light: img/tudelft.png
+#            image_dark: img/tudelft-dark.png
+#        launch_buttons:
+#          thebe: true
+    thebe_config:
+      use_thebe_lite: true
+      exclude_patterns: ["**/_*.yml", "**/*.md", "**/*.ipynb", "**/*.png"]

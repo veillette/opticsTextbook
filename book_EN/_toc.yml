@@ -24,7 +24,7 @@ parts:
       - file: content/Chap5_Interference/InterferenceCoherence_2022_01Clean.md
         sections:
           - file: content/Chap5_Interference/Problems/InterferenceCoherence_Exercise_2022_01Clean.md
-      - file: content/Chap6_Diffraction/DiffractiveOptics_2022_01Clean.md
+      - file: content/Chap6_Diffraction/DiffractiveOptics_2022_01Clean.ipynb
         sections:
           - file: content/Chap6_Diffraction/Problems/DiffractiveOptics_Exercise_2022_01Clean.md
       - file: content/Chap7_Lasers/Lasers_2022_01Clean.md
