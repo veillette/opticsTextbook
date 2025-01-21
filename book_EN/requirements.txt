@@ -9,5 +9,5 @@ teachbooks
 jupyterlite-sphinx
 sphinx-exercise
 sphinx-proof
-sphinx-thebe
+sphinx-thebe ~= 0.9.9
 jupyter-book
