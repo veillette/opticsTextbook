@@ -1,4 +1,4 @@
-## Problems
+# Problems
 
 1. Principle of Fermat and Snell's Law. 
 
