@@ -4,9 +4,6 @@
 format: jb-book
 root: content/Preface/Preface_2022Clean.md
 parts:
-  - caption: About
-    chapters:
-      - file: content/Authors/authors_01.md
   - caption: Interactive Optics
     chapters:
       - file: content/Chap1_Basics/Basics_2022_01Clean.ipynb
@@ -43,6 +40,8 @@ parts:
         - file: content/Chap10_Appendix/Appendix_H_2022Clean.md
         - file: content/Chap10_Appendix/French_method_01Clean.md
         #- file: content/Preface/Preface_2022Clean.md
-      
+  - caption: Authors
+    chapters:
+      - file: content/Authors/authors_01.md      
       
 
