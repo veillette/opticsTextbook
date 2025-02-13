@@ -25,3 +25,9 @@ jobs:
       run: |
         cd book_EN  # Change to the book directory first
         jupyter-book build .
+
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./book_EN/_build/html
