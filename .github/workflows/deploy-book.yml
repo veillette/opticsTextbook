@@ -3,7 +3,7 @@ name: deploy-book
 on:
   push:
     branches:
-      - main
+      - pyodide-diffraction-figures
 
 jobs:
   deploy-book:
