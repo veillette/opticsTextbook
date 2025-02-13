@@ -16,10 +16,6 @@ The text then delves into Polarization, covering various types of light polariza
 
 The final chapter on Lasers ties together many previously discussed concepts, exploring laser properties, optical resonators, and stimulated emission through Einstein's theory. Throughout the text, each chapter includes carefully crafted practice problems, with more challenging exercises marked with an asterisk (*).
 
-## Digital Version and Technical Implementation
-
-The digital version enhances the learning experience through interactive demonstrations and supplementary web materials. Built using Jupyter Book, the textbook is part of TU Delft Open's Interactive Open Textbooks collection. Source files are available in Markdown format and can be downloaded directly from the digital interface at https://textbooks.open.tudelft.nl/textbooks.
-
 ## Contributions and Acknowledgments
 
 This repository is a fork of the Interactive Textbook (https://doi.org/10.59490/tb.90) developped at TU Delft. We acknowledge and thank the original authors for their foundational work, which has made this adaptation possible. 
