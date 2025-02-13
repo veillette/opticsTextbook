@@ -1,4 +1,4 @@
-## Problems
+# Problems
 
 1. Consider a time-harmonic plane wave with real electric field which with respect to a Cartesian coordinate system $(x,y,z)$ is given by:
 

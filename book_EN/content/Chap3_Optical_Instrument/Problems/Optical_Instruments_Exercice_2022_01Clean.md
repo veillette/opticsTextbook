@@ -1,4 +1,4 @@
-## Problems
+# Problems
 
 1. Consider a ray transfer matrix
 

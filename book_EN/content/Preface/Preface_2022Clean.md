@@ -51,4 +51,4 @@ This website is a [Jupyter Book](https://jupyterbook.org/intro.html). MarkDown s
 Delft, 2022 
 
 
-A.P.K., A.J.L.A., H.P.U.
+A.P.K., A.J.L.A., H.P.U., T.H.A.R.

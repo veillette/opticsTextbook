@@ -1,4 +1,4 @@
-## Problems
+# Problems
 
 1. Consider a radiating time-harmonic point source in $\mathbf{r}_1=(x_1,0,0)$. The complex field in the point of observation $\mathbf{r}=(x,y,z)$, where $z>0$, is given by:
 

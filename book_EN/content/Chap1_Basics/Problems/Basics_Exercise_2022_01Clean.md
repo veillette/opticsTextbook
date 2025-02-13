@@ -1,4 +1,4 @@
-## Problems
+# Problems
 1. In a homogeneous medium with permittivity $\epsilon$ and conductivity $\sigma$ and without external sources ($\mathbf{\mathcal{J}}_{ext}=\mathbf{0}$, $\varrho_{ext}=0$), derive from {eq}`eq.chargec` and {eq}`eq.gauss2` that for $t.0$
 
 $$
