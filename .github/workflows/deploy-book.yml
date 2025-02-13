@@ -4,30 +4,53 @@ on:
   push:
     branches:
       - concise
+  pull_request:
+    branches:
+      - concise
+  workflow_dispatch:  # Allow manual triggering
+
+env:
+  PYTHON_VERSION: '3.11'
+  BOOK_DIR: 'book_EN'
 
 jobs:
   deploy-book:
     runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v2
     
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4  # Updated to latest version
+      
     - name: Setup Python
-      uses: actions/setup-python@v2
+      uses: actions/setup-python@v5  # Updated to latest version
       with:
-        python-version: '3.11'
+        python-version: ${{ env.PYTHON_VERSION }}
+        cache: 'pip'  # Enable pip caching
         
     - name: Install dependencies
       run: |
-        pip install -r book_EN/requirements.txt
+        python -m pip install --upgrade pip
+        pip install -r ${{ env.BOOK_DIR }}/requirements.txt
         pip install jupyter-book
         
     - name: Build book
       run: |
-        cd book_EN  # Change to the book directory first
+        cd ${{ env.BOOK_DIR }}
         jupyter-book build .
-
+        
+    - name: Cache book build
+      uses: actions/cache@v4
+      with:
+        path: ${{ env.BOOK_DIR }}/_build
+        key: book-build-${{ github.sha }}
+        restore-keys: |
+          book-build-
+          
     - name: Deploy to GitHub Pages
+      if: github.ref == 'refs/heads/concise' && github.event_name == 'push'  # Only deploy on push to concise branch
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./book_EN/_build/html
+        publish_dir: ./${{ env.BOOK_DIR }}/_build/html
+        full_commit_message: Deploy book to GitHub Pages
+        force_orphan: true  # Keep gh-pages branch clean
