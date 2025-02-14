@@ -5,6 +5,7 @@ matplotlib
 plotly
 myst_nb
 jupyterquiz
+ipywidgets
 jupyterlite-sphinx
 sphinx-exercise
 sphinx-proof
