@@ -18,7 +18,7 @@ The final chapter on Lasers ties together many previously discussed concepts, ex
 
 ## Contributions and Acknowledgments
 
-This repository is a fork of the Interactive Textbook (https://doi.org/10.59490/tb.90) developped at TU Delft. We acknowledge and thank the original authors for their foundational work, which has made this adaptation possible. 
+This repository is a fork of the Interactive Textbook (https://doi.org/10.59490/tb.90) developed at TU Delft. We acknowledge and thank the original authors for their foundational work, which has made this adaptation possible. 
 The original textbook has evolved through valuable feedback from numerous students and teaching assistants over the years. The current authors maintain responsibility for any remaining errors while welcoming continued constructive criticism and suggestions for improvement.
 
 ## License
