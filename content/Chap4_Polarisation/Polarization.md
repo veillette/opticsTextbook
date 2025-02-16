@@ -630,8 +630,8 @@ To see what happens to an arbitrary elliptical polarisation state in a circular 
 
 ```{admonition} External sources in recommended order
 1. [Double Vision - Sixty Symbols](https://www.youtube.com/watch?v=k1oh3lXR5PE): Demonstration of double refraction by a calcite crystal due to birefringence.
-2. [MIT OCW - Linear Polarizer](http://ocw.mit.edu/resources/res-6-006-video-demonstrations-in-lasers-and-optics-spring-2008/demonstrations-in-physical-optics/linear-polarizer/): Demonstration of linear polarizers and linear polarisation.
-3. [MIT OCW - Polarization Rotation Using Polarizers](http://ocw.mit.edu/resources/res-6-006-video-demonstrations-in-lasers-and-optics-spring-2008/demonstrations-in-physical-optics/polarisation-rotation-using-polarizers/): Demonstration of polarisation rotation using linear polarisers.
+2. [MIT OCW - Linear Polarizer](https://ocw.mit.edu/resources/res-6-006-video-demonstrations-in-lasers-and-optics-spring-2008/demonstrations-in-physical-optics/linear-polarizer/): Demonstration of linear polarizers and linear polarisation.
+3. [MIT OCW - Polarization Rotation Using Polarizers](https://ocw.mit.edu/resources/res-6-006-video-demonstrations-in-lasers-and-optics-spring-2008/demonstrations-in-physical-optics/polarisation-rotation-using-polarizers/): Demonstration of polarisation rotation using linear polarisers.
 4. [Demonstration of a QuarterWavePlate](https://www.youtube.com/watch?v=ZhkcKlksV1g) by Andrew Berger.
 5. [MIT OCW - Quarter-wave Plate](http://ocw.mit.edu/resources/res-6-006-video-demonstrations-in-lasers-and-optics-spring-2008/demonstrations-in-physical-optics/quarter-wave-plate/): Demonstration of the quarter-wave plate to create elliptical (in particular circular) polarisation.
 6. [Demonstration of a HalfWavePlate](https://www.youtube.com/watch?v=HriBBJ-6gd8) by Andrew Berger.
@@ -655,4 +655,3 @@ To see what happens to an arbitrary elliptical polarisation state in a circular 
 [^7]: [Demonstration of a Half-Wave Plate](https://www.youtube.com/watch?v=HriBBJ-6gd8) by Andrew Berger
 
 [^8]: [MIT OCW - Half-wave Plate](http://ocw.mit.edu/resources/res-6-006-video-demonstrations-in-lasers-and-optics-spring-2008/demonstrations-in-physical-optics/half-wave-plate/): Demonstration of the half-wave plate.
-

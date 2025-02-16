@@ -357,7 +357,7 @@ Another fiber type is the so-called holey fiber, see {numref}`figFiberHoley_PBF`
 
 ```{figure} Images/Chapter_9/Fiber_11_Photonic-crystal-fiber-from-NRL.jpg
 :name: figFiberHoley_PBF
-SEM micrographs of US Naval Research Laboratory-produced photonic-crystal fiber. (left) The diameter of the solid core at the center of the fiber is $\sim 5\mu \text{m}$, while (right) the diameter of the holes is $4\sim \mu\text{m}$. (From [Wikimedia Commons](http://www.nrl.navy.mil/techtransfer/fs.php?fs_id=97) / CC BY-SA))
+SEM micrographs of US Naval Research Laboratory-produced photonic-crystal fiber. (left) The diameter of the solid core at the center of the fiber is $\sim 5\mu \text{m}$, while (right) the diameter of the holes is $4\sim \mu\text{m}$. (From [Wikimedia Commons](https://www.nrl.navy.mil/techtransfer/fs.php?fs_id=97) / CC BY-SA))
 ```
 
 Related to the holey fiber, the photonic bandgap fiber also contain air holes, see {numref}`figFiberHoley_PBF`. However, in PBFs these holes are arranged in a fashion that a bandgap is created in the cladding. Such a bandgap does not allow light of certain wavelength(s) to transmit through the cladding, thus confining light of this wavelength to the core. This is fundamentally different from fibers based on changes in refractive index. Where the latter only has a cut-off wavelength above which no propagation occurs, PBFs only confine light of a narrow wavelength band with a typical width of a few tens of nanometres.
@@ -486,12 +486,9 @@ Optical fibers in practice:
 
 (Future) applications of fiber optics:
 - [Photonics21](https://www.photonics21.org): Strategic research and innovation agenda;
-- [PhotonicsNL](http://photonicsnl.org/): Photonics roadmap $2023$.
+- [PhotonicsNL](https://photonicsnl.org/): Photonics roadmap $2023$.
 ```
 
 [^1]: The dB, or decibel is a unit to quantify loss and gain. The gain in dB is calculated as $G_{\text{dB}}=10\log_{10}(P_{\text{out}}/P_{\text{in}})$, where $P_{\text{in(out)}}$ is the (optical) power entering (leaving) a component or device. Loss in dB equals $-G_{\text{dB}}$. The advantage of using the unit dB is that the total gain or loss of a system can be calculated using addition and subtraction instead of multiplication and division. This is due to its definition using the logarithm.
 
 [^2]: Due to the continuity condition, the field parallel to the interface of the mirror is $0$. To show the correctness of this phase factor is left as an exercise to the reader.
-
-
-

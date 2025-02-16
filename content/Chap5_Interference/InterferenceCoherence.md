@@ -1369,9 +1369,9 @@ the two constituent orthogonal linearly polarised states of natural light cannot
 
 ```{admonition} External sources in recommended order
 1. [Veritasium - The original double-slit experiment, starting at 2:15](https://www.youtube.com/watch?v=Iuv6hY6zsd0) - Demonstration of an interference pattern obtained with sunlight.
-1. [MIT OCW - Two-beam Interference - Collimated Beams](http://ocw.mit.edu/resources/res-6-006-video-demonstrations-in-lasers-and-optics-spring-2008/demonstrations-in-physical-optics/two-beam-interference-2014-collimated-beams/): Interference of laser light in a Michelson interferometer.
-1. [MIT OCW - Fringe Contrast - Path Difference](http://ocw.mit.edu/resources/res-6-006-video-demonstrations-in-lasers-and-optics-spring-2008/demonstrations-in-physical-optics/fringe-contrast-2014-path-difference/): Demonstration of how fringe contrast varies with propagation distance.
-1. [MIT OCW - Coherence Length and Source Spectrum](http://ocw.mit.edu/resources/res-6-006-video-demonstrations-in-lasers-and-optics-spring-2008/demonstrations-in-physical-optics/coherence-length-and-source-spectrum/): Demonstration of how the coherence length depends on the spectrum of the laser light.
+1. [MIT OCW - Two-beam Interference - Collimated Beams](https://ocw.mit.edu/resources/res-6-006-video-demonstrations-in-lasers-and-optics-spring-2008/demonstrations-in-physical-optics/two-beam-interference-2014-collimated-beams/): Interference of laser light in a Michelson interferometer.
+1. [MIT OCW - Fringe Contrast - Path Difference](https://ocw.mit.edu/resources/res-6-006-video-demonstrations-in-lasers-and-optics-spring-2008/demonstrations-in-physical-optics/fringe-contrast-2014-path-difference/): Demonstration of how fringe contrast varies with propagation distance.
+1. [MIT OCW - Coherence Length and Source Spectrum](https://ocw.mit.edu/resources/res-6-006-video-demonstrations-in-lasers-and-optics-spring-2008/demonstrations-in-physical-optics/coherence-length-and-source-spectrum/): Demonstration of how the coherence length depends on the spectrum of the laser light.
 1. [Lecture - 18 Coherence](https://www.youtube.com/watch?v=fwRFaZnr2WU): Lecture Series on Physics - I: Oscillations and Waves by Prof. S. Bharadwaj, Department of Physics and Meteorology, IIT Kharagpur.
 1. [Lecture - 19 Coherence](https://www.youtube.com/watch?v=jnQFMdMSRAE): Lecture Series on Physics - I: Oscillations and Waves by Prof. S. Bharadwaj, Department of Physics and Meteorology, IIT Kharagpur.
 ```
@@ -1385,4 +1385,3 @@ the two constituent orthogonal linearly polarised states of natural light cannot
 [^4]: [MIT OCW - Coherence Length and Source Spectrum](http://ocw.mit.edu/resources/res-6-006-video-demonstrations-in-lasers-and-optics-spring-2008/demonstrations-in-physical-optics/coherence-length-and-source-spectrum/): Demonstration of how the coherence length depends on the spectrum of the laser light.
 
 [^5]: [KhanAcademy - Young's Double slit part 1](https://www.khanacademy.org/science/physics/light-waves/interference-of-light-waves/v/youngs-double-split-part-1)
-
