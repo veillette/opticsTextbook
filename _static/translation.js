@@ -1,13 +1,13 @@
 
 // Assuming you have a reference to the button element
-var button = document.createElement("button");
+const button = document.createElement( 'button' );
 button.classList.add("btn", "btn-sm", "navbar-btn");
 
 
 button.onclick = () => {
-  var currentUrl         = window.location.href;
-  var urlSegments        = currentUrl.split('/');
-  var checkLang          = urlSegments.indexOf('nl');
+  const currentUrl = window.location.href;
+  const urlSegments = currentUrl.split( '/' );
+  const checkLang = urlSegments.indexOf( 'nl' );
   if ( checkLang !== -1 ){
     // if 'nl' is contained in the url, set 'en' as new language
     currentLanguage = "en";
@@ -15,7 +15,7 @@ button.onclick = () => {
   } else {
     // if 'nl' is not contained in the url, 'en' is assumed as current language and switched to 'nl'
     currentLanguage = "nl";
-    changeLanguage("nl");  
+    changeLanguage("nl");
   }
   console.log("current language: "+currentLanguage);
 }
@@ -24,9 +24,9 @@ document.addEventListener("DOMContentLoaded", () => {
   navbar = document.getElementsByClassName("article-header-buttons");
   navbar[0].prepend(button);
 
-  var currentUrl         = window.location.href;
-  var urlSegments        = currentUrl.split('/');
-  var checkLang          = urlSegments.indexOf('nl');
+  const currentUrl = window.location.href;
+  const urlSegments = currentUrl.split( '/' );
+  const checkLang = urlSegments.indexOf( 'nl' );
   if ( checkLang !== -1 ){
     updateButtonContent("nl")
   } else {
@@ -40,17 +40,17 @@ document.body.appendChild(button);
 function updateButtonContent(lang) {
   button.innerHTML = ""; // Clear existing content
 
-  var currentUrl         = window.location.href;
+  const currentUrl = window.location.href;
 
-  var urlParts           = currentUrl.split("tn2421")[1].split("/");
+  const urlParts = currentUrl.split( 'tn2421' )[ 1 ].split( '/' );
   //var urlParts           = currentUrl.split("html")[1].split("/");    // use this to build the book locally
 
-  var slashNumber        = urlParts.length - 1
+  const slashNumber = urlParts.length - 1;
 
   // Create flag element
-  var flag = document.createElement("img");
-  var path = ""
-  var dot_dot_slash = "../"
+  const flag = document.createElement( 'img' );
+  let path = '';
+  const dot_dot_slash = '../';
 
   if ( lang==="en" ){
     //flag.src = "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Flag_of_the_Netherlands.svg/255px-Flag_of_the_Netherlands.svg.png";
@@ -85,22 +85,22 @@ function updateButtonContent(lang) {
 
 // Function to change the language
 function changeLanguage(language) {
-  var currentUrl         = window.location.href;
-  var urlSegments        = currentUrl.split('/');
+  const currentUrl = window.location.href;
+  const urlSegments = currentUrl.split( '/' );
 
   // this is for local book
   //var htmlFolderIndex    = urlSegments.indexOf('html');   // here it is assumed that the book is contained inside a folder named 'html'
                                                              // as default for jupyter-books.
 
   // this is for online book
-  var htmlFolderIndex    = urlSegments.indexOf('tn2421');   // here it is assumed that the book is contained inside a folder named 'html'
+  const htmlFolderIndex = urlSegments.indexOf( 'tn2421' );   // here it is assumed that the book is contained inside a folder named 'html'
                                                             // as default for jupyter-books.
 
-  var lastSlashIndex     = currentUrl.lastIndexOf('/');
-  
+  const lastSlashIndex = currentUrl.lastIndexOf( '/' );
+
   if (lastSlashIndex !== -1) {
     if (htmlFolderIndex !== -1) {
-      var isNlAlreadyPresent = urlSegments[htmlFolderIndex + 1] === 'nl';
+      const isNlAlreadyPresent = urlSegments[ htmlFolderIndex + 1 ] === 'nl';
 
       if (language === 'nl' && !isNlAlreadyPresent) {
         // Add "/nl/" after "html"
@@ -110,7 +110,7 @@ function changeLanguage(language) {
         urlSegments.splice(htmlFolderIndex + 1, 1);
       }
 
-      var modifiedUrl = urlSegments.join('/');
+      const modifiedUrl = urlSegments.join( '/' );
       window.location.href = modifiedUrl;
       console.log("Modified the URL to " + modifiedUrl);
     } else {
