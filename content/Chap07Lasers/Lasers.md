@@ -401,7 +401,7 @@ The three Einstein transitions and the pump.
 
 
 ## Cavities
-The amplifying medium can completely fill the space between the mirrors as at the top of {numref}`fig.lasercavity`, or there can be space between the amplifier and the mirrors. For example, if the amplifier is a gas, it may be enclosed by a glass cylinder. The end faces of the cylinder are positioned under the Brewster angle with respect to the axis, as shown in the middle figure of {numref}`fig.lasercavity`, to minimise reflections. This type of resonator is called a resonator with external mirrors.
+The amplifying medium can completely fill the space between the mirrors as at the top of {numref}`fig.lasercavity`, or there can be space between the amplifier and the mirrors. For example, if the amplifier is a gas, it may be enclosed by a glass cylinder. The end faces of the cylinder are positioned under the Brewster angle with respect to the axis, as shown in the middle figure of {numref}`fig.lasercavity`, to minimize reflections. This type of resonator is called a resonator with external mirrors.
 
 Usually one or both mirrors are convex, as shown in the bottom figure of {numref}`fig.lasercavity`. We state without proof that in that case the distance $L$ between the mirrors and the radii of curvature $R_1$ and $R_2$ of the mirrors has to satisfy
 
@@ -501,7 +501,7 @@ Examples are the HeNe, Argon, Krypton, Xenon, Nitrogen and Copper lasers. Electr
 
 ```{figure} Images/Chapter_7/7_17_Hene.png
 :name: Fig_7_17_Hene
-HeNe laser with spherical external mirrors, a discharge tube with faces at the Brewster angle to minimise reflections, and an anode and cathode for the discharge pumping (from [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Hene-1.png) by DrBob / CC BY-SA 3.0).
+HeNe laser with spherical external mirrors, a discharge tube with faces at the Brewster angle to minimize reflections, and an anode and cathode for the discharge pumping (from [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Hene-1.png) by DrBob / CC BY-SA 3.0).
 ```
 
 ### Atomic Collision

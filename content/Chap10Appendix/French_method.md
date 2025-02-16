@@ -205,7 +205,7 @@ M&\equiv\dfrac{\overline{A_iB_i}}{\overline{A_oB_o}}\\
 ```
 
 ## Spherical lens
-Spherical lenses are made of glass and are bounded by two spherical surfaces of curvature $\overline{R_1} = \overline{C_1V_1}$ and $\overline{R_2} = \overline{C_2V_2}$, with centres $C_1$ and $C_2$ and vertices $V_1$ and $V_2$ respectively. When $\overline{R_1}>0$ and $\overline{R_2}<0$, the lens is biconvex; when $\overline{R_2}>0$ and $\overline{R_1}<0$ it is biconcave. They are thin when the distance ($V_1V_2$) is very small compared to the radii of curvature $R_1$ and $R_2$.
+Spherical lenses are made of glass and are bounded by two spherical surfaces of curvature $\overline{R_1} = \overline{C_1V_1}$ and $\overline{R_2} = \overline{C_2V_2}$, with centers $C_1$ and $C_2$ and vertices $V_1$ and $V_2$ respectively. When $\overline{R_1}>0$ and $\overline{R_2}<0$, the lens is biconvex; when $\overline{R_2}>0$ and $\overline{R_1}<0$ it is biconcave. They are thin when the distance ($V_1V_2$) is very small compared to the radii of curvature $R_1$ and $R_2$.
 
 
 ```{figure} Images/Annexe/AO_Algebric_optics_conv_div.png
@@ -271,5 +271,3 @@ where the point $B_i$ is the image of the object point $B_o$. The sign of $M$ wi
 :name: Fig_AO_06
 Image of an object from a positive lens.
 ```
-
-

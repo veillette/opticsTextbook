@@ -19,7 +19,7 @@ Sources Figure
 
  
 - **b)**
-Suppose that the sources are mutually incoherent. There distance is again 3 m and the centre wavelength is 3 m. What should be the perpendicular distance to the two sources of two points that have distance of 6 m when the degree of mutual coherence is 0.866. You may use the formula for quasi-monochromatic light.
+Suppose that the sources are mutually incoherent. There distance is again 3 m and the center wavelength is 3 m. What should be the perpendicular distance to the two sources of two points that have distance of 6 m when the degree of mutual coherence is 0.866. You may use the formula for quasi-monochromatic light.
  
 
 
@@ -74,7 +74,7 @@ Suppose that the coherence time of the field radiated by the point source is $\t
 
 
 5. Two sources and two pinholes
-Two independently radiating small sources $S_1$ and $S_2$ emits light with centre frequency $\omega_c$ and bandwidth $\Delta \omega \ll \omega_c$. (see the figure below). The coherence time of the sources is thus $\tau_c=\Delta \omega$. At a distance $z_1$ a first screen with pinholes $P_1$ and $P_2$ is placed. Far away, at (Fraunhofer) distance $z_2$ from the first screen a second screen is placed. Which of the following statements are true
+Two independently radiating small sources $S_1$ and $S_2$ emits light with center frequency $\omega_c$ and bandwidth $\Delta \omega \ll \omega_c$. (see the figure below). The coherence time of the sources is thus $\tau_c=\Delta \omega$. At a distance $z_1$ a first screen with pinholes $P_1$ and $P_2$ is placed. Far away, at (Fraunhofer) distance $z_2$ from the first screen a second screen is placed. Which of the following statements are true
 
 
 ```{figure} ../Images/Chapter_5/ExtendedSource_2pinhole.png
@@ -95,4 +95,3 @@ Two independent small sources $S_1$ and $S_2$ with 2 pinhole and a screen (Exerc
  
 6. Fabry-Perot interferometer
 - not finished
-

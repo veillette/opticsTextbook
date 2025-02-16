@@ -42,7 +42,7 @@ In the first slit there is vacuum.
 
 ```{figure} ../Images/Tutorial_6/Ex_6_01_Two_slits_glass.png
 :name: Fig_7_24_Two_slits
-Two slits centred at $y=0$ and very long in the $y$-direction in a dark screen of thickness $d$. The lower slit is filled with glass, the upper is in vacuum.
+Two slits centerd at $y=0$ and very long in the $y$-direction in a dark screen of thickness $d$. The lower slit is filled with glass, the upper is in vacuum.
 ```
 
 - **a)** If the field immediately behind slit 1 has complex amplitude equal to $1$, explain that the field immediately after behind 2 is given by
@@ -118,7 +118,7 @@ x= \frac{\lambda}{3a}z
 - **e)** Derive the smallest $x>0$ for which the field is zero in $(x,0,z)$ when the two point sources at $(a,0,0)$ and $(2a,0,0)$ are mutually incoherent. Use again path length differences and make a drawing.
  
 
-- **f)** Next suppose that there is a square aperture with centre at $(a,0,0)$ and sides of length $b<a$ parallel to the $x$- and $y$-directions in an opaque (i.e. dark) screen above the mirror as shown at the right of
+- **f)** Next suppose that there is a square aperture with center at $(a,0,0)$ and sides of length $b<a$ parallel to the $x$- and $y$-directions in an opaque (i.e. dark) screen above the mirror as shown at the right of
 {numref}`Fig_7_25_Lloyd_Mirror`. The aperture is illuminated by a plane wave that propagates parallel to the $z$-axis, hence the field in the aperture has constant phase and amplitude. Compute the smallest positive $x$ for which a zero occurs at $(x,0,z)$ on the screen at large distance $z>0$.
 Use again path length differences and a drawing in your derivation.
 
@@ -134,7 +134,7 @@ Show that the smallest angle with the optical axis at which there is a zero on t
 - **c)** Are there any zeros on the screen when the two point sources are mutually incoherent?
  
 
-- **d)** Consider now two identical apertures in an opaque screen at $z=0$. One aperture has its centre at $(-a/2,0,0)$ and the other has its centre at $(a/2,0,0)$.
+- **d)** Consider now two identical apertures in an opaque screen at $z=0$. One aperture has its center at $(-a/2,0,0)$ and the other has its center at $(a/2,0,0)$.
 The apertures are illuminated by a time-harmonic plane wave at perpendicular incidence to the screen (i.e. propagating parallel to the $z$-axis).
 Explain that whatever the shape of these apertures, the smallest angle for which a zero occurs in the far field intensity is at $\lambda/(2a)$.
  
@@ -214,7 +214,7 @@ Amplitude in the focal plane of a Bessel beam and of an Airy spot with the same 
 
 6. \* Stellar interferometry. 
 
-We consider the emission by a star of light of a narrow frequency band with centre frequency $\mathbf{a}r{\omega}$ and corresponding wavelength $\mathbf{a}r{\lambda}=c 2\pi/\mathbf{a}r{\omega}$
+We consider the emission by a star of light of a narrow frequency band with center frequency $\mathbf{a}r{\omega}$ and corresponding wavelength $\mathbf{a}r{\lambda}=c 2\pi/\mathbf{a}r{\omega}$
 The star is an extended spatially incoherent source. Let $I(x,y)$ be the intensity on the star's surface orientated towards the earth. The aim of the exercise is to determine $I(x,y)$ by stellar interferometry.
 
 Let $U_0(x,y,t)$ be the field emitted at the surface of the star. Then the mutual coherence function at points $S_1=(x_1,y_1)$, $S_2=(x_2, y_2)$ on the surface of the star is:
@@ -242,4 +242,3 @@ i.e. the mutual coherence function between points on earth for time delay $\tau=
 - **c)** Explain how the mutual coherence for time delay $\tau=0$ can be measured on earth using interferometry and how this can lead to retrieving the intensity of the star.
  
 - **d)** What determines the resolution that can be achieved?
-

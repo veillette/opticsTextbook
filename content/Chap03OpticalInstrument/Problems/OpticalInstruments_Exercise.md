@@ -24,7 +24,7 @@ Hint: let $f_b$ be the distance of the back focal point of the two-lens system t
 
 2. The eye and the magnifying glass.
 
-In this problem the eye is modelled as a single thin lens that creates an image on the retina.
+In this problem the eye is modeled as a single thin lens that creates an image on the retina.
 
 The distance between the retina and the lens is $d_r$. Let us call the focal length of the lens $f_{\text{eye}}$. The eye is capable of varying $f_{\text{eye}}$.
 
@@ -48,7 +48,7 @@ $$
 \alpha_u= 6.4^o.
 $$
 
-(take into account that the ray which enters the centre of the eye lens is refracted because the vitreous humor has refractive index $n=1.337$).
+(take into account that the ray which enters the center of the eye lens is refracted because the vitreous humor has refractive index $n=1.337$).
 
 - **b)**
 Use a negative lens with focal distance $f<0$ at a distance $d$ in front of the eye. Show that when

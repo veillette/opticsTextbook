@@ -69,7 +69,7 @@ The human eye is made of an almost spherical (24 mm long and 22 mm across) gelat
 Cross section of a human eye (from [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Three_Internal_chambers_of_the_Eye.png) by Holly Fischer / CC BY).
 ```
 
-After passing the cornea, the rays reach the **aqueous humour** ($n\approx$1.336) with the **iris** or pupil. It can expand or contract from a 2&nbsp;mm (bright sun) to 8&nbsp;mm (low light) diameter to adapt to the light intensity. The iris gives color to the eye. After the iris, the rays reach the flexible **crystalline lens** which has the size of a bean (9&nbsp;mm in diameter, and 4&nbsp;mm thick in relaxed condition). Its index of refraction varies from 1.406 in the centre to 1.386 at the edge.
+After passing the cornea, the rays reach the **aqueous humour** ($n\approx$1.336) with the **iris** or pupil. It can expand or contract from a 2&nbsp;mm (bright sun) to 8&nbsp;mm (low light) diameter to adapt to the light intensity. The iris gives color to the eye. After the iris, the rays reach the flexible **crystalline lens** which has the size of a bean (9&nbsp;mm in diameter, and 4&nbsp;mm thick in relaxed condition). Its index of refraction varies from 1.406 in the center to 1.386 at the edge.
 
 ```{figure} Images/Chapter_3/3_06_Focus_in_an_eye_a.png
 ```
@@ -97,7 +97,7 @@ Due to the loss of elasticity of the muscle, the near point moves from 7&nbsp;cm
 
 ### Retina
 
-The retina is composed of approximately 125 million photoreceptor cells: the **rods** and the **cones**. The rods are highly sensitive black and white (intensity) sensors, while the cones are color sensitive for the wavelengths 390 nm - 780 nm. UV light is absorbed by the lens (people whose lens is removed because of cataract can "see" UV light). The **fovea centralis** is the most sensitive centre of the retina with a high density of cones. The eyes move continuously to focus the image on this area. The information is transferred by the optical nerve, placed at the back of the eye, where it causes a blind spot.
+The retina is composed of approximately 125 million photoreceptor cells: the **rods** and the **cones**. The rods are highly sensitive black and white (intensity) sensors, while the cones are color sensitive for the wavelengths 390 nm - 780 nm. UV light is absorbed by the lens (people whose lens is removed because of cataract can "see" UV light). The **fovea centralis** is the most sensitive center of the retina with a high density of cones. The eyes move continuously to focus the image on this area. The information is transferred by the optical nerve, placed at the back of the eye, where it causes a blind spot.
 
 ### Dioptric Power of a lens
 
@@ -143,7 +143,7 @@ A myopic eye has too short focal distances (has too high power). Distant objects
 \mathfrak{D} =\frac{1}{f}= -0.5 \; \text{diopter}.
 \end{align*}
 ```
-The lens is best put in the front focal plane of the relaxed eye, i.e. at approximately 16 mm in front of the cornea. This follows from {eq}`eq.lensmaker` and the fact that the distance of the retina to the eye lens is roughly 22 mm while the refractive index of the vitrous humor is 1.337. Hence, the focal distance in air of the relaxed eye of $22/1.337 \approx 16 \text{ mm}$. The reason for putting the lens at the focal distance is that in this case the magnification of the eye and the negative lens together are the same as for the uncorrected eye. To see this, draw a ray from the top of the object through the centre of the negative lens. This will then be made parallel to the optical axis by the eye lens; the distance of this ray to the optical axis is the image size on the retina. This ray will end up at the same point of the retina as when the negative lens is taken out, because it is not refracted by this lens.
+The lens is best put in the front focal plane of the relaxed eye, i.e. at approximately 16 mm in front of the cornea. This follows from {eq}`eq.lensmaker` and the fact that the distance of the retina to the eye lens is roughly 22 mm while the refractive index of the vitrous humor is 1.337. Hence, the focal distance in air of the relaxed eye of $22/1.337 \approx 16 \text{ mm}$. The reason for putting the lens at the focal distance is that in this case the magnification of the eye and the negative lens together are the same as for the uncorrected eye. To see this, draw a ray from the top of the object through the center of the negative lens. This will then be made parallel to the optical axis by the eye lens; the distance of this ray to the optical axis is the image size on the retina. This ray will end up at the same point of the retina as when the negative lens is taken out, because it is not refracted by this lens.
 
 Contact lenses are very close to the eye lens and hence the total power of the eye with a contact lens is simply the sum of the power of the eye and the contact lens.
 
@@ -196,7 +196,7 @@ Example of a positive lens used as a magnifying glass (picture taken by A.J.L. A
 
 ### Magnifying Power
 The **magnifying power** $\text{MP}$ or **angular magnification** $M_a$ is defined as the ratio of the size of the retinal image obtained with the instrument and the size of the retinal image as seen by the unaided eye at normal viewing distance $d_o$.
-To estimate the size of the retinal image, we compare in both cases where **the chief ray through the top of the object and the centre of the pupil of the eye hits the retina**. Since the distance between the eye lens and the retina is fixed, the ratio of the image size on the retina for the eye with and without magnifying glass is:
+To estimate the size of the retinal image, we compare in both cases where **the chief ray through the top of the object and the center of the pupil of the eye hits the retina**. Since the distance between the eye lens and the retina is fixed, the ratio of the image size on the retina for the eye with and without magnifying glass is:
 
 ```{math}
 \begin{align*}
