@@ -34,7 +34,7 @@ The distance between the retina and the lens is $d_r$. Let us call the focal len
 
 - **c)** We introduce a magnifying glass, i.e. we put a thin lens with focal length $f$ in front of the eye. In front of the magnifying glass, there is a nearby object. We want to place the object such that a completely relaxed eye can see it sharply. Where should the object be? Verify your answer using the applet found here:
 
-[http://www.geogebra.org/m/977919](http://www.geogebra.org/m/977919).
+[https://www.geogebra.org/m/977919](https://www.geogebra.org/m/977919).
 
 - **d)** Calculate the magnification of the system by using the transfer matrices. Assume for simplicity that throughout the entire system $n=1$. How does the magnification of the object depend on $f$? Verify your answer with the applet.
 
@@ -83,5 +83,3 @@ Planar Interface
 ```
 
 - **c)** Assuming that $d>0$, what condition has to be fulfilled in order to create an image in the plane behind the interface? Such an imaging system is called a **Veselago lens**.
-
-

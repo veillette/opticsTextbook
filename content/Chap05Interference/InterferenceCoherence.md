@@ -1380,8 +1380,8 @@ the two constituent orthogonal linearly polarised states of natural light cannot
 
 [^2]: For more details see J.W. Goodman, *Statistical Optics*
 
-[^3]: [MIT OCW - Fringe Contrast - Path Difference](http://ocw.mit.edu/resources/res-6-006-video-demonstrations-in-lasers-and-optics-spring-2008/demonstrations-in-physical-optics/fringe-contrast-2014-path-difference/): Demonstration of how fringe contrast varies with propagation distance
+[^3]: [MIT OCW - Fringe Contrast - Path Difference](https://ocw.mit.edu/resources/res-6-006-video-demonstrations-in-lasers-and-optics-spring-2008/demonstrations-in-physical-optics/fringe-contrast-2014-path-difference/): Demonstration of how fringe contrast varies with propagation distance
 
-[^4]: [MIT OCW - Coherence Length and Source Spectrum](http://ocw.mit.edu/resources/res-6-006-video-demonstrations-in-lasers-and-optics-spring-2008/demonstrations-in-physical-optics/coherence-length-and-source-spectrum/): Demonstration of how the coherence length depends on the spectrum of the laser light.
+[^4]: [MIT OCW - Coherence Length and Source Spectrum](https://ocw.mit.edu/resources/res-6-006-video-demonstrations-in-lasers-and-optics-spring-2008/demonstrations-in-physical-optics/coherence-length-and-source-spectrum/): Demonstration of how the coherence length depends on the spectrum of the laser light.
 
 [^5]: [KhanAcademy - Young's Double slit part 1](https://www.khanacademy.org/science/physics/light-waves/interference-of-light-waves/v/youngs-double-split-part-1)

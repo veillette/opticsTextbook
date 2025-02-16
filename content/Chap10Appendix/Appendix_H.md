@@ -327,4 +327,4 @@ In this framework, it can be easily understood how this method should be altered
 For other explanations of basis transformations see [Khan Academy - Alternate coordinate systems (bases)](https://www.khanacademy.org/math/linear-algebra/alternate_bases/change_of_basis/v/linear-algebra-coordinates-with-respect-to-a-basis), and [Khan Academy - Showing that an eigenbasis is a useful coordinate systems](https://www.khanacademy.org/math/linear-algebra/alternate_bases/eigen_everything/v/linear-algebra-showing-that-an-eigenbasis-makes-for-good-coordinate-systems).
 
 
-[^1]: See e.g. [Experimental Demonstration of Blind Quantum Computing, S. Barz et al. (2011)](http://arxiv.org/pdf/1110.1381v_1.pdf).
+[^1]: See e.g. [Experimental Demonstration of Blind Quantum Computing, S. Barz et al. (2011)](https://arxiv.org/pdf/1110.1381v_1.pdf).

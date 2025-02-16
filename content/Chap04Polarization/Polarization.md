@@ -633,9 +633,9 @@ To see what happens to an arbitrary elliptical polarization state in a circular 
 2. [MIT OCW - Linear Polarizer](https://ocw.mit.edu/resources/res-6-006-video-demonstrations-in-lasers-and-optics-spring-2008/demonstrations-in-physical-optics/linear-polarizer/): Demonstration of linear polarizers and linear polarization.
 3. [MIT OCW - Polarization Rotation Using Polarizers](https://ocw.mit.edu/resources/res-6-006-video-demonstrations-in-lasers-and-optics-spring-2008/demonstrations-in-physical-optics/polarization-rotation-using-polarizers/): Demonstration of polarization rotation using linear polarisers.
 4. [Demonstration of a QuarterWavePlate](https://www.youtube.com/watch?v=ZhkcKlksV1g) by Andrew Berger.
-5. [MIT OCW - Quarter-wave Plate](http://ocw.mit.edu/resources/res-6-006-video-demonstrations-in-lasers-and-optics-spring-2008/demonstrations-in-physical-optics/quarter-wave-plate/): Demonstration of the quarter-wave plate to create elliptical (in particular circular) polarization.
+5. [MIT OCW - Quarter-wave Plate](https://ocw.mit.edu/resources/res-6-006-video-demonstrations-in-lasers-and-optics-spring-2008/demonstrations-in-physical-optics/quarter-wave-plate/): Demonstration of the quarter-wave plate to create elliptical (in particular circular) polarization.
 6. [Demonstration of a HalfWavePlate](https://www.youtube.com/watch?v=HriBBJ-6gd8) by Andrew Berger.
-7. [MIT OCW - Half-wave Plate](http://ocw.mit.edu/resources/res-6-006-video-demonstrations-in-lasers-and-optics-spring-2008/demonstrations-in-physical-optics/half-wave-plate/): Demonstration of the half-wave plate.
+7. [MIT OCW - Half-wave Plate](https://ocw.mit.edu/resources/res-6-006-video-demonstrations-in-lasers-and-optics-spring-2008/demonstrations-in-physical-optics/half-wave-plate/): Demonstration of the half-wave plate.
 ```
 
 
@@ -650,8 +650,8 @@ To see what happens to an arbitrary elliptical polarization state in a circular 
 
 [^5]: [Demonstration of a Quarter-Wave Plate](https://www.youtube.com/watch?v=ZhkcKlksV1g) by Andrew Berger
 
-[^6]: [MIT OCW - Quarter-wave Plate](http://ocw.mit.edu/resources/res-6-006-video-demonstrations-in-lasers-and-optics-spring-2008/demonstrations-in-physical-optics/quarter-wave-plate/): Demonstration of the quarter-wave plate to create elliptical (in particular circular) polarization.
+[^6]: [MIT OCW - Quarter-wave Plate](https://ocw.mit.edu/resources/res-6-006-video-demonstrations-in-lasers-and-optics-spring-2008/demonstrations-in-physical-optics/quarter-wave-plate/): Demonstration of the quarter-wave plate to create elliptical (in particular circular) polarization.
 
 [^7]: [Demonstration of a Half-Wave Plate](https://www.youtube.com/watch?v=HriBBJ-6gd8) by Andrew Berger
 
-[^8]: [MIT OCW - Half-wave Plate](http://ocw.mit.edu/resources/res-6-006-video-demonstrations-in-lasers-and-optics-spring-2008/demonstrations-in-physical-optics/half-wave-plate/): Demonstration of the half-wave plate.
+[^8]: [MIT OCW - Half-wave Plate](https://ocw.mit.edu/resources/res-6-006-video-demonstrations-in-lasers-and-optics-spring-2008/demonstrations-in-physical-optics/half-wave-plate/): Demonstration of the half-wave plate.
