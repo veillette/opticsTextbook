@@ -3,25 +3,21 @@
 const button = document.createElement( 'button' );
 button.classList.add("btn", "btn-sm", "navbar-btn");
 
-
 button.onclick = () => {
   const currentUrl = window.location.href;
   const urlSegments = currentUrl.split( '/' );
   const checkLang = urlSegments.indexOf( 'nl' );
   if ( checkLang !== -1 ){
     // if 'nl' is contained in the url, set 'en' as new language
-    currentLanguage = "en";
     changeLanguage("en");
   } else {
     // if 'nl' is not contained in the url, 'en' is assumed as current language and switched to 'nl'
-    currentLanguage = "nl";
     changeLanguage("nl");
   }
-  console.log("current language: "+currentLanguage);
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  navbar = document.getElementsByClassName("article-header-buttons");
+  let navbar = document.getElementsByClassName( 'article-header-buttons' );
   navbar[0].prepend(button);
 
   const currentUrl = window.location.href;
@@ -54,7 +50,7 @@ function updateButtonContent(lang) {
 
   if ( lang==="en" ){
     //flag.src = "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Flag_of_the_Netherlands.svg/255px-Flag_of_the_Netherlands.svg.png";
-    for ( i=0; i<slashNumber-1; i++ ){
+    for ( let i=0; i<slashNumber-1; i++ ){
       path = path + dot_dot_slash
     }
     path = path + "_static/img/nl.png"
@@ -62,7 +58,7 @@ function updateButtonContent(lang) {
     console.log("changed the flag to NL");
   } else {
     //flag.src = "https://upload.wikimedia.org/wikipedia/en/thumb/a/ae/Flag_of_the_United_Kingdom.svg/1200px-Flag_of_the_United_Kingdom.svg.png";
-    for ( i=0; i<slashNumber-1; i++ ){
+    for ( let i=0; i<slashNumber-1; i++ ){
       path = path + dot_dot_slash
     }
     path = path + "_static/img/en.png"
