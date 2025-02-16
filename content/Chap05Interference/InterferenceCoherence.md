@@ -24,7 +24,7 @@ The Arago spot is the bright spot which occurs at the centre of the shadow of a 
 ```
 
 
-In this chapter we will study the wave model of light. It will be shown that the extent to which light can show interference depends on a property called coherence. In the largest part of the discussion we will assume that all light has the same polarisation, so that we can treat the fields as scalar. In the last section we will look at how polarisation affects interference, as described by the Fresnel-Arago laws.
+In this chapter we will study the wave model of light. It will be shown that the extent to which light can show interference depends on a property called coherence. In the largest part of the discussion we will assume that all light has the same polarization, so that we can treat the fields as scalar. In the last section we will look at how polarization affects interference, as described by the Fresnel-Arago laws.
 
 It is important to note that the concepts of interference and coherence are not just restricted to optics. Since quantum mechanics dictates that particles have a wave-like nature, interference and coherence also play a role in e.g. solid state physics and quantum information.
 
@@ -193,7 +193,7 @@ In the discussion so far we have only considered **monochromatic** light, which 
 Although light from a laser often has a very narrow band of frequencies and therefore can be considered to be monochromatic, purely monochromatic light does not exist.
 One reason that light can not be perfectly monochromatic is that any source must have been switched on a finite time ago.
 Hence, all light consists of multiple frequencies and therefore is **polychromatic**.
-Classical light sources such as incandescent lamps and also LEDs have relatively broad frequency bands. The question then arises how differently polychromatic light behaves compared to the idealised case of monochromatic light.
+Classical light sources such as incandescent lamps and also LEDs have relatively broad frequency bands. The question then arises how differently polychromatic light behaves compared to the idealized case of monochromatic light.
 To answer this question, we must study the topic of coherence. One distinguishes between two extremes: fully **coherent** and fully **incoherent** light, while the degree of coherence of practical light is somewhere in between. Generally speaking, the broader the frequency band of the source, the more incoherent the light is. It is a very important observation that no light is actually completely coherent or completely incoherent. All light is **partially coherent**, but some light is more coherent than others.
 
 An intuitive way to think about these concepts is in terms of the ability to form interference fringes. For example, with laser light, which usually is almost monochromatic and hence coherent, one can form an interference pattern with clear maxima and minima in intensities using a double slit, while with sunlight (which is incoherent) this is much more difficult. Every frequency in the spectrum of sunlight gives its own interference pattern with its own frequency dependent fringe pattern. These fringe patterns wash out due to superposition and the total intensity therefore shows little fringe contrast, i.e. the coherence is less.
@@ -276,7 +276,7 @@ The coherence length and coherence time of a number of sources are listed in {nu
 | White light | 550 nm | $\approx 300 $ nm | $ \approx 900$ nm | $ \approx 3.0 \times 10^{-14}$s.|
 | Mercury arc | 546.1 nm | $\approx 1.0$ nm | $\approx 0.3$ mm | $ \approx 1.0 \times 10^{-12}$s. |
 | $\text{Kr}^{86}$ discharge lamp | 605.6 nm | $1.2 \times 10^{-3}$ nm | 0.3 m | $ 1.0 \times 10^{-9}$s. |
-| Stabilised He-Ne laser | 632.8 nm | $\approx 10^{-6}$ nm | 400 m | $1.33\times 10^{-6}$s. |
+| Stabilized He-Ne laser | 632.8 nm | $\approx 10^{-6}$ nm | 400 m | $1.33\times 10^{-6}$s. |
 ```
 
 
@@ -1015,9 +1015,9 @@ Lloyd's mirror as example of wavefront splitting interferometry.
 A Fabry-Perot interferometer consists of two parallel highly reflecting surfaces with vacuum or a dielectric in between. These surfaces can be optical flats which have been coated by a metal like silver on one side. Consider a coordinate system as in {numref}`Fig_FP1`
 such that the reflecting surfaces are at $z=0$ and $z=d$. The refractive indices of the half spaces $z<0$ and $z>d$ are $n_1$ and $n_3$, respectively, and the refractive index of the medium between the surfaces is $n_2$. We will first assume that all refractive indices are real.
 
-Let there be a plane wave **with unit amplitude** incident from $z<0$ under angle $\theta_1$ with the normal as shown in {numref}`Fig_FP1`. The incident wave is assumed to be either s- or p-polarised. There are a reflected plane wave in $z<0$, two plane waves in medium 2 one propagating in the positive $z$-direction and the other in the negative $z$-direction and there is a transmitted plane wave in $z>d$. It follows from the boundary conditions that the tangential component of the electric and magnetic field are continuous across the interfaces, that the tangential components of the wave vectors of all these plane waves are identical.
+Let there be a plane wave **with unit amplitude** incident from $z<0$ under angle $\theta_1$ with the normal as shown in {numref}`Fig_FP1`. The incident wave is assumed to be either s- or p-polarized. There are a reflected plane wave in $z<0$, two plane waves in medium 2 one propagating in the positive $z$-direction and the other in the negative $z$-direction and there is a transmitted plane wave in $z>d$. It follows from the boundary conditions that the tangential component of the electric and magnetic field are continuous across the interfaces, that the tangential components of the wave vectors of all these plane waves are identical.
 
-Let $r_{ij}$ and $t_{ij}$ be the reflection and transmission coefficient for a wave that is incident from medium $i$ on the interface with medium $j$. When the wave is s-polarised, $r_{12}$ and $t_{12}$ are given by Fresnel coefficients {eq}`eq.rs`,(\ref{eq.ts}), whereas if the wave is p-polarised, they are given by {eq}`eq.rp`, {eq}`eq.tp`.
+Let $r_{ij}$ and $t_{ij}$ be the reflection and transmission coefficient for a wave that is incident from medium $i$ on the interface with medium $j$. When the wave is s-polarized, $r_{12}$ and $t_{12}$ are given by Fresnel coefficients {eq}`eq.rs`,(\ref{eq.ts}), whereas if the wave is p-polarized, they are given by {eq}`eq.rp`, {eq}`eq.tp`.
 ```{figure} Images/Chapter_5/5_11_Fabry_Perot.png
 :name: Fig_FP1
 Fabry-Perot with 3 layers.The light comes from the bottom and is reflected by each interface.
@@ -1261,8 +1261,8 @@ For a wavelength of $\lambda_0=600\text{nm}$ and $n_f d= 12 \text{mm}$ we have f
 
 **Remark.** Although in the derivation we have assumed that all refractive indices are real, the final formulae also apply to the case that $n_2$ is complex. In that case $k^{(2)}_z$ and the reflection coefficients are complex.
 
-## Interference and polarisation
-In the study of interference we have so far ignored the vectorial nature of light by assuming that all the fields have the same polarisation.
+## Interference and polarization
+In the study of interference we have so far ignored the vectorial nature of light by assuming that all the fields have the same polarization.
 Suppose now that we have two real vector fields $\mathbf{\mathcal{E}}_1$, $\mathbf{\mathcal{E}}_2$. The (instantaneous) intensity of each field is (apart from a constant factor) given by
 
 ```{math}
@@ -1280,7 +1280,7 @@ If the two fields interfere, the instantaneous intensity is given by
 = \mathbf{\mathcal{E}}_1\cdot \mathbf{\mathcal{E}}_1+\mathbf{\mathcal{E}}_2\cdot \mathbf{\mathcal{E}}_2+2\mathbf{\mathcal{E}}_1\cdot \mathbf{\mathcal{E}}_2,
 \end{align*}
 ```
-where $2\mathbf{\mathcal{E}}_1\cdot \mathbf{\mathcal{E}}_2$ is the interference term. Suppose the polarisation of $\mathbf{\mathcal{E}}_1$ is orthogonal to the polarisation of $\mathbf{\mathcal{E}}_2$, e.g.
+where $2\mathbf{\mathcal{E}}_1\cdot \mathbf{\mathcal{E}}_2$ is the interference term. Suppose the polarization of $\mathbf{\mathcal{E}}_1$ is orthogonal to the polarization of $\mathbf{\mathcal{E}}_2$, e.g.
 
 ```{math}
 \begin{align*}
@@ -1293,7 +1293,7 @@ where $2\mathbf{\mathcal{E}}_1\cdot \mathbf{\mathcal{E}}_2$ is the interference 
 Then $\mathbf{\mathcal{E}}_1\cdot \mathbf{\mathcal{E}}_2=0$, which means the two fields can not interfere. This observation is the
 
 ```{note}
-**First Fresnel-Arago Law**: fields with orthogonal polarisation cannot interfere.
+**First Fresnel-Arago Law**: fields with orthogonal polarization cannot interfere.
 ```
 
 Next we write the fields in terms of orthogonal components
@@ -1307,7 +1307,7 @@ Next we write the fields in terms of orthogonal components
 \mathcal{E}_{2\parallel} \end{pmatrix}.
 \end{align*}
 ```
-This is always possible, whether the fields are polarised or randomly polarised. Then {eq}`eq.interpol1` becomes
+This is always possible, whether the fields are polarized or randomly polarized. Then {eq}`eq.interpol1` becomes
 
 ```{math}
 \begin{align*}
@@ -1326,7 +1326,7 @@ I &=2\braket**calE_{1\bot**^2 + \mathcal{E}_{2\bot}^2 + 2\mathcal{E}_{1\bot} \ma
 \end{split}
 \end{align*}
 ```
-This is qualitatively the same as what we would get if the fields had parallel polarisation, e.g.
+This is qualitatively the same as what we would get if the fields had parallel polarization, e.g.
 
 ```{math}
 \begin{align*}
@@ -1338,10 +1338,10 @@ This is qualitatively the same as what we would get if the fields had parallel p
 This leads to the
 
 ```{note}
-**Second Fresnel-Arago Law**: two fields with parallel polarisation interfere the same way as two fields that are randomly polarised.
+**Second Fresnel-Arago Law**: two fields with parallel polarization interfere the same way as two fields that are randomly polarised.
 ```
 
-This indicates that our initial assumption in the previous sections that all our fields have parallel polarisation is not as limiting as it may have appeared at first.
+This indicates that our initial assumption in the previous sections that all our fields have parallel polarization is not as limiting as it may have appeared at first.
 
 Suppose now that we have some field
 
@@ -1351,7 +1351,7 @@ Suppose now that we have some field
 \mathcal{E}_{\parallel}\end{pmatrix},
 \end{align*}
 ```
-which is **randomly polarised**. Suppose we separate the two polarisations, and rotate one so that the two resulting fields are aligned, e.g.
+which is **randomly polarised**. Suppose we separate the two polarizations, and rotate one so that the two resulting fields are aligned, e.g.
 
 ```{math}
 \begin{align*}

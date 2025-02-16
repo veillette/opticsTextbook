@@ -15,9 +15,9 @@ parts:
       - file: content/Chap03Optical_Instrument/OpticalInstruments.md
         sections:
           - file: content/Chap03Optical_Instrument/Problems/OpticalInstruments_Exercise.md
-      - file: content/Chap04Polarisation/Polarization.md
+      - file: content/Chap04Polarization/Polarization.md
         sections:
-          - file: content/Chap04Polarisation/Problems/PolarizationExercise.md
+          - file: content/Chap04Polarization/Problems/PolarizationExercise.md
       - file: content/Chap05Interference/InterferenceCoherence.md
         sections:
           - file: content/Chap05Interference/Problems/InterferenceCoherenceExercise.md

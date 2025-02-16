@@ -69,7 +69,7 @@ The human eye is made of an almost spherical (24 mm long and 22 mm across) gelat
 Cross section of a human eye (from [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Three_Internal_chambers_of_the_Eye.png) by Holly Fischer / CC BY).
 ```
 
-After passing the cornea, the rays reach the **aqueous humour** ($n\approx$1.336) with the **iris** or pupil. It can expand or contract from a 2&nbsp;mm (bright sun) to 8&nbsp;mm (low light) diameter to adapt to the light intensity. The iris gives colour to the eye. After the iris, the rays reach the flexible **crystalline lens** which has the size of a bean (9&nbsp;mm in diameter, and 4&nbsp;mm thick in relaxed condition). Its index of refraction varies from 1.406 in the centre to 1.386 at the edge.
+After passing the cornea, the rays reach the **aqueous humour** ($n\approx$1.336) with the **iris** or pupil. It can expand or contract from a 2&nbsp;mm (bright sun) to 8&nbsp;mm (low light) diameter to adapt to the light intensity. The iris gives color to the eye. After the iris, the rays reach the flexible **crystalline lens** which has the size of a bean (9&nbsp;mm in diameter, and 4&nbsp;mm thick in relaxed condition). Its index of refraction varies from 1.406 in the centre to 1.386 at the edge.
 
 ```{figure} Images/Chapter_3/3_06_Focus_in_an_eye_a.png
 ```
@@ -97,7 +97,7 @@ Due to the loss of elasticity of the muscle, the near point moves from 7&nbsp;cm
 
 ### Retina
 
-The retina is composed of approximately 125 million photoreceptor cells: the **rods** and the **cones**. The rods are highly sensitive black and white (intensity) sensors, while the cones are colour sensitive for the wavelengths 390 nm - 780 nm. UV light is absorbed by the lens (people whose lens is removed because of cataract can "see" UV light). The **fovea centralis** is the most sensitive centre of the retina with a high density of cones. The eyes move continuously to focus the image on this area. The information is transferred by the optical nerve, placed at the back of the eye, where it causes a blind spot.
+The retina is composed of approximately 125 million photoreceptor cells: the **rods** and the **cones**. The rods are highly sensitive black and white (intensity) sensors, while the cones are color sensitive for the wavelengths 390 nm - 780 nm. UV light is absorbed by the lens (people whose lens is removed because of cataract can "see" UV light). The **fovea centralis** is the most sensitive centre of the retina with a high density of cones. The eyes move continuously to focus the image on this area. The information is transferred by the optical nerve, placed at the back of the eye, where it causes a blind spot.
 
 ### Dioptric Power of a lens
 
@@ -341,5 +341,3 @@ $\text{MP} = \alpha_a/\alpha_u$ where $\alpha_u$ is the half angle of the cone o
 :name: Fig_3_13_Rays_Telescope
 Ray angles for a telescope
 ```
-
-

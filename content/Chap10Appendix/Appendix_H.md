@@ -265,20 +265,20 @@ This is for example used in the solution of the Schr\"odinger equation
 ```
 which indicates why it's useful to describe $\mathbf{\psi}(0)$ in the energy basis if we want to find its time evolution.
 
-There are many applications of basis transformations and eigenvalue decompositions in Optics. Suppose we know the transmission axis of a linear polariser and let it be in the direction of the vector
+There are many applications of basis transformations and eigenvalue decompositions in Optics. Suppose we know the transmission axis of a linear polarizer and let it be in the direction of the vector
 
 $$\left(\begin{array}{c}a\\
 \end{array}\right)
 
 $$
-Then all light polarised in this direction will be transmitted completely, so this vector is an eigenvector of the polariser operator with eigenvalue 1. We know that all light polarised in the direction of the vector
+Then all light polarized in this direction will be transmitted completely, so this vector is an eigenvector of the polarizer operator with eigenvalue 1. We know that all light polarized in the direction of the vector
 
 $$
 \left(\begin{array}{c}b\\a
 \end{array}\right)
 
 $$
-(i.e. perpendicular to the transmission axis) will be completely blocked, so this is an eigenvector with eigenvalue 0. Thus, given the transmission axis of a linear polariser, we can immediately write down its Jones matrix
+(i.e. perpendicular to the transmission axis) will be completely blocked, so this is an eigenvector with eigenvalue 0. Thus, given the transmission axis of a linear polarizer, we can immediately write down its Jones matrix
 
 ```{math}
 \begin{align*}
@@ -292,9 +292,9 @@ J=
 \end{array}\right)^{-1}.
 \end{align*}
 ```
-Conversely, from the eigenvalue decomposition of a Jones matrix we can immediately see what its principal axes are, and how it acts on the components along those axes, i.e. whether it is a linear polariser, half-wave plate, quarter-wave plate, or something else.
+Conversely, from the eigenvalue decomposition of a Jones matrix we can immediately see what its principal axes are, and how it acts on the components along those axes, i.e. whether it is a linear polarizer, half-wave plate, quarter-wave plate, or something else.
 
-Also, basis transformations can be used to describe **optical activity**. In optically active media, there are different refractive indices for left-circularly and right-circularly polarised light, so it is more convenient to represent the Jones vector in the basis of left-circularly and right-circularly polarised light, rather than in the basis of two linear orthogonal polarisations.
+Also, basis transformations can be used to describe **optical activity**. In optically active media, there are different refractive indices for left-circularly and right-circularly polarized light, so it is more convenient to represent the Jones vector in the basis of left-circularly and right-circularly polarized light, rather than in the basis of two linear orthogonal polarizations.
 
 It is also interesting to note the equivalence between the Jones vector and the quantum states of photons that are used as qubits: the polarization of a photon is a two-state quantum-mechanical system. This qubit can be represented as
 
@@ -328,4 +328,3 @@ For other explanations of basis transformations see [Khan Academy - Alternate co
 
 
 [^1]: See e.g. [Experimental Demonstration of Blind Quantum Computing, S. Barz et al. (2011)](http://arxiv.org/pdf/1110.1381v_1.pdf).
-

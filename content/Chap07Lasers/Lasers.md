@@ -10,7 +10,7 @@
 - Understand what transverse modes are and how they can be prevented.
 ```
 
-In the early 1950s a new source of microwave radiation, **the maser**, was invented by C.H. Townes in the USA and A.M. Prokhorov and N.G. Basov in the USSR. Maser stands for "Microwave Amplification by Stimulated Emission of Radiation". In 1958, A.L. Schawlow and Townes formulated the physical constraint to realise a similar device for visible light. This resulted in 1960 in the first optical maser by T.H. Maiman in the USA.
+In the early 1950s a new source of microwave radiation, **the maser**, was invented by C.H. Townes in the USA and A.M. Prokhorov and N.G. Basov in the USSR. Maser stands for "Microwave Amplification by Stimulated Emission of Radiation". In 1958, A.L. Schawlow and Townes formulated the physical constraint to realize a similar device for visible light. This resulted in 1960 in the first optical maser by T.H. Maiman in the USA.
 This device was since then called **L**ight **A**mplification by **S**timulated **E**mission of **R**adiation or **laser**.
 It has revolutionised science and engineering and has many applications, e.g.
 - bar code readers,
@@ -76,7 +76,7 @@ As follows from [](chapter.diffraction), a parallel beam of diameter $D$ and wav
 \theta = \frac{\lambda}{D}.
 \end{align*}
 ```
-The diffraction-limited divergence thus depends on the wavelength and decreases when the diameter of the emitting surface increases. With a laser source, the diffraction-limited convergence angle can almost be reached and therefore a collimated beam with very high intensity can be realised ({numref}`Fig_7_02_Laser_Source_Collimation`).
+The diffraction-limited divergence thus depends on the wavelength and decreases when the diameter of the emitting surface increases. With a laser source, the diffraction-limited convergence angle can almost be reached and therefore a collimated beam with very high intensity can be realized ({numref}`Fig_7_02_Laser_Source_Collimation`).
 
 ```{figure} Images/Chapter_7/7_02_Laser_Source_Collimation.png
 :name: Fig_7_02_Laser_Source_Collimation
@@ -385,7 +385,7 @@ $\Delta N/N$ as function of $t/(A_{21}+2B_{12}W)$ when all atoms are in the grou
 
 A way to achieve population inversion of levels 1 and 2 and hence amplification of the radiation with frequency $\omega$ with $\hbar \omega = E_2-E_1$ is to use more atomic levels, for example three. In {numref}`Fig_7_09_Laser_3level` the ground state is state 1 with two upper levels 2 and 3 such that $E_1<E_2<E_3$. The transition of interest is still that from level 2 to level 1. Initially almost all atoms are in the ground state 1. Then atoms are pumped with rate $R$ from level 1 directly to level 3. The transition $3 \rightarrow 2$ is non-radiative and has a high rate $A_{32}$ so that level 3 is quickly emptied and therefore $N_3$ remains small. State 2 is called a metastable state, because the residence time in this state is for every atom relatively long. Therefore its population tends to increase, leading to population inversion between the metastable state 2 and the lower ground state 1 (which is continuously being depopulated by pumping to the highest level).
 
-Note that $A_{31}$ has to be small, because otherwise level 1 will quickly be filled, by which population inversion will be stopped. This effect can be utilised to obtain a series of laser pulses as output, but is undesirable for a continuous output power.
+Note that $A_{31}$ has to be small, because otherwise level 1 will quickly be filled, by which population inversion will be stopped. This effect can be utilized to obtain a series of laser pulses as output, but is undesirable for a continuous output power.
 
 Pumping may be done optically as described, but the energy to transfer atoms from level 1 to level 3 can also be supplied by an electrical discharge in a gas or by an electric current.
 After the pumping has achieved population inversion, initially no light is emitted. So how does the laser actually start?
@@ -554,4 +554,3 @@ Semiconductor laser with active *p-n* junction, polished end faces and current s
 ```
 
 In a semiconductor laser as shown in {numref}`Fig_7_19_VCSEL`, the pumping is done by electron current injection. It is one of the most compact lasers and yet it typically emits 20 mW of power. Transitions occur between the conduction and valence bands close to the *p-n* junction. Electrons from the *n*-layer conduction band will recombine with the holes in the *p*-layer. A cavity is obtained by polishing the end faces that are perpendicular to the junction to make them highly reflecting. Semiconductor lasers are produced for wavelengths from 700 nm to 30 $\mu$m and give continuous (CW) output.
-

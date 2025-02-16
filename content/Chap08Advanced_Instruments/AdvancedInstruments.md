@@ -12,7 +12,7 @@ $$
 \mathcal{F}(U)\left(\xi,\eta\right)\to \mathcal{F}(U)(\xi,\eta)+(i-1)\delta(\xi,\eta)\mathcal{F}(U)(0,0).
 $$
 
-This shift can be realised with a phase mask in the pupil of the lens.
+This shift can be realized with a phase mask in the pupil of the lens.
 Inverse Fourier transforming gives
 
 $$
@@ -67,12 +67,12 @@ Partial surface profile of a 1 Euro coin, measured with a Nipkow disk confocal m
 
 ## Fluorescence Microscope
 
-In this case, fluorescent molecules, such at those of the GFP (Green Fluorescence Protein) family, are introduced in the cell of interest. The light from the illuminating source is monochromatic (laser) and excites these GFP molecules which then re-emit at a characteristic longer wavelength. By using a dichromate (a mirror that passes only a certain colour and reflects the rest), this re-emitted light can be detected using a detector with a pinhole. One obtains colourful images such as the one presented in {numref}`Fig_03_Flurorescence`. The advantage of fluorescence microscopy is that the sources of the fluorescence light are inside the sample and that by selective binding of the fluorescent molecules to particular organs very specific images can be obtained.
+In this case, fluorescent molecules, such at those of the GFP (Green Fluorescence Protein) family, are introduced in the cell of interest. The light from the illuminating source is monochromatic (laser) and excites these GFP molecules which then re-emit at a characteristic longer wavelength. By using a dichromate (a mirror that passes only a certain color and reflects the rest), this re-emitted light can be detected using a detector with a pinhole. One obtains colorful images such as the one presented in {numref}`Fig_03_Flurorescence`. The advantage of fluorescence microscopy is that the sources of the fluorescence light are inside the sample and that by selective binding of the fluorescent molecules to particular organs very specific images can be obtained.
 
 
 ```{figure} Images/Chapter_8/FluorescentCells.jpg
 :name: Fig_03_Flurorescence
-Endothelial cells under the microscope using fluorescence microscopy. The different colours enlighten different GFP.
+Endothelial cells under the microscope using fluorescence microscopy. The different colors enlighten different GFP.
 ```
 
 	
@@ -96,7 +96,7 @@ Collection (left) and Excitation (right) mode for a SNOM.
 ```
 
 
-On the left in {numref}`Fig_8_05_NSOM` a topographic Atomic Force Mircoscopic (AFM) image is shown of a Photonics Band Gap (PBG) structure; next to it is an NSOM image measured with a collecting fiber set-up.
+On the left in {numref}`Fig_8_05_NSOM` a topographic Atomic Force Microscopic (AFM) image is shown of a Photonics Band Gap (PBG) structure; next to it is an NSOM image measured with a collecting fiber set-up.
 
 A warning is appropriate.
 Because in SNOM the fiber is very close to the sample, either to illuminate the sample or to collect the scattered near field, the fiber in general will influence the measurement, i.e. the field that one wants to detect is to a certain extent perturbed by the measuring device.
