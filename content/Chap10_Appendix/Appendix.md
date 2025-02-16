@@ -1,0 +1,15 @@
+\appendix
+\begin{appendices}
+\label{chapter.appendices}
+\noappendicestocpagenum
+\addappheadtotoc
+\input{Chap10_Appendix/Appendix_A}
+\input{Chap10_Appendix/Appendix_B}
+\input{Chap10_Appendix/Appendix_C}
+\input{Chap10_Appendix/Appendix_D}
+\input{Chap10_Appendix/Appendix_E}
+\input{Chap10_Appendix/Appendix_F}
+\input{Chap10_Appendix/Appendix_G}
+\input{Chap10_Appendix/Appendix_H}
+\input{Chap10_Appendix/French_method_01}
+\end{appendices}
