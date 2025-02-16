@@ -61,22 +61,6 @@ html:
     utterances: false
   announcement: "" # Change this parameter (optional)
 
-# Add this section for DOCX configuration
-builders:
-  - name: docx
-    output: docx
-    output_name: optics
-    options:
-      toc: true
-      number_sections: true
-
-# Existing theme options - add download button
-html_theme_options:
-  use_download_button: true
-  download_formats:
-    - pdf
-    - docx
-
 
 #######################################################################################
 # LaTeX-specific settings
