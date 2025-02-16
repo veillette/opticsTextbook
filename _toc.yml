@@ -9,12 +9,12 @@ parts:
       - file: content/Chap01Basics/Basics.ipynb
         sections:
           - file: content/Chap01Basics/Problems/BasicsExercise.md
-      - file: content/Chap02Geometrical_optics/GeometricalOptics.ipynb
+      - file: content/Chap02GeometricalOptics/GeometricalOptics.ipynb
         sections:
-          - file: content/Chap02Geometrical_optics/Problems/GeometricalOpticsExercise.md
-      - file: content/Chap03Optical_Instrument/OpticalInstruments.md
+          - file: content/Chap02GeometricalOptics/Problems/GeometricalOpticsExercise.md
+      - file: content/Chap03OpticalInstrument/OpticalInstruments.md
         sections:
-          - file: content/Chap03Optical_Instrument/Problems/OpticalInstruments_Exercise.md
+          - file: content/Chap03OpticalInstrument/Problems/OpticalInstruments_Exercise.md
       - file: content/Chap04Polarization/Polarization.md
         sections:
           - file: content/Chap04Polarization/Problems/PolarizationExercise.md
@@ -27,9 +27,9 @@ parts:
       - file: content/Chap07Lasers/Lasers.md
         sections:
           - file: content/Chap07Lasers/Problems/LasersExercise.md
-      - file: content/Chap09Fiber/FiberOptics.md
+      - file: content/Chap09FiberOptics/FiberOptics.md
         sections:
-          - file: content/Chap09Fiber/Problems/FiberExercise.md
+          - file: content/Chap09FiberOptics/Problems/FiberExercise.md
   - caption: Appendix
     chapters:
         - file: content/Chap10Appendix/Appendix_A.md
