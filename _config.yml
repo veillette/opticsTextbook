@@ -83,7 +83,7 @@ launch_buttons:
 repository:
   url: https://github.com/veillette/opticsTextbook/ # Change this parameter (optional)
   path_to_book: "" # Change this parameter (optional)
-  branch: main # Change this parameter (optional)
+  branch: concise # Change this parameter (optional)
 
 
 #######################################################################################
@@ -120,8 +120,8 @@ sphinx:
           "diff": "\\pdv"
 #    html_theme_options:
 #        logo:
-#            image_light: img/tudelft.png
-#            image_dark: img/tudelft-dark.png
+#            image_light: img/camera.svg
+#            image_dark: img/camera.svg
 #        launch_buttons:
 #          thebe: true
     thebe_config:
