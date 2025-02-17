@@ -53,7 +53,8 @@ html:
   use_multitoc_numbering: true
   extra_navbar: "" # Change this parameter (optional)
   extra_footer: "" # Change this parameter (optional)
-  google_analytics_id: ""
+  analytics:
+    google_analytics_id: "G-BT4TZCELT2"
   home_page_in_navbar: true
   baseurl: ""
   comments:
