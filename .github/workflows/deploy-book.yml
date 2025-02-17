@@ -48,10 +48,10 @@ jobs:
           
     - name: Deploy to GitHub Pages
       if: github.ref == 'refs/heads/concise' && github.event_name == 'push'  # Only deploy on push to concise branch
-      uses: peaceiris/actions-gh-pages@v3
+      uses: peaceiris/actions-gh-pages@v4
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./${{ env.BOOK_DIR }}/_build/html
         full_commit_message: Deploy book to GitHub Pages
         force_orphan: true # Keep gh-pages branch clean
-        clean: true   # prevent caching
+        
