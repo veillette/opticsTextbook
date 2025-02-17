@@ -53,4 +53,5 @@ jobs:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./${{ env.BOOK_DIR }}/_build/html
         full_commit_message: Deploy book to GitHub Pages
-        force_orphan: true  # Keep gh-pages branch clean
+        force_orphan: true # Keep gh-pages branch clean
+        clean: true   # prevent caching
