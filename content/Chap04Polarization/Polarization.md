@@ -203,17 +203,17 @@ Furthermore, the electric field in a certain point moves along an ellipse in the
 We can conclude that in any point of an arbitrary time-harmonic electromagnetic field, the electric (and in fact also the magnetic) field vector prescribes as function of time an ellipse in some plane which depends on position<sup>[^2]</sup>. In this chapter we only consider the field and polarization state of a single plane wave.
 
 
-``` Images/Chapter_4/4_01_Dphi_000pi_f1_BW.png
+```{figure} Images/Chapter_4/4_01_Dphi_000pi_f1_BW.png
 :name: fig:linpol
 Linear polarization
 ```
 
-``` Images/Chapter_4/4_02_Dphi_05pi_f1_BW.png
+```{figure} Images/Chapter_4/4_02_Dphi_05pi_f1_BW.png
 :name: fig:circpol
 Circular polarization
 ```
 
-``` Images/Chapter_4/4_03_Dphi_025pi_f1_BW.png
+```{figure} Images/Chapter_4/4_03_Dphi_025pi_f1_BW.png
 :name: fig:ellpol
 Elliptical polarization
 
