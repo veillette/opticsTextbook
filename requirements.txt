@@ -8,5 +8,5 @@ jupyterquiz
 jupyterlite-sphinx
 sphinx-exercise
 sphinx-proof
-sphinx-thebe ~= 0.9.9
+sphinx-thebe
 jupyter-book
