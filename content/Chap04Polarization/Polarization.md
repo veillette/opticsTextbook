@@ -203,17 +203,17 @@ Furthermore, the electric field in a certain point moves along an ellipse in the
 We can conclude that in any point of an arbitrary time-harmonic electromagnetic field, the electric (and in fact also the magnetic) field vector prescribes as function of time an ellipse in some plane which depends on position<sup>[^2]</sup>. In this chapter we only consider the field and polarization state of a single plane wave.
 
 
-```{figure} Images/Chapter_4/4_01_Dphi_000pi_f1_BW.png
+``` Images/Chapter_4/4_01_Dphi_000pi_f1_BW.png
 :name: fig:linpol
 Linear polarization
 ```
 
-```{figure} Images/Chapter_4/4_02_Dphi_05pi_f1_BW.png
+``` Images/Chapter_4/4_02_Dphi_05pi_f1_BW.png
 :name: fig:circpol
 Circular polarization
 ```
 
-```{figure} Images/Chapter_4/4_03_Dphi_025pi_f1_BW.png
+``` Images/Chapter_4/4_03_Dphi_025pi_f1_BW.png
 :name: fig:ellpol
 Elliptical polarization
 
@@ -421,7 +421,7 @@ If the matrix ${\cal M}$ describes the Jones matrix as defined in {eq}`eq.defM2a
 For more information on basis transformations, see [](sec:basistrans).
 
 
-```{figure} Images/Chapter_4/4_2_Rotation_polarization.png
+```{figure} Images/Chapter_4/4_2_Rotation_Polarization.png
 :name: Fig_4_2_Rotation_Axis
 If the wave plate is rotated, the fast and slow axis no longer correspond to $x$ and $y$. Instead, we have to introduce a new coordinate system ($x',y'$).
 ```
