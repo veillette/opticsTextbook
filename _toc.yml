@@ -39,7 +39,6 @@ parts:
         - file: content/Chap10Appendix/Appendix_G.md
         - file: content/Chap10Appendix/Appendix_H.md
         - file: content/Chap10Appendix/French_method.md
-        #- file: content/Preface/Preface.md
   - caption: Authors
     chapters:
       - file: content/Authors/authors.md
