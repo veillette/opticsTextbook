@@ -6,10 +6,10 @@ root: content/Preface/Preface.md
 parts:
   - caption: Interactive Optics
     chapters:
-      - file: content/Chap01Basics/Basics.ipynb
+      - file: content/Chap01Basics/Basics.md
         sections:
           - file: content/Chap01Basics/Problems/BasicsExercise.md
-      - file: content/Chap02GeometricalOptics/GeometricalOptics.ipynb
+      - file: content/Chap02GeometricalOptics/GeometricalOptics.md
         sections:
           - file: content/Chap02GeometricalOptics/Problems/GeometricalOpticsExercise.md
       - file: content/Chap03OpticalInstrument/OpticalInstruments.md
@@ -21,7 +21,7 @@ parts:
       - file: content/Chap05Interference/InterferenceCoherence.md
         sections:
           - file: content/Chap05Interference/Problems/InterferenceCoherenceExercise.md
-      - file: content/Chap06Diffraction/DiffractiveOptics.ipynb
+      - file: content/Chap06Diffraction/DiffractiveOptics.md
         sections:
           - file: content/Chap06Diffraction/Problems/DiffractiveOpticsExercise.md
       - file: content/Chap07Lasers/Lasers.md
