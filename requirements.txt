@@ -1,4 +1,3 @@
---extra-index-url https://gitlab.tudelft.nl/api/v4/projects/11239/packages/pypi/simple
 numpy
 scipy
 matplotlib
