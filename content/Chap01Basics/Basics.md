@@ -1033,7 +1033,7 @@ HTML(ani.to_jshtml())
 ### Field of an Electric Dipole
 An other important solution of Maxwell's equation is the field radiated by a time-harmonic electric dipole, i.e. two opposite charges with equal strength that move time-harmonically around their center of mass.
 In this section the medium is homogeneous, but it may absorb part of the light, i.e. the permittivity may have a nonzero imaginary part.
-An electric dipole is the classical electromagnetic model for an atom or molecule. Because the optical wavelength is much larger than an atom and molecule, these charges may be considered to be concentrated both in the same point $\mathbf{r}_0$. The charge and current densities of such an elementary dipole are
+An electric dipole is the classical electromagnetic model for an atom or molecule. Because the optical wavelength is much larger than an atom and molecule, these charges may be considered to be concentrated both at the same point $\mathbf{r}_0$. The charge and current densities of such an elementary dipole are
 
 ```{math}
 :label: eq.rhodip
@@ -1190,7 +1190,7 @@ This equation says that the rate of change with time of the electromagnetic ener
 
 
 
-**Remark**. The energy flux $\mathbf{\mathcal{S}}$ and the energy density $U_{em}$ depend quadratically on the field. For $U_{em}$ the quadratic dependence on the electric and magnetic fields is clear. To see that the Poynting vector is also quadratic in the electromagnetic field, one should realize that the electric and magnetic fields are inseparable: they together form the electromagnetic field. Stated differently: if the amplitude of the electric field is doubled, then also that of the magnetic field is doubled and hence the Poynting vector is increased by the factor 4.
+**Remark**. The energy flux $\mathbf{\mathcal{S}}$ and the energy density $U_{em}$ depend quadratically on the field. For $U_{em}$ the quadratic dependence on the electric and magnetic fields is clear. To see that the Poynting vector is also quadratic in the electromagnetic field, one should realize that the electric and magnetic fields are inseparable: they together form the electromagnetic field. Stated differently: if the amplitude of the electric field is doubled, then also that of the magnetic field is doubled and hence the Poynting vector is increased by a factor 4.
 Therefore, when computing the Poynting vector or the electromagnetic energy density of a time-harmonic electromagnetic field, the real-valued vector fields should be used, i.e. the complex fields should **NOT** be used. An exception is the calculation of the long-time average of the Poynting vector or the energy density. As we will show in the next section, the **time averages** of the energy flux and energy density of time-harmonic fields can actually be expressed quite conveniently in terms of the complex field amplitudes.
 
 
@@ -1462,9 +1462,9 @@ We will only demonstrate that the tangential components of the electric field ar
 &= \oint_{\cal L} \mathbf{\mathcal{E}} \cdot \mathrm{d}\mathbf{l},
 \end{align*}
 ```
-where in the last step we used Stokes' theorem with the direction of integration over the loop given by that of the direction of rotation of a screw driver when it moves in the direction of the normal $\hat{\mathbf{y}}$. In words: the rate of change of the magnetic flux through the surface $A$ is equal to the integral of the tangential electric field over the bounding closed loop ${\cal L}$.
+where in the last step, we used Stokes' theorem with the direction of integration over the loop given by that of the direction of rotation of a screwdriver when it moves in the direction of the normal $\hat{\mathbf{y}}$. In words, the rate of change of the magnetic flux through the surface $A$ is equal to the integral of the tangential electric field over the bounding closed loop ${\cal L}$.
 
-By taking the limit $\mathrm{d}z\rightarrow 0$, the surface integral and the integrals over the vertical parts of the loop vanish and there remain only the integrals of the tangential electric field over the horizontal parts parallel to the $x$-axis of the loop on both sides of the interface $z=0$. Since these integrals are traversed in opposite directions and the lengths of these parts are the same and arbitrary, we conclude for the loop as shown in {numref}`Fig_2_08_Stokes_loop` that
+By taking the limit $\mathrm{d}z\rightarrow 0$, the surface integral and the integrals over the vertical parts of the loop vanish. There remain only the integrals of the tangential electric field over the horizontal parts parallel to the $x$-axis of the loop on both sides of the interface $z=0$. Since these integrals are traversed in opposite directions and the lengths of these parts are the same and arbitrary, we conclude for the loop as shown in {numref}`Fig_2_08_Stokes_loop` that
 
 ```{math}
 :label: eq.fresnel10
@@ -1474,9 +1474,9 @@ By taking the limit $\mathrm{d}z\rightarrow 0$, the surface integral and the int
 ```
 where $\mathbf{\mathcal{E}}$ is the total electric field, i.e. it is equal to the sum of the incident and the reflected field for $z<0$, and equal to the transmitted field in $z>0$.
 By choosing the closed loop in the $(y,z)$-plane instead of the $(x,z)$-plane one finds similarly that the $y$-component of the electric field is continuous.
-The continuity of the tangential components of the magnetic field are derived in a similar manner.
+The continuity of the tangential components of the magnetic field is derived in a similar manner.
 
-Our derivation holds for electromagnetic fields of arbitrary time dependence. Furthermore, the derivation used above for the planar interface $z=0$ can easily be generalized for curved surfaces. Therefore we conclude:
+Our derivation holds for electromagnetic fields of arbitrary time dependence. Furthermore, the derivation used above for the planar interface $z=0$ can easily be generalized for curved surfaces. Therefore, we conclude:
 
 ```{note}
 The tangential electric and magnetic field components are continuous across any interface.
@@ -2025,7 +2025,7 @@ Since visible light has such high frequencies (order $10^{15}$ Hz), roughly a hu
 
 [^4]: For a derivation see D.J. Griffiths, *Introduction to Electrodynamics*, Pearson.
 
-[^5]:  Named after Willebrord Snellius 1580-1626, mathematics professor in Leiden
+[^5]: Named after Willebrord Snellius 1580-1626, mathematics professor in Leiden
 
 [^6]: [MIT OCW - Reflection at The Air-glass Boundary](https://ocw.mit.edu/resources/res-6-006-video-demonstrations-in-lasers-and-optics-spring-2008/demonstrations-in-physical-optics/reflection-at-the-air-glass-boundary/): demonstration of reflection of polarized light and the Brewster angle.
 
