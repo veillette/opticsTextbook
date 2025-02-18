@@ -23,7 +23,7 @@ jupytext:
 ```
 **Nice software for practicing geometrical optics**:
 
-[https://www.geogebra.org/m/X8RuneVy](https://www.geogebra.org/m/X8RuneVy)
+[https://phet.colorado.edu/sims/html/geometric-optics/latest/geometric-optics_all.html](https://phet.colorado.edu/sims/html/geometric-optics/latest/geometric-optics_all.html)
 
 ## Introduction
 Geometrical optics is an old subject but it is still essential to understand and design optical instruments such as camera's, microscopes, telescopes etc. Geometrical optics started long before light was described as a wave as is done in wave optics, and long before it was discovered that light is an electromagnetic wave and that optics is part of electromagnetism.
