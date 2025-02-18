@@ -1,5 +1,5 @@
 (chapter.polarization)=
-# polarization
+# Polarization
 
 ```{admonition} What you should know and be able to do after studying this chapter
 - Understand how different states of polarization are related to the ratio of the amplitudes and the difference in phase between two orthogonal components of the electric field.
@@ -15,7 +15,7 @@
 
 
 
-## polarization States and Jones Vectors
+## Polarization States and Jones Vectors
 We have seen in [](chapter.basics) that light is an electromagnetic wave which satisfies Maxwell's equations and the wave equation derived therefrom. Since the electric field is a vector which oscillates as function of time in a certain direction, we say that the wave has a certain polarization. In this chapter we look at the different types of polarization and how the polarization of a light beam can be manipulated.
 
 We start with Eqs. {eq}`eq.bcE2`, {eq}`eq.defbE` and {eq}`eq.orth` which show that the (real) electric field $\mathbf{\mathcal{E}}(\mathbf{r},t)$ of a time-harmonic plane wave is always perpendicular to the direction of propagation, which is the direction of the wave vector $\mathbf{k}$ as well as the direction of the Poynting vector (the direction of the power flow). Let the wave propagate in the $z$-direction:
@@ -225,7 +225,7 @@ Illustration of different types of polarization. The horizontal and vertical arr
 - [KhanAcademy - Polarization of light, linear and circular](https://www.khanacademy.org/science/physics/light-waves/introduction-to-light-waves/v/polarization-of-light-linear-and-circular): Explanation of different polarization states and their applications.
 ```
 
-## Creating and Manipulating polarization States
+## Creating and Manipulating Polarization States
 We have seen how Maxwell's equations allow the existence of plane waves with many different states of polarization. But how can we create these states, and how do these states manifest themselves?
 
 Natural light often does not have a definite polarization. Instead, the polarization fluctuates rapidly with time.
@@ -455,7 +455,7 @@ Clearly, horizontally polarized light is completely transmitted, while verticall
 ```
 The amplitude of the transmitted field is reduced by the factor $\cos\alpha$, which implies that the intensity of the transmitted light is reduced by the factor $\cos^2 \alpha$. This relation is known as **Malus' law**.
 
-### Degree of polarization
+### Degree of Polarization
 Natural light such as sun light is unpolarized. The instantaneous polarization of unpolarized light fluctuates rapidly in a random manner. A linear polarizer produces linear polarized light from unpolarized light. It follows from {eq}`eq.linpol` that the intensity transmitted by a linear polarizer when unpolarized light is incident, is the average value of $\cos^2\alpha$ namely $\frac{1}{2}$, times the incident intensity.
 
 Light that is a mixture of polarized and unpolarized light is called partially polarized. The **degree of polarization** is defined as the fraction of the total intensity that is polarised:
