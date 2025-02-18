@@ -122,7 +122,7 @@ Whatever the precise mechanism, an electric field induces a certain net dipole m
 \mathbf{\mathcal{P}}(\mathbf{r},t)= \epsilon_0 \chi_e \mathbf{\mathcal{E}}(\mathbf{r},t),
 \end{align*}
 ```
-where $\chi_e$ is a dimensionless quantity, the electric susceptibility of the material. A dipole moment which varies with time radiates an electromagneticc field. It is important to realize that in {eq}`eq.defP0` $\mathbf{\mathcal{E}}$ is the total local electric field at the position of the dipole, i.e. it contains the contribution of all other dipoles, which are also excited and radiate an electromagnetic field themselves.
+where $\chi_e$ is a dimensionless quantity, the electric susceptibility of the material. A dipole moment which varies with time radiates an electromagnetic field. It is important to realize that in {eq}`eq.defP0` $\mathbf{\mathcal{E}}$ is the total local electric field at the position of the dipole, i.e. it contains the contribution of all other dipoles, which are also excited and radiate an electromagnetic field themselves.
 Only in the case of diluted gasses, the influence of the other dipoles in matter can be neglected and the local electric field is simply given by the field emitted by a source external to the matter under consideration.
 
 A dipole moment density that changes with time corresponds to a current density $\mathbf{\mathcal{J}}_p$ [Ampere/$\text{m}^2$=C/($\text{m}^2$ s)] and a charge density $\varrho_p$ [C/$\text{m}^3$] given by
@@ -1078,7 +1078,7 @@ The field radiated by an elementary dipole in $\mathbf{r}_0$ in homogeneous matt
 \frac{k^2 c}{n} \left( 1 + \frac{i}{kR} \right)\,
 \hat{\mathbf{R}} \times \mathbf{p} \frac{e^{i k R}}{4 \pi R},\end{align*}
 ```
-where $k=k_0 n $, with $k_0$ bthe wave number in vacuum and $n=\sqrt{\epsilon/\epsilon_0}$, and with $\mathbf{R}=\mathbf{r}-\mathbf{r}_0$, $\hat{\mathbf{R}}=\mathbf{R}/R$.
+where $k=k_0 n $, with $k_0$ the wave number in vacuum and $n=\sqrt{\epsilon/\epsilon_0}$, and with $\mathbf{R}=\mathbf{r}-\mathbf{r}_0$, $\hat{\mathbf{R}}=\mathbf{R}/R$.
 It is seen that the complex electric and magnetic fields are proportional to the complex spherical wave:
 
 $$
@@ -1195,7 +1195,7 @@ Therefore, when computing the Poynting vector or the electromagnetic energy dens
 
 
 
-If we subsitute the real fields {eq}`eq.Eplanew`, {eq}`eq.Hplanew` of the plane wave in the Poynting vector and the electromagnetic energy density we get:
+If we substitute the real fields {eq}`eq.Eplanew`, {eq}`eq.Hplanew` of the plane wave in the Poynting vector and the electromagnetic energy density we get:
 
 ```{math}
 :label: eq.Splanew

@@ -234,7 +234,7 @@ $$
 f_o = \frac{P_1+P_2 + \frac{d}{n} {\cal P}_1{\cal P}_2}{n \left( 1 - \frac{d}{n}\right){\cal P}_1 }.
 $$ (eq.fo)
 
-- **c)** Verfify that these formulae are equivalent to {eq}`eq.2fo`,{eq}`eq.2fi`.
+- **c)** Verify that these formulae are equivalent to {eq}`eq.2fo`,{eq}`eq.2fi`.
 
 
 10. Entrance pupil of a system of two lenses.

@@ -599,7 +599,7 @@ $\Delta R=|\mathbf{r}-\mathbf{r}_2|-|\mathbf{r}-\mathbf{r}_1|$, there is a time 
 \tau = \frac{\Delta R}{c}.
 \end{align*}
 ```
-Furthermore, the amplitudes are reduced by a factor proportional to the reciprocal distance which is different for the two fields. But if the distance of the screen to the mask is large enough, we may assumne these factors to be the same and then omit them.
+Furthermore, the amplitudes are reduced by a factor proportional to the reciprocal distance which is different for the two fields. But if the distance of the screen to the mask is large enough, we may assume these factors to be the same and then omit them.
 Using {eq}`eq.tau2`, the interference pattern on the screen is then, apart from a constant factor, given by
 
 ```{math}
@@ -699,7 +699,7 @@ The intensity on the screen becomes
 I(\tau)=|A(\mathbf{r}_1)|^2+|A(\mathbf{r}_2)|^2+2|A(\mathbf{r}_1)||A(\mathbf{r}_2)|\cos\left(\omega \tau -\varphi\right).
 \end{align*}
 ```
-So indeed we see interference fringes with maximum contrast 1 and hence the fields in $P_1$ and $P_2$ are fully cohreent as one would expect for a monochromatic wave. If $\varphi=0$, then interference maxima occur for
+So indeed we see interference fringes with maximum contrast 1 and hence the fields in $P_1$ and $P_2$ are fully coherent as one would expect for a monochromatic wave. If $\varphi=0$, then interference maxima occur for
 
 ```{math}
 \begin{align*}

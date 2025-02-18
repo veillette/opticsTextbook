@@ -38,10 +38,10 @@ The distance between the retina and the lens is $d_r$. Let us call the focal len
 
 - **d)** Calculate the magnification of the system by using the transfer matrices. Assume for simplicity that throughout the entire system $n=1$. How does the magnification of the object depend on $f$? Verify your answer with the applet.
 
-3. Increasing the angular field of vieuw. 
+3. Increasing the angular field of view. 
 
 Patients with tunnel vision have only a limited field of view because only the central region of their retina is light sensitive. Suppose that the sensitive region of the retina is circular and has radius $r=2 \text{cm}$.
-The length of the eye is 24 \text{cm} and the cornea and crystaline lens are together treated as a single thin lens.
+The length of the eye is 24 \text{cm} and the cornea and crystalline lens are together treated as a single thin lens.
 - **a)** Show that the angular field of view of distant objects is
 
 $$

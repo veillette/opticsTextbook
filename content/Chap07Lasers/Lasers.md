@@ -67,7 +67,7 @@ The spherical waves emitted by the atoms (point sources) in the lamp are collima
 \end{align*}
 ```
 where $2h$ is the size of the source and $f$ is the focal length of the lens as shown in {numref}`Fig_7_01_Gas_Source_Collimation`. Hence the light can be collimated by either choosing a lens with large focal length or by reducing the size of the source, or both. Both methods lead, however, to weak intensities.
-Due to the special configuration of the laser source, which consists of a Fabry-Perot resonator in which the light bounces up and down many times before being emitted, the atomic sources are effectively all at very large distance and hense the effective size of the source is very small. The divergence of the laser beam is therefore not limited by the size of the source but by the size of its emitting surface through the inevitable effect of diffraction.
+Due to the special configuration of the laser source, which consists of a Fabry-Perot resonator in which the light bounces up and down many times before being emitted, the atomic sources are effectively all at very large distance and hence the effective size of the source is very small. The divergence of the laser beam is therefore not limited by the size of the source but by the size of its emitting surface through the inevitable effect of diffraction.
 As follows from [](chapter.diffraction), a parallel beam of diameter $D$ and wavelength $\lambda$ has a diffraction limited divergence given by:
 
 ```{math}
