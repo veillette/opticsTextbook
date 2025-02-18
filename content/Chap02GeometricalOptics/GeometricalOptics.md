@@ -122,7 +122,7 @@ Actually, Fermat's principle as formulated above is not complete. There are circ
 ## Some Consequences of Fermat's Principle
 - **Homogeneous matter**
 
-In homogenous matter, the refractive index is constant and therefore paths of shortest OPL are straight lines. Hence in homogeneous matter rays are straight lines.
+In homogeneous matter, the refractive index is constant and therefore paths of shortest OPL are straight lines. Hence in homogeneous matter rays are straight lines.
 - **Inhomogeneous matter**
 
 When the refractive index is a function of position such as air with a temperature gradient, the rays bend towards regions of higher refractive index. In the case of {numref}`Fig_2_02_Theory_of_mirage` for example, the ray from the top of the tree to the eye of the observer passes on a warm day close to the ground because there the temperature is higher and hence the refractive index is smaller. Although the curved path is longer than the straight path, the total travel time of the light is less because near the ground the light speed is higher (since the refractive index is smaller). The observer gets the impression that the tree is upside down under the ground.
@@ -469,7 +469,7 @@ Imaging by a concave surface ($R<0$) with $n_2>n_1$. All image points are to the
 
 
 Finally we look at a case that there is a bundle of convergent rays incident from the left on the surface which when extended into the right medium without refraction at the surface, would intersect in a point $S$. Since this point is not actually present, it is called a **virtual object point**, in contrast to **real object points** which are to the left of the surface. The coordinate of a virtual object point is positive: $s_o>0$.
-One may wonder why we look at this case. The reason is that if we have several spherical surfaces behind each other, we can compute the image of an object point by first determining the intermediate image by the most left surface and then use this intermediate image as object for the next surface and so on. In such a case it can easily happen that an intermediate image is to the right of the next surface and hence is a virtual object for that surface. In the case of {numref}`Fig_2_13_Convex_Virtual_Object` at the left, the power is positive, hence the convergent bundle of incident rays is made even more convergent which leads to a real image point. Indeed when $s_o>0$ and ${\cal P}>0$ then {eq}`eq.one_surface` implies that always $s_i>0$. At the right of {numref}`Fig_2_13_Convex_Virtual_Object` the power is negative but is not sufficiently strong to turn the convergent incident bundle into a divergent bundle. So the image is still real. However, the image will be virtual when the virtual object $S$ is to the right of $F_o$ (which in this case is to the right of the surface) since then the bundle of rays converges so weakly that the surface turns is into a divergent bundle.
+One may wonder why we look at this case. The reason is that if we have several spherical surfaces behind each other, we can compute the image of an object point by first determining the intermediate image by the most left surface and then use this intermediate image as the object for the next surface and so on. In such a case, it can easily happen that an intermediate image is to the right of the next surface and hence is a virtual object for that surface. In the case of {numref}`Fig_2_13_Convex_Virtual_Object` at the left, the power is positive, hence the convergent bundle of incident rays is made even more convergent which leads to a real image point. Indeed when $s_o>0$ and ${\cal P}>0$ then {eq}`eq.one_surface` implies that always $s_i>0$. At the right of {numref}`Fig_2_13_Convex_Virtual_Object` the power is negative but is not sufficiently strong to turn the convergent incident bundle into a divergent bundle. So the image is still real. However, the image will be virtual when the virtual object $S$ is to the right of $F_o$ (which in this case is to the right of the surface) since then the bundle of rays converges so weakly that the surface turns is into a divergent bundle.
 
 
 ```{figure} Images/Chapter_2/2_13_Spherical_Interface_Concave.png
@@ -1305,7 +1305,7 @@ Aperture stop (A.S.) between the second and third lens, with entrance pupil and 
 For designing advanced optical systems Gaussian geometrical optics is not sufficient.
 Instead non-paraxial rays, and among them also non-meridional rays, must be traced using software based on Snell's Law with the sine of the angles of incidence and refraction. Often many thousands of rays are traced to evaluate the quality of an image.
 It is then found that in general the non-paraxial rays do not intersect at the ideal Gaussian image point. Instead of a single spot, a spot diagram is found which is more or less confined. The deviation from an ideal point image is quantified in terms of **aberrations**. One distinguishes between monochromatic and chromatic aberrations. The latter are caused by the fact that the refractive index depends on wavelength.
-Recall that in paraxial geometrical optics Snell's Law {eq}`eq.refrac3` is replaced by: $n_i \theta_i = n_t \theta_t$, i.e. $\sin \theta_i$ and $\sin \theta_t$ are replaced by the linear terms. If instead one retains the first two terms of the Taylor series of the sine, the errors in the image can be quantified by five monochromatic aberrations, the so-called **primary** or **Seidel aberrations**. The best known is **spherical aberration**, which is caused by the fact that for a convergent spherical lens, the rays that makes a large angle with the optical axis are focused closer to the lens than the paraxial rays (see {numref}`Fig_2_26_Aberration_Lens`).
+Recall that in paraxial geometrical optics Snell's Law {eq}`eq.refrac3` is replaced by: $n_i \theta_i = n_t \theta_t$, i.e. $\sin \theta_i$ and $\sin \theta_t$ are replaced by the linear terms. If instead one retains the first two terms of the Taylor series of the sine, the errors in the image can be quantified by five monochromatic aberrations, the so-called **primary** or **Seidel aberrations**. The best known is **spherical aberration**, which is caused by the fact that for a convergent spherical lens, the rays that make a large angle with the optical axis are focused closer to the lens than the paraxial rays (see {numref}`Fig_2_26_Aberration_Lens`).
 
 ```{figure} Images/Chapter_2/2_26_Aberration_Lens.png
 :name: Fig_2_26_Aberration_Lens
@@ -1314,7 +1314,13 @@ Spherical aberration of a planar-convex lens.
 
 **Distortion** is one of the five primary aberrations. It causes deformation of images due to the fact that the magnification depends on the distance of the object point to the optical axis.
 
-For high-quality imaging the aberrations have to be reduced by adding more lenses and optimising the curvatures of the surfaces, the thicknesses of the lenses and the distances between them. For high quality systems, a lens with an aspherical surface is sometimes used. Systems with very small aberrations are extremely expensive, in particular if the field of view is large, as is the case in lithographic imaging systems used in the manufacturing of integrated circuits as shown in the lithographic system in {numref}`Fig_2_27_ASML_EUV`.
+For high-quality imaging,
+the aberrations have to be reduced by adding more lenses and optimizing the curvatures of the surfaces,
+the thicknesses of the lenses and the distances between them.
+For high quality systems, a lens with an aspherical surface is sometimes used.
+Systems with very small aberrations are extremely expensive, in particular if the field of view is large,
+as is the case in lithographic imaging systems
+used in the manufacturing of integrated circuits as shown in the lithographic system in {numref}`Fig_2_27_ASML_EUV`.
 
 A comprehensive treatment of aberration theory can be found in Braat et al.<sup>[^4]</sup>.
 
@@ -1327,8 +1333,8 @@ The EUV stepper TWINSCAN NXE:3400B.Lithographic lens system for DUV (192 nm), co
 
 ### Diffraction
 
-According to a generally accepted criterion formulated first by Rayleigh, aberrations start to deteriorate images considerably if the they cause path length differences of more than a quarter of the wavelength.
-When the aberrations are less than this, the system is called **diffraction limited**..
+According to a generally accepted criterion formulated first by Rayleigh, aberrations start to deteriorate images considerably if they cause path length differences of more than a quarter of the wavelength.
+When the aberrations are less than this, the system is called **diffraction limited**.
 
 ```{figure} Images/Chapter_2/2_28_AiryDisk_210308.png
 :name: Fig_2_28_AirySpot
@@ -1336,7 +1342,7 @@ Left: cross section of the field of the Airy pattern. Right: intensity pattern o
 ```
 
 
-Even if the wave transmitted by the exit pupil would be perfectly spherical (no aberrations), the wave front consists of only a circular section of a sphere since the field is limited by the aperture. An aperture causes **diffraction**, i.e. bending and spreading of the light. When one images a point object on the optical axis, diffraction causes inevitable blurring given by the so-called Airy spot, as shown in {numref}`Fig_2_28_AirySpot`. The Airy spot has full-width at half maximum:
+Even if the wave transmitted by the exit pupil would be perfectly spherical (no aberrations), the wave front consists of only a circular section of a sphere since the field is limited by the aperture. An aperture causes **diffraction**, i.e. bending and spreading of the light. When one images a point object on the optical axis, diffraction causes inevitable blurring given by the so-called Airy spot, as shown in {numref}`Fig_2_28_AirySpot`. The Airy spot has full-width at half-maximum:
 
 ```{math}
 :label: eq.Airy_res
@@ -1344,7 +1350,7 @@ Even if the wave transmitted by the exit pupil would be perfectly spherical (no 
 \text{FWHM} = 0.6 \frac{ \lambda}{\text{NA}},
 \end{align*}
 ```
-where NA$=\arcsin(a/s_i)$ is the numerical aperture (i.e. 0<NA<1) with $a$ the radius of the exit pupil and $s_i$ the image distance as predicted by Gaussian geometrical optics. Diffraction depends on the wavelength and hence it cannot be described by geometrical optics, which applies in the limit of vanishing wavelength.  We will treat diffraction by apertures in [](chapter.diffraction).
+where NA$=\arcsin(a/s_i)$ is the numerical aperture (i.e. 0<NA<1) with $a$ the radius of the exit pupil and $s_i$ the image distance as predicted by Gaussian geometrical optics. Diffraction depends on the wavelength, and hence it cannot be described by geometrical optics, which applies in the limit of vanishing wavelength.  We will treat diffraction by apertures in [](chapter.diffraction).
 
 
 
