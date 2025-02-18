@@ -8,7 +8,7 @@ An electromagnetic field not only transports energy but also momentum. The insta
 \mathbf{\mathbf{\mathcal{P}}}(\mathbf{r},t) = \frac{\mathbf{\mathcal{S}}(\mathbf{r},t)}{c},
 \end{align*}
 ```
-with $c$ being the speed of light in the medium. The time averaged momentum per unit of area caried by the field is thus
+with $c$ being the speed of light in the medium. The time averaged momentum per unit of area carried by the field is thus
 
 ```{math}
 :label: eq.avmom
