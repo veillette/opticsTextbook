@@ -118,12 +118,12 @@ sphinx:
           "bm": "\\mathbf"
           "inprod": "\\innerproduct"
           "diff": "\\pdv"
-#    html_theme_options:
-#        logo:
-#            image_light: img/advanced_optics_logo_white.png
-#            image_dark: img/advanced_optics_logo_dark.png
-#        launch_buttons:
-#          thebe: true
+    html_theme_options:
+        logo:
+            image_light: img/advanced_optics_logo_white.png
+            image_dark: img/advanced_optics_logo_dark.png
+        launch_buttons:
+          thebe: true
     thebe_config:
       use_thebe_lite: true
       exclude_patterns: ["**/_*.yml", "**/*.md", "**/*.ipynb", "**/*.png"]
