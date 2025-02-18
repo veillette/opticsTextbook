@@ -23,17 +23,17 @@ jupytext:
 ```
 **Nice software for practicing geometrical optics**:
 
-[https://www.geogebra.org/m/X8RuneVy](https://www.geogebra.org/m/X8RuneVy)
+[https://phet.colorado.edu/sims/html/geometric-optics/latest/geometric-optics_all.html](https://phet.colorado.edu/sims/html/geometric-optics/latest/geometric-optics_all.html)
 
 ## Introduction
 Geometrical optics is an old subject but it is still essential to understand and design optical instruments such as camera's, microscopes, telescopes etc. Geometrical optics started long before light was described as a wave as is done in wave optics, and long before it was discovered that light is an electromagnetic wave and that optics is part of electromagnetism.
 
-In this chapter we go back in history and treat geometrical optics. That may seem strange now that we have a much more accurate and better theory at our disposal. However, the predictions of geometrical optics are under quite common circumstances very useful and also very accurate. In fact, for many optical systems and practical instruments there is no alternative for geometrical optics because more accurate theories are much too complicated to use.
+In this chapter, we go back in history and treat geometrical optics. That may seem strange now that we have a much more accurate and better theory at our disposal. However, the predictions of geometrical optics are under quite common circumstances very useful and also very accurate. In fact, for many optical systems and practical instruments there is no alternative for geometrical optics because more accurate theories are much too complicated to use.
 
 When a material is illuminated, its molecules start to radiate spherical waves (more precisely, they radiate like tiny electric dipoles) and the total wave scattered by the material is the sum of all these spherical waves. A time-harmonic wave has at every point in space and at every instant of time a well defined phase.
 A **wave front** is a set of space-time points where the phase has the same value. At any fixed time, the wave front is called a surface of constant phase. This surface moves with the phase velocity in the direction of its local normal.
 
-For plane waves we have shown in the previous chapter that the surfaces of constant phase are planes and that the normal to these surfaces is in the direction of the wave vector which coincides with the direction of the phase velocity as well as with the direction of the flow of energy (the direction of the Poynting vector). For general waves, the local direction of energy flow is given by the direction of the Poynting vector. Provided that the radius of curvature of the surfaces is much larger than the wavelength, the normal to the surfaces of constant phase may still be considered to be in the direction of the local flow of energy. Such waves behave locally as plane waves and their effect can be accurately described by the methods of geometrical optics.
+For plane waves, we have shown in the previous chapter that the surfaces of constant phase are planes and that the normal to these surfaces is in the direction of the wave vector which coincides with the direction of the phase velocity as well as with the direction of the flow of energy (the direction of the Poynting vector). For general waves, the local direction of energy flow is given by the direction of the Poynting vector. Provided that the radius of curvature of the surfaces is much larger than the wavelength, the normal to the surfaces of constant phase may still be considered to be in the direction of the local flow of energy. Such waves behave locally as plane waves and their effect can be accurately described by the methods of geometrical optics.
 
 Geometrical optics is based on the intuitive idea that light consists of a bundle of rays. But what is a ray?
 
@@ -53,7 +53,7 @@ Light distribution on a screen due to a rectangular aperture. Left: for a large 
 
 Geometrical optics is accurate when the sizes of the objects in the system are large compared to the wavelength. It is possible to derive geometrical optics from Maxwell's equations by formally expanding the electromagnetic field in a power series in the wavelength and retaining only the first term of this expansion <sup>[^1]</sup>. However, this derivation is not rigorous because the power series generally does not converge (it is a so-called asymptotic series).
 
-Although it is possible to incorporate polarization into geometrical optics <sup>[^2]</sup>, this is not standard theory and we will not consider polarization effects in this chapter
+Although it is possible to incorporate polarization into geometrical optics <sup>[^2]</sup>, this is not standard theory and we will not consider polarization effects in this chapter.
 
 ## Principle of Fermat
 
@@ -122,7 +122,7 @@ Actually, Fermat's principle as formulated above is not complete. There are circ
 ## Some Consequences of Fermat's Principle
 - **Homogeneous matter**
 
-In homogenous matter, the refractive index is constant and therefore paths of shortest OPL are straight lines. Hence in homogeneous matter rays are straight lines.
+In homogeneous matter, the refractive index is constant and therefore paths of shortest OPL are straight lines. Hence in homogeneous matter rays are straight lines.
 - **Inhomogeneous matter**
 
 When the refractive index is a function of position such as air with a temperature gradient, the rays bend towards regions of higher refractive index. In the case of {numref}`Fig_2_02_Theory_of_mirage` for example, the ray from the top of the tree to the eye of the observer passes on a warm day close to the ground because there the temperature is higher and hence the refractive index is smaller. Although the curved path is longer than the straight path, the total travel time of the light is less because near the ground the light speed is higher (since the refractive index is smaller). The observer gets the impression that the tree is upside down under the ground.
@@ -130,7 +130,7 @@ When the refractive index is a function of position such as air with a temperatu
 - **Law of reflection**
 
 
-Consider the mirror shown in {numref}`Fig_2_03_Descartes_Reflection`. Since the medium above th mirror is homogeneous, a ray from point $P$ can end up in $Q$ in two ways: by going along a straight line directly form $P$ to $Q$ or alternatively by straight lines via the mirror. Both possibilities have different path lengths and hence different travel times and hence both are local minima mentioned at the end of the previous section. We consider here the path by means of reflection by the mirror.
+Consider the mirror shown in {numref}`Fig_2_03_Descartes_Reflection`. Since the medium above th mirror is homogeneous, a ray from point $P$ can end up in $Q$ in two ways: by going along a straight line directly from $P$ to $Q$ or alternatively by straight lines via the mirror. Both possibilities have different path lengths and hence different travel times, and hence both are local minima mentioned at the end of the previous section. We consider here the path by means of reflection by the mirror.
 Let the $x$-axis be the intersection of the mirror and the plane through the points $P$ and $Q$ and perpendicular to the mirror. Let the $y$-axis be normal to the mirror. Let $(x_P, y_P)$ and $(x_Q,y_Q)$ be the coordinates of $P$ and $Q$, respectively. If $(x,0)$ is the point where a ray from $P$ to $Q$ hits the mirror, the travel time of that ray is
 
 ```{math}
@@ -175,7 +175,7 @@ Ray from $P$ to $Q$ via the mirror.
 - **Snell's law of refraction**
 
 
-Next we consider refraction at an interface. Let $y=0$ be the interface between a medium with refractive index $n_i$ in $y>0$ and a medium with refractive index $n_t$ in $y<0$. We use the same coordinate system as in the case of reflection above. Let $(x_P,y_P)$ and $(x_Q,y_Q)$ with $y_P>0$ and $y_Q<0$ be the coordinates of two points $P$ and $Q$ are shown in {numref}`Fig_2_04_Descartes_Refraction`. What path will a ray follow that goes from $P$ to $Q$? Since the refractive index is constant in both half spaces, the ray is a straight line in both media. Let $(x,0)$ be the coordinate of the intersection point of the ray with the interface. Then the travel time is
+Next, we consider refraction at an interface. Let $y=0$ be the interface between a medium with refractive index $n_i$ in $y>0$ and a medium with refractive index $n_t$ in $y<0$. We use the same coordinate system as in the case of reflection above. Let $(x_P,y_P)$ and $(x_Q,y_Q)$ with $y_P>0$ and $y_Q<0$ be the coordinates of two points $P$ and $Q$ are shown in {numref}`Fig_2_04_Descartes_Refraction`. What path will a ray follow that goes from $P$ to $Q$? Since the refractive index is constant in both half spaces, the ray is a straight line in both media. Let $(x,0)$ be the coordinate of the intersection point of the ray with the interface. Then the travel time is
 
 ```{math}
 :label: eq.refrac1
@@ -212,7 +212,7 @@ Ray from $P$ to $Q$ refracted by an interface.
 Hence we have derived the law of reflection and Snell's law from Fermat's principle. In {ref}`chapter.basics` the reflection law and Snell's law have been derived by a different method, namely from the continuity of the tangential electromagnetic field components at the interface.
 
 ## Perfect Imaging by Conic Sections
-In this section the conic sections ellipse, hyperbole and parabola are important. In {numref}`Fig_2_05_ConicSection` their definitions are shown as a quick reminder<sup>[^3]</sup>.
+In this section, the conic sections ellipse, hyperbole and parabola are important. In {numref}`Fig_2_05_ConicSection` their definitions are shown as a quick reminder<sup>[^3]</sup>.
 
 ```{figure} Images/Chapter_2/2_05a_ConicSection.png
 ```
@@ -317,7 +317,6 @@ Imaging by a spherical interface between two media with refractive indices $n_2>
 
 *Proof*. 
 
-(Note: the proof is **not** part of the exam).
 It suffices to show that $P$ is independent of the ray, i.e. of $A$. We will do this by expressing $s_i$ into $s_o$ and showing that the result is independent of $A$. Let $\alpha_1$ and $\alpha_2$ be the angles of the rays $SA$ and $AP$ with the $z$-axis as shown in {numref}`Fig_2_10_Spherical_interface`.
 Let $\theta_i$ be the angle of incidence of ray $SA$ with the local normal $CA$ on the surface and $\theta_t$ be the angle of refraction. By considering the angles in triangle $\Delta \text{SCA}$ we find
 
@@ -470,7 +469,7 @@ Imaging by a concave surface ($R<0$) with $n_2>n_1$. All image points are to the
 
 
 Finally we look at a case that there is a bundle of convergent rays incident from the left on the surface which when extended into the right medium without refraction at the surface, would intersect in a point $S$. Since this point is not actually present, it is called a **virtual object point**, in contrast to **real object points** which are to the left of the surface. The coordinate of a virtual object point is positive: $s_o>0$.
-One may wonder why we look at this case. The reason is that if we have several spherical surfaces behind each other, we can compute the image of an object point by first determining the intermediate image by the most left surface and then use this intermediate image as object for the next surface and so on. In such a case it can easily happen that an intermediate image is to the right of the next surface and hence is a virtual object for that surface. In the case of {numref}`Fig_2_13_Convex_Virtual_Object` at the left, the power is positive, hence the convergent bundle of incident rays is made even more convergent which leads to a real image point. Indeed when $s_o>0$ and ${\cal P}>0$ then {eq}`eq.one_surface` implies that always $s_i>0$. At the right of {numref}`Fig_2_13_Convex_Virtual_Object` the power is negative but is not sufficiently strong to turn the convergent incident bundle into a divergent bundle. So the image is still real. However, the image will be virtual when the virtual object $S$ is to the right of $F_o$ (which in this case is to the right of the surface) since then the bundle of rays converges so weakly that the surface turns is into a divergent bundle.
+One may wonder why we look at this case. The reason is that if we have several spherical surfaces behind each other, we can compute the image of an object point by first determining the intermediate image by the most left surface and then use this intermediate image as the object for the next surface and so on. In such a case, it can easily happen that an intermediate image is to the right of the next surface and hence is a virtual object for that surface. In the case of {numref}`Fig_2_13_Convex_Virtual_Object` at the left, the power is positive, hence the convergent bundle of incident rays is made even more convergent which leads to a real image point. Indeed when $s_o>0$ and ${\cal P}>0$ then {eq}`eq.one_surface` implies that always $s_i>0$. At the right of {numref}`Fig_2_13_Convex_Virtual_Object` the power is negative but is not sufficiently strong to turn the convergent incident bundle into a divergent bundle. So the image is still real. However, the image will be virtual when the virtual object $S$ is to the right of $F_o$ (which in this case is to the right of the surface) since then the bundle of rays converges so weakly that the surface turns is into a divergent bundle.
 
 
 ```{figure} Images/Chapter_2/2_13_Spherical_Interface_Concave.png
@@ -1306,7 +1305,7 @@ Aperture stop (A.S.) between the second and third lens, with entrance pupil and 
 For designing advanced optical systems Gaussian geometrical optics is not sufficient.
 Instead non-paraxial rays, and among them also non-meridional rays, must be traced using software based on Snell's Law with the sine of the angles of incidence and refraction. Often many thousands of rays are traced to evaluate the quality of an image.
 It is then found that in general the non-paraxial rays do not intersect at the ideal Gaussian image point. Instead of a single spot, a spot diagram is found which is more or less confined. The deviation from an ideal point image is quantified in terms of **aberrations**. One distinguishes between monochromatic and chromatic aberrations. The latter are caused by the fact that the refractive index depends on wavelength.
-Recall that in paraxial geometrical optics Snell's Law {eq}`eq.refrac3` is replaced by: $n_i \theta_i = n_t \theta_t$, i.e. $\sin \theta_i$ and $\sin \theta_t$ are replaced by the linear terms. If instead one retains the first two terms of the Taylor series of the sine, the errors in the image can be quantified by five monochromatic aberrations, the so-called **primary** or **Seidel aberrations**. The best known is **spherical aberration**, which is caused by the fact that for a convergent spherical lens, the rays that makes a large angle with the optical axis are focused closer to the lens than the paraxial rays (see {numref}`Fig_2_26_Aberration_Lens`).
+Recall that in paraxial geometrical optics Snell's Law {eq}`eq.refrac3` is replaced by: $n_i \theta_i = n_t \theta_t$, i.e. $\sin \theta_i$ and $\sin \theta_t$ are replaced by the linear terms. If instead one retains the first two terms of the Taylor series of the sine, the errors in the image can be quantified by five monochromatic aberrations, the so-called **primary** or **Seidel aberrations**. The best known is **spherical aberration**, which is caused by the fact that for a convergent spherical lens, the rays that make a large angle with the optical axis are focused closer to the lens than the paraxial rays (see {numref}`Fig_2_26_Aberration_Lens`).
 
 ```{figure} Images/Chapter_2/2_26_Aberration_Lens.png
 :name: Fig_2_26_Aberration_Lens
@@ -1315,7 +1314,13 @@ Spherical aberration of a planar-convex lens.
 
 **Distortion** is one of the five primary aberrations. It causes deformation of images due to the fact that the magnification depends on the distance of the object point to the optical axis.
 
-For high-quality imaging the aberrations have to be reduced by adding more lenses and optimising the curvatures of the surfaces, the thicknesses of the lenses and the distances between them. For high quality systems, a lens with an aspherical surface is sometimes used. Systems with very small aberrations are extremely expensive, in particular if the field of view is large, as is the case in lithographic imaging systems used in the manufacturing of integrated circuits as shown in the lithographic system in {numref}`Fig_2_27_ASML_EUV`.
+For high-quality imaging,
+the aberrations have to be reduced by adding more lenses and optimizing the curvatures of the surfaces,
+the thicknesses of the lenses and the distances between them.
+For high quality systems, a lens with an aspherical surface is sometimes used.
+Systems with very small aberrations are extremely expensive, in particular if the field of view is large,
+as is the case in lithographic imaging systems
+used in the manufacturing of integrated circuits as shown in the lithographic system in {numref}`Fig_2_27_ASML_EUV`.
 
 A comprehensive treatment of aberration theory can be found in Braat et al.<sup>[^4]</sup>.
 
@@ -1328,8 +1333,8 @@ The EUV stepper TWINSCAN NXE:3400B.Lithographic lens system for DUV (192 nm), co
 
 ### Diffraction
 
-According to a generally accepted criterion formulated first by Rayleigh, aberrations start to deteriorate images considerably if the they cause path length differences of more than a quarter of the wavelength.
-When the aberrations are less than this, the system is called **diffraction limited**..
+According to a generally accepted criterion formulated first by Rayleigh, aberrations start to deteriorate images considerably if they cause path length differences of more than a quarter of the wavelength.
+When the aberrations are less than this, the system is called **diffraction limited**.
 
 ```{figure} Images/Chapter_2/2_28_AiryDisk_210308.png
 :name: Fig_2_28_AirySpot
@@ -1337,7 +1342,7 @@ Left: cross section of the field of the Airy pattern. Right: intensity pattern o
 ```
 
 
-Even if the wave transmitted by the exit pupil would be perfectly spherical (no aberrations), the wave front consists of only a circular section of a sphere since the field is limited by the aperture. An aperture causes **diffraction**, i.e. bending and spreading of the light. When one images a point object on the optical axis, diffraction causes inevitable blurring given by the so-called Airy spot, as shown in {numref}`Fig_2_28_AirySpot`. The Airy spot has full-width at half maximum:
+Even if the wave transmitted by the exit pupil would be perfectly spherical (no aberrations), the wave front consists of only a circular section of a sphere since the field is limited by the aperture. An aperture causes **diffraction**, i.e. bending and spreading of the light. When one images a point object on the optical axis, diffraction causes inevitable blurring given by the so-called Airy spot, as shown in {numref}`Fig_2_28_AirySpot`. The Airy spot has full-width at half-maximum:
 
 ```{math}
 :label: eq.Airy_res
@@ -1345,7 +1350,7 @@ Even if the wave transmitted by the exit pupil would be perfectly spherical (no 
 \text{FWHM} = 0.6 \frac{ \lambda}{\text{NA}},
 \end{align*}
 ```
-where NA$=\arcsin(a/s_i)$ is the numerical aperture (i.e. 0<NA<1) with $a$ the radius of the exit pupil and $s_i$ the image distance as predicted by Gaussian geometrical optics. Diffraction depends on the wavelength and hence it cannot be described by geometrical optics, which applies in the limit of vanishing wavelength.  We will treat diffraction by apertures in [](chapter.diffraction).
+where NA$=\arcsin(a/s_i)$ is the numerical aperture (i.e. 0<NA<1) with $a$ the radius of the exit pupil and $s_i$ the image distance as predicted by Gaussian geometrical optics. Diffraction depends on the wavelength, and hence it cannot be described by geometrical optics, which applies in the limit of vanishing wavelength.  We will treat diffraction by apertures in [](chapter.diffraction).
 
 
 
