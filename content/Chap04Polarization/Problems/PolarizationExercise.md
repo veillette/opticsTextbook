@@ -29,7 +29,7 @@ What is the Jones matrix of this linear polarizer?
 
 2. Partial linear polarization. 
 
-Consider a light beam that is partially linear polarized. Show that the degree op polarization is given by
+Consider a light beam that is partially linear polarized. Show that the degree of polarization is given by
 
 $$
 \frac{I_{max}-I_{min}}{I_{max}+I_{min}}.
