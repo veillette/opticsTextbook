@@ -24,7 +24,7 @@ After studying this chapter you should know and be able to
 - Know the main properties of the field radiated by a time-harmonic electric dipole and understand that it is the fundamental solution of Maxwell's equations from which the radiation of any time-harmonic source can be derived.
 - Qualitatively understand the far field radiation pattern of a time-harmonic electric dipole (you do not need to know the formulas).
 - Derive long-time averages of products of time-harmonic functions.
-- Compute the rate of energy flow using the Poynting vector and its long-time average. The derivation of the law of conservation of electromagnetic energy is not part of the exam.
+- Compute the rate of energy flow using the Poynting vector and its long-time average.
 - Understand the method of deriving the reflection and transmission of an incident plane wave at an interface by separating in s- and p-polarized states.
 The formulas for the Fresnel coefficients do not have to be known by hart.
 - Understand the Brewster angle, total internal reflection and evanescent waves.

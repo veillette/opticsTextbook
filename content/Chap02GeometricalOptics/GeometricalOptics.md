@@ -317,7 +317,6 @@ Imaging by a spherical interface between two media with refractive indices $n_2>
 
 *Proof*. 
 
-(Note: the proof is **not** part of the exam).
 It suffices to show that $P$ is independent of the ray, i.e. of $A$. We will do this by expressing $s_i$ into $s_o$ and showing that the result is independent of $A$. Let $\alpha_1$ and $\alpha_2$ be the angles of the rays $SA$ and $AP$ with the $z$-axis as shown in {numref}`Fig_2_10_Spherical_interface`.
 Let $\theta_i$ be the angle of incidence of ray $SA$ with the local normal $CA$ on the surface and $\theta_t$ be the angle of refraction. By considering the angles in triangle $\Delta \text{SCA}$ we find
 
