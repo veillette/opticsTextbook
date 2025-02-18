@@ -235,7 +235,7 @@ Perfect imaging: a cone of rays which diverge from $S$ and all intersect in poin
 
 **Remark**. The concept of a perfect image point exists only in geometrical optics. In reality finite apertures of lenses and other imaging systems cause diffraction due to which image points are never perfect but blurred.
 
-We summarise the main examples of stigmatic systems.
+We summarize the main examples of stigmatic systems.
 
 **1.**
 **Perfect focusing and imaging by refraction.** A parallel bundle of rays propagating in a medium with refractive index $n_2$ can be focused into a point $F$ in a medium $n_1$. If $n_2>n_1$, the interface between the media should be a hyperbole with focus $F$, whereas if $n_2<n_1$ the interface should be an ellipse with focus $F$ (see {numref}`Fig_2_07_Focus-Right` and
@@ -658,7 +658,7 @@ n_2\alpha_2 = -n \alpha_2 = n \alpha_1 - \frac{2n}{R} y_1 = n_1\alpha_1 - \frac{
 This proves Eq. {eq}`eq.sphmirror`.
 
 
-We now consider the ray matrix when a ray propagates from a plane $z_1$ to a plane $z_2$ through a medium with with refractive index $n$.
+We now consider the ray matrix when a ray propagates from a plane $z_1$ to a plane $z_2$ through a medium with refractive index $n$.
 In that case we have
 $\alpha_2=\alpha_1$ and $y_2=y_1 + \alpha_1(z_2-z_1)$, hence
 

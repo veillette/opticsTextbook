@@ -28,7 +28,7 @@ The principle of the camera obscura (from [Wikimedia Commons](https://commons.wi
 ## The Camera
 
 In {numref}`Fig_3_02_Reflex_camera` a single-lens reflex (SLR) camera is shown. The name does not mean that there is only one lens in the optical system, but that the photographer looks through the same lenses that the picture is taken with, instead of looking through a separate parallel optical system as in the twin reflex camera.
-After traversing the first few lens elements, the light passes through an iris diaphragm with adjustable diameter with which the $f$-number can be changed. After the lenses the light is reflected by a movable mirror tilted at $45^o$, passes through a prism and exits the camera through the finder eyepiece. When the shutter is released, the diaphragm closes to a preset value, the mirror swings up and the CCD is exposed. To focus the camera, the entire lens is moved toward or away from the detection plane. Autofocus is based on maximising the contrast of the images.
+After traversing the first few lens elements, the light passes through an iris diaphragm with adjustable diameter with which the $f$-number can be changed. After the lenses the light is reflected by a movable mirror tilted at $45^o$, passes through a prism and exits the camera through the finder eyepiece. When the shutter is released, the diaphragm closes to a preset value, the mirror swings up and the CCD is exposed. To focus the camera, the entire lens is moved toward or away from the detection plane. Autofocus is based on maximizing the contrast of the images.
 ```{figure} Images/Chapter_3/3_02_Reflex_camera.png
 :name: Fig_3_02_Reflex_camera
 Digital SLR camera. The pixelated digital sensor is behind a movable mirror at angle of 45 degrees with the optical axis. (from [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Reflex_camera_numeric.svg) by Jean François WITZ / CC BY-SA 3.0).
@@ -54,7 +54,7 @@ Four images taken with different diaphragm and different focal plane. The image 
 
 ## Camera in a Smart Phone
 A camera in a smart phone can contain standard **double Gauss** or **Cook triplet** lenses and sometimes more advanced aspheres. The image sensor is CMOS device.
-Nowadays smart phones have auto-focus systems where the lens is moved towards or away from the sensor using different criteria. In the standard contrast detection auto-focus the lens is moved until the contrast in the image is largest. This trial-and-error method is relatively slow: it usually takes 1 second to focus. In high-end cameras so-called phase detection auto-focus is used where the relative position of two spots obtained by focusing of two small diaphragms on either side of the optical axis is analysed.
+Nowadays smart phones have auto-focus systems where the lens is moved towards or away from the sensor using different criteria. In the standard contrast detection auto-focus the lens is moved until the contrast in the image is largest. This trial-and-error method is relatively slow: it usually takes 1 second to focus. In high-end cameras so-called phase detection auto-focus is used where the relative position of two spots obtained by focusing of two small diaphragms on either side of the optical axis is analyzed.
 A third auto-focus system is similar to radar. An infrared laser pulse is emitted and the distance of the object of interest is determined from the return time of the reflected pulse.
 The method works very well under low light conditions, but is not accurate for objects at distances of more than 5 m. In all smart phone cameras, blurry images are sharpened by post-processing using software.
 
@@ -293,7 +293,7 @@ The magnifying power of the entire system is the product of the transverse linea
 \text{MP}=M_{T}M_{Ae}.
 \end{align*}
 ```
-According to {eq}`eq.defM1`: $M_{T}=\mathbin{-} x_i/f_i^{obj}$, where $x_i$ is the distance of the image made by the objective to its back focal plane with focal distance $f_i^{obj}$. We have $x_i=L$ which is the tube length, i.e. the distance between the second focal point of the objective and the first focal point of the eyepiece. The tube length is standardised at 16&nbsp;cm.
+According to {eq}`eq.defM1`: $M_{T}=\mathbin{-} x_i/f_i^{obj}$, where $x_i$ is the distance of the image made by the objective to its back focal plane with focal distance $f_i^{obj}$. We have $x_i=L$ which is the tube length, i.e. the distance between the second focal point of the objective and the first focal point of the eyepiece. The tube length is standardized at 16&nbsp;cm.
 Furthermore, according to {eq}`eq.MPinfinity`, the angular magnification is for a virtual image at infinity is : $M_{Ae}=d_o/f_i^e$. Hence, we obtain:
 
 ```{math}
@@ -301,7 +301,7 @@ Furthermore, according to {eq}`eq.MPinfinity`, the angular magnification is for 
 \text{MP}=\frac{\mathbin{-} x_i}{f_i^{obj}} \frac{d_o}{f_i^e} = \dfrac{\mathbin{-} 16}{f_0}.\dfrac{25}{f_e},
 \end{align*}
 ```
-with the standard near-point $d_o=$25&nbsp;cm. As an example, an Amici objective gives $40 \times$ and combined with a $10\times$ eye piece one gets $MP=400$.
+with the standard near-point $d_o=$25&nbsp;cm. As an example, an Amici objective gives $40 \times$ and combined with a $10\times$ eyepiece one gets $MP=400$.
 
 The **numerical aperture**
 of a microscope is a measure of the capability to gather light from the object.
@@ -327,7 +327,7 @@ Keplerian astronomical telescope.
 The object in this figure is at a large but finite distance; therefore, an image is formed by the objective just after its second focal point. The eyepiece makes a virtual magnified image, to be viewed with a relaxed eye. Therefore, the intermediary image of the objective must be within the focal length $f_i^e$ from the eyepiece. The final image is inverted.
 
 As seen earlier, the angular magnification is:
-$\text{MP} = \alpha_a/\alpha_u$ where $\alpha_u$ is the half angle of the cone of light that would be collected without telescope and $\alpha_a$ is the half angle of the apparent cone of rays coming from the virtual image of the eye piece. For an object at infinity we find considering the triangles $F_{o}^{obj}AB$ and $F_i^{e}CD$ in {numref}`Fig_3_13_Rays_Telescope` that
+$\text{MP} = \alpha_a/\alpha_u$ where $\alpha_u$ is the half angle of the cone of light that would be collected without telescope and $\alpha_a$ is the half angle of the apparent cone of rays coming from the virtual image of the eyepiece. For an object at infinity we find considering the triangles $F_{o}^{obj}AB$ and $F_i^{e}CD$ in {numref}`Fig_3_13_Rays_Telescope` that
 
 ```{math}
 :label: eq.MPtelescope

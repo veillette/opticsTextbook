@@ -32,7 +32,7 @@ The formulas for the Fresnel coefficients do not have to be known by hart.
 ```
 
 
-Maxwell's equations provide a very complete description of light which includes diffraction, interference and polarization. Yet it is strictly speaking not fully accurate, because it allows monochromatic electromagnetic waves to carry any amount of energy, whereas according to quantum optics the energy is quantised. According to quantum optics, light is a flow of massless particles, the photons, which each carry an extremely small quantum of energy: $ h f$, where $h = 6.63 \times 10^{-34}$ Js and $f$ is the frequency, which for visible light is of the order $5 \times 10^{14}$ Hz. Hence for visible light $h f \approx 3.3\times {10^{-19}}$ J.
+Maxwell's equations provide a very complete description of light which includes diffraction, interference and polarization. Yet it is strictly speaking not fully accurate, because it allows monochromatic electromagnetic waves to carry any amount of energy, whereas according to quantum optics the energy is quantized. According to quantum optics, light is a flow of massless particles, the photons, which each carry an extremely small quantum of energy: $ h f$, where $h = 6.63 \times 10^{-34}$ Js and $f$ is the frequency, which for visible light is of the order $5 \times 10^{14}$ Hz. Hence for visible light $h f \approx 3.3\times {10^{-19}}$ J.
 
 Quantum optics is only important in experiments involving a small number of photons, i.e. at very low light intensities and for specially prepared photons states (e.g. entangled states) for which there is no classical description. In almost all applications of optics the light sources emit so many photons that quantum effects are irrelevant see {numref}`table:3_1Hecht`.
 
@@ -441,7 +441,7 @@ At fixed time $t$, the sets of constant phase: $\varphi(\mathbf{r})=\omega t + \
 
 
 **Remark**.
-A plane wave is infinitely extended and transports an infinite amount of electromagnetic energy. A plane plane can therefore not exist in reality, but it is nevertheless a usual idealisation. As will be demonstrated in Section 7.1, *every time-harmonic solution of the wave equation* can always be expanded in terms of plane waves of the form {eq}`eq.psi5`. 
+A plane wave is infinitely extended and transports an infinite amount of electromagnetic energy. A plane wave can therefore not exist in reality, but it is nevertheless a usual idealization. As will be demonstrated in Section 7.1, *every time-harmonic solution of the wave equation* can always be expanded in terms of plane waves of the form {eq}`eq.psi5`. 
 
 
 
@@ -1788,7 +1788,7 @@ The reflection and transmission coefficients $r_s$, $r_p$, $t_s$ and $t_p$ are c
 
 
 **Remarks.**
-- In the derivation of the Fresnel coefficients the continuity of the normal field components was not used and was automatically satisfied. The reason is that the electromagnetic fields of the plane waves where chosen to be perpendicular to the wave vectors. This implies that the divergence of $\epsilon \mathbf{\mathcal{E}}$ and of $\mathbf{\mathcal{H}}$ vanishes which in turns implies that the normal components are automatically continuous across the the interface.
+- In the derivation of the Fresnel coefficients the continuity of the normal field components was not used and was automatically satisfied. The reason is that the electromagnetic fields of the plane waves where chosen to be perpendicular to the wave vectors. This implies that the divergence of $\epsilon \mathbf{\mathcal{E}}$ and of $\mathbf{\mathcal{H}}$ vanishes which in turns implies that the normal components are automatically continuous across the interface.
 - When $k_z^i$ and $k_z^t$ are both real, we have $|\mathbf{k}^i|=k_0n_i$ and $|\mathbf{k}^t|=k_0n_t$ and the Fresnel coefficients can be expressed in the angles $\theta_i$, $\theta_r$ and $\theta_t$ and the refractive indices $n_i=\sqrt{\epsilon_i}/\epsilon_0$ and $n_t=\sqrt{\epsilon_t/\epsilon_0}$. Because $k^i_z=k_0n_i \cos\theta_i$ and $k^t_z=k_0 n_t \cos \theta_t$, we find
 
 ```{math}
@@ -1908,7 +1908,7 @@ Reflection and transmission coefficients as function of the angle of incidence o
 In {numref}`Fig_1_12_Fresnel_Coefficient` the Fresnel reflection and transmission coefficients of s- and p-polarized waves are shown as functions of the angle of incidence for the case of incidence from air to glass. There is no critical angle of total reflection in this case. The Brewster angle is indicated. It is seen that the reflection coefficients decrease from the values $-0.2$ for $\theta_i=0^o$ to -1 for $\theta_i=90^o$.
 The transmission coefficients monotonically decrease to $0$ at $\theta_i=90^o$.
 
-{numref}`Fig_1_12_Fresnel_Coefficient` shows the Fresnel coefficients when the wave is incident from glass to air. The critical angle is $\theta_{i,crit}=41.8^o$ as derived earlier. At the angle of total internal reflection the absolute values of the reflection coefficients are identical to 1. There is again an angle where the reflection of p-polarised light is zero $\theta_{B}=33.7^o$.
+{numref}`Fig_1_12_Fresnel_Coefficient` shows the Fresnel coefficients when the wave is incident from glass to air. The critical angle is $\theta_{i,crit}=41.8^o$ as derived earlier. At the angle of total internal reflection the absolute values of the reflection coefficients are identical to 1. There is again an angle where the reflection of p-polarized light is zero $\theta_{B}=33.7^o$.
 
 Depending on the refractive indices and the angle of incidence, the Fresnel reflection coefficients can be negative. The reflected electric field then has an additional $\pi$ phase shift compared to the incident wave. In contrast, (provided that the materials are lossless), the transmitted field is always in phase with the incident field, i.e. the transmission coefficients are always positive.
 
@@ -1985,7 +1985,7 @@ Hence no energy is transported away from the interface into the air region. We s
 
 ```{admonition} External sources in recommended order
 1. [Youtube video - 8.03 - Lect 18 - Index of Refraction, Reflection, Fresnel Equations, Brewster Angle](https://www.youtube.com/watch?v=_D1z6t2z168) - Lecture by Walter Lewin
-	 2. [MIT OCW - Reflection at The Air-glass Boundary](https://ocw.mit.edu/resources/res-6-006-video-demonstrations-in-lasers-and-optics-spring-2008/demonstrations-in-physical-optics/reflection-at-the-air-glass-boundary/): demonstration of reflection of polarised light and the Brewster angle.
+	 2. [MIT OCW - Reflection at The Air-glass Boundary](https://ocw.mit.edu/resources/res-6-006-video-demonstrations-in-lasers-and-optics-spring-2008/demonstrations-in-physical-optics/reflection-at-the-air-glass-boundary/): demonstration of reflection of polarized light and the Brewster angle.
 ```
 
 
@@ -2027,7 +2027,7 @@ Since visible light has such high frequencies (order $10^{15}$ Hz), roughly a hu
 
 [^5]:  Named after Willebrord Snellius 1580-1626, mathematics professor in Leiden
 
-[^6]: [MIT OCW - Reflection at The Air-glass Boundary](https://ocw.mit.edu/resources/res-6-006-video-demonstrations-in-lasers-and-optics-spring-2008/demonstrations-in-physical-optics/reflection-at-the-air-glass-boundary/): demonstration of reflection of polarised light and the Brewster angle.
+[^6]: [MIT OCW - Reflection at The Air-glass Boundary](https://ocw.mit.edu/resources/res-6-006-video-demonstrations-in-lasers-and-optics-spring-2008/demonstrations-in-physical-optics/reflection-at-the-air-glass-boundary/): demonstration of reflection of polarized light and the Brewster angle.
 
 [^7]: Van Heel, A. A, New Method of transporting Optical Images without Aberrations. Nature 173, 39 (1954) [link](https://doi.org/10.1038/173039a0)
 

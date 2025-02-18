@@ -32,7 +32,7 @@ Explain your answer.
 
 2. Perfect focusing by an ellipsoid and a hyperboloid. 
 
-Suppose that there are two media with refractive indices $n_1>n_2$ and that point $S$ is at infinity in the medium with refractive index $n_2$. We will construct a surface (interface) between the two media such that all rays from $S$ are focused into the same point $F$ (see {numref}`Fig_2_07_Focus-Right`a). Because $S$ is at very large distance, the rays entering from the right are parallel. Since all parallel rays have travelled the same distance when they hit the surface $DD'$ perpendicular to the rays, all parallel rays have the same phase at their intersection points with the plane $DD'$.
+Suppose that there are two media with refractive indices $n_1>n_2$ and that point $S$ is at infinity in the medium with refractive index $n_2$. We will construct a surface (interface) between the two media such that all rays from $S$ are focused into the same point $F$ (see {numref}`Fig_2_07_Focus-Right`a). Because $S$ is at very large distance, the rays entering from the right are parallel. Since all parallel rays have traveled the same distance when they hit the surface $DD'$ perpendicular to the rays, all parallel rays have the same phase at their intersection points with the plane $DD'$.
 - **a)** If point $A$ is on the interface sought, derive that
 
 ```{math}

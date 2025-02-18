@@ -68,7 +68,7 @@ The complex vector
 \end{array}\right),
 \end{align*}
 ```
-is called the **Jones vector**. It is used to characterise the polarization state.
+is called the **Jones vector**. It is used to characterize the polarization state.
 Let us see how, at a fixed position in space, the electric field vector behaves as a function of time for different choices of ${\cal A}_x$, ${\cal A}_y$ and $\varphi_y-\varphi_x$.
 
 **a) Linear polarization:** $\varphi_y-\varphi_x=0$ or $\varphi_y-\varphi_x=\pi$.]
@@ -458,7 +458,7 @@ The amplitude of the transmitted field is reduced by the factor $\cos\alpha$, wh
 ### Degree of Polarization
 Natural light such as sun light is unpolarized. The instantaneous polarization of unpolarized light fluctuates rapidly in a random manner. A linear polarizer produces linear polarized light from unpolarized light. It follows from {eq}`eq.linpol` that the intensity transmitted by a linear polarizer when unpolarized light is incident, is the average value of $\cos^2\alpha$ namely $\frac{1}{2}$, times the incident intensity.
 
-Light that is a mixture of polarized and unpolarized light is called partially polarized. The **degree of polarization** is defined as the fraction of the total intensity that is polarised:
+Light that is a mixture of polarized and unpolarized light is called partially polarized. The **degree of polarization** is defined as the fraction of the total intensity that is polarized:
 
 ```{math}
 :label: eq.degreepol
@@ -479,7 +479,7 @@ A quarter-wave plate has already been introduced above. It introduces a phase sh
 \end{array}\right),
 \end{align*}
 ```
-because $\exp(i\pi/2)=i$. To describe the actual transmission through the quarter-wave plate, the matrix should be multiplied by some global phase factor, but because we only care about the **phase difference** between the field components, this global phase factor can be omitted without problem. The quarter-wave plate is typically used to **convert linearly polarised light to elliptically polarised light and vice-versa**<sup>[^5]</sup>. If the incident light is linearly polarised at angle $\alpha$, the state of polarization after the quarter-wave plate is
+because $\exp(i\pi/2)=i$. To describe the actual transmission through the quarter-wave plate, the matrix should be multiplied by some global phase factor, but because we only care about the **phase difference** between the field components, this global phase factor can be omitted without problem. The quarter-wave plate is typically used to **convert linearly polarized light to elliptically polarized light and vice-versa**<sup>[^5]</sup>. If the incident light is linearly polarized at angle $\alpha$, the state of polarization after the quarter-wave plate is
 
 ```{math}
 :label: eq.alpha2
@@ -493,7 +493,7 @@ because $\exp(i\pi/2)=i$. To describe the actual transmission through the quarte
 \end{array}\right).
 \end{align*}
 ```
-In particular, if incident light is linear polarised under $45^o$, or equivalently, if the quarter wave plate is rotated over this angle, it will transform linearly polarised light into circularly polarised light (and vice versa).
+In particular, if incident light is linear polarized under $45^o$, or equivalently, if the quarter wave plate is rotated over this angle, it will transform linearly polarized light into circularly polarized light (and vice versa).
 
 ```{math}
 \begin{align*}
@@ -521,18 +521,18 @@ A half-wave plate introduces a phase shift of $\pi$, so its Jones matrix is
 \end{array}\right),
 \end{align*}
 ```
-because $\exp(i\pi)=-1$. An important application of the half-wave plate is to **change the orientation of linearly polarised light**. After all, what this matrix does is mirroring the polarization state in the $x$-axis. Thus, if we choose our mirroring axis correctly (i.e. if we choose the orientation of the wave plate correctly), we can change the direction in which the light is linearly polarised arbitrarily<sup>[^7]</sup><sup>[^8]</sup>. To give an example: a wave with linear polarization parallel to the $x$-direction, can be rotated over angle $\alpha$ by rotating the crystal such that the fast axis makes angle $\alpha/2$ with the $x$-axis. Upon propagation through the crystal, the slow axis gets an additional phase of $\pi$, due to which the electric vector makes angle $\alpha$ with the $x$-axis (see {numref}`Fig_4_04_Rotation_polarization`). It is not difficult to verify that when the fast and slow axis are interchanged, the same linear state of polarization results.
+because $\exp(i\pi)=-1$. An important application of the half-wave plate is to **change the orientation of linearly polarized light**. After all, what this matrix does is mirroring the polarization state in the $x$-axis. Thus, if we choose our mirroring axis correctly (i.e. if we choose the orientation of the wave plate correctly), we can change the direction in which the light is linearly polarized arbitrarily<sup>[^7]</sup><sup>[^8]</sup>. To give an example: a wave with linear polarization parallel to the $x$-direction, can be rotated over angle $\alpha$ by rotating the crystal such that the fast axis makes angle $\alpha/2$ with the $x$-axis. Upon propagation through the crystal, the slow axis gets an additional phase of $\pi$, due to which the electric vector makes angle $\alpha$ with the $x$-axis (see {numref}`Fig_4_04_Rotation_polarization`). It is not difficult to verify that when the fast and slow axis are interchanged, the same linear state of polarization results.
 
 ```{figure} Images/Chapter_4/4_04_Rotation_polarization.png
 :name: Fig_4_04_Rotation_polarization
-Rotation of horizontally polarised light over an angle $\alpha$ using a half-wave plate.
+Rotation of horizontally polarized light over an angle $\alpha$ using a half-wave plate.
 ```
 
 
 ### Full-Wave Plates
 
 A full-wave plate introduces a phase difference of $2\pi$, which is the same as introducing no phase difference between the two field components.
-So what can possibly be an application for a full-wave plate? We recall from Eq. {eq}`waveplate` that the phase difference is $2\pi$ only for a particular wavelength. If we send through linearly (say vertically) polarised light of other wavelengths, these will become elliptically polarised, while the light with the correct wavelength $\lambda_0$ will stay vertically polarised. If we then let all the light pass through a horizontal polariser, the light with wavelength $\lambda_0$ will be completely extinguished, while the light of other wavelengths will be able to pass through at least partially. Therefore, **full-wave plates can be used to filter out specific wavelengths of light**.
+So what can possibly be an application for a full-wave plate? We recall from Eq. {eq}`waveplate` that the phase difference is $2\pi$ only for a particular wavelength. If we send through linearly (say vertically) polarized light of other wavelengths, these will become elliptically polarized, while the light with the correct wavelength $\lambda_0$ will stay vertically polarized. If we then let all the light pass through a horizontal polarizer, the light with wavelength $\lambda_0$ will be completely extinguished, while the light of other wavelengths will be able to pass through at least partially. Therefore, **full-wave plates can be used to filter out specific wavelengths of light**.
 
 ## More on Jones matrices
 If the direction of either the slow or fast axis is given and the ordinary and extra-ordinary refractive indices $n_o$ and $n_e$, it is easy to write down the Jones matrix of a birefringent plate of given thickness $d$ using the rotation matrices, see {eq}`eq.Rpmtheta`. Instead of using the rotation matrices, one can also write down a system of equations for the elements of the Jones matrix. Suppose that $\hat{\mathbf{v_o}}=v_{o,x}+\hat{\mathbf{x}}+v_{o,y}\hat{\mathbf{y}}$ and $\hat{\mathbf{v_e}}=v_{e,x}\hat{\mathbf{x}}+ v_{e,y} \hat{\mathbf{y}}$, are in the direction of the ordinary and the extra-ordinary axes, respectively. Then if the Jones matrix is
@@ -558,7 +558,7 @@ $$
 $$ (eq.system)
 
 
-Similarly, for a linear polariser it is simple to write down the Jones matrix if one knows the direction in which the polariser absorbs or transmits all the light: use {eq}`eq.MLP` in combination with the rotation matrices. Alternatively, if $\hat{\mathbf{v}}$ is in the direction of the linear polariser and $\hat{\mathbf{w}}$ is perpendicular to it, we have
+Similarly, for a linear polarizer it is simple to write down the Jones matrix if one knows the direction in which the polarizer absorbs or transmits all the light: use {eq}`eq.MLP` in combination with the rotation matrices. Alternatively, if $\hat{\mathbf{v}}$ is in the direction of the linear polarizer and $\hat{\mathbf{w}}$ is perpendicular to it, we have
 
 ```{math}
 \begin{align*}
@@ -570,13 +570,13 @@ which is a system of equation of type {eq}`eq.system` for the elements of the Jo
 
 Suppose now that the complex (2,2)-matrix
 {eq}`eq.MJones` is given.
-How can one verify whether this matrix corresponds to a linear polariser or to a wave plate?
+How can one verify whether this matrix corresponds to a linear polarizer or to a wave plate?
 Note that the elements of a Jones matrix are in general complex.
 
 
-**1.** **Linear Polariser**.
-The matrix corresponds to a linear polariser if there is a real vector which remains invariant under ${\cal M}$ and all vectors orthogonal to this vector are mapped to zero. In other words, there must be an orthogonal basis of **real** eigenvectors and one of the eigenvalues must be 1 and the other 0.
-Hence, to check that a given matrix corresponds to a linear polariser, one should verify that one eigenvalue is 1 and the other is 0 and furthermore that the eigenvectors are **real** orthogonal vectors. It is important to check that the eigenvectors are real because if they are not, they do not correspond to particular linear polarization directions and then the matrix does not correspond to a linear polariser.
+**1.** **Linear polarizer**.
+The matrix corresponds to a linear polarizer if there is a real vector which remains invariant under ${\cal M}$ and all vectors orthogonal to this vector are mapped to zero. In other words, there must be an orthogonal basis of **real** eigenvectors and one of the eigenvalues must be 1 and the other 0.
+Hence, to check that a given matrix corresponds to a linear polarizer, one should verify that one eigenvalue is 1 and the other is 0 and furthermore that the eigenvectors are **real** orthogonal vectors. It is important to check that the eigenvectors are real because if they are not, they do not correspond to particular linear polarization directions and then the matrix does not correspond to a linear polarizer.
 
 **2.** **Wave plate**.
 To show that the matrix corresponds to a wave plate, there should exist two **real** orthogonal eigenvectors with, in general, complex eigenvalues of modulus 1. In fact, one of the eigenvectors corresponds to the ordinary axis with refractive index $n_{o}$, and the other to the extra-ordinary axis with refractive index $n_e$. The eigenvalues are then
@@ -588,7 +588,7 @@ e^{i k n_1 d} \;\;\text{ and } \;\; e^{i k n_2 d},
 ```
 where $d$ is the thickness of the plate and $k$ is the wave number. Hence to verify that a $(2,2)$-matrix corresponds to a wave plate, one has to compute the eigenvalues and check that these have modulus 1 and that the corresponding eigenvectors are real vectors and orthogonal.
 
-**3.** **Jones matrix for propagation through sugars** In sugars, left and right circular-polarised light propagate with their own refractive index. Therefore sugars are called **circular birefringent**. The matrix {eq}`eq.MJones` corresponds to propagation through sugar when there are two real orthogonal unit vectors
+**3.** **Jones matrix for propagation through sugars** In sugars, left and right circular-polarized light propagate with their own refractive index. Therefore sugars are called **circular birefringent**. The matrix {eq}`eq.MJones` corresponds to propagation through sugar when there are two real orthogonal unit vectors
 $\hat{\mathbf{v}}$ and $\hat{\mathbf{w}}$ such that the circular polarization states
 
 $$
@@ -600,7 +600,7 @@ are eigenstates of ${\cal M}$ with complex eigenvalues with modulus 1.
 
 
 ## Decomposition of an Elliptical polarization state into sums of Linear \& of Circular States
-Any elliptical polarization state can be written as the sum of two perpendicular linear polarised states:
+Any elliptical polarization state can be written as the sum of two perpendicular linear polarized states:
 
 ```{math}
 :label: eq.JEllipsLin
@@ -612,7 +612,7 @@ J=
 \end{array}\right).
 \end{align*}
 ```
-Furthermore, any elliptical polarization state can be written as the sum of two circular polarization states, one right- and the other left-circular polarised:
+Furthermore, any elliptical polarization state can be written as the sum of two circular polarization states, one right- and the other left-circular polarized:
 
 ```{math}
 :label: eq.JEllipsCirc
@@ -624,14 +624,14 @@ J=
 \end{array}\right).
 \end{align*}
 ```
-We conclude that to study what happens to elliptic polarization, it suffices to consider two orthogonal linear polarizations, or, if that is more convenient, left- and right-circular polarised light. In a birefringent material each of two linear polarizations, namely parallel to the o-axis and parallel to the e-axis, propagate with their own refractive index. To predict what happens to an arbitrary linear polarization state which is not aligned to either of these axes, or more generally what happens to an elliptical polarization state, we write this polarization state as a linear combination of o- and e-states, i.e. we expand the field on the o- and e-basis.
+We conclude that to study what happens to elliptic polarization, it suffices to consider two orthogonal linear polarizations, or, if that is more convenient, left- and right-circular polarized light. In a birefringent material each of two linear polarizations, namely parallel to the o-axis and parallel to the e-axis, propagate with their own refractive index. To predict what happens to an arbitrary linear polarization state which is not aligned to either of these axes, or more generally what happens to an elliptical polarization state, we write this polarization state as a linear combination of o- and e-states, i.e. we expand the field on the o- and e-basis.
 
 To see what happens to an arbitrary elliptical polarization state in a circular birefringent material, the incident light is best written as linear combination of left-and right-circular polarizations.
 
 ```{admonition} External sources in recommended order
 1. [Double Vision - Sixty Symbols](https://www.youtube.com/watch?v=k1oh3lXR5PE): Demonstration of double refraction by a calcite crystal due to birefringence.
 2. [MIT OCW - Linear Polarizer](https://ocw.mit.edu/resources/res-6-006-video-demonstrations-in-lasers-and-optics-spring-2008/demonstrations-in-physical-optics/linear-polarizer/): Demonstration of linear polarizers and linear polarization.
-3. [MIT OCW - Polarization Rotation Using Polarizers](https://ocw.mit.edu/resources/res-6-006-video-demonstrations-in-lasers-and-optics-spring-2008/demonstrations-in-physical-optics/polarization-rotation-using-polarizers/): Demonstration of polarization rotation using linear polarisers.
+3. [MIT OCW - Polarization Rotation Using Polarizers](https://ocw.mit.edu/resources/res-6-006-video-demonstrations-in-lasers-and-optics-spring-2008/demonstrations-in-physical-optics/polarization-rotation-using-polarizers/): Demonstration of polarization rotation using linear polarizers.
 4. [Demonstration of a QuarterWavePlate](https://www.youtube.com/watch?v=ZhkcKlksV1g) by Andrew Berger.
 5. [MIT OCW - Quarter-wave Plate](https://ocw.mit.edu/resources/res-6-006-video-demonstrations-in-lasers-and-optics-spring-2008/demonstrations-in-physical-optics/quarter-wave-plate/): Demonstration of the quarter-wave plate to create elliptical (in particular circular) polarization.
 6. [Demonstration of a HalfWavePlate](https://www.youtube.com/watch?v=HriBBJ-6gd8) by Andrew Berger.

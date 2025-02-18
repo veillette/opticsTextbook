@@ -56,7 +56,7 @@ with
 $\phi= k (n-1)d$.
  
 - **b)** Derive (using {eq}`eq.cohps` or in another way) that the Fraunhofer intensity pattern on a screen along the line $y=0$
-at large distance $z$ is given by (upto factors that do not depend on $x/z$).
+at large distance $z$ is given by (up to factors that do not depend on $x/z$).
 
 ```{math}
 :label: eq.2cohps_3
@@ -65,11 +65,11 @@ I_{far}(x,0,z) = 2 \frac{a^2}{z^2} \left[ \frac{\sin \left(\frac{kax}{2z}\right)
 \end{align*}
 ```
 In deriving this result you may omit all factors that are independent of $x/z$.
-5and $y/z$.
+and $y/z$.
 If you use {eq}`eq.cohps_2` you may take $Q_1=1$, $Q_2=e^{i \phi}$.
  
 - **c)** Make a sketch of this intensity pattern, showing the zeros and maxima as function of $\theta=x/z$ when $a=2 \lambda$,
-$b=4 \lambda$ and $\phi=-\pi/2$. Explain where the the envelope and the other factor that depends on $x/z$ are caused by.
+$b=4 \lambda$ and $\phi=-\pi/2$. Explain where the envelope and the other factor that depends on $x/z$ are caused by.
 
 
 3. We consider the optical set-up shown at the left of {numref}`Fig_7_25_Lloyd_Mirror` where a point source at point $\mathbf{r}_s=(a, 0,0)$ is above a plane mirror in the plane $x=0$.

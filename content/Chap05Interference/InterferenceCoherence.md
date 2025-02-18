@@ -1316,7 +1316,7 @@ This is always possible, whether the fields are polarized or randomly polarized.
 + \mathcal{E}_{1\parallel}^2 + \mathcal{E}_{2\parallel}^2 + 2\mathcal{E}_{1\parallel} \mathcal{E}_{2\parallel}.
 \end{align*}
 ```
-If the fields are randomly polarised, the time average of the $\bot$-part will equal the average of the $\parallel$-part, so the time-averaged intensity becomes
+If the fields are randomly polarized, the time average of the $\bot$-part will equal the average of the $\parallel$-part, so the time-averaged intensity becomes
 
 ```{math}
 \begin{align*}
@@ -1338,7 +1338,7 @@ This is qualitatively the same as what we would get if the fields had parallel p
 This leads to the
 
 ```{note}
-**Second Fresnel-Arago Law**: two fields with parallel polarization interfere the same way as two fields that are randomly polarised.
+**Second Fresnel-Arago Law**: two fields with parallel polarization interfere the same way as two fields that are randomly polarized.
 ```
 
 This indicates that our initial assumption in the previous sections that all our fields have parallel polarization is not as limiting as it may have appeared at first.
@@ -1351,7 +1351,7 @@ Suppose now that we have some field
 \mathcal{E}_{\parallel}\end{pmatrix},
 \end{align*}
 ```
-which is **randomly polarised**. Suppose we separate the two polarizations, and rotate one so that the two resulting fields are aligned, e.g.
+which is **randomly polarized**. Suppose we separate the two polarizations, and rotate one so that the two resulting fields are aligned, e.g.
 
 ```{math}
 \begin{align*}
@@ -1363,7 +1363,7 @@ which is **randomly polarised**. Suppose we separate the two polarizations, and 
 These fields can not interfere because $\mathcal{E}_{\bot}$ and $\mathcal{E}_{\parallel}$ are incoherent. This leads to the 
 ```{note}
 **Third Fresnel-Arago Law**:
-the two constituent orthogonal linearly polarised states of natural light cannot interfere to form a readily observable interference pattern, even if rotated into alignment.
+the two constituent orthogonal linearly polarized states of natural light cannot interfere to form a readily observable interference pattern, even if rotated into alignment.
 ```
 
 
