@@ -20,38 +20,6 @@ site:
   nav:
     - title: Preface
       url: /content/Preface/Preface.md
-    - title: Basics
-      url: /content/Chap01Basics/Basics.md
-    - title: Geometrical Optics
-      url: /content/Chap02GeometricalOptics/GeometricalOptics.md
-    - title: Optical Instruments
-      url: /content/Chap03OpticalInstrument/OpticalInstruments.md
-    - title: Polarization
-      url: /content/Chap04Polarization/Polarization.md
-    - title: Interference
-      url: /content/Chap05Interference/InterferenceCoherence.md
-    - title: Diffractive Optics
-      url: /content/Chap06Diffraction/DiffractiveOptics.md
-    - title: Lasers
-      url: /content/Chap07Lasers/Lasers.md
-    - title: Fiber Optics
-      url: /content/Chap09FiberOptics/FiberOptics.md
-    - title: Appendix A
-      url: /content/Chap10Appendix/Appendix_A.md
-    - title: Appendix B
-      url: /content/Chap10Appendix/Appendix_B.md
-    - title: Appendix C
-      url: /content/Chap10Appendix/Appendix_C.md
-    - title: Appendix D
-      url: /content/Chap10Appendix/Appendix_D.md
-    - title: Appendix G
-      url: /content/Chap10Appendix/Appendix_G.md
-    - title: Appendix H
-      url: /content/Chap10Appendix/Appendix_H.md
-    - title: French Method
-      url: /content/Chap10Appendix/French_method.md
-    - title: Authors
-      url: /content/Authors/authors.md
 format:
   html:
     theme: light
