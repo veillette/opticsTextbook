@@ -42,7 +42,7 @@ Geometrical optics is based on the intuitive idea that light consists of a bundl
 A ray is an oriented curve which is everywhere perpendicular to the surfaces of constant phase and points in the direction of the flow of energy.
 ```
 
-Consider a point source at some distance before an opaque screen with an aperture. According to the ray picture, the light distribution on a second screen further away from the source and parallel to the first screen is simply an enlarged copy of the aperture (see {numref}`Fig_2_01_GeomDiffr`). The copy is enlarged due to the fanning out of the rays. However, this description is only accurate when the wavelength of the light is very small compared to the diameter of the aperture. If the aperture is only ten times the wavelength, the pattern is much broader due to the bending of the rays around the edge of the aperture. This phenomenon is called **diffraction**. Diffraction can not be explained by geometrical optics and will be studied in [](chapter.diffraction).
+Consider a point source at some distance before an opaque screen with an aperture. According to the ray picture, the light distribution on a second screen further away from the source and parallel to the first screen is simply an enlarged copy of the aperture (see {numref}`Fig_2_01_GeomDiffr`). The copy is enlarged due to the fanning out of the rays. However, this description is only accurate when the wavelength of the light is very small compared to the diameter of the aperture. If the aperture is only ten times the wavelength, the pattern is much broader due to the bending of the rays around the edge of the aperture. This phenomenon is called **diffraction**. Diffraction can not be explained by geometrical optics and will be studied in [](#chapter.diffraction).
 
 
 ```{figure} Images/Chapter_2/2_01_Figgeom.png
@@ -51,9 +51,9 @@ Light distribution on a screen due to a rectangular aperture. Left: for a large 
 ```
 
 
-Geometrical optics is accurate when the sizes of the objects in the system are large compared to the wavelength. It is possible to derive geometrical optics from Maxwell's equations by formally expanding the electromagnetic field in a power series in the wavelength and retaining only the first term of this expansion <sup>[^1]</sup>. However, this derivation is not rigorous because the power series generally does not converge (it is a so-called asymptotic series).
+Geometrical optics is accurate when the sizes of the objects in the system are large compared to the wavelength. It is possible to derive geometrical optics from Maxwell's equations by formally expanding the electromagnetic field in a power series in the wavelength and retaining only the first term of this expansion <sup>[^1]: Derivation of geometrical optics from Maxwell's equations.</sup>. However, this derivation is not rigorous because the power series generally does not converge (it is a so-called asymptotic series).
 
-Although it is possible to incorporate polarization into geometrical optics <sup>[^2]</sup>, this is not standard theory and we will not consider polarization effects in this chapter.
+Although it is possible to incorporate polarization into geometrical optics <sup>[^2]: Treatment of polarization effects in geometrical optics.</sup>, this is not standard theory and we will not consider polarization effects in this chapter.
 
 ## Principle of Fermat
 
@@ -212,7 +212,7 @@ Ray from $P$ to $Q$ refracted by an interface.
 Hence we have derived the law of reflection and Snell's law from Fermat's principle. In {ref}`chapter.basics` the reflection law and Snell's law have been derived by a different method, namely from the continuity of the tangential electromagnetic field components at the interface.
 
 ## Perfect Imaging by Conic Sections
-In this section, the conic sections ellipse, hyperbole and parabola are important. In {numref}`Fig_2_05_ConicSection` their definitions are shown as a quick reminder<sup>[^3]</sup>.
+In this section, the conic sections ellipse, hyperbole and parabola are important. In {numref}`Fig_2_05_ConicSection` their definitions are shown as a quick reminder<sup>[^3]: Properties of thin lenses and optical systems.</sup>.
 
 ```{figure} Images/Chapter_2/2_05a_ConicSection.png
 ```
@@ -1322,7 +1322,7 @@ Systems with very small aberrations are extremely expensive, in particular if th
 as is the case in lithographic imaging systems
 used in the manufacturing of integrated circuits as shown in the lithographic system in {numref}`Fig_2_27_ASML_EUV`.
 
-A comprehensive treatment of aberration theory can be found in Braat et al.<sup>[^4]</sup>.
+A comprehensive treatment of aberration theory can be found in Braat et al.<sup>[^4]: Advanced optical systems and aberrations.</sup>.
 
 
 ```{figure} Images/Chapter_2/2_27_ASML_EUV.png

@@ -36,7 +36,7 @@ A quantitative model of the propagation of light is required to predict the prop
 ```
 
 
-In [](section.scalvecwave) we have derived that in homogeneous matter (i.e. the permittivity is constant), every component $U$ of a time-harmonic electromagnetic field satisfies the scalar Helmholtz equation {eq}`eq.complH`:
+In [](#section.scalvecwave) we have derived that in homogeneous matter (i.e. the permittivity is constant), every component $U$ of a time-harmonic electromagnetic field satisfies the scalar Helmholtz equation {eq}`eq.complH`:
 
 ```{math}
 \begin{align*}
@@ -79,7 +79,7 @@ U_0(x,y)&= \int\!\int {\cal F}(U_0)(\xi,\eta) e^{2\pi i (\xi x + \eta y)}\, \tex
 &= \mathcal{F}^{-1}\{{\cal F}(U_0)\}(x,y).
 \end{align*}
 ```
-Important properties of the Fourier transform are listed in [](chapter.FourierTransform).
+Important properties of the Fourier transform are listed in [](#chapter.FourierTransform).
 By defining $k_x=2\pi \xi$, $k_y=2\pi \eta$, {eq}`eq.Finv` can be written as
 
 ```{math}
@@ -134,7 +134,7 @@ where now $k_z$ has to be considered as a function of $(\xi, \eta)$:
 k_z = 2\pi \sqrt{ \left( \frac{1}{\lambda}\right)^2- \xi^2-\eta^2}.
 \end{align*}
 ```
-Note that one can interpret this as a diagonalisation of the propagation operator, as explained in [](sec:basistrans).
+Note that one can interpret this as a diagonalisation of the propagation operator, as explained in [](#sec:basistrans).
 
 We can observe something interesting: if $k_x^2+k_y^2 > \left(\frac{2\pi }{\lambda}\right)^2$, then $k_z$ becomes imaginary, and $\exp(i k_z z)$ decays exponentially for increasing $z$:
 
@@ -144,7 +144,7 @@ We can observe something interesting: if $k_x^2+k_y^2 > \left(\frac{2\pi }{\lamb
 \exp\left\{i\left[k_x x+k_y y +z\sqrt{\left(\frac{2\pi n}{\lambda}\right)^2-k_x^2-k_y^2 }\right]\right\}=e^{i(k_x x+k_y y)}e^{-z\sqrt{ k_x^2+k_y^2- \left(\frac{2\pi n}{\lambda}\right)^2} }.
 \end{align*}
 ```
-These exponentially decaying waves are called **evanescent in the positive $z$-direction**. We have met evanescent waves already in the context of total internal reflection discussed in [](subsection.totalrefl). The physical consequences of evanescent waves in the angular spectrum decomposition will be explained in [](sec:fourierintuition).
+These exponentially decaying waves are called **evanescent in the positive $z$-direction**. We have met evanescent waves already in the context of total internal reflection discussed in [](#subsection.totalrefl). The physical consequences of evanescent waves in the angular spectrum decomposition will be explained in [](#sec:fourierintuition).
 
 The waves for which $k_z$ is real have constant amplitude: only their phase changes due to propagation. These waves therefore are called **propagating waves**.
 ```{figure} Images/Chapter_6/6_03_Angular_Spectrum.png
@@ -169,11 +169,11 @@ Alternatively, one can propagate only the $E_x$- and $E_y$-components and afterw
 (sec:rayleighsommerfeld)=
 ### Rayleigh-Sommerfeld Diffraction Integral
 
-Another method to propagate a wave field is by using the **Rayleigh-Sommerfeld** integral. A very good approximation of this integral states that each point in the plane $z=0$ emits spherical waves with amplitude proportional to the field in the plane $z=0$. To find the field in a point $(x, y,z)$, we have to add the contributions from all these point sources together. This corresponds to the Huygens-Fresnel principle postulated earlier in [](section.spatcoh). Because a more rigorous derivation starting from the Helmholtz equation<sup>[^2]</sup> would be rather lengthy, we will just give the final result:
+Another method to propagate a wave field is by using the **Rayleigh-Sommerfeld** integral. A very good approximation of this integral states that each point in the plane $z=0$ emits spherical waves with amplitude proportional to the field in the plane $z=0$. To find the field in a point $(x, y,z)$, we have to add the contributions from all these point sources together. This corresponds to the Huygens-Fresnel principle postulated earlier in [](#section.spatcoh). Because a more rigorous derivation starting from the Helmholtz equation<sup>[^2]</sup> would be rather lengthy, we will just give the final result:
 
 ````{note}
 ```{math}
-:label: eq.RS
+:label: eq.rs
 \begin{align*}
 U(x,y,z)&= \frac{1}{i\lambda}\int\int U_0(x',y')\frac{ z \, e^{ik\sqrt{(x-x')^2+(y-y')^2+z^2}}}{(x-x')^2+(y-y')^2+z^2}\,\text{d}x'\,\text{d}y'
 &= \frac{1}{i\lambda}\int\int U_0(x',y')\frac{z}{r} \frac{e^{ikr}}{r}\,\text{d}x'\,\text{d}y',
@@ -191,12 +191,12 @@ r=\sqrt{(x-x')^2+(y-y')^2+z^2}.
 ```
 **Remarks**.
 
-1. The formula {eq}`eq.RS` is not completely rigorous because a term that is a factor $1/(kr)$ smaller (and which in practice therefore is very much smaller) has been omitted.
+1. The formula {eq}`eq.rs` is not completely rigorous because a term that is a factor $1/(kr)$ smaller (and which in practice therefore is very much smaller) has been omitted.
 
-2. In {eq}`eq.RS` there is an additional factor
+2. In {eq}`eq.rs` there is an additional factor
 $z/r$ that has been omitted in the time-harmonic spherical wave as given in {eq}`eq.ths6` and at the right-hand side of {eq}`eq.timeharm`. This factor means that the amplitudes of the spherical waves in the Rayleigh-Sommerfeld diffraction integral depend on direction (although their wave fronts are spherical), the amplitudes being largest in the forward direction.
 
-3. The angular spectrum method amounts to a multiplication by $\exp(i z k_z)$ in Fourier space, while the Rayleigh-Sommerfeld integral is a convolution with respect to $(x,y)$. It is a property of the Fourier transform that a multiplication in Fourier space corresponds to a convolution in real space and vice versa. Indeed a mathematical result called **Weyl's identity** implies that the rigorous version of {eq}`eq.RS` and the plane wave expansion (i.e. the angular spectrum method) give identical results.
+3. The angular spectrum method amounts to a multiplication by $\exp(i z k_z)$ in Fourier space, while the Rayleigh-Sommerfeld integral is a convolution with respect to $(x,y)$. It is a property of the Fourier transform that a multiplication in Fourier space corresponds to a convolution in real space and vice versa. Indeed a mathematical result called **Weyl's identity** implies that the rigorous version of {eq}`eq.rs` and the plane wave expansion (i.e. the angular spectrum method) give identical results.
 
 (sec:fourierintuition)=
 ## Intuition for the Spatial Fourier Transform in Optics
@@ -299,14 +299,14 @@ Demonstration of the uncertainty principle. The more confined $U(x,y)$ is, the l
 (sec:fresnelfraunhofer)=
 ## Fresnel and Fraunhofer Approximations
 
-The Fresnel and Fraunhofer approximation are two approximations of the Rayleigh-Sommerfeld integral {eq}`eq.RS`. The approximations are accurate provided the propagation distance $z$ is sufficiently large. In the Fraunhofer approximation, $z$ has to be *quite* large, i.e. larger than for the Fresnel approximation, which is already accurate for typical distances occurring in optical systems. Putting it differently: in order of most accurate to least accurate (i.e. only valid for large propagation distances), the diffraction integrals would rank as:
+The Fresnel and Fraunhofer approximation are two approximations of the Rayleigh-Sommerfeld integral {eq}`eq.rs`. The approximations are accurate provided the propagation distance $z$ is sufficiently large. In the Fraunhofer approximation, $z$ has to be *quite* large, i.e. larger than for the Fresnel approximation, which is already accurate for typical distances occurring in optical systems. Putting it differently: in order of most accurate to least accurate (i.e. only valid for large propagation distances), the diffraction integrals would rank as:
 
 ```{note}
 **[Most accurate]** Rayleigh-Sommerfeld $\rightarrow$ Fresnel $\rightarrow$ Fraunhofer **[Least accurate]**.
 ```
 
 ### Fresnel Approximation
-We assume that $z$ in Eq. {eq}`eq.RS` is so large that in the denominator we can approximate $r$ by $z$:
+We assume that $z$ in Eq. {eq}`eq.rs` is so large that in the denominator we can approximate $r$ by $z$:
 
 ```{math}
 :label: eq.fesnel1
@@ -318,7 +318,7 @@ U(x,y,z)&= \frac{1}{i\lambda}\int\int U_0(x',y')\frac{z}{r} \frac{e^{ikr}}{r}\,\
 The reason why we can not apply the same approximation for $r$ in the exponent, is that in the exponent $r$ is multiplied by $k= 2\pi /\lambda$, which is a very large number at optical frequencies, so any error introduced by approximating $r$ would be drastically magnified by multiplying by $k$ which can easily lead to a completely different value of $\exp(ikr)=\cos(kr)+i\sin(kr)$. To approximate $r$ in $\exp(ikr)$ we must be more careful and apply a Taylor expansion. Recall that
 
 ```{math}
-:label: eq.r1
+:label: eq.r1_ch6
 \begin{align*}
 r&= \sqrt{(x-x')^2+(y-y')^2+z^2}
 &= z\, \sqrt{\frac{(x-x')^2+(y-y')^2}{z^2}+1}.
@@ -1015,7 +1015,7 @@ Left: cross section of the field of the Airy pattern. Right: intensity of the Ai
 ```
 
 **Remark**.
-In the simple case of a single thin lens, the entrance and exit pupils coincide with the lens itself. As has been explained in [Stops](sec.stops), the exit pupil in systems consisting of several lenses is the real or virtual image of the aperture stop under all optical lenses to the right of the stop. To model the effect of diffraction in such more complicated systems, diffraction is assumed to take place entirely in the exit pupil. The field in the exit pupil is first determined by non-paraxial ray tracing and is then integrated over the exit pupil using the Fresnel diffraction integral.
+In the simple case of a single thin lens, the entrance and exit pupils coincide with the lens itself. As has been explained in [](#sec.stops), the exit pupil in systems consisting of several lenses is the real or virtual image of the aperture stop under all optical lenses to the right of the stop. To model the effect of diffraction in such more complicated systems, diffraction is assumed to take place entirely in the exit pupil. The field in the exit pupil is first determined by non-paraxial ray tracing and is then integrated over the exit pupil using the Fresnel diffraction integral.
 
 ### Imaging by a lens
 It follows from the derivations in the previous section that the Airy pattern is the image of a point source infinitely far in front of a lens. In this section we study the imaging of a general object at finite distance to the lens.
@@ -1083,7 +1083,7 @@ I_i(x,y,s_i) = \ \int\!\int \left|\text{PSF}\left(x-M x_o, y- M x_o \right)\righ
 where $I_o=|U_o|^2$ is the intensity distribution of the extended source.
 Hence the image intensity is expressed in the intensity of the source by a convolution with the intensity of the PSF. This system is called a **incoherent imaging system**.
 
-3. An object is often illuminated by a spatially incoherent extended light source and then imaged. According to the discussion in [](section.scprop), the field that illuminates the object is then partially coherent. It is more coherent when the angle that the source extends at the object is smaller. The intensity in the image plane can be computed by splitting the spatially incoherent source into sufficiently many mutually incoherent point sources and computing the intensities in the image plane due to the illumination of the object by each individual point source. The total intensity in the image plane is then the sum of these intensities.
+3. An object is often illuminated by a spatially incoherent extended light source and then imaged. According to the discussion in [](#section.scprop), the field that illuminates the object is then partially coherent. It is more coherent when the angle that the source extends at the object is smaller. The intensity in the image plane can be computed by splitting the spatially incoherent source into sufficiently many mutually incoherent point sources and computing the intensities in the image plane due to the illumination of the object by each individual point source. The total intensity in the image plane is then the sum of these intensities.
 
 4. We have considered only scalar diffraction theory. However, for a lens with numerical aperture larger than 0.6, the change of polarization can be important. Then a more general diffraction theory is needed <sup>[^8]</sup>.
 
@@ -1104,7 +1104,7 @@ Set-up for Fourier filtering. The first lens creates a Fourier transform of $U(x
 
 
 ## Super-resolution
-We have emphasised that evanescent waves set the ultimate limit to resolution in optics. In [](chapter.GeomOptics) it was explained that, although within geometrical optics one can image a single point perfectly using conical surfaces, several points, let alone an extended object, cannot be imaged perfectly.
+We have emphasised that evanescent waves set the ultimate limit to resolution in optics. In [](#chapter.GeomOptics) it was explained that, although within geometrical optics one can image a single point perfectly using conical surfaces, several points, let alone an extended object, cannot be imaged perfectly.
 It was furthermore explained that when only paraxial rays are considered, i.e. within Gaussian geometrical optics, perfect imaging of extended objects *is* possible. However, rays of which the angle with the optical axis is large cause aberrations. But even when perfect imaging would be possible in geometrical optics, a real image can never be perfect due to the fact that information contained in the amplitudes and phase of the evanescent waves cannot propagate.
 The resolution that can be obtained with an optical system consisting of lenses is less than follows from considering the loss of information due to evanescent waves, because propagating waves with spatial frequencies that are too large to be captured by the optical system (i.e. waves of which the angles with the optical axis are larger than the numerical aperture) cannot contribute to the image. Therefore the image of a point object has the size
 
@@ -1161,9 +1161,9 @@ Spot used for excitation (top left) and for depletion (top middle). Fluorescence
 
 
 
-[^1]: [Every picture is made of waves - Sixty Symbols, 3:33 to 7:15](https://www.youtube.com/watch?v=mEN7DTdHbAU): Basic explanation of Fourier transforms. Also see [](sec:fourierintuition).
+[^1]: [Every picture is made of waves - Sixty Symbols, 3:33 to 7:15](https://www.youtube.com/watch?v=mEN7DTdHbAU): Basic explanation of Fourier transforms. Also see [](#sec:fourierintuition).
 
-[^2]: For a rigorous derivation see e.g. [J. Goodman, *Introduction to Fourier Optics](https://iate.oac.uncor.edu/&nbsp;manuel/libros/Optics/Introduction\%20to\%20Fourier\%20Optics\%202nd\%20-\%20J.\%20Goodman.pdf), &sect;3.3, &sect;3.4, &sect;3.5* - and *Lecture Notes of Advanced Photonics*, Delft University of Technology.
+[^2]: For a rigorous derivation see e.g. [J. Goodman, *Introduction to Fourier Optics*](https://iate.oac.uncor.edu/&nbsp;manuel/libros/Optics/Introduction\%20to\%20Fourier\%20Optics\%202nd\%20-\%20J.\%20Goodman.pdf), &sect;3.3, &sect;3.4, &sect;3.5* - and *Lecture Notes of Advanced Photonics*, Delft University of Technology.
 
 [^3]: See the course Advanced Photonics given at TUDelft.
 

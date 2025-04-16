@@ -11,23 +11,23 @@ We remark that what you will learn from this book applies to a much larger part 
 $10^{-13}$ nm wavelength to long radio waves of more than $10^3$ m wavelength. Since the approximate theories that we will discuss, such as geometrical optics, are valid provided the wavelength is sufficiently small compared to the size of the objects in the problem, these theories apply also to any of the above-mentioned wavelengths, provided the same ratio of wavelength to typical size of the objects holds.
 
 We summarize the content of the book.
-In [](chapter.basics) we recall some basic facts about Maxwell's equations and show in particular how the wave equation is derived from these equations. Then we discuss some special solutions of Maxwell's equations, such as plane waves and the field emitted by an electric dipole. The use of complex notation for the important case of time-harmonic fields is reviewed.
+In [](#chapter.basics) we recall some basic facts about Maxwell's equations and show in particular how the wave equation is derived from these equations. Then we discuss some special solutions of Maxwell's equations, such as plane waves and the field emitted by an electric dipole. The use of complex notation for the important case of time-harmonic fields is reviewed.
 The derivation of the Fresnel reflection and transmission coefficients of a plane wave incident on an interface is so general that the results apply also to materials with absorption. Evanescent waves are studied in the context of total internal reflection.
 
-In subsequent chapters of the book it is assumed that the reader is familiar with the main part of the topics treated in [](chapter.basics).
+In subsequent chapters of the book it is assumed that the reader is familiar with the main part of the topics treated in [](#chapter.basics).
 
-In [](chapter.GeomOptics), we study light from the point of view of **Geometrical Optics**.
+In [](#chapter.GeomOptics), we study light from the point of view of **Geometrical Optics**.
 This model of optics applies to cases where the wavelength of light can be considered to be much smaller than other lengths in the problem. In geometrical optics, light is considered to travel as rays. With this concept we can explain phenomena observed in for example the pinhole camera or simple microscopes and telescopes. As the basis of geometrical optics we use the Principle of Fermat. Next, the paraxial theory is introduced. Ray matrices are used extensively, in particular in the study of a thick lens.
 
-In [](chapter.instrument) geometrical optics is applied to some imaging systems such as the pinhole camera, an ordinary camera, the human eye, the microscope and the telescope.
+In [](#chapter.instrument) geometrical optics is applied to some imaging systems such as the pinhole camera, an ordinary camera, the human eye, the microscope and the telescope.
 
-Then in [](chapter.polarization) different kinds of **polarization of light** are studied and how these can be manipulated. Here Jones matrices and Jones vectors are used.
+Then in [](#chapter.polarization) different kinds of **polarization of light** are studied and how these can be manipulated. Here Jones matrices and Jones vectors are used.
 
-In [](chapter.coherence), the theory of time and spatial coherence is explained. The superposition of light waves is discussed and the phenomenon of interference of light and how this is linked to the degree of coherence is explained. The change of the degree of coherence during the propagation of light is derived and applied to stellar interferometry.
+In [](#chapter.coherence), the theory of time and spatial coherence is explained. The superposition of light waves is discussed and the phenomenon of interference of light and how this is linked to the degree of coherence is explained. The change of the degree of coherence during the propagation of light is derived and applied to stellar interferometry.
 
-In [](chapter.diffraction) we treat **Diffraction Optics**. In this model light is described as a wave. With this theory one can explain phenomena such as interference fringes caused by the interaction of light with structures of finite size such as a slit or aperture in a screen. Furthermore, diffraction gratings and applications to spectroscopy are studied and the limit of resolution of a diffraction limited imaging system is derived.
+In [](#chapter.diffraction) we treat **Diffraction Optics**. In this model light is described as a wave. With this theory one can explain phenomena such as interference fringes caused by the interaction of light with structures of finite size such as a slit or aperture in a screen. Furthermore, diffraction gratings and applications to spectroscopy are studied and the limit of resolution of a diffraction limited imaging system is derived.
 
-Finally, in [](chapter.lasers) the unique properties of **lasers and their applications** are discussed. In the treatment of lasers, many of the properties of light discussed in previous chapters will play a role, in particular coherence. A laser contains an optical resonator with a medium which amplifies the light by stimulated emission. To understand the mechanism of stimulated emission, the theory of Einstein is discussed.
+Finally, in [](#chapter.lasers) the unique properties of **lasers and their applications** are discussed. In the treatment of lasers, many of the properties of light discussed in previous chapters will play a role, in particular coherence. A laser contains an optical resonator with a medium which amplifies the light by stimulated emission. To understand the mechanism of stimulated emission, the theory of Einstein is discussed.
 
 All chapters are followed by Problems. Advanced problems are noted by a *.
 Finally, in the Appendix some background such as vector calculus, the Lorentz Model for material dispersion and a list of Fourier transformations is given.

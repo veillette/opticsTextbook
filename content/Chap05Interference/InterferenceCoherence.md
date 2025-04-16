@@ -265,7 +265,7 @@ where $\mathbf{a}r{\lambda}$ and $\mathbf{a}r{\omega}$ are the wavelength and th
 \Delta \ell_c = c \frac{2\pi}{\Delta \omega} = 2\pi \frac{c}{\mathbf{a}r{\omega}} \frac{\mathbf{a}r{\omega}}{\Delta \omega} = \frac{\mathbf{a}r{\lambda}^2}{\Delta \lambda}.
 \end{align*}
 ```
-The coherence length and coherence time of a number of sources are listed in {numref}`Table.coh`. For a laser, the linewidth is extremely small and the coherence time very long. This is because the photons in a laser are not generated predominantly by spontaneous emission as classical sources, but instead by **stimulated emission**. Lasers are discussed in [](chapter.lasers).
+The coherence length and coherence time of a number of sources are listed in {numref}`Table.coh`. For a laser, the linewidth is extremely small and the coherence time very long. This is because the photons in a laser are not generated predominantly by spontaneous emission as classical sources, but instead by **stimulated emission**. Lasers are discussed in [](#chapter.lasers).
 
 ```{table} Coherence time and coherence length of several sources
 :name: Table.coh

@@ -16,7 +16,7 @@
 
 
 ## Polarization States and Jones Vectors
-We have seen in [](chapter.basics) that light is an electromagnetic wave which satisfies Maxwell's equations and the wave equation derived therefrom. Since the electric field is a vector which oscillates as function of time in a certain direction, we say that the wave has a certain polarization. In this chapter we look at the different types of polarization and how the polarization of a light beam can be manipulated.
+We have seen in [](#chapter.basics) that light is an electromagnetic wave which satisfies Maxwell's equations and the wave equation derived therefrom. Since the electric field is a vector which oscillates as function of time in a certain direction, we say that the wave has a certain polarization. In this chapter we look at the different types of polarization and how the polarization of a light beam can be manipulated.
 
 We start with Eqs. {eq}`eq.bcE2`, {eq}`eq.defbE` and {eq}`eq.orth` which show that the (real) electric field $\mathbf{\mathcal{E}}(\mathbf{r},t)$ of a time-harmonic plane wave is always perpendicular to the direction of propagation, which is the direction of the wave vector $\mathbf{k}$ as well as the direction of the Poynting vector (the direction of the power flow). Let the wave propagate in the $z$-direction:
 
@@ -198,7 +198,7 @@ The normalized vector represents of course the same polarization state as the un
 \end{align*}
 ```
 
-- We will show in [](sec:angularspectrum) that a general time-harmonic electromagnetic field, is a superposition of plane waves with wave vectors of the same length determined by the frequency of the wave but with different directions. An example is the electromagnetic field near the focal plane of a strongly converging lens. There is then no particular direction of propagation to which the electric field should be perpendicular. In other words, there is no obvious choice for a plane in which the electric field oscillates as function of time. It can nevertheless be shown that for every point in space such a plane exists, but the orientation of the plane varies in general with position.
+- We will show in [](#sec:angularspectrum) that a general time-harmonic electromagnetic field, is a superposition of plane waves with wave vectors of the same length determined by the frequency of the wave but with different directions. An example is the electromagnetic field near the focal plane of a strongly converging lens. There is then no particular direction of propagation to which the electric field should be perpendicular. In other words, there is no obvious choice for a plane in which the electric field oscillates as function of time. It can nevertheless be shown that for every point in space such a plane exists, but the orientation of the plane varies in general with position.
 Furthermore, the electric field in a certain point moves along an ellipse in the corresponding plane, but the shape of the ellipse and the orientation of its major axis can be arbitrary.
 We can conclude that in any point of an arbitrary time-harmonic electromagnetic field, the electric (and in fact also the magnetic) field vector prescribes as function of time an ellipse in some plane which depends on position<sup>[^2]</sup>. In this chapter we only consider the field and polarization state of a single plane wave.
 
@@ -418,7 +418,7 @@ If the matrix ${\cal M}$ describes the Jones matrix as defined in {eq}`eq.defM2a
 	\end{align*}}
 ```
 
-For more information on basis transformations, see [](sec:basistrans).
+For more information on basis transformations, see [](#sec:basistrans).
 
 
 ```{figure} Images/Chapter_4/4_2_Rotation_Polarization.png

@@ -68,7 +68,7 @@ The spherical waves emitted by the atoms (point sources) in the lamp are collima
 ```
 where $2h$ is the size of the source and $f$ is the focal length of the lens as shown in {numref}`Fig_7_01_Gas_Source_Collimation`. Hence the light can be collimated by either choosing a lens with large focal length or by reducing the size of the source, or both. Both methods lead, however, to weak intensities.
 Due to the special configuration of the laser source, which consists of a Fabry-Perot resonator in which the light bounces up and down many times before being emitted, the atomic sources are effectively all at very large distance and hence the effective size of the source is very small. The divergence of the laser beam is therefore not limited by the size of the source but by the size of its emitting surface through the inevitable effect of diffraction.
-As follows from [](chapter.diffraction), a parallel beam of diameter $D$ and wavelength $\lambda$ has a diffraction limited divergence given by:
+As follows from [](#chapter.diffraction), a parallel beam of diameter $D$ and wavelength $\lambda$ has a diffraction limited divergence given by:
 
 ```{math}
 :label: eq.theta2
@@ -84,7 +84,7 @@ A laser beam can almost reach diffraction-limited collimation.
 ```
 
 ### Diffraction-Limited Focused Spot, High Spatial Coherence
-If a perfectly collimated beam is focused with a lens with very small aberrations and with numerical aperture $\text{NA}$, the lateral size of the focused spot is, according to [](chapter.diffraction), diffraction-limited and given by
+If a perfectly collimated beam is focused with a lens with very small aberrations and with numerical aperture $\text{NA}$, the lateral size of the focused spot is, according to [](#chapter.diffraction), diffraction-limited and given by
 
 ```{math}
 :label: eq.diffrspot
@@ -94,7 +94,7 @@ If a perfectly collimated beam is focused with a lens with very small aberration
 ```
 With a laser one can achieve a diffraction-limited spot with a very high intensity.
 
-As has been explained in [](chapter.coherence), a light wave has **high spatial coherence** if at any given time, its amplitude and phase in different points can be predicted. The spherical waves emitted by a point source have this property. But when there are many point sources (atoms) that each emit bursts of harmonic waves that start at random times, as is the case in a classical light source, the amplitude and phase of the total emitted field at any position in space cannot be predicted. The only way to make the light spatially coherent is by making the light source very small, but then there is hardly any light. As will be explained below, by the design of the laser, the emissions by the atoms of the amplifying medium in a laser are phase-correlated, which leads to a very high temporal and spatial coherence.
+As has been explained in [](#chapter.coherence), a light wave has **high spatial coherence** if at any given time, its amplitude and phase in different points can be predicted. The spherical waves emitted by a point source have this property. But when there are many point sources (atoms) that each emit bursts of harmonic waves that start at random times, as is the case in a classical light source, the amplitude and phase of the total emitted field at any position in space cannot be predicted. The only way to make the light spatially coherent is by making the light source very small, but then there is hardly any light. As will be explained below, by the design of the laser, the emissions by the atoms of the amplifying medium in a laser are phase-correlated, which leads to a very high temporal and spatial coherence.
 
 ```{figure} Images/Chapter_7/7_03_Laser_Focus.png
 :name: Fig_7_03_Laser_Focus
@@ -133,7 +133,7 @@ Damped oscillation (left) and frequency spectrum of a damped oscillation (right)
 ```
 
 
-The optical resonator  is a Fabry-Perot resonator filled with some material with refractive index $n$ bounded by two aligned, highly reflective mirrors at a distance $L$. The Fabry-Perot resonator is discussed extensively in [](section.fabryperot) but to understand this chapter a detailed analysis of the Fabry-Perot is not needed.
+The optical resonator  is a Fabry-Perot resonator filled with some material with refractive index $n$ bounded by two aligned, highly reflective mirrors at a distance $L$. The Fabry-Perot resonator is discussed extensively in [](#section.fabryperot) but to understand this chapter a detailed analysis of the Fabry-Perot is not needed.
 
 Let the $z$-axis be chosen along the axis of the cavity as shown in {numref}`Fig_7_05_Fabry_Perrot_resonance_mode`, and assume that the transverse directions are so large that the light can be considered a plane wave bouncing back and forth along the $z$-axis between the two mirrors. Let $\omega$ be the frequency and $k_0=\omega/c$ the wave number in vacuum. The plane wave that propagates in the positive $z$-direction is given by:
 
