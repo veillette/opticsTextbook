@@ -120,8 +120,8 @@ sphinx:
           "diff": "\\pdv"
     html_theme_options:
         logo:
-            image_light: img/advanced_optics_logo_white.png
-            image_dark: img/advanced_optics_logo_dark.png
+            image_light: img/advanced_optics_logo_white.svg
+            image_dark: img/advanced_optics_logo_dark.svg
 #        launch_buttons:
 #          thebe: true
     thebe_config:
