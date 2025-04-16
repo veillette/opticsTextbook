@@ -19,69 +19,39 @@ site:
       google: G-BT4TZCELT2
   nav:
     - title: Preface
-      url: content/Preface/Preface.md
-    - title: Interactive Optics
-      url: content/Chap01Basics/Basics.md
-      children:
-        - title: Basics
-          url: content/Chap01Basics/Basics.md
-          children:
-            - title: Problems
-              url: content/Chap01Basics/Problems/BasicsExercise.md
-        - title: Geometrical Optics
-          url: content/Chap02GeometricalOptics/GeometricalOptics.md
-          children:
-            - title: Problems
-              url: content/Chap02GeometricalOptics/Problems/GeometricalOpticsExercise.md
-        - title: Optical Instruments
-          url: content/Chap03OpticalInstrument/OpticalInstruments.md
-          children:
-            - title: Problems
-              url: content/Chap03OpticalInstrument/Problems/OpticalInstruments_Exercise.md
-        - title: Polarization
-          url: content/Chap04Polarization/Polarization.md
-          children:
-            - title: Problems
-              url: content/Chap04Polarization/Problems/PolarizationExercise.md
-        - title: Interference
-          url: content/Chap05Interference/InterferenceCoherence.md
-          children:
-            - title: Problems
-              url: content/Chap05Interference/Problems/InterferenceCoherenceExercise.md
-        - title: Diffractive Optics
-          url: content/Chap06Diffraction/DiffractiveOptics.md
-          children:
-            - title: Problems
-              url: content/Chap06Diffraction/Problems/DiffractiveOpticsExercise.md
-        - title: Lasers
-          url: content/Chap07Lasers/Lasers.md
-          children:
-            - title: Problems
-              url: content/Chap07Lasers/Problems/LasersExercise.md
-        - title: Fiber Optics
-          url: content/Chap09FiberOptics/FiberOptics.md
-          children:
-            - title: Problems
-              url: content/Chap09FiberOptics/Problems/FiberExercise.md
-    - title: Appendix
-      url: content/Chap10Appendix/Appendix_A.md
-      children:
-        - title: Appendix A
-          url: content/Chap10Appendix/Appendix_A.md
-        - title: Appendix B
-          url: content/Chap10Appendix/Appendix_B.md
-        - title: Appendix C
-          url: content/Chap10Appendix/Appendix_C.md
-        - title: Appendix D
-          url: content/Chap10Appendix/Appendix_D.md
-        - title: Appendix G
-          url: content/Chap10Appendix/Appendix_G.md
-        - title: Appendix H
-          url: content/Chap10Appendix/Appendix_H.md
-        - title: French Method
-          url: content/Chap10Appendix/French_method.md
+      url: /content/Preface/Preface.md
+    - title: Basics
+      url: /content/Chap01Basics/Basics.md
+    - title: Geometrical Optics
+      url: /content/Chap02GeometricalOptics/GeometricalOptics.md
+    - title: Optical Instruments
+      url: /content/Chap03OpticalInstrument/OpticalInstruments.md
+    - title: Polarization
+      url: /content/Chap04Polarization/Polarization.md
+    - title: Interference
+      url: /content/Chap05Interference/InterferenceCoherence.md
+    - title: Diffractive Optics
+      url: /content/Chap06Diffraction/DiffractiveOptics.md
+    - title: Lasers
+      url: /content/Chap07Lasers/Lasers.md
+    - title: Fiber Optics
+      url: /content/Chap09FiberOptics/FiberOptics.md
+    - title: Appendix A
+      url: /content/Chap10Appendix/Appendix_A.md
+    - title: Appendix B
+      url: /content/Chap10Appendix/Appendix_B.md
+    - title: Appendix C
+      url: /content/Chap10Appendix/Appendix_C.md
+    - title: Appendix D
+      url: /content/Chap10Appendix/Appendix_D.md
+    - title: Appendix G
+      url: /content/Chap10Appendix/Appendix_G.md
+    - title: Appendix H
+      url: /content/Chap10Appendix/Appendix_H.md
+    - title: French Method
+      url: /content/Chap10Appendix/French_method.md
     - title: Authors
-      url: content/Authors/authors.md
+      url: /content/Authors/authors.md
 format:
   html:
     theme: light
