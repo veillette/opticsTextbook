@@ -41,19 +41,17 @@ where ${\cal A}_x$ and ${\cal A}_y$ are positive amplitudes and $\varphi_x$, $\v
 
 ```{math}
 \begin{align*}
-\begin{split}
 \left(\begin{array}{c}{\cal E}_x(0,t) \\{\cal E}_y(0,t)
 \end{array} \right)
-&= \left( \begin{array}{c}{\cal A}_x \cos(-\omega t + \varphi_x) \\{\cal A}_y \cos(-\omega t + \varphi_y)
+= \left( \begin{array}{c}{\cal A}_x \cos(-\omega t + \varphi_x) \\{\cal A}_y \cos(-\omega t + \varphi_y)
 \end{array}\right)
-&=\text{Re}\left\{
+=\text{Re}\left\{
 \left( \begin{array}{c}{\cal A}_x e^{i\varphi_x} \\{\cal A}_y e^{i\varphi_y}
 \end{array}\right)
 e^{-i\omega t}
 \right\}
-&= \text{Re}\left\{ \left(\begin{array}{c}E_x(0) \\E_y(0)
-\end{array}\right) e^{-i \omega t} \right\},
-\end{split}
+= \text{Re}\left\{ \left(\begin{array}{c}E_x(0) \\E_y(0)
+\end{array}\right) e^{-i \omega t} \right\}
 \end{align*}
 ```
 The complex vector
@@ -94,7 +92,7 @@ Equality of the phases: $\varphi_y=\varphi_x$, means that the field components $
 \end{align*}
 ```
 which shows that for $\varphi_y-\varphi_x=0$ the electric field simply oscillates in one direction given by real the vector ${\cal A}_x \hat{\mathbf{x}} + {\cal A}_y \hat{\mathbf{y}}$.
-See {numref}`fig:linpol`.
+See {numref}`4_01_Dphi_000pi_f1_BW`.
 
 If $\varphi_y-\varphi_x=\pi$ we have
 
@@ -124,18 +122,16 @@ The field components ${\cal E}_x(z,t)$ and ${\cal E}_y(z,t)$ are $\pi/2$ radian 
 ```{math}
 :label: eq.circpol
 \begin{align*}
-\begin{split}
 \left(
 \begin{array}{c}{\cal E}_x(0,t) \\{\cal E}_y(0,t)
 \end{array}\right)
-&=
+=
 \left(\begin{array}{c}{\cal A}_x \cos(-\omega t)\\{\cal A}_x \cos(-\omega t \pm \pi/2)
 \end{array}\right)
-&=
+=
 {\cal A}_x
 \left(\begin{array}{c}\cos(\omega t)\\\pm \sin(\omega t)
-\end{array}\right).
-\end{split}
+\end{array}\right)
 \end{align*}
 ```
 At a given position, the electric field vector moves along a circle as time proceeds. When for an observer looking towards the source, the electric field is rotating anti-clockwise, the polarization is called **left-circularly polarized** (+ sign in {eq}`eq.circpol`), while if the electric vector moves clockwise, the polarization is called **right-circularly polarized** (- sign in {eq}`eq.circpol`).
@@ -155,13 +151,11 @@ In this case we get instead of {eq}`eq.circpol` (again taking $\varphi_x=0$):
 
 ```{math}
 \begin{align*}
-\begin{split}
 \left(\begin{array}{c}{\cal E}_x(0,t) \\{\cal E}_y(0,t)
 \end{array}\right)
-&=
+=
 \left( \begin{array}{c}{\cal A}_x \cos(\omega t)\\\pm {\cal A}_y\sin(\omega t)
 \end{array}\right).
-\end{split}
 \end{align*}
 ```
 which shows that the electric vector moves along an ellipse with major and minor axes parallel to the $x$- and $y$-axis. When the + sign applies, the field is called left-elliptically polarized, otherwise it is called right-elliptically polarized.
@@ -178,7 +172,7 @@ The Jones vector is now the most general one:
 \end{align*}
 ```
 It can be shown that the electric field vector moves always along an ellipse.
-The exact shape and orientation of this ellipse varies with the difference in phase $\varphi_y-\varphi_x$ and the ratio of the amplitude ${\cal A}_x,{\cal A}_y$ and, except when $\varphi_y-\varphi_x = \pm \pi/2$, the major and minor axis of the ellipse are not parallel to the $x$- and $y$-axis. See {numref}`fig:ellpol`.
+The exact shape and orientation of this ellipse varies with the difference in phase $\varphi_y-\varphi_x$ and the ratio of the amplitude ${\cal A}_x,{\cal A}_y$ and, except when $\varphi_y-\varphi_x = \pm \pi/2$, the major and minor axis of the ellipse are not parallel to the $x$- and $y$-axis. See {numref}`4_03_Dphi_025pi_f1_BW`.
 
 **Remarks**.
 - Frequently the Jones vector is normalized such that
@@ -198,23 +192,23 @@ The normalized vector represents of course the same polarization state as the un
 \end{align*}
 ```
 
-- We will show in [](#sec:angularspectrum) that a general time-harmonic electromagnetic field, is a superposition of plane waves with wave vectors of the same length determined by the frequency of the wave but with different directions. An example is the electromagnetic field near the focal plane of a strongly converging lens. There is then no particular direction of propagation to which the electric field should be perpendicular. In other words, there is no obvious choice for a plane in which the electric field oscillates as function of time. It can nevertheless be shown that for every point in space such a plane exists, but the orientation of the plane varies in general with position.
+- We will show in [](#sec:angularspectrum) that a general time-harmonic electromagnetic field, is a superposition of plane waves with wave vectors of the same length determined by the frequency of the wave but with different directions. An example is the electromagnetic field near the focal plane of a strongly converging lens. There is then no particular direction of propagation to which the electric field should be perpendicular. In other words, there is no obvious choice for a plane in which the electric field oscillates as function of time. It can nevertheless be shown that for every point in space such a plane exists, but the orientation of the plane varies in general with position<sup>[^2]</sup>. In this chapter we only consider the field and polarization state of a single plane wave.
 Furthermore, the electric field in a certain point moves along an ellipse in the corresponding plane, but the shape of the ellipse and the orientation of its major axis can be arbitrary.
 We can conclude that in any point of an arbitrary time-harmonic electromagnetic field, the electric (and in fact also the magnetic) field vector prescribes as function of time an ellipse in some plane which depends on position<sup>[^2]</sup>. In this chapter we only consider the field and polarization state of a single plane wave.
 
 
 ```{figure} Images/Chapter_4/4_01_Dphi_000pi_f1_BW.png
-:name: fig:linpol
+:name: 4_01_Dphi_000pi_f1_BW
 Linear polarization
 ```
 
 ```{figure} Images/Chapter_4/4_02_Dphi_05pi_f1_BW.png
-:name: fig:circpol
+:name: 4_02_Dphi_05pi_f1_BW
 Circular polarization
 ```
 
 ```{figure} Images/Chapter_4/4_03_Dphi_025pi_f1_BW.png
-:name: fig:ellpol
+:name: 4_03_Dphi_025pi_f1_BW
 Elliptical polarization
 
 Illustration of different types of polarization. The horizontal and vertical arrows indicate the momentary field components ${\cal E}_x, {\cal E}_y$. The thick arrow indicates the vector $\mathbf{\mathcal{E}}$. The black curve indicates the trajectory of $\mathbf{\mathcal{E}}(t)$.
@@ -308,7 +302,7 @@ This can be done by passing the light through a crystal such that ${\cal E}_y$ a
 The matrix on the left is the Jones matrix describing the operation of a quarter-wave plate.
 
 Another important Jones matrix is the **rotation matrix**. In the preceding discussion it was assumed that the fast and slow axes were aligned with the $x$- and $y$-direction (i.e. they were parallel to ${\cal E}_x$ and ${\cal E}_y$). Suppose now that the slow and fast axes of the wave plate no longer coincide with $\widehat{\mathbf{x}}$ and
-$\widehat{\mathbf{y}}$, but rather with some other $\widehat{\mathbf{x}}'$ and $\widehat{\mathbf{y}}'$ as in {numref}`Fig_4_2_Rotation_Axis`. In that case we apply a basis transformation: the electric field vector which is expressed in the $\widehat{\mathbf{x}}$, $\widehat{\mathbf{y}}$ basis should first be expressed in the $\widehat{\mathbf{x}}'$, $\widehat{\mathbf{y}}'$ basis before applying the Jones matrix of the wave plate to it. After applying the Jones matrix, the electric field has to be transformed back from the $\widehat{\mathbf{x}}'$, $\widehat{\mathbf{y}}'$ basis to the $ \widehat{\mathbf{x}}$, $\widehat{\mathbf{y}}$ basis.
+$\widehat{\mathbf{y}}$, but rather with some other $\widehat{\mathbf{x}}'$ and $\widehat{\mathbf{y}}'$ as in {numref}`4_2_Rotation_Polarization`. In that case we apply a basis transformation: the electric field vector which is expressed in the $\widehat{\mathbf{x}}$, $\widehat{\mathbf{y}}$ basis should first be expressed in the $\widehat{\mathbf{x}}'$, $\widehat{\mathbf{y}}'$ basis before applying the Jones matrix of the wave plate to it. After applying the Jones matrix, the electric field has to be transformed back from the $\widehat{\mathbf{x}}'$, $\widehat{\mathbf{y}}'$ basis to the $ \widehat{\mathbf{x}}$, $\widehat{\mathbf{y}}$ basis.
 
 Let $\mathbf{E}$ be given in terms of its components on the $\hat{\mathbf{x}}$, $\hat{\mathbf{y}}$ basis:
 
@@ -329,7 +323,7 @@ To find the components $E_{x'}$, $E_{y'}$ on the $\widehat{\mathbf{x}}'$, $\wide
 we first write the unit vectors
 $\widehat{\mathbf{x}}'$ and $\widehat{\mathbf{y}}'$ in terms of the basis
 $\hat{\mathbf{x}}$, $\hat{\mathbf{y}}$
-(see {numref}`Fig_4_2_Rotation_Axis`)
+(see {numref}`4_2_Rotation_Polarization`)
 
 ```{math}
 :label: eq.hatxprime
@@ -422,7 +416,7 @@ For more information on basis transformations, see [](#sec:basistrans).
 
 
 ```{figure} Images/Chapter_4/4_2_Rotation_Polarization.png
-:name: Fig_4_2_Rotation_Axis
+:name: 4_2_Rotation_Polarization
 If the wave plate is rotated, the fast and slow axis no longer correspond to $x$ and $y$. Instead, we have to introduce a new coordinate system ($x',y'$).
 ```
 
@@ -521,10 +515,10 @@ A half-wave plate introduces a phase shift of $\pi$, so its Jones matrix is
 \end{array}\right),
 \end{align*}
 ```
-because $\exp(i\pi)=-1$. An important application of the half-wave plate is to **change the orientation of linearly polarized light**. After all, what this matrix does is mirroring the polarization state in the $x$-axis. Thus, if we choose our mirroring axis correctly (i.e. if we choose the orientation of the wave plate correctly), we can change the direction in which the light is linearly polarized arbitrarily<sup>[^7]</sup><sup>[^8]</sup>. To give an example: a wave with linear polarization parallel to the $x$-direction, can be rotated over angle $\alpha$ by rotating the crystal such that the fast axis makes angle $\alpha/2$ with the $x$-axis. Upon propagation through the crystal, the slow axis gets an additional phase of $\pi$, due to which the electric vector makes angle $\alpha$ with the $x$-axis (see {numref}`Fig_4_04_Rotation_polarization`). It is not difficult to verify that when the fast and slow axis are interchanged, the same linear state of polarization results.
+because $\exp(i\pi)=-1$. An important application of the half-wave plate is to **change the orientation of linearly polarized light**. After all, what this matrix does is mirroring the polarization state in the $x$-axis. Thus, if we choose our mirroring axis correctly (i.e. if we choose the orientation of the wave plate correctly), we can change the direction in which the light is linearly polarized arbitrarily<sup>[^7]</sup><sup>[^8]</sup>. To give an example: a wave with linear polarization parallel to the $x$-direction, can be rotated over angle $\alpha$ by rotating the crystal such that the fast axis makes angle $\alpha/2$ with the $x$-axis. Upon propagation through the crystal, the slow axis gets an additional phase of $\pi$, due to which the electric vector makes angle $\alpha$ with the $x$-axis (see {numref}`4_04_Rotation_polarization`). It is not difficult to verify that when the fast and slow axis are interchanged, the same linear state of polarization results.
 
 ```{figure} Images/Chapter_4/4_04_Rotation_polarization.png
-:name: Fig_4_04_Rotation_polarization
+:name: 4_04_Rotation_polarization
 Rotation of horizontally polarized light over an angle $\alpha$ using a half-wave plate.
 ```
 

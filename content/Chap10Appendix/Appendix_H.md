@@ -45,11 +45,10 @@ In matrix notation, this is written as
 
 ```{math}
 \begin{align*}
-\begin{split}
 A \mathbf{\Psi} &=
 \left(
 \begin{array}{c}\lambda_1 a_1\\\lambda_2 a_2\\\vdots
-\end{array}\right)
+\end{array}\right) \\
 &=
 \left(
 \begin{array}{ccc}\lambda_1 &0 &\dots\\0& \lambda_2 &\dots\\\vdots & \vdots & \ddots
@@ -57,7 +56,6 @@ A \mathbf{\Psi} &=
 \left(
 \begin{array}{c}a_1\\ a_2\\\vdots
 \end{array}\right).
-\end{split}
 \end{align*}
 ```
 Thus, we see that **if $\mathbf{\Psi}$ is represented in terms of eigenvectors of the linear operator $A$ (i.e. in the eigenbasis of $A$), then the matrix representation of $A$ is a diagonal matrix, and on its diagonal are its eigenvalues**.
@@ -82,10 +80,8 @@ Keep in mind that this is not **the** vector corresponding to $\mathbf{\Psi}$. R
 
 ```{math}
 \begin{align*}
-\begin{split}
-\mathbf{v}_1&=1 \hat{\mathbf{x}} +3 \hat{\mathbf{y}},
-\mathbf{v}_2&=2 \hat{\mathbf{x}} +1 \hat{\mathbf{y}},
-\end{split}
+\mathbf{v}_1 &= 1 \hat{\mathbf{x}} +3 \hat{\mathbf{y}}, \\
+\mathbf{v}_2 &= 2 \hat{\mathbf{x}} +1 \hat{\mathbf{y}}.
 \end{align*}
 ```
 or in vector notation (in the $\hat{\mathbf{x}},\hat{\mathbf{y}}$ basis)
@@ -161,21 +157,19 @@ we want to find $\Psi[v_1], \Psi[v_2]$ such that
 
 ```{math}
 \begin{align*}
-\begin{split}
 \left(\begin{array}{c}\Psi[x]\\\Psi[y]
-\end{array}\right)&=
+\end{array}\right) &=
 \Psi[v_1]
 \left( \begin{array}{c}v_1[x]\\ v_1[y]
 \end{array}\right) +
 \Psi[v_2]
 \left( \begin{array}{c}v_2[x]\\ v_2[y]
-\end{array}\right)
+\end{array}\right) \\
 &=
 \left(\begin{array}{cc}v_1[x] & v_2[x]\\ v_1[y] & v_2[y]
 \end{array}\right)
 \left(\begin{array}{c}\Psi[v_1]\\\Psi[v_2]
 \end{array}\right).
-\end{split}
 \end{align*}
 ```
 Here, $\Psi[x],\Psi[y]$ represent $\mathbf{\Psi}$ in the $\hat{\mathbf{x}},\hat{\mathbf{y}}$ basis, and $\Psi[v_1],\Psi[v_2]$ represent $\mathbf{\Psi}$ in the $\mathbf{v}_1,\mathbf{v}_2$ basis. Thus, defining the matrix
@@ -237,30 +231,25 @@ Or, it could be useful when we want to exponentiate $A$
 
 ```{math}
 \begin{align*}
-\begin{split}
-e^{A}&=\sum_{k=0}^{\infty} \frac{A^k}{k!}
-&=B \left(\sum_{k=0}^{\infty}
+e^{A} &= \sum_{k=0}^{\infty} \frac{A^k}{k!} \\
+&= B \left(\sum_{k=0}^{\infty}
 \frac{\left(\begin{array}{cc}\lambda_1 &0\\0& \lambda_2
 \end{array}\right)^k}
 {k!}
 \right)
-B^{-1}
-&=B
+B^{-1} \\
+&= B
 \left(\begin{array}{cc}e^{\lambda_1} &0\\0& e^{\lambda_2}
 \end{array}\right)
 B^{-1}.
-\end{split}
 \end{align*}
 ```
 This is for example used in the solution of the Schr\"odinger equation
 
 ```{math}
 \begin{align*}
-\begin{split}
-&\hat{H}\mathbf{\psi}=i\hbar \frac{\text{d}}{\text{d}t}\mathbf{\psi}
-&\Rightarrow
-&\mathbf{\psi}(t)=e^{-i\hat{H}t/\hbar}\mathbf{\psi}(0),
-\end{split}
+\hat{H}\mathbf{\psi} &= i\hbar \frac{\text{d}}{\text{d}t}\mathbf{\psi} \\
+\mathbf{\psi}(t) &= e^{-i\hat{H}t/\hbar}\mathbf{\psi}(0)
 \end{align*}
 ```
 which indicates why it's useful to describe $\mathbf{\psi}(0)$ in the energy basis if we want to find its time evolution.
@@ -309,10 +298,8 @@ Another application of basis transformations and eigenvalue decompositions in op
 
 ```{math}
 \begin{align*}
-\begin{split}
-P_{\Delta z} e^{i(k_x x + k_y y +k_z z)} &= e^{i(k_x x + k_y y +k_z (z+\Delta z))}
-&=e^{i k_z \Delta z} e^{i(k_x x + k_y y +k_z z)}.
-\end{split}
+P_{\Delta z} e^{i(k_x x + k_y y +k_z z)} &= e^{i(k_x x + k_y y +k_z (z+\Delta z))} \\
+&= e^{i k_z \Delta z} e^{i(k_x x + k_y y +k_z z)}.
 \end{align*}
 ```
 So indeed, $e^{i\mathbf{k} \cdot \mathbf{r}}$ is an eigenfunction of $P_{\Delta z}$, with eigenvalue $e^{i k_z \Delta z}$. The basis transformation we need to apply in order to decompose $U_0$ into eigenfunctions of $P_{\Delta z}$ is the Fourier transform. So similarly as in Eq. {eq}`diagonalization`, to apply the propagation operator we Fourier transform $U_0$ to decompose it into eigenfunctions of $P_{\Delta z}$, we multiply each component with the eigenvalue $e^{i k_z \Delta z}$, and then we inverse Fourier transform to go back to the original basis

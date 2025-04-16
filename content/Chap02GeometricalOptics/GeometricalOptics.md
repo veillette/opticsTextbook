@@ -51,9 +51,9 @@ Light distribution on a screen due to a rectangular aperture. Left: for a large 
 ```
 
 
-Geometrical optics is accurate when the sizes of the objects in the system are large compared to the wavelength. It is possible to derive geometrical optics from Maxwell's equations by formally expanding the electromagnetic field in a power series in the wavelength and retaining only the first term of this expansion <sup>[^1]: Derivation of geometrical optics from Maxwell's equations.</sup>. However, this derivation is not rigorous because the power series generally does not converge (it is a so-called asymptotic series).
+Geometrical optics is accurate when the sizes of the objects in the system are large compared to the wavelength. It is possible to derive geometrical optics from Maxwell's equations by formally expanding the electromagnetic field in a power series in the wavelength and retaining only the first term of this expansion <sup>[^1]</sup>. However, this derivation is not rigorous because the power series generally does not converge (it is a so-called asymptotic series).
 
-Although it is possible to incorporate polarization into geometrical optics <sup>[^2]: Treatment of polarization effects in geometrical optics.</sup>, this is not standard theory and we will not consider polarization effects in this chapter.
+Although it is possible to incorporate polarization into geometrical optics <sup>[^2]</sup>, this is not standard theory and we will not consider polarization effects in this chapter.
 
 ## Principle of Fermat
 
@@ -212,7 +212,7 @@ Ray from $P$ to $Q$ refracted by an interface.
 Hence we have derived the law of reflection and Snell's law from Fermat's principle. In {ref}`chapter.basics` the reflection law and Snell's law have been derived by a different method, namely from the continuity of the tangential electromagnetic field components at the interface.
 
 ## Perfect Imaging by Conic Sections
-In this section, the conic sections ellipse, hyperbole and parabola are important. In {numref}`Fig_2_05_ConicSection` their definitions are shown as a quick reminder<sup>[^3]: Properties of thin lenses and optical systems.</sup>.
+In this section, the conic sections ellipse, hyperbole and parabola are important. In {numref}`Fig_2_05_ConicSection` their definitions are shown as a quick reminder<sup>[^3]</sup>.
 
 ```{figure} Images/Chapter_2/2_05a_ConicSection.png
 ```
@@ -694,6 +694,7 @@ A lens with thickness $d$. The ray matrix is defined between the planes immediat
 
 ```{code-cell}
 :tags: [remove-input]
+:language: python
 
 %%HTML
 
@@ -1078,7 +1079,7 @@ Two thin lenses at a distance smaller than their focal lengths.
 ```
 
 
-It is easy to express the $z$-coordinate $s_i$ with respect to the coordinate system with origin at the vertex of $L_2$ of the final image point, in the $z$-component $s_o$ with respect to the origin at the vertex of lens $L_1$ of the object point. We use the Lensmaker's Formula for each lens while taking care that the proper local coordinate systems are used.
+It is easy to express the $z$-coordinate $s_i$ with respect to the coordinate system with origin at the vertex $V_2$ of the final image point, in the $z$-component $s_o$ with respect to the origin at the vertex of lens $L_1$ of the object point. We use the Lensmaker's Formula for each lens while taking care that the proper local coordinate systems are used.
 The intermediate image $P'$ due to lens $L_1$ has $z$-coordinate $s_{1i}$ with respect to the coordinate system with origin at the vertex $V_1$, which satisfies:
 
 ```{math}
@@ -1119,7 +1120,7 @@ f_i&= \frac{ (f_{1i}-d) f_{2i}}{f_{1i}+f_{2i}-d},
 f_o &= -\frac{(f_{2i}-d)f_{1i}}{f_{1i}+f_{2i} - d},
 \end{align*}
 ```
-We found in [](subsection.focthin) that when the refractive indices of the media before and after the lens are the same, the object and image focal lengths of a thin lens are the identical. However, as follows from {eq}`eq.2fi` and {eq}`eq.2fo` the object and image focal lengths are in general different when there are several lenses.
+We found in [](#subsection.focthin) that when the refractive indices of the media before and after the lens are the same, the object and image focal lengths of a thin lens are the identical. However, as follows from {eq}`eq.2fi` and {eq}`eq.2fo` the object and image focal lengths are in general different when there are several lenses.
 
 By construction using the intermediate image, it is clear that the magnification of the two-lens system is the product of the magnifications of the two lenses:
 
@@ -1322,7 +1323,7 @@ Systems with very small aberrations are extremely expensive, in particular if th
 as is the case in lithographic imaging systems
 used in the manufacturing of integrated circuits as shown in the lithographic system in {numref}`Fig_2_27_ASML_EUV`.
 
-A comprehensive treatment of aberration theory can be found in Braat et al.<sup>[^4]: Advanced optical systems and aberrations.</sup>.
+A comprehensive treatment of aberration theory can be found in Braat et al.<sup>[^4]</sup>.
 
 
 ```{figure} Images/Chapter_2/2_27_ASML_EUV.png
@@ -1350,7 +1351,7 @@ Even if the wave transmitted by the exit pupil would be perfectly spherical (no 
 \text{FWHM} = 0.6 \frac{ \lambda}{\text{NA}},
 \end{align*}
 ```
-where NA$=\arcsin(a/s_i)$ is the numerical aperture (i.e. 0<NA<1) with $a$ the radius of the exit pupil and $s_i$ the image distance as predicted by Gaussian geometrical optics. Diffraction depends on the wavelength, and hence it cannot be described by geometrical optics, which applies in the limit of vanishing wavelength.  We will treat diffraction by apertures in [](chapter.diffraction).
+where NA$=\arcsin(a/s_i)$ is the numerical aperture (i.e. 0<NA<1) with $a$ the radius of the exit pupil and $s_i$ the image distance as predicted by Gaussian geometrical optics. Diffraction depends on the wavelength, and hence it cannot be described by geometrical optics, which applies in the limit of vanishing wavelength.  We will treat diffraction by apertures in [](#chapter.diffraction).
 
 
 
@@ -1364,5 +1365,8 @@ where NA$=\arcsin(a/s_i)$ is the numerical aperture (i.e. 0<NA<1) with $a$ the r
 
 
 ```{code-cell}
+:language: python
 
 ```
+</code-cell>
+

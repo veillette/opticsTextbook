@@ -53,9 +53,9 @@ However, when $\varphi=\pi$, or more generally $\varphi=\pi+ 2 m \pi$, for some 
 ```{math}
 \begin{align*}
 \begin{split}
-\mathcal{U}_1(t)+\mathcal{U}_2(t)&=\cos(\omega t)+\cos(\omega t+\pi+ 2 m\pi)
-&=\cos(\omega t)-\cos(\omega t)
-&=0.
+\mathcal{U}_1(t)+\mathcal{U}_2(t)&=\cos(\omega t)+\cos(\omega t+\pi+ 2 m\pi) \\
+&=\cos(\omega t)-\cos(\omega t) \\
+&=0
 \end{split}
 \end{align*}
 ```
@@ -120,10 +120,10 @@ Then we find
 ```{math}
 \begin{align*}
 \begin{split}
-|U_1+U_2|^2&=|1+e^{-i\varphi}|^2
-&=(1+e^{i\varphi})(1+e^{-i\varphi})
-&=1+1+e^{-i\varphi}+e^{i\varphi}
-&=2+2\cos(\varphi),
+|U_1+U_2|^2 &= |1+e^{-i\varphi}|^2 \\
+&= (1+e^{i\varphi})(1+e^{-i\varphi}) \\
+&= 1+1+e^{-i\varphi}+e^{i\varphi} \\
+&= 2+2\cos(\varphi),
 \end{split}
 \end{align*}
 ```
@@ -539,9 +539,9 @@ Temporal coherence concerns the coherence of the field in one point. The absolut
 While for temporal coherence we used a **Michelson interferometer**, the natural choice to characterize spatial coherence is
 **Young's experiment**, because it allows the fields in two points $P_1$, $P_2$ which are separated in space to interfere with each other.
 
-```{figure} Images/Chapter_5/5_04_Spatial\ Coherence.png
-:name: Fig_5_04_Spatial Coherence
-Young's experiment to evaluate the spatial coherence of two points. A mask with two holes at the two points of interest, $\mathbf{r}_1$ and $\mathbf{r}_2$, is used to let the fields in these points interfere with on a screen at a large distance. Because the light propagates over different distances from the two holes to the points of observation, $U(\mathbf{r}_1,t)$ interferes with $U(\mathbf{r}_2,t+\tau)$, where $\tau$ is the difference in propagation time.
+```{figure} Images/Chapter_5/5_04_Spatial Coherence.png
+:name: Fig_5_04_Spatial_Coherence
+The spatial coherence of light from an extended source.
 ```
 
 Let $\mathbf{r}_1$and $\mathbf{r}_2$ be the position vectors of the points $P_1$ and $P_2$, respectively.
@@ -670,8 +670,8 @@ In that case
 ```{math}
 \begin{align*}
 \begin{split}
-\Gamma_{12}(\tau)&=\braket{A(\mathbf{r}_1)A(\mathbf{r}_2)^*e^{-i\omega t}e^{i\omega (t-\tau)}}
-&=A(\mathbf{r}_1) A(\mathbf{r}_2)^*e^{-i\omega \tau}.
+\Gamma_{12}(\tau) &= \braket{A(\mathbf{r}_1)A(\mathbf{r}_2)^*e^{-i\omega t}e^{i\omega (t-\tau)}} \\
+&= A(\mathbf{r}_1) A(\mathbf{r}_2)^*e^{-i\omega \tau}
 \end{split}
 \end{align*}
 ```
@@ -743,7 +743,7 @@ In that case it is the fields in two points $P_1$, $P_2$
 somewhere in space are coherent if and only if the difference in time that it takes for light to propagate from $S$ to $P_1$ and from $S$ to $P_2$ is less than the coherence time $\Delta\tau_c$. Equivalently, for coherence the difference between the distances $SP_1$ and $SP_2$ must be less than the coherence length $\Delta l_c$.
 
 An extended classical light source consists of a large set of emitting point sources that emit by spontaneous emission.
-As we have explained in [](subsection.cohsources), the wave trains emitted by different atoms (point sources) in the source suffer random phase jumps due to e.g. collisions and therefore the fields emitted by different point sources in an extended classical light source can not interfere. Such a light source is called **spatially incoherent**. For a spatially incoherent light source, the spatial coherence in any two points $P_1$ and $P_2$ is determined by measuring the fringe contrast on a distance screen when a mask is used that is perpendicular to the mean direction of propagation of the light and which contains pinholes at $P_1$ and $P_2$. The fringe contrast and hence the mutual coherence at $P_1$ and $P_2$ is determined by two effects:
+As we have explained in [](#subsection.cohsources), the wave trains emitted by different atoms (point sources) in the source suffer random phase jumps due to e.g. collisions and therefore the fields emitted by different point sources in an extended classical light source can not interfere. Such a light source is called **spatially incoherent**. For a spatially incoherent light source, the spatial coherence in any two points $P_1$ and $P_2$ is determined by measuring the fringe contrast on a distance screen when a mask is used that is perpendicular to the mean direction of propagation of the light and which contains pinholes at $P_1$ and $P_2$. The fringe contrast and hence the mutual coherence at $P_1$ and $P_2$ is determined by two effects:
 
 
 1. First of all it is determined by how coherent the contributions to the total field in $P_1$ and $P_2$ is of the individual point sources $S$ in the extended source. This coherence is determined by the extent to which the difference between the distance of $S$ to $P_1$ and of $S$ to $P_2$ is smaller than the coherence length. If these differences in distances are for all point sources larger than the coherence length, the fringe contrast on the screen n Young's experiment will be very low and hence the mutual coherence is very low.
@@ -1254,7 +1254,7 @@ should therefore be large.
 
 
 **Example.**
-For a wavelength of $\lambda_0=600\text{nm}$ and $n_f d= 12 \text{mm}$ we have for normal incidence $m=40000$. Then, if the reflection coefficients satisfy $|r_{12}|^2=|r_{23}|^2=0.9$, we have $F=360$ and $G=0$. The resolution is more than one million which is better than the grating spectrometers, which will be discussed in [](secton.examples).
+For a wavelength of $\lambda_0=600\text{nm}$ and $n_f d= 12 \text{mm}$ we have for normal incidence $m=40000$. Then, if the reflection coefficients satisfy $|r_{12}|^2=|r_{23}|^2=0.9$, we have $F=360$ and $G=0$. The resolution is more than one million which is better than the grating spectrometers, which will be discussed in [](#secton.examples).
 
 
 
@@ -1321,8 +1321,8 @@ If the fields are randomly polarized, the time average of the $\bot$-part will e
 ```{math}
 \begin{align*}
 \begin{split}
-I &=2\braket**calE_{1\bot**^2 + \mathcal{E}_{2\bot}^2 + 2\mathcal{E}_{1\bot} \mathcal{E}_{2\bot}}
-&=2\braket**calE_{1\parallel**^2 + \mathcal{E}_{2\parallel}^2 + 2\mathcal{E}_{1\parallel} \mathcal{E}_{2\parallel}}.
+I &= 2\braket{\mathcal{E}_{1\bot}^2 + \mathcal{E}_{2\bot}^2 + 2\mathcal{E}_{1\bot} \mathcal{E}_{2\bot}} \\
+&= 2\braket{\mathcal{E}_{1\parallel}^2 + \mathcal{E}_{2\parallel}^2 + 2\mathcal{E}_{1\parallel} \mathcal{E}_{2\parallel}}
 \end{split}
 \end{align*}
 ```

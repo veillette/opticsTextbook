@@ -30,20 +30,20 @@ After this theoretical view on optical fibers, we zoom out a little to introduce
 
 Let us first concern ourselves with the question how light can be confined in fibers. This happens by total internal reflection (TIR), which can be well explained using ray optics. Typically, fibers have a silicon-oxide ($\text{SiO}_2$) cladding, whereas in the $\text{SiO}_2$ core small amounts of germanium-oxide ($\text{GeO}_2$) are ''dissolved''. This doping increases the index of refraction $n_1$ slightly, thus $n_1>n_2$, as in {numref}`figFiberTIR`. The step in refractive index $n_1-n_2$ is indeed small, in the order of $10^{-3}$.
 
-Now consider Snell’s law for the core-cladding boundary in {numref}`figFiberTIR`,
+Now consider Snell's law for the core-cladding boundary in {numref}`figFiberTIR`,
 ```{math}
 \begin{align*}
 n_1 \sin\left(\theta_{\text{i}}\right) = n_2 \sin\left(\theta_{\text{cl}}\right).
 \end{align*}
 ```
-For angles $\theta_{\text{i}}$ in excess of the angle $\theta_{\text{i,c}}=\arcsin(n_2/n_1)$ refraction no longer occurs (the maximum value of a sine is 1) and light is totally reflected back into the core. Therefore we will refer to $\theta_{\text{i,c}}$ as the internal critical angle. This automatically implies that the fiber does not accept light from all directions, which leads to the definition of the (external) critical angle $\bar{\theta}_{\text{e,c}}$. This angle will be further discussed in {ref}`secFiberFiguresMerit`. For $\text{SiO}_2$, in which $n_2\approx 1.444$ at telecom wavelengths ($\lambda=1550 \text{nm}$), TIR occurs if $\theta_1>85.7^{\circ}$ if the core $n_1=1.448$. Because this $\theta_{\text{i}}$ is close to $90^{\circ}$, fibers with $n_1\approx n_2$ are also referred to as ''weakly guiding’’.
+For angles $\theta_{\text{i}}$ in excess of the angle $\theta_{\text{i,c}}=\arcsin(n_2/n_1)$ refraction no longer occurs (the maximum value of a sine is 1) and light is totally reflected back into the core. Therefore we will refer to $\theta_{\text{i,c}}$ as the internal critical angle. This automatically implies that the fiber does not accept light from all directions, which leads to the definition of the (external) critical angle $\bar{\theta}_{\text{e,c}}$. This angle will be further discussed in {ref}`secFiberFiguresMerit`. For $\text{SiO}_2$, in which $n_2\approx 1.444$ at telecom wavelengths ($\lambda=1550 \text{nm}$), TIR occurs if $\theta_1>85.7^{\circ}$ if the core $n_1=1.448$. Because this $\theta_{\text{i}}$ is close to $90^{\circ}$, fibers with $n_1\approx n_2$ are also referred to as ''weakly guiding''.
 
 Since the angle of reflection equals the angle of incidence upon reflection, TIR occurs at every core-cladding interface and the light remains confined to the core (strictly speaking, this argument only holds for straight fibers. The influence of bends in fibers is discussed in {ref}`secFiberLoss`). Because optical losses in $\text{SiO}_2$ are small (in the order of $0.1\text{dB/km}$,<sup>[^1]</sup> see {ref}`secFiberLoss`), this implies fibers can easily carry optical signals over distances in the order of several kilometers without considerable loss.
 
 (secFiberModes)=
 ## Fiber modes
 
-Although some of the properties of optical fibers can be understood from ray optics, the exact propagation of light through fibers is described by Maxwell’s equations. These give rise to certain modes that propagate through fibers, electromagnetic (EM) fields that have a constant distribution and polarization along the fiber axis. All possible EM-fields in fibers can be described as a superposition of fiber modes, like a musical tone played by an instrument can be described using a superposition of a note and its overtones.
+Although some of the properties of optical fibers can be understood from ray optics, the exact propagation of light through fibers is described by Maxwell's equations. These give rise to certain modes that propagate through fibers, electromagnetic (EM) fields that have a constant distribution and polarization along the fiber axis. All possible EM-fields in fibers can be described as a superposition of fiber modes, like a musical tone played by an instrument can be described using a superposition of a note and its overtones.
 
 ```{figure} Images/Chapter_9/Fiber_02_wavefront_mirror_waveguide.png
 :name: figFiberModesIntro
@@ -301,7 +301,7 @@ with $P(z)$ the light power at position $z$ along the fiber and $\alpha$ is the 
 Fiber loss as function of wavelength. Material losses occur due to scattering and absorption processes.
 ```
 
-Rayleigh scattering occurs as a result of SiO$_2$ crystal imperfections in the fiber. These occur if the crystal lacks Si- or O-atoms in its lattice at some positions, or when an additional atom is ''squeezed in’’. Due to these lattice distortions, some of the light is scattered in a random direction. The average loss factor from Rayleigh scattering is given by
+Rayleigh scattering occurs as a result of SiO$_2$ crystal imperfections in the fiber. These occur if the crystal lacks Si- or O-atoms in its lattice at some positions, or when an additional atom is ''squeezed in''. Due to these lattice distortions, some of the light is scattered in a random direction. The average loss factor from Rayleigh scattering is given by
 ```{math}
 \begin{align*}
 \alpha_{\text{R}}=\alpha_0^{\text{R}}\left(\dfrac{\lambda_0^{\text{R}}}{\lambda}\right)^4,
@@ -390,14 +390,6 @@ There is many types of connector. We report on the main ones here.
 
 **Straight tip (ST) connector** -- The straight tip connector has a $2.5\text{mm}$-diameter spring-loaded ferule. This implies that the ferule is pushed onto the device it is connected to thereby improving the transmission. Typically used for multimode fibers, it has a bayonet mount, which secures itself after turning it by a half twist.
 
-<!-- On May 16th, the third edition of the ASAP (Association for Students of Applied Physics) Career Day will take place. This day offers a unique opportunity for Applied Physics and Quantum Information Science and Technology Master students to orient themselves on future careers or internships. The day starts with short presentations from the invited companies. Following these presentations, each company hosts two rounds of case studies of 1.5 hours each for 10 students. Hereafter, the day is closed with a ‘borrel’ (drinks) where the students and the company can get to know each other informally.
-
-We are still looking for potential attending companies, and therefore ask for your help.
-Do you work at a company that is interested in physicists or in hosting internships and would like to join the ASAP Career Day?
-Please get in touch at careerday@vvtp.nl if you are interested!
-
-Kind regards, -->
-
 **Ferrule core (FC) connector** -- The ferule core connector it typically used for SMF and high precision applications, such as optical time domain reflectometry (OTDR). Its springloaded ferule is $2.5\text{mm}$ in diameter. It has an alignment key ensuring the connector is always inserted to the device in the same orientation. Secondly, the connector is secured using a threaded collet. Although this connector is thus more complex in installation, as well as in manufacturing, the repeatable accuracy with which it can be installed gives the precision in afore mentioned applications.
 
 **Multi-position optical (MPO) connector** -- The multi-position optical connector, also known under its trade name Multi-fiber Termination Push-on (MTP) connector, is designed for connecting MPO fibers containing $12$ or $24$ optical fibers in one bundle. Such fibers are often used for high-bandwidth optical parallel connections in, e.g., data centers and servers.
@@ -461,7 +453,7 @@ The main field in which fiber optics is applied is the field of telecommunicatio
 
 ```{figure} Images/Chapter_9/Fiber_17_Bragg_Grating.png
 :name: figFiberFBG
-A fiber Bragg grating reflects light of a specific wavelength only. This can be used to measure strain as straining the FBG results in a wavelength shift (adapted from [Wikimedia Commons](https://en.wikipedia.org/w/index.php?curid=18248811) by Sakurambo / CC BY-SA)
+A fiber Bragg grating reflects light of a specific wavelength only. This can be used to measure strain as straining the FBG results in a wavelength shift (adapted from [Wikimedia Commons](https://en.wikipedia.org/wiki/Fiber_Bragg_grating) by Sakurambo / CC BY-SA)
 ```
 
 Apart from telecommunication, fiber optics can be applied in sensing systems. Fiber Bragg Gratings (FBGs) have been developed to measure strain (due to mechanical, temperature and pressure loading) in structures and materials. In FBGs, the fiber core consists of periodically interdigitated sections with refractive index $n_1$ and $n_3$, see {numref}`figFiberFBG`, such that at each $n_1$-$n_3$ boundary some light is reflected. This can be compared to a cascade of Fabry-Perot etalons and results in a sharp reflection peak at a specific wavelength that can be measured using a spectrometer. Upon attaching an FBG to a structure, it stretches or shortens due to strain and accordingly, the reflection peak shifts in wavelength. The same goal can be achieved using fiber optic implementations of interferometers.

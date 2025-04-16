@@ -349,15 +349,11 @@ With this approximation, we arrive at the **Fresnel diffraction integral**, whic
 :label: eq.FresnelF
 \boxed{\begin{align*}
 \begin{split}
-U(x,y,z)&\approx
-\frac{e^{ikz}}{i\lambda z}\int\!\int U_0(x',y')e^{\frac{ik}{2z}\left[(x-x')^2+(y-y')^2\right]}\,\text{d}x'\,\text{d}y'
-
-
+U(x,y,z) &\approx
+\frac{e^{ikz}}{i\lambda z}\int\!\int U_0(x',y')e^{\frac{ik}{2z}\left[(x-x')^2+(y-y')^2\right]}\,\text{d}x'\,\text{d}y' \\
 &=
-\frac{ e^{ikz}e^{\frac{ik(x^2+y^2)}{2z}}}{i\lambda z}\int\!\int U_0(x',y') e^{\frac{ik(x'^2+y'^2)}{2z}}e^{-ik\left(\frac{x}{z}x'+\frac{y}{z}y'\right)}\,\text{d}x'\,\text{d}y'
-
-
-&= \frac{e^{ikz}e^{\frac{ik(x^2+y^2)}{2z}}}{i\lambda z} \mathcal{F}\left\{U_0(x',y')e^{\frac{ik(x'^2+y'^2)}{2z}}\right\}\left(\frac{x}{ \lambda z },\frac{y}{\lambda z}\right).
+\frac{ e^{ikz}e^{\frac{ik(x^2+y^2)}{2z}}}{i\lambda z}\int\!\int U_0(x',y') e^{\frac{ik(x'^2+y'^2)}{2z}}e^{-ik\left(\frac{x}{z}x'+\frac{y}{z}y'\right)}\,\text{d}x'\,\text{d}y' \\
+&= \frac{e^{ikz}e^{\frac{ik(x^2+y^2)}{2z}}}{i\lambda z} \mathcal{F}\left\{U_0(x',y')e^{\frac{ik(x'^2+y'^2)}{2z}}\right\}\left(\frac{x}{ \lambda z },\frac{y}{\lambda z}\right)
 \end{split}
 \end{align*}}
 ```
