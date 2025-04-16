@@ -1,0 +1,21 @@
+{
+  "name": "opticstextbook",
+  "version": "1.0.0",
+  "description": "Advanced Optics Textbook built with Jupyter Book and MyST Markdown.",
+  "scripts": {
+    "build": "jupyter-book build .",
+    "serve": "jupyter-book serve .",
+    "lint": "myst-lint content/",
+    "setup-venv": "python3 -m venv venv",
+    "activate-venv": "source venv/bin/activate",
+    "install-dep": "pip install -r requirements.txt",
+    "dev-setup": "npm run setup-venv && npm run activate-venv && npm run install"
+  },
+  "keywords": ["optics", "jupyter-book", "myst", "textbook", "documentation"],
+  "author": "",
+  "license": "CC-BY-SA-4.0",
+  "devDependencies": {
+    "myst-parser": "^1.5.12"
+  },
+  "dependencies": {}
+}
