@@ -1,50 +1,111 @@
-name: deploy-book
+name: MyST GitHub Pages Deploy with Multiple Exports
 
 on:
   push:
-    branches:
-      - concise
+    branches: [main]
   pull_request:
-    branches:
-      - concise
-  workflow_dispatch:  # Allow manual triggering
+    branches: [main]
+  workflow_dispatch:
 
 env:
-  PYTHON_VERSION: '3.13'
-  BOOK_DIR: '.'
+  BASE_URL: /${{ github.event.repository.name }}
+  NODE_VERSION: '22.x'
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: 'pages'
+  cancel-in-progress: false
 
 jobs:
-  deploy-book:
+  build-and-deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
-    
+    timeout-minutes: 15
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v4  # Updated to latest version
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Cache LaTeX packages
+        uses: actions/cache@v4
+        id: cache-latex
+        with:
+          path: /var/lib/apt/lists
+          key: ${{ runner.os }}-latex-${{ hashFiles('**/*.tex') }}
+
+      - name: Install XeTeX and ImageMagick
+        if: steps.cache-latex.outputs.cache-hit != 'true'
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y texlive-xetex texlive-fonts-recommended texlive-fonts-extra
+          sudo apt-get install -y imagemagick
+
+      - name: Install Typst
+        uses: typst-community/setup-typst@v4
+        with:
+          cache-dependency-path: requirements.typ
       
-    - name: Setup Python
-      uses: actions/setup-python@v5  # Updated to latest version
-      with:
-        python-version: ${{ env.PYTHON_VERSION }}
-        cache: 'pip'  # Enable pip caching
+      - name: Cache build artifacts
+        uses: actions/cache@v4
+        with:
+          path: ./_build
+          key: myst-build-${{ github.sha }}
+          restore-keys: |
+            myst-build-
+
+      - name: Add frontmatter to markdown files
+        run: |
+          node scripts/addFrontMatter.js
+
+      - name: Create downloads directory
+        run: |
+          mkdir -p _build/downloads
+          mkdir -p _build/html/downloads
+
+      - name: Build PDF, DOCX, and md Assets
+        run: |
+          echo "Build PDF Assets, docx, and md"
+          npx myst build -a
+
+      - name: Build HTML Assets
+        run: |
+          echo "Building site with BASE_URL: $BASE_URL"
+          npx myst build --html
+        env:
+          NODE_OPTIONS: "--max-old-space-size=4096"
+
+      - name: Clean up frontmatter to markdown files
+        run: |
+          node scripts/removeFrontMatter.js
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: '_build/html'
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
         
-    - name: Install dependencies
-      run: |
-        python -m pip install --upgrade pip
-        pip install -r ${{ env.BOOK_DIR }}/requirements.txt
-        pip install jupyter-book
-        
-    - name: Build book
-      run: |
-        cd ${{ env.BOOK_DIR }}
-        jupyter-book build .
-        
-          
-    - name: Deploy to GitHub Pages
-      if: github.ref == 'refs/heads/concise' && github.event_name == 'push'  # Only deploy on push to concise branch
-      uses: peaceiris/actions-gh-pages@v4
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./_build/html
-        full_commit_message: Deploy book to GitHub Pages
-        force_orphan: true # Keep gh-pages branch clean
+      - name: Deployment summary
+        run: |
+          echo "🚀 Successfully deployed to https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}"
+          echo "Build completed at $(date)"
         

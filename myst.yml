@@ -1,0 +1,85 @@
+version: 1
+project:
+  title: "Interactive Optics"
+  description: Bachelor Applied Physics
+  keywords: [optics, physics, education]
+  authors:
+    - name: A.P. Konijnenberg
+    - name: A.J.L. Adam
+    - name: H.P. Urbach
+    - name: T.H.A. van der Reep
+  license: CC BY-SA 4.0
+  github: https://github.com/veillette/opticsTextbook/
+  branch: concise
+
+site:
+  template: book-theme
+  title: Interactive Optics
+  logo: img/advanced_optics_logo_white.png
+  favicon: img/favicon.ico
+  analytics:
+    google: G-BT4TZCELT2
+  nav:
+    - title: Preface
+      file: content/Preface/Preface.md
+    - title: Interactive Optics
+      children:
+        - title: Basics
+          file: content/Chap01Basics/Basics.md
+          children:
+            - file: content/Chap01Basics/Problems/BasicsExercise.md
+        - title: Geometrical Optics
+          file: content/Chap02GeometricalOptics/GeometricalOptics.md
+          children:
+            - file: content/Chap02GeometricalOptics/Problems/GeometricalOpticsExercise.md
+        - title: Optical Instruments
+          file: content/Chap03OpticalInstrument/OpticalInstruments.md
+          children:
+            - file: content/Chap03OpticalInstrument/Problems/OpticalInstruments_Exercise.md
+        - title: Polarization
+          file: content/Chap04Polarization/Polarization.md
+          children:
+            - file: content/Chap04Polarization/Problems/PolarizationExercise.md
+        - title: Interference
+          file: content/Chap05Interference/InterferenceCoherence.md
+          children:
+            - file: content/Chap05Interference/Problems/InterferenceCoherenceExercise.md
+        - title: Diffractive Optics
+          file: content/Chap06Diffraction/DiffractiveOptics.md
+          children:
+            - file: content/Chap06Diffraction/Problems/DiffractiveOpticsExercise.md
+        - title: Lasers
+          file: content/Chap07Lasers/Lasers.md
+          children:
+            - file: content/Chap07Lasers/Problems/LasersExercise.md
+        - title: Fiber Optics
+          file: content/Chap09FiberOptics/FiberOptics.md
+          children:
+            - file: content/Chap09FiberOptics/Problems/FiberExercise.md
+    - title: Appendix
+      children:
+        - file: content/Chap10Appendix/Appendix_A.md
+        - file: content/Chap10Appendix/Appendix_B.md
+        - file: content/Chap10Appendix/Appendix_C.md
+        - file: content/Chap10Appendix/Appendix_D.md
+        - file: content/Chap10Appendix/Appendix_G.md
+        - file: content/Chap10Appendix/Appendix_H.md
+        - file: content/Chap10Appendix/French_method.md
+    - title: Authors
+      file: content/Authors/authors.md
+
+format:
+  html:
+    theme: light
+    plugins:
+      - hypothesis
+    execute:
+      enabled: true
+      timeout: 300
+      allow_errors: false
+    math:
+      enabled: true
+    references:
+      bibliography: references.bib
+    extensions:
+      - sphinx_proof
