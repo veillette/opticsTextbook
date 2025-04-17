@@ -31,6 +31,9 @@ It is important to note that the concepts of interference and coherence are not 
 ```{admonition} External sources in recommended order
 - [KhanAcademy - Interference of light waves](https://www.khanacademy.org/science/physics/light-waves/interference-of-light-waves/v/wave-interference): Playlist on wave interference at secondary school level.
 - [Yale Courses - 18. Wave Theory of Light](https://www.youtube.com/watch?v=5tKPLfZ9JVQ)
+- {cite:t}`born_wolf_coherence`: Comprehensive treatment of coherence theory
+- {cite:t}`michelson_interferometer`: Original paper on interferometry
+- {cite:t}`fresnel_arago`: Original work on polarized light interference
 ```
 
 ## Interference of Monochromatic Fields of the Same Frequency
@@ -197,7 +200,7 @@ Classical light sources such as incandescent lamps and also LEDs have relatively
 To answer this question, we must study the topic of coherence. One distinguishes between two extremes: fully **coherent** and fully **incoherent** light, while the degree of coherence of practical light is somewhere in between. Generally speaking, the broader the frequency band of the source, the more incoherent the light is. It is a very important observation that no light is actually completely coherent or completely incoherent. All light is **partially coherent**, but some light is more coherent than others.
 
 An intuitive way to think about these concepts is in terms of the ability to form interference fringes. For example, with laser light, which usually is almost monochromatic and hence coherent, one can form an interference pattern with clear maxima and minima in intensities using a double slit, while with sunlight (which is incoherent) this is much more difficult. Every frequency in the spectrum of sunlight gives its own interference pattern with its own frequency dependent fringe pattern. These fringe patterns wash out due to superposition and the total intensity therefore shows little fringe contrast, i.e. the coherence is less.
-However, it is not impossible to create interference fringes with natural light.<sup>[^1]</sup>
+However, it is not impossible to create interference fringes with natural light{cite:p}`young_interference`.
 The trick is to let the two slits be so close together (of the order of $0.02 \, \text{mm}$) that the *difference* in distances from the slits to the sun is so small for the fields in the slits to be sufficiently coherent to interfere.
 To understand the effect of polychromatic light, it is essential to understand that the degree to which the fields in two points are coherent, i.e. the ability to form fringes, is determined by the
 **difference in distances between these points and the source**. The distance itself to the source is **not** relevant.
@@ -345,7 +348,7 @@ In contrast, $|U(\mathbf{r},t)|^2=U(\mathbf{r},t)^*U(\mathbf{r},t)$ has a DC-com
 
 
 **Remark:** In contrast to the time-harmonic case, the long time average of polychromatic light depends on the time $t$ at which the average is taken. However, we assume in this chapter that the fields are omitted by sources that are **stationary**. The property of stationarity implies that the average over the time interval of long length $T$ does not depend on the time that the average is taken. Many light sources, in particular conventional lasers, are stationary. (However, a laser source which emits short high-power pulses cannot be considered as a stationary source).
-We furthermore assume that the fields are **ergodic**, which means that taking the time-average over a long time interval amounts to the same as taking the average over the ensemble of possible fields. It can be shown that this property implies that the limit $T\rightarrow \infty$ in {eq}`eq.averageII` indeed exists<sup>[^2]</sup>.
+We furthermore assume that the fields are **ergodic**, which means that taking the time-average over a long time interval amounts to the same as taking the average over the ensemble of possible fields. It can be shown that this property implies that the limit $T\rightarrow \infty$ in {eq}`eq.averageII` indeed exists{cite:p}`mandel_wolf`.
 
 
 
@@ -1368,12 +1371,11 @@ the two constituent orthogonal linearly polarized states of natural light cannot
 
 
 ```{admonition} External sources in recommended order
-1. [Veritasium - The original double-slit experiment, starting at 2:15](https://www.youtube.com/watch?v=Iuv6hY6zsd0) - Demonstration of an interference pattern obtained with sunlight.
-1. [MIT OCW - Two-beam Interference - Collimated Beams](https://ocw.mit.edu/resources/res-6-006-video-demonstrations-in-lasers-and-optics-spring-2008/demonstrations-in-physical-optics/two-beam-interference-2014-collimated-beams/): Interference of laser light in a Michelson interferometer.
-1. [MIT OCW - Fringe Contrast - Path Difference](https://ocw.mit.edu/resources/res-6-006-video-demonstrations-in-lasers-and-optics-spring-2008/demonstrations-in-physical-optics/fringe-contrast-2014-path-difference/): Demonstration of how fringe contrast varies with propagation distance.
-1. [MIT OCW - Coherence Length and Source Spectrum](https://ocw.mit.edu/resources/res-6-006-video-demonstrations-in-lasers-and-optics-spring-2008/demonstrations-in-physical-optics/coherence-length-and-source-spectrum/): Demonstration of how the coherence length depends on the spectrum of the laser light.
-1. [Lecture - 18 Coherence](https://www.youtube.com/watch?v=fwRFaZnr2WU): Lecture Series on Physics - I: Oscillations and Waves by Prof. S. Bharadwaj, Department of Physics and Meteorology, IIT Kharagpur.
-1. [Lecture - 19 Coherence](https://www.youtube.com/watch?v=jnQFMdMSRAE): Lecture Series on Physics - I: Oscillations and Waves by Prof. S. Bharadwaj, Department of Physics and Meteorology, IIT Kharagpur.
+1. [KhanAcademy - Interference of light waves](https://www.khanacademy.org/science/physics/light-waves/interference-of-light-waves/v/wave-interference): Playlist on wave interference at secondary school level.
+2. [Yale Courses - 18. Wave Theory of Light](https://www.youtube.com/watch?v=5tKPLfZ9JVQ)
+3. {cite:t}`born_wolf_coherence`: Comprehensive treatment of coherence theory
+4. {cite:t}`michelson_interferometer`: Original paper on interferometry
+5. {cite:t}`fresnel_arago`: Original work on polarized light interference
 ```
 
 [^1]: See [Veritasium - The original double-slit experiment, starting at 2:15](https://www.youtube.com/watch?v=Iuv6hY6zsd0) - Demonstration of an interference pattern obtained with sunlight. 
@@ -1385,3 +1387,57 @@ the two constituent orthogonal linearly polarized states of natural light cannot
 [^4]: [MIT OCW - Coherence Length and Source Spectrum](https://ocw.mit.edu/resources/res-6-006-video-demonstrations-in-lasers-and-optics-spring-2008/demonstrations-in-physical-optics/coherence-length-and-source-spectrum/): Demonstration of how the coherence length depends on the spectrum of the laser light.
 
 [^5]: [KhanAcademy - Young's Double slit part 1](https://www.khanacademy.org/science/physics/light-waves/interference-of-light-waves/v/youngs-double-split-part-1)
+
+## References
+
+```{bibliography}
+:style: alpha
+
+@article{young_interference,
+    title={The Bakerian Lecture: Experiments and Calculations Relative to Physical Optics},
+    author={Young, Thomas},
+    journal={Philosophical Transactions of the Royal Society of London},
+    volume={94},
+    pages={1--16},
+    year={1804},
+    publisher={Royal Society},
+    note={First demonstration of interference fringes with natural light}
+}
+
+@book{born_wolf_coherence,
+    title={Principles of Optics},
+    author={Born, Max and Wolf, Emil},
+    year={1999},
+    publisher={Cambridge University Press},
+    edition={7th},
+    chapter={10},
+    note={Comprehensive treatment of coherence theory}
+}
+
+@article{michelson_interferometer,
+    title={On the Application of Interference Methods to Astronomical Measurements},
+    author={Michelson, Albert A.},
+    journal={The Astrophysical Journal},
+    volume={51},
+    pages={257--262},
+    year={1920},
+    publisher={University of Chicago Press}
+}
+
+@book{mandel_wolf,
+    title={Optical Coherence and Quantum Optics},
+    author={Mandel, Leonard and Wolf, Emil},
+    year={1995},
+    publisher={Cambridge University Press},
+    note={Detailed treatment of coherence theory and its quantum foundations}
+}
+
+@article{fresnel_arago,
+    title={Mémoire sur l'action que les rayons de lumière polarisée exercent les uns sur les autres},
+    author={Fresnel, Augustin and Arago, François},
+    journal={Annales de Chimie et de Physique},
+    volume={2},
+    pages={288--314},
+    year={1819},
+    note={Original paper describing the laws of interference of polarized light}
+}

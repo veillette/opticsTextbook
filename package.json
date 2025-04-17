@@ -29,6 +29,7 @@
   "scripts": {
     "start": "myst start",
     "export": "myst build -a",
+    "checklinks": "myst build --check-links",
     "build": "myst build --html",
     "clean": "myst clean",
     "serve": "npx serve _build/html",

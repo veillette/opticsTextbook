@@ -2,13 +2,28 @@ const sharp = require('sharp');
 const fs = require('fs').promises;
 const path = require('path');
 
-const LARGE_IMAGES = [
-    '_build/site/public/1_08_Felder_um_Dipol-6d1adc5e1ae174aed8ee0eb4e5699401.png',
-    '_build/site/public/3_04_Lego_Depth-faf200adb407f276ac98f1418bdd286a.jpg',
-    '_build/site/public/3_07_Eye_correction-3d82f8b453720957f9129dced8c221d0.png',
-    '_build/site/public/6_21_STED_Large-a72e0229b18d05c27b0a8973039ea1b0.png',
-    '_build/site/public/7_19_VCSEL_a-8b345ccc6447ca60ef39acbb9ec6991e.png'
-];
+const IMAGE_DIR = '_build/site/public';
+const MIN_SIZE_MB = 0.5; // Images larger than this size (in MB) will be optimized
+
+async function findLargeImages(directory) {
+    const files = await fs.readdir(directory);
+    const largeImages = [];
+
+    for (const file of files) {
+        const filePath = path.join(directory, file);
+        const stats = await fs.stat(filePath);
+
+        if (stats.isFile()) {
+            const ext = path.extname(file).toLowerCase();
+            // Check if it's an image file and larger than MIN_SIZE_MB
+            if (['.jpg', '.jpeg', '.png'].includes(ext) && stats.size > MIN_SIZE_MB * 1024 * 1024) {
+                largeImages.push(filePath);
+            }
+        }
+    }
+
+    return largeImages;
+}
 
 async function optimizeImage(imagePath) {
     try {
@@ -60,10 +75,17 @@ async function optimizeImage(imagePath) {
 
 async function main() {
     console.log('Starting image optimization...');
-    for (const imagePath of LARGE_IMAGES) {
-        await optimizeImage(imagePath);
+    try {
+        const largeImages = await findLargeImages(IMAGE_DIR);
+        console.log(`Found ${largeImages.length} large images to optimize.`);
+        
+        for (const imagePath of largeImages) {
+            await optimizeImage(imagePath);
+        }
+        console.log('Image optimization complete!');
+    } catch (error) {
+        console.error('Error during optimization:', error);
     }
-    console.log('Image optimization complete!');
 }
 
 main().catch(console.error); 

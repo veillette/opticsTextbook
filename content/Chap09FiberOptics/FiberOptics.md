@@ -357,7 +357,7 @@ Another fiber type is the so-called holey fiber, see {numref}`figFiberHoley_PBF`
 
 ```{figure} Images/Chapter_9/Fiber_11_Photonic-crystal-fiber-from-NRL.jpg
 :name: figFiberHoley_PBF
-SEM micrographs of US Naval Research Laboratory-produced photonic-crystal fiber. (left) The diameter of the solid core at the center of the fiber is $\sim 5\mu \text{m}$, while (right) the diameter of the holes is $4\sim \mu\text{m}$. (From [Wikimedia Commons](https://www.nrl.navy.mil/techtransfer/fs.php?fs_id=97) / CC BY-SA))
+SEM micrographs of US Naval Research Laboratory-produced photonic-crystal fiber. (left) The diameter of the solid core at the center of the fiber is $\sim 5\mu \text{m}$, while (right) the diameter of the holes is $4\sim \mu\text{m}$. (From [US Naval Research Laboratory](https://www.nrl.navy.mil/Our-Work/Areas-of-Research/Optical-Sciences/) / CC BY-SA))
 ```
 
 Related to the holey fiber, the photonic bandgap fiber also contain air holes, see {numref}`figFiberHoley_PBF`. However, in PBFs these holes are arranged in a fashion that a bandgap is created in the cladding. Such a bandgap does not allow light of certain wavelength(s) to transmit through the cladding, thus confining light of this wavelength to the core. This is fundamentally different from fibers based on changes in refractive index. Where the latter only has a cut-off wavelength above which no propagation occurs, PBFs only confine light of a narrow wavelength band with a typical width of a few tens of nanometres.

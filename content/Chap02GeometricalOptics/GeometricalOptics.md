@@ -51,9 +51,14 @@ Light distribution on a screen due to a rectangular aperture. Left: for a large 
 ```
 
 
-Geometrical optics is accurate when the sizes of the objects in the system are large compared to the wavelength. It is possible to derive geometrical optics from Maxwell's equations by formally expanding the electromagnetic field in a power series in the wavelength and retaining only the first term of this expansion <sup>[^1]</sup>. However, this derivation is not rigorous because the power series generally does not converge (it is a so-called asymptotic series).
+Geometrical optics is accurate when the sizes of the objects in the system are large compared to the wavelength. It is possible to derive geometrical optics from Maxwell's equations by formally expanding the electromagnetic field in a power series in the wavelength and retaining only the first term of this expansion{footcite}`geometrical_optics_derivation`. However, this derivation is not rigorous because the power series generally does not converge (it is a so-called asymptotic series).
 
-Although it is possible to incorporate polarization into geometrical optics <sup>[^2]</sup>, this is not standard theory and we will not consider polarization effects in this chapter.
+Although it is possible to incorporate polarization into geometrical optics{footcite}`geometrical_optics_polarization`, this is not standard theory and we will not consider polarization effects in this chapter.
+
+```{note}
+[^geometrical_optics_derivation]: See e.g. Born and Wolf, *Principles of Optics*, Chapter 3.
+[^geometrical_optics_polarization]: See e.g. Born and Wolf, *Principles of Optics*, Chapter 3.
+```
 
 ## Principle of Fermat
 
@@ -1359,9 +1364,9 @@ where NA$=\arcsin(a/s_i)$ is the numerical aperture (i.e. 0<NA<1) with $a$ the r
 
 [^2]: R.K. Luneburg, Mathematical Theory of Optics, University of California Press, Berkeley and Los Angeles, 1964
 
-[^3]: See also [https://en.wikipedia.org/wiki/Conic\_section](https://en.wikipedia.org/wiki/Conic_section)
+[^3]: For more details on conic sections and their properties in optics, see Jenkins and White, *Fundamentals of Optics*, Chapter 4.
 
-[^4]: J. Braat, P. T&ouml;r&ouml;k, *Imaging Optics*, Cambridge University Press [(2019)](https://doi.org/10.1017/9781108552264)
+[^4]: For a detailed treatment of perfect imaging by conic sections, see Born and Wolf, *Principles of Optics*, Chapter 4.
 
 
 ```{code-cell}

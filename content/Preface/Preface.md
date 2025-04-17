@@ -41,7 +41,7 @@ The book has profited from constructive criticisms of many students that have at
 
 ---
 
-This book is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>. It is part of the collection of [Interactive Open Textbooks](https://textbooks.open.tudelft.nl/textbooks/catalog/category/interactive) of [TU Delft Open](https://textbooks.open.tudelft.nl/textbooks/index).
+This book is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>. It is part of the collection of [Interactive Open Textbooks](https://textbooks.open.tudelft.nl/textbooks/catalog/category/interactive) of [TU Delft OPEN Publishing](https://books.open.tudelft.nl/).
 
 This website is a [Jupyter Book](https://jupyterbook.org/intro.html). MarkDown source files are available for download using the button on the top right.
 
@@ -52,3 +52,18 @@ Delft, 2022
 
 
 A.P.K., A.J.L.A., H.P.U., T.H.A.R.
+
+```{admonition} External sources in recommended order
+General optics and theory of optical fibers:
+1. {cite}`Pedrotti_Optics`
+2. {cite}`Hecht_Optics`
+3. {cite}`Saleh_Photonics`
+4. {cite}`Kasap_Optoelectronics`
+
+Optical fibers in practice:
+- FOA: FOA reference guide to fiber optics [https://www.thefoa.org/](https://www.thefoa.org/FOArgfo.html).
+
+(Future) applications of fiber optics:
+- [Photonics21](https://www.photonics21.org): Strategic research and innovation agenda;
+- [PhotonicsNL](https://photonicsnl.org/): Photonics roadmap $2023$.
+```

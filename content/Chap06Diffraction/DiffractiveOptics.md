@@ -1148,8 +1148,8 @@ Spot used for excitation (top left) and for depletion (top middle). Fluorescence
 
 
 ```{admonition} External sources in recommended order
-1. [Every picture is made of waves - Sixty Symbols, 3:33 to 7:15](https://www.youtube.com/watch?v=mEN7DTdHbAU): Basic explanation of Fourier transforms.
-1. [Heisenberg's Microscope - Sixty Symbols, 0:20 to 2:38](https://www.youtube.com/watch?v=dgoA_jmGIcA): Basic explanation of the uncertainty principle (though in the context of quantum physics).
+1. {cite}`SixtySymbols_Fourier` Basic explanation of Fourier transforms. Also see {ref}`sec:fourierintuition`.
+1. {cite}`SixtySymbols_Heisenberg` Basic explanation of the uncertainty principle (though in the context of quantum physics).
 1. E. Hecht, *Optics*, &sect; 7.4.4, subsection '*Fourier Analysis and Diffraction*'.
 1. J. Goodman, *Introduction to Fourier Optics*, &sect;5.2.2: Several calculations on the Fourier transforming properties of lenses.
 1. E. Hecht, *Optics*, &sect; 10.2.6, subsection '*Resolution of imaging systems*'.
@@ -1157,23 +1157,22 @@ Spot used for excitation (top left) and for depletion (top middle). Fluorescence
 
 
 
-[^1]: [Every picture is made of waves - Sixty Symbols, 3:33 to 7:15](https://www.youtube.com/watch?v=mEN7DTdHbAU): Basic explanation of Fourier transforms. Also see [](#sec:fourierintuition).
+[^1]: {cite}`SixtySymbols_Fourier` Basic explanation of Fourier transforms. Also see {ref}`sec:fourierintuition`.
 
-[^2]: For a rigorous derivation see e.g. [J. Goodman, *Introduction to Fourier Optics*](https://iate.oac.uncor.edu/&nbsp;manuel/libros/Optics/Introduction\%20to\%20Fourier\%20Optics\%202nd\%20-\%20J.\%20Goodman.pdf), &sect;3.3, &sect;3.4, &sect;3.5* - and *Lecture Notes of Advanced Photonics*, Delft University of Technology.
+[^2]: For a rigorous derivation see e.g. {cite}`Goodman_FourierOptics`, §3.3, §3.4, §3.5 - and *Lecture Notes of Advanced Photonics*, Delft University of Technology.
 
 [^3]: See the course Advanced Photonics given at TUDelft.
 
-[^4]: [Heisenberg's Microscope - Sixty Symbols, 0:20 to 2:38](https://www.youtube.com/watch?v=dgoA_jmGIcA): Basic explanation of the uncertainty principle (though in the context of quantum physics)
+[^4]: {cite}`SixtySymbols_Heisenberg` Basic explanation of the uncertainty principle (though in the context of quantum physics)
 
-[^5]: For a proof see
-A.E. Siegman, *Lasers*
+[^5]: For a proof see {cite}`Siegman_Lasers`
 
-[^6]: J.W. Goodman, [Introduction to Fourier Optics](https://iate.oac.uncor.edu/&nbsp;manuel/libros/Optics/Introduction\%20to\%20Fourier\%20Optics\%202nd\%20-\%20J.\%20Goodman.pdf), &sect;5.2.2* - Several calculations on the Fourier transforming properties of lenses.
+[^6]: {cite}`Goodman_FourierOptics`, §5.2.2 - Several calculations on the Fourier transforming properties of lenses.
 
-[^7]: Hecht &sect; 10.2.6 '*Resolution of imaging systems*'.
+[^7]: {cite}`Hecht_Optics` §10.2.6 'Resolution of imaging systems'.
 
-[^8]: J.Braat et al. Imaging Optics, Cambridge University Press, 2019
+[^8]: {cite}`Braat_ImagingOptics`
 
-[^9]: See Phys. Rev. Lett. 100, 123904, 2008
+[^9]: See {cite}`PRL_2008`
 
-[^10]: J.B. Pendry, PRL 18, 2000
+[^10]: {cite}`Pendry_PRL_2000`

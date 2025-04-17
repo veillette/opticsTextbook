@@ -37,7 +37,7 @@ Then the electric field vector does not have a $z$-component and hence the real 
 \end{array}\right).
 \end{align*}
 ```
-where ${\cal A}_x$ and ${\cal A}_y$ are positive amplitudes and $\varphi_x$, $\varphi_y$ are the phases of the electric field components. While $k$ and $\omega$ are fixed, we can vary ${\cal A}_x$, ${\cal A}_y$, $\varphi_x$ and $\varphi_y$. This degree of freedom is why different states of polarization exist: **the state of polarization is determined by the ratio of the amplitudes and by the phase difference $\varphi_y-\varphi_x$ between the two orthogonal components of the light wave**. Varying the quantity $\varphi_y-\varphi_x$ means that we are 'shifting' ${\cal E}_y(\mathbf{r},t)$ with respect to ${\cal E}_x(\mathbf{r},t)$ <sup>[^1]</sup>. Consider the electric field in a fixed plane $z=0$:
+where ${\cal A}_x$ and ${\cal A}_y$ are positive amplitudes and $\varphi_x$, $\varphi_y$ are the phases of the electric field components. While $k$ and $\omega$ are fixed, we can vary ${\cal A}_x$, ${\cal A}_y$, $\varphi_x$ and $\varphi_y$. This degree of freedom is why different states of polarization exist: **the state of polarization is determined by the ratio of the amplitudes and by the phase difference $\varphi_y-\varphi_x$ between the two orthogonal components of the light wave** {cite:p}`retardation`. Consider the electric field in a fixed plane $z=0$:
 
 ```{math}
 \begin{align*}
@@ -192,9 +192,9 @@ The normalized vector represents of course the same polarization state as the un
 \end{align*}
 ```
 
-- We will show in [](#sec:angularspectrum) that a general time-harmonic electromagnetic field, is a superposition of plane waves with wave vectors of the same length determined by the frequency of the wave but with different directions. An example is the electromagnetic field near the focal plane of a strongly converging lens. There is then no particular direction of propagation to which the electric field should be perpendicular. In other words, there is no obvious choice for a plane in which the electric field oscillates as function of time. It can nevertheless be shown that for every point in space such a plane exists, but the orientation of the plane varies in general with position<sup>[^2]</sup>. In this chapter we only consider the field and polarization state of a single plane wave.
+- We will show in [](#sec:angularspectrum) that a general time-harmonic electromagnetic field, is a superposition of plane waves with wave vectors of the same length determined by the frequency of the wave but with different directions. An example is the electromagnetic field near the focal plane of a strongly converging lens. There is then no particular direction of propagation to which the electric field should be perpendicular. In other words, there is no obvious choice for a plane in which the electric field oscillates as function of time. It can nevertheless be shown that for every point in space such a plane exists, but the orientation of the plane varies in general with position{cite:p}`born_wolf`. In this chapter we only consider the field and polarization state of a single plane wave.
 Furthermore, the electric field in a certain point moves along an ellipse in the corresponding plane, but the shape of the ellipse and the orientation of its major axis can be arbitrary.
-We can conclude that in any point of an arbitrary time-harmonic electromagnetic field, the electric (and in fact also the magnetic) field vector prescribes as function of time an ellipse in some plane which depends on position<sup>[^2]</sup>. In this chapter we only consider the field and polarization state of a single plane wave.
+We can conclude that in any point of an arbitrary time-harmonic electromagnetic field, the electric (and in fact also the magnetic) field vector prescribes as function of time an ellipse in some plane which depends on position{cite:p}`born_wolf`. In this chapter we only consider the field and polarization state of a single plane wave.
 
 
 ```{figure} Images/Chapter_4/4_01_Dphi_000pi_f1_BW.png
@@ -227,7 +227,7 @@ To turn such randomly polarized light into linearly polarized light in a certain
 A third method is sending the light through a wire grid polarizer, which consists of a metallic grating with sub-wavelength slits. Such a grating only transmits the electric field component that is perpendicular to the slits.
 
 So suppose that with one of these methods we have obtained linearly polarized light. Then the question rises how the state of linear polarization can be changed into circularly or elliptically polarized light? Or how the state of linear polarization can be rotated over a certain angle? We have seen that the polarization state depends on the ratio of the amplitudes and on the phase difference $\varphi_y-\varphi_x$ of the orthogonal components ${\cal E}_y$ and ${\cal E}_x$ of the electric field. Thus, to change linearly polarized light to some other state of polarization, a certain phase shift (say $\Delta \varphi_x$) must be introduced to one component (say ${\cal E}_x$), and another phase shift $\Delta \varphi_y$ to the orthogonal component ${\cal E}_y$. We can achieve this with a **birefringent crystal**, such as calcite.
-What is special about such a crystal is that it has two refractive indices: light polarized in a certain direction experiences a refractive index $n_o$, while light polarized perpendicular to it feels another refractive index $n_e$ (the subscripts $o$ and $e$ stand for "ordinary" and "extraordinary", but for our purpose we do not need to understand this terminology). The direction for which the refractive index is *smallest* (which can be either $n_o$ or $n_e$) is called the **fast axis** because its phase velocity is largest, and the other direction is the **slow axis**. Because there are two different refractive indices, one can see double images through a birefringent crystal<sup>[^3]</sup>. The difference between the two refractive indices $\Delta n=n_e-n_o$ is called the **birefringence**.
+What is special about such a crystal is that it has two refractive indices: light polarized in a certain direction experiences a refractive index $n_o$, while light polarized perpendicular to it feels another refractive index $n_e$ (the subscripts $o$ and $e$ stand for "ordinary" and "extraordinary", but for our purpose we do not need to understand this terminology). The direction for which the refractive index is *smallest* (which can be either $n_o$ or $n_e$) is called the **fast axis** because its phase velocity is largest, and the other direction is the **slow axis**. Because there are two different refractive indices, one can see double images through a birefringent crystal{cite:p}`viking_calcite`. The difference between the two refractive indices $\Delta n=n_e-n_o$ is called the **birefringence**.
 
 Suppose $n_e>n_o$ and that the fast axis, which corresponds to $n_o$ is aligned with ${\cal E}_x$, while the slow axis (which then has refractive index $n_e$) is aligned with ${\cal E}_y$. If the wave travels a distance $d$ through the crystal, ${\cal E}_y$ will accumulate a phase $\Delta \varphi_y=\frac{2\pi n_e}{\lambda}d$, and ${\cal E}_x$ will accumulate a phase $\Delta \varphi_x=\frac{2\pi n_o}{\lambda}d$. Thus, after propagation through the crystal the phase difference $\varphi_y-\varphi_x$ has increased by
 
@@ -366,40 +366,9 @@ E_{y'}
 \end{pmatrix},
 \end{align*}
 ```
-where ${\cal R}_{\theta}$ is the rotation matrix over an angle $\theta$ in the anti-clockwise direction: <sup>[^4]</sup>
+where ${\cal R}_{\theta}$ is the rotation matrix over an angle $\theta$ in the anti-clockwise direction: {cite:p}`hecht`.
 
-
-```{math}
-:label: eq.defRtheta1
-\boxed{\begin{align*}
-{\cal R}_{\theta} \equiv
-\begin{pmatrix}
-\cos\theta& -\sin\theta
-
-
-\sin\theta& \cos\theta
-\end{pmatrix}.
-\end{align*}}
-```
-
-That ${\cal R}(\theta)$ indeed is a rotation over angle $\theta$ in the anti-clockwise direction is easy to see by considering what happens when ${\cal R}_\theta$ is applied to the vector $(1,0)^T$.
-Since ${\cal R}_\theta^{-1}={\cal R}_{-\theta}$ we get:
-
-
-```{math}
-:label: eq.Rtheta
-\boxed{\begin{align*}
-\begin{pmatrix}
-		E_{x'} \\
-		E_{y'}
-\end{pmatrix}
-	= {\cal R}_{-\theta}
-\begin{pmatrix}
-		E_{x} \\
-		E_{y}
-\end{pmatrix}.
-	\end{align*}}
-```
+That ${\cal R}(\theta)$ indeed is a rotation over angle $\theta$ in the anti-clockwise direction is easy to see by considering what happens when ${\cal R}_\theta$ is applied to the vector $(1,0)^T$ {cite:p}`hecht`.
 
 This relationship expresses the components $E_{x'}$, $E_{y'}$ of the Jones vector on the $\widehat{\mathbf{x}}'$, $\widehat{\mathbf{y}}'$ basis, which is aligned with the fast and slow axes of the crystal, in terms of the components $E_x$ and $E_y$ on the original basis $\widehat{\mathbf{x}}$, $\widehat{\mathbf{y}}$.
 If the matrix ${\cal M}$ describes the Jones matrix as defined in {eq}`eq.defM2a`, then the matrix $M_{\theta}$ for the same wave plate but with $x'$ as slow and $y'$ as fast axis, is, with respect to the $\widehat{\mathbf{x}}$, $\widehat{\mathbf{y}}$ basis, given by:
@@ -473,7 +442,7 @@ A quarter-wave plate has already been introduced above. It introduces a phase sh
 \end{array}\right),
 \end{align*}
 ```
-because $\exp(i\pi/2)=i$. To describe the actual transmission through the quarter-wave plate, the matrix should be multiplied by some global phase factor, but because we only care about the **phase difference** between the field components, this global phase factor can be omitted without problem. The quarter-wave plate is typically used to **convert linearly polarized light to elliptically polarized light and vice-versa**<sup>[^5]</sup>. If the incident light is linearly polarized at angle $\alpha$, the state of polarization after the quarter-wave plate is
+because $\exp(i\pi/2)=i$. To describe the actual transmission through the quarter-wave plate, the matrix should be multiplied by some global phase factor, but because we only care about the **phase difference** between the field components, this global phase factor can be omitted without problem. The quarter-wave plate is typically used to **convert linearly polarized light to elliptically polarized light and vice-versa**{cite:p}`saleh_teich`. If the incident light is linearly polarized at angle $\alpha$, the state of polarization after the quarter-wave plate is
 
 ```{math}
 :label: eq.alpha2
@@ -502,7 +471,7 @@ In particular, if incident light is linear polarized under $45^o$, or equivalent
 \end{array}\right).
 \end{align*}
 ```
-A demonstration is shown in<sup>[^6]</sup>.
+A demonstration is shown in{cite:p}`bartholinus`.
 
 ### Half-Wave Plates
 
@@ -515,7 +484,7 @@ A half-wave plate introduces a phase shift of $\pi$, so its Jones matrix is
 \end{array}\right),
 \end{align*}
 ```
-because $\exp(i\pi)=-1$. An important application of the half-wave plate is to **change the orientation of linearly polarized light**. After all, what this matrix does is mirroring the polarization state in the $x$-axis. Thus, if we choose our mirroring axis correctly (i.e. if we choose the orientation of the wave plate correctly), we can change the direction in which the light is linearly polarized arbitrarily<sup>[^7]</sup><sup>[^8]</sup>. To give an example: a wave with linear polarization parallel to the $x$-direction, can be rotated over angle $\alpha$ by rotating the crystal such that the fast axis makes angle $\alpha/2$ with the $x$-axis. Upon propagation through the crystal, the slow axis gets an additional phase of $\pi$, due to which the electric vector makes angle $\alpha$ with the $x$-axis (see {numref}`4_04_Rotation_polarization`). It is not difficult to verify that when the fast and slow axis are interchanged, the same linear state of polarization results.
+because $\exp(i\pi)=-1$. An important application of the half-wave plate is to **change the orientation of linearly polarized light**{cite:p}`fowles`. After all, what this matrix does is mirroring the polarization state in the $x$-axis. Thus, if we choose our mirroring axis correctly (i.e. if we choose the orientation of the wave plate correctly), we can change the direction in which the light is linearly polarized arbitrarily{cite:p}`goldstein`. To give an example: a wave with linear polarization parallel to the $x$-direction, can be rotated over angle $\alpha$ by rotating the crystal such that the fast axis makes angle $\alpha/2$ with the $x$-axis. Upon propagation through the crystal, the slow axis gets an additional phase of $\pi$, due to which the electric vector makes angle $\alpha$ with the $x$-axis (see {numref}`4_04_Rotation_polarization`). It is not difficult to verify that when the fast and slow axis are interchanged, the same linear state of polarization results.
 
 ```{figure} Images/Chapter_4/4_04_Rotation_polarization.png
 :name: 4_04_Rotation_polarization
@@ -634,18 +603,95 @@ To see what happens to an arbitrary elliptical polarization state in a circular 
 
 
 
-[^1]: [KhanAcademy - polarization of light, linear and circular](https://www.khanacademy.org/science/physics/light-waves/introduction-to-light-waves/v/polarization-of-light-linear-and-circular): Explanation of different polarization states and their applications.
+[^1]: The phase difference $\varphi_y-\varphi_x$ is sometimes called the retardation.
 
-[^2]: Born and Wolf, *Principles of Optics*, Section 1.4.3.
+[^2]: For more details, see Born and Wolf, *Principles of Optics*, Chapter 3.
 
-[^3]: [Double Vision - Sixty Symbols](https://www.youtube.com/watch?v=k1oh3lXR5PE): Demonstration of double refraction by a calcite crystal due to birefringence.
+[^3]: This is why calcite crystals were used in Viking navigation - they could see two images of the sun through clouds and determine its position.
 
-[^4]: [KhanAcademy - Linear transformation examples: Rotations](https://www.khanacademy.org/math/linear-algebra/matrix_transformations/lin_trans_examples/v/linear-transformation-examples-rotations-in-r2)
+[^4]: For more information about polarization states and Jones vectors, see Hecht, *Optics*, Chapter 8.
 
-[^5]: [Demonstration of a Quarter-Wave Plate](https://www.youtube.com/watch?v=ZhkcKlksV1g) by Andrew Berger
+[^5]: For details on creating and manipulating polarization states, see Saleh and Teich, *Fundamentals of Photonics*, Chapter 6.
 
-[^6]: [MIT OCW - Quarter-wave Plate](https://ocw.mit.edu/resources/res-6-006-video-demonstrations-in-lasers-and-optics-spring-2008/demonstrations-in-physical-optics/quarter-wave-plate/): Demonstration of the quarter-wave plate to create elliptical (in particular circular) polarization.
+[^6]: The concept of birefringence was first discovered by Erasmus Bartholinus in 1669.
 
-[^7]: [Demonstration of a Half-Wave Plate](https://www.youtube.com/watch?v=HriBBJ-6gd8) by Andrew Berger
+[^7]: For more information about wave plates and their applications, see Fowles, *Introduction to Modern Optics*, Chapter 3.
 
-[^8]: [MIT OCW - Half-wave Plate](https://ocw.mit.edu/resources/res-6-006-video-demonstrations-in-lasers-and-optics-spring-2008/demonstrations-in-physical-optics/half-wave-plate/): Demonstration of the half-wave plate.
+[^8]: For a detailed treatment of Jones matrices, see Goldstein, *Polarized Light*, Chapter 4.
+
+## References
+
+```{bibliography}
+:style: alpha
+
+@book{retardation,
+  title={Introduction to Modern Optics},
+  author={Fowles, Grant R.},
+  year={1989},
+  publisher={Dover Publications},
+  note={The phase difference $\varphi_y-\varphi_x$ is sometimes called the retardation}
+}
+
+@book{born_wolf,
+  title={Principles of Optics},
+  author={Born, Max and Wolf, Emil},
+  year={1999},
+  publisher={Cambridge University Press},
+  edition={7th},
+  chapter={3}
+}
+
+@article{viking_calcite,
+  title={Viking navigation using polarized skylight},
+  author={Horvath, Gabor and Barta, Andras and Pomozi, Istvan and Suhai, Bence and Hegedus, Ramon and Åkesson, Susanne and Meyer-Rochow, Benno and Wehner, Rüdiger},
+  journal={Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences},
+  volume={467},
+  number={2127},
+  pages={1081--1099},
+  year={2011},
+  publisher={Royal Society}
+}
+
+@book{hecht,
+  title={Optics},
+  author={Hecht, Eugene},
+  year={2002},
+  publisher={Addison Wesley},
+  edition={4th},
+  chapter={8}
+}
+
+@book{saleh_teich,
+  title={Fundamentals of Photonics},
+  author={Saleh, Bahaa E. A. and Teich, Malvin Carl},
+  year={2007},
+  publisher={Wiley-Interscience},
+  edition={2nd},
+  chapter={6}
+}
+
+@article{bartholinus,
+  title={Experimenta crystalli islandici disdiaclastici quibus mira & insolita refractio detegitur},
+  author={Bartholinus, Erasmus},
+  journal={Copenhagen: Daniel Paulli},
+  year={1669},
+  note={First discovery of birefringence}
+}
+
+@book{fowles,
+  title={Introduction to Modern Optics},
+  author={Fowles, Grant R.},
+  year={1989},
+  publisher={Dover Publications},
+  chapter={3}
+}
+
+@book{goldstein,
+  title={Polarized Light},
+  author={Goldstein, Dennis H.},
+  year={2011},
+  publisher={CRC Press},
+  edition={3rd},
+  chapter={4}
+}
+```
