@@ -27,6 +27,7 @@
     "sharp": "^0.33.2"
   },
   "scripts": {
+    "start": "myst start",
     "export": "myst build -a",
     "build": "myst build --html",
     "clean": "myst clean",
