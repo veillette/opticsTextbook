@@ -17,11 +17,11 @@
     "url": "https://github.com/veillette/opticsTextbook/issues"
   },
   "homepage": "https://veillette.github.io/opticsTextbook",
-  "author": {
-    "name": "Martin Veillette",
-    "url": "https://github.com/veillette"
-  },
   "license": "CC-BY-SA-4.0",
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0"
+  },
   "dependencies": {
     "mystmd": "^1.3.25",
     "sharp": "^0.33.2"
