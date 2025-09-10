@@ -50,20 +50,4 @@ This website is a [Jupyter Book](https://jupyterbook.org/intro.html). MarkDown s
 
 Delft, 2022 
 
-
 A.P.K., A.J.L.A., H.P.U., T.H.A.R.
-
-```{admonition} External sources in recommended order
-General optics and theory of optical fibers:
-1. {cite}`Pedrotti_Optics`
-2. {cite}`Hecht_Optics`
-3. {cite}`Saleh_Photonics`
-4. {cite}`Kasap_Optoelectronics`
-
-Optical fibers in practice:
-- FOA: FOA reference guide to fiber optics [https://www.thefoa.org/](https://www.thefoa.org/FOArgfo.html).
-
-(Future) applications of fiber optics:
-- [Photonics21](https://www.photonics21.org): Strategic research and innovation agenda;
-- [PhotonicsNL](https://photonicsnl.org/): Photonics roadmap $2023$.
-```
