@@ -12,2033 +12,355 @@ kernelspec:
 ---
 
 (chapter.basics)=
-# Basic Electromagnetic and Wave Optics
-
-```{admonition} What you should know and be able to after studying this chapter
-This chapter is about Maxwell's equations and is a prerequisite for the rest of the book. It is assumed that the reader is already familiar with electromagnetism at the bachelor level. Therefore the treatments of Maxwell's equations in matter, boundary conditions at interfaces, electromagnetic energy, the field of an electric dipole and the reflection and transmission at an interface are rather concise.
-
-After studying this chapter you should know and be able to
-- Derive the scalar wave equation for the electromagnetic field components from Maxwell's equations.
-- Work with the complex notation of time harmonic fields.
-- Understand time harmonic plane waves, spherical waves and the concept of wave fronts.
-- Know the main properties of the field radiated by a time-harmonic electric dipole and understand that it is the fundamental solution of Maxwell's equations from which the radiation of any time-harmonic source can be derived.
-- Qualitatively understand the far field radiation pattern of a time-harmonic electric dipole (you do not need to know the formulas).
-- Derive long-time averages of products of time-harmonic functions.
-- Compute the rate of energy flow using the Poynting vector and its long-time average.
-- Understand the method of deriving the reflection and transmission of an incident plane wave at an interface by separating in s- and p-polarized states.
-The formulas for the Fresnel coefficients do not have to be known by heart.
-- Understand the Brewster angle, total internal reflection and evanescent waves.
-- Understand the principle of the guiding of electromagnetic waves.
-```
-
-
-Maxwell's equations provide a very complete description of light which includes diffraction, interference and polarization. Yet it is strictly speaking not fully accurate, because it allows monochromatic electromagnetic waves to carry any amount of energy, whereas according to quantum optics the energy is quantized. According to quantum optics, light is a flow of massless particles, the photons, which each carry an extremely small quantum of energy: $ h f$, where $h = 6.63 \times 10^{-34}$ Js and $f$ is the frequency, which for visible light is of the order $5 \times 10^{14}$ Hz. Hence for visible light $h f \approx 3.3\times {10^{-19}}$ J.
-
-Quantum optics is only important in experiments involving a small number of photons, i.e. at very low light intensities and for specially prepared photons states (e.g. entangled states) for which there is no classical description. In almost all applications of optics the light sources emit so many photons that quantum effects are irrelevant see {numref}`table:3_1Hecht`.
-
-```{table} The mean photon flux density for some common sources
-:name: table:3_1Hecht
-| Light Source | Number of photons/s.m$^2$|
-| ---- | :--: |
-| Laserbeam (10m W, He-Ne, focused to 20 $\mu$m) | $10^{26}$|
-| Laserbeam (1 mW, He-Ne) | $10^{21}$|
-| Bright sunlight on earth | $10^{18}$|
-| Indoor light level | $10^{16}$|
-| Twilight | $10^{14}$|
-| Moonlight on earth| $10^{12}$|
-| Starlight on earth | $10^{10}$|
-```
-
-The visible part is only a small part of the overall electromagnetic spectrum (see {numref}`Fig_1_01_Electromagnetic_Spectrum`). The results we will derive are however generally valid for electromagnetic waves of any frequency.
-
-
-```{figure} Images/Chapter_1/1_01_Electromagnetic_Spectrum_f1.png
-:name: Fig_1_01_Electromagnetic_Spectrum
-The electromagnetic spectrum. (from [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:EM_Spectrum_Properties_edit.svg) by NASA/ CC BY-SA ).
-```
-
-
-## The Maxwell Equations in Vacuum
-
-In a vacuum, light is described by vector fields $\mathbf{\mathcal{E}}(\mathbf{r},t)$ [Volt/m]{footcite}`units` and $\mathbf{\mathcal{B}}(\mathbf{r},t)$ [Tesla=Weber/$\text{m}^2$=g/(C.s)], which vary extremely rapidly with the position vector $\mathbf{r}$ and time $t$.
-
-(footnote-maxwell)=
-At every point in space and at every time, the field vectors satisfy the Maxwell equations{footcite}`maxwell_history,maxwell_units`:
-
-```{note}
-[^units]: The units are given in square brackets.
-[^maxwell_history]: The Maxwell equations are named after James Clerk Maxwell (1831-1879) who unified electricity and magnetism.
-[^maxwell_units]: The equations are written in SI units.
-```
-
-These vector fields are traditionally called the electric field strength and the magnetic induction, respectively, and together they are referred to as "the electromagnetic field". This terminology is explained by the fact that, because in optics these fields vary with time, the electric and magnetic fields always occur together, i.e. one does not exist without the other. Only when the fields are independent of time, there can be an electric field without a magnetic field and conversely. The first case is called electrostatics, the second magnetostatics.
-Time-dependent electromagnetic fields are generated by moving electric charges, the so-called sources. Let the source have charge density $\rho(\mathbf{r},t)$ [C/$\text{m}^3$] and current density $\mathbf{\mathcal{J}}(\mathbf{r},t)$ [C/(s.$\text{m}^2$]. Since charge can not be created nor destroyed,
-the rate of increase of charge inside a volume $V$ must be equal to the flux of charges passing through its surface $S$ from the outside to the inside of $V$, i.e.:
-
-```{math}
-:label: eq.maxum1
-\begin{align*}
-\frac{d}{d t} \int_V \varrho\, \mathrm{d}V= -\int_S \mathbf{\mathcal{J}} \cdot \hat{\mathbf{n}} \, \mathrm{d}S,
-\end{align*}
-```
-where $\hat{\mathbf{n}}$ is the outward-pointing unit normal on $S$. Using the Gauss divergence {eq}`eq.VR14`, the left-hand side of {eq}`eq.maxum1` can be converted to a volume integral from which follows the differential form of the law of conservation of charge:
-
-```{math}
-:label: eq.maxum2
-\begin{align*}
--\mathbf{\nabla} \cdot \mathbf{\mathcal{J}} = \frac{\partial \rho}{\partial t}.
-\end{align*}
-```
-At every point in space and at every time, the field vectors satisfy the Maxwell equations[^2][^3]:
-
-[^2]: The Maxwell equations are named after James Clerk Maxwell (1831-1879) who unified electricity and magnetism.
-[^3]: The equations are written in SI units.
-
-
-```{math}
-:label: eq.faraday0
-\begin{align*}
-\mathbf{\nabla} \times \mathbf{\mathcal{E}} & = -\frac{\partial \mathbf{\mathcal{B}}}{\partial t}, & \text{Faraday's Law},
-\end{align*}
-```
-```{math}
-:label: eq.maxwell0
-\begin{align*}
-\\
-\mathbf{\nabla} \times \frac{\mathbf{\mathcal{B}}}{\mu_0} & = \epsilon_0 \frac{\partial \mathbf{\mathcal{E}}}{\partial t}+ \mathbf{\mathcal{J}}, & \text{Maxwell's Law}, \end{align*}
-```
-```{math}
-:label: eq.gauss0
-\begin{align*}
-\\
-\mathbf{\nabla} \cdot \epsilon_0 \mathbf{\mathcal{E}} & = \varrho, & \text{Gauss's Law},\end{align*}
-```
-```{math}
-:label: eq.divH0
-\begin{align*}
-\mathbf{\nabla} \cdot \mathbf{\mathcal{B}} & = 0, & \text{no magnetic charge}.\end{align*}
-```
-where  $\epsilon_0= 8.8544 \times 10^{-12}$ C $^2$N$^{-1}$m$^{-2}$ is the dielectric permittivity and $\mu_0 = 1.2566 \times 10^{-6} \text{m kg C}^{-2}$ is the magnetic permeability of vacuum. The quantity $c=(1/\epsilon_0\mu_0)^{1/2}=2.997924562 \times 10^{8} \pm 1.1$ m/s is the speed of light in vacuum and $Z=\sqrt{\mu_0/\epsilon_0}=377\Omega =377$ Vs/C is the impedance of vacuum.
-
-%sources on which they act), they have important aspects of their own.
-
-```{index} Maxwell Equations
-:name: section.maxmat
-```
-
-Atoms are neutral and consist of a positively charged kernel surrounded by a negatively charged electron cloud. In an electric field, the centers of charge of the positive and negative charges get displaced with respect to each other. Therefore, an atom in an electric field behaves like an electric dipole. In polar molecules, the centers of charge of the positive and negative charges are permanently separated, even without an electric field. But without an electric field, they are randomly orientated and therefore have no net effect, while in the presence of an electric field they line up parallel to the field.
-Whatever the precise mechanism, an electric field induces a certain net dipole moment density per unit volume $\mathbf{\mathcal{P}}(\mathbf{r})$ [C/$\text{m}^2$] in matter which is proportional to the *local* electric field $\mathbf{\mathcal{E}}(\mathbf{r})$:
-
-```{math}
-:label: eq.defP0
-\begin{align*}
-\mathbf{\mathcal{P}}(\mathbf{r},t)= \epsilon_0 \chi_e \mathbf{\mathcal{E}}(\mathbf{r},t),
-\end{align*}
-```
-where $\chi_e$ is a dimensionless quantity, the electric susceptibility of the material. A dipole moment which varies with time radiates an electromagnetic field. It is important to realize that in {eq}`eq.defP0` $\mathbf{\mathcal{E}}$ is the total local electric field at the position of the dipole, i.e. it contains the contribution of all other dipoles, which are also excited and radiate an electromagnetic field themselves.
-Only in the case of diluted gasses, the influence of the other dipoles in matter can be neglected and the local electric field is simply given by the field emitted by a source external to the matter under consideration.
-
-A dipole moment density that changes with time corresponds to a current density $\mathbf{\mathcal{J}}_p$ [Ampere/$\text{m}^2$=C/($\text{m}^2$ s)] and a charge density $\varrho_p$ [C/$\text{m}^3$] given by
-
-```{math}
-:label: eq.defJ
-\begin{align*}
-\mathbf{\mathcal{J}}_p(\mathbf{r},t)&= \frac{\partial \mathbf{\mathcal{P}}(\mathbf{r},t)}{\partial t} = \epsilon_0 \chi_e
-\frac{\partial \mathbf{\mathcal{E}}(\mathbf{r},t)}{\partial t}, \end{align*}
-```
-```{math}
-:label: eq.defrho
-\begin{align*}
-\\
-\varrho_p(\mathbf{r},t) &= -\mathbf{\nabla} \cdot \mathbf{\mathcal{P}}(\mathbf{r},t) =- \mathbf{\nabla} \cdot (\epsilon_0\chi_e \mathbf{\mathcal{E}}),\end{align*}
-```
-All materials conduct electrons to a certain extent, although the conductivity $\sigma$ [Ampere/(Volt m)=C/(Volt s] differs greatly between dielectrics, semi-conductors and metals (the conductivity of copper is $10^7$ times that of a good conductor such as sea water and $10^{19}$ times that of glass). The current density $\mathbf{\mathcal{J}}_c$ and the charge density corresponding to the conduction electrons satisfy:
-
-```{math}
-:label: eq.ohmslaw
-\begin{align*}
-\mathbf{\mathcal{J}}_c &= \sigma \mathbf{\mathcal{E}}, \end{align*}
-```
-```{math}
-:label: eq.chargec
-\begin{align*}
-\\
-\frac{\partial \varrho_c}{\partial t} &= -\mathbf{\nabla} \cdot \mathbf{\mathcal{J}}_c =- \mathbf{\nabla} \cdot(\sigma \mathbf{\mathcal{E}}),\end{align*}
-```
-where {eq}`eq.ohmslaw` is Ohm's Law.
-The total current density on the right-hand side of Maxwell's Law {eq}`eq.maxwell0` is the sum of $\mathbf{\mathcal{J}}_p$, $\mathbf{\mathcal{J}}_c$ and an external current density $\mathbf{\mathcal{J}}_{ext}$, which we assume to be known.
-Similarly, the total charge density at the right of {eq}`eq.gauss0` is the sum of $\varrho_p$, $\varrho_c$ and a given external charge density $\varrho_{ext}$. The latter is linked to the external current density by the law of conservation of charge {eq}`eq.maxum2`. Hence, {eq}`eq.maxwell0` and {eq}`eq.gauss0` become
-
-```{math}
-:label: eq.maxwell1
-\begin{align*}
-\mathbf{\nabla} \times \frac{\mathbf{\mathcal{B}}}{\mu_0} &= \epsilon_0 \frac{\partial \mathbf{\mathcal{E}}}{\partial t} + \mathbf{\mathcal{J}}_p + \mathbf{\mathcal{J}}_c + \mathbf{\mathcal{J}}_{ext} \nonumber \\
-&= \epsilon_0(1+\chi_e) \frac{\partial \mathbf{\mathcal{E}}}{\partial t} + \sigma \mathbf{\mathcal{E}} + \mathbf{\mathcal{J}}_{ext}
-\end{align*}
-```
-```{math}
-:label: eq.gauss1
-\begin{align*}
-\\
-\mathbf{\nabla} \cdot \epsilon_0 \mathbf{\mathcal{E}} &= \varrho_p+\varrho_c + \varrho_{ext} \nonumber \\
-&= - \mathbf{\nabla} \cdot (\epsilon_0 \chi_e \mathbf{\mathcal{E}}) +\varrho_c + \varrho_{ext}.\end{align*}
-```
-We define the permittivity $\epsilon$ in matter by
-
-```{math}
-:label: eq.defeps
-\begin{align*}
-\epsilon= \epsilon_0(1 +\chi_e).
-\end{align*}
-```
-Then {eq}`eq.maxwell1` and {eq}`eq.gauss1` can be written as
-
-```{math}
-:label: eq.maxwell2
-\begin{align*}
-\mathbf{\nabla} \times \frac{\mathbf{\mathcal{B}}}{\mu_0} &= \epsilon \frac{\partial \mathbf{\mathcal{E}}}{\partial t} + \sigma \mathbf{\mathcal{E}} + \mathbf{\mathcal{J}}_{ext}
-\end{align*}
-```
-```{math}
-:label: eq.gauss2
-\begin{align*}
-\\
-\mathbf{\nabla}\cdot (\epsilon \mathbf{\mathcal{E}}) &= \varrho_c + \varrho_{ext}.\end{align*}
-```
-It is verified in Problem 1 that in a conductor any accumulation of charge is extremely quickly reduced to zero. Therefore we may assume that
-
-```{math}
-:label: eq.rhoc0
-\begin{align*}
-\varrho_c=0.
-\end{align*}
-```
-
-If the material is magnetic, the magnetic permeability is different from vacuum and is written as $\mu=\mu_0(1+\chi_m)$, where $\chi_m$ is the magnetic susceptibility. In the Maxwell equations, one should then replace $\mu_0$ by $\mu$. However, at optical frequencies magnetic effects are negligible (except in ferromagnetic materials, which are rare). **We will therefore always assume that the magnetic permeability is that of vacuum: $\mu=\mu_0$**.
-
-It is customary to define the magnetic field by $\mathbf{\mathcal{H}}=\mathbf{\mathcal{B}}/\mu_0$ [Ampere/m=C/(ms)].
-By using the magnetic field $\mathbf{\mathcal{H}}$ instead of the magnetic induction $\mathbf{\mathcal{B}}$, Maxwell's equations become more symmetric:
-
-
-```{math}
-:label: eq.faraday4
-\begin{align*}
-\mathbf{\nabla} \times \mathbf{\mathcal{E}} & = -\mu_0 \frac{\partial \mathbf{\mathcal{H}}}{\partial t }, & \text{Faraday's Law} \end{align*}
-```
-```{math}
-:label: eq.maxwell4
-\begin{align*}
-, \\
-\mathbf{\nabla} \times \mathbf{\mathcal{H}} & = \epsilon \frac{\partial \mathbf{\mathcal{E}}}{\partial t} + \sigma \mathbf{\mathcal{E}}+ \mathbf{\mathcal{J}}_{ext}, & \text{Maxwell's Law}, \end{align*}
-```
-```{math}
-:label: eq.gauss4
-\begin{align*}
-\\
-\mathbf{\nabla} \cdot \epsilon \mathbf{\mathcal{E}} & = \varrho_{ext}, & \text{Gauss's Law}, \end{align*}
-```
-```{math}
-:label: eq.divH4
-\begin{align*}
-\\
-\mathbf{\nabla} \cdot \mathbf{\mathcal{H}} & = 0. & \text{no magnetic charge}.\end{align*}
-```
-
-This is the form in which we will be using the Maxwell equations in matter in this book.
-It is seen that the Maxwell equations in matter are identical to those in vacuum, with $\epsilon$ substituted for $\epsilon_0$.
-
-We end this section with remarking that our derivations are valid for non-magnetic materials which are electrically isotropic. This means that the magnetic permeability is that of vacuum and that the permittivity $\epsilon$ is a scalar. In an anisotropic dielectric the induced dipole vectors are in general not parallel to the local electric field. Then $\chi_e$ and therefore also $\epsilon$ become matrices. Throughout this book all matter is assumed to be non-magnetic and electrically isotropic.
-
-(section.scalvecwave)=
-## Scalar Wave Equation
-
-We consider a homogeneous insulator (i.e. $\epsilon$ is independent of position and $\sigma$=0) in which there are no external sources:
-
-```{math}
-:label: eq.source0
-\begin{align*}
-\mathbf{\mathcal{J}}_{ext}=0, \;\; \varrho_{ext}=0.
-\end{align*}
-```
-In optics the external source, e.g. a laser, is normally spatially separated from the objects of interest with which the light interacts. Therefore the assumption that the external source vanishes in the region of interest is often justified.
-Take the curl of {eq}`eq.faraday4` and the time derivative of {eq}`eq.maxwell4` and add the equations obtained. This gives
-
-```{math}
-:label: eq.vechelm
-\begin{align*}
-\mathbf{\nabla} \times \mathbf{\nabla} \times \mathbf{\mathcal{E}} + \epsilon \mu_0 \frac{\partial^2 \mathbf{\mathcal{E}}}{\partial t^2}=\mathbf{0}.
-\end{align*}
-```
-Now for any vector field $\mathbf{\mathcal{A}}$ there holds:
-
-```{math}
-:label: eq.vectorA
-\begin{align*}
-\mathbf{\nabla} \times \mathbf{\nabla} \times \mathbf{\mathcal{A}} = - \mathbf{\nabla}^2 \mathbf{\mathcal{A}} + \mathbf{\nabla} \mathbf{\nabla} \cdot \mathbf{\mathcal{A}}.
-\end{align*}
-```
-where $\mathbf{\nabla}^2 \mathbf{\mathcal{A}}$ is the vector:
-
-```{math}
-:label: eq.deflapl
-\begin{align*}
-\mathbf{\nabla}^2 \mathbf{\mathcal{A}} = \mathbf{\nabla}^2 {\cal A}_x \, \hat{\mathbf{x}} +
-\mathbf{\nabla}^2 {\cal A}_y \, \hat{\mathbf{y}} +
-\mathbf{\nabla}^2 {\cal A}_z \, \hat{\mathbf{z}},
-\end{align*}
-```
-with
-
-```{math}
-:label: eq.bnabla2
-\begin{align*}
-\mathbf{\nabla}^2 = \frac{\partial^2}{\partial x^2} + \frac{\partial^2}{\partial y^2} + \frac{\partial^2}{\partial z^2}.
-\end{align*}
-```
-Because Gauss's law {eq}`eq.gauss4` with $\varrho_{ext}=0$ and $\epsilon$ constant implies that $\mathbf{\nabla}\cdot \mathbf{\mathcal{E}}=0$, {eq}`eq.vectorA` applied to $\mathbf{\mathcal{E}}$
-yields 
-
-```{math}
-:label: eq.vecvecE
-\begin{align*}
-\mathbf{\nabla} \times \mathbf{\nabla} \times \mathbf{\mathcal{E}} = - \mathbf{\nabla}^2 \mathbf{\mathcal{E}}.
-\end{align*}
-```
-Hence, {eq}`eq.vechelm` becomes
-
-```{math}
-:label: eq.scalhelm
-\begin{align*}
-\mathbf{\nabla}^2 \mathbf{\mathcal{E}} - \epsilon \mu_0 \frac{\partial^2 \mathbf{\mathcal{E}}}{\partial t^2}=\mathbf{0}.
-\end{align*}
-```
-By a similar derivation it is found that also $\mathbf{\mathcal{H}}$ satisfies {eq}`eq.scalhelm`.
-Hence in a homogeneous dielectric without external sources, every component of the electromagnetic field satisfies the scalar wave equation:
-
-```{math}
-:label: eq.scalhelm2
-\begin{align*}
-\mathbf{\nabla}^2 {\cal U} - \epsilon \mu_0 \frac{\partial^2 {\cal U}}{\partial t^2}=0.
-\end{align*}
-```
-The **refractive index** is the dimensionless quantity defined by
-
-```{math}
-:label: eq.defn
-\begin{align*}
-n = \sqrt{\frac{\epsilon}{\epsilon_0}}.
-\end{align*}
-```
-The scalar wave equation can then be written as
-
-```{math}
-:label: eq.scalhelm3
-\begin{align*}
-\mathbf{\nabla}^2 {\cal U} - n^2 \epsilon_0 \mu_0 \frac{\partial^2 {\cal U}}{\partial t^2}=0.
-\end{align*}
-```
-The speed of light in matter is
-
-```{math}
-:label: eq.lightsped
-\begin{align*}
-\frac{c}{n}=\frac{1}{\sqrt{\epsilon \mu_0}}.
-\end{align*}
-```
-
-## Time-Harmonic Solutions of the Wave Equation
-The fact that, in the frequently occurring circumstance in which light interacts with a homogeneous dielectric, all components of the electromagnetic field satisfy the scalar wave equation, justifies the study of solutions of this equation. Since in most cases in optics monochromatic fields are considered, we will focus our attention on time-harmonic solutions of the wave equation.
-(subsec.plwav)=
-### Time-Harmonic Plane Waves
-
-Time-harmonic solutions depend on time by a cosine or a sine function. One can easily verify by substitution that
-
-```{math}
-:label: eq.psi1
-\begin{align*}
-{\cal U}(\mathbf{r},t) ={\cal A} \cos(kx - \omega t + \varphi),
-\end{align*}
-```
-where ${\cal A}>0$ and $\varphi$ are constants,
-is a solution of {eq}`eq.scalhelm3`, provided that
-
-```{math}
-:label: eq.psi2
-\begin{align*}
-k = \omega (\epsilon \mu_0)^{1/2} = \omega n \sqrt{\epsilon_0 \mu_0}= n k_0,
-\end{align*}
-```
-where $k_0=\omega \sqrt{\epsilon_0 \mu_0}$ is the wave number in vacuum.
-The frequency $\omega>0$ can be chosen arbitrarily. The wave number $k$ in the material is then determined by {eq}`eq.psi2`. We define $T=2\pi/\omega$ and $\lambda=2\pi/k$ as the period and the *wavelength in the material*, respectively. Furthermore, $\lambda_0=2\pi/k_0$ is the wavelength in vacuum.
-
-
-
-
-**Remark**. With "the wavelength", we always mean the wavelength in vacuum.
-
-
-We can write {eq}`eq.psi1` in the form
-
-```{math}
-:label: eq.psi3
-\begin{align*}
-{\cal U}(x,t)={\cal A}\cos\left[k\left(x-\frac{c}{n} t\right)+\varphi\right],
-\end{align*}
-```
-where $c/n=1/\sqrt{\epsilon\mu_0}$ is the speed of light in the material.
-${\cal A}$ is the amplitude and the argument under the cosine: $k\left(x-\frac{c}{n} t\right)+\varphi$ is called the phase at position $x$ and at time $t$.
-A wave front is a set of space-time points where the phase is constant:
-
-```{math}
-\begin{align*}
-x - \frac{c}{n} t =\text{constant}.
-\end{align*}
-```
-At any fixed time $t$ the wave fronts are planes (in this case perpendicular to the $x$-axis), and therefore the wave is called a plane wave.
-As time proceeds, the wave fronts move with velocity $c/n$ in the positive $x$-direction.
-
-A time-harmonic plane wave propagating in an arbitrary direction is given by
-
-```{math}
-:label: eq.psi5
-\begin{align*}
-{\cal U}(\mathbf{r},t) ={\cal A} \cos( \mathbf{k}\cdot \mathbf{r} -\omega t + \varphi),
-\end{align*}
-```
-where ${\cal A}$ and $\varphi$ are again constants and
-$\mathbf{k}=k_x\hat{\mathbf{x}}+k_y \hat{\mathbf{y}}+k_z \hat{\mathbf{z}}$ is the wave vector.
-The wave fronts are given by the set of all space-time points $(\mathbf{r}, t)$ for which the phase $\mathbf{k}\cdot \mathbf{r} -\omega t + \varphi$ is constant, i.e. for which
-
-```{math}
-:label: eq.psi5b
-\begin{align*}
-\mathbf{k}\cdot \mathbf{r} -\omega t =\text{constant}.
-\end{align*}
-```
-At fixed times the wave fronts are planes perpendicular to the direction of $\mathbf{k}$ as shown in {numref}`Fig_2_1_Constant_phase`. Eq. {eq}`eq.psi5` is a solution of {eq}`eq.scalhelm3` provided that
-
-```{math}
-:label: eq.psi6
-\begin{align*}
-k_x^2 + k_y^2 + k_z^2 = \omega^2 \epsilon \mu_0 = \omega^2 n^2 \epsilon_0 \mu_0=k_0^2n^2.
-\end{align*}
-```
-The direction of the wave vector can be chosen arbitrarily, but its length is determined by the frequency $\omega$.
-
-
-```{figure} Images/Chapter_1/1_02_Constant_phase_f1.png
-:name: Fig_2_1_Constant_phase
-Planes of constant phase.
-```
-
-
-We consider a general time-harmonic solution of the wave equation {eq}`eq.scalhelm2`:
-
-```{math}
-:label: eq.thc1
-\begin{align*}
-{\cal U}(\mathbf{r},t) = {\cal A}(\mathbf{r}) \cos(\varphi(\mathbf{r})- \omega t),
-\end{align*}
-```
-where the amplitude ${\cal A}(\mathbf{r})>0$ and the phase $\varphi(\mathbf{r})$ are functions of position $\mathbf{r}$. The wave fronts consist of sets of space-time points $(\mathbf{r},t)$ where the phase is equal to some constant:
-
-```{math}
-:label: eq.thc1b
-\begin{align*}
-\varphi(\mathbf{r})- \omega t=\text{constant}.
-\end{align*}
-```
-At fixed time $t$, the sets of constant phase: $\varphi(\mathbf{r})=\omega t + \text{constant}$ are surfaces which in general are not planes, hence the solution in general is not a plane wave. Eq. {eq}`eq.thc1` could for example be a wave with spherical wave fronts, as discussed below.
-
-
-
-
-**Remark**.
-A plane wave is infinitely extended and transports an infinite amount of electromagnetic energy. A plane wave can therefore not exist in reality, but it is nevertheless a usual idealization. As will be demonstrated in Section 7.1, *every time-harmonic solution of the wave equation* can always be expanded in terms of plane waves of the form {eq}`eq.psi5`. 
-
-
-
-For time-harmonic solutions it is often convenient to use **complex notation**. Define the **complex amplitude** by:
-
-```{math}
-:label: eq.defA
-\begin{align*}
-U(\mathbf{r}) = {\cal A}(\mathbf{r}) e^{i\varphi(\mathbf{r})},
-\end{align*}
-```
-i.e. the modulus of the complex number $U(\mathbf{r})$ is the amplitude ${\cal A}(\mathbf{r})$ and the argument of $U(\mathbf{r})$ is the phase $\varphi(\mathbf{r})$ at $t=0$. The time-dependent part of the phase: $-\omega t$ is thus separated from the space-dependent part of the phase.
-Then {eq}`eq.thc1` can be written as
-
-```{math}
-:label: eq.thc2
-\begin{align*}
-{\cal U}(\mathbf{r},t) = \text{Re}\left[ U(\mathbf{r}) e^{-i\omega t} \right].
-\end{align*}
-```
-Hence
-${\cal U}(\mathbf{r},t)$ is the real part of the complex time-harmonic function
-
-```{math}
-:label: eq.thc4
-\begin{align*}
-U(\mathbf{r}) e^{-i\omega t}.
-\end{align*}
-```
-
-
-**Remark**.
-The complex amplitude $U(\mathbf{r})$ is also called the complex field. In the case of vector fields such as $\mathbf{E}$ and $\mathbf{H}$ we speak of complex vector fields, or simply complex fields. Complex amplitudes and complex (vector) fields are only functions of position $\mathbf{r}$; the time dependent factor $\exp(-i\omega t)$ is omitted. To get the physical meaningful real quantity, the complex amplitude or complex field first has to be multiplied by $\exp(-i\omega t)$ and then the real part must be taken.
-
-
-
-
-The following convention is used throughout this book:
-
-
-
-
-**Real-valued physical quantities (whether they are time-harmonic or have more general time dependence) are denoted by a calligraphic letter, e.g. $\mathcal{U}$, $\mathcal{E}_x$, or $\mathcal{H}_x$. The symbols are bold when we are dealing with a vector, e.g. $\mathbf{\mathcal{E}}$ or $\mathbf{\mathcal{H}}$.
-The complex amplitude of a time-harmonic function is linked to the real physical quantity by {eq}`eq.thc2` and is written as an ordinary letter such as $U$ and $\mathbf{E}$.**
-
-
-
-
-It is easier to calculate with complex amplitudes (complex fields) than with trigonometric functions (cosine and sine). As long as all the operations carried out on the functions are *linear*, the operations can be carried out on the complex quantities. To get the real-valued physical quantity of the result (i.e. the physical meaningful result), multiply the finally obtained complex amplitude by $\exp(-i\omega t)$ and take the real part. The reason that this works is that taking the real part commutes with all linear operations, i.e. taking first the real part to get the real-valued physical quantity and then operating on this real physical quantity gives the same result as operating on the complex scalar and taking the real part at the end.
-
-By substituting {eq}`eq.thc2` into the wave equation
-{eq}`eq.scalhelm3` we get
-
-```{math}
-:label: eq.complH1
-\begin{align*}
-\nabla^2 {\cal U}(\mathbf{r},t) - n^2 \epsilon_0\mu_0 \frac{\partial^2{\cal U}(\mathbf{r},t)}{\partial t^2} &=
-\text{Re}\left[ \nabla^2 U(\mathbf{r})e^{-i\omega t}\right] -
-n^2 \epsilon_0\mu_0 \text{Re}\left[ U(\mathbf{r})\frac{\partial^2 e^{-i\omega t}}{\partial ^2}\right]  \\
-&= \text{Re}\left\{ \left[\nabla^2 U(\mathbf{r}) + \omega^2 n^2 \epsilon_0\mu_0 U(\mathbf{r}) \right] e^{-i\omega t}\right\}.
-\end{align*}
-```
-Since this must vanish for all times $t$, it follows that the complex expression between the brackets $\{.\}$ must vanish. To see this, consider for example the two instances $t=0$ and $t=\pi/(2\omega$. We conclude that the complex amplitude satisfies
-
-
-```{math}
-:label: eq.complH
-\boxed{\begin{align*}
-\nabla^2 U(\mathbf{r}) + k_0^2 n^2 U(\mathbf{r})=0,\quad \text{Helmholtz Equation},
-\end{align*}}
-```
-
-where $k_0=\omega \sqrt{\epsilon_0 \mu_0}$ is the wave number in vacuum.
-
-
-
-
-**Remark**. The complex quantity of which the real part has to be taken is: $U\exp(-i\omega t)$. As explained above, it is not necessary to drag the time-dependent factor $\exp(-i \omega t )$ along in the computations: it suffices to calculate only with the complex amplitude $U$, then multiply by $\exp(-i\omega t)$ and then take the real part. However,
-when a derivative with respect to time has to be taken: $\partial /\partial t$, the complex field much be multiplied by $-i\omega$. This is also done in the time-harmonic Maxwell's equations in [Time-Harmonic Maxwell Equations in Matter](#section.thmaxwell) below.
-
-```{index} Time-Harmonic Spherical Waves
-:name: subsection.sphericalw
-```
-
-### Time-Harmonic Spherical Waves
-
-A spherical wave depends on position only by the distance to a fixed point. For simplicity we choose the origin of our coordinate system at this point. We thus seek a solution of the form ${\cal U}(r,t)$ with $r=\sqrt{x^2+y^2+z^2}$.
-For spherical symmetric functions we have
-
-```{math}
-:label: eq.ths1
-\begin{align*}
-\mathbf{\nabla}^2 {\cal U}(r,t) = \frac{1}{r} \frac{\partial^2}{\partial r^2}[ r {\cal U}(r,t)].
-\end{align*}
-```
-It is easy to see that outside of the origin
-
-```{math}
-:label: eq.ths3
-\begin{align*}
-{\cal U}(r,t) = \frac{f( \pm r - ct/n )}{r},
-\end{align*}
-```
-satisfies {eq}`eq.ths1` for any choice for the function $f$, where as before $c=1/\sqrt{\epsilon_0\mu_0}$ is the speed of light and $n=\sqrt{\epsilon/\epsilon_0}$.
-Of particular interest are time-harmonic spherical waves:
-
-```{math}
-:label: eq.ths5
-\begin{align*}
-{\cal U}(r, t) = \frac{{\cal A}}{r} \cos\left[ k\left( \pm r - \frac{c}{n} t\right) + \varphi \right] = \frac{{\cal A}}{r} \cos[ \pm k r- \omega t + \varphi )
-\end{align*}
-```
-where ${\cal A}$ is a constant
-
-```{math}
-:label: eq.defk
-\begin{align*}
-k= n \omega/c.
-\end{align*}
-```
-and $\pm kr - \omega t +\varphi$ is the phase at $\mathbf{r}$ and at time $t$.
-A wave front is a set of space-time points $(\mathbf{r},t)$ where the phase is equal to a constant:
-
-```{math}
-:label: eq.ths4
-\begin{align*}
-\pm k r - \omega t = \text{constant}.
-\end{align*}
-```
-Wave fronts are thus spheres which move with the speed of light in the radial direction.
-When the $+$ sign is chosen, the wave propagates outwards, i.e. away from the origin. The wave is then radiated by a **source** at the origin. Indeed, if the $+$ sign holds in {eq}`eq.ths5`, then if time $t$ increases, {eq}`eq.ths4` implies that a surface of constant phase moves outwards. Similarly, if the $-$ sign holds, the wave propagates towards the origin which then acts as a **sink**.
-
-```{figure} Images/Chapter_1/1_03_Spherical_Wavefront_f1.png
-:name: Fig_2_2_Spherical_Wavefront
-Spherical wave fronts with amplitude decreasing with distance.
-```
-
-```{code-cell} ipython3
-:tags: [thebe-remove-input-init]
-
-import numpy as np
-import matplotlib.pyplot as plt
-from matplotlib.animation import FuncAnimation
-from IPython.display import HTML
-
-# Function to initialize the plot
-def init():
-    im.set_data(wave(r, 0))
-    line1.set_ydata(wave(x, 0))
-    line2.set_ydata(np.flip(wave(x, 0)))
-    return [im, line1, line2]
-
-# Function to update the plot for each frame
-def update(frame):
-    im.set_array(wave(r, frame))
-    line1.set_ydata(wave1d(x, frame))
-    line2.set_ydata(np.flip(wave1d(x, frame)))
-    return [im, line1, line2]
-
-def wave(r, t):
-    A = 1
-    k = 5
-
-    omega = 2*np.pi/total_frames
-    phi = 0
-    #return A*1/(r+eps)*np.cos(k*r - omega*t + phi)
-    return A*np.exp(-r/tau)*np.cos(k*r - omega*t + phi)
-
-def wave1d(r,t):
-    A = ly
-    k = 5
-    tau = 2
-    omega = 2*np.pi/total_frames
-    phi = 0
-    return A*np.exp(-r/tau)*np.cos(k*r - omega*t + phi)
-
-lx = 5
-ly = 2.5
-color = "dodgerblue"
-lw = 0.3
-tau = 2
-total_frames = 60
-eps = 1E-1
-
-# Create a figure and axis
-fig, ax = plt.subplots(figsize=(10,5))
-x = np.linspace(0, lx, 800)
-xx = np.linspace(-lx, lx, 800)
-yy = np.linspace(-ly, ly, 800)
-X, Y = np.meshgrid(xx, yy)
-r = np.sqrt(X**2 + Y**2)
-
-im = ax.imshow(wave(r, 0), cmap='twilight', clim=[-ly, ly],extent=[xx.min(), xx.max(), yy.min(), yy.max()])
-line1, = ax.plot(x, wave1d(x, 0), color=color)
-line2, = ax.plot(x - lx, np.flip(wave1d(x, 0)), color=color)
-line3, = ax.plot(x, ly*np.exp(-x/tau), "-.k", linewidth=lw)
-line4, = ax.plot(x, -ly*np.exp(-x/tau), "-.k", linewidth=lw)
-line5, = ax.plot(x - lx, np.flip(ly*np.exp(-x/tau)), "-.k", linewidth=lw)
-line6, = ax.plot(x - lx, -np.flip(ly*np.exp(-x/tau)), "-.k", linewidth=lw)
-ax.axis('off')
-
-# Set up the animation
-ani = FuncAnimation(fig, update, frames=range(total_frames), init_func=init, blit=True)
-plt.close()
-
-# Show the plot
-HTML(ani.to_jshtml(fps=30))
-```
-
-The amplitude of the wave ${\cal A}/r$ is proportional to the inverse distance to the source of sink. Since the time average of the local flux of energy is proportional to the square ${\cal A}^2/r^2$, the time averaged total flux through the surface of any sphere with center the origin is independent of the radius of the sphere.
-
-```{figure} Images/Chapter_1/1_04_Spherical_2_Plane_wave_f1.png
-:name: Fig_2_3_Spherical_2_Plane_wave
-Planes of constant phase in cross-section. For an observer at large distance to the source the spherical wave looks similar to a plane wave.
-```
-
-```{code-cell} ipython3
-:tags: [thebe-remove-input-init]
-
-import numpy as np
-import matplotlib.pyplot as plt
-from matplotlib.patches import Circle
-from matplotlib.animation import FuncAnimation
-
-ratio_x = 10
-ratio_y = 3
-frames = 50
-
-speed = 0.075
-
-# Create a figure and axis
-fig, ax = plt.subplots(figsize=(ratio_x,ratio_y))
-
-# Function to initialize the plot
-def init():
-    ax.clear()  # Clear the axis for initialization
-    return []
-
-# Function to update the plot for each frame
-def update(frame):
-    ax.clear()  # Clear the axis for each frame
-
-    speed = 0.075
-
-    circles = int(frame/2)
-
-    for i in range(circles+1):
-        c = plt.Circle((0, ly/2), speed * (frame-i*2), color='b', fill=False)
-        ax.add_patch(c)
-
-    ax.set_xlim([-ly,lx])
-    ax.set_ylim([0,ly]) 
-    ax.axis('off')
-
-    return [c]
-
-lx = 3
-alpha = ratio_y/ratio_x
-ly = lx*alpha/(1-alpha)
-
-# Set up the animation
-ani = FuncAnimation(fig, update, frames=range(frames), init_func=init, blit=True)
-plt.close()
-
-# Show the plot
-from IPython.display import HTML, display
-display(HTML(ani.to_jshtml()))
-```
-
-Since there is a source or a sink at the origin, {eq}`eq.ths5` satisfies {eq}`eq.ths1` only outside of the origin. There is a $\delta$-function as source density on the right-hand side:
-
-```{math}
-:label: eq.ths1b
-\begin{align*}
-\epsilon \mu_0 \frac{\partial^2 }{\partial t^2}{\cal U}(r,t)- \mathbf{\nabla}^2 {\cal U}(r,t)= 4\pi {\cal A}\, \delta(r),
-\end{align*}
-```
-where the right-hand side corresponds to either a source or sink at the origin, depending on the sign chosen in the phase.
-
-Using complex notation we have for the outwards propagating wave:
-
-```{math}
-:label: eq.ths6
-\begin{align*}
-{\cal U}(r,t) =\text{Re}\left[U(\mathbf{r})e^{-i\omega t}\right]= \text{Re}\left[ \frac{A}{r} e^{i ( kr - i\omega t)}\right]
-\end{align*}
-```
-with $ U(\mathbf{r})=A \exp( ikr)/r$ and $A={\cal A}\exp(i\varphi)$, where $\varphi$ is the argument and ${\cal A}$ is the modulus of the complex number $A$.
-
-In {numref}`Fig_2_2_Spherical_Wavefront` and {numref}`Fig_2_3_Spherical_2_Plane_wave` spherical wave fronts are shown. For an observer who is at a large distance from the source, the spherical wave looks like a plane wave which propagates from the source towards the observer (or in the opposite direction, if there is a sink).
-
-
-```{index} Time-Harmonic Maxwell Equations in Matter
-:name: section.thmaxwell
-```
-## Time-Harmonic Maxwell Equations in Matter
-
-We now return to the Maxwell equations and consider time-harmonic electromagnetic fields, because these are by far the most important fields in optics.
-Using complex notation we have
-
-```{math}
-:label: eq.defveca
-\begin{align*}
-\mathbf{\mathcal{E}}(\mathbf{r},t) = \text{Re}\left[ \mathbf{E}(\mathbf{r}) e^{-i\omega t}\right],
-\end{align*}
-```
-with
-
-```{math}
-:label: eq.E
-\begin{align*}
-E_x(\mathbf{r}) &= | E_x(\mathbf{r}) | e^{i \varphi_x(\mathbf{r})},  \\
-E_y(\mathbf{r}) &= | E_y(\mathbf{r}) | e^{i \varphi_y(\mathbf{r})},  \\
-E_z(\mathbf{r}) &= | E_z(\mathbf{r}) | e^{i \varphi_z(\mathbf{r})},
-\end{align*}
-```
-where $\varphi_x(\mathbf{r})$ is the argument of the complex number $E_x(\mathbf{r})$ etc.
-With similar notations for the magnetic field, we obtain by substitution into Maxwell's equations
-{eq}`eq.faraday4`, {eq}`eq.maxwell4`, {eq}`eq.gauss4` and {eq}`eq.divH4`, the time-harmonic Maxwell equations for the **complex fields**:
-
-```{math}
-:label: eq.faraday5
-\begin{align*}
-\mathbf{\nabla} \times \mathbf{E} & = i\omega \mu_0 \mathbf{H}, & \text{Faraday's Law}, \end{align*}
-```
-```{math}
-:label: eq.maxwell5
-\begin{align*}
-\\
-\mathbf{\nabla} \times \mathbf{H} & = -i\omega \epsilon\mathbf{E} + \sigma \mathbf{E} + \mathbf{J}_{ext}, & \text{Maxwell's Law}, \end{align*}
-```
-```{math}
-:label: eq.gauss5
-\begin{align*}
-\\
-\mathbf{\nabla} \cdot \epsilon \mathbf{E} & = \varrho_{ext}, & \text{Gauss's Law}, \end{align*}
-```
-```{math}
-:label: eq.divH5
-\begin{align*}
-\\
-\mathbf{\nabla} \cdot \mathbf{H} & = 0, & \text{no magnetic charge},\end{align*}
-```
-where the time derivative has been replaced by multiplication of the complex fields by $-i\omega$.
-
-In the time-harmonic Maxwell equations, the conductivity is sometimes included in the imaginary part of the permittivity:
-
-```{math}
-:label: eq.defeps2
-\begin{align*}
-\epsilon = \epsilon_0\left[ 1 + \chi_e + i \frac{\sigma}{\omega} \right].
-\end{align*}
-```
-Although it is convenient to do this in Maxwell's Law {eq}`eq.maxwell5`, one should remember that in Gauss's Law {eq}`eq.gauss5`, the original permittivity: $\epsilon=1+\chi_e$ should still be used. When there are no external sources: $\varrho_{ext}=0$ and the material is homogeneous (i.e. $\chi_e$ and $\sigma$ are independent of position), then {eq}`eq.gauss5` is equivalent to
-
-```{math}
-:label: eq.gauss5b
-\begin{align*}
-\mathbf{\nabla} \cdot \mathbf{E} =0.
-\end{align*}
-```
-Hence in this (important) special case,  {eq}`eq.defeps2` for the permittivity can safely be used without the risk of confusion.
-
-We see that when we use  {eq}`eq.defeps2`, the conductivity makes the permittivity complex and dependent on frequency. But actually, also for insulators ($\sigma=0$), the permittivity $\epsilon$ depends in general on frequency and is complex with a positive imaginary part. The positive imaginary part of $\epsilon$ is a measure of the absorption of the light by the material.
-The property that the permittivity depends on the frequency is called **dispersion**.
-Except close to a resonance frequency, the imaginary part of $\epsilon(\omega)$ is small and the real part is a slowly increasing function of frequency. This is called normal dispersion. This is illustrated with the refractive index of different glass shown in {numref}`Fig_1_04_Dispersion_Relation`
-
-```{figure} Images/Chapter_1/1_05_Dispersion_Relation_f1.png
-:name: Fig_1_04_Dispersion_Relation
-Real part $n^2-\kappa^2$ and imaginary part $2n\kappa$ of the permittivity $\epsilon=(n+i\kappa)^2$, as function of wavelength and of frequency near a resonance.
-```
-
-
-Near a resonance, the real part is rapidly changing and *decreases* with $\omega$ (this behavior is called anomalous dispersion), while the imaginary part has a maximum at the resonance frequency of the material, corresponding to maximum absorption at a resonance as seen in {numref}`Fig_1_5_Refractive_index_Glass`.
-At optical frequencies, mostly normal dispersion occurs and for small-frequency bands such as in laser light, it is often sufficiently accurate to use the value of the permittivity and the conductivity at the center frequency of the band.
-
-```{figure} Images/Chapter_1/1_06_Refractive_index_Glass_f1.png
-:name: Fig_1_5_Refractive_index_Glass
-Refractive index as function of wavelength for several types of glass (from [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Mplwp_dispersion_curves.svg) by Geek3 / CC BY-SA).
-```
-
-
-In many books the following notation is used: $\epsilon=(n+i \kappa)^2$, where $n$ and $\kappa$ ("kappa", not to be confused with the wave number $k$) are both real and positive, with $n$ the refractive index and $\kappa$ a measure of the absorption. We then have $\text{Re}(\epsilon)=n^2-\kappa^2$ and $\text{Im}(\epsilon)=2 n \kappa$ (see {numref}`Fig_1_04_Dispersion_Relation`). Note that although $n$ and $\kappa$ are both positive, $\text{Re}(\epsilon)$ can be negative for some frequencies. This happens for metals in the visible part of the spectrum.
-
-
-
-
-**Remark**. When $\epsilon$ depends on frequency, Maxwell's equations in the form {eq}`eq.maxwell4` and {eq}`eq.gauss4` for fields that are not time-harmonic can strictly speaking not be valid, because it is not clear which value of $\epsilon$ corresponding to which frequency should be chosen. In fact, in the case of strong dispersion, the products $\epsilon \mathbf{\mathcal{E}}$ should be replaced by convolutions in the time domain. Since we will almost always consider fields with a narrow-frequency band, we shall not elaborate on this issue further.
-
-```{index} Time-Harmonic Electromagnetic Plane Waves
-:name: subsection.emplw
-```
-### Time-Harmonic Electromagnetic Plane Waves
-
-In this section we assume that the material in which the wave propagates has conductivity which vanishes: $\sigma=0$, does not absorb the light and is homogeneous, i.e. that the permittivity $\epsilon$ is a real constant. Furthermore, we assume that in the region of space of interest there are no sources. These assumptions imply in particular that {eq}`eq.gauss5b` holds.
-The electric field of a time-harmonic plane wave is given by
-
-```{math}
-:label: eq.bcE2
-\begin{align*}
-\mathbf{\mathcal{E}}(\mathbf{r},t) = \text{Re}\left[ \mathbf{E}(\mathbf{r}) e^{-i \omega t}\right],
-\end{align*}
-```
-with
-
-```{math}
-:label: eq.defbE
-\begin{align*}
-\mathbf{E}(\mathbf{r})= \mathbf{A} e^{i \mathbf{k}\cdot \mathbf{r}},
-\end{align*}
-```
-where $\mathbf{A}$ is a constant complex vector (i.e. it is independent of position and time):
-
-```{math}
-:label: eq.defbA
-\begin{align*}
-\mathbf{A} =
-A_x \hat{\mathbf{x}} +
-A_y \hat{\mathbf{y}} +
-A_z \hat{\mathbf{z}},
-\end{align*}
-```
-with $A_x=|A_x| e^{i \varphi_x}$ etc..
-The wave vector $ \mathbf{k}$ satisfies {eq}`eq.psi6`. Substitution of {eq}`eq.defbE` into {eq}`eq.gauss5b` implies that
-
-```{math}
-:label: eq.orth
-\begin{align*}
-\mathbf{E}(\mathbf{r})\cdot \mathbf{k} =0,
-\end{align*}
-```
-for all $\mathbf{r}$ and hence {eq}`eq.bcE2` implies that also the physical real electric field is in every point $\mathbf{r}$ perpendicular to the wave vector: $\mathbf{\mathcal{E}}(\mathbf{r},t)\cdot \mathbf{k}=0$.
-For simplicity we now choose the wave vector in the direction of the $z$-axis and we assume that the electric field vector is parallel to the $x$-axis. This case is called a $x$-polarized electromagnetic wave. The complex field is then written as
-
-```{math}
-:label: eq.Eplanew
-\begin{align*}
-\mathbf{E}(z) = A e^{i k z} \hat{\mathbf{x}},
-\end{align*}
-```
-where $k=\omega \sqrt{\epsilon \mu_0}$ and $A=|A| \exp(i \varphi)$. It follows from Faraday's Law {eq}`eq.faraday5`) that
-
-```{math}
-:label: eq.Hplanew
-\begin{align*}
-\mathbf{H}(z) = \frac{k}{\omega \mu_0} \hat{\mathbf{z}}\times \hat{\mathbf{x}} A e^{ik z} = \sqrt{\frac{\epsilon}{ \mu_0}} Ae^{i k z } \hat{\mathbf{y}}.
-\end{align*}
-```
-The real electromagnetic field is thus:
-
-```{math}
-:label: eq.bcEzt
-\begin{align*}
-\mathbf{\mathcal{E}}(z,t) &= \text{Re}\left[ \mathbf{E}(z)e^{-i\omega t}\right] = |A|\cos(kz -\omega t + \varphi) \hat{\mathbf{x}}, \end{align*}
-```
-```{math}
-:label: eq.bcBzt
-\begin{align*}
-\\
-\mathbf{\mathcal{H}}(z,t) &= \text{Re}\left[ \mathbf{H}(z) e^{-i\omega t}\right] = \sqrt{\frac{\epsilon}{ \mu_0}} |A| \cos( k z - \omega t + \varphi) \hat{\mathbf{y}}.\end{align*}
-```
-We conclude that **in a lossless medium, the electric and magnetic field of a plane wave are in phase and at every point and at every instant perpendicular to the wave vector and to each other**. As illustrated in {numref}`Fig_1_07_EB_Propagation`, at any given time the electric and the magnetic field achieve their maximum and minimum values in the same points.
-
-```{figure} Images/Chapter_1/1_07_EB_Propagation_f1.png
-:name: Fig_1_07_EB_Propagation
-The time-harmonic vectors $\mathbf{\mathcal{E}}$ and $\mathbf{\mathcal{H}}$ of a plane polarized wave are perpendicular to each other and to the direction of the wave vector which is also the direction of $\mathbf{\mathcal{E}}\times \mathbf{\mathcal{H}}$.
-```
-
-```{code-cell} ipython3
-:tags: [remove-input]
-
-import numpy as np
-import matplotlib.pyplot as plt
-from matplotlib.animation import FuncAnimation
-from mpl_toolkits.mplot3d import Axes3D
-
-# Constants
-speed_of_light = 0.2  # Speed of light in meters per second
-frequency = 1  # Frequency in Hertz (1 GHz)
-wavelength = speed_of_light / frequency  # Wavelength in meters
-
-# Time settings
-duration = 2  # Duration of the animation in seconds
-fps = 30  # Frames per second
-num_frames = int(duration * fps)
-
-num_segm = 20
-
-# Create a time array
-time = np.linspace(0, duration, num_frames)
-segm_time = np.linspace(0,time[-1],num_segm)
-counter_segm = 0
-
-# Function to calculate the electromagnetic wave at a given time
-def electromagnetic_wave(t):
-    omega = 2 * np.pi * frequency
-    electric_field = -np.cos(omega * t)
-    magnetic_field = np.cos(omega * t)
-    return electric_field, magnetic_field
-
-# Create a figure and 3D axis
-fig = plt.figure()
-ax = fig.add_subplot(111, projection='3d')
-
-# Adjust subplot parameters to make the plot take more space
-fig.subplots_adjust(left=0.05, right=0.95, bottom=0.05, top=0.95)
-
-# Initialize empty plots for electric and magnetic fields
-line_electric, = ax.plot([], [], [], lw=2, label='Electric Field',color="red")
-line_magnetic, = ax.plot([], [], [], lw=2, label='Magnetic Field',color="blue")
-
-
-ax.plot([0,duration],[0,0],[0,0],color="black",linewidth=0.7)
-ax.plot([0,0],[-1.5,1.5],[0,0],color="black",linewidth=0.7)
-ax.plot([0,0],[0,0],[-1.5,1.5],color="black",linewidth=0.7)
-
-# Set axis limits
-ax.set_xlim(0, duration)
-ax.set_ylim(-1.2, 1.2)
-ax.set_zlim(-1.2, 1.2)
-ax.axis('off')
-
-# Set plot labels
-ax.set_xlabel('Time (s)')
-ax.set_ylabel('Electric Field')
-ax.set_zlabel('Magnetic Field')
-ax.legend()
-
-
-# Function to initialize the plot
-def init():
-    line_electric.set_data([], [])
-    line_electric.set_3d_properties([])
-    line_magnetic.set_data([], [])
-    line_magnetic.set_3d_properties([])
-    counter_segm = 0
-
-    # text
-    text1 = ax.text(-0.8, 0, 1, 'Magnetic Field', fontsize=8, color='black')
-    text2 = ax.text(-0.6, -1.5, 0, 'Electric Field', fontsize=8, color='black')
-    text3 = ax.text(duration*1.1, 0, 0, 'time', fontsize=8, color='black')
-
-    return line_electric, line_magnetic
-
-# Function to update the plot for each frame
-def update(frame):
-    t = time[frame]
-    electric_field, magnetic_field = electromagnetic_wave(t)
-    line_electric.set_data([t, t], [0, electric_field])
-    line_electric.set_3d_properties([0, 0])
-
-    line_magnetic.set_data([t, t], [0, 0])
-    line_magnetic.set_3d_properties([0, magnetic_field])
-
-    __t = np.linspace(0,t,100)
-    __E = -np.cos(2*np.pi*frequency*__t)
-    __B = np.cos(2*np.pi*frequency*__t)
-    __0 = np.zeros(len(__t))
-
-    global counter_segm
-    if counter_segm is None:
-        counter_segm = 0  # Assign your default value here
-
-    if t > segm_time[counter_segm]:  
-        ___t = np.array([segm_time[counter_segm],segm_time[counter_segm]])
-        ___E = np.array([0,-np.cos(2*np.pi*frequency*___t[0])])
-        ___B = np.array([0,np.cos(2*np.pi*frequency*___t[0])])
-        ax.plot(___t,___E,[0,0],linewidth=0.7,color="black")
-        ax.plot(___t,[0,0],___B,linewidth=0.7,color="black")
-        counter_segm = counter_segm + 1
-
-    ax.plot(__t,__E,__0,"-.",color="red",linewidth=0.5)
-    ax.plot(__t,__0,__B,"-.",color="blue",linewidth=0.5)
-
-    
-
-    return line_electric, line_magnetic
-
-# Create the animation
-ani = FuncAnimation(fig, update, frames=num_frames, init_func=init, blit=True, interval=30);
-# Close the plot to avoid displaying it
-plt.close()
-
-from IPython.display import HTML
-HTML(ani.to_jshtml())
-```
-
-
-### Field of an Electric Dipole
-An other important solution of Maxwell's equation is the field radiated by a time-harmonic electric dipole, i.e. two opposite charges with equal strength that move time-harmonically around their center of mass.
-In this section the medium is homogeneous, but it may absorb part of the light, i.e. the permittivity may have a nonzero imaginary part.
-An electric dipole is the classical electromagnetic model for an atom or molecule. Because the optical wavelength is much larger than an atom and molecule, these charges may be considered to be concentrated both at the same point $\mathbf{r}_0$. The charge and current densities of such an elementary dipole are
-
-```{math}
-:label: eq.rhodip
-\begin{align*}
-\rho &= -\mathbf{p} \cdot \mathbf{\nabla} \delta(\mathbf{r}-\mathbf{r}_0), \end{align*}
-```
-```{math}
-:label: eq.Jdip
-\begin{align*}
-\\
-\mathbf{J} &= -i\omega \mathbf{p} \delta(\mathbf{r}-\mathbf{r}_0),\end{align*}
-```
-with $\mathbf{p}$ the dipole vector, defined by
-
-```{math}
-:label: eq.defp1_ch1
-\begin{align*}
-\mathbf{p}= q \mathbf{a},
-\end{align*}
-```
-where $q>0$ is the positive charge and $\mathbf{a}$ is the position vector of the positive with respect to the negative charge.
-
-The field radiated by an electric dipole is very important. It is the fundamental solution of Maxwell's equations, in the sense that the field radiated by an arbitrary distribution of sources can always be written as a superposition of the fields of elementary electric dipoles. This follows from the fact that Maxwell's equations are linear and any current distribution can be written as a superposition of elementary dipole currents.
-
-The field radiated by an elementary dipole in $\mathbf{r}_0$ in homogeneous matter can be computed analytically and is given by<sup>[^4]</sup>
-
-```{math}
-:label: eq.Edipol
-\begin{align*}
-\mathbf{E}(\mathbf{r})
-&= \left\{ k^2
-\hat{\mathbf{ R}} \times \left(\mathbf{p} \times \hat{\mathbf{R}} \right)
-+ \left( 3 \hat{\mathbf{R}} \cdot \mathbf{p}\, \hat{\mathbf{R}} - \mathbf{p} \right)
-\left( \frac{1}{R^2}-\frac{ik}{R}\right)
-\right\} \frac{e^{i k R}}{4 \pi \epsilon R}, \end{align*}
-```
-```{math}
-:label: eq.Hdipol
-\begin{align*}
-\\
-\mathbf{H}(\mathbf{r}) &=
-\frac{k^2 c}{n} \left( 1 + \frac{i}{kR} \right)\,
-\hat{\mathbf{R}} \times \mathbf{p} \frac{e^{i k R}}{4 \pi R},\end{align*}
-```
-where $k=k_0 n $, with $k_0$ the wave number in vacuum and $n=\sqrt{\epsilon/\epsilon_0}$, and with $\mathbf{R}=\mathbf{r}-\mathbf{r}_0$, $\hat{\mathbf{R}}=\mathbf{R}/R$.
-It is seen that the complex electric and magnetic fields are proportional to the complex spherical wave:
-
-$$
-\frac{e^{i k R}}{R}
-
-$$
-discussed in [Time-Harmonic Spherical Waves](#subsection.sphericalw), but that these fields contain additional position dependent factors.
-In particular, at large distance to the dipole:
-
-```{math}
-:label: eq.Hdipolfar
-\begin{align*}
-\mathbf{H}(\mathbf{r}) & \approx & \frac{k^2 c}{n} \hat{\mathbf{R}} \times **p** \frac{e^{i k R}}{4 \pi R}, \end{align*}
-```
-```{math}
-:label: eq.Edipolfar
-\begin{align*}
-\\
-\mathbf{E}(\mathbf{r})
-& \approx & k^2
-\hat{\mathbf{R}} \times \left( \mathbf{p} \times \hat{\mathbf{R}} \right)
-\frac{e^{i k R}}{4 \pi \epsilon R} = - \sqrt{\frac{\mu_0}{\epsilon}} \hat{\mathbf{R}} \times \mathbf{H}(\mathbf{r}).\end{align*}
-```
-
-
-```{figure} Images/Chapter_1/1_08_Felder_um_Dipol_f1.png
-:name: Fig_1_09_Field_lines_Radiating_Dipole
-Electric and magnetic field lines created by a radiating dipole (from [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Felder_um_Dipol.svg), original JPG due to Averse, SVG by Maschen. / CC0).
-```
-
-
-In {numref}`Fig_1_09_Field_lines_Radiating_Dipole` are drawn the electric and magnetic field lines of a radiating dipole. For an observer at large distance from the dipole, the electric and magnetic fields are perpendicular to each other and perpendicular to the direction of the line of sight $\hat{\mathbf{R}}$ from the dipole to the observer. Furthermore, the electric field is in the plane through the dipole vector $\mathbf{p}$ and the vector $\hat{\mathbf{R}}$, while the magnetic field is perpendicular to this plane. So, for a distant observer the dipole field is similar to that of a plane wave which propagates from the dipole towards the observer and has an electric field parallel to the plane through the dipole and the line of sight $\hat{\mathbf{R}}$ and perpendicular to $\hat{\mathbf{R}}$. Furthermore, the amplitudes of the electric and magnetic fields depend on the direction of the line of sight, with the field vanishing when the line of sight $\hat{\mathbf{R}}$ is parallel to the dipole vector $\mathbf{p}$ and with maximum amplitude when $\hat{\mathbf{R}}$ is in the plane perpendicular to the dipole vector. This result agrees with the well-known radiation pattern of an antenna when the current of the dipole is in the same direction as that of the antenna.
-
-## Electromagnetic Energy
-
-The total energy stored in the electromagnetic field per unit of volume at a point $\mathbf{r}$ is equal to the sum of the electric and the magnetic energy densities.
-We postulate that the results for the energy densities derived in electrostatics and magnetostatics are also valid for the fast-oscillating fields in optics; hence we assume that the total electromagnetic energy density is given by:
-
-```{math}
-:label: eq.defU
-\begin{align*}
-U_{em} (\mathbf{r},t)=\frac{\epsilon}{2} \mathbf{\mathcal{E}}(\mathbf{r},t)\cdot \mathbf{\mathcal{E}}(\mathbf{r},t) + \frac{\mu_0}{2} \mathbf{\mathcal{H}}(\mathbf{r},t)\cdot \mathbf{\mathcal{H}}(\mathbf{r},t).
-\end{align*}
-```
-It is to be noticed that we assume in this section that the permittivity is real, i.e. there is no absorption and the permittivity does not include the conductivity.
-
-Time dependent electromagnetic fields propagate energy.
-The flow of electromagnetic energy at a certain position $\mathbf{r}$ and time $t$ is given by the Poynting vector, which is defined by
-
-```{math}
-:label: eq.defpoyn1
-\begin{align*}
-\mathbf{\mathcal{S}}(\mathbf{r},t) = \mathbf{\mathcal{E}}(\mathbf{r},t)\times \mathbf{\mathcal{H}}(\mathbf{r},t).
-\end{align*}
-```
-More precisely, the flow of electromagnetic energy through a small surface $\mathrm{d}S $ with normal $\hat{\mathbf{n}}$ at point $\mathbf{r}$ is given by
-
-```{math}
-:label: eq.defpoyn2
-\begin{align*}
-\mathbf{\mathcal{S}}(\mathbf{r},t) \cdot \hat{\mathbf{n}} \mathrm{d}S.
-\end{align*}
-```
-If this scalar product is positive, the energy flow is in the direction of $\hat{\mathbf{n}}$, otherwise it is in the direction of $-\hat{\mathbf{n}}$. Hence the direction of the vector $\mathbf{\mathcal{S}}(\mathbf{r},t)$ is the direction of the flow of energy at point $\mathbf{r}$ and the length $\| \mathbf{\mathcal{S}}(\mathbf{r},t)\|$ is the amount of the flow of energy, per unit of time and per unit of area perpendicular to the direction of $\mathbf{\mathcal{S}}$. This quantity has unit J/(s\,$\text{m}^2$).
-
-That the Poynting vector gives the flow of energy can be seen in a dielectric for which dispersion may be neglected by the following derivation. We consider the change with time of the total electromagnetic energy in a volume $V$:
-
-```{math}
-:label: eq.ddtUem
-\begin{align*}
-\frac{d}{d t } \int\!\int\!\int_V U_{em}(\mathbf{r},t) \, \mathrm{d}V = \int\!\int\!\int_V \epsilon\frac{\partial \mathbf{\mathcal{E}}(\mathbf{r},t)}{\partial t} \cdot \mathbf{\mathcal{E}}(\mathbf{r},t) + \mu_0 \frac{\partial \mathbf{\mathcal{H}}(\mathbf{r},t)}{\partial t} \cdot \mathbf{\mathcal{H}}(\mathbf{r},t) \mathrm{d}V.
-\end{align*}
-```
-By substituting {eq}`eq.faraday4`, {eq}`eq.maxwell4` and using
-
-```{math}
-:label: eq.rule
-\begin{align*}
--\mathbf{\mathcal{A}}\cdot \mathbf{\nabla} \times \mathbf{\mathcal{B}} +\mathbf{\mathcal{B}}\cdot \mathbf{\nabla} \times \mathbf{\mathcal{A}} = \mathbf{\nabla} \cdot (\mathbf{\mathcal{A}}\times \mathbf{\mathcal{B}}),
-\end{align*}
-```
-which holds for any two vector fields, we find
-
-```{math}
-:label: eq.cons1
-\begin{align*}
-\int\!\int\!\int_V \epsilon \mathbf{\mathcal{E}}(\mathbf{r},t)\cdot \frac{\partial}{\partial t} \mathbf{\mathcal{E}}(\mathbf{r},t) +
-\mu_0 \mathbf{\mathcal{H}}(\mathbf{r},t)\cdot \frac{\partial}{\partial t} \mathbf{\mathcal{H}}(\mathbf{r},t) \mathrm{d}V  \\
-= \int\!\int\!\int_V \mathbf{\mathcal{E}}(\mathbf{r},t)\cdot \mathbf{\nabla} \times \mathbf{\mathcal{H}}(\mathbf{r},t) -
-\mathbf{\mathcal{H}}(\mathbf{r},t)\cdot \mathbf{\nabla} \times \mathbf{\mathcal{E}}(\mathbf{r},t) \mathrm{d}V - \int\!\int\!\int_V \sigma \mathbf{\mathcal{E}}(\mathbf{r},t) \cdot \mathbf{\mathcal{E}}(\mathbf{r},t) \mathrm{d}V  \\
-- \int\!\int\!\int_V \mathbf{\mathcal{E}}(\mathbf{r},t) \cdot \mathbf{\mathcal{J}}_{ext}(\mathbf{r},t) \mathrm{d}V  \\
-= -\int\!\int\!\int_V \mathbf{\nabla} \cdot (\mathbf{\mathcal{E}}\times \mathbf{\mathcal{H}}) \mathrm{d}V - \int\!\int\!\int_V \sigma \mathbf{\mathcal{E}}(\mathbf{r},t) \cdot \mathbf{\mathcal{E}}(\mathbf{r},t) \mathrm{d}V - \int\!\int\!\int_V \mathbf{\mathcal{E}}(\mathbf{r},t) \cdot \mathbf{\mathcal{J}}_{ext}(\mathbf{r},t) \mathrm{d}V  \\
-= - \int\!\int_S (\mathbf{\mathcal{E}}\times \mathbf{\mathcal{H}})\cdot \hat{\mathbf{n}} \mathrm{d}S - \int\!\int\!\int_V \sigma \mathbf{\mathcal{E}}(\mathbf{r},t) \cdot \mathbf{\mathcal{E}}(\mathbf{r},t) \mathrm{d}V- \int\!\int\!\int_V \mathbf{\mathcal{E}}(\mathbf{r},t) \cdot \mathbf{\mathcal{J}}_{ext}(\mathbf{r},t) \mathrm{d}V,
- \\
-\end{align*}
-```
-where $S$ is the surface bounding volume $V$ and $\hat{\mathbf{n}}$ is the unit normal on $S$ pointing out of $V$.
-Hence,
-
-```{math}
-:label: eq.cons2
-\begin{align*}
-\frac{d}{d t } \int\!\int\!\int_V U_{em}(\mathbf{r},t) \, \mathrm{d}V+ \int\!\int\!\int_V \sigma \mathbf{\mathcal{E}}(\mathbf{r},t) \cdot \mathbf{\mathcal{E}}(\mathbf{r},t) \mathrm{d}V+ \int\!\int\!\int_V \mathbf{\mathcal{E}}(\mathbf{r},t) \cdot \mathbf{\mathcal{J}}(\mathbf{r},t) \mathrm{d}V  \\
-= -\int\!\int_S \mathbf{\mathcal{S}}(\mathbf{r},t) \cdot \hat{\mathbf{n}} \mathrm{d}S.
-\end{align*}
-```
-This equation says that the rate of change with time of the electromagnetic energy in a volume $V$ plus the work done by the field on the conduction and external currents inside $V$ is equal to the influx of electromagnetic energy through the boundary of $V$.
-
-
-
-
-**Remark**. The energy flux $\mathbf{\mathcal{S}}$ and the energy density $U_{em}$ depend quadratically on the field. For $U_{em}$ the quadratic dependence on the electric and magnetic fields is clear. To see that the Poynting vector is also quadratic in the electromagnetic field, one should realize that the electric and magnetic fields are inseparable: they together form the electromagnetic field. Stated differently: if the amplitude of the electric field is doubled, then also that of the magnetic field is doubled and hence the Poynting vector is increased by a factor 4.
-Therefore, when computing the Poynting vector or the electromagnetic energy density of a time-harmonic electromagnetic field, the real-valued vector fields should be used, i.e. the complex fields should **NOT** be used. An exception is the calculation of the long-time average of the Poynting vector or the energy density. As we will show in the next section, the **time averages** of the energy flux and energy density of time-harmonic fields can actually be expressed quite conveniently in terms of the complex field amplitudes.
-
-
-
-If we substitute the real fields {eq}`eq.Eplanew`, {eq}`eq.Hplanew` of the plane wave in the Poynting vector and the electromagnetic energy density we get:
-
-```{math}
-:label: eq.Splanew
-\begin{align*}
-\mathbf{\mathcal{S}}(z,t) = \mathbf{\mathcal{E}}(z,t)\times \mathbf{\mathcal{H}}(z,t) = \sqrt{\frac{\epsilon}{ \mu_0}} |A|^2 \cos^2(k z -\omega t + \varphi)\, \hat{\mathbf{z}},
-\end{align*}
-```
-
-```{math}
-:label: eq.Uemplanew
-\begin{align*}
-U_{em} (z,t)
-= \epsilon |A|^2 \cos^2(k z - \omega t+\varphi).
-\end{align*}
-```
-We see that the energy flow of a plane wave is in the direction of the wave vector, which is also the direction of the phase velocity. Furthermore, it changes with time at frequency $2\omega$.
-
-
-
-
-## Time-Averaged Energy of Time-Harmonic Fields
-Optical frequencies are in the range of $5 \times 10^{14}$ Hz and the fastest detectors working at optical frequencies have integration times larger than $10^{-10}$ s. Hence there is no detector which can measure the time fluctuations of the electromagnetic fields at optical frequencies and any detector always measures an average value, taken over an interval of time that is very large compared to the period $2\pi/\omega$ of the light wave, typically at least a factor $10^5$ longer. We therefore compute averages over such time intervals of the Poynting vector and of the electromagnetic energy. Because the Poynting vector and energy density depend nonlinearly (quadratically) on the field amplitudes, we can *not* perform the computations using the complex amplitudes and take the real part afterwards, but have instead to start from the real quantities. Nevertheless, it turns out that the final result can be conveniently expressed in terms of the complex field amplitudes.
-
-Consider two time-harmonic functions:
-
-```{math}
-:label: eq.defAc
-\begin{align*}
-{\cal A}(t)&= \text{Re}\left[ A e^{-i\omega t}\right]= |A| \cos ( \varphi_A -\omega t)
-\end{align*}
-```
-```{math}
-:label: eq.defBc
-\begin{align*}
-\\
-{\cal B}(t) &= \text{Re}\left[ B e^{-i\omega t}\right] = |B| \cos(\varphi_B-\omega t),\end{align*}
-```
-with $A=|A| \exp(i\varphi_A)$ and $B=|B| \exp(i\varphi_B)$ the complex amplitudes.
-For a general function of time $f(t)$ we define the time average over an interval T *at a certain time $t$*, by
-
-```{math}
-:label: eq.average_a
-\begin{align*}
-\frac{1}{T} \int_{t-T/2}^{t+T/2} f(t') \text{d} t'.
-\end{align*}
-```
-where $T$ is much larger (say a factor of $10^5$) than the period of the light.
-It is obvious that for time-harmonic fields the average does not depend on the precise time $t$ at which it is computed.
-and we therefore take $t=0$ and write
-
-
-```{math}
-:label: eq.average
-\boxed{\begin{align*}
-\braket{ f(t) } = \lim_{T\rightarrow \infty} \frac{1}{T} \int_{-T/2}^{T/2} f(t) \text{d} t.
-\end{align*}}
-```
-
-With
-
-```{math}
-\begin{align*}
-{\cal A}(t)= \text{Re}\left[ A e^{-i\omega t}\right] = \frac{1}{2} \left[A e^{-i\omega t} + A^* e^{i \omega t}\right],
-\end{align*}
-```
-where $A^*$ is the complex conjugate of $A$, and with a similar expression for ${\cal B}(t)$, it follows that
-
-```{math}
-:label: eq.timav
-\begin{align*}
-\lim_{T\rightarrow \infty} \frac{1}{T} \int_{-T/2}^{T/2} {\cal A}(t) {\cal B}(t) \mathrm{d}t &=
-\lim_{T\rightarrow \infty}\frac{1}{4T} \int_{-T/2}^{T/2} \left[ A B^* + A^* B + A B e^{-2i\omega t} + A^* B^* e^{2i\omega t}\right] \mathrm{d}t
- \\
-&= \lim_{T\rightarrow \infty} \frac{1}{4} \left[ AB^* + A^* B + A B \frac{ e^{i \omega T}- e^{-i \omega T} }{2 iT \omega} +
-A^* B^* \frac{ e^{i \omega T}-e^{-i \omega T} }{2 iT \omega} \right]
- \\
-&= \frac{1}{2} \text{Re} \left[ A B^* \right],
-\end{align*}
-```
-This important result will be used over and over again. In words:
-
-```{note}
-The average of the product of two time-harmonic quantities over a long time interval compared with the period, is half the real part of the product of the complex amplitude of one quantity and the complex conjugate of the other.
-```
-
-If we apply this to Poynting's vector of a general time-harmonic electromagnetic field:
-
-```{math}
-\begin{align*}
-\mathbf{\mathcal{E}}(\mathbf{r},t) &= \text{Re}\left[ \mathbf{E}(\mathbf{r}) e^{-i\omega t}\right],  \\
-\mathbf{\mathcal{H}}(\mathbf{r},t) &= \text{Re}\left[ \mathbf{H}(\mathbf{r}) e^{-i\omega t}\right],
-\end{align*}
-```
-then we find that the time-averaged energy flow denoted by $\mathbf{S}(\mathbf{r})$ is given by
-
-```{math}
-:label: eq.Sav
-\begin{align*}
-\mathbf{S}(\mathbf{r}) = \lim_{T\rightarrow \infty} \frac{1}{T} \int_{-T/2}^{T/2} \mathbf{\mathcal{S}}(\mathbf{r},t) dt =
-\frac{1}{2} \text{Re}\left[ \mathbf{E} \times \mathbf{H}^* \right].
-\end{align*}
-```
-Similarly, the time-averaged electromagnetic energy density is:
-
-```{math}
-:label: eqUav
-\begin{align*}
-<U_{en}(\mathbf{r})> &\stackrel{\text{def}}{=} & \lim_{T\rightarrow \infty}\frac{1}{T} \int_{-T/2}^{T/2} U_{en}(\mathbf{r}, t) \mathrm{d}t
-=
-\frac{1}{2} \epsilon \mathbf{E}(\mathbf{r})\cdot \mathbf{E}(\mathbf{r})^* + \frac{\mu_0}{2} \mathbf{H}(\mathbf{r})\cdot \mathbf{H}(\mathbf{r})^*  \\
-&= \frac{1}{2} \epsilon |\mathbf{E}(\mathbf{r})|^2 + \frac{\mu_0}{2} |\mathbf{H}(\mathbf{r})|^2.
-\end{align*}
-```
-For the special case of plane wave {eq}`eq.Eplanew`, {eq}`eq.Hplanew` in a medium without absorption, we get:
-
-```{math}
-:label: eq.Saveplanew
-\begin{align*}
-\mathbf{S} = \frac{1}{2} \sqrt{\frac{\epsilon}{ \mu_0}} \text{Re}\left[ A A^*\right]\hat{\mathbf{z}}
-= \frac{1}{2}\sqrt{\frac{\epsilon}{ \mu_0}} |A|^2 \hat{\mathbf{z}}.
-\end{align*}
-```
-The length of vector {eq}`eq.Saveplanew` is the time-averaged flow of energy per unit of area in the direction of the plane wave and is commonly called the **intensity** of the wave. For the time-averaged electromagnetic energy density of the plane wave, we get:
-
-```{math}
-:label: eqUavplanew
-\begin{align*}
-<U_{en}> = \frac{1}{2} \epsilon |A|^2 + \frac{1}{2\mu_0}\mu_0 \epsilon |A|^2
-= \epsilon |A|^2.
-\end{align*}
-```
-
-```{note}
-For a plane wave both the time-averaged energy flux and the time-averaged energy density are proportional to the squared modulus of the complex electric field.
-```
-
-
-```{index} Reflection and Transmission at an Interface
-:name: section.rt
-```
-## Reflection and Transmission at an Interface
-
-
-When an electromagnetic field is incident on an interface between different media, the field is partially reflected and partially transmitted. An important special case is that of a monochromatic plane wave which is incident on a planar interface as in {numref}`Fig_2_16_Interface`.
-
-Let the interface be the plane $z=0$ between materials in $z<0$ and $z>0$ with permittivities $\epsilon_i$ and $\epsilon_t$, respectively. We first assume that the materials are lossless, i.e. that the permittivities are real.
-The plane wave is incident from medium $z<0$ and the incident electromagnetic field is given by:
-
-```{math}
-:label: eq.Ei
-\begin{align*}
-\mathbf{\mathcal{E}}^{i}(\mathbf{r},t) &= \text{Re}\left[ \mathbf{E}^i(\mathbf{r})e^{-i\omega t}\right]= \text{Re}\left[ \mathbf{A}^i e^{i (\mathbf{k}^i\cdot \mathbf{r} -\omega t)} \right], \end{align*}
-```
-```{math}
-:label: eq.Hi
-\begin{align*}
-\\
-\mathbf{\mathcal{H}}^i(\mathbf{r},t) &= \text{Re}\left[ \mathbf{H}^i(\mathbf{r}) e^{-i\omega t}\right] = \text{Re} \left[ \frac{\mathbf{k}^i}{\omega \mu_0} \times \mathbf{A}^i e^{i (\mathbf{k}^i\cdot \mathbf{r} -\omega t)} \right],\end{align*}
-```
-where
-$\mathbf{k}^i= k_x^i \hat{\mathbf{x}} +k_y^i\hat{\mathbf{y}} + k_z^i \hat{\mathbf{z}}$, with
-
-```{math}
-:label: eq.kzi
-\begin{align*}
-k_z^i=\sqrt{k_0^2 \epsilon_i- (k_x^i)^2- (k_y^i)^2}.
-\end{align*}
-```
-Because the time dependence is given by $\exp(-i\omega t)$ with $\omega>0$ and the incident wave propagates in the positive $z$-direction, the positive square root is chosen for $k_z^i$.
-Part of the incident field is reflected into $z<0$ and part is transmitted into $z>0$. The reflected field is written as
-
-```{math}
-:label: eq.Er
-\begin{align*}
-\mathbf{\mathcal{E}}^{r}(\mathbf{r},t) &= \text{Re}\left[ \mathbf{E}^r(\mathbf{r})e^{-i\omega t}\right]= \text{Re}\left[ \mathbf{A}^r e^{i (\mathbf{k}^r \cdot \mathbf{r} -\omega t)}\right],
-\end{align*}
-```
-```{math}
-:label: eq.Hr
-\begin{align*}
-\\
-\mathbf{\mathcal{H}}^{r}(\mathbf{r},t) &= \text{Re}\left[ \mathbf{H}^r(\mathbf{r})e^{-i\omega t}\right]= \text{Re}\left[ \frac{\mathbf{k}^r}{\omega \mu_0}\times \mathbf{A}^r e^{i (\mathbf{k}^r \cdot \mathbf{r} -\omega t)}\right],\end{align*}
-```
-where
-$\mathbf{k}^r= k_x^r \hat{\mathbf{x}} +k_y^r\hat{\mathbf{y}} + k_z^r \hat{\mathbf{z}} $,
-with
-
-```{math}
-:label: eq.kzr
-\begin{align*}
-k_z^r=-\sqrt{k_0^2 \epsilon_i- (k_x^r)^2-(k_y^r)^2},
-\end{align*}
-```
-where the minus sign is chosen because the reflected wave propagates in the negative $z$-direction. The transmitted field is for $z>0$
-
-```{math}
-:label: eq.Et
-\begin{align*}
-\mathbf{\mathcal{E}}^{t}(\mathbf{r},t) &= \text{Re}\left[ \mathbf{E}^t(\mathbf{r})e^{-i\omega t}\right]= \text{Re}\left[ \mathbf{A}^t e^{i (\mathbf{k}^t\cdot \mathbf{r} -\omega t)} \right],.
-\end{align*}
-```
-```{math}
-:label: eq.Ht
-\begin{align*}
-\\
-\mathbf{\mathcal{H}}^{t}(\mathbf{r},t) &= \text{Re}\left[ \mathbf{H}^t(\mathbf{r})e^{-i\omega t}\right]= \text{Re}\left[ \frac{\mathbf{k}^t}{\omega\mu_0}\times \mathbf{A}^t e^{i (\mathbf{k}^t\cdot \mathbf{r} -\omega t)} \right],\end{align*}
-```
-where
-$\mathbf{k}^t= k_x^t \hat{\mathbf{x}} +k_y^t \hat{\mathbf{y}} + k_z^t \hat{\mathbf{z}}$, with
-
-```{math}
-:label: eq.kzt
-\begin{align*}
-k_z^t=\sqrt{k_0^2 \epsilon_t- (k_x^t)^2-(k_y^t)^2}.
-\end{align*}
-```
-Our aim is to determine $\mathbf{A}^r$ and $\mathbf{A}^t$ for given $\mathbf{A}^i$.
-
-```{index} Maxwell Boundary Conditions
-:name: section.bcmaxwell
-```
-There exist conditions for the continuity of the tangential and the normal components of both the electric and magnetic fields at an interface between different media.
-The boundary conditions for the tangential components follow from the Maxwell equations that contain the curl-operator, i.e. {eq}`eq.faraday5` and {eq}`eq.maxwell5`. There holds for the interface $z=0$ with the incident, reflected and transmitted plane waves introduced above:
-
-```{math}
-:label: eq.bcE_t
-\begin{align*}
-\hat{\mathbf{z}} \times (\mathbf{E}^i + \mathbf{E}^r)=\hat{\mathbf{z}} \times \mathbf{E}^t, \end{align*}
-```
-```{math}
-:label: eq.bcH_t
-\begin{align*}
-\\
-\hat{\mathbf{z}} \times (\mathbf{H}^i + \mathbf{H}^r)=\hat{\mathbf{z}} \times \mathbf{H}^t,\end{align*}
-```
-where $\hat{\mathbf{z}}$ is the unit normal on the interface. This means that the tangential components of the *total* electric and *total* magnetic field are continuous across the interface, or explicitly:
-
-```{math}
-:label: eq.bcEx
-\begin{align*}
-E_x^i(x,y,0) + E_x^r(x,y,0) &= E_x^t(x,y,0), \end{align*}
-```
-```{math}
-:label: eq.bcEy
-\begin{align*}
-\\
-E_y^i(x,y,0) + E_y^r(x,y,0) &= E_y^t(x,y,0),\end{align*}
-```
-and similarly for the magnetic field.
-
-
-```{figure} Images/Chapter_1/1_09_Stokes_loop_f1.png
-:name: Fig_2_08_Stokes_loop
-Closed loop in the $(x,z)$-plane enclosing the area $A$ and surrounding part of the interface $z=0$, as used in Stokes' Law to derive the continuity of the electric and magnetic components which are tangential to the interface and parallel to the plane through the loop.
-```
-
-
-We will only demonstrate that the tangential components of the electric field are continuous. By choosing a closed loop in the $(x,z)$-plane which is intersected by the interface $z=0$ as shown in {numref}`Fig_2_08_Stokes_loop`, and integrating the $y$-component of Faraday's Law {eq}`eq.faraday4` for the total electromagnetic field over the area $A$ bounded by the loop ${\cal L}$, we obtain:
-
-```{math}
-:label: eq.stokes
-\begin{align*}
--\mu_0 \frac{d}{dt} \int\!\int_A \hat{\mathbf{y}} \cdot \mathbf{\mathcal{H}} \mathrm{d}A &= \int\!\int_A \hat{\mathbf{y}} \cdot \mathbf{\nabla} \times \mathbf{\mathcal{E}} \mathrm{d}A  \\
-&= \oint_{\cal L} \mathbf{\mathcal{E}} \cdot \mathrm{d}\mathbf{l},
-\end{align*}
-```
-where in the last step, we used Stokes' theorem with the direction of integration over the loop given by that of the direction of rotation of a screwdriver when it moves in the direction of the normal $\hat{\mathbf{y}}$. In words, the rate of change of the magnetic flux through the surface $A$ is equal to the integral of the tangential electric field over the bounding closed loop ${\cal L}$.
-
-By taking the limit $\mathrm{d}z\rightarrow 0$, the surface integral and the integrals over the vertical parts of the loop vanish. There remain only the integrals of the tangential electric field over the horizontal parts parallel to the $x$-axis of the loop on both sides of the interface $z=0$. Since these integrals are traversed in opposite directions and the lengths of these parts are the same and arbitrary, we conclude for the loop as shown in {numref}`Fig_2_08_Stokes_loop` that
-
-```{math}
-:label: eq.fresnel10
-\begin{align*}
-\lim_{z\uparrow 0} \mathbf{\mathcal{E}}_x(x,y,z,t) = \lim_{z\downarrow 0} \mathbf{\mathcal{E}}_x(x,y,z,t),
-\end{align*}
-```
-where $\mathbf{\mathcal{E}}$ is the total electric field, i.e. it is equal to the sum of the incident and the reflected field for $z<0$, and equal to the transmitted field in $z>0$.
-By choosing the closed loop in the $(y,z)$-plane instead of the $(x,z)$-plane one finds similarly that the $y$-component of the electric field is continuous.
-The continuity of the tangential components of the magnetic field is derived in a similar manner.
-
-Our derivation holds for electromagnetic fields of arbitrary time dependence. Furthermore, the derivation used above for the planar interface $z=0$ can easily be generalized for curved surfaces. Therefore, we conclude:
-
-```{note}
-The tangential electric and magnetic field components are continuous across any interface.
-```
-
-By integrating Maxwell's equations that contain the div-operator {eq}`eq.gauss4`, {eq}`eq.divH4` over a pill box with height $\mathrm{d}z$ and top and bottom surfaces on either side and parallel to the interface, and considering the limit $\mathrm{d}z\rightarrow 0$, we find continuity relations for the normal components of the fields:
-
-```{math}
-:label: eq.bcE_z
-\begin{align*}
-\lim_{z\uparrow 0} \epsilon_i \hat{\mathbf{z}} \cdot\mathbf{\mathcal{E}}(x,y,z,t) &= \lim_{z\downarrow 0} \epsilon_t \hat{\mathbf{z}} \cdot \mathbf{\mathcal{E}}(x,y,z,t), \end{align*}
-```
-```{math}
-:label: eq.bcH_z
-\begin{align*}
-\lim_{z\uparrow 0} \hat{\mathbf{z}} \cdot\mathbf{\mathcal{H}}(x,y,z,t) &= \lim_{z\downarrow 0} \hat{\mathbf{z}}\cdot \mathbf{\mathcal{H}}(x,y,z,t),\end{align*}
-```
-
-```{note}
-The normal components of $\epsilon \mathbf{\mathcal{E}}$ and $\mathbf{\mathcal{H}}$ are continuous across an interface.
-```
-
-**Remarks.**
-- Since the derived boundary conditions hold for all times t, it follows that for time-harmonic fields they also hold for the complex fields. Hence {eq}`eq.bcE_t` and {eq}`eq.bcH_t` hold and similarly we find that the normal components of $\epsilon \mathbf{E}$ and $\mathbf{H}$ are continuous.
-- When the magnetic permeability is discontinuous, we have that the normal component of $\mu \mathbf{\mathcal{H}}$ is continuous across the interface. But as has been remarked before, at optical frequencies the magnetic permeability is often that of vacuum and we assume this to be the case throughout this book.
-
-
-(eq.snellslaw)=
-### Snell's Law
-
-By substituting the complex electric fields derived from {eq}`eq.Ei`, {eq}`eq.Er` and {eq}`eq.Et` into equation {eq}`eq.bcE_t`, we get
-
-```{math}
-:label: eq.contET
-\begin{align*}
-\hat{\mathbf{z}}\times \left[ \mathbf{A}^i e^{i (k_x^i x + k_y^i y)} + \mathbf{A}^r e^{i (k_x^r x + k_y^r y)}\right] = \hat{\mathbf{z}}\times \mathbf{A}^t e^{i (k_x^t x + k_y^t y)},
-\end{align*}
-```
-Since this equation must be satisfied for all points $(x,y)$, it follows that
-
-```{math}
-:label: eq.contkx
-\begin{align*}
-k_x^i = k_x^r=k_x^t, \end{align*}
-```
-```{math}
-:label: eq.contky
-\begin{align*}
-\\
-k_y^i = k_y^r=k_y^t.\end{align*}
-```
-Hence, the tangential components of the wave vectors of the incident, reflected and transmitted waves are identical.
-In fact, if {eq}`eq.contkx` would not hold, then by keeping $y$ fixed, the exponential functions in {eq}`eq.contET` would not all have the same periodicity as functions of $x$ and then {eq}`eq.contET` could never be satisfied for all $x$. The same argument with $x$ kept fixed leads to the conclusion {eq}`eq.contky`.
-
-Without restricting the generality, we will from now on assume that the coordinate system is chosen such that
-
-```{math}
-:label: eq.ky0
-\begin{align*}
-k_y^i=k_y^r=k_y^t=0.
-\end{align*}
-```
-The plane through the incident wave vector and the normal to the interface is called the **plane of incidence**. Hence in the case of {eq}`eq.ky0` the plane of incidence is the $(x,z)$-plane.
-
-Since the length of the wave vectors $\mathbf{k}^i$ and $\mathbf{k}^r$ is $k_0 n_i$, with $k_0$ the wave number in vacuum and $n_i=\sqrt{\epsilon_i/\epsilon_0}$ the refractive index, and since the length of $\mathbf{k}^t$ is $k_0n_t$, with $n_t=\sqrt{\epsilon_t/\epsilon_0}$, it follows from {eq}`eq.contkx`
-
-```{math}
-:label: eq.angle_ir
-\begin{align*}
-\sin \theta_i = \frac{k_x^i}{k_0 n_i}= \frac{k_x^r}{k_0 n_i}=\sin \theta_r,
-\end{align*}
-```
-and
-
-```{math}
-:label: eq.angle_it
-\begin{align*}
-n_i \sin \theta_i = \frac{k_x^i}{k_0} = \frac{k_x^t}{k_0} = n_t \sin \theta_t,
-\end{align*}
-```
-
-where the angles are as in {numref}`Fig_2_16_Interface`. Hence,
-
-```{figure} Images/Chapter_1/1_10_Interface_f1.png
-:name: Fig_2_16_Interface
-The incident, reflected, and transmitted wave vectors with the electric and magnetic vectors for s- and p-polarization. For s-polarization the electric field points out of the plane at the instant shown while for p-polarization the magnetic field points out of the plane at the instant shown.
-```
-
-
-
-```{math}
-:label: eq.angle_ir2
-\boxed{\begin{align*}
-\theta_i &= \theta_r,\hspace{1cm}\;\text{angle of reflection = angle of incidence}, \end{align*}}
-```
-
-```{math}
-:label: eq.angle_it2
-\boxed{\begin{align*}
-\\
-n_i \sin \theta_i &= n_t \sin \theta_t, \;\;\;
-\text{ Snell's Law}. \end{align*}}
-```
-
-Snell's Law<sup>[^5]</sup> implies that when the angle of incidence $\theta_i$ increases, the angle of transmission increases as well. If the medium in $z<0$ is air with refractive index $n_i=1$ and the other medium is glass with refractive index $n_t=1.5$, then the maximum angle of transmission occurs when $\theta_i=90^o$ with
-
-```{math}
-:label: eq.thetamax
-\begin{align*}
-\theta_{t,max} = \arcsin(n_i/n_t)=41.8^o.
-\end{align*}
-```
-In case the light is incident from glass, i.e. $n_i=1.5$ and $n_t=1.0$, the angle of incidence $\theta_i$ cannot be larger than $41.8^o$ because otherwise there is no real solution for $\theta_t$. It turns out that when $\theta_i> 41.8^o$, the wave is totally reflected and there is no *propagating* transmitted wave in air. As explained in [Total Internal Reflection and Evanescent Waves](#subsection.totalrefl), this does however not mean that there is no field in $z>0$. In fact there is a non-propagating so-called evanescent wave in $z>0$. The angle $\theta_{i,crit}=41.8^o$ is called the **critical angle of total internal reflection**. It exists only if a wave is incident from a medium with larger refractive index on a medium with lower refractive index ($n_t<n_i$). The critical angle is independent of the polarization of the incident wave.
-
-```{index} Fresnel Coefficients
-:name: subsection.fresnell
-```
-### Fresnel Coefficients
-
-Because of {eq}`eq.contkx` and {eq}`eq.ky0`, we write $k_x=k_x^i=k_x^r=k_x^t$ and therefore $k_z^i = \sqrt{k_0^2\epsilon_i - k_x^2} = -k_z^r$ and
-$k_z^t=\sqrt{k_0^2\epsilon_t-k_x^2}$. Hence,
-
-```{math}
-:label: eq.kikr
-\begin{align*}
-\mathbf{k}^i = k_x \hat{\mathbf{x}} + k_z^i \hat{\mathbf{z}}, \;\;\; \mathbf{k}^r = k_x\hat{\mathbf{x}} - k_z^i \hat{\mathbf{z}},
-\end{align*}
-```
-and
-
-```{math}
-:label: eq.kt
-\begin{align*}
-\mathbf{k}^t = k_x \hat{\mathbf{x}} + k_z^t \hat{\mathbf{z}}.
-\end{align*}
-```
-According to {eq}`eq.orth`, for the incident, reflected and transmitted plane waves there must hold:
-
-```{math}
-:label: eq.orth2
-\begin{align*}
-\mathbf{A}^i \cdot \mathbf{k}^i = \mathbf{A}^r\cdot \mathbf{k}^r = \mathbf{A}^t\cdot \mathbf{k}^t =0.
-\end{align*}
-```
-We choose an orthonormal basis perpendicular to $\mathbf{k}^i$ with unit vectors:
-
-```{math}
-:label: eq.sp
-\begin{align*}
-\hat{\mathbf{s}} = \hat{\mathbf{y}}, \quad \hat{\mathbf{p}}^i = \frac{1}{|\mathbf{k}^i|} \left( -k_z^i \hat{\mathbf{x}}+ k_x \hat{\mathbf{z}}\right),
-\end{align*}
-```
-where
-
-```{math}
-:label: eq.modk
-\begin{align*}
-|\mathbf{k}^i| = \sqrt{\mathbf{k}^i \cdot (\mathbf{k}^i)^*} = \sqrt{k_x^2 + |k_z^i|^2},
-\end{align*}
-```
-and where in writing the complex conjugate we anticipate the case the $k_z^i$ is complex, which may happen for example when $\epsilon_i$ is complex (a case that has been excluded so far but which later will be considered) or in the case of evanescent waves discussed in [Total Internal Reflection and Evanescent Waves](#subsection.totalrefl).
-Note that when $k_z^i$ is real, $|\mathbf{k}^i|=\sqrt{k_x^2 + (k_z^i)^2}=k_0n_i$.
-It is easy to see that the basis {eq}`eq.sp` is orthonormal in the space of two-dimensional complex vectors and that $\hat{\mathbf{s}}\cdot\mathbf{k}^i=\hat{\mathbf{p}}^i\cdot \mathbf{k}^i=0$. The vector $\hat{\mathbf{s}}$ is perpendicular to the plane of incidence, therefore the electric field component in this direction is polarized perpendicular to the plane of incidence and is called s-polarized ("Senkrecht" in German). The other basis vector $\hat{\mathbf{p}}^i$ is (for real $\mathbf{k}^i$) parallel to the plane of incidence and when the electric component in this direction it is called p-polarized.
-The complex vector $\mathbf{A}^i$ can be expanded on this basis:
-
-```{math}
-:label: eq.expandAi
-\begin{align*}
-\mathbf{A}^i= A^i_s \, \hat{\mathbf{y}} + A^i_p \, \hat{\mathbf{p}}^i.
-\end{align*}
-```
-Since
-
-```{math}
-:label: eq.vector
-\begin{align*}
-\mathbf{k}^i\times \hat{\mathbf{y}}= |\mathbf{k}^i| \hat{\mathbf{p}}^i, \;\;\; \mathbf{k}^i \times \hat{\mathbf{p}}^i= - \frac{k_0^2 \epsilon_i}{|\mathbf{k}^i|} \hat{\mathbf{y}},
-\end{align*}
-```
-it follows that the electric and magnetic field of the incident plane wave can be written as
-
-```{math}
-:label: eq.Eisp
-\begin{align*}
-\mathbf{E}^i(\mathbf{r}) &= \left(A^i_s\, \hat{\mathbf{y}} + A^i_p \, \hat{\mathbf{p}}^i\right) e^{i\mathbf{k}^i\cdot \mathbf{r}}, \end{align*}
-```
-```{math}
-:label: eq.Hisp
-\begin{align*}
-\\
-\mathbf{H}^i(\mathbf{r}) &=\left( \frac{ |\mathbf{k}^i| }{\omega \mu_0} A^i_s \, \hat{\mathbf{p}}^i - \frac{ \omega \epsilon_0\epsilon_i}{|\mathbf{k}^i|} A^i_p \, \hat{\mathbf{y}} \right) e^{i\mathbf{k}^i\cdot \mathbf{r}}.\end{align*}
-```
-The reflected field is expanded on the basis $\hat{\mathbf{y}}$ and $\hat{\mathbf{p}}^r$ with
-
-```{math}
-:label: eq.defpr
-\begin{align*}
-\hat{\mathbf{p}}^r = -\frac{1}{|\mathbf{k}^i|} \left( k_z^i \hat{\mathbf{x}} + k_x \hat{\mathbf{z}}\right).
-\end{align*}
-```
-The sign in front of the unit vector $\hat{\mathbf{p}}^r$ is chosen such that that its $x$-component is the same as that of $\hat{\mathbf{p}}^i$.
-Since
-
-```{math}
-:label: eq.vectorr
-\begin{align*}
-\mathbf{k}^r\times \hat{\mathbf{y}}= -|\mathbf{k}^i| \hat{\mathbf{p}}^r, \;\;\; \mathbf{k}^r \times \hat{\mathbf{p}}^r= \frac{k_0^2 \epsilon_i}{|\mathbf{k}^i|} \hat{\mathbf{y}},
-\end{align*}
-```
-it follows that
-
-```{math}
-:label: eq.Ersp
-\begin{align*}
-\mathbf{E}^r(\mathbf{r}) &= \left(A^r_s\, \hat{\mathbf{y}} + A^r_p \, \hat{\mathbf{p}}^r \right) e^{i\mathbf{k}^r\cdot \mathbf{r}}, \end{align*}
-```
-```{math}
-:label: eq.Hrsp
-\begin{align*}
-\\
-\mathbf{H}^r(\mathbf{r}) &=\left( -\frac{|\mathbf{k}^i|}{\omega \mu_0} A^r_s \, \hat{\mathbf{p}}^r + \frac{ \omega\epsilon_0 \epsilon_i}{|\mathbf{k}^i|} A^r_p \, \hat{\mathbf{y}} \right) e^{i\mathbf{k}^r\cdot \mathbf{r}},\end{align*}
-```
-where we used that $\mathbf{k}^r\cdot \mathbf{k}^r=k_0^2 n_i^2 $ and $|\mathbf{k}^r|=\sqrt{k_x^2 + |k_z^r|^2}=\sqrt{k_x^2+|k_z^i|^2}=|\mathbf{k}^i|$.
-For the transmitted plane wave we use the basis $\hat{\mathbf{y}}$ and $\hat{\mathbf{p}}^t$ with
-
-```{math}
-:label: eq.defPt
-\begin{align*}
-\hat{\mathbf{p}}^t= \frac{1}{|\mathbf{k}^t|} \left( -k_z^t \hat{\mathbf{x}}+ k_x \hat{\mathbf{z}}\right),
-\end{align*}
-```
-where $\hat{\mathbf{p}}^t$ is chosen such that the $x$-component of $\hat{\mathbf{p}}^t$ has the same sign as the $x$-component of $\hat{\mathbf{p}}^i$. Since
-
-```{math}
-:label: eq.vector2
-\begin{align*}
-\mathbf{k}^t\times \hat{\mathbf{y}}= |\mathbf{k}^t| \hat{\mathbf{p}}^t, \;\;\; \mathbf{k}^t \times \hat{\mathbf{p}}^t= - \frac{k_0^2 \epsilon_t}{|\mathbf{k}^t|} \hat{\mathbf{y}},
-\end{align*}
-```
-we get
-
-```{math}
-:label: eq.Etsp
-\begin{align*}
-\mathbf{E}^t(\mathbf{r}) &= \left( A^t_s\, \hat{\mathbf{y}} + A^t_p \, \hat{\mathbf{p}}^t \right) e^{i\mathbf{k}^t\cdot \mathbf{r}}, \end{align*}
-```
-```{math}
-:label: eq.Htsp
-\begin{align*}
-\\
-\mathbf{H}^t(\mathbf{r}) &= \left( \frac{ |\mathbf{k}^t|}{\omega \mu_0} A^t_s \, \hat{\mathbf{p}}^t - \frac{ \omega \epsilon_0\epsilon_t}{|\mathbf{k}^t|} A^t_p \, \hat{\mathbf{y}} \right) e^{i\mathbf{k}^t\cdot \mathbf{r}},\end{align*}
-```
-
-We now consider an s-polarized incident plane wave, i.e. $A^i_p=0$. We will show that all boundary conditions can be satisfied by $A^r_p=A^t_p=0$ and by appropriately expressing $A^r_s$ and $A^t_s$ in terms of $A^i_s$. This implies that if the incident plane wave is s-polarized, the reflected and transmitted waves are s-polarized as well. For s-polarization, the electric field has only a $y$-component and this component is tangential to the interface $z=0$. This leads to the condition
-
-```{math}
-:label: eq.Ascont1
-\begin{align*}
-A_s^i + A^r_s = A^t_s.
-\end{align*}
-```
-The only tangential component of the magnetic field is the $x$-component and requiring it to be continuous for $z=0$ leads to
-
-```{math}
-:label: eq.Ascont2
-\begin{align*}
--k_z^i A_s^i + k_z^i A^r_s = -k_z^t A^t_s.
-\end{align*}
-```
-Solving {eq}`eq.Ascont1`, {eq}`eq.Ascont2` for $A_s^r$ and $A^t_s$ gives the following formula for the reflection and transmission coefficients:
-
-
-```{math}
-:label: eq.rs_ch1
-\boxed{\begin{align*}
-r_s & = \frac{A^r_s}{A^i_s} = \frac{k_z^i-k_z^t}{k_z^i + k_z^t}, \end{align*}}
-```
-
-```{math}
-:label: eq.ts
-\boxed{\begin{align*}
-\\
-t_s & = \frac{A^t_s}{A^i_s} = \frac{2k_z^i}{k_z^i + k_z^t}. \end{align*}}
-```
-
-Only the magnetic field has a $z$-component and it easy to verify that $H^i_z + H^r_z = H_z$ for $z=0$.
-
-By looking at the case of a p-polarized incident wave: $A^i_s=0$, we see that the expression for the magnetic field in the p-polarized case become similar (except for the chosen signs) to that of the electric field for s-polarization and conversely. Enforcing the continuity of the tangential components at $z=0$ gives for p-polarization:
-
-
-```{math}
-:label: eq.rp
-\boxed{\begin{align*}
-r_p & = \frac{A^r_p}{A^i_p} = - \frac{\frac{k_z^i}{\epsilon_i}-\frac{k_z^t}{\epsilon_t}}{\frac{k_z^i}{\epsilon_i} + \frac{k_z^t}{\epsilon_t}}, \end{align*}}
-```
-
-```{math}
-:label: eq.tp
-\boxed{\begin{align*}
-\\
-t_p & = \frac{A^t_p}{A^i_p} =\frac{\epsilon_i |\mathbf{k}^t|}{\epsilon_t|\mathbf{k}^i|} \frac{\frac{2 k_z^i}{\epsilon_i}}{\frac{k_z^i}{\epsilon_i} + \frac{k_z^t}{\epsilon_t}}. \end{align*}}
-```
-
-It is easy to verify that $E_z$ is the only normal component and that $\epsilon_i (E^i_z+E^r_z)=\epsilon_t E^t_z$ for $z=0$.
-
-The reflection and transmission coefficients $r_s$, $r_p$, $t_s$ and $t_p$ are called **Fresnel coefficients**. As follows from the derivation, there is no cross talk between s- and p-polarized plane waves incident on a planar interface. A generally polarized incident plane wave can always be written as a linear combination of s- and a p-polarized incident plane waves. Because in general $r_s\neq r_p$ and $t_s\neq t_p$, it follows that the reflected and transmitted fields are also linear combinations of s- and p-polarized fields, but with different coefficients (weights) of these two fundamental polarization states than for the incident wave.
-
-
-
-
-**Remarks.**
-- In the derivation of the Fresnel coefficients the continuity of the normal field components was not used and was automatically satisfied. The reason is that the electromagnetic fields of the plane waves where chosen to be perpendicular to the wave vectors. This implies that the divergence of $\epsilon \mathbf{\mathcal{E}}$ and of $\mathbf{\mathcal{H}}$ vanishes which in turns implies that the normal components are automatically continuous across the interface.
-- When $k_z^i$ and $k_z^t$ are both real, we have $|\mathbf{k}^i|=k_0n_i$ and $|\mathbf{k}^t|=k_0n_t$ and the Fresnel coefficients can be expressed in the angles $\theta_i$, $\theta_r$ and $\theta_t$ and the refractive indices $n_i=\sqrt{\epsilon_i}/\epsilon_0$ and $n_t=\sqrt{\epsilon_t/\epsilon_0}$. Because $k^i_z=k_0n_i \cos\theta_i$ and $k^t_z=k_0 n_t \cos \theta_t$, we find
-
-```{math}
-:label: eq.rs_ch13
-\begin{align*}
-r_s &= \frac{n_i \cos \theta_i-n_t \cos \theta_t}{n_i \cos \theta_i + n_t \cos \theta_t} = -\frac{\sin(\theta_i-\theta_t)}{\sin(\theta_i+\theta_t)}, \end{align*}
-```
-```{math}
-:label: eq.ts3
-\begin{align*}
-\\
-t_s &= \frac{2 n_i \cos \theta_i }{ n_i \cos \theta_i + n_t \cos \theta_t} = \frac{2 \cos \theta_i \sin \theta_t}{\sin(\theta_i+\theta_t)},\end{align*}
-```
-and
-
-```{math}
-:label: eq.rp3
-\begin{align*}
-r_p &= - \frac{\frac{\cos\theta_i}{n_i} - \frac{\cos \theta_t}{n_t}}{ \frac{\cos\theta_i}{n_i} + \frac{\cos \theta_t}{n_t}}= -\frac{\tan(\theta_i-\theta_t)}{ \tan(\theta_i+\theta_t)}, \end{align*}
-```
-```{math}
-:label: eq.tp3
-\begin{align*}
-\\
-t_p &= \frac{\frac{2 \cos\theta_i}{n_i} }{ \frac{\cos\theta_i}{n_i} + \frac{\cos \theta_t}{n_t}}= \frac{ 2 \cos \theta_i \sin\theta_t}{ \sin(\theta_i+\theta_t) \cos(\theta_i-\theta_t)}.\end{align*}
-```
-To obtain the expressions at the far right in {eq}`eq.rs3`, {eq}`eq.ts3`, {eq}`eq.rs3` and {eq}`eq.tp3` Snell's Law has been used.
-
-- The advantage of the expressions {eq}`eq.rs`, {eq}`eq.ts`, {eq}`eq.rp`, {eq}`eq.tp` in terms of the wave vector components $k_z^i$ and $k_z^t$ is that these also apply when $k_z^i$ and/or $k_z^t$ are complex. The components $k_z^i$ and/or $k_z^t$ are complex when there is absorption in $z<0$ and/or in $z>0$. When $\epsilon_i>\epsilon_t$ and the incident angle is above the critical angle, $k_z^t$ is imaginary (see [Total Internal Reflection and Evanescent Waves](#subsection.totalrefl)).
-
-
-```{figure} Images/Chapter_1/1_11_Fresnel_coefficient_AG_f1.png
-:name: Fig_1_11_Fresnel_Coefficient
- Reflection and transmission coefficients as function of the angle of incidence of s- and p-polarized waves incident from air to glass. The Brewster angle $\theta_B$ is indicated.
-```
-
-
-### Properties of the Fresnel Coefficients
-For normal incidence: $\theta_i=0$, Snell's Law implies: $\theta_t=0$. Hence, {eq}`eq.rs3`, {eq}`eq.rp3` give:
-
-```{math}
-:label: eq.r_thetai0
-\begin{align*}
-r_s(\theta_i=0) = r_p(\theta_i=0)=\frac{n_i-n_t}{n_i + n_t},
-\end{align*}
-```
-So for normal incidence: $r_p=r_s$, as expected. Note however that if we would not have defined $\hat{\mathbf{p}}^r$ such that its tangential components are the same as those of $\hat{\mathbf{p}}^i$, the two reflection coefficients for normal incidence would have had the opposite signs (as is the case in some books).
-If the incident medium is air and the other medium is glass ($n_i=1.0$, $n_t=1.5$), we get
-
-```{math}
-:label: eq.airglass
-\begin{align*}
-r_s(\theta_i=0)=r_p(\theta_i=0)= -0.2,
-\end{align*}
-```
-and since the flow of energy is proportional to the square of the field, it follows that
-4\% of the normal incident light is reflected at the interface between air and glass. Hence a lens of glass without anti-reflection coating reflects approximately 4\% of the light at normal incidence. The transmission coefficient for normal incidence is:
-
-```{math}
-:label: eq.t_thetai0
-\begin{align*}
-t_s(\theta_i=0)=t_p(\theta_i=0)= \frac{2n_i}{n_i+n_t},
-\end{align*}
-```
-which for air-glass becomes $0.8$.
-
-
-
-
-**Remark**. Energy conservation requires that the normal component $<S_z>$ of the time-averaged energy flux through the interface is continuous.
-By using the formula for the time-averaged Poynting vector of a plane wave {eq}`eq.Saveplanew`, it can be verified that the Fresnel coefficients are such that the energy flux is indeed continuous.
-
-
-
-It follows from Snell's Law {eq}`eq.angle_it2` that when both refractive indices $n-i$ and $n_t$ are real, $\sin \theta_t = (n_i/n_t) \sin \theta_i$. Hence $\theta_t$ monotonically increases with $\theta_i$ and therefore there exists some $\theta_i$ such that
-
-```{math}
-:label: eq.brewster
-\begin{align*}
-\theta_i + \theta_t = 90^o.
-\end{align*}
-```
-For this particular angle of incidence, the denominator of {eq}`eq.rp3` is infinite and hence $r_p=0$, i.e. the p-polarized wave is not reflected at all. This angle of incidence is called the **Brewster angle** $\theta_{B}$<sup>[^6]</sup>.
-It is easy to see from {eq}`eq.rs3` that the reflection is never zero for s-polarization.
-
-```{note}
-If unpolarized light is incident at the Brewster angle, the reflected light will be purely s-polarized.
-```
-Since at the Brewster angle s-polarized light is only partially reflected and the rest is transmitted, the transmitted light at the Brewster angle is a mixture of s- and p-polarization.
-We have
-$\theta_t=90^o-\theta_i$, hence $\sin\theta_t=\cos\theta_i$ and by Snell's Law (writing $\theta_i=\theta_{B})$:
-
-```{math}
-:label: eq.Brewster2
-\begin{align*}
-\tan(\theta_{B})=\frac{n_t}{n_i}.
-\end{align*}
-```
-We see that there is always a Brewster angle when both refractive indices are real, independent of whether the wave is incident from the material with the smallest or largest refractive index. For the air-glass interface we have $\theta_{B}=56.3^o$ and $\theta_t=33.7^o$. By {eq}`eq.rs3`:
-
-```{math}
-:label: eq.rSbrewster
-\begin{align*}
-r_s(\theta_B=56.3^o)=-0.38,
-\end{align*}
-```
-so that $(0.38)^2/2=0.07$, or 7 \% of the unpolarized light is reflected as purely s-polarized light at the air glass interface at the Brewster angle. For a wave incident from glass, $\theta_{B}=33.7^o$.
-
-```{figure} Images/Chapter_1/1_12_Fresnel_coefficient_GA_f1.png
-:name: Fig_1_12_Fresnel_Coefficient
-Reflection and transmission coefficients as function of the angle of incidence of s- and p-polarized waves incident from glass to air.
-```
-
-
-
-
-In {numref}`Fig_1_12_Fresnel_Coefficient` the Fresnel reflection and transmission coefficients of s- and p-polarized waves are shown as functions of the angle of incidence for the case of incidence from air to glass. There is no critical angle of total reflection in this case. The Brewster angle is indicated. It is seen that the reflection coefficients decrease from the values $-0.2$ for $\theta_i=0^o$ to -1 for $\theta_i=90^o$.
-The transmission coefficients monotonically decrease to $0$ at $\theta_i=90^o$.
-
-{numref}`Fig_1_12_Fresnel_Coefficient` shows the Fresnel coefficients when the wave is incident from glass to air. The critical angle is $\theta_{i,crit}=41.8^o$ as derived earlier. At the angle of total internal reflection the absolute values of the reflection coefficients are identical to 1. There is again an angle where the reflection of p-polarized light is zero $\theta_{B}=33.7^o$.
-
-Depending on the refractive indices and the angle of incidence, the Fresnel reflection coefficients can be negative. The reflected electric field then has an additional $\pi$ phase shift compared to the incident wave. In contrast, (provided that the materials are lossless), the transmitted field is always in phase with the incident field, i.e. the transmission coefficients are always positive.
-
-```{index} Total Internal Reflection and Evanescent Waves
-:name: subsection.totalrefl
-```
-### Total Internal Reflection and Evanescent Waves
-
-We return to the case of a wave incident from glass to air, i.e. $n_i=1.5$ and $n_t=1$. As has been explained, there is then a critical angle, given by
-
-```{math}
-\begin{align*}
-\sin \theta_{i,crit} = \frac{n_t}{n_i}.
-\end{align*}
-```
-This is equivalent to
-
-```{math}
-:label: eq.kxt
-\begin{align*}
-k_x^{t} = k_0 n_i \sin \theta_{i,crit} = k_0 n_t.
-\end{align*}
-```
-The wave vector $\mathbf{k}^t=k_x^t \hat{\mathbf{x}} + k_z^t\hat{\mathbf{z}}$ in $z>0$ always satisfies:
-
-```{math}
-:label: eq.kt2
-\begin{align*}
-(k_x^t)^2 + (k_z^t)^2 = k_0^2 n_t^2,
-\end{align*}
-```
-and hence at the critical angle thresholds
-
-```{math}
-:label: eq.kzt0
-\begin{align*}
-k_z^t=0.
-\end{align*}
-```
-For angles of incidence above the critical angle we have: $k_x^t>k_0 n_t $ and it follows from {eq}`eq.kt2` that
-$(k_z^t)^2=k_0^2n_t^2 -(k_x^t)^2<0$, hence $k_z^t$ is **imaginary**:
-
-```{math}
-:label: eq.kzt2
-\begin{align*}
-k_z^t =\pm \sqrt{ k_0^2n_t^2 - (k_x^t)^2} = \pm i \sqrt{(k_x^t)^2-k_0^2},
-\end{align*}
-```
-where the last square root is a positive real number. It can be shown that above the critical angle the reflection coefficients are **complex** numbers with modulus 1: $|r_s|=|r_p|=1$. This implies that the reflected intensity is identical to the incident intensity, while at the same time the transmission coefficients are not zero! For example, for s-polarization we have according to {eq}`eq.rs`, {eq}`eq.ts`:
-
-```{math}
-:label: eq.rts
-\begin{align*}
-t_s=1+ r_s \neq 0,
-\end{align*}
-```
-because $r_s \neq -1$ (although $|r_s|=1$).
-Therefore there is an electric field in $z>0$, given by
-
-```{math}
-:label: eq.Eevan
-\begin{align*}
-\mathbf{E}(x,z)e^{-i \omega t} = t_s e^{i k_x^t x + i k_z^t z -i\omega t} \hat{\mathbf{y}}=
-t_s e^{i (k_x^t x - \omega t)} e^{ -z \sqrt{(k_x^t)^2-k_0^2n_t^2}} \hat{\mathbf{y}}, \;\; z>0,
-\end{align*}
-```
-where we have chosen the $+$ sign in {eq}`eq.kzt2` to prevent the field from blowing up for $z \rightarrow \infty$. Since $k_x^t$ is real, the wave propagates in the $x$-direction. In the $z$-direction, however, the wave is **not** propagating. Its amplitude decreases exponentially as a function of distance $z$ to the interface and therefore the wave is confined to a thin layer adjacent to the interface. Such a wave is called an **evanescent wave**.
-The Poynting vector of the evanescent wave can be computed and is found to be parallel to the interface. Hence,
-
-```{note}
-The flow of energy of an evanescent wave propagates parallel to the interface, namely in the direction in which $k_x^t$ is positive.
-```
-Hence no energy is transported away from the interface into the air region. We shall return to evanescent waves in the chapter on diffraction theory.
-
-```{admonition} External sources in recommended order
-1. [Youtube video - 8.03 - Lect 18 - Index of Refraction, Reflection, Fresnel Equations, Brewster Angle](https://www.youtube.com/watch?v=_D1z6t2z168) - Lecture by Walter Lewin
-	 2. [MIT OCW - Reflection at The Air-glass Boundary](https://ocw.mit.edu/resources/res-6-006-video-demonstrations-in-lasers-and-optics-spring-2008/demonstrations-in-physical-optics/reflection-at-the-air-glass-boundary/): demonstration of reflection of polarized light and the Brewster angle.
-```
-
-
-## Fiber Optics
-We will show in [](#chapter.diffraction) on diffraction that a light beam ultimately always becomes broader for increasing propagation distance. The divergence means that the energy density in the beam decreases with propagation distance. This divergence can be prevented by letting the light propagate inside a fiber.
-The guiding of light inside a fiber is based on the phenomenon of total internal reflection. The principle has been known for a long time, but the topic was greatly boosted by the invention of the laser.
-
-Consider a straight glass cylinder of refractive index $n_2$, surrounded by air with refractive index $n_1=1<n_2$. The core of the cylinder has a cross section approximately the size of a human hair and hence, although quite small, it is still many optical wavelengths thick. This implies that when light strikes the cylindrical surface, we can locally consider the cylinder as a flat surface. By focusing a laser beam at the entrance plane of the fiber, light can be coupled into the fiber. The part of the light inside the fiber that strikes the cylinder surface at an angle with the normal that is larger than the critical angle of total reflection will be totally reflected. As it hits the opposite side of the cylinder surface, it will again be totally reflected and so on ({numref}`Fig_2_13_Laser_Glass` top).
-
-```{figure} Images/Chapter_1/1_15_Fiber.png
-```
-
-```{figure} Images/Chapter_1/1_13_Laser_Glas_f1.jpg
-```
-
-```{figure} Images/Chapter_1/1_14_Schott_Fibers.jpg
-:name: Fig_2_13_Laser_Glass
-Top: schematic of a light ray entering a glass fiber; inside the light is totally reflected and is guided by the fiber. middle: Light guided within a piece of glass. (from [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Demostration_of_Total-Internal-Reflection(TIR)_in_a_wine_glass.jpg) by Keerthi - CC BY ); bottom: a glass fiber optic image inverter twists an image 180 degrees from its input surface to its output surface.(Image:&copy; SCHOTT)
-```
-
-
-Since visible light has such high frequencies (order $10^{15}$ Hz), roughly a hundred thousand times more information can be carried through a fiber than at microwave frequencies. Today fibers with very low losses are fabricated so that signals can be sent around the earth with hardly any attenuation. Abraham van Heel, professor of optics at Delft University of Technology, showed for the first time in a paper published in Nature in 1954<sup>[^7]</sup> that by packing thousands of fibers into a cable, images can be transferred, even if the bundle is bent ({numref}`Fig_2_13_Laser_Glass` bottom).
-
-```{admonition} External sources in recommended order
-1. [MIT OCW - Single Mode Fiber](https://ocw.mit.edu/resources/res-6-006-video-demonstrations-in-lasers-and-optics-spring-2008/demonstrations-in-physical-optics/single-mode-fiber/): Demonstration of a single-mode fiber.
-2. [MIT OCW - Multi-mode Fiber](https://ocw.mit.edu/resources/res-6-006-video-demonstrations-in-lasers-and-optics-spring-2008/demonstrations-in-physical-optics/multi-mode-fiber/): Demonstration of a multimode fiber.
-```
-
-
-
-[^1]: Units are given in square brackets.
-[^2]: The Maxwell equations are named after James Clerk Maxwell (1831-1879) who unified the laws of electricity and magnetism.
-[^3]: The curl and divergence operators are defined in Appendix A.
-[^4]: The wave equation is a second-order partial differential equation that describes the propagation of waves.
-[^5]: The complex notation is a mathematical tool that simplifies the handling of time-harmonic fields.
-[^6]: The Poynting vector represents the directional energy flux of an electromagnetic field.
-[^7]: The Brewster angle is the angle of incidence at which light with a particular polarization is perfectly transmitted through a surface.
-
-
-+++
+# Nature of Light
+
+This chapter provides a comprehensive introduction to the nature of light, covering its historical development, wave-particle duality, the electromagnetic spectrum, and radiometry. Here's a breakdown of each section:
+
+## Introduction
+
+The chapter opens with a humorous quote from Banesh Hoffmann's 1947 book "The Strange Story of the Quantum," highlighting the historical confusion about light's nature. The introduction establishes that understanding light has been one of physics' most fascinating challenges, noting that even 60 years after early quantum discoveries, Einstein admitted we were still in a state of "learned ignorance" about light's true nature.
+
+The text emphasizes how light connects multiple physics disciplines - optics, electricity, magnetism, and atomic physics - representing one of the great unifications in our understanding of the physical world.
+
+## 1-1 A Brief History
+
+The scientific understanding of light has undergone a remarkable evolution spanning more than three centuries, shaped by competing theories, groundbreaking experiments, and revolutionary insights that fundamentally changed our view of physical reality. This journey from classical mechanics to quantum theory represents one of the most profound intellectual transformations in the history of science, revealing the subtle and counterintuitive nature of light itself.
+
+In the 17th century, Isaac Newton proposed his influential particle theory, suggesting that light consisted of streams of tiny, massless particles—which he called "corpuscles"—traveling through space in perfectly straight lines at enormous speeds. This mechanistic approach was deeply rooted in Newton's broader philosophical framework, which sought to explain all natural phenomena through the motion and interaction of particles governed by mathematical laws. Newton's particle theory elegantly explained many observed optical phenomena: the formation of sharp, well-defined shadows could be understood as particles blocked by opaque objects, while the laws of reflection followed naturally from elastic collisions between light particles and smooth surfaces, much like billiard balls bouncing off cushions. The phenomenon of refraction, where light bends when passing from one medium to another, was explained by assuming that light particles experienced different forces in different materials, causing them to accelerate or decelerate and change direction accordingly. Despite the theory's explanatory power, Newton was troubled by certain observations that seemed difficult to reconcile with his particle hypothesis, particularly the colorful interference patterns known as Newton's rings, which appeared when light passed between closely spaced glass surfaces. Although these phenomena hinted at wave-like behavior, Newton's immense scientific authority and the general success of his mechanical worldview ensured that his particle theory dominated scientific thinking for well over a century.
+
+Contemporary with Newton but representing a fundamentally different philosophical approach, the Dutch physicist Christiaan Huygens advanced a sophisticated wave theory of light that would prove remarkably prescient. Huygens proposed that light propagated as waves through an all-pervading, invisible medium called the "luminiferous ether," much as sound waves travel through air or water waves move across the ocean's surface. According to Huygens' principle, every point on a advancing wavefront could be considered as a source of secondary wavelets, and the envelope of these wavelets determined the new position of the wavefront as it propagated through space. This elegant geometric construction successfully explained not only the familiar phenomena of reflection and refraction but also more complex behaviors that challenged Newton's particle theory. Huygens' wave model provided a natural explanation for the double refraction observed in calcite crystals, where a single incident ray splits into two refracted rays with different polarizations—a phenomenon that seemed to require light to have some form of internal structure or orientation that pure particles could not possess. Perhaps most significantly, the wave theory could account for the fact that when two light beams intersect, they pass through each other completely unmodified, emerging with their original properties intact, much as water waves pass through one another without permanent alteration. This behavior was difficult to explain with particle theory, which would predict collisions and scattering when particles from different beams encountered each other.
+
+The early 19th century witnessed a decisive shift in scientific opinion with Thomas Young's ingenious double-slit experiment, an investigation that many consider one of the most beautiful and profound experiments in the history of physics. Young directed light through two closely spaced, parallel slits and observed the resulting pattern on a screen placed behind the slits. Instead of seeing two bright bands corresponding to light passing through each slit—as particle theory would predict—Young observed a series of alternating bright and dark fringes, a characteristic interference pattern that could only be explained if light behaved as waves. The bright fringes occurred where waves from the two slits arrived in phase, reinforcing each other through constructive interference, while the dark fringes appeared where the waves arrived out of phase, canceling each other through destructive interference. This elegant demonstration provided compelling, virtually irrefutable evidence for the wave nature of light and shifted the scientific consensus decisively away from Newton's particle theory toward Huygens' wave model. Young's experiment also allowed for the first accurate measurements of light's wavelength, revealing that different colors corresponded to different wavelengths, with red light having longer wavelengths than blue light, providing a physical basis for understanding the spectrum of colors that had fascinated natural philosophers since Newton's work with prisms.
+
+The triumph of wave theory in the early 1800s sparked a period of remarkable theoretical and experimental progress that would define 19th-century optics. Augustin Fresnel made fundamental contributions to understanding polarized light, demonstrating that light waves were transverse rather than longitudinal—meaning that the oscillations occurred perpendicular to the direction of propagation, like waves on a string, rather than parallel to it, like sound waves in air. Fresnel's mathematical analysis of polarization phenomena led to his famous equations, which accurately predicted the fraction of light reflected and transmitted when electromagnetic waves encounter interfaces between materials with different optical properties. These equations became cornerstone tools for optical design and engineering, enabling the development of sophisticated optical instruments and technologies. Meanwhile, experimental investigations revealed increasingly subtle wave phenomena, including circular and elliptical polarization, optical activity in certain crystals and solutions, and the precise mathematical relationships governing diffraction patterns created by various apertures and obstacles. The wave theory seemed to provide a complete and satisfying account of all optical phenomena, requiring only the assumption of an ether medium to support the propagation of light waves through apparently empty space.
+
+The intellectual culmination of 19th-century wave theory came with James Clerk Maxwell's revolutionary electromagnetic theory, developed in the 1860s, which unified electricity, magnetism, and light into a single, elegant theoretical framework. Maxwell's equations predicted that oscillating electric and magnetic fields could propagate through space as self-sustaining electromagnetic waves, with the electric and magnetic components oscillating perpendicular to each other and to the direction of propagation. Most remarkably, when Maxwell calculated the speed of these electromagnetic waves using only electrical and magnetic constants measured in laboratory experiments, he found that they traveled at precisely the speed of light—a result so striking that it could hardly be coincidental. This mathematical prediction, confirmed by subsequent measurements, established that light was simply electromagnetic radiation within a specific frequency range, visible to human eyes by evolutionary accident rather than fundamental physical necessity. Maxwell's theory implied the existence of electromagnetic radiation spanning a vast spectrum of frequencies, from radio waves with wavelengths of kilometers to gamma rays with wavelengths smaller than atomic nuclei, with visible light occupying only a tiny sliver of this electromagnetic spectrum. The experimental confirmation of radio waves by Heinrich Hertz in the 1880s provided dramatic validation of Maxwell's theoretical predictions and seemed to establish electromagnetic wave theory as one of the great triumphs of 19th-century physics.
+
+However, the dawn of the 20th century brought a series of experimental discoveries that would shatter the comfortable certainty of classical wave theory and usher in the quantum revolution that continues to shape modern physics. The crisis began with Max Planck's investigation of blackbody radiation—the electromagnetic energy emitted by hot objects—which revealed that classical physics made predictions that disagreed dramatically with experimental observations. To resolve this "ultraviolet catastrophe," Planck made the desperate assumption that energy could only be emitted or absorbed in discrete packets, or "quanta," with energies given by $E = h\nu$, where $h$ was a new fundamental constant of nature (now called Planck's constant) and $\nu$ was the frequency of the radiation. Although Planck initially viewed this quantization as a mathematical artifice rather than a fundamental feature of nature, his quantum hypothesis marked the beginning of a new era in physics that would revolutionize our understanding of light and matter.
+
+Einstein's explanation of the photoelectric effect provided the next crucial step in establishing the particle nature of light, earning him the Nobel Prize and helping to establish the reality of photons as discrete packets of electromagnetic energy. Einstein demonstrated that when light strikes a metal surface, electrons are ejected with kinetic energies that depend on the frequency of the incident light rather than its intensity—a result that could not be explained by classical wave theory but followed naturally if light consisted of photons with energy $E = h\nu$. Each photon could transfer its entire energy to a single electron, providing enough energy to overcome the metal's work function and eject the electron from the surface. Arthur Compton's scattering experiments in the 1920s provided additional confirmation of photon reality by demonstrating that X-rays scattered from electrons behaved exactly like particles with momentum $p = E/c = h\nu/c$, experiencing billiard-ball-like collisions that conserved both energy and momentum according to relativistic mechanics.
+
+The quantum revolution reached its philosophical climax with Louis de Broglie's audacious proposal that the wave-particle duality observed in light was a universal feature of nature, extending to matter itself through the relationship $\lambda = h/p$, where matter particles with momentum $p$ should exhibit wave properties with wavelength $\lambda$. This hypothesis, initially met with skepticism, was dramatically confirmed by electron diffraction experiments that showed electrons creating interference patterns identical to those produced by light waves, revealing that the classical distinction between waves and particles was an artifact of limited experimental resolution rather than a fundamental feature of reality. The subsequent development of quantum mechanics by Schrödinger, Heisenberg, Born, and others established that all quantum objects—photons, electrons, atoms, and even large molecules—exhibit both wave and particle characteristics depending on how they are observed and measured, with the apparent contradiction resolved through the probabilistic interpretation of quantum mechanical wavefunctions that describe the likelihood of finding particles at particular locations when measurements are performed.
+## 1-2 Particles and Photons
+
+# 1-2 Particles and Photons
+
+The quantum mechanical revolution of the early 20th century fundamentally changed our understanding of light and matter. What emerged was a profound realization that neither the classical wave model nor the classical particle model alone could adequately describe the behavior of photons and electrons. Instead, these entities exhibit **wave-particle duality**—displaying both wave and particle characteristics depending on the experimental context in which they are observed.
+
+## Wave-Particle Duality
+
+The concept of wave-particle duality represents one of the most counterintuitive yet essential principles in modern physics. When we observe light in certain experiments, such as interference and diffraction phenomena, it behaves unmistakably like a wave. The famous double-slit experiment demonstrates this beautifully, producing interference patterns that can only be explained by wave superposition. However, in other contexts, such as the photoelectric effect or Compton scattering, light behaves as discrete particles called photons, each carrying a specific quantum of energy.
+
+Similarly, electrons and other material particles, traditionally viewed as solid, localized objects, also exhibit wave-like properties. Louis de Broglie's revolutionary hypothesis proposed that all matter has an associated wavelength, leading to the development of electron microscopy and our modern understanding of atomic structure.
+
+## Fundamental Quantum Mechanical Equations
+
+Quantum mechanics provides a unified mathematical framework that describes both material particles and photons through a set of fundamental relationships. For any particle or photon, the following equations connect energy, momentum, mass, and other properties:
+
+The **relativistic energy-momentum relation** gives us:
+$$p = \frac{\sqrt{E^2 - m^2c^4}}{c} \tag{1-3}$$
+
+The **de Broglie wavelength** relates the wave and particle aspects:
+$$\lambda = \frac{h}{p} = \frac{hc}{\sqrt{E^2 - m^2c^4}} \tag{1-4}$$
+
+The **relativistic velocity** can be expressed as:
+$$v = \frac{pc^2}{E} = c\sqrt{1 - \frac{m^2c^4}{E^2}} \tag{1-5}$$
+
+These equations apply universally to both massive particles and massless photons, though they simplify considerably for the photon case.
+
+## Photon Properties
+
+For photons, which have zero rest mass ($m = 0$), the fundamental equations reduce to elegant, simpler forms. Setting $m = 0$ in the relativistic energy-momentum relation yields:
+
+$$p = \frac{E}{c} \tag{1-6}$$
+
+This tells us that a photon's momentum is directly proportional to its energy, with the speed of light as the proportionality constant.
+
+The de Broglie wavelength for photons becomes:
+$$\lambda = \frac{hc}{E} \tag{1-7}$$
+
+This relationship directly connects the wave property (wavelength) with the particle property (energy) through Planck's constant $h$.
+
+Finally, all photons travel at the same speed regardless of their energy:
+$$v = c \tag{1-8}$$
+
+This universal speed is one of the defining characteristics of electromagnetic radiation and forms the basis for Einstein's special theory of relativity.
+
+## Example 1-1: Electron and Photon Comparison
+
+To illustrate these concepts, consider an electron with kinetic energy $K = 2.5$ MeV. We can calculate its relativistic properties and compare them with a photon of the same total energy.
+
+For the electron, the total energy is $E = K + mc^2 = 2.5 + 0.511 = 3.011$ MeV. Using equation (1-3), the momentum is:
+$$p = \frac{\sqrt{(3.011)^2 - (0.511)^2}}{c} = \frac{2.97}{c} \text{ MeV}$$
+
+The de Broglie wavelength from equation (1-4) is:
+$$\lambda = \frac{hc}{pc} = \frac{1.24 \times 10^{-6}}{2.97} = 4.18 \times 10^{-7} \text{ m}$$
+
+The electron's speed from equation (1-5) is:
+$$v = c\sqrt{1 - \frac{(0.511)^2}{(3.011)^2}} = 0.987c$$
+
+For a photon with the same total energy (3.011 MeV), the momentum would be $p = E/c = 3.011$ MeV/c, the wavelength would be $\lambda = hc/E = 4.12 \times 10^{-7}$ m, and the speed would be exactly $c$.
+
+## Statistical Behavior
+
+Beyond their individual properties, electrons and photons exhibit fundamentally different statistical behaviors that have profound implications for quantum systems. Electrons, being fermions with half-integer spin, obey **Fermi-Dirac statistics**. This means they are subject to the Pauli exclusion principle—no two electrons can occupy the same quantum state simultaneously. This principle governs the structure of atoms, the periodic table of elements, and the electrical properties of materials.
+
+Photons, on the other hand, are bosons with integer spin and obey **Bose-Einstein statistics**. Unlike electrons, multiple photons can occupy the same quantum state without restriction. This property is crucial for understanding laser operation, where many photons are stimulated to emit into the same mode, creating the coherent, intense light characteristic of laser beams.
+
+The statistical differences also manifest in other phenomena. The tendency of bosons to "cluster" in the same state leads to Bose-Einstein condensation at very low temperatures, while the exclusion principle for fermions results in degeneracy pressure that supports white dwarf stars against gravitational collapse.
+
+## Implications and Applications
+
+The wave-particle duality and quantum mechanical description of light and matter have revolutionized technology and our understanding of nature. Electron microscopy exploits the wave nature of electrons to achieve resolution far beyond optical microscopes. Quantum electronics relies on the particle nature of light in devices like photodiodes and photomultiplier tubes. Modern telecommunications uses both aspects—the wave nature for propagation and interference effects in fiber optics, and the particle nature for quantum cryptography and single-photon detection.
+
+The unification provided by quantum mechanics demonstrates that what we perceive as fundamentally different phenomena—waves and particles—are actually complementary aspects of a deeper quantum reality. This duality extends beyond photons and electrons to all quantum entities, forming the foundation for our modern understanding of atomic physics, condensed matter physics, and quantum field theory.
+
+
+# 1-3 The Electromagnetic Spectrum
+
+Electromagnetic radiation encompasses an enormous range of wavelengths and frequencies, from radio waves spanning kilometers to gamma rays with wavelengths smaller than atomic nuclei. Despite this vast diversity, all electromagnetic waves share fundamental properties and are unified by the same underlying physics.
+
+## Basic Properties of Electromagnetic Waves
+
+All electromagnetic waves, regardless of their wavelength or frequency, travel at the same speed in vacuum: $c = 3.00 \times 10^8$ m/s. This universal speed represents one of nature's fundamental constants and forms the cornerstone of Einstein's special relativity.
+
+The relationship between wavelength $\lambda$ and frequency $\nu$ is given by:
+$$c = \lambda\nu \tag{1-9}$$
+
+This simple equation reveals an inverse relationship: as wavelength increases, frequency decreases proportionally. The energy of electromagnetic radiation is quantized in units called photons, with each photon carrying energy $E = h\nu$, where $h$ is Planck's constant. This quantization means that electromagnetic waves can only gain or lose energy in discrete amounts proportional to their frequency.
+
+## The Electromagnetic Spectrum Regions
+
+The electromagnetic spectrum is traditionally divided into regions based on wavelength, frequency, and the physical mechanisms that produce and detect the radiation. Figure 1-1 illustrates these regions and their characteristic properties.
+
+### Radio Waves
+Radio waves represent the longest wavelengths in the electromagnetic spectrum, ranging from kilometers down to about one meter. These waves are produced by oscillating electric charges in antennas and circuits. Radio waves readily penetrate Earth's atmosphere and can travel vast distances, making them ideal for communication. They are used in AM and FM radio broadcasting, television transmission, and various forms of wireless communication.
+
+### Microwaves
+With wavelengths from about one meter down to one millimeter, microwaves occupy the transition region between radio waves and infrared radiation. They are extensively used in radar systems, where their ability to reflect off objects enables distance and velocity measurements. Microwave ovens operate at 2.45 GHz, causing water molecules to rotate and generate heat through friction. Satellite communications and cellular phone networks also rely heavily on microwave frequencies.
+
+### Infrared Radiation
+Infrared (IR) radiation spans wavelengths from 770 nanometers to about one millimeter. All objects above absolute zero emit thermal infrared radiation, with the peak wavelength determined by temperature according to Wien's displacement law. Infrared radiation is subdivided into near-infrared (closest to visible light), mid-infrared, and far-infrared regions. Night-vision equipment detects infrared emission from warm objects, while infrared spectroscopy identifies molecular vibrations for chemical analysis.
+
+### Visible Light
+The visible portion of the electromagnetic spectrum represents only a tiny fraction of the total range, spanning approximately 380 to 770 nanometers. Human eyes have evolved to detect this narrow band because it corresponds to the peak output of our Sun and the wavelengths that penetrate Earth's atmosphere most effectively. Within this range, different wavelengths correspond to different colors: violet (380-450 nm), blue (450-495 nm), green (495-570 nm), yellow (570-590 nm), orange (590-620 nm), and red (620-770 nm).
+
+### Ultraviolet Radiation
+Ultraviolet (UV) radiation extends from the violet edge of visible light (380 nm) down to about 10 nanometers. This region is further subdivided based on biological effects and atmospheric absorption: UV-A (315-400 nm) penetrates the atmosphere and can cause skin aging; UV-B (280-315 nm) is partially absorbed by ozone and causes sunburn; UV-C (100-280 nm) is completely absorbed by the atmosphere and is germicidal. UV radiation has sufficient energy to break chemical bonds and ionize atoms, making it both useful for sterilization and potentially harmful to living tissue.
+
+### X-rays
+X-rays occupy wavelengths from about 10 nanometers down to 10⁻⁴ nanometers. They are typically produced when high-energy electrons bombard a metal target, causing the emission of characteristic X-rays as inner electron shells are disturbed. X-rays penetrate soft tissue but are absorbed by denser materials like bone, making them invaluable for medical imaging. X-ray crystallography uses the wave nature of X-rays to determine atomic structure in crystals through diffraction patterns.
+
+### Gamma Rays
+Gamma rays represent the shortest wavelengths in the electromagnetic spectrum, typically less than 0.1 nanometers. They originate from nuclear decay processes, nuclear reactions, and high-energy astronomical phenomena. Gamma rays have enormous penetrating power and require thick lead or concrete shielding. In medicine, controlled gamma radiation is used for cancer treatment, while gamma-ray astronomy reveals the most energetic processes in the universe.
+
+## Energy Quantization and Detection
+
+A crucial concept for understanding electromagnetic radiation is that its energy becomes increasingly "grainy" at higher frequencies. Low-frequency radio waves have such small photon energies that individual photons are undetectable with ordinary instruments—the signal appears continuous. However, as frequency increases, photon energies become large enough that individual photons can be detected and counted.
+
+## Example 1-2: Radar Detection and Photon Statistics
+
+Consider a radar receiver detecting electromagnetic radiation at different wavelengths. For a 10-meter radio wave (30 MHz), each photon carries energy $E = h\nu = (6.63 \times 10^{-34})(3 \times 10^7) = 2.0 \times 10^{-26}$ J. A typical radar signal might deliver $10^{-12}$ watts to the receiver, corresponding to about $3 \times 10^{13}$ photons per second—far too many to detect individually.
+
+In contrast, X-ray photons with wavelength 0.1 nm have energy $E = hc/\lambda = 2.0 \times 10^{-15}$ J—about $10^{11}$ times more energetic than the radio photons. The same power level would correspond to only about 300 X-ray photons per second, easily counted by modern detectors.
+
+This dramatic difference in photon flux explains why radio astronomy requires large dish antennas to collect sufficient signal, while X-ray astronomy can operate with much smaller collection areas but requires specialized detectors capable of registering individual photons.
+
+The electromagnetic spectrum thus represents a continuum of radiation unified by common physical principles yet displaying remarkably diverse properties and applications across its vast range of wavelengths and frequencies.
+
+## 1-4 Radiometry
+
+# 1-4 Radiometry
+
+The quantitative measurement and characterization of electromagnetic radiation forms the foundation of radiometry, a discipline that provides the mathematical framework essential for understanding energy transport by electromagnetic waves. Whether designing optical instruments, analyzing thermal radiation, or characterizing laser systems, radiometry supplies the precise terminology and mathematical relationships needed to describe how electromagnetic energy flows through space and interacts with matter.
+
+## Fundamental Radiometric Concepts
+
+Radiometry addresses the fundamental question of how electromagnetic energy propagates from sources to detectors. Unlike photometry, which focuses on human visual perception, radiometry treats all electromagnetic radiation objectively, providing universal principles that apply across the entire electromagnetic spectrum. The field establishes standardized quantities and units that enable precise communication about radiation measurements and facilitate the design of optical systems.
+
+The importance of radiometric principles extends far beyond academic physics. Modern applications ranging from satellite remote sensing to fiber optic communications, from thermal imaging to solar energy collection, all rely on accurate radiometric analysis. Understanding these concepts enables engineers and scientists to predict system performance, optimize designs, and interpret measurements correctly.
+
+## Key Radiometric Quantities
+
+Radiometry defines several interconnected quantities, each serving specific purposes in describing electromagnetic radiation. These quantities, summarized in Table 1-1, form a complete framework for characterizing radiation fields.
+
+**Radiant Energy** ($Q_e$), measured in joules, represents the total electromagnetic energy present in a region of space or emitted by a source over a specified time interval. This fundamental quantity provides the foundation for all other radiometric measurements, though it is often more useful to consider rates of energy flow rather than total energy.
+
+**Radiant Flux** or **Radiant Power** ($\Phi_e$), measured in watts, describes the time rate of energy flow:
+$$\Phi_e = \frac{dQ_e}{dt}$$
+
+This quantity proves particularly useful for characterizing sources and determining the power available for detection or utilization. Radiant flux forms the basis for more specialized radiometric quantities that account for spatial and angular distributions.
+
+**Irradiance** ($E_e$), measured in watts per square meter, quantifies the radiant flux incident on a surface per unit area:
+$$E_e = \frac{d\Phi_e}{dA}$$
+
+Irradiance measurements are fundamental in applications such as solar energy assessment, where the goal is to determine the power available from sunlight falling on a collector of known area.
+
+**Radiant Exitance** ($M_e$), also measured in watts per square meter, describes the radiant flux leaving a surface per unit area. This quantity proves essential for characterizing sources and understanding thermal radiation from heated objects.
+
+## Angular Considerations in Radiometry
+
+Many radiometric applications require understanding how radiation varies with direction, necessitating quantities that incorporate angular dependence.
+
+**Radiant Intensity** ($I_e$), measured in watts per steradian, describes the radiant flux per unit solid angle in a given direction:
+$$I_e = \frac{d\Phi_e}{d\omega} \tag{1-10}$$
+
+where $d\omega$ represents the differential solid angle in steradians. Radiant intensity characterizes the directional emission pattern of sources, crucial information for applications such as illumination design and antenna analysis.
+
+**Radiance** ($L_e$), measured in watts per square meter per steradian, represents the most complete radiometric quantity, describing the radiant flux per unit projected area per unit solid angle:
+$$L_e = \frac{d^2\Phi_e}{dA\cos\theta \, d\omega}$$
+
+Radiance provides the most detailed description of radiation fields and plays a central role in optical system analysis.
+
+## The Inverse Square Law
+
+For point sources radiating uniformly in all directions, geometric considerations lead to the inverse square law, one of the most important relationships in radiometry. Consider a point source emitting total radiant flux $\Phi_e$ uniformly over all directions. At distance $r$ from the source, this flux is distributed over a spherical surface of area $4\pi r^2$. The irradiance at this distance becomes:
+
+$$E_e = \frac{\Phi_e}{4\pi r^2} \tag{1-11}$$
+
+For sources with directional emission characterized by radiant intensity $I_e$, the relationship simplifies to:
+$$E_e = \frac{I_e}{r^2}$$
+
+This inverse square dependence explains why astronomical objects appear dimmer at greater distances and why illumination systems require careful consideration of source-to-target distances. The law assumes point sources and neglects atmospheric absorption, but provides excellent approximations for many practical situations.
+
+## Lambert's Cosine Law and Diffuse Surfaces
+
+Many natural and artificial surfaces exhibit approximately diffuse reflection or emission, characterized by Lambert's cosine law. For a perfectly diffuse surface, the radiant intensity varies with viewing angle $\theta$ (measured from the surface normal) according to:
+
+$$I(\theta) = I(0)\cos\theta \tag{1-13}$$
+
+where $I(0)$ represents the intensity in the normal direction. This angular dependence might initially suggest that diffuse surfaces appear brighter when viewed straight-on than at oblique angles. However, the projected area of the surface as seen by an observer also varies as $\cos\theta$, leading to a remarkable result.
+
+The radiance of a perfectly diffuse surface is given by:
+$$L_e = \frac{I(\theta)}{A\cos\theta} = \frac{I(0)\cos\theta}{A\cos\theta} = \frac{I(0)}{A} = \text{constant} \tag{1-14}$$
+
+This constancy of radiance explains why diffuse surfaces appear equally bright from all viewing angles—a familiar observation that the brightness of a white sheet of paper remains constant as you change your viewing position.
+
+## Radiance Invariance Theorem
+
+One of the most powerful principles in radiometry states that radiance remains constant along a ray in a non-absorbing medium. This fundamental theorem can be proven using conservation of energy and the properties of solid angles.
+
+Consider radiance $L_e$ at two points along a ray in vacuum or a transparent medium. Using conservation of energy and the relationship between solid angles as viewed from different positions, it can be shown that:
+
+$$L_e(\text{point 1}) = L_e(\text{point 2}) \tag{1-15}$$
+
+This invariance principle has profound implications for optical system design. It means that no optical system can increase the radiance of a source—lenses and mirrors can redirect and concentrate radiation, but they cannot increase the fundamental brightness of extended sources. This limitation, sometimes called the conservation of étendue or the brightness theorem, constrains the performance of optical systems and explains why simply adding more lenses cannot arbitrarily increase the intensity of solar radiation.
+
+The radiance invariance theorem also applies at boundaries between different media, provided appropriate corrections for refractive index are included:
+$$\frac{L_e^{(1)}}{n_1^2} = \frac{L_e^{(2)}}{n_2^2} \tag{1-16}$$
+
+where $n_1$ and $n_2$ are the refractive indices of the two media.
+
+## Practical Example: Helium-Neon Laser Characterization
+
+To illustrate radiometric principles, consider a typical helium-neon laser with the following specifications: output power $P = 1.0$ mW, beam diameter $d = 1.5$ mm, and full-angle beam divergence $\theta = 1.2$ milliradians.
+
+First, we calculate the solid angle subtended by the diverging beam. For small angles, the solid angle is approximately:
+$$\Omega = \pi\left(\frac{\theta}{2}\right)^2 = \pi\left(\frac{1.2 \times 10^{-3}}{2}\right)^2 = 1.13 \times 10^{-6} \text{ steradians}$$
+
+The radiant intensity of the laser is:
+$$I_e = \frac{\Phi_e}{\Omega} = \frac{1.0 \times 10^{-3}}{1.13 \times 10^{-6}} = 885 \text{ W/sr}$$
+
+The cross-sectional area of the beam is:
+$$A = \pi\left(\frac{d}{2}\right)^2 = \pi\left(\frac{1.5 \times 10^{-3}}{2}\right)^2 = 1.77 \times 10^{-6} \text{ m}^2$$
+
+The radiance of the laser beam is:
+$$L_e = \frac{I_e}{A} = \frac{885}{1.77 \times 10^{-6}} = 5.0 \times 10^8 \text{ W·m}^{-2}\text{·sr}^{-1}$$
+
+This high radiance value illustrates why even low-power lasers can be dangerous to human vision—the concentrated energy density far exceeds that of conventional sources.
+
+The irradiance at the laser output is:
+$$E_e = \frac{\Phi_e}{A} = \frac{1.0 \times 10^{-3}}{1.77 \times 10^{-6}} = 565 \text{ W/m}^2$$
+
+These calculations demonstrate how radiometric quantities provide quantitative characterization essential for laser safety analysis, system design, and performance prediction.
+
+Radiometry thus provides the mathematical foundation for understanding electromagnetic radiation transport, enabling precise analysis and design of optical systems across diverse applications from astronomy to laser technology.
+
+## Problems
+
+The chapter includes 17 problems ranging from basic de Broglie wavelength calculations to more complex radiometric analyses, providing students with opportunities to apply the theoretical concepts to practical situations involving photons, electromagnetic waves, and optical systems.
+
+This chapter effectively establishes the foundation for understanding light as both wave and particle, providing the mathematical tools and physical insights necessary for advanced optics studies.
+
+# Problems
+
+**1.1** Calculate the de Broglie wavelength of an electron moving at 2.5 × 10⁶ m/s. Compare this to the wavelength of a photon with the same momentum.
+
+**1.2** A photon has a wavelength of 550 nm (green light). Find its:
+(a) frequency
+(b) energy in joules
+(c) energy in eV
+(d) momentum
+
+**1.3** An electron is accelerated from rest through a potential difference of 100 V. Calculate:
+(a) its kinetic energy in eV
+(b) its de Broglie wavelength
+(c) its speed (non-relativistic approximation is acceptable)
+
+**1.4** For a relativistic electron with total energy E = 2.0 MeV:
+(a) Find the kinetic energy
+(b) Calculate the momentum using equation 1-3
+(c) Determine the de Broglie wavelength
+(d) Find the speed using equation 1-5
+
+**1.5** A helium-neon laser emits light at wavelength 632.8 nm with a power of 5.0 mW. How many photons does it emit per second?
+
+**1.6** Compare the energy and momentum of:
+(a) A 1.0 MeV photon
+(b) A 1.0 MeV electron (total energy)
+Which has the shorter wavelength?
+
+**1.7** An X-ray photon has energy 50 keV. Calculate:
+(a) its wavelength
+(b) its momentum
+(c) the momentum of an electron with the same energy
+
+**1.8** The average wavelength of sunlight is approximately 550 nm, and the solar constant (irradiance at Earth's distance) is 1360 W/m². Calculate:
+(a) the energy per photon
+(b) the number of photons per square meter per second reaching Earth's atmosphere
+
+**1.9** A microwave oven operates at frequency 2.45 GHz. Find:
+(a) the wavelength
+(b) the photon energy in joules and eV
+(c) the number of photons emitted per second if the oven generates 800 W of microwave power
+
+**1.10** An AM radio station broadcasts at 1200 kHz with a power of 50 kW. An FM station broadcasts at 101.5 MHz with the same power. Calculate the number of photons per second emitted by each station and comment on the detectability of individual photons.
+
+**1.11** A point light source emits 60 W uniformly in all directions. Calculate the irradiance at distances of:
+(a) 1.0 m
+(b) 5.0 m
+(c) 100 m
+
+**1.12** A laser pointer has a radiant intensity of 1.5 × 10⁻³ W/sr. Find the irradiance it produces on a screen at distance:
+(a) 2.0 m
+(b) 10 m
+
+**1.13** A perfectly diffuse surface has radiance L₀ = 1000 W·m⁻²·sr⁻¹. Calculate:
+(a) the radiant exitance of the surface
+(b) the radiant intensity per unit area in the normal direction
+(c) the radiant intensity per unit area at 45° from the normal
+
+**1.14** A collimated laser beam has diameter 2.0 mm and power 10 mW. If the beam divergence is negligible over short distances, calculate:
+(a) the irradiance in the beam
+(b) the radiant intensity if the beam divergence half-angle is 0.5 mrad
+(c) the radiance of the beam
+
+**1.15** Consider a tungsten filament lamp rated at 100 W electrical power with 5% efficiency for visible light production. The filament area is 20 mm² and emits as a Lambert surface. Calculate:
+(a) the radiant exitance for visible light
+(b) the radiance
+(c) the radiant intensity per unit area in the normal direction
+
+**1.16** A camera with lens diameter 50 mm is used to photograph a distant star. The star has apparent magnitude +2.0, corresponding to an irradiance of 2.5 × 10⁻⁹ W/m² at the camera location. If the star light has average wavelength 550 nm, calculate:
+(a) the total power collected by the camera lens
+(b) the number of photons per second reaching the detector
+(c) the minimum exposure time needed to collect 1000 photons
+
+**1.17** A solar panel with area 2.0 m² receives sunlight with irradiance 800 W/m². The average photon energy corresponds to wavelength 600 nm. Calculate:
+(a) the total power incident on the panel
+(b) the number of photons per second hitting the panel
+(c) If the panel has 20% efficiency in converting photons to electrical energy, what is the electrical power output?
+(d) Compare the photon flux to that of a 10 mW laser pointer with 1 mm beam diameter
+
 
 ### QUIZ TRYOUT
 The following are some possible ways to include questions inline. Source: [Jupyter quiz](https://pypi.org/project/jupyterquiz/#description). The content of the questions can be found in the file ```questions_ch1.json```
