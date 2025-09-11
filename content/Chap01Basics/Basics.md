@@ -41,7 +41,7 @@ However, the dawn of the 20th century brought a series of experimental discoveri
 Einstein's explanation of the photoelectric effect provided the next crucial step in establishing the particle nature of light, earning him the Nobel Prize and helping to establish the reality of photons as discrete packets of electromagnetic energy. Einstein demonstrated that when light strikes a metal surface, electrons are ejected with kinetic energies that depend on the frequency of the incident light rather than its intensity—a result that could not be explained by classical wave theory but followed naturally if light consisted of photons with energy $E = h\nu$. Each photon could transfer its entire energy to a single electron, providing enough energy to overcome the metal's work function and eject the electron from the surface. Arthur Compton's scattering experiments in the 1920s provided additional confirmation of photon reality by demonstrating that X-rays scattered from electrons behaved exactly like particles with momentum $p = E/c = h\nu/c$, experiencing billiard-ball-like collisions that conserved both energy and momentum according to relativistic mechanics.
 
 The quantum revolution reached its philosophical climax with Louis de Broglie's audacious proposal that the wave-particle duality observed in light was a universal feature of nature, extending to matter itself through the relationship $\lambda = h/p$, where matter particles with momentum $p$ should exhibit wave properties with wavelength $\lambda$. This hypothesis, initially met with skepticism, was dramatically confirmed by electron diffraction experiments that showed electrons creating interference patterns identical to those produced by light waves, revealing that the classical distinction between waves and particles was an artifact of limited experimental resolution rather than a fundamental feature of reality. The subsequent development of quantum mechanics by Schrödinger, Heisenberg, Born, and others established that all quantum objects—photons, electrons, atoms, and even large molecules—exhibit both wave and particle characteristics depending on how they are observed and measured, with the apparent contradiction resolved through the probabilistic interpretation of quantum mechanical wavefunctions that describe the likelihood of finding particles at particular locations when measurements are performed.
-## 1-2 Particles and Photons
+
 
 # 1-2 Particles and Photons
 
@@ -167,8 +167,6 @@ In contrast, X-ray photons with wavelength 0.1 nm have energy $E = hc/\lambda = 
 This dramatic difference in photon flux explains why radio astronomy requires large dish antennas to collect sufficient signal, while X-ray astronomy can operate with much smaller collection areas but requires specialized detectors capable of registering individual photons.
 
 The electromagnetic spectrum thus represents a continuum of radiation unified by common physical principles yet displaying remarkably diverse properties and applications across its vast range of wavelengths and frequencies.
-
-## 1-4 Radiometry
 
 # 1-4 Radiometry
 
