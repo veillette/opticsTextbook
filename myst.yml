@@ -1,13 +1,10 @@
 version: 1
 project:
-  title: "Interactive Optics"
-  description: Bachelor Applied Physics
-  keywords: [optics, physics, education]
+  title: "Exploring Optics: From Fundamentals to Advanced Applications"
+  description: "A comprehensive textbook on optics, covering fundamental principles, advanced topics, and practical applications in modern optical technologies."
+  keywords: [optics, physics, education, textbook, light, lenses, lasers, fiber optics, polarization, interference, diffraction]
   authors:
-    - name: A.P. Konijnenberg
-    - name: A.J.L. Adam
-    - name: H.P. Urbach
-    - name: T.H.A. van der Reep
+    - name: Martin Veillette
   license: CC-BY-SA-4.0
   github: https://github.com/veillette/opticsTextbook/
   bibliography: references.bib
@@ -100,7 +97,7 @@ project:
             - file: content/Authors/authors.md
 site:
   template: book-theme
-  title: Interactive Optics
+  title: "Exploring Optics: From Fundamentals to Advanced Applications"
   options:
     logo_dark: img/advanced_optics_logo_dark.svg
     logo_text: Optics Textbook
