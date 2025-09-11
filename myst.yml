@@ -36,8 +36,6 @@ project:
         - content/Chap10Appendix/Appendix_B.md
         - content/Chap10Appendix/Appendix_C.md
         - content/Chap10Appendix/Appendix_D.md
-        - content/Chap10Appendix/Appendix_E.md
-        - content/Chap10Appendix/Appendix_F.md
         - content/Chap10Appendix/Appendix_G.md
         - content/Chap10Appendix/Appendix_H.md
         - content/Chap10Appendix/Appendix.md
@@ -89,16 +87,14 @@ project:
             - title: Problems
               file: content/Chap09FiberOptics/Problems/FiberExercise.md
         - title: Chapter 10 - Appendix
-          file: content/Chap10Appendix/Appendix_A.md
+          file: content/Chap10Appendix/Appendix.md
           children:
+            - file: content/Chap10Appendix/Appendix_A.md
             - file: content/Chap10Appendix/Appendix_B.md
             - file: content/Chap10Appendix/Appendix_C.md
             - file: content/Chap10Appendix/Appendix_D.md
-            - file: content/Chap10Appendix/Appendix_E.md
-            - file: content/Chap10Appendix/Appendix_F.md
             - file: content/Chap10Appendix/Appendix_G.md
             - file: content/Chap10Appendix/Appendix_H.md
-            - file: content/Chap10Appendix/Appendix.md
         - title: Authors
           children:
             - file: content/Authors/authors.md

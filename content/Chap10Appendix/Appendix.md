@@ -7,8 +7,6 @@
 \input{Chap10_Appendix/Appendix_B}
 \input{Chap10_Appendix/Appendix_C}
 \input{Chap10_Appendix/Appendix_D}
-\input{Chap10_Appendix/Appendix_E}
-\input{Chap10_Appendix/Appendix_F}
 \input{Chap10_Appendix/Appendix_G}
 \input{Chap10_Appendix/Appendix_H}
 \end{appendices}
