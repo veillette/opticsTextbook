@@ -41,7 +41,6 @@ project:
         - content/Chap10Appendix/Appendix_G.md
         - content/Chap10Appendix/Appendix_H.md
         - content/Chap10Appendix/Appendix.md
-        - content/Chap10Appendix/French_method.md
   toc:
     - title: Preface
       file: content/Preface/Preface.md
@@ -100,7 +99,6 @@ project:
             - file: content/Chap10Appendix/Appendix_G.md
             - file: content/Chap10Appendix/Appendix_H.md
             - file: content/Chap10Appendix/Appendix.md
-            - file: content/Chap10Appendix/French_method.md
         - title: Authors
           children:
             - file: content/Authors/authors.md
@@ -139,4 +137,4 @@ format:
       - sphinx_proof
       - myst_parser.sphinx_
       - sphinxcontrib.bibtex
-      - myst_parser.plugins.math 
+      - myst_parser.plugins.math

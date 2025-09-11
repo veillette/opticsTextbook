@@ -11,5 +11,4 @@
 \input{Chap10_Appendix/Appendix_F}
 \input{Chap10_Appendix/Appendix_G}
 \input{Chap10_Appendix/Appendix_H}
-\input{Chap10_Appendix/French_method_01}
 \end{appendices}
