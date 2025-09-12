@@ -1373,5 +1373,3 @@ where NA$=\arcsin(a/s_i)$ is the numerical aperture (i.e. 0<NA<1) with $a$ the r
 :language: python
 
 ```
-</code-cell>
-
