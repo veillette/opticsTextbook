@@ -56,6 +56,8 @@ project:
           children:
             - title: Problems
               file: content/Chap03OpticalInstrument/Problems/OpticalInstruments_Exercise.md
+        - title: Chapter 03A - Wave
+          file: content/ChapWave/Wave.md
         - title: Chapter 04 - Polarization
           file: content/Chap04Polarization/Polarization.md
           children:
@@ -83,6 +85,11 @@ project:
           children:
             - title: Problems
               file: content/Chap09FiberOptics/Problems/FiberExercise.md
+        - title: Chapter 10 - Ray Matrices
+          file: content/ChapRayMatrix/RayMatrix.md
+          children:
+            - title: Problems
+              file: content/ChapRayMatrix/Problems/RayMatrixExercise.md
         - title: Chapter 10 - Appendix
           file: content/Chap10Appendix/Appendix.md
           children:
