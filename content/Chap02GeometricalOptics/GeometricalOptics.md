@@ -88,7 +88,7 @@ Hence the time it takes for light to go from $\mathbf{r}(s)$ to $\mathbf{r}(s+\m
 \mathrm{d}t = \frac{n(\mathbf{r}(s))}{c} \mathrm{d}s,
 \end{align*}
 ```
-and the total total time to go from $S$ to $P$ is:
+and the total time to go from $S$ to $P$ is:
 
 ```{math}
 :label: eq.ttot
