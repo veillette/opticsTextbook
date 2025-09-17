@@ -171,6 +171,204 @@ This dramatic difference in photon flux explains why radio astronomy requires la
 The electromagnetic spectrum thus represents a continuum of radiation unified by common physical principles yet displaying remarkably diverse properties and applications across its vast range of wavelengths and frequencies.
 
 
+# The Speed of Light
+
+```{admonition} Learning Objectives
+:class: tip
+
+By the end of this section, you will be able to:
+- Determine the index of refraction, given the speed of light in a medium
+- Explain how light travels from a source to another location
+- Calculate the speed of light in various materials using the index of refraction
+```
+
+The speed of light in a vacuum, denoted as $c$, stands as one of physics' most fundamental constants. This remarkable value not only defines the ultimate speed limit of the universe but also serves as a cornerstone of Einstein's theory of relativity. What makes the speed of light truly extraordinary is its invariance—all observers, regardless of their motion, measure the same value for light's speed in a vacuum. However, when light travels through matter, its speed decreases in a predictable and measurable way, leading to phenomena that have profound implications for our understanding of optics and the nature of light itself.
+
+## Historical Measurements of Light's Speed
+
+### Roemer's Astronomical Method
+
+The first successful measurement of light's speed came from an unexpected source: the moons of Jupiter. In 1675, Danish astronomer Ole Roemer (1644–1710) was studying Io, one of Jupiter's four largest moons, when he noticed something peculiar. While Io maintained a consistent orbital period of 42.5 hours around Jupiter, the timing of its eclipses appeared to fluctuate by several seconds depending on Earth's position in its orbit around the Sun.
+
+Roemer's brilliant insight was recognizing that this fluctuation resulted from light's finite travel time. When Earth moved away from Jupiter in its orbit, light from Io's eclipses had to travel increasingly greater distances to reach terrestrial observers. Conversely, when Earth approached Jupiter, the light path shortened, causing eclipses to appear to occur earlier than predicted.
+
+```{figure} roemer-method.svg
+:name: fig:roemer
+:align: center
+:width: 80%
+
+Roemer's method for measuring the speed of light using observations of Io's eclipses. The apparent timing of eclipses varies as Earth's distance from Jupiter changes throughout the year.
+```
+
+By carefully measuring these timing differences and calculating the variations in Earth-Jupiter distance, Roemer determined that light traveled at approximately $2.0 \times 10^8 \, \text{m/s}$—remarkably close to the actual value, differing by only 33%.
+
+### Terrestrial Measurements
+
+The first successful Earth-based measurement came in 1849 from French physicist Armand Fizeau (1819–1896). His ingenious apparatus consisted of a rapidly rotating toothed wheel placed on one hilltop, with a mirror positioned 8 kilometers away on another hilltop. As the wheel rotated, it chopped a light beam into pulses. Fizeau adjusted the wheel's rotation speed until no reflected light returned to the observer—this occurred when the wheel rotated just enough for a tooth to block the returning light pulse.
+
+```{figure} fizeau-method.svg
+:name: fig:fizeau
+:align: center
+:width: 70%
+
+Fizeau's rotating wheel method. Light passes through the teeth gaps to reach the mirror, but returning light is blocked when the wheel rotates at the correct speed.
+```
+
+From the wheel's rotation rate, the number of teeth, and the distance to the mirror, Fizeau calculated light's speed as $3.15 \times 10^8 \, \text{m/s}$—only 5% higher than the accepted value.
+
+Jean Bernard Léon Foucault (1819–1868) refined this approach by replacing the toothed wheel with a rotating mirror, achieving even greater accuracy. By 1862, he measured the speed of light as $2.98 \times 10^8 \, \text{m/s}$, within 0.6% of today's accepted value.
+
+Albert Michelson (1852–1931) continued improving these techniques throughout his career, beginning his measurements in 1878 and refining them until 1926, when he achieved a precision of $(2.99796 \pm 4) \times 10^8 \, \text{m/s}$.
+
+## The Modern Value
+
+Today, the speed of light in vacuum is known with extraordinary precision and serves as a fundamental physical constant:
+
+$$c = 2.99792458 \times 10^8 \, \text{m/s} \approx 3.00 \times 10^8 \, \text{m/s}$$ (eq:speed-light)
+
+The approximate value of $3.00 \times 10^8 \, \text{m/s}$ provides sufficient accuracy for most calculations requiring three-digit precision.
+
+## Speed of Light in Matter
+
+When light travels through materials other than vacuum, it slows down due to interactions with atoms in the medium. This interaction varies significantly among different materials, depending on their atomic structure, crystal lattices, and other microscopic properties.
+
+### Index of Refraction
+
+We quantify how much a material slows light using the **index of refraction**, denoted $n$:
+
+$$n = \frac{c}{v}$$ (eq:index-refraction)
+
+where $v$ represents the observed speed of light in the material.
+
+Since light in matter always travels slower than in vacuum (where $v = c$), the index of refraction is always greater than or equal to one: $n \geq 1$. In vacuum, $n = 1$ exactly.
+
+### Representative Values
+
+```{list-table} Index of Refraction for Various Media
+:header-rows: 1
+:name: table:refractive-indices
+
+* - Medium
+  - Temperature/Pressure
+  - Index of Refraction ($n$)
+* - **Gases**
+  - 0°C, 1 atm
+  - 
+* - Air
+  - 
+  - 1.000293
+* - Carbon dioxide
+  - 
+  - 1.00045
+* - Hydrogen
+  - 
+  - 1.000139
+* - Oxygen
+  - 
+  - 1.000271
+* - **Liquids**
+  - 20°C
+  - 
+* - Benzene
+  - 
+  - 1.501
+* - Ethanol
+  - 
+  - 1.361
+* - Water (fresh)
+  - 
+  - 1.333
+* - **Solids**
+  - 20°C
+  - 
+* - Diamond
+  - 
+  - 2.419
+* - Glass (crown)
+  - 
+  - 1.52
+* - Ice
+  - 0°C
+  - 1.309
+* - Quartz (crystalline)
+  - 
+  - 1.544
+* - Zircon
+  - 
+  - 1.923
+```
+
+```{note}
+These values correspond to light with a wavelength of 589 nm in vacuum. The index of refraction varies slightly with wavelength, leading to phenomena such as dispersion.
+```
+
+Notice that gases have indices very close to 1.0, which makes physical sense—atoms in gases are widely separated, so light spends most of its time traveling at speed $c$ through the vacuum between atoms. For most practical purposes, we can approximate $n = 1$ for gases unless high precision is required.
+
+### Example: Speed of Light in Gemstones
+
+Let's calculate the speed of light in zircon, a material often used in jewelry as a diamond substitute.
+
+**Given:**
+- Index of refraction for zircon: $n = 1.923$ ([](#table:refractive-indices))
+- Speed of light in vacuum: $c = 3.00 \times 10^8 \, \text{m/s}$
+
+**Solution:**
+
+Rearranging [](eq:index-refraction) to solve for $v$:
+
+$$v = \frac{c}{n} = \frac{3.00 \times 10^8 \, \text{m/s}}{1.923} = 1.56 \times 10^8 \, \text{m/s}$$
+
+This speed is slightly larger than half the speed of light in vacuum—still incredibly fast by everyday standards, yet significantly reduced from light's maximum speed.
+
+```{admonition} Check Your Understanding
+:class: warning
+
+From [](#table:refractive-indices), ethanol and fresh water have indices of refraction of 1.361 and 1.333, respectively. By what percentage do the speeds of light in these liquids differ?
+
+*Hint: Calculate the speed in each medium, then find the percentage difference.*
+```
+
+## The Ray Model of Light
+
+Light can travel from a source to an observer through three primary pathways:
+
+1. **Direct propagation** through empty space (such as sunlight reaching Earth)
+2. **Transmission** through various media (such as light passing through air and glass)
+3. **Reflection** from surfaces (such as light bouncing off a mirror)
+
+```{figure} light-paths.svg
+:name: fig:light-paths
+:align: center
+:width: 90%
+
+Three methods for light to travel from source to observer: (a) direct transmission through vacuum, (b) transmission through media, and (c) reflection from surfaces.
+```
+
+### When Light Behaves as Rays
+
+Experimental evidence shows that when light interacts with objects significantly larger than its wavelength, it travels in straight lines and behaves like rays. Since visible light has wavelengths less than one micrometer (10⁻⁶ m), it exhibits ray behavior when encountering most macroscopic objects we observe with unaided eyes.
+
+In this ray model, light travels in straight lines until it encounters matter. Upon interaction, light may change direction—either by reflection (bouncing off surfaces) or refraction (bending when passing between different media)—but then continues traveling in straight lines.
+
+### Geometric Optics
+
+Since light rays follow straight-line paths and change direction according to geometric principles, we can describe light's behavior using geometry and trigonometry. This branch of optics, called **geometric optics**, governs light's interaction with matter through two fundamental laws:
+
+- **Law of Reflection**: Describes how light bounces off surfaces
+- **Law of Refraction** (Snell's Law): Describes how light bends when passing between different media
+
+These laws, combined with the ray model, provide powerful tools for analyzing optical systems ranging from simple mirrors to complex telescope designs.
+
+```{admonition} Key Takeaways
+:class: note
+
+- The speed of light in vacuum ($c = 3.00 \times 10^8 \, \text{m/s}$) is a fundamental constant
+- Light slows down in matter, described by the index of refraction $n = c/v$
+- The ray model applies when light interacts with objects much larger than its wavelength
+- Geometric optics uses straight-line ray propagation and geometric principles to analyze optical systems
+```
+
+
 ## Problems
 
 **1.1** Calculate the de Broglie wavelength of an electron moving at 2.5 × 10⁶ m/s. Compare this to the wavelength of a photon with the same momentum.
