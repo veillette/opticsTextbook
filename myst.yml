@@ -29,13 +29,9 @@ project:
         - content/Chap05Interference/InterferenceCoherence.md
         - content/Chap06Diffraction/DiffractiveOptics.md
         - content/Chap07Lasers/Lasers.md
-        - content/Chap10Appendix/Appendix_A.md
-        - content/Chap10Appendix/Appendix_B.md
-        - content/Chap10Appendix/Appendix_C.md
-        - content/Chap10Appendix/Appendix_D.md
-        - content/Chap10Appendix/Appendix_G.md
-        - content/Chap10Appendix/Appendix_H.md
-        - content/Chap10Appendix/Appendix.md
+        - content/Chap08AdvancedInstruments/AdvancedInstruments.md
+        - content/Chap09FiberOptics/FiberOptics.md
+        - content/ChapRayMatrix/RayMatrix.md
   toc:
     - title: Preface
       file: content/Preface/Preface.md
@@ -90,15 +86,6 @@ project:
           children:
             - title: Problems
               file: content/ChapRayMatrix/Problems/RayMatrixExercise.md
-        - title: Chapter 10 - Appendix
-          file: content/Chap10Appendix/Appendix.md
-          children:
-            - file: content/Chap10Appendix/Appendix_A.md
-            - file: content/Chap10Appendix/Appendix_B.md
-            - file: content/Chap10Appendix/Appendix_C.md
-            - file: content/Chap10Appendix/Appendix_D.md
-            - file: content/Chap10Appendix/Appendix_G.md
-            - file: content/Chap10Appendix/Appendix_H.md
         - title: Authors
           children:
             - file: content/Authors/authors.md
