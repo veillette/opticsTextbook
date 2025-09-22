@@ -86,9 +86,9 @@ project:
           children:
             - title: Problems
               file: content/ChapRayMatrix/Problems/RayMatrixExercise.md
-        - title: Authors
+        - title: Author
           children:
-            - file: content/Authors/authors.md
+            - file: content/Author/author.md
 site:
   template: book-theme
   title: "Exploring Optics: From Fundamentals to Advanced Applications"
