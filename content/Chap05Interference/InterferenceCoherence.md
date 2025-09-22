@@ -83,7 +83,7 @@ Adding gives
 For $\varphi= 2 m \pi$ and $\varphi=\pi+2 m \pi$ we retrieve the results obtained before. It is important to realize that what we see or detect physically (the 'brightness' of light) does not correspond to the quantities $\mathcal{U}_1$, $\mathcal{U}_2$. After all, $\mathcal{U}_1$ and $\mathcal{U}_2$ can attain negative values, while there is no such thing as 'negative brightness'. What $\mathcal{U}_1$ and $\mathcal{U}_2$ describe are the **fields**, which may be positive or negative.
 The 'brightness' or the **irradiance** or **intensity** is given by taking an average over a long time of
 $\mathcal{U}(t)^2$ (as discussed in Chapter 1),
-we shall omit the factor $\sqrt{\epsilon/\mu_0}$). As explained in Chapter 1, we see and measure only the long time-average of $\mathcal{U}(t)^2$, because at optical frequencies $\mathcal{U}(t)^2$ fluctuates very rapidly.
+we shall omit the factor $\sqrt{\epsilon/\mu_0}$ . As explained in Chapter 1, we see and measure only the long time-average of $\mathcal{U}(t)^2$, because at optical frequencies $\mathcal{U}(t)^2$ fluctuates very rapidly.
 We recall the definition of the time average over an interval of length $T$ at a specific time $t$ from Chapter 1:
 
 ```{math}
@@ -514,7 +514,7 @@ I(\tau)= \left\{1 +\text{Re}\left[\gamma(\tau)
 \right]\right\}= 1 + \cos\left(\Delta\omega\,\tau/2\right) \cos(\mathbf{a}r{\omega} \tau ).
 \end{align*}
 ```
-The interference term is the product of the function $\cos(\mathbf{a}r{\omega}\tau))$, which is a rapidly oscillating function of $\tau$, and a slowly varying envelope $\cos \left(\Delta\omega\,\tau/2\right)$.
+The interference term is the product of the function $\cos(\mathbf{a}r{\omega}\tau)$, which is a rapidly oscillating function of $\tau$, and a slowly varying envelope $\cos \left(\Delta\omega\,\tau/2\right)$.
 It is interesting to note that the envelope, and hence $\gamma(\tau)$, vanishes for some periodically spaced $\tau$, which means that for certain $\tau$ the degree of self-coherence vanishes and no interference fringes form <sup>[^3]</sup>.$ ^,$<sup>[^4]</sup>. Note that when $\Delta\omega$ is larger the intervals between the zeros of $\gamma(\tau)$ decrease.
 If more frequencies are added, the envelope function is not a cosine function but on average decreases with $\tau$. The typical value of $\tau$ below which interferences are observed is roughly equal to half the first zero of the envelope function. This value is called the **coherence time** $ \Delta \tau_c$.
 We conclude with some further interpretations of the degree of self-coherence $\gamma(\tau)$.
@@ -529,7 +529,7 @@ $$
 \hat{\Gamma}(\omega)=|\hat{U}(\omega)|^2,
 $$ (eq.Gammaomegsa)
 
-'Using the uncertainty principle, we can see that the larger the spread of the frequencies of $U(t)$ (i.e. the larger the bandwidth), the more sharply peaked $\Gamma(\tau)$ is. Thus, the light gets temporally less coherent when it consists of a broader range of frequencies. Measuring the spectral power density with a spectroscope and applying a back Fourier transform is an alternative method to obtain the complex self-coherence function.
+Using the uncertainty principle, we can see that the larger the spread of the frequencies of $U(t)$ (i.e. the larger the bandwidth), the more sharply peaked $\Gamma(\tau)$ is. Thus, the light gets temporally less coherent when it consists of a broader range of frequencies. Measuring the spectral power density with a spectroscope and applying a back Fourier transform is an alternative method to obtain the complex self-coherence function.
 
 
 ```{index} Spatial Coherence and Young's Experiment

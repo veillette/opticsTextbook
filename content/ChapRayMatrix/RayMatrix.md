@@ -280,10 +280,9 @@ be two vectors in the two planes which correspond to the same ray. The ray is fi
 :label: eq.matsph1
 \begin{align*}
 {\cal M}_1= \left( \begin{array}{cc}1 & - {\cal P}_1 \\0 & 1
-\end{array}\right)
+\end{array}\right) ,
 \end{align*}
-```
-,
+``` 
 where
 
 $$
