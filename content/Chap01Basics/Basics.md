@@ -192,8 +192,7 @@ The first successful measurement of light's speed came from an unexpected source
 
 Roemer's brilliant insight was recognizing that this fluctuation resulted from light's finite travel time. When Earth moved away from Jupiter in its orbit, light from Io's eclipses had to travel increasingly greater distances to reach terrestrial observers. Conversely, when Earth approached Jupiter, the light path shortened, causing eclipses to appear to occur earlier than predicted.
 
-<!-- TODO: Add roemer-method.svg image -->
-```{figure} roemer-method.svg
+```{figure} Images/Chapter_1/roemer.webp
 :name: fig:roemer
 :align: center
 :width: 80%
@@ -207,8 +206,8 @@ By carefully measuring these timing differences and calculating the variations i
 
 The first successful Earth-based measurement came in 1849 from French physicist Armand Fizeau (1819–1896). His ingenious apparatus consisted of a rapidly rotating toothed wheel placed on one hilltop, with a mirror positioned 8 kilometers away on another hilltop. As the wheel rotated, it chopped a light beam into pulses. Fizeau adjusted the wheel's rotation speed until no reflected light returned to the observer—this occurred when the wheel rotated just enough for a tooth to block the returning light pulse.
 
-<!-- TODO: Add fizeau-method.svg image -->
-```{figure} fizeau-method.svg
+
+```{figure} Images/Chapter_1/fizeau.webp
 :name: fig:fizeau
 :align: center
 :width: 70%
@@ -338,8 +337,8 @@ Light can travel from a source to an observer through three primary pathways:
 2. **Transmission** through various media (such as light passing through air and glass)
 3. **Reflection** from surfaces (such as light bouncing off a mirror)
 
-<!-- TODO: Add light-paths.svg image -->
-```{figure} light-paths.svg
+
+```{figure} Images/Chapter_1/light-paths.webp
 :name: fig:light-paths
 :align: center
 :width: 90%
