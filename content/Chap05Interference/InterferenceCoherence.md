@@ -1257,7 +1257,7 @@ should therefore be large.
 
 
 **Example.**
-For a wavelength of $\lambda_0=600\text{nm}$ and $n_f d= 12 \text{mm}$ we have for normal incidence $m=40000$. Then, if the reflection coefficients satisfy $|r_{12}|^2=|r_{23}|^2=0.9$, we have $F=360$ and $G=0$. The resolution is more than one million which is better than the grating spectrometers, which will be discussed in [](#secton.examples).
+For a wavelength of $\lambda_0=600\text{nm}$ and $n_f d= 12 \text{mm}$ we have for normal incidence $m=40000$. Then, if the reflection coefficients satisfy $|r_{12}|^2=|r_{23}|^2=0.9$, we have $F=360$ and $G=0$. The resolution is more than one million which is better than the grating spectrometers, which will be discussed in [](#section.examples).
 
 
 
