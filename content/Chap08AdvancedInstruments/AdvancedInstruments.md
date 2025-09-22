@@ -18,8 +18,6 @@ Inverse Fourier transforming gives
 $$
 \begin{split}
 \mathcal{F}(U)(\xi,\eta)+(i-1)\delta(\xi,\eta)\mathcal{F}(U)(0,0) &\to U(x,y)+(i-1)\mathcal{F}(U)(0,0)
-
-
 &=e^{i\varphi(x,y)}+(i-1)\mathcal{F}(U)(0,0).
 \end{split}
 $$
@@ -29,8 +27,6 @@ This is the field in the image focal plane of the lens. Its intensity is
 $$
 \begin{split}
 I(x,y)&=|e^{i\varphi(x,y)}+(i-1)\mathcal{F}(U)(0,0)|^2
-
-
 &= 1+2\mathcal{F}(U)(0,0)^2-2\mathcal{F}(U)(0,0)\cos(\varphi(x,y))+2\mathcal{F}(U)(0,0)\sin(\varphi(x,y)),
 \end{split}
 $$
