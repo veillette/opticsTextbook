@@ -845,14 +845,14 @@ Note: The half-wave plate rotated the polarization by $2 \times (45° - 30°) = 
 
 The development of complex numbers and their application to physics is a fascinating story of mathematical evolution:
 
-```{timeline}
-- 1545 :: Cardano's "Ars Magna" first mentions square roots of negative numbers
-- 1777 :: Euler introduces the notation $i$ for $\sqrt{-1}$
-- 1799 :: Gauss proves the fundamental theorem of algebra using complex numbers
-- 1806 :: Argand develops the geometric representation (complex plane)
-- 1864 :: Maxwell's equations are formulated, setting stage for complex analysis in optics
-- 1900 :: Complex analysis becomes essential for quantum mechanics and modern physics
-```
+**Historical Timeline:**
+
+- **1545**: Cardano's "Ars Magna" first mentions square roots of negative numbers
+- **1777**: Euler introduces the notation $i$ for $\sqrt{-1}$
+- **1799**: Gauss proves the fundamental theorem of algebra using complex numbers
+- **1806**: Argand develops the geometric representation (complex plane)
+- **1864**: Maxwell's equations are formulated, setting stage for complex analysis in optics
+- **1900**: Complex analysis becomes essential for quantum mechanics and modern physics
 
 ### A.13.2 Connections to Other Fields
 
@@ -871,7 +871,9 @@ Complex numbers in optics connect to many other areas of physics and mathematics
 ### A.13.3 Recommended Further Reading
 
 ```{bibliography}
-:style: plain
+```
+
+**Further Reading:**
 
 Born, M., & Wolf, E. (1999). *Principles of Optics* (7th ed.). Cambridge University Press.
 : The definitive reference for classical optics, with extensive use of complex analysis.

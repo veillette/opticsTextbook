@@ -82,9 +82,9 @@ Adding gives
 ```
 For $\varphi= 2 m \pi$ and $\varphi=\pi+2 m \pi$ we retrieve the results obtained before. It is important to realize that what we see or detect physically (the 'brightness' of light) does not correspond to the quantities $\mathcal{U}_1$, $\mathcal{U}_2$. After all, $\mathcal{U}_1$ and $\mathcal{U}_2$ can attain negative values, while there is no such thing as 'negative brightness'. What $\mathcal{U}_1$ and $\mathcal{U}_2$ describe are the **fields**, which may be positive or negative.
 The 'brightness' or the **irradiance** or **intensity** is given by taking an average over a long time of
-$\mathcal{U}(t)^2$ (see {eq}`eq.Splanew`),
+$\mathcal{U}(t)^2$ (as discussed in Chapter 1),
 we shall omit the factor $\sqrt{\epsilon/\mu_0}$). As explained in Chapter 1, we see and measure only the long time-average of $\mathcal{U}(t)^2$, because at optical frequencies $\mathcal{U}(t)^2$ fluctuates very rapidly.
-We recall the definition of the time average over an interval of length $T$ at a specific time $t$ given in {eq}`eq.average` in Chapter 1:
+We recall the definition of the time average over an interval of length $T$ at a specific time $t$ from Chapter 1:
 
 ```{math}
 :label: eq.averageII
@@ -138,7 +138,7 @@ hence
 I = \frac{1}{2}|U_1 + U_2|^2.
 \end{align*}
 ```
-To see why this works, recall Eq.&nbsp;{eq}`eq.timav` and choose $A=B=U_1+U_2$.
+To see why this works, recall the time averaging formula and choose $A=B=U_1+U_2$.
 
 
 
@@ -316,7 +316,7 @@ Then
 
 We now compute the intensity of polychromatic light.
 The instantaneous energy flux is (as for monochromatic light) proportional to the square of the instantaneous real field:
-$\mathcal{U}(\mathbf{r},t)^2$. We average the instantaneous intensity over the integration time $T$ of common detectors which, as stated before, is very long compared to the period at the center frequency $2\pi/\mathbf{a}r{\omega}$ of the field. Using  {eq}`eq.averageII` and
+$\mathcal{U}(\mathbf{r},t)^2$. We average the instantaneous intensity over the integration time $T$ of common detectors which, as stated before, is very long compared to the period at the center frequency $2\pi/\mathbf{a}r{\omega}$ of the field. Using Eq. {eq}`eq.averageII` and
 
 ```{math}
 \begin{align*}
@@ -348,7 +348,7 @@ In contrast, $|U(\mathbf{r},t)|^2=U(\mathbf{r},t)^*U(\mathbf{r},t)$ has a DC-com
 
 
 **Remark:** In contrast to the time-harmonic case, the long time average of polychromatic light depends on the time $t$ at which the average is taken. However, we assume in this chapter that the fields are omitted by sources that are **stationary**. The property of stationarity implies that the average over the time interval of long length $T$ does not depend on the time that the average is taken. Many light sources, in particular conventional lasers, are stationary. (However, a laser source which emits short high-power pulses cannot be considered as a stationary source).
-We furthermore assume that the fields are **ergodic**, which means that taking the time-average over a long time interval amounts to the same as taking the average over the ensemble of possible fields. It can be shown that this property implies that the limit $T\rightarrow \infty$ in {eq}`eq.averageII` indeed exists{cite:p}`mandel_wolf`.
+We furthermore assume that the fields are **ergodic**, which means that taking the time-average over a long time interval amounts to the same as taking the average over the ensemble of possible fields. It can be shown that this property implies that the limit $T\rightarrow \infty$ in Eq. {eq}`eq.averageII` indeed exists{cite:p}`mandel_wolf`.
 
 
 
@@ -1020,7 +1020,7 @@ such that the reflecting surfaces are at $z=0$ and $z=d$. The refractive indices
 
 Let there be a plane wave **with unit amplitude** incident from $z<0$ under angle $\theta_1$ with the normal as shown in {numref}`Fig_FP1`. The incident wave is assumed to be either s- or p-polarized. There are a reflected plane wave in $z<0$, two plane waves in medium 2 one propagating in the positive $z$-direction and the other in the negative $z$-direction and there is a transmitted plane wave in $z>d$. It follows from the boundary conditions that the tangential component of the electric and magnetic field are continuous across the interfaces, that the tangential components of the wave vectors of all these plane waves are identical.
 
-Let $r_{ij}$ and $t_{ij}$ be the reflection and transmission coefficient for a wave that is incident from medium $i$ on the interface with medium $j$. When the wave is s-polarized, $r_{12}$ and $t_{12}$ are given by Fresnel coefficients {eq}`eq.rs`,(\ref{eq.ts}), whereas if the wave is p-polarized, they are given by {eq}`eq.rp`, {eq}`eq.tp`.
+Let $r_{ij}$ and $t_{ij}$ be the reflection and transmission coefficient for a wave that is incident from medium $i$ on the interface with medium $j$. When the wave is s-polarized, $r_{12}$ and $t_{12}$ are given by Fresnel coefficients {eq}`eq.rs`,(\ref{eq.ts}), whereas if the wave is p-polarized, they are given by the p-polarized Fresnel coefficients.
 ```{figure} Images/Chapter_5/5_11_Fabry_Perot.png
 :name: Fig_FP1
 Fabry-Perot with 3 layers.The light comes from the bottom and is reflected by each interface.
@@ -1391,9 +1391,10 @@ the two constituent orthogonal linearly polarized states of natural light cannot
 ## References
 
 ```{bibliography}
-:style: alpha
+```
 
-@article{young_interference,
+<!-- Bibliography entries moved to references.bib -->
+<!-- @article{young_interference,
     title={The Bakerian Lecture: Experiments and Calculations Relative to Physical Optics},
     author={Young, Thomas},
     journal={Philosophical Transactions of the Royal Society of London},

@@ -28,9 +28,9 @@ Note that the relationship between $\theta_3$ and $\theta_1$ is independent of t
 - **d)** Does Snell's Law {eq}`eq.Snell13`) hold irrespective of the number of layers and their thicknesses in between the two half spaces?
 Explain your answer.
 
-- **e)** Derive {eq}`eq.Snell13` by using the boundary conditions for the tangential components of the electromagnetic field, as described in [Maxwell Boundary Conditions](#section.bcmaxwell).
+- **e)** Derive {eq}`eq.Snell13` by using the boundary conditions for the tangential components of the electromagnetic field, using Maxwell's boundary conditions for electromagnetic fields.
 
-As we have explained in [](#section.bcmaxwell), the wave trains emitted by different atoms (point sources) in the source suffer random phase jumps due to e.g. collisions and therefore the fields emitted by different point sources in an extended classical light source can not interfere.
+From electromagnetic theory, the wave trains emitted by different atoms (point sources) in the source suffer random phase jumps due to e.g. collisions and therefore the fields emitted by different point sources in an extended classical light source can not interfere.
 
 2. Perfect focusing by an ellipsoid and a hyperboloid. 
 

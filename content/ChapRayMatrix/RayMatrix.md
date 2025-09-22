@@ -199,9 +199,8 @@ We apply ray matrices to a lens.
 A lens with thickness $d$. The ray matrix is defined between the planes immediately before and after the lens.
 ```
 
-```{code-cell}
+```{code-cell} python
 :tags: [remove-input]
-:language: python
 
 %%HTML
 

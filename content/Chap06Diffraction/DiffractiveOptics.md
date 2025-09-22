@@ -36,7 +36,7 @@ A quantitative model of the propagation of light is required to predict the prop
 ```
 
 
-In [](#section.scalvecwave) we have derived that in homogeneous matter (i.e. the permittivity is constant), every component $U$ of a time-harmonic electromagnetic field satisfies the scalar Helmholtz equation {eq}`eq.complH`:
+From electromagnetic theory, we know that in homogeneous matter (i.e. the permittivity is constant), every component $U$ of a time-harmonic electromagnetic field satisfies the scalar Helmholtz equation {eq}`eq.complH`:
 
 ```{math}
 \begin{align*}
@@ -79,7 +79,7 @@ U_0(x,y)&= \int\!\int {\cal F}(U_0)(\xi,\eta) e^{2\pi i (\xi x + \eta y)}\, \tex
 &= \mathcal{F}^{-1}\{{\cal F}(U_0)\}(x,y).
 \end{align*}
 ```
-Important properties of the Fourier transform are listed in [](#chapter.FourierTransform).
+The Fourier transform has important properties that are essential for this analysis.
 By defining $k_x=2\pi \xi$, $k_y=2\pi \eta$, {eq}`eq.Finv` can be written as
 
 ```{math}
@@ -134,7 +134,7 @@ where now $k_z$ has to be considered as a function of $(\xi, \eta)$:
 k_z = 2\pi \sqrt{ \left( \frac{1}{\lambda}\right)^2- \xi^2-\eta^2}.
 \end{align*}
 ```
-Note that one can interpret this as a diagonalisation of the propagation operator, as explained in [](#sec:basistrans).
+Note that one can interpret this as a diagonalisation of the propagation operator.
 
 We can observe something interesting: if $k_x^2+k_y^2 > \left(\frac{2\pi }{\lambda}\right)^2$, then $k_z$ becomes imaginary, and $\exp(i k_z z)$ decays exponentially for increasing $z$:
 
@@ -144,7 +144,7 @@ We can observe something interesting: if $k_x^2+k_y^2 > \left(\frac{2\pi }{\lamb
 \exp\left\{i\left[k_x x+k_y y +z\sqrt{\left(\frac{2\pi n}{\lambda}\right)^2-k_x^2-k_y^2 }\right]\right\}=e^{i(k_x x+k_y y)}e^{-z\sqrt{ k_x^2+k_y^2- \left(\frac{2\pi n}{\lambda}\right)^2} }.
 \end{align*}
 ```
-These exponentially decaying waves are called **evanescent in the positive $z$-direction**. We have met evanescent waves already in the context of total internal reflection discussed in [](#subsection.totalrefl). The physical consequences of evanescent waves in the angular spectrum decomposition will be explained in [](#sec:fourierintuition).
+These exponentially decaying waves are called **evanescent in the positive $z$-direction**. We have met evanescent waves already in the context of total internal reflection discussed in the context of total internal reflection. The physical consequences of evanescent waves in the angular spectrum decomposition are important for understanding diffraction limits.
 
 The waves for which $k_z$ is real have constant amplitude: only their phase changes due to propagation. These waves therefore are called **propagating waves**.
 ```{figure} Images/Chapter_6/6_03_Angular_Spectrum.png
@@ -194,9 +194,9 @@ r=\sqrt{(x-x')^2+(y-y')^2+z^2}.
 1. The formula {eq}`eq.rs` is not completely rigorous because a term that is a factor $1/(kr)$ smaller (and which in practice therefore is very much smaller) has been omitted.
 
 2. In {eq}`eq.rs` there is an additional factor
-$z/r$ that has been omitted in the time-harmonic spherical wave as given in {eq}`eq.ths6` and at the right-hand side of {eq}`eq.timeharm`. This factor means that the amplitudes of the spherical waves in the Rayleigh-Sommerfeld diffraction integral depend on direction (although their wave fronts are spherical), the amplitudes being largest in the forward direction.
+$z/r$ that has been omitted in the standard time-harmonic spherical wave formulation. This factor means that the amplitudes of the spherical waves in the Rayleigh-Sommerfeld diffraction integral depend on direction (although their wave fronts are spherical), the amplitudes being largest in the forward direction.
 
-3. The angular spectrum method amounts to a multiplication by $\exp(i z k_z)$ in Fourier space, while the Rayleigh-Sommerfeld integral is a convolution with respect to $(x,y)$. It is a property of the Fourier transform that a multiplication in Fourier space corresponds to a convolution in real space and vice versa. Indeed a mathematical result called **Weyl's identity** implies that the rigorous version of {eq}`eq.rs` and the plane wave expansion (i.e. the angular spectrum method) give identical results.
+3. The angular spectrum method amounts to a multiplication by $\exp(i z k_z)$ in Fourier space, while the Rayleigh-Sommerfeld integral is a convolution with respect to $(x,y)$. It is a property of the Fourier transform that a multiplication in Fourier space corresponds to a convolution in real space and vice versa. Indeed a mathematical result called **Weyl's identity** implies that the rigorous Rayleigh-Sommerfeld formulation and the plane wave expansion (i.e. the angular spectrum method) give identical results.
 
 (sec:fourierintuition)=
 ## Intuition for the Spatial Fourier Transform in Optics

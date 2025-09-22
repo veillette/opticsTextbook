@@ -51,9 +51,9 @@ Light distribution on a screen due to a rectangular aperture. Left: for a large 
 ```
 
 
-Geometrical optics is accurate when the sizes of the objects in the system are large compared to the wavelength. It is possible to derive geometrical optics from Maxwell's equations by formally expanding the electromagnetic field in a power series in the wavelength and retaining only the first term of this expansion{footcite}`geometrical_optics_derivation`. However, this derivation is not rigorous because the power series generally does not converge (it is a so-called asymptotic series).
+Geometrical optics is accurate when the sizes of the objects in the system are large compared to the wavelength. It is possible to derive geometrical optics from Maxwell's equations by formally expanding the electromagnetic field in a power series in the wavelength and retaining only the first term of this expansion{cite}`geometrical_optics_derivation`. However, this derivation is not rigorous because the power series generally does not converge (it is a so-called asymptotic series).
 
-Although it is possible to incorporate polarization into geometrical optics{footcite}`geometrical_optics_polarization`, this is not standard theory and we will not consider polarization effects in this chapter.
+Although it is possible to incorporate polarization into geometrical optics{cite}`geometrical_optics_polarization`, this is not standard theory and we will not consider polarization effects in this chapter.
 
 ```{note}
 [^geometrical_optics_derivation]: See e.g. Born and Wolf, *Principles of Optics*, Chapter 3.
@@ -595,7 +595,6 @@ where NA$=\arcsin(a/s_i)$ is the numerical aperture (i.e. 0<NA<1) with $a$ the r
 [^4]: For a detailed treatment of perfect imaging by conic sections, see Born and Wolf, *Principles of Optics*, Chapter 4.
 
 
-```{code-cell}
-:language: python
+```python
 
 ```

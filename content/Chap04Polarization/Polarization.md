@@ -18,7 +18,7 @@
 ## Polarization States and Jones Vectors
 We have seen in [](#chapter.basics) that light is an electromagnetic wave which satisfies Maxwell's equations and the wave equation derived therefrom. Since the electric field is a vector which oscillates as function of time in a certain direction, we say that the wave has a certain polarization. In this chapter we look at the different types of polarization and how the polarization of a light beam can be manipulated.
 
-We start with Eqs. {eq}`eq.bcE2`, {eq}`eq.defbE` and {eq}`eq.orth` which show that the (real) electric field $\mathbf{\mathcal{E}}(\mathbf{r},t)$ of a time-harmonic plane wave is always perpendicular to the direction of propagation, which is the direction of the wave vector $\mathbf{k}$ as well as the direction of the Poynting vector (the direction of the power flow). Let the wave propagate in the $z$-direction:
+From Maxwell's equations and the wave equation, we know that the (real) electric field $\mathbf{\mathcal{E}}(\mathbf{r},t)$ of a time-harmonic plane wave is always perpendicular to the direction of propagation, which is the direction of the wave vector $\mathbf{k}$ as well as the direction of the Poynting vector (the direction of the power flow). Let the wave propagate in the $z$-direction:
 
 ```{math}
 :label: eq.wavek
@@ -381,7 +381,7 @@ If the matrix ${\cal M}$ describes the Jones matrix as defined in {eq}`eq.defM2a
 	\end{align*}}
 ```
 
-For more information on basis transformations, see [](#sec:basistrans).
+This is a standard result from linear algebra involving basis transformations.
 
 
 ```{figure} Images/Chapter_4/4_2_Rotation_Polarization.png
@@ -622,9 +622,10 @@ To see what happens to an arbitrary elliptical polarization state in a circular 
 ## References
 
 ```{bibliography}
-:style: alpha
+```
 
-@book{retardation,
+<!-- Bibliography entries moved to references.bib -->
+<!-- @book{retardation,
   title={Introduction to Modern Optics},
   author={Fowles, Grant R.},
   year={1989},

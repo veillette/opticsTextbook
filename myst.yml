@@ -108,23 +108,3 @@ site:
           url: https://github.com/veillette/opticsTextbook/issues/new?labels=correction
         - title: "Join Project"
           url: https://github.com/veillette/opticsTextbook/blob/main/README.md
-format:
-  html:
-    theme: light
-    execute:
-      enabled: true
-      timeout: 300
-      allow_errors: false
-    math:
-      enabled: true
-    citations:
-      enabled: true
-      style: apa
-    references:
-      enabled: true
-      bibliography: references.bib
-    extensions:
-      - sphinx_proof
-      - myst_parser.sphinx_
-      - sphinxcontrib.bibtex
-      - myst_parser.plugins.math
