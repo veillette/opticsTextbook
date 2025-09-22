@@ -86,6 +86,8 @@ project:
           children:
             - title: Problems
               file: content/ChapRayMatrix/Problems/RayMatrixExercise.md
+        - title: Appendix
+          file: content/Appendices/ComplexNumbers.md
         - title: Author
           children:
             - file: content/Author/author.md
