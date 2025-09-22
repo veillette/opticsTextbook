@@ -100,6 +100,7 @@ site:
     logo: img/advanced_optics_logo_white.svg
     analytics:
       google: G-BT4TZCELT2
+    hide_myst_branding: true
   nav:
     - title: "Contribute"
       children:
