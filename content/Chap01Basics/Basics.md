@@ -246,7 +246,10 @@ When light travels through materials other than vacuum, it slows down due to int
 
 We quantify how much a material slows light using the **index of refraction**, denoted $n$:
 
-$$n = \frac{c}{v}$$ {#eq:index-refraction}
+$$
+\label{eq:index-refraction}
+n = \frac{c}{v}
+$$ 
 
 where $v$ represents the observed speed of light in the material.
 
