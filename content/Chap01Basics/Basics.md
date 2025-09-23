@@ -60,13 +60,13 @@ Similarly, electrons and other material particles, traditionally viewed as solid
 Quantum mechanics provides a unified mathematical framework that describes both material particles and photons through a set of fundamental relationships. For any particle or photon, the following equations connect energy, momentum, mass, and other properties:
 
 The **relativistic energy-momentum relation** gives us:
-$$p = \frac{\sqrt{E^2 - m^2c^4}}{c} \tag{1-3}$$
+$$p = \frac{\sqrt{E^2 - m^2c^4}}{c} \label{relativisticMomentum}$$
 
 The **de Broglie wavelength** relates the wave and particle aspects:
-$$\lambda = \frac{h}{p} = \frac{hc}{\sqrt{E^2 - m^2c^4}} \tag{1-4}$$
+$$\lambda = \frac{h}{p} = \frac{hc}{\sqrt{E^2 - m^2c^4}} \label{deBroglieWavelength}$$
 
 The **relativistic velocity** can be expressed as:
-$$v = \frac{pc^2}{E} = c\sqrt{1 - \frac{m^2c^4}{E^2}} \tag{1-5}$$
+$$v = \frac{pc^2}{E} = c\sqrt{1 - \frac{m^2c^4}{E^2}} \label{relativisticVelocity}$$
 
 These equations apply universally to both massive particles and massless photons, though they simplify considerably for the photon case.
 
@@ -74,17 +74,17 @@ These equations apply universally to both massive particles and massless photons
 
 For photons, which have zero rest mass ($m = 0$), the fundamental equations reduce to elegant, simpler forms. Setting $m = 0$ in the relativistic energy-momentum relation yields:
 
-$$p = \frac{E}{c} \tag{1-6}$$
+$$p = \frac{E}{c} \label{momentum}$$
 
 This tells us that a photon's momentum is directly proportional to its energy, with the speed of light as the proportionality constant.
 
 The de Broglie wavelength for photons becomes:
-$$\lambda = \frac{hc}{E} \tag{1-7}$$
+$$\lambda = \frac{hc}{E} \label{lambda}$$
 
 This relationship directly connects the wave property (wavelength) with the particle property (energy) through Planck's constant $h$.
 
 Finally, all photons travel at the same speed regardless of their energy:
-$$v = c \tag{1-8}$$
+$$v = c $$
 
 This universal speed is one of the defining characteristics of electromagnetic radiation and forms the basis for Einstein's special theory of relativity.
 
@@ -92,13 +92,13 @@ This universal speed is one of the defining characteristics of electromagnetic r
 
 To illustrate these concepts, consider an electron with kinetic energy $K = 2.5$ MeV. We can calculate its relativistic properties and compare them with a photon of the same total energy.
 
-For the electron, the total energy is $E = K + mc^2 = 2.5 + 0.511 = 3.011$ MeV. Using equation (1-3), the momentum is:
+For the electron, the total energy is $E = K + mc^2 = 2.5 + 0.511 = 3.011$ MeV. Using equation [](#relativisticMomentum), the momentum is:
 $$p = \frac{\sqrt{(3.011)^2 - (0.511)^2}}{c} = \frac{2.97}{c} \text{ MeV}$$
 
-The de Broglie wavelength from equation (1-4) is:
+The de Broglie wavelength from equation [](#deBroglieWavelength) is:
 $$\lambda = \frac{hc}{pc} = \frac{1.24 \times 10^{-6}}{2.97} = 4.18 \times 10^{-7} \text{ m}$$
 
-The electron's speed from equation (1-5) is:
+The electron's speed from equation [](#relativisticVelocity) is:
 $$v = c\sqrt{1 - \frac{(0.511)^2}{(3.011)^2}} = 0.987c$$
 
 For a photon with the same total energy (3.011 MeV), the momentum would be $p = E/c = 3.011$ MeV/c, the wavelength would be $\lambda = hc/E = 4.12 \times 10^{-7}$ m, and the speed would be exactly $c$.
@@ -127,7 +127,7 @@ Electromagnetic radiation encompasses an enormous range of wavelengths and frequ
 All electromagnetic waves, regardless of their wavelength or frequency, travel at the same speed in vacuum: $c = 3.00 \times 10^8$ m/s. This universal speed represents one of nature's fundamental constants and forms the cornerstone of Einstein's special relativity.
 
 The relationship between wavelength $\lambda$ and frequency $\nu$ is given by:
-$$c = \lambda\nu \tag{1-9}$$
+$$c = \lambda\nu $$
 
 This simple equation reveals an inverse relationship: as wavelength increases, frequency decreases proportionally. The energy of electromagnetic radiation is quantized in units called photons, with each photon carrying energy $E = h\nu$, where $h$ is Planck's constant. This quantization means that electromagnetic waves can only gain or lose energy in discrete amounts proportional to their frequency.
 
