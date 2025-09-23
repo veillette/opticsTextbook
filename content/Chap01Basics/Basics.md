@@ -45,7 +45,7 @@ Einstein's explanation of the photoelectric effect provided the next crucial ste
 The quantum revolution reached its philosophical climax with Louis de Broglie's audacious proposal that the wave-particle duality observed in light was a universal feature of nature, extending to matter itself through the relationship $\lambda = h/p$, where matter particles with momentum $p$ should exhibit wave properties with wavelength $\lambda$. This hypothesis, initially met with skepticism, was dramatically confirmed by electron diffraction experiments that showed electrons creating interference patterns identical to those produced by light waves, revealing that the classical distinction between waves and particles was an artifact of limited experimental resolution rather than a fundamental feature of reality. The subsequent development of quantum mechanics by Schrödinger, Heisenberg, Born, and others established that all quantum objects—photons, electrons, atoms, and even large molecules—exhibit both wave and particle characteristics depending on how they are observed and measured, with the apparent contradiction resolved through the probabilistic interpretation of quantum mechanical wavefunctions that describe the likelihood of finding particles at particular locations when measurements are performed.
 
 
-# 1-2 Particles and Photons
+# Particles and Photons
 
 The quantum mechanical revolution of the early 20th century fundamentally changed our understanding of light and matter. What emerged was a profound realization that neither the classical wave model nor the classical particle model alone could adequately describe the behavior of photons and electrons. Instead, these entities exhibit **wave-particle duality**—displaying both wave and particle characteristics depending on the experimental context in which they are observed.
 
@@ -118,7 +118,7 @@ The wave-particle duality and quantum mechanical description of light and matter
 The unification provided by quantum mechanics demonstrates that what we perceive as fundamentally different phenomena—waves and particles—are actually complementary aspects of a deeper quantum reality. This duality extends beyond photons and electrons to all quantum entities, forming the foundation for our modern understanding of atomic physics, condensed matter physics, and quantum field theory.
 
 
-# 1-3 The Electromagnetic Spectrum
+# The Electromagnetic Spectrum
 
 Electromagnetic radiation encompasses an enormous range of wavelengths and frequencies, from radio waves spanning kilometers to gamma rays with wavelengths smaller than atomic nuclei. Despite this vast diversity, all electromagnetic waves share fundamental properties and are unified by the same underlying physics.
 
@@ -130,6 +130,15 @@ The relationship between wavelength $\lambda$ and frequency $\nu$ is given by:
 $$c = \lambda\nu \tag{1-9}$$
 
 This simple equation reveals an inverse relationship: as wavelength increases, frequency decreases proportionally. The energy of electromagnetic radiation is quantized in units called photons, with each photon carrying energy $E = h\nu$, where $h$ is Planck's constant. This quantization means that electromagnetic waves can only gain or lose energy in discrete amounts proportional to their frequency.
+
+
+```{figure} Images/Chapter_1/1_01_Electromagnetic_Spectrum_f1.png
+:name: fig:ElectromagneticSpectrum
+:align: center
+:width: 80%
+
+The complete electromagnetic spectrum showing the continuous range of electromagnetic radiation from radio waves (longest wavelength, lowest frequency) to gamma rays (shortest wavelength, highest frequency). Wavelengths are given in meters, with visible light occupying only a narrow band from approximately 400-700 nanometers. Note the logarithmic scale spanning over 20 orders of magnitude in both wavelength and frequency, illustrating the vast range of electromagnetic phenomena from everyday radio communications to high-energy cosmic radiation.
+```
 
 ## The Electromagnetic Spectrum Regions
 
@@ -327,6 +336,14 @@ This speed is slightly larger than half the speed of light in vacuum—still inc
 From [](#table:refractive-indices), ethanol and fresh water have indices of refraction of 1.361 and 1.333, respectively. By what percentage do the speeds of light in these liquids differ?
 
 *Hint: Calculate the speed in each medium, then find the percentage difference.*
+```
+
+```{figure} Images/Chapter_1/1_06_Refractive_index_Glass_f1.png
+:name: fig:refractiveIndex
+:align: center
+:width: 90%
+
+Refractive index as function of wavelength for several types of glasses.
 ```
 
 ## The Ray Model of Light
