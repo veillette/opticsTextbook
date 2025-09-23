@@ -26,7 +26,7 @@ jupytext:
 [https://phet.colorado.edu/sims/html/geometric-optics/latest/geometric-optics_all.html](https://phet.colorado.edu/sims/html/geometric-optics/latest/geometric-optics_all.html)
 
 ## Introduction
-Geometrical optics is an old subject but it is still essential to understand and design optical instruments such as camera's, microscopes, telescopes etc. Geometrical optics started long before light was described as a wave as is done in wave optics, and long before it was discovered that light is an electromagnetic wave and that optics is part of electromagnetism.
+Geometrical optics is an old subject, but it is still essential to understand and design optical instruments such as camera's, microscopes, telescopes etc. Geometrical optics started long before light was described as a wave as is done in wave optics, and long before it was discovered that light is an electromagnetic wave and that optics is part of electromagnetism.
 
 In this chapter, we go back in history and treat geometrical optics. That may seem strange now that we have a much more accurate and better theory at our disposal. However, the predictions of geometrical optics are under quite common circumstances very useful and also very accurate. In fact, for many optical systems and practical instruments there is no alternative for geometrical optics because more accurate theories are much too complicated to use.
 
@@ -49,16 +49,12 @@ Consider a point source at some distance before an opaque screen with an apertur
 :name: Fig_2_01_GeomDiffr
 Light distribution on a screen due to a rectangular aperture. Left: for a large aperture, we get an enlarged copy of the aperture. Right: for an aperture that is of the order of the wavelength there is strong bending (diffraction) of the light. 
 ```
+Geometrical optics is accurate when the sizes of the objects in the system are large compared to the wavelength. It is possible to derive geometrical optics from Maxwell's equations by formally expanding the electromagnetic field in a power series in the wavelength and retaining only the first term of this expansion[^geometrical_optics_derivation]. However, this derivation is not rigorous because the power series generally does not converge (it is a so-called asymptotic series).
 
+Although it is possible to incorporate polarization into geometrical optics, this is not standard theory and we will not consider polarization effects in this chapter.
 
-Geometrical optics is accurate when the sizes of the objects in the system are large compared to the wavelength. It is possible to derive geometrical optics from Maxwell's equations by formally expanding the electromagnetic field in a power series in the wavelength and retaining only the first term of this expansion{cite}`geometrical_optics_derivation`. However, this derivation is not rigorous because the power series generally does not converge (it is a so-called asymptotic series).
+[^geometrical_optics_derivation]: See e.g. Born and Wolf, *Principles of Optics*, Chapter 1.
 
-Although it is possible to incorporate polarization into geometrical optics{cite}`geometrical_optics_polarization`, this is not standard theory and we will not consider polarization effects in this chapter.
-
-```{note}
-[^geometrical_optics_derivation]: See e.g. Born and Wolf, *Principles of Optics*, Chapter 3.
-[^geometrical_optics_polarization]: See e.g. Born and Wolf, *Principles of Optics*, Chapter 3.
-```
 
 ## Principle of Fermat
 
