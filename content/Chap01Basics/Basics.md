@@ -24,7 +24,7 @@ While we understand that visible light consists of electromagnetic waves detecta
 
 Light has been one of physics' most fascinating challenges, noting that even 60 years after early quantum discoveries, Einstein admitted we were still in a state of "learned ignorance" about light's true nature.  In fact, light connects multiple physics disciplines - optics, electricity, magnetism, and atomic physics - representing one of the great unifications in our understanding of the physical world.
 
-## 1-1 A Brief History
+## A Brief History
 
 The scientific understanding of light has undergone a remarkable evolution spanning more than three centuries, shaped by competing theories, groundbreaking experiments, and revolutionary insights that fundamentally changed our view of physical reality. This journey from classical mechanics to quantum theory represents one of the most profound intellectual transformations in the history of science, revealing the subtle and counterintuitive nature of light itself.
 
