@@ -1,4 +1,5 @@
-# Chapter 4: Wave Equations
+(chapter.wave)=
+# Wave Equations
 
 ## Introduction
 
@@ -6,7 +7,7 @@ Wave phenomena are fundamental to understanding many aspects of physics, from me
 
 The mathematical expressions developed in this chapter enable us to quantitatively describe how waves propagate through space and time. When combined with results from electromagnetic theory, these wave equations allow us to determine the energy carried and delivered by waves, making them essential tools for analyzing everything from radio communications to laser systems.
 
-## 4-1 One-Dimensional Wave Equation
+## One-Dimensional Wave Equation
 
 ### Wave Pulse Description
 
@@ -60,7 +61,7 @@ To verify whether a given function represents a traveling wave, we simply check 
 
 This wave equation forms the foundation for understanding all wave phenomena and will be extended to three dimensions later in this chapter. The speed $v$ appearing in the equation is determined by the physical properties of the medium through which the wave propagates, or by fundamental constants in the case of electromagnetic waves in vacuum.
 
-## 4-2 Harmonic Waves
+## Harmonic Waves
 
 ### Basic Harmonic Wave Form
 
@@ -140,7 +141,7 @@ $$y = A \sin[k(x \pm vt) + \varphi_0]$$
 
 The initial phase angle allows the wave to have any desired displacement and slope at $x = 0$ and $t = 0$, making the mathematical description completely general.
 
-## 4-3 Complex Numbers
+## Complex Numbers
 
 ### Complex Number Fundamentals
 
@@ -199,7 +200,7 @@ These properties make complex exponentials much easier to manipulate than trigon
 
 The key insight for wave applications is that linear differential equations satisfied by a complex function are also satisfied separately by its real and imaginary parts. This means we can perform calculations using the mathematically convenient complex exponential form and then extract the physically meaningful real or imaginary part as needed.
 
-## 4-4 Harmonic Waves as Complex Functions
+## Harmonic Waves as Complex Functions
 
 ### Complex Wave Representation
 
@@ -261,7 +262,7 @@ This approach is particularly powerful when dealing with wave interference, diff
 
 The complex representation also facilitates the transition to more advanced topics such as electromagnetic waves, where both electric and magnetic fields can be represented as complex vectors, and quantum mechanics, where wave functions are inherently complex.
 
-## 4-5 Plane Waves
+## Plane Waves
 
 ### Three-Dimensional Wave Generalization
 
@@ -337,7 +338,7 @@ Plane waves represent an idealization that is exactly realized only for waves wi
 
 The plane wave concept provides the foundation for understanding more complex wave phenomena, including interference, diffraction, and the propagation of electromagnetic radiation through various media.
 
-## 4-6 Spherical Waves
+## Spherical Waves
 
 ### Three-Dimensional Wave Equation
 
@@ -396,7 +397,7 @@ Real spherical waves have limitations that must be considered:
 
 Despite these limitations, spherical waves provide essential insights into wave propagation from localized sources and form the basis for understanding more complex wave phenomena.
 
-## 4-7 Other Harmonic Waveforms
+## Other Harmonic Waveforms
 
 ### Cylindrical Waves
 
@@ -460,7 +461,7 @@ Gaussian beams are particularly important in practical optics because:
 
 The Gaussian beam approximation is generally valid in regions close to the beam axis where the paraxial approximation holds. For applications requiring consideration of the full three-dimensional wave behavior, more sophisticated treatments using vector diffraction theory may be necessary.
 
-## 4-8 Electromagnetic Waves
+## Electromagnetic Waves
 
 ### General Wave Disturbance Types
 
@@ -547,7 +548,7 @@ $B_0 = \frac{E_0}{c} = \frac{1.20 \times 10^6}{2.998 \times 10^8} = 4.00 \times 
 
 These are remarkably large field strengths, illustrating the intensity achievable with focused laser beams.
 
-## 4-9 Light Polarization
+## Light Polarization
 
 ### Electromagnetic Field Relationships
 
@@ -633,7 +634,7 @@ Applications of polarization control include:
 - 3D movie projection systems
 - Laser interferometry and precision measurements
 
-## 4-10 Doppler Effect
+## Doppler Effect
 
 ### Fundamental Concept
 
@@ -729,7 +730,7 @@ This galaxy is receding from Earth at approximately 6930 km/s, which is about 2.
 
 The Doppler effect thus provides a powerful tool for measuring velocities across an enormous range of scales, from atomic motions to cosmic expansion, making it one of the most practically important wave phenomena in modern science and technology.
 
-# Chapter 4: Wave Equations - Problem Set
+# Wave Equations - Problem Set
 
 ## Problems 4-1 through 4-5: One-Dimensional Wave Equation and Harmonic Waves
 
