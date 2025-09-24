@@ -26,12 +26,13 @@ project:
         - content/Chap02GeometricalOptics/GeometricalOptics.md
         - content/Chap03OpticalInstrument/OpticalInstruments.md
         - content/Chap04Polarization/Polarization.md
-        - content/Chap05Interference/InterferenceCoherence.md
-        - content/Chap06Diffraction/DiffractiveOptics.md
-        - content/Chap07Lasers/Lasers.md
-        - content/Chap08AdvancedInstruments/AdvancedInstruments.md
-        - content/Chap09FiberOptics/FiberOptics.md
-        - content/ChapRayMatrix/RayMatrix.md
+        - content/Chap05Wave/Wave.md
+        - content/Chap06Interference/InterferenceCoherence.md
+        - content/Chap07Diffraction/DiffractiveOptics.md
+        - content/Chap08Lasers/Lasers.md
+        - content/Chap09AdvancedInstruments/AdvancedInstruments.md
+        - content/Chap10FiberOptics/FiberOptics.md
+        - content/Chap11RayMatrix/RayMatrix.md
   toc:
     - title: Preface
       file: content/Preface/Preface.md
@@ -52,40 +53,40 @@ project:
           children:
             - title: Problems
               file: content/Chap03OpticalInstrument/Problems/OpticalInstruments_Exercise.md
-        - title: Chapter 03A - Wave
-          file: content/ChapWave/Wave.md
         - title: Chapter 04 - Polarization
           file: content/Chap04Polarization/Polarization.md
           children:
             - title: Problems
               file: content/Chap04Polarization/Problems/PolarizationExercise.md
-        - title: Chapter 05 - Interference
-          file: content/Chap05Interference/InterferenceCoherence.md
+        - title: Chapter 05 - Wave
+          file: content/Chap05Wave/Wave.md
+        - title: Chapter 06 - Interference
+          file: content/Chap06Interference/InterferenceCoherence.md
           children:
             - title: Problems
-              file: content/Chap05Interference/Problems/InterferenceCoherenceExercise.md
-        - title: Chapter 06 - Diffraction
-          file: content/Chap06Diffraction/DiffractiveOptics.md
+              file: content/Chap06Interference/Problems/InterferenceCoherenceExercise.md
+        - title: Chapter 07 - Diffraction
+          file: content/Chap07Diffraction/DiffractiveOptics.md
           children:
             - title: Problems
-              file: content/Chap06Diffraction/Problems/DiffractiveOpticsExercise.md
-        - title: Chapter 07 - Lasers
-          file: content/Chap07Lasers/Lasers.md
+              file: content/Chap07Diffraction/Problems/DiffractiveOpticsExercise.md
+        - title: Chapter 08 - Lasers
+          file: content/Chap08Lasers/Lasers.md
           children:
             - title: Problems
-              file: content/Chap07Lasers/Problems/LasersExercise.md
-        - title: Chapter 08 - Advanced Instruments
-          file: content/Chap08AdvancedInstruments/AdvancedInstruments.md
-        - title: Chapter 09 - Fiber Optics
-          file: content/Chap09FiberOptics/FiberOptics.md
+              file: content/Chap08Lasers/Problems/LasersExercise.md
+        - title: Chapter 09 - Advanced Instruments
+          file: content/Chap09AdvancedInstruments/AdvancedInstruments.md
+        - title: Chapter 10 - Fiber Optics
+          file: content/Chap10FiberOptics/FiberOptics.md
           children:
             - title: Problems
-              file: content/Chap09FiberOptics/Problems/FiberExercise.md
-        - title: Chapter 10 - Ray Matrices
-          file: content/ChapRayMatrix/RayMatrix.md
+              file: content/Chap10FiberOptics/Problems/FiberExercise.md
+        - title: Chapter 11 - Ray Matrices
+          file: content/Chap11RayMatrix/RayMatrix.md
           children:
             - title: Problems
-              file: content/ChapRayMatrix/Problems/RayMatrixExercise.md
+              file: content/Chap11RayMatrix/Problems/RayMatrixExercise.md
         - title: Appendix
           file: content/Appendices/ComplexNumbers.md
         - title: Author

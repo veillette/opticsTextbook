@@ -542,7 +542,7 @@ Temporal coherence concerns the coherence of the field in one point. The absolut
 While for temporal coherence we used a **Michelson interferometer**, the natural choice to characterize spatial coherence is
 **Young's experiment**, because it allows the fields in two points $P_1$, $P_2$ which are separated in space to interfere with each other.
 
-```{figure} Images/Chapter_5/5_04_Spatial Coherence.png
+```{figure} Images/Chapter_5/5_04_Spatial_Coherence.png
 :name: Fig_5_04_Spatial_Coherence
 The spatial coherence of light from an extended source.
 ```
