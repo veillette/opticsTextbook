@@ -65,6 +65,9 @@ project:
               file: content/Chap04Polarization/Problems/PolarizationExercise.md
         - title: Chapter 05 - Wave
           file: content/Chap05Wave/Wave.md
+          children:
+            - title: Problems
+              file: content/Chap05Wave/Problems/WaveExercise.md
         - title: Chapter 06 - Interference
           file: content/Chap06Interference/InterferenceCoherence.md
           children:
