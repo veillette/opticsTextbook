@@ -12,7 +12,13 @@ project:
     headings: true
     math: true
     code: false
-
+    figure: true
+    table: true
+  math:
+    '\dif': '\operatorname{d}\!'
+    '\Vector': '\boldsymbol{#1}'
+    '\Real': '\mathbb{R}'
+    '\Complex': '\mathbb{C}'
   downloads:
     - id: typstpdf
       title: "Download PDF"
@@ -25,6 +31,9 @@ project:
       id: typstpdf
       # template: https://github.com/rowanc1/typst-book.git
       output: exports/textbook.pdf
+      author: Martin Veillette
+      subject: Optics Textbook
+      keywords: [optics, physics, education]
       articles:
         - content/Preface/Preface.md
         - content/Chap01Basics/Basics.md
@@ -38,6 +47,9 @@ project:
         - content/Chap09AdvancedInstruments/AdvancedInstruments.md
         - content/Chap10FiberOptics/FiberOptics.md
         - content/Chap11RayMatrix/RayMatrix.md
+    - format: docx
+      output: exports/textbook.docx
+      article: content/Preface/Preface.md
   toc:
     - title: Preface
       file: content/Preface/Preface.md
@@ -110,6 +122,12 @@ site:
     analytics:
       google: G-BT4TZCELT2
     hide_myst_branding: true
+    repository:
+      url: https://github.com/veillette/opticsTextbook/
+      branch: main
+    use_edit_page_button: true
+    use_repository_button: true
+    use_issues_button: true
   nav:
     - title: "Contribute"
       children:
