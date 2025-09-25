@@ -1,0 +1,417 @@
+{
+  "timestamp": "2025-09-25 08:56:19",
+  "summary": {
+    "critical": 0,
+    "warnings": 92,
+    "total": 92
+  },
+  "issues": {
+    "missing_figures": [],
+    "broken_cross_refs": [
+      {
+        "file": "content/Chap06Interference/InterferenceCoherence.md",
+        "target": "fig_5_04_spatial",
+        "message": "⚠️  content/Chap06Interference/InterferenceCoherence.md Cross reference target was not found: fig_5_04_spatial coherence",
+        "type": "broken_cross_ref"
+      },
+      {
+        "file": "content/Chap06Interference/InterferenceCoherence.md",
+        "target": "fig_5_04_spatial",
+        "message": "⚠️  content/Chap06Interference/InterferenceCoherence.md Cross reference target was not found: fig_5_04_spatial coherence",
+        "type": "broken_cross_ref"
+      },
+      {
+        "file": "content/Chap07Diffraction/DiffractiveOptics.md",
+        "target": "eq.complh",
+        "message": "⚠️  content/Chap07Diffraction/DiffractiveOptics.md Cross reference target was not found: eq.complh",
+        "type": "broken_cross_ref"
+      },
+      {
+        "file": "content/Chap07Diffraction/DiffractiveOptics.md",
+        "target": "eq.fi13",
+        "message": "⚠️  content/Chap07Diffraction/DiffractiveOptics.md Cross reference target was not found: eq.fi13",
+        "type": "broken_cross_ref"
+      },
+      {
+        "file": "content/Chap06Interference/InterferenceCoherence.md",
+        "target": "fig_5_04_spatial",
+        "message": "⚠️  content/Chap06Interference/InterferenceCoherence.md Cross reference target was not found: fig_5_04_spatial coherence",
+        "type": "broken_cross_ref"
+      },
+      {
+        "file": "content/Chap06Interference/InterferenceCoherence.md",
+        "target": "fig_5_04_spatial",
+        "message": "⚠️  content/Chap06Interference/InterferenceCoherence.md Cross reference target was not found: fig_5_04_spatial coherence",
+        "type": "broken_cross_ref"
+      },
+      {
+        "file": "content/Chap07Diffraction/DiffractiveOptics.md",
+        "target": "eq.complh",
+        "message": "⚠️  content/Chap07Diffraction/DiffractiveOptics.md Cross reference target was not found: eq.complh",
+        "type": "broken_cross_ref"
+      },
+      {
+        "file": "content/Chap07Diffraction/DiffractiveOptics.md",
+        "target": "eq.fi13",
+        "message": "⚠️  content/Chap07Diffraction/DiffractiveOptics.md Cross reference target was not found: eq.fi13",
+        "type": "broken_cross_ref"
+      }
+    ],
+    "external_link_errors": [],
+    "equation_errors": [],
+    "citation_errors": [],
+    "syntax_errors": [],
+    "other_warnings": [
+      {
+        "message": "⚠️  content/Chap02GeometricalOptics/GeometricalOptics.md No target for internal reference \"#user-content-fn-3\" was found.",
+        "type": "unknown_warning"
+      },
+      {
+        "message": "⚠️  content/Chap02GeometricalOptics/GeometricalOptics.md No target for internal reference \"#user-content-fn-4\" was found.",
+        "type": "unknown_warning"
+      },
+      {
+        "message": "⚠️  content/Chap04Polarization/Polarization.md Could not link citation with label \"retardation\".",
+        "type": "unknown_warning"
+      },
+      {
+        "message": "⚠️  content/Chap04Polarization/Polarization.md Could not link citation with label \"born_wolf\".",
+        "type": "unknown_warning"
+      },
+      {
+        "message": "⚠️  content/Chap04Polarization/Polarization.md Could not link citation with label \"born_wolf\".",
+        "type": "unknown_warning"
+      },
+      {
+        "message": "⚠️  content/Chap04Polarization/Polarization.md Could not link citation with label \"viking_calcite\".",
+        "type": "unknown_warning"
+      },
+      {
+        "message": "⚠️  content/Chap04Polarization/Polarization.md Could not link citation with label \"hecht\".",
+        "type": "unknown_warning"
+      },
+      {
+        "message": "⚠️  content/Chap04Polarization/Polarization.md Could not link citation with label \"hecht\".",
+        "type": "unknown_warning"
+      },
+      {
+        "message": "⚠️  content/Chap04Polarization/Polarization.md Could not link citation with label \"saleh_teich\".",
+        "type": "unknown_warning"
+      },
+      {
+        "message": "⚠️  content/Chap04Polarization/Polarization.md Could not link citation with label \"bartholinus\".",
+        "type": "unknown_warning"
+      },
+      {
+        "message": "⚠️  content/Chap04Polarization/Polarization.md Could not link citation with label \"fowles\".",
+        "type": "unknown_warning"
+      },
+      {
+        "message": "⚠️  content/Chap04Polarization/Polarization.md Could not link citation with label \"goldstein\".",
+        "type": "unknown_warning"
+      },
+      {
+        "message": "⚠️  content/Chap04Polarization/Problems/PolarizationExercise.md No target for internal reference \"#user-content-fn-1\" was found.",
+        "type": "unknown_warning"
+      },
+      {
+        "message": "⚠️  content/Chap06Interference/InterferenceCoherence.md No target for internal reference \"#user-content-fn-3\" was found.",
+        "type": "unknown_warning"
+      },
+      {
+        "message": "⚠️  content/Chap06Interference/InterferenceCoherence.md No target for internal reference \"#user-content-fn-4\" was found.",
+        "type": "unknown_warning"
+      },
+      {
+        "message": "⚠️  content/Chap06Interference/InterferenceCoherence.md No target for internal reference \"#user-content-fn-5\" was found.",
+        "type": "unknown_warning"
+      },
+      {
+        "message": "⚠️  content/Chap06Interference/InterferenceCoherence.md Could not link citation with label \"born_wolf_coherence\".",
+        "type": "unknown_warning"
+      },
+      {
+        "message": "⚠️  content/Chap06Interference/InterferenceCoherence.md Could not link citation with label \"michelson_interferometer\".",
+        "type": "unknown_warning"
+      },
+      {
+        "message": "⚠️  content/Chap06Interference/InterferenceCoherence.md Could not link citation with label \"fresnel_arago\".",
+        "type": "unknown_warning"
+      },
+      {
+        "message": "⚠️  content/Chap06Interference/InterferenceCoherence.md Could not link citation with label \"young_interference\".",
+        "type": "unknown_warning"
+      },
+      {
+        "message": "⚠️  content/Chap06Interference/InterferenceCoherence.md Could not link citation with label \"mandel_wolf\".",
+        "type": "unknown_warning"
+      },
+      {
+        "message": "⚠️  content/Chap06Interference/InterferenceCoherence.md Could not link citation with label \"born_wolf_coherence\".",
+        "type": "unknown_warning"
+      },
+      {
+        "message": "⚠️  content/Chap06Interference/InterferenceCoherence.md Could not link citation with label \"michelson_interferometer\".",
+        "type": "unknown_warning"
+      },
+      {
+        "message": "⚠️  content/Chap06Interference/InterferenceCoherence.md Could not link citation with label \"fresnel_arago\".",
+        "type": "unknown_warning"
+      },
+      {
+        "message": "⚠️  content/Chap06Interference/InterferenceCoherence.md Cross reference text is empty for <undefined>",
+        "type": "unknown_warning"
+      },
+      {
+        "message": "⚠️  content/Chap06Interference/InterferenceCoherence.md Cross reference text is empty for <undefined>",
+        "type": "unknown_warning"
+      },
+      {
+        "message": "⚠️  content/Chap07Diffraction/DiffractiveOptics.md No target for internal reference \"#user-content-fn-1\" was found.",
+        "type": "unknown_warning"
+      },
+      {
+        "message": "⚠️  content/Chap07Diffraction/DiffractiveOptics.md No target for internal reference \"#user-content-fn-2\" was found.",
+        "type": "unknown_warning"
+      },
+      {
+        "message": "⚠️  content/Chap07Diffraction/DiffractiveOptics.md No target for internal reference \"#user-content-fn-3\" was found.",
+        "type": "unknown_warning"
+      },
+      {
+        "message": "⚠️  content/Chap07Diffraction/DiffractiveOptics.md No target for internal reference \"#user-content-fn-4\" was found.",
+        "type": "unknown_warning"
+      },
+      {
+        "message": "⚠️  content/Chap07Diffraction/DiffractiveOptics.md No target for internal reference \"#user-content-fn-5\" was found.",
+        "type": "unknown_warning"
+      },
+      {
+        "message": "⚠️  content/Chap07Diffraction/DiffractiveOptics.md No target for internal reference \"#user-content-fn-6\" was found.",
+        "type": "unknown_warning"
+      },
+      {
+        "message": "⚠️  content/Chap07Diffraction/DiffractiveOptics.md No target for internal reference \"#user-content-fn-7\" was found.",
+        "type": "unknown_warning"
+      },
+      {
+        "message": "⚠️  content/Chap07Diffraction/DiffractiveOptics.md No target for internal reference \"#user-content-fn-8\" was found.",
+        "type": "unknown_warning"
+      },
+      {
+        "message": "⚠️  content/Chap07Diffraction/DiffractiveOptics.md No target for internal reference \"#user-content-fn-9\" was found.",
+        "type": "unknown_warning"
+      },
+      {
+        "message": "⚠️  content/Chap07Diffraction/DiffractiveOptics.md No target for internal reference \"#user-content-fn-10\" was found.",
+        "type": "unknown_warning"
+      },
+      {
+        "message": "⚠️  content/Chap07Diffraction/DiffractiveOptics.md Cross reference text is empty for <undefined>",
+        "type": "unknown_warning"
+      },
+      {
+        "message": "⚠️  content/Chap07Diffraction/DiffractiveOptics.md Cross reference text is empty for <undefined>",
+        "type": "unknown_warning"
+      },
+      {
+        "message": "⚠️  content/Chap09AdvancedInstruments/AdvancedInstruments.md No target for internal reference \"#user-content-fn-1\" was found.",
+        "type": "unknown_warning"
+      },
+      {
+        "message": "⚠️  content/Chap09AdvancedInstruments/AdvancedInstruments.md No target for internal reference \"#user-content-fn-2\" was found.",
+        "type": "unknown_warning"
+      },
+      {
+        "message": "⚠️  content/Chap10FiberOptics/FiberOptics.md No target for internal reference \"#user-content-fn-1\" was found.",
+        "type": "unknown_warning"
+      },
+      {
+        "message": "⚠️  content/Chap10FiberOptics/FiberOptics.md No target for internal reference \"#user-content-fn-2\" was found.",
+        "type": "unknown_warning"
+      },
+      {
+        "message": "⚠️  content/Chap02GeometricalOptics/GeometricalOptics.md No target for internal reference \"#user-content-fn-3\" was found.",
+        "type": "unknown_warning"
+      },
+      {
+        "message": "⚠️  content/Chap02GeometricalOptics/GeometricalOptics.md No target for internal reference \"#user-content-fn-4\" was found.",
+        "type": "unknown_warning"
+      },
+      {
+        "message": "⚠️  content/Chap04Polarization/Polarization.md Could not link citation with label \"retardation\".",
+        "type": "unknown_warning"
+      },
+      {
+        "message": "⚠️  content/Chap04Polarization/Polarization.md Could not link citation with label \"born_wolf\".",
+        "type": "unknown_warning"
+      },
+      {
+        "message": "⚠️  content/Chap04Polarization/Polarization.md Could not link citation with label \"born_wolf\".",
+        "type": "unknown_warning"
+      },
+      {
+        "message": "⚠️  content/Chap04Polarization/Polarization.md Could not link citation with label \"viking_calcite\".",
+        "type": "unknown_warning"
+      },
+      {
+        "message": "⚠️  content/Chap04Polarization/Polarization.md Could not link citation with label \"hecht\".",
+        "type": "unknown_warning"
+      },
+      {
+        "message": "⚠️  content/Chap04Polarization/Polarization.md Could not link citation with label \"hecht\".",
+        "type": "unknown_warning"
+      },
+      {
+        "message": "⚠️  content/Chap04Polarization/Polarization.md Could not link citation with label \"saleh_teich\".",
+        "type": "unknown_warning"
+      },
+      {
+        "message": "⚠️  content/Chap04Polarization/Polarization.md Could not link citation with label \"bartholinus\".",
+        "type": "unknown_warning"
+      },
+      {
+        "message": "⚠️  content/Chap04Polarization/Polarization.md Could not link citation with label \"fowles\".",
+        "type": "unknown_warning"
+      },
+      {
+        "message": "⚠️  content/Chap04Polarization/Polarization.md Could not link citation with label \"goldstein\".",
+        "type": "unknown_warning"
+      },
+      {
+        "message": "⚠️  content/Chap04Polarization/Problems/PolarizationExercise.md No target for internal reference \"#user-content-fn-1\" was found.",
+        "type": "unknown_warning"
+      },
+      {
+        "message": "⚠️  content/Chap06Interference/InterferenceCoherence.md No target for internal reference \"#user-content-fn-3\" was found.",
+        "type": "unknown_warning"
+      },
+      {
+        "message": "⚠️  content/Chap06Interference/InterferenceCoherence.md No target for internal reference \"#user-content-fn-4\" was found.",
+        "type": "unknown_warning"
+      },
+      {
+        "message": "⚠️  content/Chap06Interference/InterferenceCoherence.md No target for internal reference \"#user-content-fn-5\" was found.",
+        "type": "unknown_warning"
+      },
+      {
+        "message": "⚠️  content/Chap06Interference/InterferenceCoherence.md Could not link citation with label \"born_wolf_coherence\".",
+        "type": "unknown_warning"
+      },
+      {
+        "message": "⚠️  content/Chap06Interference/InterferenceCoherence.md Could not link citation with label \"michelson_interferometer\".",
+        "type": "unknown_warning"
+      },
+      {
+        "message": "⚠️  content/Chap06Interference/InterferenceCoherence.md Could not link citation with label \"fresnel_arago\".",
+        "type": "unknown_warning"
+      },
+      {
+        "message": "⚠️  content/Chap06Interference/InterferenceCoherence.md Could not link citation with label \"young_interference\".",
+        "type": "unknown_warning"
+      },
+      {
+        "message": "⚠️  content/Chap06Interference/InterferenceCoherence.md Could not link citation with label \"mandel_wolf\".",
+        "type": "unknown_warning"
+      },
+      {
+        "message": "⚠️  content/Chap06Interference/InterferenceCoherence.md Could not link citation with label \"born_wolf_coherence\".",
+        "type": "unknown_warning"
+      },
+      {
+        "message": "⚠️  content/Chap06Interference/InterferenceCoherence.md Could not link citation with label \"michelson_interferometer\".",
+        "type": "unknown_warning"
+      },
+      {
+        "message": "⚠️  content/Chap06Interference/InterferenceCoherence.md Could not link citation with label \"fresnel_arago\".",
+        "type": "unknown_warning"
+      },
+      {
+        "message": "⚠️  content/Chap06Interference/InterferenceCoherence.md Cross reference text is empty for <undefined>",
+        "type": "unknown_warning"
+      },
+      {
+        "message": "⚠️  content/Chap06Interference/InterferenceCoherence.md Cross reference text is empty for <undefined>",
+        "type": "unknown_warning"
+      },
+      {
+        "message": "⚠️  content/Chap07Diffraction/DiffractiveOptics.md No target for internal reference \"#user-content-fn-1\" was found.",
+        "type": "unknown_warning"
+      },
+      {
+        "message": "⚠️  content/Chap07Diffraction/DiffractiveOptics.md No target for internal reference \"#user-content-fn-2\" was found.",
+        "type": "unknown_warning"
+      },
+      {
+        "message": "⚠️  content/Chap07Diffraction/DiffractiveOptics.md No target for internal reference \"#user-content-fn-3\" was found.",
+        "type": "unknown_warning"
+      },
+      {
+        "message": "⚠️  content/Chap07Diffraction/DiffractiveOptics.md No target for internal reference \"#user-content-fn-4\" was found.",
+        "type": "unknown_warning"
+      },
+      {
+        "message": "⚠️  content/Chap07Diffraction/DiffractiveOptics.md No target for internal reference \"#user-content-fn-5\" was found.",
+        "type": "unknown_warning"
+      },
+      {
+        "message": "⚠️  content/Chap07Diffraction/DiffractiveOptics.md No target for internal reference \"#user-content-fn-6\" was found.",
+        "type": "unknown_warning"
+      },
+      {
+        "message": "⚠️  content/Chap07Diffraction/DiffractiveOptics.md No target for internal reference \"#user-content-fn-7\" was found.",
+        "type": "unknown_warning"
+      },
+      {
+        "message": "⚠️  content/Chap07Diffraction/DiffractiveOptics.md No target for internal reference \"#user-content-fn-8\" was found.",
+        "type": "unknown_warning"
+      },
+      {
+        "message": "⚠️  content/Chap07Diffraction/DiffractiveOptics.md No target for internal reference \"#user-content-fn-9\" was found.",
+        "type": "unknown_warning"
+      },
+      {
+        "message": "⚠️  content/Chap07Diffraction/DiffractiveOptics.md No target for internal reference \"#user-content-fn-10\" was found.",
+        "type": "unknown_warning"
+      },
+      {
+        "message": "⚠️  content/Chap07Diffraction/DiffractiveOptics.md Cross reference text is empty for <undefined>",
+        "type": "unknown_warning"
+      },
+      {
+        "message": "⚠️  content/Chap07Diffraction/DiffractiveOptics.md Cross reference text is empty for <undefined>",
+        "type": "unknown_warning"
+      },
+      {
+        "message": "⚠️  content/Chap09AdvancedInstruments/AdvancedInstruments.md No target for internal reference \"#user-content-fn-1\" was found.",
+        "type": "unknown_warning"
+      },
+      {
+        "message": "⚠️  content/Chap09AdvancedInstruments/AdvancedInstruments.md No target for internal reference \"#user-content-fn-2\" was found.",
+        "type": "unknown_warning"
+      },
+      {
+        "message": "⚠️  content/Chap10FiberOptics/FiberOptics.md No target for internal reference \"#user-content-fn-1\" was found.",
+        "type": "unknown_warning"
+      },
+      {
+        "message": "⚠️  content/Chap10FiberOptics/FiberOptics.md No target for internal reference \"#user-content-fn-2\" was found.",
+        "type": "unknown_warning"
+      }
+    ],
+    "build_errors": []
+  },
+  "analysis": {
+    "files_with_most_issues": {
+      "content/Chap06Interference/InterferenceCoherence.md": 4,
+      "content/Chap07Diffraction/DiffractiveOptics.md": 4
+    },
+    "common_reference_types": {
+      "eq": 4
+    },
+    "error_distribution": {
+      "broken_cross_refs": 8,
+      "other_warnings": 84
+    }
+  }
+}

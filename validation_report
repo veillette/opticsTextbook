@@ -1,0 +1,120 @@
+# Enhanced MyST Validation Report
+
+Generated: 2025-09-25 08:56:19
+
+## Executive Summary
+
+- 🔴 Critical errors: **0**
+- 🟡 Warnings: **92**
+- 📊 Total issues: **92**
+
+## Error Distribution
+
+- ⚠️ Other Warnings: 84
+- 🔗 Broken Cross Refs: 8
+
+## Detailed Issues
+
+### Broken Cross Refs (8)
+
+#### content/Chap06Interference/InterferenceCoherence.md
+
+- ⚠️  content/Chap06Interference/InterferenceCoherence.md Cross reference target was not found: fig_5_04_spatial coherence
+- ⚠️  content/Chap06Interference/InterferenceCoherence.md Cross reference target was not found: fig_5_04_spatial coherence
+- ⚠️  content/Chap06Interference/InterferenceCoherence.md Cross reference target was not found: fig_5_04_spatial coherence
+- ⚠️  content/Chap06Interference/InterferenceCoherence.md Cross reference target was not found: fig_5_04_spatial coherence
+
+#### content/Chap07Diffraction/DiffractiveOptics.md
+
+- ⚠️  content/Chap07Diffraction/DiffractiveOptics.md Cross reference target was not found: eq.complh
+- ⚠️  content/Chap07Diffraction/DiffractiveOptics.md Cross reference target was not found: eq.fi13
+- ⚠️  content/Chap07Diffraction/DiffractiveOptics.md Cross reference target was not found: eq.complh
+- ⚠️  content/Chap07Diffraction/DiffractiveOptics.md Cross reference target was not found: eq.fi13
+
+### Other Warnings (84)
+
+- ⚠️  content/Chap02GeometricalOptics/GeometricalOptics.md No target for internal reference "#user-content-fn-3" was found.
+- ⚠️  content/Chap02GeometricalOptics/GeometricalOptics.md No target for internal reference "#user-content-fn-4" was found.
+- ⚠️  content/Chap04Polarization/Polarization.md Could not link citation with label "retardation".
+- ⚠️  content/Chap04Polarization/Polarization.md Could not link citation with label "born_wolf".
+- ⚠️  content/Chap04Polarization/Polarization.md Could not link citation with label "born_wolf".
+- ⚠️  content/Chap04Polarization/Polarization.md Could not link citation with label "viking_calcite".
+- ⚠️  content/Chap04Polarization/Polarization.md Could not link citation with label "hecht".
+- ⚠️  content/Chap04Polarization/Polarization.md Could not link citation with label "hecht".
+- ⚠️  content/Chap04Polarization/Polarization.md Could not link citation with label "saleh_teich".
+- ⚠️  content/Chap04Polarization/Polarization.md Could not link citation with label "bartholinus".
+- ⚠️  content/Chap04Polarization/Polarization.md Could not link citation with label "fowles".
+- ⚠️  content/Chap04Polarization/Polarization.md Could not link citation with label "goldstein".
+- ⚠️  content/Chap04Polarization/Problems/PolarizationExercise.md No target for internal reference "#user-content-fn-1" was found.
+- ⚠️  content/Chap06Interference/InterferenceCoherence.md No target for internal reference "#user-content-fn-3" was found.
+- ⚠️  content/Chap06Interference/InterferenceCoherence.md No target for internal reference "#user-content-fn-4" was found.
+- ⚠️  content/Chap06Interference/InterferenceCoherence.md No target for internal reference "#user-content-fn-5" was found.
+- ⚠️  content/Chap06Interference/InterferenceCoherence.md Could not link citation with label "born_wolf_coherence".
+- ⚠️  content/Chap06Interference/InterferenceCoherence.md Could not link citation with label "michelson_interferometer".
+- ⚠️  content/Chap06Interference/InterferenceCoherence.md Could not link citation with label "fresnel_arago".
+- ⚠️  content/Chap06Interference/InterferenceCoherence.md Could not link citation with label "young_interference".
+- ⚠️  content/Chap06Interference/InterferenceCoherence.md Could not link citation with label "mandel_wolf".
+- ⚠️  content/Chap06Interference/InterferenceCoherence.md Could not link citation with label "born_wolf_coherence".
+- ⚠️  content/Chap06Interference/InterferenceCoherence.md Could not link citation with label "michelson_interferometer".
+- ⚠️  content/Chap06Interference/InterferenceCoherence.md Could not link citation with label "fresnel_arago".
+- ⚠️  content/Chap06Interference/InterferenceCoherence.md Cross reference text is empty for <undefined>
+- ⚠️  content/Chap06Interference/InterferenceCoherence.md Cross reference text is empty for <undefined>
+- ⚠️  content/Chap07Diffraction/DiffractiveOptics.md No target for internal reference "#user-content-fn-1" was found.
+- ⚠️  content/Chap07Diffraction/DiffractiveOptics.md No target for internal reference "#user-content-fn-2" was found.
+- ⚠️  content/Chap07Diffraction/DiffractiveOptics.md No target for internal reference "#user-content-fn-3" was found.
+- ⚠️  content/Chap07Diffraction/DiffractiveOptics.md No target for internal reference "#user-content-fn-4" was found.
+- ⚠️  content/Chap07Diffraction/DiffractiveOptics.md No target for internal reference "#user-content-fn-5" was found.
+- ⚠️  content/Chap07Diffraction/DiffractiveOptics.md No target for internal reference "#user-content-fn-6" was found.
+- ⚠️  content/Chap07Diffraction/DiffractiveOptics.md No target for internal reference "#user-content-fn-7" was found.
+- ⚠️  content/Chap07Diffraction/DiffractiveOptics.md No target for internal reference "#user-content-fn-8" was found.
+- ⚠️  content/Chap07Diffraction/DiffractiveOptics.md No target for internal reference "#user-content-fn-9" was found.
+- ⚠️  content/Chap07Diffraction/DiffractiveOptics.md No target for internal reference "#user-content-fn-10" was found.
+- ⚠️  content/Chap07Diffraction/DiffractiveOptics.md Cross reference text is empty for <undefined>
+- ⚠️  content/Chap07Diffraction/DiffractiveOptics.md Cross reference text is empty for <undefined>
+- ⚠️  content/Chap09AdvancedInstruments/AdvancedInstruments.md No target for internal reference "#user-content-fn-1" was found.
+- ⚠️  content/Chap09AdvancedInstruments/AdvancedInstruments.md No target for internal reference "#user-content-fn-2" was found.
+- ⚠️  content/Chap10FiberOptics/FiberOptics.md No target for internal reference "#user-content-fn-1" was found.
+- ⚠️  content/Chap10FiberOptics/FiberOptics.md No target for internal reference "#user-content-fn-2" was found.
+- ⚠️  content/Chap02GeometricalOptics/GeometricalOptics.md No target for internal reference "#user-content-fn-3" was found.
+- ⚠️  content/Chap02GeometricalOptics/GeometricalOptics.md No target for internal reference "#user-content-fn-4" was found.
+- ⚠️  content/Chap04Polarization/Polarization.md Could not link citation with label "retardation".
+- ⚠️  content/Chap04Polarization/Polarization.md Could not link citation with label "born_wolf".
+- ⚠️  content/Chap04Polarization/Polarization.md Could not link citation with label "born_wolf".
+- ⚠️  content/Chap04Polarization/Polarization.md Could not link citation with label "viking_calcite".
+- ⚠️  content/Chap04Polarization/Polarization.md Could not link citation with label "hecht".
+- ⚠️  content/Chap04Polarization/Polarization.md Could not link citation with label "hecht".
+- ⚠️  content/Chap04Polarization/Polarization.md Could not link citation with label "saleh_teich".
+- ⚠️  content/Chap04Polarization/Polarization.md Could not link citation with label "bartholinus".
+- ⚠️  content/Chap04Polarization/Polarization.md Could not link citation with label "fowles".
+- ⚠️  content/Chap04Polarization/Polarization.md Could not link citation with label "goldstein".
+- ⚠️  content/Chap04Polarization/Problems/PolarizationExercise.md No target for internal reference "#user-content-fn-1" was found.
+- ⚠️  content/Chap06Interference/InterferenceCoherence.md No target for internal reference "#user-content-fn-3" was found.
+- ⚠️  content/Chap06Interference/InterferenceCoherence.md No target for internal reference "#user-content-fn-4" was found.
+- ⚠️  content/Chap06Interference/InterferenceCoherence.md No target for internal reference "#user-content-fn-5" was found.
+- ⚠️  content/Chap06Interference/InterferenceCoherence.md Could not link citation with label "born_wolf_coherence".
+- ⚠️  content/Chap06Interference/InterferenceCoherence.md Could not link citation with label "michelson_interferometer".
+- ⚠️  content/Chap06Interference/InterferenceCoherence.md Could not link citation with label "fresnel_arago".
+- ⚠️  content/Chap06Interference/InterferenceCoherence.md Could not link citation with label "young_interference".
+- ⚠️  content/Chap06Interference/InterferenceCoherence.md Could not link citation with label "mandel_wolf".
+- ⚠️  content/Chap06Interference/InterferenceCoherence.md Could not link citation with label "born_wolf_coherence".
+- ⚠️  content/Chap06Interference/InterferenceCoherence.md Could not link citation with label "michelson_interferometer".
+- ⚠️  content/Chap06Interference/InterferenceCoherence.md Could not link citation with label "fresnel_arago".
+- ⚠️  content/Chap06Interference/InterferenceCoherence.md Cross reference text is empty for <undefined>
+- ⚠️  content/Chap06Interference/InterferenceCoherence.md Cross reference text is empty for <undefined>
+- ⚠️  content/Chap07Diffraction/DiffractiveOptics.md No target for internal reference "#user-content-fn-1" was found.
+- ⚠️  content/Chap07Diffraction/DiffractiveOptics.md No target for internal reference "#user-content-fn-2" was found.
+- ⚠️  content/Chap07Diffraction/DiffractiveOptics.md No target for internal reference "#user-content-fn-3" was found.
+- ⚠️  content/Chap07Diffraction/DiffractiveOptics.md No target for internal reference "#user-content-fn-4" was found.
+- ⚠️  content/Chap07Diffraction/DiffractiveOptics.md No target for internal reference "#user-content-fn-5" was found.
+- ⚠️  content/Chap07Diffraction/DiffractiveOptics.md No target for internal reference "#user-content-fn-6" was found.
+- ⚠️  content/Chap07Diffraction/DiffractiveOptics.md No target for internal reference "#user-content-fn-7" was found.
+- ⚠️  content/Chap07Diffraction/DiffractiveOptics.md No target for internal reference "#user-content-fn-8" was found.
+- ⚠️  content/Chap07Diffraction/DiffractiveOptics.md No target for internal reference "#user-content-fn-9" was found.
+- ⚠️  content/Chap07Diffraction/DiffractiveOptics.md No target for internal reference "#user-content-fn-10" was found.
+- ⚠️  content/Chap07Diffraction/DiffractiveOptics.md Cross reference text is empty for <undefined>
+- ⚠️  content/Chap07Diffraction/DiffractiveOptics.md Cross reference text is empty for <undefined>
+- ⚠️  content/Chap09AdvancedInstruments/AdvancedInstruments.md No target for internal reference "#user-content-fn-1" was found.
+- ⚠️  content/Chap09AdvancedInstruments/AdvancedInstruments.md No target for internal reference "#user-content-fn-2" was found.
+- ⚠️  content/Chap10FiberOptics/FiberOptics.md No target for internal reference "#user-content-fn-1" was found.
+- ⚠️  content/Chap10FiberOptics/FiberOptics.md No target for internal reference "#user-content-fn-2" was found.
+
