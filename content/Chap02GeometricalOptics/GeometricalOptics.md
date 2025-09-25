@@ -213,7 +213,7 @@ Ray from $P$ to $Q$ refracted by an interface.
 Hence we have derived the law of reflection and Snell's law from Fermat's principle. In {ref}`chapter.basics` the reflection law and Snell's law have been derived by a different method, namely from the continuity of the tangential electromagnetic field components at the interface.
 
 ## Perfect Imaging by Conic Sections
-In this section, the conic sections ellipse, hyperbole and parabola are important. In {numref}`Fig_2_05_ConicSection` their definitions are shown as a quick reminder<sup>[^3]</sup>.
+In this section, the conic sections ellipse, hyperbole and parabola are important. In {numref}`Fig_2_05_ConicSection` their definitions are shown as a quick reminder[^3].
 
 ```{figure} Images/Chapter_2/2_05a_ConicSection.png
 ```
@@ -550,7 +550,7 @@ Systems with very small aberrations are extremely expensive, in particular if th
 as is the case in lithographic imaging systems
 used in the manufacturing of integrated circuits as shown in the lithographic system in {numref}`Fig_2_27_ASML_EUV`.
 
-A comprehensive treatment of aberration theory can be found in Braat et al.<sup>[^4]</sup>.
+A comprehensive treatment of aberration theory can be found in Braat et al.[^4].
 
 
 ```{figure} Images/Chapter_2/2_27_ASML_EUV.png

@@ -38,7 +38,7 @@ n_1 \sin\left(\theta_{\text{i}}\right) = n_2 \sin\left(\theta_{\text{cl}}\right)
 ```
 For angles $\theta_{\text{i}}$ in excess of the angle $\theta_{\text{i,c}}=\arcsin(n_2/n_1)$ refraction no longer occurs (the maximum value of a sine is 1) and light is totally reflected back into the core. Therefore we will refer to $\theta_{\text{i,c}}$ as the internal critical angle. This automatically implies that the fiber does not accept light from all directions, which leads to the definition of the (external) critical angle $\bar{\theta}_{\text{e,c}}$. This angle will be further discussed in {ref}`secFiberFiguresMerit`. For $\text{SiO}_2$, in which $n_2\approx 1.444$ at telecom wavelengths ($\lambda=1550 \text{nm}$), TIR occurs if $\theta_1>85.7^{\circ}$ if the core $n_1=1.448$. Because this $\theta_{\text{i}}$ is close to $90^{\circ}$, fibers with $n_1\approx n_2$ are also referred to as ''weakly guiding''.
 
-Since the angle of reflection equals the angle of incidence upon reflection, TIR occurs at every core-cladding interface and the light remains confined to the core (strictly speaking, this argument only holds for straight fibers. The influence of bends in fibers is discussed in {ref}`secFiberLoss`). Because optical losses in $\text{SiO}_2$ are small (in the order of $0.1\text{dB/km}$,<sup>[^1]</sup> see {ref}`secFiberLoss`), this implies fibers can easily carry optical signals over distances in the order of several kilometers without considerable loss.
+Since the angle of reflection equals the angle of incidence upon reflection, TIR occurs at every core-cladding interface and the light remains confined to the core (strictly speaking, this argument only holds for straight fibers. The influence of bends in fibers is discussed in {ref}`secFiberLoss`). Because optical losses in $\text{SiO}_2$ are small (in the order of $0.1\text{dB/km}$,[^1] see {ref}`secFiberLoss`), this implies fibers can easily carry optical signals over distances in the order of several kilometers without considerable loss.
 
 (secFiberModes)=
 ## Fiber modes
@@ -97,7 +97,7 @@ the down-propagating wave is described by
 \end{align*}
 ```
 
-Here, the wavenumbers $k_{y,m}=2\pi\sin(\theta_m)/\lambda_0$ and $k_{z,m}=2\pi\cos(\theta_m)/\lambda_0$. The phase shift in the down-propagating wave of $(m-1)\pi$ follows from the condition that after superposing the two fields, their magnitude at the mirrors (at $y=\pm d/2$) should vanish<sup>[^2]</sup>. Therefore, the total field is of the form
+Here, the wavenumbers $k_{y,m}=2\pi\sin(\theta_m)/\lambda_0$ and $k_{z,m}=2\pi\cos(\theta_m)/\lambda_0$. The phase shift in the down-propagating wave of $(m-1)\pi$ follows from the condition that after superposing the two fields, their magnitude at the mirrors (at $y=\pm d/2$) should vanish[^2]. Therefore, the total field is of the form
 ```{math}
 \begin{align*}
 E_x(y,z)= E_{\text{up}}+E_{\text{down}}= E_0 u_m(y)\exp(-ik_{z,m}z)

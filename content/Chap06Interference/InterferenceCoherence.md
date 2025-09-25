@@ -515,7 +515,7 @@ I(\tau)= \left\{1 +\text{Re}\left[\gamma(\tau)
 \end{align*}
 ```
 The interference term is the product of the function $\cos(\mathbf{a}r{\omega}\tau)$, which is a rapidly oscillating function of $\tau$, and a slowly varying envelope $\cos \left(\Delta\omega\,\tau/2\right)$.
-It is interesting to note that the envelope, and hence $\gamma(\tau)$, vanishes for some periodically spaced $\tau$, which means that for certain $\tau$ the degree of self-coherence vanishes and no interference fringes form <sup>[^3]</sup>.$ ^,$<sup>[^4]</sup>. Note that when $\Delta\omega$ is larger the intervals between the zeros of $\gamma(\tau)$ decrease.
+It is interesting to note that the envelope, and hence $\gamma(\tau)$, vanishes for some periodically spaced $\tau$, which means that for certain $\tau$ the degree of self-coherence vanishes and no interference fringes form[^3],[^4]. Note that when $\Delta\omega$ is larger the intervals between the zeros of $\gamma(\tau)$ decrease.
 If more frequencies are added, the envelope function is not a cosine function but on average decreases with $\tau$. The typical value of $\tau$ below which interferences are observed is roughly equal to half the first zero of the envelope function. This value is called the **coherence time** $ \Delta \tau_c$.
 We conclude with some further interpretations of the degree of self-coherence $\gamma(\tau)$.
 
@@ -724,7 +724,7 @@ For large distance between the screen and the mask (in the Fraunhofer limit), th
 \theta_m = \frac{\Delta R}{d} = m \frac{\lambda}{d},
 \end{align*}
 ```
-where $d$ is the distance between the slits and $m$ is an integer<sup>[^5]</sup>.
+where $d$ is the distance between the slits and $m$ is an integer[^5].
 
 
 **Remarks**. 
@@ -1394,51 +1394,3 @@ the two constituent orthogonal linearly polarized states of natural light cannot
 ```
 
 <!-- Bibliography entries moved to references.bib -->
-<!-- @article{young_interference,
-    title={The Bakerian Lecture: Experiments and Calculations Relative to Physical Optics},
-    author={Young, Thomas},
-    journal={Philosophical Transactions of the Royal Society of London},
-    volume={94},
-    pages={1--16},
-    year={1804},
-    publisher={Royal Society},
-    note={First demonstration of interference fringes with natural light}
-}
-
-@book{born_wolf_coherence,
-    title={Principles of Optics},
-    author={Born, Max and Wolf, Emil},
-    year={1999},
-    publisher={Cambridge University Press},
-    edition={7th},
-    chapter={10},
-    note={Comprehensive treatment of coherence theory}
-}
-
-@article{michelson_interferometer,
-    title={On the Application of Interference Methods to Astronomical Measurements},
-    author={Michelson, Albert A.},
-    journal={The Astrophysical Journal},
-    volume={51},
-    pages={257--262},
-    year={1920},
-    publisher={University of Chicago Press}
-}
-
-@book{mandel_wolf,
-    title={Optical Coherence and Quantum Optics},
-    author={Mandel, Leonard and Wolf, Emil},
-    year={1995},
-    publisher={Cambridge University Press},
-    note={Detailed treatment of coherence theory and its quantum foundations}
-}
-
-@article{fresnel_arago,
-    title={Mémoire sur l'action que les rayons de lumière polarisée exercent les uns sur les autres},
-    author={Fresnel, Augustin and Arago, François},
-    journal={Annales de Chimie et de Physique},
-    volume={2},
-    pages={288--314},
-    year={1819},
-    note={Original paper describing the laws of interference of polarized light}
-}

@@ -39,6 +39,7 @@ A quantitative model of the propagation of light is required to predict the prop
 From electromagnetic theory, we know that in homogeneous matter (i.e. the permittivity is constant), every component $U$ of a time-harmonic electromagnetic field satisfies the scalar Helmholtz equation {eq}`eq.complH`:
 
 ```{math}
+:label: eq.complH
 \begin{align*}
 \left( \nabla ^2 + k^2\right) U(\mathbf{r})=0,
 \end{align*}
@@ -90,7 +91,7 @@ U_0(x,y)= \frac{1}{4\pi^2} \int\!\int {\cal F}(U_0)\left(\frac{k_x}{2\pi},\frac{
 ```
 The variables in the Fourier plane: $(\xi,\eta)$ and $(k_x, k_y)$ are called **spatial frequencies**.
 
-Equation {eq}`eq.FkU0` says that we can write $U_0(x,y)=U(x,y,z=0)$ as an integral (a sum) of plane waves<sup>[^1]</sup> with wave vector $\mathbf{k}=(k_x,k_y, k_z)^T$, each with its own weight (i.e. complex amplitude) ${\cal F}(U_0)\left(\frac{k_x}{2\pi},\frac{k_y}{2\pi}\right)$.
+Equation {eq}`eq.FkU0` says that we can write $U_0(x,y)=U(x,y,z=0)$ as an integral (a sum) of plane waves[^1] with wave vector $\mathbf{k}=(k_x,k_y, k_z)^T$, each with its own weight (i.e. complex amplitude) ${\cal F}(U_0)\left(\frac{k_x}{2\pi},\frac{k_y}{2\pi}\right)$.
 We know how each plane wave with complex amplitude ${\cal F}(U_0)\left(\frac{k_x}{2\pi},\frac{k_y}{2\pi}\right)$ and wave vector $\mathbf{k}=(k_x,k_y,k_z)^T$ propagates over a distance $z>0$
 
 ```{math}
@@ -169,7 +170,7 @@ Alternatively, one can propagate only the $E_x$- and $E_y$-components and afterw
 (sec:rayleighsommerfeld)=
 ### Rayleigh-Sommerfeld Diffraction Integral
 
-Another method to propagate a wave field is by using the **Rayleigh-Sommerfeld** integral. A very good approximation of this integral states that each point in the plane $z=0$ emits spherical waves with amplitude proportional to the field in the plane $z=0$. To find the field in a point $(x, y,z)$, we have to add the contributions from all these point sources together. This corresponds to the Huygens-Fresnel principle postulated earlier in [](#section.spatcoh). Because a more rigorous derivation starting from the Helmholtz equation<sup>[^2]</sup> would be rather lengthy, we will just give the final result:
+Another method to propagate a wave field is by using the **Rayleigh-Sommerfeld** integral. A very good approximation of this integral states that each point in the plane $z=0$ emits spherical waves with amplitude proportional to the field in the plane $z=0$. To find the field in a point $(x, y,z)$, we have to add the contributions from all these point sources together. This corresponds to the Huygens-Fresnel principle postulated earlier in [](#section.spatcoh). Because a more rigorous derivation starting from the Helmholtz equation[^2] would be rather lengthy, we will just give the final result:
 
 ````{note}
 ```{math}
@@ -228,7 +229,7 @@ Propagation of light leads to irrecoverable loss of resolution.
 
 It is this fact that motivates near-field microscopy, which tries to detect these evanescent waves by scanning close to the sample, thus obtaining subwavelength resolution.
 
-So we have seen how we can guess properties of some object field $U_0(x,y)$ given the amplitude of its spatial Fourier transform $|\mathcal{F}(U_0)\left(\frac{k_x}{2\pi},\frac{k_y}{2\pi}\right)|$. But what about the phase of $\mathcal{F}(U_0)\left(\frac{k_x}{2\pi},\frac{k_y}{2\pi}\right)$? Although one cannot really guess properties of $U_0(x,y)$ by looking at the phase of $\mathcal{F}(U_0)\left(\frac{k_x}{2\pi},\frac{k_y}{2\pi}\right)$ the same way as we can by looking at its amplitude, it is in fact the phase that plays a larger role in defining $U_0(x,y)$. This is illustrated in {numref}`Fig_6_06_FourierPhase`: if the amplitude information of $\mathcal{F}(U_0)\left(\frac{k_x}{2\pi},\frac{k_y}{2\pi}\right)$ is removed, features of the original $U_0(x,y)$ may still be retrieved. However, if we only know the amplitude $|\mathcal{F}(U_0)(k_x,k_y)|$ but not the phase, then the original object is completely lost. Thus, the phase of a field $\mathcal{F}(U_0)$ is very important, arguably often more important than its amplitude. However, we cannot measure the phase of a field directly, only its intensity $I=|\mathcal{F}(U_0)|^2$ from which we can calculate the amplitude $|\mathcal{F}(U_0)|$. It is this fact that makes **phase retrieval** an entire field of study on its own: how can we find the phase of a field, given that we can only perform intensity measurements? This question is related to a new field of optics called "lensless imaging", where amplitudes and phases are retrieved from intensity measurements and the image is reconstructed **computationally**. Interesting as this topic may be, we will not treat it in these notes and refer instead to master courses in optics <sup>[^3]</sup>.
+So we have seen how we can guess properties of some object field $U_0(x,y)$ given the amplitude of its spatial Fourier transform $|\mathcal{F}(U_0)\left(\frac{k_x}{2\pi},\frac{k_y}{2\pi}\right)|$. But what about the phase of $\mathcal{F}(U_0)\left(\frac{k_x}{2\pi},\frac{k_y}{2\pi}\right)$? Although one cannot really guess properties of $U_0(x,y)$ by looking at the phase of $\mathcal{F}(U_0)\left(\frac{k_x}{2\pi},\frac{k_y}{2\pi}\right)$ the same way as we can by looking at its amplitude, it is in fact the phase that plays a larger role in defining $U_0(x,y)$. This is illustrated in {numref}`Fig_6_06_FourierPhase`: if the amplitude information of $\mathcal{F}(U_0)\left(\frac{k_x}{2\pi},\frac{k_y}{2\pi}\right)$ is removed, features of the original $U_0(x,y)$ may still be retrieved. However, if we only know the amplitude $|\mathcal{F}(U_0)(k_x,k_y)|$ but not the phase, then the original object is completely lost. Thus, the phase of a field $\mathcal{F}(U_0)$ is very important, arguably often more important than its amplitude. However, we cannot measure the phase of a field directly, only its intensity $I=|\mathcal{F}(U_0)|^2$ from which we can calculate the amplitude $|\mathcal{F}(U_0)|$. It is this fact that makes **phase retrieval** an entire field of study on its own: how can we find the phase of a field, given that we can only perform intensity measurements? This question is related to a new field of optics called "lensless imaging", where amplitudes and phases are retrieved from intensity measurements and the image is reconstructed **computationally**. Interesting as this topic may be, we will not treat it in these notes and refer instead to master courses in optics [^3].
 
 **Remark**. The importance of the phase for the field can also be seen by looking at the plane wave expansion {eq}`eq.planewave1`. We have seen that the field in a plane $z=\text{constant}$ can be obtained by propagating the plane waves by multiplying their amplitudes by the phase factors $\exp(i z k_z)$, which depends on the propagation distance $z$. If one leaves the evanescent waves out of consideration (since after some distance they hardly contribute to the field anyway), it follows that only the phases of the plane waves change upon propagation, while their amplitudes (the moduli of their complex amplitudes) do not change. Yet, depending on the propagation distance $z$, widely differing light patterns are obtained (see e.g. {numref}`Fig_6_08_FresnelFraunhoferSlit`).
 
@@ -260,7 +261,7 @@ Demonstration of the role of the phase of the spatial Fourier transform. If the 
 ```
 
 
-Another aspect of the Fourier transform is the **uncertainty principle**. It states that many waves of different frequencies have to be added to get a function that is confined to a small space<sup>[^4]</sup>. Stated differently, if $U(x,y)$ is confined to a very small region, then $\mathcal{F}(U)(k_x,k_y)$ must be very spread out. This can also be illustrated by the scaling property of the Fourier transform:
+Another aspect of the Fourier transform is the **uncertainty principle**. It states that many waves of different frequencies have to be added to get a function that is confined to a small space[^4]. Stated differently, if $U(x,y)$ is confined to a very small region, then $\mathcal{F}(U)(k_x,k_y)$ must be very spread out. This can also be illustrated by the scaling property of the Fourier transform:
 
 ```{math}
 \begin{align*}
@@ -368,7 +369,7 @@ Note that this propagator depends on the distance of propagation $z$.
 
 **Remark**. By Fourier transforming {eq}`eq.FresnelF`, one can get the plane wave amplitudes of the Fresnel approximation.
 It turns out that these amplitudes are equal to ${\cal F}(U_0)$ multiplied by a phase factor which is obtained from a paraxial approximation of the exact phase factor $\exp(i z k_z)$, i.e. $k_z$ is approximated by a quadratic function of $k_x, k_y$. Therefore the Fresnel approximation is also called the paraxial approximation. In fact, it can be shown that the Fresnel diffraction integral is a solution of the
-**paraxial wave equation** and conversely, that every solution of the paraxial wave equation can be written as a Fresnel diffraction integral<sup>[^5]</sup>.
+**paraxial wave equation** and conversely, that every solution of the paraxial wave equation can be written as a Fresnel diffraction integral[^5].
 
 
 ### Fraunhofer Approximation
@@ -953,7 +954,7 @@ which is the same as the Fraunhofer integral for propagation over the distance $
 The field in the entrance pupil of the lens and the field in the focal plane are related by a Fourier transform (apart from a quadratic phase factor in front of the integral).
 ```
 
-It can be shown that the fields in the front focal plane $U(x,y,-f_i)$ and the back focal plane $U(x,y,f_i)$ are related **exactly** by a Fourier transform, i.e. without the quadratic phase factor<sup>[^6]</sup>.
+It can be shown that the fields in the front focal plane $U(x,y,-f_i)$ and the back focal plane $U(x,y,f_i)$ are related **exactly** by a Fourier transform, i.e. without the quadratic phase factor[^6].
 So a lens performs a Fourier transform. Let us see if that agrees with some of the facts we know from geometrical optics.
 
 1. We know from Gaussian geometrical optics that if we illuminate a positive lens with rays parallel to the optical axis, these rays all intersect in the image focal point. This corresponds with the fact that for $U_0(x,y)=1$ (i.e. plane wave illumination, neglecting the finite aperture of the lens, i.e. neglecting diffraction due to the finite size of the pupil), the Fourier transform of the pupil field is a delta peak:
@@ -1052,7 +1053,7 @@ The integral can be made into a convolution by using the coordinates $x_i, y_i$ 
 
 It is clear from {eq}`eq.PSF` that larger radius $a$ of the lens and smaller wavelength $\lambda$ imply a narrower PSF.
 This in turn implies that the kernel in the convolution is more sharply peaked and hence that the resolution of the image is higher
-<sup>[^7]</sup>.
+[^7].
 
 
 
@@ -1081,12 +1082,12 @@ Hence the image intensity is expressed in the intensity of the source by a convo
 
 3. An object is often illuminated by a spatially incoherent extended light source and then imaged. According to the discussion in [](#section.scprop), the field that illuminates the object is then partially coherent. It is more coherent when the angle that the source extends at the object is smaller. The intensity in the image plane can be computed by splitting the spatially incoherent source into sufficiently many mutually incoherent point sources and computing the intensities in the image plane due to the illumination of the object by each individual point source. The total intensity in the image plane is then the sum of these intensities.
 
-4. We have considered only scalar diffraction theory. However, for a lens with numerical aperture larger than 0.6, the change of polarization can be important. Then a more general diffraction theory is needed <sup>[^8]</sup>.
+4. We have considered only scalar diffraction theory. However, for a lens with numerical aperture larger than 0.6, the change of polarization can be important. Then a more general diffraction theory is needed [^8].
 
 ### Spatial Light Modulators and Optical Fourier Filtering
 
 - **SLM.** The field in the entrance pupil of a lens, in particular its phase can be changed spatially by a so-called **spatial light modulator** (SLM). A SLM has thousands of pixels by which very general focused fields can be made.
-An example is a focused fields with only a longitudinal component in the focal point (i.e. only the $E_z$-component is nonzero at the focal point) <sup>[^9]</sup>.
+An example is a focused fields with only a longitudinal component in the focal point (i.e. only the $E_z$-component is nonzero at the focal point) [^9].
 
 - **Fourier filtering.** Suppose we have the setup as shown in {numref}`Fig_6_18_Fourier_Filtering`. With one lens we can create the Fourier transform of some field $U(x,y)$. Let a mask be put in the focal plane and a second lens be used to refocus the light.
 This implies that the amplitude and/pf phase of the plane waves in the angular spectrum of the field are manipulated.
@@ -1126,7 +1127,7 @@ The resolution is roughly a factor 1.5 better than for normal imaging with full 
 Pendry's perfect lens consists of a slab of a material with negative permittivity and negative permeability such that its absolute values are equal to the positive permittivity and positive permeability of the surrounding medium. Points outside the slab are imaged perfectly in two planes: one inside the slab and the other on the opposite side of the slab.
 ```
 
-The simple slab geometry seen in {numref}`Fig_6_19_Pendry_Lens` which acts as a perfect lens was proposed by John Pendry in 2000 <sup>[^10]</sup>. Unfortunately, a material with negative permittivity and negative permeability has not been found in nature. Therefore, many researchers have attempted to mimic such a material by mixing metals and dielectrics on a sub-wavelength scale. It seems that a negative index without absorption violates causality. But when there is absorption, the image is not anymore perfect.
+The simple slab geometry seen in {numref}`Fig_6_19_Pendry_Lens` which acts as a perfect lens was proposed by John Pendry in 2000 [^10]. Unfortunately, a material with negative permittivity and negative permeability has not been found in nature. Therefore, many researchers have attempted to mimic such a material by mixing metals and dielectrics on a sub-wavelength scale. It seems that a negative index without absorption violates causality. But when there is absorption, the image is not anymore perfect.
 
 - **Hyperbolic materials.** Hyperbolic materials are anisotropic, i.e. the phase velocity of a plane wave depends on the polarization and on the direction of the wave vector. The permittivity of an anisotropic material is a tensor (loosely speaking a (3,3)-matrix). Normally the eigenvalues of the permittivity matrix are positive; however, in a hyperbolic material two eigenvalues are of equal sign and the third has opposite sign. In such a medium all waves with the so-called extraordinary state of polarization propagate, no matter how high the spatial frequencies are. Hence, for the extraordinary state of polarization evanescent waves do not exist and therefore super-resolution and perfect imaging should be possible in such a medium.
 ```{figure} Images/Chapter_6/6_20_Metamaterials.jpg

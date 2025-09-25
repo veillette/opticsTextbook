@@ -64,7 +64,7 @@ $$
 
 - **d)** Suppose we send light through the linear polarizer and the quarter-wave plate. Then the light is partially transmitted and partially reflected by the mirror. The reflected light passes again through the quarter-wave plate and the polarizer. Using Jones matrices calculate the state of the light that exits.
 
-A video demonstration of this optical isolator can be viewed at <sup>[^1]</sup> (or search for "MIT optical isolator" on Youtube).
+A video demonstration of this optical isolator can be viewed at [^1] (or search for "MIT optical isolator" on Youtube).
 
 
 4. Phase plates. 

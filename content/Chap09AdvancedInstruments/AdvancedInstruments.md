@@ -1,7 +1,7 @@
 # Advanced Optical Microscopes
 
 Many attempts have been and are still being done to achieve better images. An obvious way of improving the resolution is to use shorter wavelengths. However, at wavelengths below 200 nm (i.e. at deep, extreme ultraviolet, soft x-rays and hard x-rays) most materials have low optical contrast and refractive optics (lenses) are not practical. Instead of reducing the wavelength, other methods have been invented to achieve higher resolution. Some of these (certainly not all) are discussed in this chapter.
-Apart from these already existing systems, research is continuing to achieve higher resolution. Pendry's paper on a superlens based on negative refraction<sup>[^1]</sup> has started a very active research on super-resolution using metamaterials, in particular hyperbolic materials. We will not go into these topics here and instead refer interested students to the master course *Advanced Photonics*.
+Apart from these already existing systems, research is continuing to achieve higher resolution. Pendry's paper on a superlens based on negative refraction[^1] has started a very active research on super-resolution using metamaterials, in particular hyperbolic materials. We will not go into these topics here and instead refer interested students to the master course *Advanced Photonics*.
 
 ## Phase Contrast Microscope
 
@@ -32,7 +32,7 @@ I(x,y)&=|e^{i\varphi(x,y)}+(i-1)\mathcal{F}(U)(0,0)|^2 \\
 $$
 
 where we assume without loss of generality that $\mathcal{F}(U)(0,0)$ is real (a constant phase shift can be chosen such that $\mathcal{F}(U)(0,0)$ is real).
-We see that indeed the phase information can now be measured as intensity information, because of the phase shift applied to the Fourier transform of $U(x,y)$ in one point<sup>[^2]</sup>. Assuming that $\varphi(x,y)$ is small, and neglecting the higher-order term $\hat{U}(0,0)^2$, we can write
+We see that indeed the phase information can now be measured as intensity information, because of the phase shift applied to the Fourier transform of $U(x,y)$ in one point[^2]. Assuming that $\varphi(x,y)$ is small, and neglecting the higher-order term $\hat{U}(0,0)^2$, we can write
 
 $$
 I(x,y)\approx 1+2\mathcal{F}(U)(0,0)\varphi(x,y).
