@@ -48,8 +48,38 @@ project:
         - content/Chap10FiberOptics/FiberOptics.md
         - content/Chap11RayMatrix/RayMatrix.md
     - format: docx
-      output: exports/textbook.docx
-      article: content/Preface/Preface.md
+      output: exports/chapters/chapter-01-basics.docx
+      article: content/Chap01Basics/Basics.md
+    - format: docx
+      output: exports/chapters/chapter-02-geometrical-optics.docx
+      article: content/Chap02GeometricalOptics/GeometricalOptics.md
+    - format: docx
+      output: exports/chapters/chapter-03-optical-instrument.docx
+      article: content/Chap03OpticalInstrument/OpticalInstruments.md
+    - format: docx
+      output: exports/chapters/chapter-04-polarization.docx
+      article: content/Chap04Polarization/Polarization.md
+    - format: docx
+      output: exports/chapters/chapter-05-wave.docx
+      article: content/Chap05Wave/Wave.md
+    - format: docx
+      output: exports/chapters/chapter-06-interference.docx
+      article: content/Chap06Interference/InterferenceCoherence.md
+    - format : docx
+      output: exports/chapters/chapter-07-diffraction.docx
+      article: content/Chap07Diffraction/DiffractiveOptics.md
+    - format : docx
+      output: exports/chapters/chapter-08-laser.docx
+      article: content/Chap08Lasers/Lasers.md
+    - format : docx
+      output: exports/chapters/chapter-09-advanced-instruments.docx
+      article: content/Chap09AdvancedInstruments/AdvancedInstruments.md
+    - format : docx
+      output: exports/chapters/chapter-10-fiber-optics.docx
+      article: content/Chap10FiberOptics/FiberOptics.md
+    - format : docx
+      output: exports/chapters/chapter-11-ray-matrix.docx
+      article: content/Chap11RayMatrix/RayMatrix.md
   toc:
     - title: Preface
       file: content/Preface/Preface.md
