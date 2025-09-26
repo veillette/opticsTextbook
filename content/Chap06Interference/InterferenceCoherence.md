@@ -594,7 +594,7 @@ U_2(\mathbf{r},t) = {\cal S}\, \frac{\mathbf{a}r{\omega}}{c}
 ```
 The total field in $\mathbf{r}$ is the sum $U_1(\mathbf{r},t)+U_2(\mathbf{r},t)$.
 Because of the difference in propagation distance
-$\Delta R=|\mathbf{r}-\mathbf{r}_2|-|\mathbf{r}-\mathbf{r}_1|$, there is a time difference $\tau$ between when the two fields have been emitted by the two pinholes when they arrive at a given time $T$ IN point $\mathbf{r}$ on the screen in {numref}`Fig_5_04_Spatial Coherence`. This time difference is given by
+$\Delta R=|\mathbf{r}-\mathbf{r}_2|-|\mathbf{r}-\mathbf{r}_1|$, there is a time difference $\tau$ between when the two fields have been emitted by the two pinholes when they arrive at a given time $T$ IN point $\mathbf{r}$ on the screen in {numref}`Fig_5_04_Spatial_Coherence`. This time difference is given by
 
 ```{math}
 :label: eq.tau2
@@ -716,7 +716,7 @@ Because $\omega=c\frac{2\pi}{\lambda}$, and $\Delta R=c\tau$, we find that maxim
 \Delta R =0,\pm\lambda,\pm 2\lambda, \pm 3\lambda,\dots
 \end{align*}
 ```
-For large distance between the screen and the mask (in the Fraunhofer limit), these path length differences correspond to directions of the maxima given by the angles $\theta_m$ (see {numref}`Fig_5_04_Spatial Coherence`):
+For large distance between the screen and the mask (in the Fraunhofer limit), these path length differences correspond to directions of the maxima given by the angles $\theta_m$ (see {numref}`Fig_5_04_Spatial_Coherence`):
 
 ```{math}
 :label: eq.theta_Young
