@@ -162,6 +162,10 @@ project:
               file: content/Appendices/ComplexNumbers.md
             - title: Appendix B - Matrix Multiplication in Optics
               file: content/Appendices/MatrixMultiplication.md
+            - title: Appendix C - Fourier Transform in Optics
+              file: content/Appendices/FourierTransform.md
+            - title: Appendix D - Vector Calculus for Electromagnetic Fields
+              file: content/Appendices/VectorCalculus.md
         - title: Author
           children:
             - file: content/Author/author.md
