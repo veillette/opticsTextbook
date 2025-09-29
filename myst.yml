@@ -118,7 +118,7 @@ project:
           file: content/Chap03OpticalInstrument/OpticalInstruments.md
           children:
             - title: Problems
-              file: content/Chap03OpticalInstrument/Problems/OpticalInstruments_Exercise.md
+              file: content/Chap03OpticalInstrument/Problems/OpticalInstrumentsExercise.md
         - title: Chapter 04 - Polarization
           file: content/Chap04Polarization/Polarization.md
           children:
@@ -150,7 +150,7 @@ project:
           file: content/Chap10FiberOptics/FiberOptics.md
           children:
             - title: Problems
-              file: content/Chap10FiberOptics/Problems/FiberExercise.md
+              file: content/Chap10FiberOptics/Problems/FiberOpticsExercise.md
         - title: Chapter 11 - Ray Matrices
           file: content/Chap11RayMatrix/RayMatrix.md
           children:
