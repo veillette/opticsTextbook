@@ -48,14 +48,14 @@ The idea is to illuminate the object with a tightly focused spot, using an objec
 As is illustrated in {numref}`Fig_8_01_Confocal`, by using a focused spot for the illumination in conjunction with a pinhole in front of the detector, only the photons very close to the focal plane pass the pinhole and are detected. This means that the axial resolution of the images is roughly 600 nm when light of wavelength of 400 nm is used, which is better than with bright field illumination and conventional detection. The illumination by a focused spot implies that the sample is illuminated by a field with large lateral spatial frequencies. Because the reflected near field is the product of the incident spot and the reflection function, high spatial frequencies of the reflection function can be transmitted by the lens, due to the convolution in the Fourier domain between the Fourier-transformed incident spot and the transformed reflection function. The lateral resolution is therefore also increased from around 200 nm to 160 nm, i.e. by a factor around 1.2. The confocal microscope thus gives higher resolution both in the axial and in the lateral direction. It can of course only be applied to an object that does not change during the time required to scan.
 
 
-```{figure} Images/09_01_Confocal.png
+```{figure} Images/09_01_confocal.png
 :name: Fig_8_01_Confocal
 Schematic of a confocal microscope and its principle
 ```
 
 
 
-```{figure} Images/09_02_Confocal_1euro.png
+```{figure} Images/09_02_confocal_1euro.png
 :name: Fig_8_02_Confocal_euro
 Partial surface profile of a 1 Euro coin, measured with a Nipkow disk confocal microscope. *Source Wikipedia*
 ```
@@ -66,7 +66,7 @@ Partial surface profile of a 1 Euro coin, measured with a Nipkow disk confocal m
 In this case, fluorescent molecules, such at those of the GFP (Green Fluorescence Protein) family, are introduced in the cell of interest. The light from the illuminating source is monochromatic (laser) and excites these GFP molecules which then re-emit at a characteristic longer wavelength. By using a dichromate (a mirror that passes only a certain color and reflects the rest), this re-emitted light can be detected using a detector with a pinhole. One obtains colorful images such as the one presented in {numref}`Fig_03_Flurorescence`. The advantage of fluorescence microscopy is that the sources of the fluorescence light are inside the sample and that by selective binding of the fluorescent molecules to particular organs very specific images can be obtained.
 
 
-```{figure} Images/09_03_FluorescentCells.jpg
+```{figure} Images/09_03_fluorescent_cells.jpg
 :name: Fig_03_Flurorescence
 Endothelial cells under the microscope using fluorescence microscopy. The different colors enlighten different GFP.
 ```
@@ -86,7 +86,7 @@ But to achieve superresolution, i.e. the detection of features that are substant
 The second method is shown at the right of {numref}`Fig_8_05_NSOM`. A fiber with sub-wavelength tip is now used to illuminate the sample from a very small distance, while the detection is done with a conventional objective. It may at first seem strange that the detected far field contains information about sub-wavelength features of the object and hence provides superresolution images. The superresolution is however due to the fact that the illumination consists in part of evanescent waves.
 The two set-ups in {numref}`Fig_8_04_SNOM` are reciprocal to each other and they give similar resolution enhancement.
 
-```{figure} Images/09_04_NSOM_Collection.jpg
+```{figure} Images/09_04_nsom_collection.jpg
 :name: Fig_8_04_SNOM
 Collection (left) and Excitation (right) mode for a SNOM.
 ```
@@ -97,7 +97,7 @@ On the left in {numref}`Fig_8_05_NSOM` a topographic Atomic Force Microscopic (A
 A warning is appropriate.
 Because in SNOM the fiber is very close to the sample, either to illuminate the sample or to collect the scattered near field, the fiber in general will influence the measurement, i.e. the field that one wants to detect is to a certain extent perturbed by the measuring device.
 
-```{figure} Images/09_05_NSOM_imageA.jpg
+```{figure} Images/09_05_nsom_image_a.jpg
 :name: Fig_8_05_NSOM
 Left: Topographic AFM image of a Photonics Band Gap (PBG) structure, imaged with a 150 nm AFM/NSOM cantilevered probe. Right: NSOM image of the PBG structure using 532 nm laser wavelength.
 ```

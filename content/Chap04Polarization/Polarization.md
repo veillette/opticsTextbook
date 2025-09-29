@@ -197,17 +197,17 @@ Furthermore, the electric field in a certain point moves along an ellipse in the
 We can conclude that in any point of an arbitrary time-harmonic electromagnetic field, the electric (and in fact also the magnetic) field vector prescribes as function of time an ellipse in some plane which depends on position{cite:p}`born_wolf`. In this chapter we only consider the field and polarization state of a single plane wave.
 
 
-```{figure} Images/04_01_Dphi_000pi_f1_BW.png
+```{figure} Images/04_01_dphi_000pi_f1_bw.png
 :name: 4_01_Dphi_000pi_f1_BW
 Linear polarization
 ```
 
-```{figure} Images/04_02_Dphi_05pi_f1_BW.png
+```{figure} Images/04_02_dphi_05pi_f1_bw.png
 :name: 4_02_Dphi_05pi_f1_BW
 Circular polarization
 ```
 
-```{figure} Images/04_03_Dphi_025pi_f1_BW.png
+```{figure} Images/04_03_dphi_025pi_f1_bw.png
 :name: 4_03_Dphi_025pi_f1_BW
 Elliptical polarization
 
@@ -384,7 +384,7 @@ If the matrix ${\cal M}$ describes the Jones matrix as defined in {eq}`eq.defM2a
 This is a standard result from linear algebra involving basis transformations.
 
 
-```{figure} Images/04_04_Rotation_Polarization.png
+```{figure} Images/04_04_rotation_polarization.png
 :name: 4_2_Rotation_Polarization
 If the wave plate is rotated, the fast and slow axis no longer correspond to $x$ and $y$. Instead, we have to introduce a new coordinate system ($x',y'$).
 ```
@@ -486,7 +486,7 @@ A half-wave plate introduces a phase shift of $\pi$, so its Jones matrix is
 ```
 because $\exp(i\pi)=-1$. An important application of the half-wave plate is to **change the orientation of linearly polarized light**{cite:p}`fowles`. After all, what this matrix does is mirroring the polarization state in the $x$-axis. Thus, if we choose our mirroring axis correctly (i.e. if we choose the orientation of the wave plate correctly), we can change the direction in which the light is linearly polarized arbitrarily{cite:p}`goldstein`. To give an example: a wave with linear polarization parallel to the $x$-direction, can be rotated over angle $\alpha$ by rotating the crystal such that the fast axis makes angle $\alpha/2$ with the $x$-axis. Upon propagation through the crystal, the slow axis gets an additional phase of $\pi$, due to which the electric vector makes angle $\alpha$ with the $x$-axis (see {numref}`4_04_Rotation_polarization`). It is not difficult to verify that when the fast and slow axis are interchanged, the same linear state of polarization results.
 
-```{figure} Images/04_05_Rotation_polarization.png
+```{figure} Images/04_05_rotation_polarization.png
 :name: 4_04_Rotation_polarization
 Rotation of horizontally polarized light over an angle $\alpha$ using a half-wave plate.
 ```

@@ -14,11 +14,11 @@
 ## Introduction
 
 Although the model of geometrical optics helps us to design optical systems and explains many phenomena, there are properties of light that require a more elaborate model. For example, interference fringes observed in Young's double-slit experiment or the Arago spot ({numref}`Arago`) indicate that light is more accurately modeled as a wave.
-```{figure} Images/06_01_Arago1.jpg
+```{figure} Images/06_01_arago1.jpg
 ```
-```{figure} Images/06_02_Arago2.jpg
+```{figure} Images/06_02_arago2.jpg
 ```
-```{figure} Images/06_03_Arago3.jpg
+```{figure} Images/06_03_arago3.jpg
 :name: Arago
 The Arago spot is the bright spot which occurs at the center of the shadow of a circular disc and which is caused by diffraction. The disc has diameter 4&nbsp;mm, 2&nbsp;mm and 1&nbsp;mm, from left to right, the wavelength is 633&nbsp;nm and the intensity is recorded at 1&nbsp;m behind the disc and has width of 16&nbsp;mm
 ```
@@ -231,7 +231,7 @@ Light trains which have been spontaneously emitted by different atoms can not in
 ```
 
 
-```{figure} Images/06_04_Atom_Random_Emission.png
+```{figure} Images/06_04_atom_random_emission.png
 :name: Fig_5_01_Atom_Random_Emission
 The electric field amplitude of the harmonic wave train radiated by a single atom at the center frequency $\mathbf{a}r{\omega}$. The vertical lines are collisions separated by periods of free flight with mean duration $\tau_0$. The quantity $\mathbf{a}r{\omega}\tau_0$, which is the number of periods in a typical wave train, is chosen unrealistically small (namely 60, whereas a realistic value would be $10^5$) to show the random phase changes.
 ```
@@ -375,7 +375,7 @@ $U(\mathbf{r},t)$ interfere with $U(\mathbf{r}, t-\tau)$.
 Because, when studying temporal coherence, the point $\mathbf{r}$ is always the same, we omit it from the formula. Furthermore, for easier understanding of the phenomena, we assume for the time being that the field considered is emitted by a single atom (i.e. a point source).
 
 Temporal coherence is closely related to the spectral content of the light: if the light consists of fewer frequencies (think of monochromatic light), then it is more temporally coherent. To study the interference of $U(t)$ with $U(t-\tau)$, a Michelson interferometer, shown in {numref}`Fig_5_02_Temporal_Coherence`, is a suitable setup. The light that goes through one arm takes time $t$ to reach the detector, while the light that goes through the other (longer) arm takes time $t+\tau$ which means that it was radiated earlier. Therefore, the detector observes the time-averaged intensity $\braket{|U(t)+U(t-\tau)|^2}$. As remarked before, this averaged intensity does not depend on the time the average is taken, it only depends on the time difference $\tau$ between the two beams.
-```{figure} Images/06_05_Temporal_Coherence.png
+```{figure} Images/06_05_temporal_coherence.png
 :name: Fig_5_02_Temporal_Coherence
 A Michelson interferometer to study the temporal coherence of a field. A beam is split in two by a beam splitter, and the two beams propagate over different distances which corresponds to a time difference $\tau$ and then interfere at the detector.
 ```
@@ -542,7 +542,7 @@ Temporal coherence concerns the coherence of the field in one point. The absolut
 While for temporal coherence we used a **Michelson interferometer**, the natural choice to characterize spatial coherence is
 **Young's experiment**, because it allows the fields in two points $P_1$, $P_2$ which are separated in space to interfere with each other.
 
-```{figure} Images/06_06_Spatial_Coherence.png
+```{figure} Images/06_06_spatial_coherence.png
 :name: Fig_5_04_Spatial_Coherence
 The spatial coherence of light from an extended source.
 ```
@@ -807,7 +807,7 @@ U(P_2, t) \propto \frac{U(S_1,t-|S_1P_2|/c)}{|S_1P_2|} + \frac{U(S_2,t-|S_2P_2|/
 \end{align*}
 ```
 where we omitted the constant factors in front of {eq}`eq.Uhuygens`.
-```{figure} Images/06_07_Coherence_Propagation.png
+```{figure} Images/06_07_coherence_propagation.png
 :name: Fig_5_06_Coherence_Propagation
 Two incoherent point sources $S_1$, $S_2$ at a distance $a$ from each other and two points $P_1$, $P_2$ in a plane at large distance $z$ from the point sources.
 ```
@@ -863,7 +863,7 @@ Similarly,
 |S_2P_1|-|S_2P_2|\approx \frac{\alpha}{2}|x_1-x_2|.
 \end{align*}
 ```
-```{figure} Images/06_08_Coherence_Propagation.png
+```{figure} Images/06_08_coherence_propagation.png
 :name: Fig_5_07_Coherence_Propagation
 For $z$ very large, $S_1P_1$ and $S_1P_2$ are almost parallel and $|S_1P_2|-|S_1P_1|\approx |QP_2|= |x_1-x_2| \alpha/2$.
 ```
@@ -939,7 +939,7 @@ It works as follows: we want to know the size of a certain star. The size of the
 
 The method can also be used to derive the intensity distribution at the surface of the star. It can be shown that the degree of spatial coherence as function of the relative position of the telescopes is the Fourier transform of this intensity distribution. Hence, by moving the telescopes around and measuring the spatial coherence for many positions, the intensity distribution at the surface of the star can be derived from a back Fourier transform.
 
-```{figure} Images/06_09_Stellar_interferometry.png
+```{figure} Images/06_09_stellar_interferometry.png
 :name: Fig_5_08_Stellar_interferometry
 Left: a stellar interferometer with two telescopes that can be moved around to measure the interference at many relative positions. Right: single telescope with two outer movable mirrors. The telescope can move around it axis. The larger the distance $d$ the higher the resolution.
 ```
@@ -997,7 +997,7 @@ I_{\text{max}}=I_{\text{min}}=I_1+I_2,
 ```
 which gives $\mathcal{V}=0$.
 
-```{figure} Images/06_10_Visibility.png
+```{figure} Images/06_10_visibility.png
 :name: Fig_5_09_Visibility
 Illustration of $I_{\text{max}}$ and $I_{\text{min}}$ of an interference pattern $I(x)$ that determines the fringe contrast$\mathcal{V}$.
 ```
@@ -1009,7 +1009,7 @@ Illustration of $I_{\text{max}}$ and $I_{\text{min}}$ of an interference pattern
 ## Fabry-Perot resonator
 
 In interferometry two mutually coherent waves are added and the intensity of the sum of the two fields is measured. This intensity contains information about the phase difference of the waves from which for example a path length difference can be deduced. One distinguishes between two types of interferometers: **wavefront splitting interferometers** and **amplitude splitting interferometers**. Examples of the first type are Young's two slit experiment and Lloyd's mirror ({numref}`Fig_5_10_Lloydsmirror`). Examples of amplitude splitting interferometers are the Michelson interferometer and the Fabry-Perot interferometer. The latter is not only a spectrometer of extremely high resolution but is also the resonance cavity in a laser.
-```{figure} Images/06_11_Lloyd_Mirror.png
+```{figure} Images/06_11_lloyd_mirror.png
 :name: Fig_5_10_Lloydsmirror
 Lloyd's mirror as example of wavefront splitting interferometry.
 ```
@@ -1021,7 +1021,7 @@ such that the reflecting surfaces are at $z=0$ and $z=d$. The refractive indices
 Let there be a plane wave **with unit amplitude** incident from $z<0$ under angle $\theta_1$ with the normal as shown in {numref}`Fig_FP1`. The incident wave is assumed to be either s- or p-polarized. There are a reflected plane wave in $z<0$, two plane waves in medium 2 one propagating in the positive $z$-direction and the other in the negative $z$-direction and there is a transmitted plane wave in $z>d$. It follows from the boundary conditions that the tangential component of the electric and magnetic field are continuous across the interfaces, that the tangential components of the wave vectors of all these plane waves are identical.
 
 Let $r_{ij}$ and $t_{ij}$ be the reflection and transmission coefficient for a wave that is incident from medium $i$ on the interface with medium $j$. When the wave is s-polarized, $r_{12}$ and $t_{12}$ are given by Fresnel coefficients {eq}`eq.rs`,(\ref{eq.ts}), whereas if the wave is p-polarized, they are given by the p-polarized Fresnel coefficients.
-```{figure} Images/06_12_Fabry_Perot.png
+```{figure} Images/06_12_fabry_perot.png
 :name: Fig_FP1
 Fabry-Perot with 3 layers.The light comes from the bottom and is reflected by each interface.
 ```
@@ -1101,7 +1101,7 @@ t &= t_{12} t_{23} e^{i k^{(2)}_z d} \left[ 1 + r_{21}r_{23} e^{2 k_z^{(2)} d} +
 \end{align*}
 ```
 
-```{figure} Images/06_13_Fabry_Perot.Resonance.png
+```{figure} Images/06_13_fabry_perot_resonance.png
 :name: Fig_FP2
 Transmission coefficient versus the phase change $\delta$ due to the Fabry-Perot. One can see the resonances occurring at every multiple of $\pi$.
 ```

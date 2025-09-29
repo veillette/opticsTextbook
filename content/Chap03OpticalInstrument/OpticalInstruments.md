@@ -18,7 +18,7 @@ If the hole is too large, the image is very blurred. At the cost of less light, 
 The camera obscura can form images of objects across an extremely wide angular field due to great depth of focus and over a large range of distances (great depth of field) as you can see in the right picture of {numref}`Fig_3_01_Camera_obscura`.
 If a film would be used to record the image, very long exposure times are however needed because only a small amount of light enters the pinhole, (f-number= 500). It is believed that painters such as Johannes Vermeer have used the camera obscura to make paintings of external scenes.
 
-```{figure} Images/03_01_Camera_obscura.jpg
+```{figure} Images/03_01_camera_obscura.jpg
 :name: Fig_3_01_Camera_obscura
 The principle of the camera obscura (from [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Camera_obscura_1.jpg) in Fizyka z. (1910) / Public Domain). Examples of pictures made with a camera obscura can be found
 		[here](https://www.pinterest.com/bonfoton/camera-obscura-photographs/).
@@ -29,13 +29,13 @@ The principle of the camera obscura (from [Wikimedia Commons](https://commons.wi
 
 In {numref}`Fig_3_02_Reflex_camera` a single-lens reflex (SLR) camera is shown. The name does not mean that there is only one lens in the optical system, but that the photographer looks through the same lenses that the picture is taken with, instead of looking through a separate parallel optical system as in the twin reflex camera.
 After traversing the first few lens elements, the light passes through an iris diaphragm with adjustable diameter with which the $f$-number can be changed. After the lenses the light is reflected by a movable mirror tilted at $45^o$, passes through a prism and exits the camera through the finder eyepiece. When the shutter is released, the diaphragm closes to a preset value, the mirror swings up and the CCD is exposed. To focus the camera, the entire lens is moved toward or away from the detection plane. Autofocus is based on maximizing the contrast of the images.
-```{figure} Images/03_02_Reflex_camera.png
+```{figure} Images/03_02_reflex_camera.png
 :name: Fig_3_02_Reflex_camera
 Digital SLR camera. The pixelated digital sensor is behind a movable mirror at angle of 45 degrees with the optical axis. (from [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Reflex_camera_numeric.svg) by Jean François WITZ / CC BY-SA 3.0).
 ```
 
 The **angular field of view** (AFOV) is defined for scenes at large distances and is equal to the angle subtended at the lens by the detector when the image distance is the focal length $f$, i.e. the object is at infinity ({numref}`Fig_3_03_AFOV`). The AFOV decreases when $f$ increases. A standard SLR has a focal length of around 6 cm with AFOV between 40&deg; and 50&deg;.
-```{figure} Images/03_03_AFOV.png
+```{figure} Images/03_03_afov.png
 :name: Fig_3_03_AFOV
 Angular field of view
 ```
@@ -46,7 +46,7 @@ The **depth of focus** is a range of object distances around a given distance fo
 When the aperture is wide open, rays forming the image will make larger angles with the optical axis. When these rays come from objects at various distances they will for a large diaphragm cause more blurred images on the sensor (see {numref}`Fig_3_04_Lego_Depth`). When the aperture is reduced, this effect is less and therefore a smaller diaphragm implies a larger depth of focus.
 The drawback is that less light reaches the sensor, therefore a longer exposure time is needed.
 
-```{figure} Images/03_04_Lego_Depth.jpg
+```{figure} Images/03_04_lego_depth.jpg
 :name: Fig_3_04_Lego_Depth
 Four images taken with different diaphragm and different focal plane. The image on bottom right is taken with a small diaphragm and the entire image appears clear (photos taken by Aur&egrave;le J.L. ADAM / CC BY-SA).
 ```
@@ -64,16 +64,16 @@ The eye is an adaptive imaging system.
 
 ### Anatomy
 The human eye is made of an almost spherical (24 mm long and 22 mm across) gelatinous substance called the **vitreous humor** with refractive index 1.337, surrounded by a white shell, the **sclera** ({numref}`Fig_3_05_Three_Internal_chambers_of_the_Eye`). At the front, the sclera has an opening with a transparent lens called the **cornea**, with for green light an index of refraction of 1.376. Most of the bending of the rays takes place at the air-cornea interface and this is why it is difficult to see under water ($n_{water}=1.33$).
-```{figure} Images/03_05_Three_Internal_chambers_of_the_Eye.png
+```{figure} Images/03_05_three_internal_chambers_of_the_eye.png
 :name: Fig_3_05_Three_Internal_chambers_of_the_Eye
 Cross section of a human eye (from [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Three_Internal_chambers_of_the_Eye.png) by Holly Fischer / CC BY).
 ```
 
 After passing the cornea, the rays reach the **aqueous humour** ($n\approx$1.336) with the **iris** or pupil. It can expand or contract from a 2&nbsp;mm (bright sun) to 8&nbsp;mm (low light) diameter to adapt to the light intensity. The iris gives color to the eye. After the iris, the rays reach the flexible **crystalline lens** which has the size of a bean (9&nbsp;mm in diameter, and 4&nbsp;mm thick in relaxed condition). Its index of refraction varies from 1.406 in the center to 1.386 at the edge.
 
-```{figure} Images/03_06_Focus_in_an_eye_a.png
+```{figure} Images/03_06_focus_in_an_eye_a.png
 ```
-```{figure} Images/03_07_3_06b_Accomodation_eye.png
+```{figure} Images/03_07_accomodation_eye.png
 :name: Fig_3_06_Eye
 Left: Optical rays showing how an eye accommodates by changing its focal length. Right: Relaxed and contracted muscle at the crystalline lens needed for this accommodation.(Left: adapted from [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Focus_in_an_eye.svg) Erin Silversmith / BY-NC-SA 2.5 Generic. Right: adapted from Sjaastad O.V., Sand O. and Hove K. (2010) Physiology of domestic animals, 2nd edn., Oslo: Scandinavian Veterinary Press).
 ```
@@ -160,7 +160,7 @@ In this case a distant object is imaged by the relaxed eye behind the retina, i.
 \end{align*}
 ```
 hence the power must be $\mathfrak{D}=1/f=+3.2$ diopter.
-```{figure} Images/03_08_Eye_correction.png
+```{figure} Images/03_08_eye_correction.png
 :name: Fig_3_07_eye_correction
 Correction of farsighted (left) and nearsighted (right) eye (adapted from [Wikimedia Commons](https://en.wikipedia.org/wiki/File:Myopia_and_lens_correction.svg) by Gumenyuk I.S. / CC BY-SA 4.0).
 ```
@@ -231,7 +231,7 @@ $\mathcal{l}$ is the distance between the magnifying glass and the eye. Hence,
 ```
 where ${\cal P}$ is the power of the magnifying glass.
 
-```{figure} Images/03_10_Magnifier.png
+```{figure} Images/03_10_magnifier.png
 :name: Fig_3_09_Magnifier
 An unaided view (top) and an aided view using a magnifier.
 ```
@@ -270,7 +270,7 @@ The ocular provides a magnified virtual image of the image produced by the optic
 2. the eye-lens, which is closest to the eye at a fixed distance called the **eye relief**.
 The aperture of the eyepiece is controlled by a field stop.
 An example is given in {numref}`Fig_3_10_EyePiece`.
-```{figure} Images/03_11_EyePiece.png
+```{figure} Images/03_11_eye_piece.png
 :name: Fig_3_10_EyePiece
 Example of an eyepiece consisting of three lenses. 1) Real image, 2) field diaphragm, 3) eye relief, 4) eye pupil (adapted from [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Exitpupil.png) by Tamas-flex / CC BY-SA 3.0).
 ```
@@ -280,7 +280,7 @@ Example of an eyepiece consisting of three lenses. 1) Real image, 2) field diaph
 A magnifier alone can provide very high magnification only at the cost of intolerable aberrations.
 The **compound microscope** is a magnifier of close objects with a high angular magnification, generally more than $30\times$. It was invented by Zacharias Janssen in Middelburg in 1590 (but this claim is disputed). The first element of the compound microscope is an objective (in {numref}`Fig_3_11_Compound_Microscope` a simple positive lens) which makes a real, inverted and magnified image of the object in the front focal plane of an eyepiece (where there is also the field stop). The eyepiece will make a virtual image at infinity, as explained above.
 
-```{figure} Images/03_12_Compound_Microscope.png
+```{figure} Images/03_12_compound_microscope.png
 :name: Fig_3_11_Compound_Microscope
 Simple compound microscope. The objective forms a real image of a nearby object. The eyepiece enlarges this intermediate image. The final image can be bigger than the barrel of the device, since it is virtual.
 ```
@@ -319,7 +319,7 @@ with $n_{im}$ the refractive index of the immersing medium, usually air, but it 
 
 
 A telescope enlarges the retinal image of a distant object. Like a compound microscope, it is also composed of an objective and an eyepiece as seen in {numref}`Fig_3_12_Kepler_Telescope`.
-```{figure} Images/03_13_Kepler_Telescope.png
+```{figure} Images/03_13_kepler_telescope.png
 :name: Fig_3_12_Kepler_Telescope
 Keplerian astronomical telescope. 
 ```
@@ -337,7 +337,7 @@ $\text{MP} = \alpha_a/\alpha_u$ where $\alpha_u$ is the half angle of the cone o
 ```
 (The minus sign is because the image is inverted).
 
-```{figure} Images/03_14_Rays_Telescope.png
+```{figure} Images/03_14_rays_telescope.png
 :name: Fig_3_13_Rays_Telescope
 Ray angles for a telescope
 ```

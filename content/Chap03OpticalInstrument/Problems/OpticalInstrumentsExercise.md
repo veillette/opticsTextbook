@@ -64,7 +64,7 @@ We require that the virtual images of all distant objects are at distance of at 
 Derive $d$ and the strength of the negative lens in diopter.
 
 
-```{figure} ../Images/Ex_03_Eye.png
+```{figure} ../Images/ex_03_eye.png
 :name: fig:Eye
 Angular view $\alpha_u$ without and with the use of a negative lens.
 ```
@@ -77,7 +77,7 @@ In this problem we investigate whether it is possible to image an object with a 
 
 - **b)** Suppose we have an object that is a distance $d$ from the interface. Give the system matrix that describes a ray propagating from the object to the plane that is a distance $d$ behind the interface (see {numref}`fig:PlanarInterface`).
 
-```{figure} ../Images/Ex_04_Planar_Interface.png
+```{figure} ../Images/ex_04_planar_interface.png
 :name: fig:PlanarInterface
 Planar Interface
 ```
