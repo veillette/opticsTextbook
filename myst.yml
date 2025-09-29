@@ -156,8 +156,12 @@ project:
           children:
             - title: Problems
               file: content/Chap11RayMatrix/Problems/RayMatrixExercise.md
-        - title: Appendix
-          file: content/Appendices/ComplexNumbers.md
+        - title: Appendices
+          children:
+            - title: Appendix A - Complex Numbers in Optics
+              file: content/Appendices/ComplexNumbers.md
+            - title: Appendix B - Matrix Multiplication in Optics
+              file: content/Appendices/MatrixMultiplication.md
         - title: Author
           children:
             - file: content/Author/author.md
