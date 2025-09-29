@@ -45,7 +45,7 @@ A ray is an oriented curve which is everywhere perpendicular to the surfaces of 
 Consider a point source at some distance before an opaque screen with an aperture. According to the ray picture, the light distribution on a second screen further away from the source and parallel to the first screen is simply an enlarged copy of the aperture (see {numref}`Fig_2_01_GeomDiffr`). The copy is enlarged due to the fanning out of the rays. However, this description is only accurate when the wavelength of the light is very small compared to the diameter of the aperture. If the aperture is only ten times the wavelength, the pattern is much broader due to the bending of the rays around the edge of the aperture. This phenomenon is called **diffraction**. Diffraction can not be explained by geometrical optics and will be studied in [](#chapter.diffraction).
 
 
-```{figure} Images/Chapter_2/2_01_Figgeom.png
+```{figure} Images/2_01_Figgeom.png
 :name: Fig_2_01_GeomDiffr
 Light distribution on a screen due to a rectangular aperture. Left: for a large aperture, we get an enlarged copy of the aperture. Right: for an aperture that is of the order of the wavelength there is strong bending (diffraction) of the light. 
 ```
@@ -112,7 +112,7 @@ Fermat's principle is thus equivalent to the statement that a ray follows the pa
 
 
 
-```{figure} Images/Chapter_2/2_02_Theory_of_mirage.jpg
+```{figure} Images/2_02_Theory_of_mirage.jpg
 :name: Fig_2_02_Theory_of_mirage
 Because the temperature close to the ground is higher, the refractive index is lower there. Therefore the rays bend upwards, creating a mirror image of the tree below the ground. (From Popular Science Monthly Volume 5, Public Domain, [link](https://commons.wikimedia.org/w/index.php?curid=10770493)).
 ```
@@ -167,7 +167,7 @@ or
 where $\theta_i$ and $\theta_r$ are the angles of incidence and reflection as shown in {numref}`Fig_2_03_Descartes_Reflection`.
 
 
-```{figure} Images/Chapter_2/2_03_Descartes_Reflection.png
+```{figure} Images/2_03_Descartes_Reflection.png
 :name: Fig_2_03_Descartes_Reflection
 Ray from $P$ to $Q$ via the mirror.
 ```
@@ -203,7 +203,7 @@ n_i \sin \theta_i = n_t \sin \theta_t,
 ```
 where $\theta_i$ and $\theta_t$ are the angles between the ray and the normal to the surface in the upper half space and the lower half space, respectively ({numref}`Fig_2_04_Descartes_Refraction`).
 
-```{figure} Images/Chapter_2/2_04_Descartes_Refraction.png
+```{figure} Images/2_04_Descartes_Refraction.png
 :name: Fig_2_04_Descartes_Refraction
 Ray from $P$ to $Q$ refracted by an interface.
 ```
@@ -215,9 +215,9 @@ Hence we have derived the law of reflection and Snell's law from Fermat's princi
 ## Perfect Imaging by Conic Sections
 In this section, the conic sections ellipse, hyperbole and parabola are important. In {numref}`Fig_2_05_ConicSection` their definitions are shown as a quick reminder[^3].
 
-```{figure} Images/Chapter_2/2_05a_ConicSection.png
+```{figure} Images/2_05a_ConicSection.png
 ```
-```{figure} Images/Chapter_2/2_05b_ConicSection.png
+```{figure} Images/2_05b_ConicSection.png
 :name: Fig_2_05_ConicSection
 Overview of conic sections. The lower figure shows a definition that unifies the three definitions in the figure above by introducing a parameter called the eccentricity $e$. The point $F$ is the focus and the line $e=\infty$ is the directrix of the conic sections.
 ```
@@ -228,7 +228,7 @@ When there is a point $P$ and a cone of rays coming from point $S$ and all rays 
 By reversing the direction of the rays, $S$ is similarly a perfect image of $P$. The optical system in which this happens is called **stigmatic for the two points $S$ and $P$**. 
 
 
-```{figure} Images/Chapter_2/2_06_Perfect_Imaging.png
+```{figure} Images/2_06_Perfect_Imaging.png
 :name: Fig_2_06_Perfect_Imaging
 Perfect imaging: a cone of rays which diverge from $S$ and all intersect in point $P$. The rays continue after $P$.
 ```
@@ -307,7 +307,7 @@ $$ (eq.power)
 
 is called the power of the surface and where $s_o$ and $s_i$ are the $z$-**coordinates** of $S$ and $P$, respectively, hence $s_0<0$ and $s_i>0$ in {numref}`Fig_2_10_Spherical_interface`.
 
-```{figure} Images/Chapter_2/2_10_Spherical_interface.png
+```{figure} Images/2_10_Spherical_interface.png
 :name: Fig_2_10_Spherical_interface
 Imaging by a spherical interface between two media with refractive indices $n_2>n_1$.
 ```
@@ -446,7 +446,7 @@ If we adopt the sign convention listed in
 it turns out that {eq}`eq.one_surface` holds generally. So far we have considered a convex surface of which the center $C$ is to the right of the surface, but {eq}`eq.one_surface` applies also to a concave surface of which the center is to the left of the surface, provided that the radius $R$ is chosen negative.
 The convention for the sign of the radius is illustrated in {numref}`Fig_2_11_Radius`.
 
-```{figure} Images/Chapter_2/2_11_Radius_Convention.png
+```{figure} Images/2_11_Radius_Convention.png
 :name: Fig_2_11_Radius
 Sign convention for the radius $R$ of a spherical surface
 ```
@@ -463,7 +463,7 @@ Note that also when the power is positive, a virtual image can occur, namely whe
 {eq}`eq.one_surface2` implies that $s_i<0$.
 
 
-```{figure} Images/Chapter_2/2_12_Concave_Surface_Real_object_1.png
+```{figure} Images/2_12_Concave_Surface_Real_object_1.png
 :name: Fig_2_12_Surf_Concave
 Imaging by a concave surface ($R<0$) with $n_2>n_1$. All image points are to the left of the surface, i.e. are virtual ($s_i<0$).
 ```
@@ -473,7 +473,7 @@ Finally we look at a case that there is a bundle of convergent rays incident fro
 One may wonder why we look at this case. The reason is that if we have several spherical surfaces behind each other, we can compute the image of an object point by first determining the intermediate image by the most left surface and then use this intermediate image as the object for the next surface and so on. In such a case, it can easily happen that an intermediate image is to the right of the next surface and hence is a virtual object for that surface. In the case of {numref}`Fig_2_13_Convex_Virtual_Object` at the left, the power is positive, hence the convergent bundle of incident rays is made even more convergent which leads to a real image point. Indeed when $s_o>0$ and ${\cal P}>0$ then {eq}`eq.one_surface` implies that always $s_i>0$. At the right of {numref}`Fig_2_13_Convex_Virtual_Object` the power is negative but is not sufficiently strong to turn the convergent incident bundle into a divergent bundle. So the image is still real. However, the image will be virtual when the virtual object $S$ is to the right of $F_o$ (which in this case is to the right of the surface) since then the bundle of rays converges so weakly that the surface turns is into a divergent bundle.
 
 
-```{figure} Images/Chapter_2/2_13_Spherical_Interface_Concave.png
+```{figure} Images/2_13_Spherical_Interface_Concave.png
 :name: Fig_2_13_Convex_Virtual_Object
 Imaging of a virtual object $S$ by a spherical interface with $R>0$ between two media with refractive indices $n_1>n_2$ (left) and $n_2>n_1$ (right).
 ```
@@ -521,7 +521,7 @@ A larger magnification means a lower energy density, hence a longer exposure tim
 For example, f-number$=2$ means $f = 2D$. Since the exposure time is proportional to the square of the f-number, a lens with f-number 1.4 is twice as fast as a lens with f-number 2.
 
 
-```{figure} Images/Chapter_2/2_25_Aperture_Stop.png
+```{figure} Images/2_25_Aperture_Stop.png
 :name: Fig_2_25_Aperture_Stop
 Aperture stop (A.S.) between the second and third lens, with entrance pupil and exit pupil (in this case these pupils are virtual images of the aperture stop). Also shown are the chief ray and the marginal ray. 
 ```
@@ -535,7 +535,7 @@ Instead non-paraxial rays, and among them also non-meridional rays, must be trac
 It is then found that in general the non-paraxial rays do not intersect at the ideal Gaussian image point. Instead of a single spot, a spot diagram is found which is more or less confined. The deviation from an ideal point image is quantified in terms of **aberrations**. One distinguishes between monochromatic and chromatic aberrations. The latter are caused by the fact that the refractive index depends on wavelength.
 Recall that in paraxial geometrical optics Snell's Law {eq}`eq.refrac3` is replaced by: $n_i \theta_i = n_t \theta_t$, i.e. $\sin \theta_i$ and $\sin \theta_t$ are replaced by the linear terms. If instead one retains the first two terms of the Taylor series of the sine, the errors in the image can be quantified by five monochromatic aberrations, the so-called **primary** or **Seidel aberrations**. The best known is **spherical aberration**, which is caused by the fact that for a convergent spherical lens, the rays that make a large angle with the optical axis are focused closer to the lens than the paraxial rays (see {numref}`Fig_2_26_Aberration_Lens`).
 
-```{figure} Images/Chapter_2/2_26_Aberration_Lens.png
+```{figure} Images/2_26_Aberration_Lens.png
 :name: Fig_2_26_Aberration_Lens
 Spherical aberration of a planar-convex lens. 
 ```
@@ -553,7 +553,7 @@ used in the manufacturing of integrated circuits as shown in the lithographic sy
 A comprehensive treatment of aberration theory can be found in Braat et al.[^4].
 
 
-```{figure} Images/Chapter_2/2_27_ASML_EUV.png
+```{figure} Images/2_27_ASML_EUV.png
 :name: Fig_2_27_ASML_EUV
 The EUV stepper TWINSCAN NXE:3400B.Lithographic lens system for DUV (192 nm), costing more than € 500.000. Ray paths are shown in purple. The optical system consists of mirrors because there are no suitable lenses for this wavelength (Courtesy of [ASML](https://www.asml.com/en/news/media-library)).
 ```
@@ -564,7 +564,7 @@ The EUV stepper TWINSCAN NXE:3400B.Lithographic lens system for DUV (192 nm), co
 According to a generally accepted criterion formulated first by Rayleigh, aberrations start to deteriorate images considerably if they cause path length differences of more than a quarter of the wavelength.
 When the aberrations are less than this, the system is called **diffraction limited**.
 
-```{figure} Images/Chapter_2/2_28_AiryDisk_210308.png
+```{figure} Images/2_28_AiryDisk_210308.png
 :name: Fig_2_28_AirySpot
 Left: cross section of the field of the Airy pattern. Right: intensity pattern of the Airy pattern.
 ```

@@ -39,7 +39,7 @@ where $I_{max}$ and $I_{min}$ are the maximum and minimum of the light transmitt
 
 3. In this problem we consider an optical isolator as shown in {numref}`Fig_4_4_Optical_Isolator`. In the setup, light can pass in one direction, but it cannot go back. This can for example be used to prevent laser light from going back into the laser source, hereby preventing unwanted effects such as intensity and frequency instabilities.
 
-```{figure} ../Images/Chapter_4/Ex_4_4_Optical_Isolator.png
+```{figure} ../Images/Ex_4_4_Optical_Isolator.png
 :name: Fig_4_4_Optical_Isolator
 Schematic of a simple optical isolator.
 ```

@@ -15,7 +15,7 @@ $$ (eq.defalpha)
 Examples of positive and negative $\alpha$ are given in {numref}`Fig.alpha`. The case $z_2-z_1<0$ occurs when a ray propagates in the negative $z$-direction after it has been reflected by a mirror.
 According to {numref}`table_signconv` the refractive index of the ambient medium should after the reflection be taken negative. After a second reflection due to which the ray propagates again in the positive $z$-direction the refractive index should be chosen positive again.
 
-```{figure} Images/Chapter_2/2_14_Angle_definition.png
+```{figure} Images/2_14_Angle_definition.png
 :name: Fig.alpha
 Sign convention for the ray angle. In the upper two figures $\alpha>0$ while in the lower two figures $\alpha<0$.
 ```
@@ -118,7 +118,7 @@ n_2\alpha_2 = n_1 \alpha_1,
 ```
 which agrees with the fact that $n_2=-n_1$ and according to  {eq}`eq.defalpha` $\alpha_2$ and $\alpha_1$ have opposite sign for a mirror.
 
-```{figure} Images/Chapter_2/2_15_Concave_mirror.png
+```{figure} Images/2_15_Concave_mirror.png
 :name: Fig_2_15_Mirror
 Reflection by a mirror.
 ```
@@ -194,7 +194,7 @@ In the ray matrix approach all rays stay in the same plane, namely the plane thr
 We apply ray matrices to a lens.
 {numref}`Fig_2_16_Spherical_Lens_simplified` shows a lens with two spherical surfaces. The refractive index of the lens is $n_l$ and that of the media to the left and to the right of the lens is $n_1$ and $n_2$, respectively. Let the distance between the vertices be $d$.
 
-```{figure} Images/Chapter_2/2_16_Spherical_Lens_simplified.png
+```{figure} Images/2_16_Spherical_Lens_simplified.png
 :name: Fig_2_16_Spherical_Lens_simplified
 A lens with thickness $d$. The ray matrix is defined between the planes immediately before and after the lens.
 ```
@@ -482,7 +482,7 @@ A convergent lens ($f_i>0$) will then make an image between the lens and the sec
 Instead of using ray matrices, one can construct the image with a ruler.
 Consider the imaging of a finite object $S_1S_2$ as shown in {numref}`Fig_2_17_Real_Image` for the case that the media to the left and right lens are the same. Let $y_o$ be the y-coordinate of $S_2$. We have $y_o>0$ when the object is above the optical axis.
 
-```{figure} Images/Chapter_2/2_17_Real_Image.png
+```{figure} Images/2_17_Real_Image.png
 :name: Fig_2_17_Real_Image
 Object and image for a thin lens.
 ```
@@ -543,7 +543,7 @@ All equations are also valid for a thin negative lens and for virtual objects an
 Examples of real and virtual object and image points for a positive and a negative lens are shown in {numref}`Fig_2_18_Positive_Lens` and {numref}`Fig_2_19_Negative_Lens`.
 
 
-```{figure} Images/Chapter_2/2_18_Positive_Lens.png
+```{figure} Images/2_18_Positive_Lens.png
 :name: Fig_2_18_Positive_Lens
 Real and virtual objects and images for a convergent thin lens with the same refractive index left and right of the lens, i.e. $-f_o=f_i>0$. In (a) the object is real with $s_o<f_o$ and the image is real as well ($s_i>0$). In (b) the object is between the front focal point and the lens: $f_o< s_o<0$. Then the rays from the object are too divergent for the lens to make them convergent in image space and hence the image is virtual: $s_i<0$. In \(c\) there is a cone of converging rays incident on the lens from the left which, in the absence of the lens, would converge to point $S$ behind the lens. Therefore $S$ is a virtual object ($s_0>0$). The image is real and can be constructed with the two rays shown.
 		In (d) $s_i$ is shown as function of $s_o$ for a convergent lens (see Eq. {eq}`eq.lensmaker`).
@@ -551,7 +551,7 @@ Real and virtual objects and images for a convergent thin lens with the same ref
 
 
 
-```{figure} Images/Chapter_2/2_19_Negative_Lens.png
+```{figure} Images/2_19_Negative_Lens.png
 :name: Fig_2_19_Negative_Lens
 Real and virtual objects and images for a divergent thin lens with the same refractive index to the left and right of the lens, i.e. $-f_o=f_i<0$. In (a) the object is real, i.e. $s_o<0$. The diverging lens makes the cone of rays from the object more divergent so that the image is virtual: $s_i<0$. When the object is virtual, there is a cone of converging rays incident from the left which after extension to the right of the lens (as if the lens is not present) intersect in the virtual object S ($s_o>0$). It depends on how strong the convergence is whether the diverging lens turns this cone into converging rays or whether the rays keep diverging. In (b) $0<s_o<-f_i$, and the image is real. In c) $s_o>-f_i$ and the image is virtual ($s_i<0$). In (d) $s_i$ is shown as function of $s_o$ for a divergent lens ($f_i<0$ (see Eq. {eq}`eq.lensmaker`).
 ```
@@ -569,7 +569,7 @@ First the image $P'$ of $S$ is constructed as obtained by $L_1$ as if $L_2$ were
 We construct the intermediate image $P'$ due to lens $L_1$ using ray 2 and 3. $P'$ is a real image for lens $L_1$ and also a real object for lens $L_2$. Ray 3 is parallel to the optical axis between the two lenses and is thus refracted by lens $L_2$ through its back focal point $F_{2i}$. Ray 4 is the ray from $P'$ through the center of lens $L_2$. The image point $P$ is the intersection of ray 3 and 4.
 
 
-```{figure} Images/Chapter_2/2_20_Two_Thin_Lenses_Separated.png
+```{figure} Images/2_20_Two_Thin_Lenses_Separated.png
 :name: Fig_2_20_Double_Lens
 Two thin lenses separated by a distance that is larger than the sum of their focal lengths. 
 ```
@@ -578,7 +578,7 @@ Two thin lenses separated by a distance that is larger than the sum of their foc
 In the case of {numref}`Fig_2_21_Two_Thin_Lenses_close` the distance $d$ between the two positive lenses is smaller than their focal lengths.
 The intermediate image $P'$ is a real image for $L_1$ obtained as the intersection of rays 2 and 4 passing through the object and image focal points $F_{o1}$ and $F_{i1}$ of lens $L_1$. $P'$ is now a virtual object for lens $L_2$. To find its image by $L_2$, draw ray 3 from $P'$ through the center of lens $L_2$ back to $S$ (this ray is refracted by lens $L_1$ but not by $L_2$) and draw ray 4 as refracted by lens $L_2$. Since ray 4 is parallel to the optical axis between the lenses, it passes through the back focal point $F_{2i}$ of lens $L_2$. The intersection point of ray 3 and 4 is the final image point $P$.
 
-```{figure} Images/Chapter_2/2_21_Two_Thin_Lenses_close.png
+```{figure} Images/2_21_Two_Thin_Lenses_close.png
 :name: Fig_2_21_Two_Thin_Lenses_close
 Two thin lenses at a distance smaller than their focal lengths.
 ```
@@ -663,7 +663,7 @@ In particular, by the using two identical lenses in contact, the focal length is
 
 At the left of {numref}`Fig_2_22_Thick_Lens_Principle_plane` a thick lens is shown. The object focal point is defined as the point whose rays are refracted such that the emerging rays are parallel to the optical axis. By extending the incident and emerging rays by straight segments, the points of intersection are found to be on a curved surface, which close to the optical axis, i.e. in the paraxial approximation, is in good approximation a plane perpendicular to the optical axis. This plane is called the **primary principal plane** and its intersection with the optical axis is called the primary principal point $H_1$.
 
-```{figure} Images/Chapter_2/2_22_Thick_Lens_Principle_plane.png
+```{figure} Images/2_22_Thick_Lens_Principle_plane.png
 :name: Fig_2_22_Thick_Lens_Principle_plane
 Principal planes of a thick lens, with front and back focal lengths: f.f.l and b.f.l.
 ```
@@ -674,7 +674,7 @@ It can be seen from {numref}`Fig_2_22_Thick_Lens_Principle_plane`
 that the principal planes are images of each other, with unit magnification. Hence, if an object is placed in the primary principal plane (hypothetically if this plane is inside the lens), its image is in the secondary principal plane. The image is erect and has unit magnification.
 
 
-```{figure} Images/Chapter_2/2_23_Principle_planes.png
+```{figure} Images/2_23_Principle_planes.png
 :name: Fig_2_23_Principle_planes
 Position of the principal planes for several lenses. 
 ```
@@ -766,7 +766,7 @@ With these results, {eq}`eq.matH1H2` becomes
 We see that **the ray matrix between the principal planes is identical to the ray matrix of a thin lens** {eq}`eq.matthinlens`.
 We therefore conclude that if the coordinates in object space are chosen with respect to the origin in the primary principal point $H_1$, and the coordinates in image space are chosen with respect to the origin in the secondary principal point $H_2$, the expressions for the first and second focal points and for the coordinates of the image point in terms of that of the object point are identical to that for a thin lens. An example of imaging by a thick lens is shown in {numref}`Fig_2_24_Thick_Lens_Imaging`.
 
-```{figure} Images/Chapter_2/2_24_Thick_Lens_Imaging.png
+```{figure} Images/2_24_Thick_Lens_Imaging.png
 :name: Fig_2_24_Thick_Lens_Imaging
 Thick-lens geometry. There holds
 	 $f_i=f_o$ if the ambient medium left of the lens is the same as to the right of the lens. All coordinates in object and image space are with respect to the origin in $H_1$ and $H_2$, respectively.

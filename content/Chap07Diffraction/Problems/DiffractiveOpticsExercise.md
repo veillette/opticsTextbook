@@ -40,7 +40,7 @@ where $\Delta x = x_1-x_2$.
 In the second slit there is a piece of glass with refractive index $n$ and thickness $d$.
 In the first slit there is vacuum.
 
-```{figure} ../Images/Tutorial_6/Ex_6_01_Two_slits_glass.png
+```{figure} ../Images/Ex_6_01_Two_slits_glass.png
 :name: Fig_7_24_Two_slits
 Two slits centerd at $y=0$ and very long in the $y$-direction in a dark screen of thickness $d$. The lower slit is filled with glass, the upper is in vacuum.
 ```
@@ -81,7 +81,7 @@ U_s(x,y,z,t)= \frac{e^{i k \sqrt{ (x-a)^2 + y^2 + z^2}-i \omega t}}{\sqrt{(x-a)^
 \end{align*}
 ```
 
-```{figure} ../Images/Tutorial_6/Ex_6_02_Lloyd_Mirror.png
+```{figure} ../Images/Ex_6_02_Lloyd_Mirror.png
 :name: Fig_7_25_Lloyd_Mirror
 Lloyd mirror configuration with a point source (left) and a rectangular aperture in a dark screen (right), above a mirror and with a screen at distance $z$ where the field is observed.
 ```
@@ -204,7 +204,7 @@ which is the case shown in {numref}`Fig.Besselplot`.
  
 
 
-```{figure} ../Images/Tutorial_6/Ex_6_03_BesselPlot.png
+```{figure} ../Images/Ex_6_03_BesselPlot.png
 :name: Fig.Besselplot
 Amplitude in the focal plane of a Bessel beam and of an Airy spot with the same total energy. The lens pupil has diameter $a=10000 \lambda$, the ring aperture of the Bessel beam case is at the outer edge of the pupil ($b=a$) and has width $\Delta r = 0.1 a$ and the $\text{NA}=0.1$.
 ```

@@ -30,7 +30,7 @@ kernelspec:
 In this chapter we will study how light propagates as a wave. In the study of the double-slit experiment we concluded from the interference pattern observed on a screen that light is a wave. To demonstrate more convincingly that light is indeed a wave, we require a detailed quantitative model of the propagation of light, which gives experimentally verifiable predictions.
 
 But a precise description of the propagation of light is not only important for fundamental science, it also has many practical applications. For example, if a sample must be analysed by illuminating it and measuring the scattered light, the fact that the detected light has not only been affected by the sample, but by both the sample and propagation has to be taken into account. Another example is lithography. If a pattern has to be printed onto a substrate using a mask that is illuminated and there is a certain distance between the mask and the photoresist, the light which reaches the resist does not have the exact shape of the mask due to propagation effects. Thus, the mask needs to be designed to compensate for these effects.
-```{figure} Images/Chapter_6/6_01_Propagation_Example.png
+```{figure} Images/6_01_Propagation_Example.png
 :name: Fig_6_01_Propagation_Example
 A quantitative model of the propagation of light is required to predict the properties of propagation and to apply it in sample analyses and lithography.
 ```
@@ -58,7 +58,7 @@ Although both methods in the end describe the same, they give physical insight i
 ### Angular Spectrum Method
 
 
-```{figure} Images/Chapter_6/6_02_Propagation_Math.png
+```{figure} Images/6_02_Propagation_Math.png
 :name: Fig_6_02_Propagation_Math
 Given the field $U(x,y,0)$, we want to find $U$ in a point $(x,y,z)$ with $z>0$. It is assumed that the field propagates in the positive $z$-direction, which means that all sources are in the region $z<0$.
 ```
@@ -148,7 +148,7 @@ We can observe something interesting: if $k_x^2+k_y^2 > \left(\frac{2\pi }{\lamb
 These exponentially decaying waves are called **evanescent in the positive $z$-direction**. We have met evanescent waves already in the context of total internal reflection discussed in the context of total internal reflection. The physical consequences of evanescent waves in the angular spectrum decomposition are important for understanding diffraction limits.
 
 The waves for which $k_z$ is real have constant amplitude: only their phase changes due to propagation. These waves therefore are called **propagating waves**.
-```{figure} Images/Chapter_6/6_03_Angular_Spectrum.png
+```{figure} Images/6_03_Angular_Spectrum.png
 :name: Fig_6_03_Angular_Spectrum
 The spatial frequencies $k_x$, $k_y$ of the plane waves in the angular spectrum of a time-harmonic field which propagates in the $z$-direction. There are two types of waves: the propagating waves with spatial frequencies inside the circle $\sqrt{k_x^2+k_y^2}<k=2\pi/\lambda $ and which have phase depending on the propagation distance $z$ but constant amplitude, and the evanescent waves for which $\sqrt{k_x^2+k_y^2}>k$ and of which the amplitude decreases exponentially during propagation.
 ```
@@ -234,26 +234,26 @@ So we have seen how we can guess properties of some object field $U_0(x,y)$ give
 **Remark**. The importance of the phase for the field can also be seen by looking at the plane wave expansion {eq}`eq.planewave1`. We have seen that the field in a plane $z=\text{constant}$ can be obtained by propagating the plane waves by multiplying their amplitudes by the phase factors $\exp(i z k_z)$, which depends on the propagation distance $z$. If one leaves the evanescent waves out of consideration (since after some distance they hardly contribute to the field anyway), it follows that only the phases of the plane waves change upon propagation, while their amplitudes (the moduli of their complex amplitudes) do not change. Yet, depending on the propagation distance $z$, widely differing light patterns are obtained (see e.g. {numref}`Fig_6_08_FresnelFraunhoferSlit`).
 
 
-```{figure} Images/Chapter_6/6_04_Spatial_Fourier_Transform.png
+```{figure} Images/6_04_Spatial_Fourier_Transform.png
 :name: Fig_6_04_Spatial_Fourier_Transform
 A qualitative interpretation of spatial Fourier transforms. The low spatial frequencies (i.e. small $\sqrt{k_x^2+k_y^2}$) represent slow fluctuations, and therefore contribute to the broad features of the real-space object. The high spatial frequencies (i.e. large $\sqrt{k_x^2+k_y^2}$) fluctuate rapidly, and can therefore form sharp features in the real-space object.
 ```
 
-```{figure} Images/Chapter_6/6_05_RemoveHigh.png
+```{figure} Images/6_05_RemoveHigh.png
 (a) Removing the high spatial frequencies
 
 ```
-```{figure} Images/Chapter_6/6_05_RemoveLow.png
+```{figure} Images/6_05_RemoveLow.png
 :name: Fig_6_05_FourierFilter
 (b) Removing the low spatial frequencies
 
 Demonstration of the roles of different spatial frequencies. By removing the high spatial frequencies, only the broad features of the image remain and resolution s lost. If the low spatial frequencies are removed, only the sharp features (i.e. the contours) remain.
 ```
 
-```{figure} Images/Chapter_6/6_06_RemoveAmp.png
+```{figure} Images/6_06_RemoveAmp.png
 (a) Removing the amplitude information by setting the amplitude of propagating and evanescent waves to 1 and 0, respectively.
 ```
-```{figure} Images/Chapter_6/6_06_RemovePhase.png
+```{figure} Images/6_06_RemovePhase.png
 :name: Fig_6_06_FourierPhase
 (b) Removing the phase information by setting the phase equal to 0.
 
@@ -291,7 +291,7 @@ The minimum feature size of a field after propagation is of the order of the wav
 
 This poses a fundamental limit to resolution given by the wavelength of the light.
 
-```{figure} Images/Chapter_6/6_07_UncertaintyPrinciple.png
+```{figure} Images/6_07_UncertaintyPrinciple.png
 :name: Fig_6_07_Uncertainty
 Demonstration of the uncertainty principle. The more confined $U(x,y)$ is, the larger the spread of $\mathcal{F}(U)\left(\frac{k_x}{2\pi},\frac{k_y}{2\pi}\right)$.
 ```
@@ -530,7 +530,7 @@ and has maxima on lines
 \end{align*}
 ```
 for integer $m$.
-```{figure} Images/Chapter_6/6_09_Fraunhofer_2_point_source_light.png
+```{figure} Images/6_09_Fraunhofer_2_point_source_light.png
 :name: Fig_6_09_2_point_source
 Intensity pattern of two mutually coherent point sources of equal strength and emitting in phase at the wavelength $\lambda =600$&nbsp;nm from Eq.&nbsp;{eq}`eq.Itot`. The distance between the point source is 200&nbsp;nm. On the top the cross-section along along the $z$-axis is shown.
 ```
@@ -601,7 +601,7 @@ The distance between the first two zeros along the $x$-axis is $2\lambda z/a$ an
 
 3. As illustrated in {numref}`Fig_6_10_Fraunhofer`, the Fraunhofer diffraction pattern as function of diffraction angle is narrowest in the direction in which the aperture is widest.
 
-```{figure} Images/Chapter_6/6_10_Fraunhofer_diffraction_aperture.png
+```{figure} Images/6_10_Fraunhofer_diffraction_aperture.png
 :name: Fig_6_10_Fraunhofer
 Fraunhofer diffraction pattern of a rectangular aperture in an opaque screen.Left: the width of the aperture in the $y$-direction is twice that in the $x$-direction; middle: the width in the $y$-direction is 5 times that in the $x$-direction; right: the width in the $y$-direction is 10 times that in the $x$-direction.
 ```
@@ -616,7 +616,7 @@ The integral in the Fresnel approximation for the field of a rectangular apertur
 +++
 
 
-```{figure} Images/Chapter_6/6_08_FresnelDiffraction_L_distance.png
+```{figure} Images/6_08_FresnelDiffraction_L_distance.png
 :name: Fig_6_08_FresnelFraunhoferSlit
 Diffraction patterns of a square opening in a mask with corresponding cross-sections along the $x$-axis, showing the transition from Fresnel to Fraunhofer approximations. The distance to the mask increases with the Fresnel number $N_F$ from the near field pattern close to the mask in the right bottom figures to the Fraunhofer diffraction pattern in the upper left. Note the different scales along the axis in the figures.
 ```
@@ -729,7 +729,7 @@ The angular width of a diffraction order is half the angular distance to the nea
 ```
 
 If there are more slits the intensity peaks into which the energy is diffracted are narrower and the peaks are higher.
-```{figure} Images/Chapter_6/6_11_MultipleSlits712.png
+```{figure} Images/6_11_MultipleSlits712.png
 :name: Fig_6_11_MultipleSlits712
 An illustration of a diffraction pattern of a series of five slits.
 ```
@@ -762,7 +762,7 @@ It follows that the resolution is higher when there are more slits and for large
 For a grating with 1000 periods one can obtain a resolution of $\Delta \lambda/\lambda =10^{-3}$ in the first order.
 
 It should be remarked that a grating is obtained for any periodic variation of the refractive index. If the proper transmission function for the unit cell of the grating is substituted for $W_{slit}$, the formulae above also give the Fraunhofer far field of such more general diffraction gratings. By changing the unit cell, the envelope of the diffraction pattern can be changed and a certain order can be given more intensity. In {numref}`Fig_6_12_Blazed_grating` a so-called blazed grating is shown which is used in reflection and which has a strong first diffracted order for a certain angle of incidence.
-```{figure} Images/Chapter_6/6_12_Blazed_grating.png
+```{figure} Images/6_12_Blazed_grating.png
 :name: Fig_6_12_Blazed_grating
 Diffraction grating used in reflection with a so-called blazed unit cell.
 ```
@@ -795,7 +795,7 @@ Destructive interference occurs when the path length difference satisfies $S_2Q=
 ```
 If the point sources have the same strength, their fields perfectly cancel for these angles.
 
-```{figure} Images/Chapter_6/6_13_2Sources.png
+```{figure} Images/6_13_2Sources.png
 :name: Fig_6_13_2Sources
 Interference of to mutually coherent point sources. For $z$ very large points $P$ where constructive and destructive interference occurs are such that for some integer $m$: $S_2Q=m \lambda$ and $S_2Q=(1/2 + m) \lambda$, respectively.
 ```
@@ -814,7 +814,7 @@ The point sources in the slit can be arranged into pairs, of which one point sou
 since the distance between the point sources is $a/2$.
 By translating the pair of point sources through the slits, it follows that both half slits perfectly cancel each other for these angles. In this way we have found the angles $\theta = m\lambda/a$ with $m$ odd for which destructive interference occurs. Destructive interference for $m$ even can be derived by further subdivisions of the aperture.
 
-```{figure} Images/Chapter_6/6_14_Slit.png
+```{figure} Images/6_14_Slit.png
 :name: Fig_6_14_Slits
 By dividing the slit into two slits of size $a/2$ each and considering pairs of point sources of which one is in the upper half of the slit and the other is at the corresponding position in the lower half, angles where destructive interference occurs between these point sources lead to minima in the diffraction pattern. Note that the point sources have corresponding positions in the two parts of the slit if their distance is $a/2$.
 ```
@@ -829,7 +829,7 @@ In general it is easier to find the angles for which the far field vanishes than
 \end{align*}
 ```
 which corresponds to the direction of the diffraction orders. For other angles the phases of the fields of the different periods differ widely and therefore the fields almost cancel at these angles when there are many periods. This explains that for a diffraction grating of many periods, the far field intensity is highly concentrated in particular directions given by the orders {eq}`eq.order` which depend only on the ratio of the wavelength and the period.
-```{figure} Images/Chapter_6/6_15_Grating.png
+```{figure} Images/6_15_Grating.png
 :name: Fig_6_15_Grating
 If the angle $\theta$ is such that $SQ$ is a multiple of the wavelength, two adjacent periods, and hence all periods of the grating, constructively interfere. These angles correspond to the diffraction orders.
 ```
@@ -934,7 +934,7 @@ U(x,y,z)=\frac{e^{ikz}e^{\frac{ik(x^2+y^2)}{2z}}}{i\lambda z} \mathcal{F}\left\{
 \end{align*}
 ```
 The intensity $I=|U|^2$ is shown at the bottom left of {numref}`Fig_6_16_Focusing_Lens`. It is seen that the intensity does not monotonically increase for decreasing distance to the focal point. Instead, secondary maxima occur along the optical axis. Also the boundary of the light cone is not sharp, as predicted by geometrical optics, but diffuse. The bottom right of {numref}`Fig_6_16_Focusing_Lens` shows the phase in the focal region. The wave fronts are close to but not exactly spherical inside the cones.
-```{figure} Images/Chapter_6/6_16_Focusing_Lens_Sketch_BW.png
+```{figure} Images/6_16_Focusing_Lens_Sketch_BW.png
 :name: Fig_6_16_Focusing_Lens
 Top: wavefronts of the incident plane wave and the focused field according to Gaussian geometrical optics. There is no light outside of the two cones. Bottom left: amplitude as predicted by diffraction optics. The boundary of the cones is diffuse and it is not absolutely dark outside of the cones. Furthermore, the intensity does not increase monotonically with decreasing distance to the focal point, as predicted by geometrical optics. Bottom right: phase of the focused field as predicted by diffraction optics.
 ```
@@ -1006,7 +1006,7 @@ Since the first zero of the Airy pattern occurs for $a r/(\lambda f_i)= 0.61$, t
 \end{align*}}
 ```
 
-```{figure} Images/Chapter_6/AiryDisk_Color_220405.png
+```{figure} Images/AiryDisk_Color_220405.png
 :name: Fig_6_17_AirySpot
 Left: cross section of the field of the Airy pattern. Right: intensity of the Airy pattern.
 ```
@@ -1094,7 +1094,7 @@ This implies that the amplitude and/pf phase of the plane waves in the angular s
 The procedure is called Fourier filtering using lenses. An application of this idea is the phase contrast microscope.
 
 
-```{figure} Images/Chapter_6/6_18_Fourier_Filtering.png
+```{figure} Images/6_18_Fourier_Filtering.png
 :name: Fig_6_18_Fourier_Filtering
 Set-up for Fourier filtering. The first lens creates a Fourier transform of $U(x,y)$, to which we can apply some operation (e.g. applying different phase shifts to different parts of the field). The second lens then applies another Fourier transform (which is the same as the inverse Fourier transform and a mirror transformation).
 ```
@@ -1122,7 +1122,7 @@ The resolution is roughly a factor 1.5 better than for normal imaging with full 
 
 - **The Perfect Lens based on negative refraction.** It can be shown that a slab of a material with **negative permittivity** and **negative permeability**, which are opposite to the permittivity and permeability of the surrounding medium, there is no reflection at the interfaces. Furthermore, the phase velocity in a material with negative permittivity and negative permeability is opposite to the direction of the flow of energy and plane waves are refracted at the interface as if the refractive index in Snell's Law is negative. Therefore these media are called negative index media. Because the phase velocity is opposite to the energy velocity, it is as if time is reversed inside the slab. The change of phase of propagating waves of the field of point source due to propagating in the surrounding medium is reversed inside the slab and at some distance on the other side of the slab there is an image point where all propagating waves are in phase, as illustrated in
 {numref}`Fig_6_19_Pendry_Lens`. Furthermore, evanescent waves **gain** amplitude inside the slab and it turns out they have the same amplitude in the image point as in the source, hence the image point is perfect. Note that the increase of amplitude of an evanescent wave does not violate the conservation of energy, because an evanescent wave does not propagate energy in the direction in which it is evanescent.
-```{figure} Images/Chapter_6/6_19_Pendry_Lens.png
+```{figure} Images/6_19_Pendry_Lens.png
 :name: Fig_6_19_Pendry_Lens
 Pendry's perfect lens consists of a slab of a material with negative permittivity and negative permeability such that its absolute values are equal to the positive permittivity and positive permeability of the surrounding medium. Points outside the slab are imaged perfectly in two planes: one inside the slab and the other on the opposite side of the slab.
 ```
@@ -1130,7 +1130,7 @@ Pendry's perfect lens consists of a slab of a material with negative permittivit
 The simple slab geometry seen in {numref}`Fig_6_19_Pendry_Lens` which acts as a perfect lens was proposed by John Pendry in 2000 [^10]. Unfortunately, a material with negative permittivity and negative permeability has not been found in nature. Therefore, many researchers have attempted to mimic such a material by mixing metals and dielectrics on a sub-wavelength scale. It seems that a negative index without absorption violates causality. But when there is absorption, the image is not anymore perfect.
 
 - **Hyperbolic materials.** Hyperbolic materials are anisotropic, i.e. the phase velocity of a plane wave depends on the polarization and on the direction of the wave vector. The permittivity of an anisotropic material is a tensor (loosely speaking a (3,3)-matrix). Normally the eigenvalues of the permittivity matrix are positive; however, in a hyperbolic material two eigenvalues are of equal sign and the third has opposite sign. In such a medium all waves with the so-called extraordinary state of polarization propagate, no matter how high the spatial frequencies are. Hence, for the extraordinary state of polarization evanescent waves do not exist and therefore super-resolution and perfect imaging should be possible in such a medium.
-```{figure} Images/Chapter_6/6_20_Metamaterials.jpg
+```{figure} Images/6_20_Metamaterials.jpg
 :name: Fig_6_20_Multilayers
 Examples of composite materials consisting of thin (sub-wavelength) layers of metals and dielectrics. These artificial materials are called metamaterials. (A. Poddubny, I. Iorsh, P. Belov, \& Y. Kivshar, *Hyperbolic Metamaterials*, {N}at. {P}hoton., 7(12), 948-957 [(2013)](https://doi.org/10.1038/nphoton.2013.243)).
 ```
@@ -1140,7 +1140,7 @@ A few natural hyperbolic media exist for visible frequencies, but there are more
 - **Nonlinear effects.** When the refractive index of a material depends on the local electric field, the material is nonlinear. At optical frequencies nonlinear effects are in general very small, but with a strong laser they can become significant. One effect is self-focusing, where the refractive index is proportional to the local light intensity. The locally higher intensity causes an increase of the refractive index, leading to a waveguiding effect due to which the beam focuses even more strongly. Hence the focused beam becomes more and more narrow while propagating, until finally the material breaks down.
 
 - **Stimulated Emission Depletion Microscopy (STED).** This technique was invented by V. A. Okhonin in 1986 in the USSR and was further developed by Stefan Hell and his co-workers in the nineties. Hell received the Nobel Prize in chemistry for his work in 2014. STED is a non-linear technique with which super-resolution in fluorescence microscopy can be achieved. Images made with a fluorescence microscope are blurred when the fluorescent molecules are very close together. In the STED microscope a special trick is used to ensure that molecules which fluoresce at the same time are sufficiently distant from each other so that they can be imaged individually. To achieve this two focused spots are used: the first spot excites the molecules to a higher level. The second spot is slightly red-shifted and has a doughnut shape (see {numref}`Fig_6_21_STED_Small`). It causes decay of the excited molecules to the lower level by stimulated emission (the excited state is depleted). Because of the doughnut shape of the second spot, the molecule in the center of the spot is not affected and will still fluoresce. Crucial is that a doughnut spot has a central dark region which is very narrow, i.e. it can be much smaller than the Airy spot and this is the reason for the super-resolution.
-```{figure} Images/Chapter_6/6_21_STED_Large.png
+```{figure} Images/6_21_STED_Large.png
 :name: Fig_6_21_STED_Small
 Spot used for excitation (top left) and for depletion (top middle). Fluorescence signal top right.	In the lower figure the confocal image is compared to the STED image. (P.F. Rodriguez and al., *Building a fast scanning stimulated emission depletion microscope*, Materials Science [(2012)](https://www.semanticscholar.org/paper/Building-a-fast-scanning-stimulated-emission-a-step-Rodriguez-Wu/46d8c4148e93f30cf11e1ae4356620bd5fcd0475))
 ```

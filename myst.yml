@@ -104,47 +104,47 @@ project:
       file: content/Preface/Preface.md
     - title: Chapters
       children:
-        - title: Chapter 01 - Basics
+        - title: Chapter 1 - Basics
           file: content/Chap01Basics/Basics.md
           children:
             - title: Problems
               file: content/Chap01Basics/Problems/BasicsExercise.md
-        - title: Chapter 02 - Geometrical Optics
+        - title: Chapter 2 - Geometrical Optics
           file: content/Chap02GeometricalOptics/GeometricalOptics.md
           children:
             - title: Problems
               file: content/Chap02GeometricalOptics/Problems/GeometricalOpticsExercise.md
-        - title: Chapter 03 - Optical Instrument
+        - title: Chapter 3 - Optical Instruments
           file: content/Chap03OpticalInstrument/OpticalInstruments.md
           children:
             - title: Problems
               file: content/Chap03OpticalInstrument/Problems/OpticalInstrumentsExercise.md
-        - title: Chapter 04 - Polarization
+        - title: Chapter 4 - Polarization
           file: content/Chap04Polarization/Polarization.md
           children:
             - title: Problems
               file: content/Chap04Polarization/Problems/PolarizationExercise.md
-        - title: Chapter 05 - Wave
+        - title: Chapter 5 - Waves
           file: content/Chap05Wave/Wave.md
           children:
             - title: Problems
               file: content/Chap05Wave/Problems/WaveExercise.md
-        - title: Chapter 06 - Interference
+        - title: Chapter 6 - Interference and Coherence
           file: content/Chap06Interference/InterferenceCoherence.md
           children:
             - title: Problems
               file: content/Chap06Interference/Problems/InterferenceCoherenceExercise.md
-        - title: Chapter 07 - Diffraction
+        - title: Chapter 7 - Diffraction
           file: content/Chap07Diffraction/DiffractiveOptics.md
           children:
             - title: Problems
               file: content/Chap07Diffraction/Problems/DiffractiveOpticsExercise.md
-        - title: Chapter 08 - Lasers
+        - title: Chapter 8 - Lasers
           file: content/Chap08Lasers/Lasers.md
           children:
             - title: Problems
               file: content/Chap08Lasers/Problems/LasersExercise.md
-        - title: Chapter 09 - Advanced Instruments
+        - title: Chapter 9 - Advanced Instruments
           file: content/Chap09AdvancedInstruments/AdvancedInstruments.md
         - title: Chapter 10 - Fiber Optics
           file: content/Chap10FiberOptics/FiberOptics.md

@@ -34,7 +34,7 @@ Contemporary with Newton but representing a fundamentally different philosophica
 
 The early 19th century witnessed a decisive shift in scientific opinion with Thomas Young's ingenious double-slit experiment, an investigation that many consider one of the most beautiful and profound experiments in the history of physics. Young directed light through two closely spaced, parallel slits and observed the resulting pattern on a screen placed behind the slits. Instead of seeing two bright bands corresponding to light passing through each slit—as particle theory would predict—Young observed a series of alternating bright and dark fringes, a characteristic interference pattern that could only be explained if light behaved as waves. The bright fringes occurred where waves from the two slits arrived in phase, reinforcing each other through constructive interference, while the dark fringes appeared where the waves arrived out of phase, canceling each other through destructive interference. This elegant demonstration provided compelling, virtually irrefutable evidence for the wave nature of light and shifted the scientific consensus decisively away from Newton's particle theory toward Huygens' wave model. Young's experiment also allowed for the first accurate measurements of light's wavelength, revealing that different colors corresponded to different wavelengths, with red light having longer wavelengths than blue light, providing a physical basis for understanding the spectrum of colors that had fascinated natural philosophers since Newton's work with prisms.
 
-```{figure} Images/Chapter_1/Newton_rings.jpg
+```{figure} Images/Newton_rings.jpg
 :name: fig:NewtonRings
 :align: center
 :width: 80%
@@ -141,7 +141,7 @@ $$c = \lambda\nu $$
 This simple equation reveals an inverse relationship: as wavelength increases, frequency decreases proportionally. The energy of electromagnetic radiation is quantized in units called photons, with each photon carrying energy $E = h\nu$, where $h$ is Planck's constant. This quantization means that electromagnetic waves can only gain or lose energy in discrete amounts proportional to their frequency.
 
 
-```{figure} Images/Chapter_1/1_01_Electromagnetic_Spectrum_f1.png
+```{figure} Images/1_01_Electromagnetic_Spectrum_f1.png
 :name: fig:ElectromagneticSpectrum
 :align: center
 :width: 80%
@@ -210,7 +210,7 @@ The first successful measurement of light's speed came from an unexpected source
 
 Roemer's brilliant insight was recognizing that this fluctuation resulted from light's finite travel time. When Earth moved away from Jupiter in its orbit, light from Io's eclipses had to travel increasingly greater distances to reach terrestrial observers. Conversely, when Earth approached Jupiter, the light path shortened, causing eclipses to appear to occur earlier than predicted.
 
-```{figure} Images/Chapter_1/roemer.webp
+```{figure} Images/roemer.webp
 :name: fig:roemer
 :align: center
 :width: 80%
@@ -225,7 +225,7 @@ By carefully measuring these timing differences and calculating the variations i
 The first successful Earth-based measurement came in 1849 from French physicist Armand Fizeau (1819–1896). His ingenious apparatus consisted of a rapidly rotating toothed wheel placed on one hilltop, with a mirror positioned 8 kilometers away on another hilltop. As the wheel rotated, it chopped a light beam into pulses. Fizeau adjusted the wheel's rotation speed until no reflected light returned to the observer—this occurred when the wheel rotated just enough for a tooth to block the returning light pulse.
 
 
-```{figure} Images/Chapter_1/fizeau.webp
+```{figure} Images/fizeau.webp
 :name: fig:fizeau
 :align: center
 :width: 70%
@@ -350,7 +350,7 @@ From [](#table:refractive-indices), ethanol and fresh water have indices of refr
 *Hint: Calculate the speed in each medium, then find the percentage difference.*
 ```
 
-```{figure} Images/Chapter_1/1_06_Refractive_index_Glass_f1.png
+```{figure} Images/1_06_Refractive_index_Glass_f1.png
 :name: fig:refractiveIndex
 :align: center
 :width: 90%
@@ -367,7 +367,7 @@ Light can travel from a source to an observer through three primary pathways:
 3. **Reflection** from surfaces (such as light bouncing off a mirror)
 
 
-```{figure} Images/Chapter_1/light-paths.webp
+```{figure} Images/light-paths.webp
 :name: fig:light-paths
 :align: center
 :width: 90%

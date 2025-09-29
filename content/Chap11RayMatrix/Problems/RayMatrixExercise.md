@@ -20,7 +20,7 @@ $k=(n'-n)/R$, and secondly the matrix ${\cal M}_d$ for propagation through a med
 Consider a thick lens made of a glass of refractive index $n$ with thickness $d$. For paraxial rays, the thickness can be identified with the distance between the vertices $V_1$ and $V_2$ of the surfaces of the lens.
 
 
-```{figure} ../Images/Tutorial_3/Ex_01_Thick_lens.png
+```{figure} ../Images/Ex_01_Thick_lens.png
 :name: fig:Thicklens1
 Thick lens.
 ```
@@ -47,7 +47,7 @@ where $k_1= (n-1)/R_1$ and $k_2= (1-n)/R_2$
 
 In Section 3.5.7 of the Lecture Notes the primary and secondary principle planes were defined. Let the distance between the primary principle plane ${\cal H}_1$ and vertex $V_1$ be $T_1$, and let the distance of the second principle plane ${\cal H}_2$ to vertex $V_2$ be $T_2$ as shown in {numref}`fig:Thicklens2`). $T_1>0$ and $T_2>0$ if the first principle plane is to the left of $V_1$ and the second principle plane is to the right of $V_2$, respectively, while $T_1$ and $T_2$ are negative otherwise.
 
-```{figure} ../Images/Tutorial_3/Ex_02_Thick_lens.png
+```{figure} ../Images/Ex_02_Thick_lens.png
 :name: fig:Thicklens2
 Thick lens with principle planes.
 ```
