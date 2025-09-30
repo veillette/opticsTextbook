@@ -66,13 +66,17 @@ or
 ```
 Using elementary geometry and the relation $\cos(2\bar{\theta})=1-2\sin^2(\bar{\theta})$, it can be shown that $|AC|-|AB|=2d\sin(\bar{\theta})$ and thus the self-consistency condition becomes
 ```{math}
-:label: eqSelfConsistency
+:label: eq:fiber:self-consistency-condition
 \begin{align*}
 	\sin(\bar{\theta}_m)=m\dfrac{\lambda_0}{2d}.
 \end{align*}
 ```
 
-We thus find that only certain bouncing angles $\bar{\theta}_m$ are allowed by the self-consistency condition and these are referred to as the $m$ modes of propagation. From Eq. {eq}`eqSelfConsistency` we can draw the important conclusion that the number of modes in the waveguide is limited, because $\max(\sin(\bar{\theta}_m))=1$. This implies that:
+We thus find that only certain bouncing angles $\bar{\theta}_m$ are allowed by
+the self-consistency condition and these are referred to as the $m$ modes of
+propagation. From Eq. {eq}`eq:fiber:self-consistency-condition` we can draw the
+important conclusion that the number of modes in the waveguide is limited,
+because $\max(\sin(\bar{\theta}_m))=1$. This implies that:
 - the maximum number of modes $M$ possibly propagating through the waveguide equals
 ```{math}
 \begin{align*}
@@ -91,7 +95,7 @@ E_{\text{up}}=A_m\exp(-ik_{y,m}y-ik_{z,m}z),
 ```
 the down-propagating wave is described by
 ```{math}
-:label: eqEdown
+:label: eq:fiber:down-propagating-wave
 \begin{align*}
 	E_{\text{down}}=A_m\exp(i[m-1]\pi)\exp(+ik_{y,m}y-ik_{z,m}z).
 \end{align*}
@@ -106,7 +110,7 @@ E_x(y,z)= E_{\text{up}}+E_{\text{down}}= E_0 u_m(y)\exp(-ik_{z,m}z)
 in which $E_0$ is the field's amplitude and the mode distributions
 
 ```{math}
-:label: eqModeDistributions
+:label: eq:fiber:mode-distributions
 \begin{align*}
 u_m(y)=
 \begin{cases}
@@ -116,7 +120,11 @@ u_m(y)=
 \end{align*}
 ```
 
-The first few of these distributions are plotted in {numref}`figFiberMirrorModes`, from which it is observed that $m$ corresponds to the amount of maxima in the distribution. The pre-factors $\sqrt{2/d}$ in Eq. {eq}`eqModeDistributions` are chosen such that the functions are orthonormal, meaning
+The first few of these distributions are plotted in {numref}
+`figFiberMirrorModes`, from which it is observed that $m$ corresponds to the
+amount of maxima in the distribution. The pre-factors $\sqrt{2/d}$ in Eq. {eq}
+`eq:fiber:mode-distributions` are chosen such that the functions are
+orthonormal, meaning
 ```{math}
 \begin{align*}
 \int_{-d/2}^{d/2} u_i\cdot u_j\mathrm{d}y =
@@ -156,7 +164,7 @@ Optical fibers can be characterized by a number of parameters. Here we list a se
 The approximation, which entails the relative difference of $n_1$ and $n_2$ holds for the weakly guiding fibers under consideration in this chapter. It follows from setting $n_2=n_1-\Delta n$ and neglecting terms of order $\Delta n^2$. For $n_1=1.448$ and $n_2=1.444$, $\Delta=5.5\times 10^{-3}$.
 - **Numerical aperture (NA)** -- The NA relates the fiber and the (external) critical angle under which it accepts (or emits) light, $\bar{\theta}_{\text{e,c}}$. That is, the maximum value of $\bar{\theta}_{\text{e}}$ in {numref}`figFiberTIR` such that TIR occurs. The NA for fibers is defined as
 ```{math}
-:label: eqNA
+:label: eq:fiber:numerical-aperture
 \begin{align*}
 	\mathrm{NA}=\sin\left(\bar{\theta}_{\text{e,c}}\right)=\sqrt{n_1^2-n_2^2}
 \end{align*}
@@ -174,7 +182,7 @@ in which we use that $\bar{\theta}_{\text{i,c}}=\pi/2-\arcsin(n_2/n_1)=\arccos(n
 
 - **$V$-number** – The $V$-number, or fiber parameter, governs the number of modes supported in the fiber. It is defined as
 	```{math}
-	:label: eqV
+	:label: eq:fiber:v-number
 	\begin{align*}
 		V=\dfrac{\pi d}{\lambda_0}\mathrm{NA}.
 	\end{align*}
@@ -194,13 +202,24 @@ in which we use that $\bar{\theta}_{\text{i,c}}=\pi/2-\arcsin(n_2/n_1)=\arccos(n
 
 Light propagating though fibers often suffers from dispersion, or pulse broadening. The cause for dispersion is that transmitting waves (e.g. at different wavelength) do not travel at the same velocity, which may cause information loss. In e.g. telecommunication, information is typically sent using short pulses of light, which may start to overlap in time upon broadening, see {numref}`figFiberDispersion`(a). Once two pulses overlap, they cannot be separated anymore and the information contained in the original pulses is lost. Here three main causes for dispersion are discussed, modal dispersion, material dispersion and waveguide dispersion.
 
-Modal dispersion is relevant for MMFs, in which several modes of light are present simultaneously. As discussed in {ref}`secFiberModes`, light rays bounce through a fiber or any other waveguide. To introduce modal dispersion we refer back to the planar mirror waveguide depicted in {numref}`figFiberModesIntro`. Since the rays of higher-order modes are at larger angles $\bar{\theta}_m$ (see Eq. {eq}`eqSelfConsistency`) than lower-order modes, the higher-order modes have a longer path length. This means that the effective propagation velocity $v_z$, the velocity at which the wave travels in $z$-direction, decreases with increasing mode number. For the planar mirror waveguide in vacuum the propagation velocity for the $m^{\text{th}}$ mode is
+Modal dispersion is relevant for MMFs, in which several modes of light are
+present simultaneously. As discussed in {ref}`secFiberModes`, light rays bounce
+through a fiber or any other waveguide. To introduce modal dispersion we refer
+back to the planar mirror waveguide depicted in {numref}`figFiberModesIntro`.
+Since the rays of higher-order modes are at larger angles $\bar{\theta}_m$ (see
+Eq. {eq}`eq:fiber:self-consistency-condition`) than lower-order modes, the
+higher-order modes have a longer path length. This means that the effective
+propagation velocity $v_z$, the velocity at which the wave travels in $z$
+-direction, decreases with increasing mode number. For the planar mirror
+waveguide in vacuum the propagation velocity for the $m^{\text{th}}$ mode is
 ```{math}
 \begin{align*}
 v_{z,m}=c\cos(\bar{\theta}_m)=c\sqrt{1-\left(m\dfrac{\lambda_0}{2d}\right)^2}
 \end{align*}
 ```
-Here we used that $\cos^2(\theta)+\sin^2(\theta)=1$ along with Eq. {eq}`eqSelfConsistency`.
+
+Here we used that $\cos^2(\theta)+\sin^2(\theta)=1$ along with Eq. {eq}
+`eq:fiber:self-consistency-condition`.
 
 Now consider an infinitely short pulse that consists of light in the $i^{\text{th}}$ and the $j^{\text{th}}$ mode only, with $i<j$. For the sake of the argument, we still presume that the light is monochromatic, although in reality this is not the case (see below). Then these modes travel in $z$-direction with a velocity difference
 ```{math}
@@ -210,7 +229,7 @@ Now consider an infinitely short pulse that consists of light in the $i^{\text{t
 ```
 Due to the velocity difference, the difference in arrival time of the two modes at the end of the waveguide of length $L$ is
 ```{math}
-:label: eqMirrorDispersion
+:label: eq:fiber:mirror-waveguide-dispersion
 \begin{align*}
 	\Delta\tau=\dfrac{L}{\Delta v}=\dfrac{L}{c\left(\sqrt{1-\left(i\dfrac{\lambda_0}{2d}\right)^2}-\sqrt{1-\left(j\dfrac{\lambda_0}{2d}\right)^2}\right)},
 \end{align*}
@@ -219,7 +238,7 @@ which is depicted in {numref}`figFiberMirrorDispersion` for several combinations
 
 ```{figure} Images/10_06_mirror_dispersion.png
 :name: figFiberMirrorDispersion
-Modal dispersion in the mirror waveguide, see Eq. {eq}`eqMirrorDispersion`
+Modal dispersion in the mirror waveguide, see Eq. {eq}`eq:fiber:mirror-waveguide-dispersion`
 ```
 
 In reality, light pulses in multimode waveguides contain many modes and are not infinitely short. However, the same ideas hold: due to modal dispersion the pulse broadens, thereby limiting the rate of information transfer. This is also true for optical fibers. In this case one can calculate for the time delay between the fastest mode (the $(m,l)=(1,0)$ mode) and the slowest mode (mode at the critical angle) that
@@ -234,12 +253,19 @@ Up to this point we have implicitly assumed that the light transmitted through o
 
 Now we consider a signal pulse propagating through a medium. The pulse has a central wavelength $\lambda_0$ and a spectral width $\Delta\lambda$. If the index of refraction is wavelength-dependent, $n=n(\lambda)$, such as in SiO$_2$ , the spectral width of the signal propagating through a fiber results in dispersion. This is due to the fact that the pulse's (group) propagation velocity is imposed by the group refractive index $n_{\text{g}}$ as $v_{\text{g}}=c/n_{\text{g}}$, which in turn depends on $n(\lambda)$ as
 ```{math}
-:label: eqNgroup
+:label: eq:fiber:group-refractive-index
 \begin{align*}
 	n_{\text{g}}=n-\lambda\dfrac{\mathrm{d}n}{\mathrm{d}\lambda}.
 \end{align*}
 ```
-Hence all wavelength components present in the pulse travel at slightly different velocity and dispersion is the result. From Eq. {eq}`eqNgroup` we see, however, that the effect only occurs whenever $\mathrm{d}^2n/\mathrm{d}\lambda^2\neq 0$ (NB: if $n$ is constant or of the form $n=a\lambda+b$, Eq. {eq}`eqNgroup` still yields a constant group refractive index). This is the case for SiO$_2$ as can be observed in {numref}`figFiberDispersion`(c).
+
+Hence all wavelength components present in the pulse travel at slightly
+different velocity and dispersion is the result. From Eq. {eq}
+`eq:fiber:group-refractive-index` we see, however, that the effect only occurs
+whenever $\mathrm{d}^2n/\mathrm{d}\lambda^2\neq 0$ (NB: if $n$ is constant or of
+the form $n=a\lambda+b$, Eq. {eq}`eq:fiber:group-refractive-index` still yields
+a constant group refractive index). This is the case for SiO$_2$ as can be
+observed in {numref}`figFiberDispersion`(c).
 
 ```{figure} Images/10_07_dispersion.png
 ```
@@ -258,18 +284,25 @@ Due to material dispersion, the change in pulse width after fiber length $L$ is 
 ```
 However, in practice often the dispersion is reported as
 ```{math}
-:label: eqDmat
+:label: eq:fiber:material-dispersion
 \begin{align*}
 	D^{\text{mat}}=\dfrac{\Delta\tau^{\text{mat}}}{L\Delta\lambda}=\dfrac{\lambda_0}{c}\dfrac{\mathrm{d}^2n}{\mathrm{d}\lambda^2}
 \end{align*}
 ```
 in units of $\text{ps}/(\text{km} \cdot \text{nm})$. That is, the increase in pulse width (in $\text{ps}$) per $\text{km}$ of fiber with the source's spectral width in $\text{nm}$. Typical values of this parameter are $10$ to $20\text{ps}/(\text{km}\cdot \text{nm})$.
 
-A second effect of the spectral width of light pulses is that they disperse even if light propagates in a single mode. As observed from Eq. {eq}`eqSelfConsistency`, the angle $\bar{\theta}_m$ not only depends on the mode $m$, but also on the wavelength of the light. Therefore, all wavelength components of the light will propagate at a slightly different $\bar{\theta}_m$. This will cause dispersion in the same fashion as discussed before for modal dispersion. Typically, waveguide dispersion is only relevant for SMFs.
+A second effect of the spectral width of light pulses is that they disperse even
+if light propagates in a single mode. As observed from Eq. {eq}
+`eq:fiber:self-consistency-condition`, the angle $\bar{\theta}_m$ not only
+depends on the mode $m$, but also on the wavelength of the light. Therefore, all
+wavelength components of the light will propagate at a slightly
+different $\bar{\theta}_m$. This will cause dispersion in the same fashion as
+discussed before for modal dispersion. Typically, waveguide dispersion is only
+relevant for SMFs.
 
 For step-index optical fibers, waveguide dispersion can be calculated as
 ```{math}
-:label: eqDwav
+:label: eq:fiber:waveguide-dispersion
 \begin{align*}
 	D^{\text{wav}}=-\dfrac{n_1-n_2}{c\lambda_0}.
 \end{align*}
@@ -281,7 +314,16 @@ It should be noted that $D^{\text{wav}}<0$ as $n_1>n_2$ for TIR, see {ref}`secFi
 Material and waveguide dispersion for a SiO$_2$ SMF. Taking the sum of both effects allows to create dispersionless fibers for a wavelength of $1310\text{nm}$
 ```
 
-Dispersion effects may cancel each other or engineered, such that dispersionless fibers can be constructed. E.g., for SMFs, in which only material and waveguide dispersion play a role, the total dispersion is given as $D=D^{\text{mat}}+D^{\text{wav}}$. Notice from Eqs. {eq}`eqDmat` and {eq}`eqDwav` that $D^{\text{mat}}$ and $D^{\text{wav}}$ have an opposite sign and if we plot both expressions using SiO$_2$ as fiber material, see {numref}`figFiberDispersionSiO2`, it is observed that these dispersion effects cancel at $\lambda_0=1310\text{nm}$. This makes $1310\text{nm}$ a popular wavelength for building optical fiber networks.
+Dispersion effects may cancel each other or engineered, such that dispersionless
+fibers can be constructed. E.g., for SMFs, in which only material and waveguide
+dispersion play a role, the total dispersion is given
+as $D=D^{\text{mat}}+D^{\text{wav}}$. Notice from Eqs. {eq}
+`eq:fiber:material-dispersion` and {eq}`eq:fiber:waveguide-dispersion`
+that $D^{\text{mat}}$ and $D^{\text{wav}}$ have an opposite sign and if we plot
+both expressions using SiO$_2$ as fiber material, see {numref}
+`figFiberDispersionSiO2`, it is observed that these dispersion effects cancel
+at $\lambda_0=1310\text{nm}$. This makes $1310\text{nm}$ a popular wavelength
+for building optical fiber networks.
 
 Dispersionless fibers can also be engineered, e.g. by using a technique similar to the fiber Bragg grating, to be discussed in {ref}`secFiberApplications`. However, it should be noted that these cancelation effects, whether intrinsic or engineered, only yield dispersionless fibers at a single wavelength. Also, as we will see below, dispersionless fibers come at a cost of increased optical transmission loss.
 
@@ -339,7 +381,18 @@ Bending on (a) macro-scale and (b) micro-scale (exaggerated) generate fiber loss
 
 ```
 
-Apart from internal fiber losses, losses may also occur while coupling fibers, see {numref}`figFiberCouplingLoss`. This happens when fiber cores are not aligned properly (they are shifted with respect to each other, placed under an angle or there is a gap in between the fibers), when a higher-NA fiber is coupled to a fiber with lower NA, or when the core size of the two fibers is different. In case of a mismatch in NA, the lower-NA fiber will support less modes (see Eq. {eq}`eqV`) and the higher order modes will be lost. Apart from these issues with connecting fibers, internal reflections between different fiber cores cause losses. These reflections occur whenever the index of refraction changes. For each type of coupling loss, the loss factor can be easily a few dB, as you can estimate yourself in one of the problems at the end of this chapter. Therefore care must be taken to couple fibers properly.
+Apart from internal fiber losses, losses may also occur while coupling fibers,
+see {numref}`figFiberCouplingLoss`. This happens when fiber cores are not
+aligned properly (they are shifted with respect to each other, placed under an
+angle or there is a gap in between the fibers), when a higher-NA fiber is
+coupled to a fiber with lower NA, or when the core size of the two fibers is
+different. In case of a mismatch in NA, the lower-NA fiber will support less
+modes (see Eq. {eq}`eq:fiber:v-number`) and the higher order modes will be lost.
+Apart from these issues with connecting fibers, internal reflections between
+different fiber cores cause losses. These reflections occur whenever the index
+of refraction changes. For each type of coupling loss, the loss factor can be
+easily a few dB, as you can estimate yourself in one of the problems at the end
+of this chapter. Therefore care must be taken to couple fibers properly.
 
 ```{figure} Images/10_14_loss.png
 :name: figFiberCouplingLoss
@@ -408,12 +461,21 @@ Now that a solid background on the topic of optical fibers has been established,
 
 In order to couple light into or out of fiber setups from free space, collimators are used as a gateway. Collimators contain a positive lens and are attached to a fiber with its end placed in one of its focal points. As such, a collimated beam of light, such as laser light, can be coupled into the fiber. The opposite process can be used to couple light out of the fiber setup into free space and yields a collimated beam. This is illustrated in {numref}`figFiberCollimator`. In case the collimator is used to couple light out of a fiber, the beam width (half the beam diameter) of the resulting collimated beam can be reasonably approximated as
 ```{math}
-:label: eqBeamwidthColl
+:label: eq:fiber:collimator-beam-width
 \begin{align*}
 	w_{\text{coll}}=f_{\text{coll}}\mathrm{NA},
 \end{align*}
 ```
-where $f_{\text{coll}}$ is the focal length of the collimating lens. $w_{\text{coll}}$ is in the order of $1\text{mm}$ for a typical fiber NA of $0.1$ and an $f_{\text{coll}}=1\text{cm}$. On the other hand, it should be realized that upon coupling light into a fiber from a collimated beam, the (incoming) beam width should be smaller the value resulting from Eq. {eq}`eqBeamwidthColl`. If the beam is broader, some light will not couple into the fiber and is therefore lost. This results from $\bar{\theta}_{\text{e,c}}$ (see {numref}`figFiberTIR`) being exceeded by part of the light beam.
+
+where $f_{\text{coll}}$ is the focal length of the collimating
+lens. $w_{\text{coll}}$ is in the order of $1\text{mm}$ for a typical fiber NA
+of $0.1$ and an $f_{\text{coll}}=1\text{cm}$. On the other hand, it should be
+realized that upon coupling light into a fiber from a collimated beam, the (
+incoming) beam width should be smaller the value resulting from Eq. {eq}
+`eq:fiber:collimator-beam-width`. If the beam is broader, some light will not
+couple into the fiber and is therefore lost. This results
+from $\bar{\theta}_{\text{e,c}}$ (see {numref}`figFiberTIR`) being exceeded by
+part of the light beam.
 
 ```{figure} Images/10_18_collimation.png
 :name: figFiberCollimator

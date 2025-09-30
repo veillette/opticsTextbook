@@ -81,10 +81,15 @@ Left: Optical rays showing how an eye accommodates by changing its focal length.
 
 ### Working of the eye
 The entire eye can accurately be treated as two lenses in contact, of which the second lens can change its focal length. But often the system is approximated by only a single lens and this is also what we will do below.
-In relaxed condition, the object focal distance of the lens system is $f_o=16$&nbsp;mm as measured from the cornea while the image focal distance is equal to the length of the eye: $f_i=24$&nbsp;mm. These focal distances are different, because the refractive indices of the surrounding medium (air and vitreous humour) differ. The power of the healthy relaxed eye is according to {eq}`eq.matthinlens`, {eq}`eq.matthinlens2`:
+In relaxed condition, the object focal distance of the lens system is $f_o=16$
+&nbsp;mm as measured from the cornea while the image focal distance is equal to
+the length of the eye: $f_i=24$&nbsp;mm. These focal distances are different,
+because the refractive indices of the surrounding medium (air and vitreous
+humour) differ. The power of the healthy relaxed eye is according to {eq}
+`eq:ray:thin-lens-matrix`, {eq}`eq:ray:thin-lens-matrix-focal`:
 
 ```{math}
-:label: eq.EyePower
+:label: eq:inst:eye-dioptric-power
 \begin{align*}
 \mathfrak{D} =\frac{n_{vh}}{f_i}= \frac{1.337}{0.024}= 55 \text{ Diopter}.
 \end{align*}
@@ -135,15 +140,34 @@ The eye can suffer from imperfections as seen in {numref}`Fig_3_07_eye_correctio
 
 
 **a. Myopia or nearsightedness**.
-A myopic eye has too short focal distances (has too high power). Distant objects are focused in front of the retina by the relaxed eye. The far point is thus not at infinity, but closer. This can be corrected by a negative lens. Suppose the far point is at 2 m. If the concave lens makes a virtual image of a distant object at distance 2 m in front of the cornea, the relaxed eye can see it clearly. The lens Law {eq}`eq.lensmaker`, with $s_o=-\infty$ implies then $f_i=s_i= -2$ m. Hence the required power of the lens is:
+A myopic eye has too short focal distances (has too high power). Distant objects
+are focused in front of the retina by the relaxed eye. The far point is thus not
+at infinity, but closer. This can be corrected by a negative lens. Suppose the
+far point is at 2 m. If the concave lens makes a virtual image of a distant
+object at distance 2 m in front of the cornea, the relaxed eye can see it
+clearly. The lens Law {eq}`eq:ray:lensmaker-formula`, with $s_o=-\infty$ implies
+then $f_i=s_i= -2$ m. Hence the required power of the lens is:
 
 ```{math}
-:label: eq.Myopia
+:label: eq:inst:myopia-correction
 \begin{align*}
 \mathfrak{D} =\frac{1}{f}= -0.5 \; \text{diopter}.
 \end{align*}
 ```
-The lens is best put in the front focal plane of the relaxed eye, i.e. at approximately 16 mm in front of the cornea. This follows from {eq}`eq.lensmaker` and the fact that the distance of the retina to the eye lens is roughly 22 mm while the refractive index of the vitrous humor is 1.337. Hence, the focal distance in air of the relaxed eye of $22/1.337 \approx 16 \text{ mm}$. The reason for putting the lens at the focal distance is that in this case the magnification of the eye and the negative lens together are the same as for the uncorrected eye. To see this, draw a ray from the top of the object through the center of the negative lens. This will then be made parallel to the optical axis by the eye lens; the distance of this ray to the optical axis is the image size on the retina. This ray will end up at the same point of the retina as when the negative lens is taken out, because it is not refracted by this lens.
+
+The lens is best put in the front focal plane of the relaxed eye, i.e. at
+approximately 16 mm in front of the cornea. This follows from {eq}
+`eq:ray:lensmaker-formula` and the fact that the distance of the retina to the
+eye lens is roughly 22 mm while the refractive index of the vitrous humor is
+1.337. Hence, the focal distance in air of the relaxed eye
+of $22/1.337 \approx 16 \text{ mm}$. The reason for putting the lens at the
+focal distance is that in this case the magnification of the eye and the
+negative lens together are the same as for the uncorrected eye. To see this,
+draw a ray from the top of the object through the center of the negative lens.
+This will then be made parallel to the optical axis by the eye lens; the
+distance of this ray to the optical axis is the image size on the retina. This
+ray will end up at the same point of the retina as when the negative lens is
+taken out, because it is not refracted by this lens.
 
 Contact lenses are very close to the eye lens and hence the total power of the eye with a contact lens is simply the sum of the power of the eye and the contact lens.
 
@@ -154,7 +178,7 @@ Contact lenses are very close to the eye lens and hence the total power of the e
 In this case a distant object is imaged by the relaxed eye behind the retina, i.e. the back focal distance of the relaxed eye is larger than the depth of the eye. Close objects can not be imaged on the retina, hence the near point is relatively far from the cornea. In order to bend the rays more, a positive lens is placed in front of the eye. Suppose that a hyperopic eye has near point at distance 125 cm. For an object at the normal near point $s_o=-25$ cm to have virtual image at $s_i=-125$ cm, so that it can be seen, the focal length of the positive lens must satisfy
 
 ```{math}
-:label: eq.fconv
+:label: eq:inst:hyperopia-focal-length
 \begin{align*}
 \frac{1}{f}=-\frac{1}{s_o}+\frac{1}{s_i}= \frac{1}{0.25}-\frac{1}{1.25} =\frac{1}{0.31},
 \end{align*}
@@ -207,7 +231,7 @@ where $\alpha_a$ and $\alpha_u$ are the angles between the optical axis and the 
 Using $\alpha_a\approx y_i/L$ and $\alpha_u\approx y_0/d_0$ with $y_i$ and $y_0$ positive and $L$ the positive distance from the image to the eye (with as requirement : $L\geq d_o$), we find
 
 ```{math}
-:label: eq.MP
+:label: eq:inst:magnifying-power
 \begin{align*}
 \text{MP}=\dfrac{y_id_0}{y_0 L}.
 \end{align*}
@@ -219,10 +243,10 @@ $$
 $$
 where we used the lens equation for the magnifying glass. We have $s_i = -|s_i|=-(L-\mathcal{l})$, where
 $\mathcal{l}$ is the distance between the magnifying glass and the eye. Hence,
-{eq}`eq.MP` becomes:
+{eq}`eq:inst:magnifying-power` becomes:
 
 ```{math}
-:label: eq.mP2
+:label: eq:inst:magnifying-power-distance
 \begin{align*}
 \text{MP} &= \frac{d_0}{L} \left[ 1 + \frac{L-\mathcal{l}}{|f_o|} \right]  \\
 &= \frac{d_0}{L} \left[ 1 + {\cal P}\left(L-\mathcal{l}\right) \right],
@@ -248,7 +272,7 @@ We distinguish three situations:
 1. The object is at the focal point of the magnifier ($s_0=f_o$), so that the virtual image is at infinity ($L=\infty$) and hence
 
 ```{math}
-:label: eq.MPinfinity
+:label: eq:inst:magnifying-power-infinity
 \begin{align*}
 \text{MP}|_{L=\infty}=d_0{\cal P},
 \end{align*}
@@ -292,8 +316,16 @@ The magnifying power of the entire system is the product of the transverse linea
 \text{MP}=M_{T}M_{Ae}.
 \end{align*}
 ```
-According to {eq}`eq.defM1`: $M_{T}=\mathbin{-} x_i/f_i^{obj}$, where $x_i$ is the distance of the image made by the objective to its back focal plane with focal distance $f_i^{obj}$. We have $x_i=L$ which is the tube length, i.e. the distance between the second focal point of the objective and the first focal point of the eyepiece. The tube length is standardized at 16&nbsp;cm.
-Furthermore, according to {eq}`eq.MPinfinity`, the angular magnification is for a virtual image at infinity is : $M_{Ae}=d_o/f_i^e$. Hence, we obtain:
+
+According to {eq}
+`eq:ray:transverse-magnification`: $M_{T}=\mathbin{-} x_i/f_i^{obj}$,
+where $x_i$ is the distance of the image made by the objective to its back focal
+plane with focal distance $f_i^{obj}$. We have $x_i=L$ which is the tube length,
+i.e. the distance between the second focal point of the objective and the first
+focal point of the eyepiece. The tube length is standardized at 16&nbsp;cm.
+Furthermore, according to {eq}`eq:inst:magnifying-power-infinity`, the angular
+magnification is for a virtual image at infinity is : $M_{Ae}=d_o/f_i^e$. Hence,
+we obtain:
 
 ```{math}
 \begin{align*}
@@ -329,7 +361,7 @@ As seen earlier, the angular magnification is:
 $\text{MP} = \alpha_a/\alpha_u$ where $\alpha_u$ is the half angle of the cone of light that would be collected without telescope and $\alpha_a$ is the half angle of the apparent cone of rays coming from the virtual image of the eyepiece. For an object at infinity we find considering the triangles $F_{o}^{obj}AB$ and $F_i^{e}CD$ in {numref}`Fig_3_13_Rays_Telescope` that
 
 ```{math}
-:label: eq.MPtelescope
+:label: eq:inst:telescope-magnification
 \begin{align*}
 \text{MP} = -\frac{f_i^{obj}}{f_i^e}.
 \end{align*}

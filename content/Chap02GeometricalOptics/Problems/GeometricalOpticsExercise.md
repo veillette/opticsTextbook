@@ -18,17 +18,20 @@ Hint: set the partial derivatives of the OPL with respect to $x_A$ and $x_B$ equ
 - **c)** Express the equations derived under b) in terms of $\sin \theta_1$, $\sin \theta_2$ and $\sin \theta_3$ and derive that Snell's Law holds for the angles $\theta_1$ and $\theta_3$:
 
 ```{math}
-:label: eq.Snell13
+:label: eq:geo:snell-multilayer
 \begin{align*}
 n_1 \sin \theta_1 = n_3 \sin \theta_3.
 \end{align*}
 ```
 Note that the relationship between $\theta_3$ and $\theta_1$ is independent of the refractive index $n_2$ and the thickness $d$ of the middle layer.
 
-- **d)** Does Snell's Law {eq}`eq.Snell13`) hold irrespective of the number of layers and their thicknesses in between the two half spaces?
+- **d)** Does Snell's Law {eq}`eq:geo:snell-multilayer`) hold irrespective of
+  the number of layers and their thicknesses in between the two half spaces?
 Explain your answer.
 
-- **e)** Derive {eq}`eq.Snell13` by using the boundary conditions for the tangential components of the electromagnetic field, using Maxwell's boundary conditions for electromagnetic fields.
+- **e)** Derive {eq}`eq:geo:snell-multilayer` by using the boundary conditions
+  for the tangential components of the electromagnetic field, using Maxwell's
+  boundary conditions for electromagnetic fields.
 
 From electromagnetic theory, the wave trains emitted by different atoms (point sources) in the source suffer random phase jumps due to e.g. collisions and therefore the fields emitted by different point sources in an extended classical light source can not interfere.
 
@@ -38,7 +41,7 @@ Suppose that there are two media with refractive indices $n_1>n_2$ and that poin
 - **a)** If point $A$ is on the interface sought, derive that
 
 ```{math}
-:label: eq.hyper1
+:label: eq:geo:hyperbola-condition
 \begin{align*}
 \frac{n_2}{c} |DA| + \frac{n_1}{c}|AF| = \text{constant},
 \end{align*}
@@ -73,7 +76,7 @@ Draw a second surface $\Sigma_2$ parallel to $\Sigma_1$. Consider rays hitting t
 Derive that
 
 ```{math}
-:label: eq.parmir1
+:label: eq:geo:parabolic-mirror-opl-1
 \begin{align*}
 \text{OPL}=|W_1A_1| + |A_1F|= |W_2A_2| + |A_2F|.
 \end{align*}
@@ -81,13 +84,14 @@ Derive that
 - **b)** Derive that
 
 ```{math}
-:label: eq.parmir2
+:label: eq:geo:parabolic-mirror-opl-2
 \begin{align*}
 |W_1A_1| + |A_1D_1|= |W_2A_2| + |A_2D_2|.
 \end{align*}
 ```
 - **c)** Show that
-{eq}`eq.parmir1` is satisfied for points $A$ for which $|AF|=|AD|$,
+  {eq}`eq:geo:parabolic-mirror-opl-1` is satisfied for points $A$ for
+  which $|AF|=|AD|$,
 and conclude that the mirror is a paraboloid with $f$ as focus and $\Sigma_2$ as diretrix.
 
 ```{figure} ../Images/02_19_paraboloid_mirror_bw.png
@@ -134,7 +138,11 @@ Consider a spherical surface with radius of curvature $R$ with to the left (righ
 - **a)**
 Derive the ray matrix between a plane to the left of the surface and at distance $d_1$ to the vertex, and a plane to the right of the surface with distance of $d_2$ to the vertex. (As always the rays are assumed to propagate from the left to the right).
 
-- **b)** Derive the conditions such that the plane at distance $d_2$ is the image of the plane at distance $d_1$. Express the formula in coordinates $s_o=-d_1$, $s_i=d_2$ with respect to the vertex as origin and show that the result is identical to formula {eq}`eq.one_surface2`
+- **b)** Derive the conditions such that the plane at distance $d_2$ is the
+  image of the plane at distance $d_1$. Express the formula in
+  coordinates $s_o=-d_1$, $s_i=d_2$ with respect to the vertex as origin and
+  show that the result is identical to formula {eq}
+  `eq:geo:single-surface-power-form`
 
 - **c)** Assume that
 $n_1=1$, $n_2=2$ and $R= 2$ cm.
@@ -151,8 +159,10 @@ The image $P$ of a point $S$ as shown in {numref}`Fig_2_33_Spherical_Lens` is co
 A spherical lens made of glass of index $n_l$ in a medium of index $n_m$. The point $S$ is imaged in $P$.
 ```
 
-
-- **a)** Use {eq}`eq.one_surface2` to deduce that when $S$ is imaged by the first spherical surface as if the second spherical surface were absent, the image $P'$ has $z$-coordinate $s_{i1}$ with respect to the origin in $V$, of $S$, satisfies:
+- **a)** Use {eq}`eq:geo:single-surface-power-form` to deduce that when $S$ is
+  imaged by the first spherical surface as if the second spherical surface were
+  absent, the image $P'$ has $z$-coordinate $s_{i1}$ with respect to the origin
+  in $V$, of $S$, satisfies:
 
 $$
 -\frac{n_m}{s_{o1}}+\frac{n_l}{s_{i1}} =\frac{n_l-n_m}{R_1},
@@ -180,7 +190,7 @@ $$
 
 
 - **e)** Derive the Lensmaker's formula for the thin lens
-{eq}`eq.lensmaker` by taking the limit $d\rightarrow 0$ in d).
+  {eq}`eq:ray:lensmaker-formula` by taking the limit $d\rightarrow 0$ in d).
 
 8. System matrix for focusing. 
 
@@ -202,7 +212,11 @@ between two planes.
 
 - **c)** Consider two thin lenses with distance $d$ and focal distances $f_{1i}$ and $f_{2i}$. Derive the transfer matrix linking the plane immediately before the first lens with the plane immediately behind the second lens. You may assume that the lenses are in air with refractive index $n=1$.
 
-- **d)** Use the condition that you found in a) to derive the image focal distance of a system consisting of two thin lenses with image focal distances $f_{1i}$ and $f_{2i}$ and distance $d$. Verify that the result agrees with the distance for the image focal plane {eq}`eq.2fi`.
+- **d)** Use the condition that you found in a) to derive the image focal
+  distance of a system consisting of two thin lenses with image focal
+  distances $f_{1i}$ and $f_{2i}$ and distance $d$. Verify that the result
+  agrees with the distance for the image focal plane {eq}
+  `eq:ray:two-lens-image-focal`.
 Hint: let $f_i$ be the distance of the image focal point of the two-lens system to the second lens. Write the transfer matrix between the lens immediately before the first lens and the plane through the image focal point.
 
 - **e)** Add a third thin lens with image focal distance $f_{3i}$ is in contact to the second lens. Derive the ray matrix of this system.
@@ -230,7 +244,8 @@ $$
 f_o = \frac{P_1+P_2 + \frac{d}{n} {\cal P}_1{\cal P}_2}{n \left( 1 - \frac{d}{n}\right){\cal P}_1 }.
 $$ (eq.fo)
 
-- **c)** Verify that these formulae are equivalent to {eq}`eq.2fo`,{eq}`eq.2fi`.
+- **c)** Verify that these formulae are equivalent to {eq}
+  `eq:ray:two-lens-object-focal`,{eq}`eq:ray:two-lens-image-focal`.
 
 
 10. Entrance pupil of a system of two lenses.

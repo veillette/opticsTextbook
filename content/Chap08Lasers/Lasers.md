@@ -33,7 +33,7 @@ These properties are equivalent.
 A spectral lamp, like a gas discharge lamp based on Mercury vapor, can have a spectral width of $\Delta \nu=$ 10 GHz. Visible frequencies are around $2\times 10^{14}$ Hz, hence the spectral width of the lamp is roughly $0.02\%$. The line width measured in wavelengths satisfies
 
 ```{math}
-:label: eq.Dlambda
+:label: eq:laser:spectral-width-ratio
 \begin{align*}
 \frac{\Delta \lambda}{\lambda}=\frac{\Delta \nu}{\nu},
 \end{align*}
@@ -43,7 +43,7 @@ A laser can however easily have a frequency band that is a factor of $100$ small
 As has been explained in Chapter 7, the coherence time $\tau_c$ of the emitted light is the reciprocal of the frequency bandwidth:
 
 ```{math}
-:label: eq.tau
+:label: eq:laser:coherence-time
 \begin{align*}
 \Delta \tau_c= 1/\Delta \nu.
 \end{align*}
@@ -61,7 +61,7 @@ To collimate the light, the lamp can be positioned in the focal plane of a lens.
 The spherical waves emitted by the atoms (point sources) in the lamp are collimated into plane waves whose direction depends on the position of the atoms in the source. The atoms at the edges of the source determine the overall divergence angle $\theta$, which is given by
 
 ```{math}
-:label: eq.theta
+:label: eq:laser:divergence-angle
 \begin{align*}
 \theta=h/f,
 \end{align*}
@@ -71,7 +71,7 @@ Due to the special configuration of the laser source, which consists of a Fabry-
 As follows from [](#chapter.diffraction), a parallel beam of diameter $D$ and wavelength $\lambda$ has a diffraction limited divergence given by:
 
 ```{math}
-:label: eq.theta2
+:label: eq:laser:diffraction-limited-divergence
 \begin{align*}
 \theta = \frac{\lambda}{D}.
 \end{align*}
@@ -87,7 +87,7 @@ A laser beam can almost reach diffraction-limited collimation.
 If a perfectly collimated beam is focused with a lens with very small aberrations and with numerical aperture $\text{NA}$, the lateral size of the focused spot is, according to [](#chapter.diffraction), diffraction-limited and given by
 
 ```{math}
-:label: eq.diffrspot
+:label: eq:laser:diffraction-limited-spot
 \begin{align*}
 \text{diffraction-limited spot size}= 0.6 \frac{f}{D}\lambda = 0.6 \frac{\lambda}{\textit{NA}}.
 \end{align*}
@@ -138,7 +138,7 @@ The optical resonator  is a Fabry-Perot resonator filled with some material with
 Let the $z$-axis be chosen along the axis of the cavity as shown in {numref}`Fig_7_05_Fabry_Perrot_resonance_mode`, and assume that the transverse directions are so large that the light can be considered a plane wave bouncing back and forth along the $z$-axis between the two mirrors. Let $\omega$ be the frequency and $k_0=\omega/c$ the wave number in vacuum. The plane wave that propagates in the positive $z$-direction is given by:
 
 ```{math}
-:label: eq.resonator1
+:label: eq:laser:plane-wave-propagation
 \begin{align*}
 E(z) = A e^{i k_0 n z},
 \end{align*}
@@ -149,18 +149,23 @@ E(z) = A e^{i k_0 n z},
 Fabry-Perot resonances.
 ```
 
-For very good mirrors, the amplitude remains unchanged upon reflections, while the phase typically changes by $\pi$. Hence, after one round trip (i.e. two reflections) the field {eq}`eq.resonator1` is (the possible phase changes at the mirrors add up to $2\pi$ and hence have no effect):
+For very good mirrors, the amplitude remains unchanged upon reflections, while
+the phase typically changes by $\pi$. Hence, after one round trip (i.e. two
+reflections) the field {eq}`eq:laser:plane-wave-propagation` is (the possible
+phase changes at the mirrors add up to $2\pi$ and hence have no effect):
 
 ```{math}
-:label: eq.resonator2
+:label: eq:laser:round-trip-field
 \begin{align*}
 E(z)=A e^{2i k_0 n L} e^{i k_0 n z}.
 \end{align*}
 ```
-A high field builds up when this wave constructively interferes with {eq}`eq.resonator1`, i.e. when
+
+A high field builds up when this wave constructively interferes with {eq}
+`eq:laser:plane-wave-propagation`, i.e. when
 
 ```{math}
-:label: eq.resonator3
+:label: eq:laser:resonance-condition
 \begin{align*}
 k_0 =\frac{ 2\pi m }{2 n L}, \;\;\text{ or } \;\; \nu = \frac{k c}{2\pi} = m \frac{c }{2n L},
 \end{align*}
@@ -168,7 +173,7 @@ k_0 =\frac{ 2\pi m }{2 n L}, \;\;\text{ or } \;\; \nu = \frac{k c}{2\pi} = m \fr
 for $m=1,2,\ldots$. Hence, provided dispersion of the medium can be neglected (.e. $n$ is independent of the frequency), the resonance frequencies are separated by
 
 ```{math}
-:label: eq.freespectral
+:label: eq:laser:free-spectral-range
 \begin{align*}
 \Delta \nu_{f}=c/(2nL),
 \end{align*}
@@ -196,7 +201,7 @@ Amplification can be achieved by a medium with atomic resonances that are at or 
 We consider two atomic energy levels $E_2>E_1$. By absorbing a photon of energy
 
 ```{math}
-:label: eq.planck1
+:label: eq:laser:photon-energy
 \begin{align*}
 \hbar\omega = E_2-E_1,
 \end{align*}
@@ -204,7 +209,7 @@ We consider two atomic energy levels $E_2>E_1$. By absorbing a photon of energy
 an atom that is initially in the lower energy state $1$ can be excited to state 2. Here $\hbar$ is Planck's constant:
 
 ```{math}
-:label: eq.hbar
+:label: eq:laser:planck-constant
 \begin{align*}
 \hbar= \frac{6.626070040}{2\pi} \times 10^{-34} \;\; \text{ Js }.
 \end{align*}
@@ -212,7 +217,7 @@ an atom that is initially in the lower energy state $1$ can be excited to state 
 Suppose $W(\omega)$ is the time-averaged electromagnetic energy density *per unit of frequency interval* around frequency $\omega$. Hence $W$ has dimension $\text{J}\text{s}\text{m}^3$. Let $N_1$ and $N_2$ be the number of atoms in state 1 and 2, respectively, where
 
 ```{math}
-:label: eq.N
+:label: eq:laser:total-atom-number
 \begin{align*}
 N_1 + N_2 = N,
 \end{align*}
@@ -220,15 +225,22 @@ N_1 + N_2 = N,
 is the total number of atoms (which is constant). The rate of absorption is the rate of decrease of $N_1$ and is proportional to the energy density and the number of atoms in state 1:
 
 ```{math}
-:label: eq.stimulatedabsorption
+:label: eq:laser:absorption-rate
 \begin{align*}
 \frac{d N_1}{dt} = - B_{12} N_1 W(\omega), \hspace{1cm} \textbf{absorption},
 \end{align*}
 ```
-where the constant $B_{12}>0$ has dimension $\text{m}^3 \text{J}^{-1} \text{s}^{-2}$. Without any external influence, an atom that is in the excited state will usually transfer to state 1 within 1 ns or so, while emitting a photon of energy {eq}`eq.planck1`. This process is called **spontaneous emission**, since it happens also without an electromagnetic field present. The rate of spontaneous emission is given by:
+
+where the constant $B_{12}>0$ has
+dimension $\text{m}^3 \text{J}^{-1} \text{s}^{-2}$. Without any external
+influence, an atom that is in the excited state will usually transfer to state 1
+within 1 ns or so, while emitting a photon of energy {eq}
+`eq:laser:photon-energy`. This process is called **spontaneous emission**, since
+it happens also without an electromagnetic field present. The rate of
+spontaneous emission is given by:
 
 ```{math}
-:label: eq.spontaneousemission
+:label: eq:laser:spontaneous-emission-rate
 \begin{align*}
 \frac{d N_2}{dt} = - A_{21} N_2, \hspace{1cm} \textbf{spontaneous emission},
 \end{align*}
@@ -256,7 +268,7 @@ The Einstein coefficients $A_{21}$, $B_{12}$ and $B_{21}$ are related.
 Consider a black body, such as a closed empty box. Because no radiation is entering nor leaving the box, after a certain time the electromagnetic energy density is the thermal density $W_T(\omega)$, which, according to Planck's Law, is independent of the material of which the box is made and is given by:
 
 ```{math}
-:label: eq.planck2
+:label: eq:laser:planck-blackbody-law
 \begin{align*}
 W_T(\omega) = \frac{\hbar \omega^3}{\pi^2 c^3} \frac{1}{ \exp\left(\frac{\hbar \omega}{k_B T}\right) -1},
 \end{align*}
@@ -264,7 +276,7 @@ W_T(\omega) = \frac{\hbar \omega^3}{\pi^2 c^3} \frac{1}{ \exp\left(\frac{\hbar \
 where $k_B$ is Boltzmann's constant:
 
 ```{math}
-:label: eq.kBoltzmann
+:label: eq:laser:boltzmann-constant
 \begin{align*}
 k_B = 1.38064852 \times 10^{-23} \text{m}^2 \text{kg} \text{s}^{-2} \text{K}^{-1}.
 \end{align*}
@@ -272,7 +284,7 @@ k_B = 1.38064852 \times 10^{-23} \text{m}^2 \text{kg} \text{s}^{-2} \text{K}^{-1
 The rates of upward and downward transitions of the atoms in the wall of the box must be identical:
 
 ```{math}
-:label: eq.equilibrium
+:label: eq:laser:thermal-equilibrium
 \begin{align*}
 B_{12} N_1 W_T(\omega) = A_{21} N_2 + B_{21} N_2 W_T(\omega).
 \end{align*}
@@ -280,7 +292,7 @@ B_{12} N_1 W_T(\omega) = A_{21} N_2 + B_{21} N_2 W_T(\omega).
 Hence,
 
 ```{math}
-:label: eq.WT
+:label: eq:laser:energy-density-equilibrium
 \begin{align*}
 W_T(\omega) = \frac{A_{21} }{B_{12}N_1/N_2 - B_{21}}.
 \end{align*}
@@ -288,15 +300,19 @@ W_T(\omega) = \frac{A_{21} }{B_{12}N_1/N_2 - B_{21}}.
 But in thermal equilibrium:
 
 ```{math}
-:label: eq.N2N1
+:label: eq:laser:boltzmann-population
 \begin{align*}
 \frac{N_2}{N_1} = \exp\left( -\frac{E_2-E_1}{k_B T}\right) = \exp\left( -\frac{\hbar \omega}{k_B T}\right).
 \end{align*}
 ```
-By substituting {eq}`eq.N2N1` into {eq}`eq.WT`, and comparing the result with {eq}`eq.planck2`, it follows that both expressions for $W_T(\omega)$ are identical for all temperatures only if
+
+By substituting {eq}`eq:laser:boltzmann-population` into {eq}
+`eq:laser:energy-density-equilibrium`, and comparing the result with {eq}
+`eq:laser:planck-blackbody-law`, it follows that both expressions
+for $W_T(\omega)$ are identical for all temperatures only if
 
 ```{math}
-:label: eq.Einstein
+:label: eq:laser:einstein-coefficients-relation
 \begin{align*}
 B_{12}=B_{21}, \;\;\; A_{21} = \frac{\hbar \omega^3}{\pi^2 c^3} B_{21}.
 \end{align*}
@@ -307,7 +323,7 @@ B_{12}=B_{21}, \;\;\; A_{21} = \frac{\hbar \omega^3}{\pi^2 c^3} B_{21}.
 For green light of $\lambda=550$ nm, we have $\omega/c=2\pi/\lambda=2.8560 \times 10^6 \text{m}^{-1}$ and thus
 
 ```{math}
-:label: eq.ratio
+:label: eq:laser:einstein-ratio-green
 \begin{align*}
 \frac{A_{21}}{B_{21}} = 1.5640 \times 10^{-15} \text{J s }\text{m}^{-3}.
 \end{align*}
@@ -318,7 +334,7 @@ Hence the spontaneous and stimulated emission rates are equal if $W(\omega)= 1.5
 For a (narrow) frequency band $\mathrm{d}\omega$ the time-averaged energy density is $W(\omega)\mathrm{d}\omega$ and for a plane wave the energy density is related to the intensity $I$ (i.e. the length of the time-averaged Poynting vector) by:
 
 ```{math}
-:label: eq.WI
+:label: eq:laser:energy-density-intensity
 \begin{align*}
 W(\omega) \mathrm{d}\omega = I /c.
 \end{align*}
@@ -337,25 +353,34 @@ A typical value for the frequency width of a narrow emission line of an ordinary
 If a beam with frequency width $\mathrm{d}\omega$ and energy density $W(\omega)\mathrm{d}\omega$ propagates through a material, the rate of loss of energy is proportional to:
 
 ```{math}
-:label: eq.loss
+:label: eq:laser:loss-rate
 \begin{align*}
 (N_1-N_2)B_{12} W(\omega).
 \end{align*}
 ```
-According to {eq}`eq.equilibrium` this is equal to the spontaneous emission rate. Indeed, the spontaneously emitted light corresponds to a loss of intensity of the beam, because it is emitted in random directions and with random phase.
 
-When $N_2>N_1$, the light is **amplified**. This state is called **population inversion** and it is essential for the operation of the laser. Note that the ratio of the spontaneous and stimulated emission rates is, according to {eq}`eq.Einstein`, proportional to $\omega^3$. Hence for shorter wavelengths such as x-rays, it is much more difficult to make lasers than for visible light.
+According to {eq}`eq:laser:thermal-equilibrium` this is equal to the spontaneous
+emission rate. Indeed, the spontaneously emitted light corresponds to a loss of
+intensity of the beam, because it is emitted in random directions and with
+random phase.
+
+When $N_2>N_1$, the light is **amplified**. This state is called **population
+inversion** and it is essential for the operation of the laser. Note that the
+ratio of the spontaneous and stimulated emission rates is, according to {eq}
+`eq:laser:einstein-coefficients-relation`, proportional to $\omega^3$. Hence for
+shorter wavelengths such as x-rays, it is much more difficult to make lasers
+than for visible light.
 
 ### Population Inversion
 For electromagnetic energy density $W(\omega)$ per unit of frequency interval, the rate equations are
 
 ```{math}
-:label: eq.rate1
+:label: eq:laser:population-rate-upper
 \begin{align*}
 \frac{d N_2}{d t}&= - A_{21} N_2 + (N_1-N_2) B_{12} W(\omega), \end{align*}
 ```
 ```{math}
-:label: eq.rate2
+:label: eq:laser:population-rate-lower
 \begin{align*}
 \\
 \frac{d N_1}{d t}&= A_{21} N_2 - (N_1-N_2) B_{12} W(\omega).\end{align*}
@@ -363,15 +388,18 @@ For electromagnetic energy density $W(\omega)$ per unit of frequency interval, t
 Hence, for $\Delta N=N_2-N_1$:
 
 ```{math}
-:label: eq.rateDN
+:label: eq:laser:population-difference-rate
 \begin{align*}
 \frac{d \Delta N}{dt} = -A_{21} \Delta N - 2 \Delta N B_{12} W(\omega) - A_{21} N,
 \end{align*}
 ```
-where as before: $N=N_1+N_2$ is constant. If initially (i.e. at $t=0$) all atoms are in the lowest state: $\Delta N(t=0)=-N$, then it follows from {eq}`eq.rateDN`:
+
+where as before: $N=N_1+N_2$ is constant. If initially (i.e. at $t=0$) all atoms
+are in the lowest state: $\Delta N(t=0)=-N$, then it follows from {eq}
+`eq:laser:population-difference-rate`:
 
 ```{math}
-:label: eq.DN
+:label: eq:laser:population-difference-time
 \begin{align*}
 \Delta N(t) = -N \left[ \frac{A_{21}}{A_{21} + 2 B_{12} W(\omega)} + \left( 1-\frac{A_{21}}{A_{21}+ 2 B_{12} W(\omega)} \right) e^{ -(A_{21}+2B_{12}W(\omega))t } \right].
 \end{align*}
@@ -406,7 +434,7 @@ The amplifying medium can completely fill the space between the mirrors as at th
 Usually one or both mirrors are convex, as shown in the bottom figure of {numref}`fig.lasercavity`. We state without proof that in that case the distance $L$ between the mirrors and the radii of curvature $R_1$ and $R_2$ of the mirrors has to satisfy
 
 ```{math}
-:label: eq.stab
+:label: eq:laser:cavity-stability-condition
 \begin{align*}
 0 < \left( 1 - \frac{L}{R_1}\right)\left( 1- \frac{L}{R_2}\right) < 1,
 \end{align*}
@@ -472,7 +500,7 @@ There are many types of lasers: gas, solid, liquid, semiconductor, chemical, exc
 The energy to transfer the atom $A$ from the ground state to the excited state is provided by light. The source could be another laser or an incoherent light source, such as a discharge lamp. If $A$ is the atom in the ground state and $A^*$ is the excited atom, we have
 
 ```{math}
-:label: eq.opticalpumP
+:label: eq:laser:optical-pumping
 \begin{align*}
 \hbar \omega_{13} + A \rightarrow A^*,
 \end{align*}
@@ -490,7 +518,7 @@ In the dye laser  the amplifier is a liquid (e.g. Rhodamine6G). It is optically 
 Energetic electrons are used to collide with the atoms of the amplifier, thereby transferring some of their energy:
 
 ```{math}
-:label: eq.electronpump
+:label: eq:laser:electron-collision-pumping
 \begin{align*}
 A+e (\mathcal{E}_3) \rightarrow A^* + e(\mathcal{E}_1),
 \end{align*}
@@ -508,7 +536,7 @@ HeNe laser with spherical external mirrors, a discharge tube with faces at the B
 Let $B^m$ be atom $B$ in an excited, so-called metastable state. This means that $B^m$, although unstable, has a very long relaxation time, i.e. longer than 1 ms or so. If $B^m$ collides with atom $A$, it transfers energy to $A$.
 
 ```{math}
-:label: eq.atomcollission
+:label: eq:laser:atomic-collision-pumping
 \begin{align*}
 B^m + A \rightarrow
 B + A^*,
@@ -524,7 +552,7 @@ Pumping atoms $A$ to state 2 by collision with metastable atoms $B^m$.
 To get metastable atoms, one can for example pump atom B from its ground state 1 to an excited state 3 above state m such that the spontaneous emission rate $3 \rightarrow m$ is large. The pumping can be done electrically or by any other means. If it is done electrically, then we have
 
 ```{math}
-:label: eq.Bm
+:label: eq:laser:metastable-pumping
 \begin{align*}
 B + e(\mathcal{E}_3) \rightarrow B^m + e(\mathcal{E}_1),
 \end{align*}
@@ -539,7 +567,7 @@ The CO$_2$ laser emits at 10 $\mu$m and can achieve huge power.
 In some chemical reactions, a molecule is created in an excited state with population inversion. An example is:
 
 ```{math}
-:label: eq.chemical
+:label: eq:laser:chemical-pumping
 \begin{align*}
 A + B_2 \rightarrow (AB)^* + B.
 \end{align*}

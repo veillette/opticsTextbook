@@ -3,7 +3,9 @@
 1. Make a mindmap of the material covered in this chapter.	For more information about mindmaps, see [Wikipedia](https://en.wikipedia.org/wiki/Mind_map)
 2. Describe the (possible) relevance of fiber optics in your line of work.
 3. Explain why for optical fiber communication lines the wavelength of choice are $1310$ and $1550\text{nm}$.
-4. Show that	the phase factor $(m-1)\pi$ in {eq}`eqEdown` indeed leads to a vanishing $E$-field at the mirrors. Is this the only possible solution?
+4. Show that the phase factor $(m-1)\pi$ in {eq}`eq:fiber:down-propagating-wave`
+   indeed leads to a vanishing $E$-field at the mirrors. Is this the only
+   possible solution?
 5. A plastic fiber has a core refractive index of $n_1=1.49$ and a cladding refractive index of $n_2=1.38$. Its core diameter is $1.00\text{mm}$ and light with a wavelength of $633\text{nm}$ is coupled into the fiber from air ($n_{\text{e}}=1.00$). Calculate
 	- the internal critical angle $\theta_{\text{i,c}}$
 	- the (external) critical angle $\bar{\theta}_{\text{e,c}}$

@@ -29,7 +29,7 @@ Thick lens.
 - **a)** Derive that the transfer matrix between the surfaces through the two vertices of the thick lens is given by:
 
 ```{math}
-:label: eq.LV1V2
+:label: eq:ray:thick-lens-vertex-matrix
 \begin{align*}
 {\cal L}_{V_2V_1} =
 \left( \begin{array}{cc}1 - k_2 \frac{d}{n} & -k_1 -k_2 + k_1 k_2 \frac{d}{n} \\\frac{d}{n} & 1-k_1 \frac{d}{n}
@@ -40,7 +40,7 @@ where $k_1= (n-1)/R_1$ and $k_2= (1-n)/R_2$
 
 
 - **b)** Show that for $d=0$ the transfer matrix is identical to that for a thin lens given by
-  Eq. {eq}`eq.matthinlens`.
+  Eq. {eq}`eq:ray:thin-lens-matrix`.
 
 
 
@@ -68,10 +68,11 @@ where
 \end{align*}
 ```
 
-- **c)** By using the following abbreviation for the matrix {eq}`eq.LV1V2`:
+- **c)** By using the following abbreviation for the matrix {eq}
+  `eq:ray:thick-lens-vertex-matrix`:
 
 ```{math}
-:label: eq.abbrev
+:label: eq:ray:matrix-abbreviation
 \begin{align*}
 \left( \begin{array}{cc}1 - k_2 \frac{d}{n} & -k_1 -k_2 + k_1 k_2 \frac{d}{n} \\\frac{d}{n} & 1-k_1 \frac{d}{n}
 \end{array}\right) = \left(
@@ -82,7 +83,7 @@ where
 derive that:
 
 ```{math}
-:label: eq.MatH1H2b
+:label: eq:ray:principal-plane-matrix-expanded
 \begin{align*}
 {\cal L}_{{\cal H}_2{\cal H}_1} = \left( \begin{array}{cc}a_{11} + T_1 a_{12} & \; a_{12} \\T_2 (a_{11} +T_1 a_{12}) + a_{21} + T_1 a_{22} & \; a_{22} + T_2 a_{12}
 \end{array}\right)

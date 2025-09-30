@@ -12,7 +12,7 @@ where $Q_1$ is a given complex number of which the modulus is proportional to th
 - **a)** Derive that for fixed $z_1$ and for sufficiently large $z>0$ the field can be approximated by
 
 ```{math}
-:label: eq.cohps
+:label: eq:diff:far-field-approximation
 \begin{align*}
 U_{1,far}(x,y,z) = Q_1 \frac{e^{ik z}}{z} e^{i k\frac{x^2+ y^2}{2z}} e^{-i \frac{k x_1 x}{z}}.
 \end{align*}
@@ -25,7 +25,7 @@ $Q_2=Q_1 e^{i \phi}$.
 Show that the field in $(x,y,z)$ for $z>0$ large due to the two point sources can be written as
 
 ```{math}
-:label: eq.cohps_2
+:label: eq:diff:two-point-sources
 \begin{align*}
 U(x,y,z) \approx U_{1,far}(x,y,z)\left( 1 + e^{i\phi} e^{i \frac{k \Delta x x}{z}} \right),
 \end{align*}
@@ -54,19 +54,21 @@ e^{ i \phi}
 ```
 with
 $\phi= k (n-1)d$.
- 
-- **b)** Derive (using {eq}`eq.cohps` or in another way) that the Fraunhofer intensity pattern on a screen along the line $y=0$
+
+- **b)** Derive (using {eq}`eq:diff:far-field-approximation` or in another way)
+  that the Fraunhofer intensity pattern on a screen along the line $y=0$
 at large distance $z$ is given by (up to factors that do not depend on $x/z$).
 
 ```{math}
-:label: eq.2cohps_3
+:label: eq:diff:two-slits-intensity
 \begin{align*}
 I_{far}(x,0,z) = 2 \frac{a^2}{z^2} \left[ \frac{\sin \left(\frac{kax}{2z}\right)}{\frac{kax}{2z}}\right]^2 \left[ 1 + \cos\left( \frac{k b x}{z} +\phi\right)\right].
 \end{align*}
 ```
 In deriving this result you may omit all factors that are independent of $x/z$.
 and $y/z$.
-If you use {eq}`eq.cohps_2` you may take $Q_1=1$, $Q_2=e^{i \phi}$.
+If you use {eq}`eq:diff:two-point-sources` you may
+take $Q_1=1$, $Q_2=e^{i \phi}$.
  
 - **c)** Make a sketch of this intensity pattern, showing the zeros and maxima as function of $\theta=x/z$ when $a=2 \lambda$,
 $b=4 \lambda$ and $\phi=-\pi/2$. Explain where the envelope and the other factor that depends on $x/z$ are caused by.
@@ -94,7 +96,7 @@ can be considered to be emitted by a point source in $(-a,0,0)$, which is the im
 $(x,0,z)$ with smallest $x>0$ where the field is zero is given by
 
 ```{math}
-:label: eq.Lloyd1
+:label: eq:diff:lloyd-mirror-first-zero
 \begin{align*}
 x= \frac{\lambda}{2a} z,
 \end{align*}
