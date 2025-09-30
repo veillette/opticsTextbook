@@ -1,0 +1,23 @@
+{
+  "timestamp": "2025-09-30 12:24:25",
+  "summary": {
+    "critical": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "issues": {
+    "missing_figures": [],
+    "broken_cross_refs": [],
+    "external_link_errors": [],
+    "equation_errors": [],
+    "citation_errors": [],
+    "syntax_errors": [],
+    "other_warnings": [],
+    "build_errors": []
+  },
+  "analysis": {
+    "files_with_most_issues": {},
+    "common_reference_types": {},
+    "error_distribution": {}
+  }
+}
