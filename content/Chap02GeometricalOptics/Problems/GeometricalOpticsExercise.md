@@ -5,7 +5,7 @@
 Consider a layer of thickness $d$ and refractive index $n_2$ which is sandwiched between two half spaces with refractive index $n_1$ and $n_3$ as shown in {numref}`Fig_2_29_Slab`.
 A ray from point $P=(x_P,y_P)$ with $y_P>d$ passes through point $Q=(x_Q,y_Q)$ with $y_Q<0$.
 
-```{figure} ../Images/2_29_slab.png
+```{figure} ../Images/02_16_slab.png
 :name: Fig_2_29_Slab
 A ray through points $P$ and $Q$.
 ```
@@ -49,16 +49,14 @@ the constant is the same for all points $A$ on the interface.
 
 - **c)** Suppose next that $n_2>n_1$. as shown at the right of {numref}`Fig_2_07_Focus-Right`. Show that now, by the same argument as above, the interface is a hyperboloid with $F$ as one of its focal points.
 
-
-```{figure} ../Images/2_07_focus__left.png
+```{figure} ../Images/02_17_focus_left.png
 :name: Fig_2_07_Focus-Right
 (a) Ellipsoid ($n_2<n_1$) and (b) hyperboloid ($n_2>n_1$) to perfectly focus a parallel beam incident from the medium with refractive index $n_2$ into a point in a medium with refractive index $n_1$.
 ```
 
 - **d)** Use the previous results to describe a lens with refractive index $n_2>n_1$ and having hyperboloid surfaces which perfectly images two given points S and P in the ambient medium with refractive index $n_1$.
 
-
-```{figure} ../Images/2_08_perfect_imaging.png
+```{figure} ../Images/02_18_perfect_imaging.png
 :name: Fig_2_08_Perfect_Imaging
 Lens with hyperboloid surfaces for perfect imaging of a pair of points.
 ```
@@ -92,7 +90,7 @@ Derive that
 {eq}`eq.parmir1` is satisfied for points $A$ for which $|AF|=|AD|$,
 and conclude that the mirror is a paraboloid with $f$ as focus and $\Sigma_2$ as diretrix.
 
-```{figure} ../Images/2_09a_paraboloid_mirror_bw.png
+```{figure} ../Images/02_19_paraboloid_mirror_bw.png
 :name: Fig_2_09_Para_Mirror
 A paraboloid mirror.
 ```
@@ -103,7 +101,7 @@ A paraboloid mirror.
 
 A virtual object is at a distance $d_0$ behind a converging lens. The converging incident rays to the left of the lens, that correspond to the virtual object, are shown in {numref}`Fig_2_30_Virtual_Object`. The lens has focal length $f$.
 
-```{figure} ../Images/2_30_virtual_object.png
+```{figure} ../Images/02_20_virtual_object.png
 :name: Fig_2_30_Virtual_Object
 An object is created by incoming rays.
 ```
@@ -119,7 +117,7 @@ is divergent (i.e. negative) with focal distance $f_2<0$. The distance between t
 Let there be an object at distance $2f_1$ in front of lens ${\cal L}_1$, as shown in
 {numref}`Fig_2_32_Two_Thin_Lenses_C_D`.
 
-```{figure} ../Images/2_32_two_thin_lenses_c_d.png
+```{figure} ../Images/02_21_two_thin_lenses_c_d.png
 :name: Fig_2_32_Two_Thin_Lenses_C_D
  Figure corresponding to Exercise "A convergent and divergent lens".
 ```
@@ -148,7 +146,7 @@ Show by construction using the paraxial version of Snell's Law that when the obj
 7. The purpose of this problem is to derive the Lensmaker's formula for a thin lens by applying the imaging formula of a spherical surface twice.
 The image $P$ of a point $S$ as shown in {numref}`Fig_2_33_Spherical_Lens` is computed in two steps. First the intermediate image $P'$ of $S$ by the spherical surface with vertex $V_1$ is computed and then this intermediate image is imaged by the spherical surface with vertex $V_2$.
 
-```{figure} ../Images/2_33_spherical_lens.png
+```{figure} ../Images/02_22_spherical_lens.png
 :name: Fig_2_33_Spherical_Lens
 A spherical lens made of glass of index $n_l$ in a medium of index $n_m$. The point $S$ is imaged in $P$.
 ```
@@ -250,7 +248,7 @@ Consider a system of two lenses $L_1$ and $L_2$ with distance $d$. The left lens
 The situation is as shown in {numref}`Fig_2_34_Two_thin_lenses`. The focal distances of the two thin lenses are $f_1=10$ cm and $f_2=12$ cm and their distance
 $d = 6$ cm. Suppose that the aperture stop is as shown in {numref}`Fig_2_34_Two_thin_lenses`. It is at a distance of $ 1.5$ cm in front of the lens $L_1$ and has a diameter $D_a=5$ cm.
 
-```{figure} ../Images/2_34_two_thin_lenses.png
+```{figure} ../Images/02_23_two_thin_lenses.png
 :name: Fig_2_34_Two_thin_lenses
 Two thin lenses
 ```
