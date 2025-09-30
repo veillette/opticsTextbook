@@ -104,8 +104,9 @@ def extract_labels(md_file):
         
         # Label patterns
         patterns = [
-            r'\(([^)]+)\)=',           # (label)=  
+            r'\(([^)]+)\)=',           # (label)=
             r':name:\s*([^\s\n]+)',    # :name: label
+            r':label:\s*([^\s\n]+)',   # :label: label (for equations)
             r'\{#([^}]+)\}',           # {#label}
         ]
         
