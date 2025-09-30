@@ -35,8 +35,9 @@ But a precise description of the propagation of light is not only important for 
 A quantitative model of the propagation of light is required to predict the properties of propagation and to apply it in sample analyses and lithography.
 ```
 
-
-From electromagnetic theory, we know that in homogeneous matter (i.e. the permittivity is constant), every component $U$ of a time-harmonic electromagnetic field satisfies the scalar Helmholtz equation {eq}`eq.complH`:
+From electromagnetic theory, we know that in homogeneous matter (i.e. the
+permittivity is constant), every component $U$ of a time-harmonic
+electromagnetic field satisfies the scalar Helmholtz {eq}`eq.complH`:
 
 ```{math}
 :label: eq.complH
@@ -91,7 +92,10 @@ U_0(x,y)= \frac{1}{4\pi^2} \int\!\int {\cal F}(U_0)\left(\frac{k_x}{2\pi},\frac{
 ```
 The variables in the Fourier plane: $(\xi,\eta)$ and $(k_x, k_y)$ are called **spatial frequencies**.
 
-Equation {eq}`eq.FkU0` says that we can write $U_0(x,y)=U(x,y,z=0)$ as an integral (a sum) of plane waves[^1] with wave vector $\mathbf{k}=(k_x,k_y, k_z)^T$, each with its own weight (i.e. complex amplitude) ${\cal F}(U_0)\left(\frac{k_x}{2\pi},\frac{k_y}{2\pi}\right)$.
+{eq}`eq.FkU0` says that we can write $U_0(x,y)=U(x,y,z=0)$ as an integral (a
+sum) of plane waves[^1] with wave vector $\mathbf{k}=(k_x,k_y, k_z)^T$, each
+with its own weight (i.e. complex
+amplitude) ${\cal F}(U_0)\left(\frac{k_x}{2\pi},\frac{k_y}{2\pi}\right)$.
 We know how each plane wave with complex amplitude ${\cal F}(U_0)\left(\frac{k_x}{2\pi},\frac{k_y}{2\pi}\right)$ and wave vector $\mathbf{k}=(k_x,k_y,k_z)^T$ propagates over a distance $z>0$
 
 ```{math}
@@ -120,7 +124,7 @@ k_z =\sqrt{\left(\frac{2\pi }{\lambda}\right)^2-k_x^2-k_y^2},
 with $\lambda$ the wavelength of the light as measured **in the material** (hence, $\lambda=\lambda_0/n$, with $\lambda_0$ the wavelength in vacuum).
 The sign in front of the square root in {eq}`eq.kz` could in principle be chosen negative: one would then also obtain a solution of the Helmholtz equation. The choice of the sign of $k_z$ is determined by the direction in which the light propagates, which in turn depends on the location of the sources **and** on the convention chosen for the time dependance. We have to choose here the + sign in front of the square root because the sources are in $z<0$ and the time dependence of time-harmonic fields is (as always in this book) given by $e^{-i\omega t}$ with $\omega >0$.
 
-Eq. {eq}`eq.planewave1` can be written alternatively as
+{eq}`eq.planewave1` can be written alternatively as
 
 ```{math}
 \begin{align*}
@@ -307,7 +311,9 @@ The Fresnel and Fraunhofer approximation are two approximations of the Rayleigh-
 ```
 
 ### Fresnel Approximation
-We assume that $z$ in Eq. {eq}`eq.rs` is so large that in the denominator we can approximate $r$ by $z$:
+
+We assume that $z$ in {eq}`eq.rs` is so large that in the denominator we can
+approximate $r$ by $z$:
 
 ```{math}
 :label: eq.fesnel1
@@ -532,7 +538,7 @@ and has maxima on lines
 for integer $m$.
 ```{figure} Images/07_10_point_source_light.png
 :name: Fig_6_09_2_point_source
-Intensity pattern of two mutually coherent point sources of equal strength and emitting in phase at the wavelength $\lambda =600$&nbsp;nm from Eq.&nbsp;{eq}`eq.Itot`. The distance between the point source is 200&nbsp;nm. On the top the cross-section along along the $z$-axis is shown.
+Intensity pattern of two mutually coherent point sources of equal strength and emitting in phase at the wavelength $\lambda =600$&nbsp;nm from {eq}`eq.Itot`. The distance between the point source is 200&nbsp;nm. On the top the cross-section along along the $z$-axis is shown.
 ```
 
 

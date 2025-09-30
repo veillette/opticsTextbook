@@ -40,7 +40,7 @@ where $k_1= (n-1)/R_1$ and $k_2= (1-n)/R_2$
 
 
 - **b)** Show that for $d=0$ the transfer matrix is identical to that for a thin lens given by
-  Eq. {eq}`eq:ray:thin-lens-matrix`.
+  {eq}`eq:ray:thin-lens-matrix`.
 
 
 

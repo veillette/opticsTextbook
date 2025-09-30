@@ -315,7 +315,10 @@ Then
 
 We now compute the intensity of polychromatic light.
 The instantaneous energy flux is (as for monochromatic light) proportional to the square of the instantaneous real field:
-$\mathcal{U}(\mathbf{r},t)^2$. We average the instantaneous intensity over the integration time $T$ of common detectors which, as stated before, is very long compared to the period at the center frequency $2\pi/\mathbf{a}r{\omega}$ of the field. Using Eq. {eq}`eq.averageII` and
+$\mathcal{U}(\mathbf{r},t)^2$. We average the instantaneous intensity over the
+integration time $T$ of common detectors which, as stated before, is very long
+compared to the period at the center frequency $2\pi/\mathbf{a}r{\omega}$ of the
+field. Using {eq}`eq.averageII` and
 
 ```{math}
 \begin{align*}
@@ -347,7 +350,11 @@ In contrast, $|U(\mathbf{r},t)|^2=U(\mathbf{r},t)^*U(\mathbf{r},t)$ has a DC-com
 
 
 **Remark:** In contrast to the time-harmonic case, the long time average of polychromatic light depends on the time $t$ at which the average is taken. However, we assume in this chapter that the fields are omitted by sources that are **stationary**. The property of stationarity implies that the average over the time interval of long length $T$ does not depend on the time that the average is taken. Many light sources, in particular conventional lasers, are stationary. (However, a laser source which emits short high-power pulses cannot be considered as a stationary source).
-We furthermore assume that the fields are **ergodic**, which means that taking the time-average over a long time interval amounts to the same as taking the average over the ensemble of possible fields. It can be shown that this property implies that the limit $T\rightarrow \infty$ in Eq. {eq}`eq.averageII` indeed exists{cite:p}`mandel_wolf`.
+We furthermore assume that the fields are **ergodic**, which means that taking
+the time-average over a long time interval amounts to the same as taking the
+average over the ensemble of possible fields. It can be shown that this property
+implies that the limit $T\rightarrow \infty$ in {eq}`eq.averageII` indeed
+exists{cite:p}`mandel_wolf`.
 
 
 
@@ -777,7 +784,9 @@ To show this we consider two mutually incoherent point sources $S_1$ and $S_2$ i
 \Gamma_{S_1S_1}(\tau)&=\Gamma_{S_2S_2}(\tau)= \Gamma_0(\tau),\end{align*}
 ```
 where $\Gamma_0$ is the self-coherence which we assume to be the same for both point sources. $\Gamma_0(\tau)$ has width given by the coherence time $\Delta \tau_c$ of the source and on average decreases with $\tau$ (although not always monotonically).
-Eq. {eq}`eq.spatincoh0a` expresses the fact that two point sources are mutually incoherent. Using that the long-time average does not depend on the origin of time which was based on the assumption that the source is stationary, we find:
+{eq}`eq.spatincoh0a` expresses the fact that two point sources are mutually
+incoherent. Using that the long-time average does not depend on the origin of
+time which was based on the assumption that the source is stationary, we find:
 
 ```{math}
 :label: eq.Gamma0cc
@@ -1244,7 +1253,10 @@ With a similar derivation as for {eq}`eq.lambdafree`
 \end{align*}
 ```
 
-A Fabry-Perot can be used as a high resolution spectrometer. Eq.&nbsp;{eq}`eq.resolution2` implies that the resolution increases for higher order $m$. However, $M $ can not be made arbitrary large because increasing $m$ means according to {eq}`eq.freewavel` that the free spectral range decreases.
+A Fabry-Perot can be used as a high resolution spectrometer. {eq}
+`eq.resolution2` implies that the resolution increases for higher order $m$.
+However, $M $ can not be made arbitrary large because increasing $m$ means
+according to {eq}`eq.freewavel` that the free spectral range decreases.
 The ratio
 
 $$

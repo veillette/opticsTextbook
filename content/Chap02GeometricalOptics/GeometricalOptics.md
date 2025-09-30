@@ -194,8 +194,8 @@ The travel time must be minimum, hence there must hold
 \end{align*}
 ```
 
-where the travel time has been multiplied by the speed of light in vacuum. Eq.
-{eq}`eq:geo:refraction-minimum-condition` implies
+where the travel time has been multiplied by the speed of light in vacuum. {eq}
+`eq:geo:refraction-minimum-condition` implies
 
 ```{math}
 :label: eq:geo:snell-law

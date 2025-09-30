@@ -74,7 +74,7 @@ Using elementary geometry and the relation $\cos(2\bar{\theta})=1-2\sin^2(\bar{\
 
 We thus find that only certain bouncing angles $\bar{\theta}_m$ are allowed by
 the self-consistency condition and these are referred to as the $m$ modes of
-propagation. From Eq. {eq}`eq:fiber:self-consistency-condition` we can draw the
+propagation. From {eq}`eq:fiber:self-consistency-condition` we can draw the
 important conclusion that the number of modes in the waveguide is limited,
 because $\max(\sin(\bar{\theta}_m))=1$. This implies that:
 - the maximum number of modes $M$ possibly propagating through the waveguide equals
@@ -122,7 +122,7 @@ u_m(y)=
 
 The first few of these distributions are plotted in {numref}
 `figFiberMirrorModes`, from which it is observed that $m$ corresponds to the
-amount of maxima in the distribution. The pre-factors $\sqrt{2/d}$ in Eq. {eq}
+amount of maxima in the distribution. The pre-factors $\sqrt{2/d}$ in {eq}
 `eq:fiber:mode-distributions` are chosen such that the functions are
 orthonormal, meaning
 ```{math}
@@ -207,7 +207,7 @@ present simultaneously. As discussed in {ref}`secFiberModes`, light rays bounce
 through a fiber or any other waveguide. To introduce modal dispersion we refer
 back to the planar mirror waveguide depicted in {numref}`figFiberModesIntro`.
 Since the rays of higher-order modes are at larger angles $\bar{\theta}_m$ (see
-Eq. {eq}`eq:fiber:self-consistency-condition`) than lower-order modes, the
+{eq}`eq:fiber:self-consistency-condition`) than lower-order modes, the
 higher-order modes have a longer path length. This means that the effective
 propagation velocity $v_z$, the velocity at which the wave travels in $z$
 -direction, decreases with increasing mode number. For the planar mirror
@@ -218,7 +218,7 @@ v_{z,m}=c\cos(\bar{\theta}_m)=c\sqrt{1-\left(m\dfrac{\lambda_0}{2d}\right)^2}
 \end{align*}
 ```
 
-Here we used that $\cos^2(\theta)+\sin^2(\theta)=1$ along with Eq. {eq}
+Here we used that $\cos^2(\theta)+\sin^2(\theta)=1$ along with {eq}
 `eq:fiber:self-consistency-condition`.
 
 Now consider an infinitely short pulse that consists of light in the $i^{\text{th}}$ and the $j^{\text{th}}$ mode only, with $i<j$. For the sake of the argument, we still presume that the light is monochromatic, although in reality this is not the case (see below). Then these modes travel in $z$-direction with a velocity difference
@@ -238,7 +238,7 @@ which is depicted in {numref}`figFiberMirrorDispersion` for several combinations
 
 ```{figure} Images/10_06_mirror_dispersion.png
 :name: figFiberMirrorDispersion
-Modal dispersion in the mirror waveguide, see Eq. {eq}`eq:fiber:mirror-waveguide-dispersion`
+Modal dispersion in the mirror waveguide, see {eq}`eq:fiber:mirror-waveguide-dispersion`
 ```
 
 In reality, light pulses in multimode waveguides contain many modes and are not infinitely short. However, the same ideas hold: due to modal dispersion the pulse broadens, thereby limiting the rate of information transfer. This is also true for optical fibers. In this case one can calculate for the time delay between the fastest mode (the $(m,l)=(1,0)$ mode) and the slowest mode (mode at the critical angle) that
@@ -260,10 +260,10 @@ Now we consider a signal pulse propagating through a medium. The pulse has a cen
 ```
 
 Hence all wavelength components present in the pulse travel at slightly
-different velocity and dispersion is the result. From Eq. {eq}
+different velocity and dispersion is the result. From {eq}
 `eq:fiber:group-refractive-index` we see, however, that the effect only occurs
 whenever $\mathrm{d}^2n/\mathrm{d}\lambda^2\neq 0$ (NB: if $n$ is constant or of
-the form $n=a\lambda+b$, Eq. {eq}`eq:fiber:group-refractive-index` still yields
+the form $n=a\lambda+b$, {eq}`eq:fiber:group-refractive-index` still yields
 a constant group refractive index). This is the case for SiO$_2$ as can be
 observed in {numref}`figFiberDispersion`(c).
 
@@ -292,7 +292,7 @@ However, in practice often the dispersion is reported as
 in units of $\text{ps}/(\text{km} \cdot \text{nm})$. That is, the increase in pulse width (in $\text{ps}$) per $\text{km}$ of fiber with the source's spectral width in $\text{nm}$. Typical values of this parameter are $10$ to $20\text{ps}/(\text{km}\cdot \text{nm})$.
 
 A second effect of the spectral width of light pulses is that they disperse even
-if light propagates in a single mode. As observed from Eq. {eq}
+if light propagates in a single mode. As observed from {eq}
 `eq:fiber:self-consistency-condition`, the angle $\bar{\theta}_m$ not only
 depends on the mode $m$, but also on the wavelength of the light. Therefore, all
 wavelength components of the light will propagate at a slightly
@@ -317,7 +317,7 @@ Material and waveguide dispersion for a SiO$_2$ SMF. Taking the sum of both effe
 Dispersion effects may cancel each other or engineered, such that dispersionless
 fibers can be constructed. E.g., for SMFs, in which only material and waveguide
 dispersion play a role, the total dispersion is given
-as $D=D^{\text{mat}}+D^{\text{wav}}$. Notice from Eqs. {eq}
+as $D=D^{\text{mat}}+D^{\text{wav}}$. Notice from {eq}
 `eq:fiber:material-dispersion` and {eq}`eq:fiber:waveguide-dispersion`
 that $D^{\text{mat}}$ and $D^{\text{wav}}$ have an opposite sign and if we plot
 both expressions using SiO$_2$ as fiber material, see {numref}
@@ -387,7 +387,7 @@ aligned properly (they are shifted with respect to each other, placed under an
 angle or there is a gap in between the fibers), when a higher-NA fiber is
 coupled to a fiber with lower NA, or when the core size of the two fibers is
 different. In case of a mismatch in NA, the lower-NA fiber will support less
-modes (see Eq. {eq}`eq:fiber:v-number`) and the higher order modes will be lost.
+modes (see {eq}`eq:fiber:v-number`) and the higher order modes will be lost.
 Apart from these issues with connecting fibers, internal reflections between
 different fiber cores cause losses. These reflections occur whenever the index
 of refraction changes. For each type of coupling loss, the loss factor can be
@@ -471,7 +471,7 @@ where $f_{\text{coll}}$ is the focal length of the collimating
 lens. $w_{\text{coll}}$ is in the order of $1\text{mm}$ for a typical fiber NA
 of $0.1$ and an $f_{\text{coll}}=1\text{cm}$. On the other hand, it should be
 realized that upon coupling light into a fiber from a collimated beam, the (
-incoming) beam width should be smaller the value resulting from Eq. {eq}
+incoming) beam width should be smaller the value resulting from {eq}
 `eq:fiber:collimator-beam-width`. If the beam is broader, some light will not
 couple into the fiber and is therefore lost. This results
 from $\bar{\theta}_{\text{e,c}}$ (see {numref}`figFiberTIR`) being exceeded by

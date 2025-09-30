@@ -518,7 +518,7 @@ Rotation of horizontally polarized light over an angle $\alpha$ using a half-wav
 ### Full-Wave Plates
 
 A full-wave plate introduces a phase difference of $2\pi$, which is the same as introducing no phase difference between the two field components.
-So what can possibly be an application for a full-wave plate? We recall from Eq.
+So what can possibly be an application for a full-wave plate? We recall from
 {eq}`eq:pol:waveplate-phase-shift` that the phase difference is $2\pi$ only for
 a particular wavelength. If we send through linearly (say vertically) polarized
 light of other wavelengths, these will become elliptically polarized, while the

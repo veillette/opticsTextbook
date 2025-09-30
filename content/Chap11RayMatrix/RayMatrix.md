@@ -161,8 +161,8 @@ Now
 \varphi\approx \frac{y_1}{R}
 ```
 
-In the situation drawn in {numref}`Fig_2_15_Mirror`, Eq.
-{eq}`eq:ray:angle-definition` implies that both $\alpha_2$ and $\alpha _1$ are
+In the situation drawn in {numref}`Fig_2_15_Mirror`, {eq}
+`eq:ray:angle-definition` implies that both $\alpha_2$ and $\alpha _1$ are
 positive. By choosing the refractive index negative after reflection,
 we conclude from {eq}`eq:ray:mirror-angle-relation` and {eq}
 `eq:ray:mirror-small-angle`:
@@ -174,7 +174,7 @@ n_2\alpha_2 = -n \alpha_2 = n \alpha_1 - \frac{2n}{R} y_1 = n_1\alpha_1 - \frac{
 \end{align*}
 ```
 
-This proves Eq. {eq}`eq:ray:spherical-mirror-matrix`.
+This proves {eq}`eq:ray:spherical-mirror-matrix`.
 
 
 We now consider the ray matrix when a ray propagates from a plane $z_1$ to a plane $z_2$ through a medium with refractive index $n$.
@@ -595,12 +595,12 @@ Examples of real and virtual object and image points for a positive and a negati
 ```{figure} Images/11_07_positive_lens.png
 :name: Fig_2_18_Positive_Lens
 Real and virtual objects and images for a convergent thin lens with the same refractive index left and right of the lens, i.e. $-f_o=f_i>0$. In (a) the object is real with $s_o<f_o$ and the image is real as well ($s_i>0$). In (b) the object is between the front focal point and the lens: $f_o< s_o<0$. Then the rays from the object are too divergent for the lens to make them convergent in image space and hence the image is virtual: $s_i<0$. In \(c\) there is a cone of converging rays incident on the lens from the left which, in the absence of the lens, would converge to point $S$ behind the lens. Therefore $S$ is a virtual object ($s_0>0$). The image is real and can be constructed with the two rays shown.
-		In (d) $s_i$ is shown as function of $s_o$ for a convergent lens (see Eq. {eq}`eq:ray:lensmaker-formula`).
+		In (d) $s_i$ is shown as function of $s_o$ for a convergent lens (see {eq}`eq:ray:lensmaker-formula`).
 ```
 
 ```{figure} Images/11_08_negative_lens.png
 :name: Fig_2_19_Negative_Lens
-Real and virtual objects and images for a divergent thin lens with the same refractive index to the left and right of the lens, i.e. $-f_o=f_i<0$. In (a) the object is real, i.e. $s_o<0$. The diverging lens makes the cone of rays from the object more divergent so that the image is virtual: $s_i<0$. When the object is virtual, there is a cone of converging rays incident from the left which after extension to the right of the lens (as if the lens is not present) intersect in the virtual object S ($s_o>0$). It depends on how strong the convergence is whether the diverging lens turns this cone into converging rays or whether the rays keep diverging. In (b) $0<s_o<-f_i$, and the image is real. In c) $s_o>-f_i$ and the image is virtual ($s_i<0$). In (d) $s_i$ is shown as function of $s_o$ for a divergent lens ($f_i<0$ (see Eq. {eq}`eq:ray:lensmaker-formula`).
+Real and virtual objects and images for a divergent thin lens with the same refractive index to the left and right of the lens, i.e. $-f_o=f_i<0$. In (a) the object is real, i.e. $s_o<0$. The diverging lens makes the cone of rays from the object more divergent so that the image is virtual: $s_i<0$. When the object is virtual, there is a cone of converging rays incident from the left which after extension to the right of the lens (as if the lens is not present) intersect in the virtual object S ($s_o>0$). It depends on how strong the convergence is whether the diverging lens turns this cone into converging rays or whether the rays keep diverging. In (b) $0<s_o<-f_i$, and the image is real. In c) $s_o>-f_i$ and the image is virtual ($s_i<0$). In (d) $s_i$ is shown as function of $s_o$ for a divergent lens ($f_i<0$ (see {eq}`eq:ray:lensmaker-formula`).
 ```
 
 
