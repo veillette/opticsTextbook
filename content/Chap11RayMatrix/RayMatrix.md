@@ -151,7 +151,7 @@ $$
 \varphi\approx \frac{y_1}{R}
 $$ (eq.varphi3)
 
-In the situation drawn in {numref}`Fig_2_15_Mirror`,
+In the situation drawn in {numref}`Fig_2_15_Mirror`, Eq.
 {eq}`eq.defalpha` implies that both $\alpha_2$ and $\alpha _1$ are positive. By choosing the refractive index negative after reflection,
 we conclude from {eq}`eq.refl3` and {eq}`eq.varphi3`:
 

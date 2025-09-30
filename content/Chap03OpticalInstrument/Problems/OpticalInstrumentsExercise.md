@@ -55,7 +55,6 @@ Use a negative lens with focal distance $f<0$ at a distance $d$ in front of the 
 
 $$
 d=9 |f|,
-
 $$
 the angular field of view is increased by a factor 10.
 

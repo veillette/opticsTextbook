@@ -156,7 +156,6 @@ A spherical lens made of glass of index $n_l$ in a medium of index $n_m$. The po
 
 $$
 -\frac{n_m}{s_{o1}}+\frac{n_l}{s_{i1}} =\frac{n_l-n_m}{R_1},
-
 $$
 where $s_{o1}$ is the $z$-coordinate of $S$ with respect to the origin in $V$.
 
@@ -164,14 +163,12 @@ where $s_{o1}$ is the $z$-coordinate of $S$ with respect to the origin in $V$.
 
 $$
 s_{o2}= s_{i1}-d.
-
 $$
 
 - **c)** Show that the $z$-coordinate $s_{i2}$ of P with respect to the origin at $V_2$ satisfies
 
 $$
 -\frac{n_l}{s_{o2}}+\frac{n_m}{s_{i2}}=\frac{n_m-n_l}{R_2}.
-
 $$
 
 - **d)** Add the results of a) and c) to derive
@@ -179,7 +176,6 @@ $$
 $$
 -\frac{n_m}{s_{o1}} + \frac{n_m}{s_{i2}}
 = (n_l-n_m)\left( \frac{1}{R_1}-\frac{1}{R_2}\right) + \frac{n_l d}{(s_{i1}-d) s_{i1}}.
-
 $$
 
 

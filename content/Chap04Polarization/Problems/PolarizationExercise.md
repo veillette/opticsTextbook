@@ -4,7 +4,7 @@
 
 ```{math}
 \begin{align*}
-\mathbf{E}(z,t)= A \sin\left(k z-\omega t + \pi/2\right) \hat**{x**}+ A \sin\left(k z-\omega t \right) \hat**{y**}
+\mathbf{E}(z,t)= A \sin\left(k z-\omega t + \pi/2\right)  \widehat{\mathbf{x}}+ A \sin\left(k z-\omega t \right)  \widehat{\mathbf{y}}
 \end{align*}
 ```
 where $A$ is a positive real number.
@@ -33,7 +33,6 @@ Consider a light beam that is partially linear polarized. Show that the degree o
 
 $$
 \frac{I_{max}-I_{min}}{I_{max}+I_{min}}.
-
 $$
 where $I_{max}$ and $I_{min}$ are the maximum and minimum of the light transmitted through a linear polarizer when it is turned through 360 degrees.
 
@@ -93,7 +92,6 @@ Verify for each of the following matrices whether they correspond to a linear po
 $$
 \left( \begin{array}{cc}-1 & 1 \\-\frac{2}{5} + i \frac{2}{5} & -\frac{1}{5}+i\frac{4}{5}
 \end{array}\right).
-
 $$
 
 - **b)**
@@ -109,14 +107,12 @@ $$
 $$
 \left(\begin{array}{cc}1 & 0 \\0 &3
 \end{array}\right)
-
 $$
 - Determine the Jones matrix for the case of a wave plate of thickness equal to the wavelength, with fast axis parallel to the vector
 
 $$
 \left( \begin{array}{c}1 \\-1
 \end{array}\right),
-
 $$
 and with refractive indices $n_1=1.5$ and $n_2=2$.
 
