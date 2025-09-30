@@ -220,7 +220,6 @@ To understand coherence and incoherence, it is helpful to use this model for the
 
 $$
 \sum_{j} \int_0^{\tau_0} \cos(\omega t) \cos(\omega t + \phi_j) \text{d} t,
-
 $$
 where the sum is over roughly one hundred random phase jumps during the total duration of the wave trains. The random phase jumps lead to cancellation of the integrals and hence the interference term vanishes.
 We conclude that over the integration time of typical detectors
@@ -1068,7 +1067,6 @@ where,
 
 $$
 k_z^{(2)}= k_0 n_2 \cos\theta_2,
-
 $$
 is the $z$-component of the wave vector in medium 2 of the wave that propagates in the postive $z$-direction.
 

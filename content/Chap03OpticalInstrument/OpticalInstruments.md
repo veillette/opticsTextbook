@@ -216,7 +216,6 @@ Since $s_i<0$ and $f_o<0$ we have,
 
 $$
 \frac{y_i}{y_o} = \frac{s_i}{s_o} = 1 + \frac{s_i}{f_o},
-
 $$
 where we used the lens equation for the magnifying glass. We have $s_i = -|s_i|=-(L-\mathcal{l})$, where
 $\mathcal{l}$ is the distance between the magnifying glass and the eye. Hence,

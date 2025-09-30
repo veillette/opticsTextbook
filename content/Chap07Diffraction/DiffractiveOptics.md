@@ -652,7 +652,6 @@ where for a slit with width $a$ we have according to {eq}`eq.Fspleet`:
 
 $$
 {\cal F}(W_{slit})(\xi) = a \frac{\sin(\pi a \xi)}{\pi a \xi}.
-
 $$
 There must obviously hold $a< p$.
 Using
@@ -750,7 +749,6 @@ The property {eq}`eq.orderm` that the diffraction orders $ m\neq 0$ depend on wa
 $$
 m\frac{\lambda_2}{p} > m\frac{\lambda_1}{p} + \Delta \theta =
 m\frac{\lambda_1}{p } + \frac{\lambda_1}{M p},
-
 $$
 which implies with $\Delta \lambda=\lambda_2-\lambda_1$ and $\lambda=\lambda_1$ that
 
@@ -972,7 +970,6 @@ is given by
 
 $$
 \mathcal{F}\{U_0\}\left(\frac{k_x}{2\pi},\frac{k_y}{2\pi},z\right)=\delta\left(\frac{k_x-k_{0,x}}{2\pi}\right)\delta\left(\frac{k_y-k_{0,y}}{2\pi}\right),
-
 $$
 which is indeed a shifted delta peak (i.e. a shifted focal spot).
 
@@ -1036,7 +1033,6 @@ A general object field $U_o(x,y) $ can be considered a superposition of point ob
 
 $$
 \text{PSF}(x-x_i, y-y_i),
-
 $$
 where $(x_i, y_i)$ are the transverse coordinates of the image point according to Gaussian geometrical optics.
 The total image field is obtained by summing (integrating) over these PSFs, weighted by the field at the object points:
