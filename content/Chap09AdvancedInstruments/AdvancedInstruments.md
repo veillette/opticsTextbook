@@ -54,7 +54,6 @@ Schematic of a confocal microscope and its principle
 ```
 
 
-
 ```{figure} Images/09_02_confocal_1euro.png
 :name: Fig_8_02_Confocal_euro
 Partial surface profile of a 1 Euro coin, measured with a Nipkow disk confocal microscope. *Source Wikipedia*
@@ -71,14 +70,11 @@ In this case, fluorescent molecules, such at those of the GFP (Green Fluorescenc
 Endothelial cells under the microscope using fluorescence microscopy. The different colors enlighten different GFP.
 ```
 
-	
 
 ## Scanning Near-Field Optical Microscope
 
 As we have discussed earlier, when an object is illuminated,
 high spatial frequency components of the transmitted and reflected near field which contains information about sub-wavelength features cannot reach the detector in far field microscopy, because the waves corresponding to high spatial frequencies are evanescent. This implies that features smaller than the wavelength cannot be detected using conventional far field microscopy. By putting a high refractive index fluid such as oil between the sample and the objective lens, the effective wavelength is reduced by the refractive index and hence the resolution is improved. This is called immersion microscopy.
-
-
 
 
 But to achieve superresolution, i.e. the detection of features that are substantially below the wavelength, it is necessary that the information contained in at least part of the evanescent waves is in some way detected. This is done in a SNOM (**Scanning Near-Field Optical Microscope**). There are two methods to achieve superresolution. The first method is illustrated at the left of {numref}`Fig_8_04_SNOM`. The sample is illuminated and the scattered field is detected using a sub-wavelength tip on a fiber that directs the locally scattered light to a detector. The sample is laterally scanned by the sub-wavelength tip, which is almost in contact with the sample and therefore is sensitive to sub-wavelength details in the scattered field.
@@ -101,8 +97,6 @@ Because in SNOM the fiber is very close to the sample, either to illuminate the 
 :name: Fig_8_05_NSOM
 Left: Topographic AFM image of a Photonics Band Gap (PBG) structure, imaged with a 150 nm AFM/NSOM cantilevered probe. Right: NSOM image of the PBG structure using 532 nm laser wavelength.
 ```
-
-
 
 
 [^1]: Phys Rev. Lett. **85**, 3966, 2000

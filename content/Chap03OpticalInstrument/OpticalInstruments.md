@@ -137,8 +137,6 @@ A positive lens of focal length $f_1$=10&nbsp;cm air has a dioptric power $\math
 The eye can suffer from imperfections as seen in {numref}`Fig_3_07_eye_correction`. We discuss the most common imperfections and their solutions.
 
 
-
-
 **a. Myopia or nearsightedness**.
 A myopic eye has too short focal distances (has too high power). Distant objects
 are focused in front of the retina by the relaxed eye. The far point is thus not
@@ -172,8 +170,6 @@ taken out, because it is not refracted by this lens.
 Contact lenses are very close to the eye lens and hence the total power of the eye with a contact lens is simply the sum of the power of the eye and the contact lens.
 
 
-
-
 **b. Hyperopia or farsightedness**.
 In this case a distant object is imaged by the relaxed eye behind the retina, i.e. the back focal distance of the relaxed eye is larger than the depth of the eye. Close objects can not be imaged on the retina, hence the near point is relatively far from the cornea. In order to bend the rays more, a positive lens is placed in front of the eye. Suppose that a hyperopic eye has near point at distance 125 cm. For an object at the normal near point $s_o=-25$ cm to have virtual image at $s_i=-125$ cm, so that it can be seen, the focal length of the positive lens must satisfy
 
@@ -190,13 +186,8 @@ Correction of farsighted (left) and nearsighted (right) eye (adapted from [Wikim
 ```
 
 
-
-
-
 **c. Presbyopia.**
 This is the lack of accommodation of the eye as is common in people over 40. It results in an increase in the distance between the near point and the cornea. This defect affects all images. Presbyopia is usually corrected by glasses with progressive correction, the upper part of glass used for distance vision and the lower part for near vision.
-
-
 
 
 **d. Astigmatism.**
@@ -205,7 +196,6 @@ It is attributed to a lack of symmetry of revolution of the cornea. This is comp
 
 ### New Correction Technique
 In recent years, to correct eye defects such as myopia and astigmatism, technology has been developed to change the local curvatures of the surface of the cornea using an excimer laser. The laser is computer-controlled and causes photo-ablation in parts of the cornea.
-
 
 
 ## Magnifying Glasses
@@ -344,7 +334,7 @@ It is defined by:
 \end{align*}
 ```
 with $n_{im}$ the refractive index of the immersing medium, usually air, but it could be water or oil, and $\theta_{max}$ the half-angle of the maximum cone of light accepted by the lens. The numerical aperture is the second number etched in the barrel of the objective. It ranges from 0.07 (low-power objectives) to 1.4 for high-power objectives. Note that it depends on the object distance. In Chapter 7 it will be explained that $\text{NA}$ is, for a given object distance, proportional to the resolving power which is the minimum transverse distance between two object points that can be resolved in the image.
- 
+
 
 ## The Telescope
 
@@ -352,7 +342,7 @@ with $n_{im}$ the refractive index of the immersing medium, usually air, but it 
 A telescope enlarges the retinal image of a distant object. Like a compound microscope, it is also composed of an objective and an eyepiece as seen in {numref}`Fig_3_12_Kepler_Telescope`.
 ```{figure} Images/03_13_kepler_telescope.png
 :name: Fig_3_12_Kepler_Telescope
-Keplerian astronomical telescope. 
+Keplerian astronomical telescope.
 ```
 
 The object in this figure is at a large but finite distance; therefore, an image is formed by the objective just after its second focal point. The eyepiece makes a virtual magnified image, to be viewed with a relaxed eye. Therefore, the intermediary image of the objective must be within the focal length $f_i^e$ from the eyepiece. The final image is inverted.

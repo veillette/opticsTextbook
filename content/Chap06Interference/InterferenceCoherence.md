@@ -74,9 +74,9 @@ Adding gives
 ```{math}
 :label: eq.U1plusU2
 \begin{align*}
-\mathcal{U}_1(t)+\mathcal{U}_2(t)&= \text{Re}[e^{-i\omega t}(1+e^{-i\varphi})] 
-&=\text{Re}[e^{-i\omega t}e^{-i\varphi/2}(e^{i\varphi/2}+e^{-i\varphi/2})] 
-&=\text{Re}[e^{-i\omega t}e^{-i\varphi/2}2\cos(\varphi/2)] 
+\mathcal{U}_1(t)+\mathcal{U}_2(t)&= \text{Re}[e^{-i\omega t}(1+e^{-i\varphi})]
+&=\text{Re}[e^{-i\omega t}e^{-i\varphi/2}(e^{i\varphi/2}+e^{-i\varphi/2})]
+&=\text{Re}[e^{-i\omega t}e^{-i\varphi/2}2\cos(\varphi/2)]
 &= 2\cos(\varphi/2)\cos(\omega t+\varphi/2).
 \end{align*}
 ```
@@ -98,8 +98,8 @@ Indeed for {eq}`eq.U1plusU2` we get
 
 ```{math}
 \begin{align*}
-I &= \braket{(\mathcal{U}_1(t)+\mathcal{U}_2(t))^2} 
-&=4\cos^2(\varphi/2) \braket{\cos^2(\omega t+\varphi/2)} 
+I &= \braket{(\mathcal{U}_1(t)+\mathcal{U}_2(t))^2}
+&=4\cos^2(\varphi/2) \braket{\cos^2(\omega t+\varphi/2)}
 &= 2(1+\cos\phi) \braket{\cos^2(\omega t+\varphi/2)}  \\
 &= 1 +\cos(\varphi)
 \end{align*}
@@ -141,11 +141,7 @@ I = \frac{1}{2}|U_1 + U_2|^2.
 To see why this works, recall the time averaging formula and choose $A=B=U_1+U_2$.
 
 
-
-
 **Remark.** To shorten the formulae, we will omit in this chapter the factor $1/2$ in front of the time-averaged intensity.
-
-
 
 
 Hence we define $I_1=|U_1|^2$ and $I_2=|U_2|^2$, and we then find for the time-averaged intensity of the sum of $U_1$ and $U_2$:
@@ -312,7 +308,6 @@ Then
 **Remark**: The complex field $U(\mathbf{r},t)$ contains now the time dependence in contrast to the notation used for a time-harmonic (i.e. single frequency) field introduced in Chapter 2, where the time-dependent $e^{-i\omega t}$ was a separate factor.
 
 
-
 We now compute the intensity of polychromatic light.
 The instantaneous energy flux is (as for monochromatic light) proportional to the square of the instantaneous real field:
 $\mathcal{U}(\mathbf{r},t)^2$. We average the instantaneous intensity over the
@@ -347,16 +342,12 @@ where the averages of $U(\mathbf{r},t)^2$ and $(U(\mathbf{r},t)^*)^2$ are zero b
 In contrast, $|U(\mathbf{r},t)|^2=U(\mathbf{r},t)^*U(\mathbf{r},t)$ has a DC-component which does not average to zero.
 
 
-
-
 **Remark:** In contrast to the time-harmonic case, the long time average of polychromatic light depends on the time $t$ at which the average is taken. However, we assume in this chapter that the fields are omitted by sources that are **stationary**. The property of stationarity implies that the average over the time interval of long length $T$ does not depend on the time that the average is taken. Many light sources, in particular conventional lasers, are stationary. (However, a laser source which emits short high-power pulses cannot be considered as a stationary source).
 We furthermore assume that the fields are **ergodic**, which means that taking
 the time-average over a long time interval amounts to the same as taking the
 average over the ensemble of possible fields. It can be shown that this property
 implies that the limit $T\rightarrow \infty$ in {eq}`eq.averageII` indeed
 exists{cite:p}`mandel_wolf`.
-
-
 
 
 We use for the intensity again the expression without the factor $1/2$ in front, i.e.
@@ -442,7 +433,8 @@ I(\tau)=2 I_0 \left\{1 +\text{Re}\left[\gamma(\tau)
 \right]\right\},
 \end{align*}
 ```
-We consider two special cases. 
+
+We consider two special cases.
 
 1. Suppose $U(t)$ is a monochromatic wave
 
@@ -525,9 +517,12 @@ It is interesting to note that the envelope, and hence $\gamma(\tau)$, vanishes 
 If more frequencies are added, the envelope function is not a cosine function but on average decreases with $\tau$. The typical value of $\tau$ below which interferences are observed is roughly equal to half the first zero of the envelope function. This value is called the **coherence time** $ \Delta \tau_c$.
 We conclude with some further interpretations of the degree of self-coherence $\gamma(\tau)$.
 
-**Remarks.** 
+**Remarks.**
 
-1. In stochastic signal analysis $\Gamma(\tau)=\braket{U(t)U(t-\tau)^*}$ is called the **autocorrelation** of $U(t)$. Informally, one can interpret the autocorrelation function as the ability to predict the field $U$ at time $t$ given the field at time $t-\tau$. 
+1. In stochastic signal analysis $\Gamma(\tau)=\braket{U(t)U(t-\tau)^*}$ is
+   called the **autocorrelation** of $U(t)$. Informally, one can interpret the
+   autocorrelation function as the ability to predict the field $U$ at time $t$
+   given the field at time $t-\tau$.
 
 2. The Wiener-Khinchin theorem says that (under the assumption of ergodicity and for stationary fields) the **Fourier transform of the self coherence function is the spectral power density of** $U(t)$:
 
@@ -614,7 +609,7 @@ Using {eq}`eq.tau2`, the interference pattern on the screen is then, apart from 
 ```{math}
 :label: eq.fringe_sp
 \begin{align*}
-I(\tau)&= \braket{ \, |U_1(\mathbf{r},t) + U_2(\mathbf{r},t) |^2 \, } 
+I(\tau)&= \braket{ \, |U_1(\mathbf{r},t) + U_2(\mathbf{r},t) |^2 \, }
 &= \braket{\, | U(\mathbf{r}_1, t-|\mathbf{r}-\mathbf{r}_1||/c) + U(\mathbf{r}_2, t-|\mathbf{r}-\mathbf{r}_2||/c)|^2 \, }  \\
 &= \braket{\, |U(\mathbf{r}_1,t)+U(\mathbf{r}_2,t- \tau)|^2\, }  \\
 &=\braket{\, |U(\mathbf{r}_1,t)|^2}+\braket{|U(\mathbf{r}_2,t-\tau)|^2\,}+2\text{Re}\braket{\,U(\mathbf{r}_1,t)U(\mathbf{r}_2,t-\tau)^*\, }
@@ -643,7 +638,8 @@ I_2&=\braket{\, |U(\mathbf{r}_2,t)|^2\, } = \Gamma_{22}(0).
 \end{split}
 \end{align*}
 ```
-the **complex degree of mutual coherence** is defined by 
+
+the **complex degree of mutual coherence** is defined by
 
 ```{math}
 :label: eq.defgamma12
@@ -732,8 +728,7 @@ For large distance between the screen and the mask (in the Fraunhofer limit), th
 ```
 where $d$ is the distance between the slits and $m$ is an integer[^5].
 
-
-**Remarks**. 
+**Remarks**.
 
 1. The mutual coherence $\Gamma_{12}(\tau)= \braket{U(\mathbf{r}_1,t)U(\mathbf{r}_2,t-\tau)^*}$ is the **cross-correlation** of the two signals $U(\mathbf{r}_1,t)$ and $U(\mathbf{r}_2,t)$.
 
@@ -1270,8 +1265,6 @@ should therefore be large.
 For a wavelength of $\lambda_0=600\text{nm}$ and $n_f d= 12 \text{mm}$ we have for normal incidence $m=40000$. Then, if the reflection coefficients satisfy $|r_{12}|^2=|r_{23}|^2=0.9$, we have $F=360$ and $G=0$. The resolution is more than one million which is better than the grating spectrometers, which will be discussed in [](#section.examples).
 
 
-
-
 **Remark.** Although in the derivation we have assumed that all refractive indices are real, the final formulae also apply to the case that $n_2$ is complex. In that case $k^{(2)}_z$ and the reflection coefficients are complex.
 
 ## Interference and polarization
@@ -1373,7 +1366,9 @@ which is **randomly polarized**. Suppose we separate the two polarizations, and 
 0\end{pmatrix}.
 \end{align*}
 ```
-These fields can not interfere because $\mathcal{E}_{\bot}$ and $\mathcal{E}_{\parallel}$ are incoherent. This leads to the 
+
+These fields can not interfere because $\mathcal{E}_{\bot}$
+and $\mathcal{E}_{\parallel}$ are incoherent. This leads to the
 ```{note}
 **Third Fresnel-Arago Law**:
 the two constituent orthogonal linearly polarized states of natural light cannot interfere to form a readily observable interference pattern, even if rotated into alignment.
@@ -1388,7 +1383,9 @@ the two constituent orthogonal linearly polarized states of natural light cannot
 5. {cite:t}`fresnel_arago`: Original work on polarized light interference
 ```
 
-[^1]: See [Veritasium - The original double-slit experiment, starting at 2:15](https://www.youtube.com/watch?v=Iuv6hY6zsd0) - Demonstration of an interference pattern obtained with sunlight. 
+[^1]:
+See [Veritasium - The original double-slit experiment, starting at 2:15](https://www.youtube.com/watch?v=Iuv6hY6zsd0) -
+Demonstration of an interference pattern obtained with sunlight.
 
 [^2]: For more details see J.W. Goodman, *Statistical Optics*
 

@@ -39,8 +39,8 @@ The early 19th century witnessed a decisive shift in scientific opinion with Tho
 :align: center
 :width: 80%
 
-Newton's Rings Interference Pattern - When a slightly curved glass lens is placed in contact with a flat glass plate, concentric circular fringes of alternating bright and dark regions appear around the contact point. These interference fringes, known as Newton's rings, are created by the interference between light rays reflected from the bottom surface of the lens and the top surface of the glass plate. 
-The varying air gap thickness between the surfaces causes different path differences for the reflected rays, producing constructive interference (bright rings) where the path difference equals a whole number of wavelengths, and destructive interference (dark rings) where the path difference equals an odd number of half-wavelengths. This phenomenon puzzled Newton because it suggested wave-like behavior that was difficult to reconcile with his particle theory of light. The radius of each ring depends on the wavelength of light used, making Newton's rings a precise method for measuring wavelengths and testing the flatness of optical surfaces. 
+Newton's Rings Interference Pattern - When a slightly curved glass lens is placed in contact with a flat glass plate, concentric circular fringes of alternating bright and dark regions appear around the contact point. These interference fringes, known as Newton's rings, are created by the interference between light rays reflected from the bottom surface of the lens and the top surface of the glass plate.
+The varying air gap thickness between the surfaces causes different path differences for the reflected rays, producing constructive interference (bright rings) where the path difference equals a whole number of wavelengths, and destructive interference (dark rings) where the path difference equals an odd number of half-wavelengths. This phenomenon puzzled Newton because it suggested wave-like behavior that was difficult to reconcile with his particle theory of light. The radius of each ring depends on the wavelength of light used, making Newton's rings a precise method for measuring wavelengths and testing the flatness of optical surfaces.
 ```
 
 The triumph of wave theory in the early 1800s sparked a period of remarkable theoretical and experimental progress that would define 19th-century optics. Augustin Fresnel made fundamental contributions to understanding polarized light, demonstrating that light waves were transverse rather than longitudinal—meaning that the oscillations occurred perpendicular to the direction of propagation, like waves on a string, rather than parallel to it, like sound waves in air. Fresnel's mathematical analysis of polarization phenomena led to his famous equations, which accurately predicted the fraction of light reflected and transmitted when electromagnetic waves encounter interfaces between materials with different optical properties. These equations became cornerstone tools for optical design and engineering, enabling the development of sophisticated optical instruments and technologies. Meanwhile, experimental investigations revealed increasingly subtle wave phenomena, including circular and elliptical polarization, optical activity in certain crystals and solutions, and the precise mathematical relationships governing diffraction patterns created by various apertures and obstacles. The wave theory seemed to provide a complete and satisfying account of all optical phenomena, requiring only the assumption of an ether medium to support the propagation of light waves through apparently empty space.
@@ -258,7 +258,7 @@ We quantify how much a material slows light using the **index of refraction**, d
 $$
 \label{eq:index-refraction}
 n = \frac{c}{v}
-$$ 
+$$
 
 where $v$ represents the observed speed of light in the material.
 
@@ -275,48 +275,48 @@ Since light in matter always travels slower than in vacuum (where $v = c$), the 
   - Index of Refraction ($n$)
 * - **Gases**
   - 0°C, 1 atm
-  - 
+  -
 * - Air
-  - 
+  -
   - 1.000293
 * - Carbon dioxide
-  - 
+  -
   - 1.00045
 * - Hydrogen
-  - 
+  -
   - 1.000139
 * - Oxygen
-  - 
+  -
   - 1.000271
 * - **Liquids**
   - 20°C
-  - 
+  -
 * - Benzene
-  - 
+  -
   - 1.501
 * - Ethanol
-  - 
+  -
   - 1.361
 * - Water (fresh)
-  - 
+  -
   - 1.333
 * - **Solids**
   - 20°C
-  - 
+  -
 * - Diamond
-  - 
+  -
   - 2.419
 * - Glass (crown)
-  - 
+  -
   - 1.52
 * - Ice
   - 0°C
   - 1.309
 * - Quartz (crystalline)
-  - 
+  -
   - 1.544
 * - Zircon
-  - 
+  -
   - 1.923
 ```
 

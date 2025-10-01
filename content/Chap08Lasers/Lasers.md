@@ -54,7 +54,7 @@ Consider a discharge lamp as shown in {numref}`Fig_7_01_Gas_Source_Collimation`.
 
 ```{figure} Images/08_01_gas_source_collimation.png
 :name: Fig_7_01_Gas_Source_Collimation
-A discharge lamp in the focal plane of a converging lens. Every atom in the lamp emits a spherical wave during a burst of radiation, lasting on average a coherence time $\Delta \tau_c$. The overall divergence of the beam is determined by the atoms at the extreme positions of the source. 
+A discharge lamp in the focal plane of a converging lens. Every atom in the lamp emits a spherical wave during a burst of radiation, lasting on average a coherence time $\Delta \tau_c$. The overall divergence of the beam is determined by the atoms at the extreme positions of the source.
 ```
 
 To collimate the light, the lamp can be positioned in the focal plane of a lens.
@@ -98,7 +98,7 @@ As has been explained in [](#chapter.coherence), a light wave has **high spatial
 
 ```{figure} Images/08_03_laser_focus.png
 :name: Fig_7_03_Laser_Focus
-Diffraction-limited spot obtained by focusing a collimated beam. 
+Diffraction-limited spot obtained by focusing a collimated beam.
 ```
 
 The property of a small spot size with high intensity is essential for many applications, such as high resolution imaging, material processing with cutting, welding and drilling spots with very high power and in retina surgery, where a very small, high-intensity spot is applied to weld the retina without damaging the surrounding healthy tissue.
@@ -129,7 +129,7 @@ A resonator, whether it is mechanical like a pendulum, a spring or a string, or 
 
 ```{figure} Images/08_04_laser_decay.png
 :name: Fig_7_04_Laser_Resonant
-Damped oscillation (left) and frequency spectrum of a damped oscillation (right) with resonance wavelength and frequency width equal to the reciprocal of the decay time. 
+Damped oscillation (left) and frequency spectrum of a damped oscillation (right) with resonance wavelength and frequency width equal to the reciprocal of the decay time.
 ```
 
 
@@ -190,10 +190,10 @@ Because of losses caused by the mirrors (which never reflect perfectly) and by t
 
 ```{figure} Images/08_06_laser_spectra.png
 :name: Fig_7_06_Laser_line
-Resonant frequencies of a cavity of length $L$ when the refractive index $n=1$. With an amplifier inside the cavity, the line widths of the resonances within the bandwidth of the amplifier are reduced. The envelope is the spectral function of the amplification. 
+Resonant frequencies of a cavity of length $L$ when the refractive index $n=1$. With an amplifier inside the cavity, the line widths of the resonances within the bandwidth of the amplifier are reduced. The envelope is the spectral function of the amplification.
 ```
 
-	
+
 ## Amplification
 Amplification can be achieved by a medium with atomic resonances that are at or close to one of the resonances of the resonator. We first recall the simple theory developed by Einstein in 1916 of the dynamic equilibrium of a material in the presence of electromagnetic radiation.
 ### The Einstein Coefficients
@@ -404,7 +404,11 @@ are in the lowest state: $\Delta N(t=0)=-N$, then it follows from {eq}
 \Delta N(t) = -N \left[ \frac{A_{21}}{A_{21} + 2 B_{12} W(\omega)} + \left( 1-\frac{A_{21}}{A_{21}+ 2 B_{12} W(\omega)} \right) e^{ -(A_{21}+2B_{12}W(\omega))t } \right].
 \end{align*}
 ```
-An example where $A_{21}/B_{12}W(\omega)=0.5$ is shown in {numref}`Fig_7_08_Laser_dNN`. We always have $\Delta N<0$, hence $N_2(t)< N_1(r)$ for all times $t$. Therefore, a system with only two levels cannot have population inversion. 
+
+An example where $A_{21}/B_{12}W(\omega)=0.5$ is shown in {numref}
+`Fig_7_08_Laser_dNN`. We always have $\Delta N<0$, hence $N_2(t)< N_1(r)$ for
+all times $t$. Therefore, a system with only two levels cannot have population
+inversion.
 ```{figure} Images/08_08_laser_d_nn.png
 :name: Fig_7_08_Laser_dNN
 $\Delta N/N$ as function of $t/(A_{21}+2B_{12}W)$ when all atoms are in the ground state at $t=0$, i.e. $\Delta N(0)=-N$.
@@ -424,8 +428,6 @@ Lasing starts by spontaneous emission. The spontaneously emitted photons stimula
 :name: Fig_7_09_Laser_3level
 The three Einstein transitions and the pump.
 ```
-
-
 
 
 ## Cavities
@@ -449,29 +451,29 @@ Three types of laser cavity. The shaded region is the amplifier. The middle case
 
 ## Problems with Laser Operation
 In this section we consider some problems that occur with lasers and discuss what can be done to solve them.
-1. **Multiple Resonance Frequencies** 
+
+1. **Multiple Resonance Frequencies**
 
 In many applications such as laser communication and interferometry one needs a single wavelength. Consider a cavity of length $L$ as shown in {numref}`Fig_7_11_Laser_loss` and suppose that the amplifier has a gain curve covering many resonances of the resonator. One way to achieve single-frequency output is by taking care that there is only one frequency for which the gain is larger than the losses. One then says that the laser is above threshold for only one frequency. This can be done by choosing the length $L$ of the cavity to be so small that there is only one mode under the gain curve for which the gain is higher than the losses. However, a small length of the amplifier means less output power and a less collimated output beam. Another method would be to reduce the pumping so that for only one mode the gain compensates the losses. But this implies again that the laser output power is relatively small. A better solution is to add a Fabry-Perot cavity inside the laser cavity as shown in {numref}`Fig_7_12_Laser_extra_Cavity`. The cavity consists e.g. of a piece of glass of a certain thickness $a$. By choosing $a$ sufficiently small, the distance in frequency $c/(2a)$ between the resonances of the Fabry-Perot cavity becomes so large that there is only one Fabry-Perot resonance under the gain curve of the amplifier. Furthermore, by choosing the proper angle for the Fabry-Perot cavity with respect to the axis of the laser cavity, the Fabry-Perot resonance can be coupled to the desired resonance frequency.
 
 ```{figure} Images/08_11_laser_loss_a.png
 :name: Fig_7_11_Laser_loss
-Laser with cavity of length $L$ and broad amplifier gain curve. Many resonance frequencies of the resonances are above threshold to compensate the losses. 
+Laser with cavity of length $L$ and broad amplifier gain curve. Many resonance frequencies of the resonances are above threshold to compensate the losses.
 ```
 
-	
 
 ```{figure} Images/08_12_laser_extra_cavity_b.png
 :name: Fig_7_12_Laser_extra_Cavity
 Laser with cavity of length $L$, a broad amplifier gain curve and an added Fabry-Perot cavity. The FB resonances acts as an extra filter to select only one mode of the laser.
 ```
 
-2. **Multiple Transverse Modes** 
+2. **Multiple Transverse Modes**
 
 The best-known laser mode has transverse intensity distribution, which is a Gaussian function of transverse distance to the optical axis. We call a mode with Gaussian transverse shape a **longitudinal mode** and when its frequency satisfies $\nu=m c/(2L)$, it is called the $m$th longitudinal mode. However, inside the laser cavity other modes with different transverse patterns  can also resonate. An example is shown in {numref}`Fig_7_13_Laser_cavity_mode` where mode (1,0) consists of two maxima.
 
 ```{figure} Images/08_13_laser_cavity_mode.png
 :name: Fig_7_13_Laser_cavity_mode
-Laser cavity with (0,0) and (1,0) modes. 
+Laser cavity with (0,0) and (1,0) modes.
 ```
 
 There exist many more transverse modes, as shown in {numref}`Fig_7_14_laser_spatial_modes`. The transverse modes all have slightly different frequencies.
@@ -479,7 +481,7 @@ So even when there is only one Gaussian mode above threshold (i.e. modes occur f
 
 ```{figure} Images/08_14_laser_spatial_modes.png
 :name: Fig_7_14_laser_spatial_modes
-Intensity pattern of several transverse modes. 
+Intensity pattern of several transverse modes.
 ```
 
 Usually one prefers the Gaussian mode and the transverse modes are undesired.
@@ -488,9 +490,8 @@ Because the Gaussian mode has smallest transverse width, the other transverse mo
 
 ```{figure} Images/08_15_spectra_trans_mode.png
 :name: Fig_7_15_Spectra_Trans_Mode
-Resonance frequencies of transverse modes that have sufficient gain to compensate the losses. 
+Resonance frequencies of transverse modes that have sufficient gain to compensate the losses.
 ```
-
 
 
 ## Types of Lasers
@@ -509,7 +510,7 @@ where $\omega_{13}$ is the frequency for the transition $1 \rightarrow 3$ as see
 
 ```{figure} Images/08_16_pumping_meta.png
 :name: Fig_7_16_Pumping_a
-Optical pumping. 
+Optical pumping.
 ```
 
 In the dye laser  the amplifier is a liquid (e.g. Rhodamine6G). It is optically pumped by an argon laser and has a huge gain width, which covers almost the complete visible wavelength range. We can select a certain wavelength by inserting a dispersive element like the Fabry-Perot cavity inside the laser cavity and rotating it at the right angle to select the desired wavelength, as explained above.
@@ -546,7 +547,7 @@ $A^*$ is the excited state used for the stimulated emission. If $\tau_{m1}$ is t
 
 ```{figure} Images/08_18_pumping_collision.png
 :name: Fig_7_18_Pumping
-Pumping atoms $A$ to state 2 by collision with metastable atoms $B^m$. 
+Pumping atoms $A$ to state 2 by collision with metastable atoms $B^m$.
 ```
 
 To get metastable atoms, one can for example pump atom B from its ground state 1 to an excited state 3 above state m such that the spontaneous emission rate $3 \rightarrow m$ is large. The pumping can be done electrically or by any other means. If it is done electrically, then we have

@@ -28,5 +28,5 @@
 	```
 
 	Here, $r$ is the radial coordinate in the $(x,y)$-plane (see {numref}`figFiberTIR`). Integrate over the fiber core into which the light is coupled and divide by $I_0$.
-	
-	Note that these calculations are simplified, but they give a rough estimate of coupling losses.
+
+   Note that these calculations are simplified, but they give a rough estimate of coupling losses.

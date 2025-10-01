@@ -187,7 +187,7 @@ in which we use that $\bar{\theta}_{\text{i,c}}=\pi/2-\arcsin(n_2/n_1)=\arccos(n
 		V=\dfrac{\pi d}{\lambda_0}\mathrm{NA}.
 	\end{align*}
 	```
-	
+
 	For step-index fibers, the number of modes is approximately equal to $M=V^2/2$ if $V\gg 1$. If $V<2.405$, only a single mode is supported and the fiber is referred to as an SMF. If $V>2.405$, the fiber is multimode.
 
 - **cut-off wavelength** – Similar to the planar waveguide discussed in {ref}`secFiberModes`, optical fibers have a cut-off wavelength, above which light can no longer propagate. This wavelength can be calculated as
@@ -482,7 +482,23 @@ part of the light beam.
 A fiber collimater can be used to couple collimated light out of and into an optical fiber
 ```
 
-Light propagating in fibers can be split in (un)equal parts and light from multiple fibers can be combined into one fiber. Devices for these goals are called splitters and combiners. These belong to the general class of couplers in which light from $N_{\text{in}}$ input channels is redistributed over $N_{\text{out}}$ output channels. Couplers are based on the phenomenon of evanescent fields. Although light rays are confined to fiber cores, their associated EM-fields extend in the fiber cladding, the evanescent field, as briefly mentioned in {ref}`secFiberModes` and illustrated in {numref}`figFiberCouplerEv`. If two fiber cores are brought in close proximity, energy from the evanescent field from light transmitting through the one fiber core enters the other fiber's core and continues its path there. The amount of light coupling depends only on distance between the two fiber cores and the length over which they are in proximity, such that variable coupling factors can be obtained. Splitters and combiners are especially important in telecommunication in the process of wavelength-division multiplexing (WDM). This enables bidirectional communication over a single fiber, which capacity is therefore multiplied by a large factor. 
+Light propagating in fibers can be split in (un)equal parts and light from
+multiple fibers can be combined into one fiber. Devices for these goals are
+called splitters and combiners. These belong to the general class of couplers in
+which light from $N_{\text{in}}$ input channels is redistributed
+over $N_{\text{out}}$ output channels. Couplers are based on the phenomenon of
+evanescent fields. Although light rays are confined to fiber cores, their
+associated EM-fields extend in the fiber cladding, the evanescent field, as
+briefly mentioned in {ref}`secFiberModes` and illustrated in {numref}
+`figFiberCouplerEv`. If two fiber cores are brought in close proximity, energy
+from the evanescent field from light transmitting through the one fiber core
+enters the other fiber's core and continues its path there. The amount of light
+coupling depends only on distance between the two fiber cores and the length
+over which they are in proximity, such that variable coupling factors can be
+obtained. Splitters and combiners are especially important in telecommunication
+in the process of wavelength-division multiplexing (WDM). This enables
+bidirectional communication over a single fiber, which capacity is therefore
+multiplied by a large factor.
 
 ```{figure} Images/10_19_fused_biconal.png
 :name: figFiberCouplerEv
@@ -493,7 +509,12 @@ In isolators, light is able to propagate in one direction, but not in the other.
 
 A similar mechanism lies at the basis of circulators. These components have three, four or six ports and light coupled into one port is only transmitted to one other port. Thus, in a three-port circulator, port $1$ is coupled to port $2$, $2$ to $3$ and $3$ to $1$. Using circulators, a single fiber can be used to transmit and receive a (reflected) signal. Both are then separated using this component, which is relevant for Fiber Bragg gratings (discussed in {ref}`secFiberApplications`) and Michelson-Morley-type interferometers.
 
-In some applications it is necessary to attenuate or amplify the light power transmitting through fibers. This would be the case if power levels are too high or low for a detector or for another component further downstream in the fiber network. Also, attenuators and amplifiers may be used to stress-test a network under (unwanted) power loss or gain, and amplifiers in particular can be used to compensate for fiber losses in long-distance fiber connections. 
+In some applications it is necessary to attenuate or amplify the light power
+transmitting through fibers. This would be the case if power levels are too high
+or low for a detector or for another component further downstream in the fiber
+network. Also, attenuators and amplifiers may be used to stress-test a network
+under (unwanted) power loss or gain, and amplifiers in particular can be used to
+compensate for fiber losses in long-distance fiber connections.
 
 Optical attenuation can be achieved by the methods that have so far been considered as a negative influence to light transmission: scattering, absorption and air gaps, see {ref}`secFiberLoss`. Attenuators can either be fixed or variable in their attenuation. The latter can be tuned continuously or step-wise by hand or electronically to the desired attenuation level. This allows for testing a network under variable attenuation level without making hardware changes. It should be noted that attenuators tend to have a high reflection. If these reflections are unwanted, attenuators can be applied in combination with isolators, such that the reflected light power does not back-propagate through the network.
 

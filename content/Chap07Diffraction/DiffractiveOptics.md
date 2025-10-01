@@ -65,7 +65,6 @@ Given the field $U(x,y,0)$, we want to find $U$ in a point $(x,y,z)$ with $z>0$.
 ```
 
 
-
 ```{math}
 :label: eq.FU0
 \begin{align*}
@@ -628,8 +627,6 @@ Diffraction patterns of a square opening in a mask with corresponding cross-sect
 ```
 
 
-
-
 **Fraunhofer approximation of a periodic array of slits**
 
 We can now predict what is the diffraction pattern of an array of slits of finite width.
@@ -871,8 +868,6 @@ are spheres with center the focal point. For increasing time, these spheres conv
 For a point $(x,y,z)$ to the **right** of the focal point, i.e. for $z>f_i$, the spherical wave fronts propagate away from the focal point and therefore there $-ik$ should be replaced by $+ik$ in the exponent in {eq}`eq.sphericalw`.
 
 
-
-
 The exit pupil of the lens is in the plane $z=0$ where, according to {eq}`eq.sphericalw`, the field is
 
 ```{math}
@@ -1058,7 +1053,6 @@ This in turn implies that the kernel in the convolution is more sharply peaked a
 [^7].
 
 
-
 **Remark.**
 
 1. If laser light is used to illuminate the object, the object field may be considered perfectly coherent. This implies that a detector in the image plane would measure the squared modulus of the complex field {eq}`eq.imaging`:
@@ -1148,8 +1142,6 @@ Spot used for excitation (top left) and for depletion (top middle). Fluorescence
 ```
 
 
-
-
 ```{admonition} External sources in recommended order
 1. {cite}`SixtySymbols_Fourier` Basic explanation of Fourier transforms. Also see {ref}`sec:fourierintuition`.
 1. {cite}`SixtySymbols_Heisenberg` Basic explanation of the uncertainty principle (though in the context of quantum physics).
@@ -1157,7 +1149,6 @@ Spot used for excitation (top left) and for depletion (top middle). Fluorescence
 1. J. Goodman, *Introduction to Fourier Optics*, &sect;5.2.2: Several calculations on the Fourier transforming properties of lenses.
 1. E. Hecht, *Optics*, &sect; 10.2.6, subsection '*Resolution of imaging systems*'.
 ```
-
 
 
 [^1]: {cite}`SixtySymbols_Fourier` Basic explanation of Fourier transforms. Also see {ref}`sec:fourierintuition`.

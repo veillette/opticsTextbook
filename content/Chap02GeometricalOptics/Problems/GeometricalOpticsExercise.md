@@ -1,6 +1,6 @@
 # Problems
 
-1. Principle of Fermat and Snell's Law. 
+1. Principle of Fermat and Snell's Law.
 
 Consider a layer of thickness $d$ and refractive index $n_2$ which is sandwiched between two half spaces with refractive index $n_1$ and $n_3$ as shown in {numref}`Fig_2_29_Slab`.
 A ray from point $P=(x_P,y_P)$ with $y_P>d$ passes through point $Q=(x_Q,y_Q)$ with $y_Q<0$.
@@ -35,7 +35,7 @@ Explain your answer.
 
 From electromagnetic theory, the wave trains emitted by different atoms (point sources) in the source suffer random phase jumps due to e.g. collisions and therefore the fields emitted by different point sources in an extended classical light source can not interfere.
 
-2. Perfect focusing by an ellipsoid and a hyperboloid. 
+2. Perfect focusing by an ellipsoid and a hyperboloid.
 
 Suppose that there are two media with refractive indices $n_1>n_2$ and that point $S$ is at infinity in the medium with refractive index $n_2$. We will construct a surface (interface) between the two media such that all rays from $S$ are focused into the same point $F$ (see {numref}`Fig_2_07_Focus-Right`a). Because $S$ is at very large distance, the rays entering from the right are parallel. Since all parallel rays have traveled the same distance when they hit the surface $DD'$ perpendicular to the rays, all parallel rays have the same phase at their intersection points with the plane $DD'$.
 - **a)** If point $A$ is on the interface sought, derive that
@@ -63,7 +63,6 @@ the constant is the same for all points $A$ on the interface.
 :name: Fig_2_08_Perfect_Imaging
 Lens with hyperboloid surfaces for perfect imaging of a pair of points.
 ```
-
 
 
 3. Perfect focussing by a parabolic mirror
@@ -99,9 +98,7 @@ and conclude that the mirror is a paraboloid with $f$ as focus and $\Sigma_2$ as
 A paraboloid mirror.
 ```
 
-
-
-4. Imaging of a virtual object. 
+4. Imaging of a virtual object.
 
 A virtual object is at a distance $d_0$ behind a converging lens. The converging incident rays to the left of the lens, that correspond to the virtual object, are shown in {numref}`Fig_2_30_Virtual_Object`. The lens has focal length $f$.
 
@@ -132,7 +129,7 @@ Let there be an object at distance $2f_1$ in front of lens ${\cal L}_1$, as show
 - **b)** Let $f_1=3 \text{ cm}$ and $f_2=-2 \text{ cm}$.
 What should be the distance $d$ such that the final image is real and the magnification is 2?
 
-6. System matrix for imaging by a spherical surface. 
+6. System matrix for imaging by a spherical surface.
 
 Consider a spherical surface with radius of curvature $R$ with to the left (right) of the surface a medium with refractive index $n_1$ ($n_2$).
 - **a)**
@@ -192,7 +189,7 @@ $$
 - **e)** Derive the Lensmaker's formula for the thin lens
   {eq}`eq:ray:lensmaker-formula` by taking the limit $d\rightarrow 0$ in d).
 
-8. System matrix for focusing. 
+8. System matrix for focusing.
 
 Consider a ray transfer matrix
 

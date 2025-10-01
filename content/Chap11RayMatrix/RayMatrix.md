@@ -305,7 +305,7 @@ center $C_1$ is given by
 {\cal M}_1= \left( \begin{array}{cc}1 & - {\cal P}_1 \\0 & 1
 \end{array}\right) ,
 \end{align*}
-``` 
+```
 where
 
 ```{math}
@@ -617,7 +617,7 @@ We construct the intermediate image $P'$ due to lens $L_1$ using ray 2 and 3. $P
 
 ```{figure} Images/11_09_two_thin_lenses_separated.png
 :name: Fig_2_20_Double_Lens
-Two thin lenses separated by a distance that is larger than the sum of their focal lengths. 
+Two thin lenses separated by a distance that is larger than the sum of their focal lengths.
 ```
 
 
@@ -732,15 +732,13 @@ that the principal planes are images of each other, with unit magnification. Hen
 
 ```{figure} Images/11_12_principle_planes.png
 :name: Fig_2_23_Principle_planes
-Position of the principal planes for several lenses. 
+Position of the principal planes for several lenses.
 ```
 
 Now, if the object coordinates and object focal point are defined with respect
 to the origin at $H_1$ and the image coordinates and image focal point are
 defined with respect to the origin in $H_2$, the Lensmaker's formula {eq}
 `eq:ray:lensmaker-formula` can also be used for a thick lens.
-
-
 
 
 *Proof*

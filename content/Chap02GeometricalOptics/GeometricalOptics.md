@@ -47,7 +47,7 @@ Consider a point source at some distance before an opaque screen with an apertur
 
 ```{figure} Images/02_01_figgeom.png
 :name: Fig_2_01_GeomDiffr
-Light distribution on a screen due to a rectangular aperture. Left: for a large aperture, we get an enlarged copy of the aperture. Right: for an aperture that is of the order of the wavelength there is strong bending (diffraction) of the light. 
+Light distribution on a screen due to a rectangular aperture. Left: for a large aperture, we get an enlarged copy of the aperture. Right: for an aperture that is of the order of the wavelength there is strong bending (diffraction) of the light.
 ```
 Geometrical optics is accurate when the sizes of the objects in the system are large compared to the wavelength. It is possible to derive geometrical optics from Maxwell's equations by formally expanding the electromagnetic field in a power series in the wavelength and retaining only the first term of this expansion[^geometrical_optics_derivation]. However, this derivation is not rigorous because the power series generally does not converge (it is a so-called asymptotic series).
 
@@ -58,7 +58,7 @@ Although it is possible to incorporate polarization into geometrical optics, thi
 
 ## Principle of Fermat
 
-The starting point of the treatment of geometrical optics is the 
+The starting point of the treatment of geometrical optics is the
 
 ```{note}
 **Principle of Fermat (1657)**. The path followed by a light ray between two points is the one that takes the least amount of time.
@@ -96,7 +96,6 @@ where $s_P$ is the distance along the ray from S to P.
 The **optical path length** [m] of the ray between S and P is defined by:
 
 
-
 ```{math}
 :label: eq:geo:optical-path-length
 \boxed{\begin{align*}
@@ -104,12 +103,11 @@ The **optical path length** [m] of the ray between S and P is defined by:
 \end{align*}}
 ```
 
-So the OPL is the distance weighted by the refractive index. 
+So the OPL is the distance weighted by the refractive index.
 
 ```{note}
 Fermat's principle is thus equivalent to the statement that a ray follows the path with shortest OPL.
 ```
-
 
 
 ```{figure} Images/02_02_theory_of_mirage.jpg
@@ -227,7 +225,9 @@ Overview of conic sections. The lower figure shows a definition that unifies the
 We start with explaining what in geometrical optics is meant by **perfect imaging**.
 Let $S$ be a point source. The rays perpendicular to the spherical wave fronts emitted by $S$ radially fan out from $S$. Due to objects such as lenses etc. the spherical wave fronts are deformed and the direction of the ray are made to deviate from the radial propagation direction.
 When there is a point $P$ and a cone of rays coming from point $S$ and all rays in that cone intersect in point $P$, then by Fermat's principle, all these rays have traversed paths of minimum travel time. In particular, their travel times are equal and therefore they **all add up in phase** when they arrive in $P$. Hence at $P$ there is a high light intensity. Hence, if there is a cone of rays from point $S$ which all intersect in a point $P$ as shown in {numref}`Fig_2_06_Perfect_Imaging`, point $P$ is called the **perfect image** of $S$.
-By reversing the direction of the rays, $S$ is similarly a perfect image of $P$. The optical system in which this happens is called **stigmatic for the two points $S$ and $P$**. 
+By reversing the direction of the rays, $S$ is similarly a perfect image of $P$.
+The optical system in which this happens is called **stigmatic for the two
+points $S$ and $P$**.
 
 
 ```{figure} Images/02_07_perfect_imaging.png
@@ -244,21 +244,15 @@ We summarize the main examples of stigmatic systems.
 **Perfect focusing and imaging by refraction.** A parallel bundle of rays propagating in a medium with refractive index $n_2$ can be focused into a point $F$ in a medium $n_1$. If $n_2>n_1$, the interface between the media should be a hyperbole with focus $F$, whereas if $n_2<n_1$ the interface should be an ellipse with focus $F$ (see {numref}`Fig_2_07_Focus-Right` and
 {numref}`Fig_2_08_Perfect_Imaging`). By reversing the rays we obtain perfect collimation. Therefore, a point $S$ in air can be perfectly imaged onto a point $F$ in air by inserting a piece of glass in between them with hyperbolic surfaces as shown in {numref}`Fig_2_08_Perfect_Imaging`. These properties are derived in Problem 2.2.
 
-**2.** 
-**Perfect focusing of parallel rays by a mirror**. 
+**2.**
+**Perfect focusing of parallel rays by a mirror**.
 A bundle of parallel rays in air can be focused into a point $F$ by a mirror of parabolic shape with $F$ as focus (see {numref}`Fig_2_09_Para_Mirror`). This is derived in Problem 2.3.
 By reversing the arrows, we get (within geometrical optics) a perfectly parallel beam.
 Parabolic mirrors are used everywhere, from automobile headlights to radio telescopes.
 
-
-
-**Remark.** 
+**Remark.**
 
 Although we found that conic surfaces give perfect imaging for a certain pair of points, other points do *not* have perfect images in the sense that for a certain cone of rays, all rays are refracted (or reflected) to the same point.
-
-
-
-
 
 
 ```{admonition} External sources in recommended order
@@ -329,11 +323,7 @@ is called the power of the surface and where $s_o$ and $s_i$ are the $z$-**coord
 Imaging by a spherical interface between two media with refractive indices $n_2>n_1$.
 ```
 
-
-
-
-
-*Proof*. 
+*Proof*.
 
 It suffices to show that $P$ is independent of the ray, i.e. of $A$. We will do this by expressing $s_i$ into $s_o$ and showing that the result is independent of $A$. Let $\alpha_1$ and $\alpha_2$ be the angles of the rays $SA$ and $AP$ with the $z$-axis as shown in {numref}`Fig_2_10_Spherical_interface`.
 Let $\theta_i$ be the angle of incidence of ray $SA$ with the local normal $CA$ on the surface and $\theta_t$ be the angle of refraction. By considering the angles in triangle $\Delta \text{SCA}$ we find
@@ -422,11 +412,9 @@ It implies that $s_i$, and hence $P$, is independent of $y_A$, i.e. of the ray c
 Therefore, $P$ is a perfect image within the approximation of Gaussian geometrical optics.
 
 
-
 When
 $s_o \rightarrow -\infty$, the incident rays are parallel to the $z$-axis in medium 1 and the corresponding image point $F_i$ is called the **second focal point** or **image focal point**.
 Its $z$-coordinate is given by:
-
 
 
 ```{math}
@@ -540,8 +528,6 @@ can always be used to determine the image of a given object by a spherical surfa
 ```
 
 
-
-
 ```{index} Stops
 :name: sec.stops
 ```
@@ -574,7 +560,7 @@ For example, f-number$=2$ means $f = 2D$. Since the exposure time is proportiona
 
 ```{figure} Images/02_12_aperture_stop.png
 :name: Fig_2_25_Aperture_Stop
-Aperture stop (A.S.) between the second and third lens, with entrance pupil and exit pupil (in this case these pupils are virtual images of the aperture stop). Also shown are the chief ray and the marginal ray. 
+Aperture stop (A.S.) between the second and third lens, with entrance pupil and exit pupil (in this case these pupils are virtual images of the aperture stop). Also shown are the chief ray and the marginal ray.
 ```
 
 
@@ -596,7 +582,7 @@ paraxial rays (see {numref}`Fig_2_26_Aberration_Lens`).
 
 ```{figure} Images/02_13_aberration_lens.png
 :name: Fig_2_26_Aberration_Lens
-Spherical aberration of a planar-convex lens. 
+Spherical aberration of a planar-convex lens.
 ```
 
 **Distortion** is one of the five primary aberrations. It causes deformation of images due to the fact that the magnification depends on the distance of the object point to the optical axis.
@@ -638,7 +624,6 @@ Even if the wave transmitted by the exit pupil would be perfectly spherical (no 
 \end{align*}
 ```
 where NA$=\arcsin(a/s_i)$ is the numerical aperture (i.e. 0<NA<1) with $a$ the radius of the exit pupil and $s_i$ the image distance as predicted by Gaussian geometrical optics. Diffraction depends on the wavelength, and hence it cannot be described by geometrical optics, which applies in the limit of vanishing wavelength.  We will treat diffraction by apertures in [](#chapter.diffraction).
-
 
 
 [^1]: See Chapter 1 of M. Born \& E. Wolf, "Principles of Optics", Cambridge University Press (2013)

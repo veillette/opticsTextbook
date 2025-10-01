@@ -14,7 +14,6 @@
 ```
 
 
-
 ## Polarization States and Jones Vectors
 We have seen in [](#chapter.basics) that light is an electromagnetic wave which satisfies Maxwell's equations and the wave equation derived therefrom. Since the electric field is a vector which oscillates as function of time in a certain direction, we say that the wave has a certain polarization. In this chapter we look at the different types of polarization and how the polarization of a light beam can be manipulated.
 
@@ -106,7 +105,8 @@ If $\varphi_y-\varphi_x=\pi$ we have
 ```
 In this case ${\cal E}_x(z,t)$ and ${\cal E}_y(z,t)$ are out of phase and the electric field oscillates in the direction given by the real vector ${\cal A}_x \hat{\mathbf{x}} - {\cal A}_y \hat{\mathbf{y}}$.
 
-**b) Circular polarization:** $\varphi_y-\varphi_x=\pm \pi/2$, ${\cal A}_x={\cal A}_y$. 
+**b) Circular polarization:
+** $\varphi_y-\varphi_x=\pm \pi/2$, ${\cal A}_x={\cal A}_y$.
 In this case the Jones vector is:
 
 ```{math}
@@ -652,7 +652,6 @@ To see what happens to an arbitrary elliptical polarization state in a circular 
 6. [Demonstration of a HalfWavePlate](https://www.youtube.com/watch?v=HriBBJ-6gd8) by Andrew Berger.
 7. [MIT OCW - Half-wave Plate](https://ocw.mit.edu/resources/res-6-006-video-demonstrations-in-lasers-and-optics-spring-2008/demonstrations-in-physical-optics/half-wave-plate/): Demonstration of the half-wave plate.
 ```
-
 
 
 [^1]: The phase difference $\varphi_y-\varphi_x$ is sometimes called the retardation.

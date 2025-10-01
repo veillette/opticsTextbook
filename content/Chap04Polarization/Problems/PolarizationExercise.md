@@ -27,7 +27,7 @@ What is the Jones matrix of this linear polarizer?
 - **h)** What happens to the difference in energy between the incident and transmitted beam?
 
 
-2. Partial linear polarization. 
+2. Partial linear polarization.
 
 Consider a light beam that is partially linear polarized. Show that the degree of polarization is given by
 
@@ -65,8 +65,7 @@ $$
 
 A video demonstration of this optical isolator can be viewed at [^1] (or search for "MIT optical isolator" on Youtube).
 
-
-4. Phase plates. 
+4. Phase plates.
 
 We consider a time-harmonic plane wave which propagates in the positive $z-$direction.
 - **a)** Suppose we have a linear polarizer orientated such that the angle with the positive $\hat{\mathbf{x}}$-axis is $+45^o$. Behind the linear polarizer there is a half wave plate with fast axis orientated parallel to the $\hat{\mathbf{y}}$-axis.
@@ -115,7 +114,6 @@ $$
 \end{array}\right),
 $$
 and with refractive indices $n_1=1.5$ and $n_2=2$.
-
 
 
 [^1]:  [https://ocw.mit.edu/resources/res-6-006-video-demonstrations-in-lasers-and-optics-spring-2008/demonstrations-in-physical-optics/optical-isolator/](https://ocw.mit.edu/resources/res-6-006-video-demonstrations-in-lasers-and-optics-spring-2008/demonstrations-in-physical-optics/optical-isolator/)

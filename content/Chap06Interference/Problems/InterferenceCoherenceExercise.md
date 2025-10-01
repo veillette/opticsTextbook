@@ -3,9 +3,8 @@
 1. Michelson interferometer.
 - **a)**
 A Michelson interferometer is illuminated with monochromatic light. One of its mirrors is moved 2.53 $\times10^{-5}$ m, and it is observed that 92 fringe-pairs, bright and dark, pass by the screen during the process. Determine the wavelength of the incident beam.
- 
+
 - **b)** Suppose that for the wavelength determined under a), only 23 fringes can be distinguished when one of the mirrors in moved over 2.53 $\times10^{-5}$ m. What is the coherence length and coherence time of the source?
- 
 
 
 2. Two sources.
@@ -17,10 +16,8 @@ $S_1$ and $S_2$ are coherent and emit radio waves with a wavelength of 3 m. The 
 Sources Figure
 ```
 
- 
 - **b)**
 Suppose that the sources are mutually incoherent. There distance is again 3 m and the center wavelength is 3 m. What should be the perpendicular distance to the two sources of two points that have distance of 6 m when the degree of mutual coherence is 0.866. You may use the formula for quasi-monochromatic light.
- 
 
 
 3. Reflection coating.
@@ -34,10 +31,9 @@ Thin film illuminated by a plane wave.
 
 - **a)**
 What is the smallest film thickness for which we get a maximum reflectance of the film? We recall that the light that is reflected directly at the air-glass interface gets a phase shift of $\pi$.
- 
+
 
 - **b)** Describe what happens to the reflected field when the film is 237 \text{nm} thick?
- 
 
 
 4. Let a point source $P$ be at $\mathbf{r}_p =(0,0,d)$ where $d>0$ is the distance to a mirror in the $z=0$ plane ({numref}`Fig:ex_5_3`).
@@ -57,18 +53,17 @@ U_{p}(\mathbf{r}) = \frac{e^{i k \sqrt{x^2 + y^2 + (z-d)^2}}}{\sqrt{ x^2 + y^2 +
 ```
 Assume that the mirror is perfect, i.e. the total field on the mirror surface vanishes: $U_{total}(x,y,0)=0$.
 - **a)** Derive the formula for the reflected and the total field in an arbitrary point $\mathbf{r}=(x,y,z)$ with $z>0$.
- 
+
 - **b)**
 What is the total intensity in an arbitrary point $\mathbf{r}$?
- 
+
 - **c)** Compute the intensity on the $z$-axis for $0\leq z \leq d$. What is the period of the fringes? For which $z$-value does the intensity vanish?
- 
+
 - **d)** Derive the intensity for $x=y=0$ and $z>d$.
 Show that for very large $z$ the intensity is zero when $d=(2m+1)\lambda/4$ for $m=0,1,2,\ldots$.
- 
+
 - **e)**
 Suppose that the coherence time of the field radiated by the point source is $\tau_c$. For which distances $d$ does there occur no interference anywhere in $z>2d$ between the field directly radiated by the point source and the reflected field? What is the intensity in this case?
- 
 
 
 5. Two sources and two pinholes
@@ -89,6 +84,6 @@ Two independent small sources $S_1$ and $S_2$ with 2 pinhole and a screen (Exerc
 - **g)** There are interference fringes on the screen when the distance $z_1$ is large enough and the pinholes have width of many wavelength and one of them is closed.
 - **h)** If more pinholes are added between $P_1$ and $P_2$ the interference fringes become broader.
 
- 
+
 6. Fabry-Perot interferometer
 - not finished

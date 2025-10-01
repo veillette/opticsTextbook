@@ -64,7 +64,7 @@ $$(a + bi)(c + di) = ac + adi + bci + bdi^2 = (ac - bd) + (ad + bc)i$$
 ```{admonition} Example A.2: Complex Multiplication
 Let's multiply $(2 + 3i)(1 + 4i)$:
 - First terms: $2 \times 1 = 2$
-- Outer terms: $2 \times 4i = 8i$  
+- Outer terms: $2 \times 4i = 8i$
 - Inner terms: $3i \times 1 = 3i$
 - Last terms: $3i \times 4i = 12i^2 = -12$
 - Result: $2 + 8i + 3i - 12 = -10 + 11i$
@@ -173,20 +173,20 @@ Several important special cases emerge from Euler's formula:
 :name: euler-special-cases
 
 * - Angle
-  - Complex Exponential  
+  - Complex Exponential
   - Trigonometric Form
   - Significance
 * - $\theta = 0$
   - $e^{i \cdot 0} = 1$
   - $\cos(0) + i\sin(0) = 1$
   - Starting point
-* - $\theta = \pi/2$  
+* - $\theta = \pi/2$
   - $e^{i\pi/2} = i$
   - $\cos(\pi/2) + i\sin(\pi/2) = i$
   - 90° rotation
 * - $\theta = \pi$
   - $e^{i\pi} = -1$
-  - $\cos(\pi) + i\sin(\pi) = -1$  
+  - $\cos(\pi) + i\sin(\pi) = -1$
   - Euler's identity
 * - $\theta = 2\pi$
   - $e^{i2\pi} = 1$
@@ -258,7 +258,7 @@ Let's unpack this expression:
 * - $k$
   - Wave number
   - $k = 2\pi/\lambda$, spatial frequency
-  - rad/m  
+  - rad/m
 * - $\omega$
   - Angular frequency
   - $\omega = 2\pi f$, temporal frequency
@@ -383,7 +383,7 @@ The intensity decreases as $I(z) = I_0 e^{-2(\omega k/c)z}$, defining the absorp
   - $\sim 10^{-7}$
   - Transparent, minimal absorption
 * - Water
-  - 500 nm  
+  - 500 nm
   - 1.33
   - $\sim 10^{-9}$
   - Transparent in thin layers
@@ -453,7 +453,7 @@ The polarization state is determined by:
   - $E_x = E_y$
   - $\delta = -\pi/2$
   - $E_0(\hat{x} - i\hat{y})/\sqrt{2}$
-* - Left circular  
+* - Left circular
   - $E_x = E_y$
   - $\delta = +\pi/2$
   - $E_0(\hat{x} + i\hat{y})/\sqrt{2}$
@@ -591,7 +591,7 @@ Complex numbers are not mere mathematical conveniences in optics—they are fund
 * - Physical
   - Reveals hidden relationships
   - Kramers-Kronig relations, causality
-* - Computational  
+* - Computational
   - Efficient algorithms
   - FFT-based propagation methods
 * - Conceptual
@@ -769,7 +769,7 @@ d) Let $\sqrt{3 + 4i} = a + bi$. Then $(a + bi)^2 = 3 + 4i$.
 ```{admonition} Problem A.2
 :class: exercise
 
-Two coherent plane waves with equal amplitudes $E_0$ interfere. Wave 1 has phase 0, and Wave 2 has phase $\phi$. 
+Two coherent plane waves with equal amplitudes $E_0$ interfere. Wave 1 has phase 0, and Wave 2 has phase $\phi$.
 a) Find the total amplitude as a function of $\phi$
 b) For what values of $\phi$ is the intensity maximum?
 c) For what values of $\phi$ is the intensity minimum?
@@ -778,9 +778,9 @@ d) Plot the intensity as a function of $\phi$ from 0 to $4\pi$
 
 ```{dropdown} Solution to Problem A.2
 a) $E_{\text{total}} = E_0(1 + e^{i\phi}) = E_0(1 + \cos\phi + i\sin\phi)$
-   
+
    $|E_{\text{total}}|^2 = E_0^2[(1 + \cos\phi)^2 + \sin^2\phi] = E_0^2[1 + 2\cos\phi + \cos^2\phi + \sin^2\phi]$
-   
+
    $= E_0^2[2 + 2\cos\phi] = 2E_0^2(1 + \cos\phi) = 4E_0^2\cos^2(\phi/2)$
 
 b) Maximum when $\cos(\phi/2) = \pm 1$, i.e., $\phi = 0, 2\pi, 4\pi, \ldots$
@@ -830,7 +830,7 @@ a) $\vec{E}_0 = E_0(\frac{\sqrt{3}}{2}\hat{x} + \frac{1}{2}\hat{y})$
 
 b) A half-wave plate at 45° can be represented by the Jones matrix:
    $\begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix}$
-   
+
    This swaps the x and y components:
    $\vec{E}_f = E_0(\frac{1}{2}\hat{x} + \frac{\sqrt{3}}{2}\hat{y})$
 
