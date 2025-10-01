@@ -510,6 +510,13 @@ def print_fix_suggestions(suggestions):
 
 def save_enhanced_report(issues, analysis, output_file, include_suggestions=False):
     """Save enhanced report to file."""
+    # Create reports directory if it doesn't exist
+    os.makedirs('reports', exist_ok=True)
+
+    # Ensure output files go in reports directory
+    if not output_file.startswith('reports/'):
+        output_file = os.path.join('reports', os.path.basename(output_file))
+
     timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
     report_data = {

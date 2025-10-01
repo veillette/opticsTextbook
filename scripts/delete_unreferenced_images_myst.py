@@ -169,8 +169,11 @@ def preview_deletion(analysis, delete_images=True, delete_ai=True):
 
 def create_backup_log(analysis, delete_images=True, delete_ai=True):
     """Create a backup log of what will be deleted."""
+    # Create reports directory if it doesn't exist
+    os.makedirs('reports', exist_ok=True)
+
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-    log_file = f"deletion_log_{timestamp}.json"
+    log_file = f"reports/deletion_log_{timestamp}.json"
 
     backup_data = {
         'timestamp': timestamp,
@@ -257,10 +260,10 @@ def main():
                        help='Delete only image files (skip .ai files)')
     parser.add_argument('--ai-only', action='store_true',
                        help='Delete only .ai files (skip image files)')
-    parser.add_argument('--input-images', default='unreferenced_images.txt',
-                       help='Input file with unreferenced images (default: unreferenced_images.txt)')
-    parser.add_argument('--input-ai', default='unreferenced_ai_files.txt',
-                       help='Input file with unreferenced .ai files (default: unreferenced_ai_files.txt)')
+    parser.add_argument('--input-images', default='reports/unreferenced_images.txt',
+                       help='Input file with unreferenced images (default: reports/unreferenced_images.txt)')
+    parser.add_argument('--input-ai', default='reports/unreferenced_ai_files.txt',
+                       help='Input file with unreferenced .ai files (default: reports/unreferenced_ai_files.txt)')
 
     args = parser.parse_args()
 
