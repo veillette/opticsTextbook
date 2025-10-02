@@ -564,7 +564,9 @@ d) What happens to the angular magnification?
 
 ## Solutions to Practice Problems
 
-```{dropdown} Solution to Problem 1
+```{dropdown}
+**Solution to Problem 1**
+
 a) $\begin{pmatrix} 2 & 1 \\ 0 & 3 \end{pmatrix}\begin{pmatrix} 1 & 4 \\ 2 & 1 \end{pmatrix} = \begin{pmatrix} 4 & 9 \\ 6 & 3 \end{pmatrix}$
 
 b) $\begin{pmatrix} 1 & 0 \\ -1/50 & 1 \end{pmatrix}\begin{pmatrix} 1 & 100 \\ 0 & 1 \end{pmatrix} = \begin{pmatrix} 1 & 100 \\ -1/50 & 1 \end{pmatrix}$
@@ -572,18 +574,24 @@ b) $\begin{pmatrix} 1 & 0 \\ -1/50 & 1 \end{pmatrix}\begin{pmatrix} 1 & 100 \\ 0
 c) $\begin{pmatrix} \cos 2\theta & -\sin 2\theta \\ \sin 2\theta & \cos 2\theta \end{pmatrix}$ (rotation by $2\theta$)
 ```
 
-```{dropdown} Solution to Problem 2
+```{dropdown}
+**Solution to Problem 2**
+
 This requires step-by-step matrix multiplication through all three elements. The QWP converts the 45° linear to circular, the HWP rotates the polarization, and the final polarizer extracts the component along 60°. The calculation involves complex arithmetic due to the QWP matrix.
 ```
 
-```{dropdown} Solution to Problem 3
+```{dropdown}
+**Solution to Problem 3**
+
 The thick lens matrix is the product of three matrices:
 $$\mathbf{M} = \mathbf{M}_{back} \cdot \mathbf{M}_{thickness} \cdot \mathbf{M}_{front}$$
 
 where each matrix represents refraction at interfaces and propagation through the material.
 ```
 
-```{dropdown} Solution to Problem 4
+```{dropdown}
+**Solution to Problem 4**
+
 a) Distances: 200 mm + 100 mm = 300 mm separation
 b) The 4f system has the special property that A = -1, B = 0, giving perfect imaging
 c) Lateral magnification = -f₂/f₁ = -0.5

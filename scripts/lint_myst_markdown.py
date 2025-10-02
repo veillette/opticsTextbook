@@ -15,6 +15,8 @@ Issues checked:
 8. Inconsistent heading levels
 9. Malformed directive syntax
 10. Missing alt text on figures
+11. Backtick fences used for directives (should use colon fences)
+12. Colon fences used for code blocks (should use backtick fences)
 
 Usage:
     python lint_myst_markdown.py [--fix] [--content-dir DIR] [--output-file FILE]
@@ -59,6 +61,7 @@ class MystLinter:
             file_issues.extend(self._check_multiple_blank_lines(lines, file_path))
             file_issues.extend(self._check_malformed_directives(lines, file_path))
             file_issues.extend(self._check_figure_alt_text(lines, file_path))
+            file_issues.extend(self._check_fence_convention(lines, file_path))
 
             # Apply fixes if in fix mode
             if self.fix_mode and file_issues:
@@ -312,6 +315,50 @@ class MystLinter:
                         })
 
                     in_figure = False
+
+        return issues
+
+    def _check_fence_convention(self, lines, file_path):
+        """Check that directives use backtick fences (our preferred convention)."""
+        issues = []
+
+        # MyST directives that should use backtick fences (our convention)
+        myst_directives = [
+            'note', 'warning', 'important', 'tip', 'caution', 'attention',
+            'danger', 'error', 'hint', 'seealso', 'admonition',
+            'dropdown', 'card', 'tab-set', 'tab-item',
+            'figure', 'subfigure', 'video', 'image',
+            'proof', 'theorem', 'lemma', 'definition', 'example', 'exercise',
+            'grid', 'column', 'margin', 'sidebar',
+            'epigraph', 'bibliography', 'glossary', 'list-table'
+        ]
+
+        for i, line in enumerate(lines):
+            # Check for colon fence directives (should be backtick fences per our convention)
+            colon_directive_match = re.match(r':::\{(\w+[\w-]*)\}', line.strip())
+            if colon_directive_match:
+                directive_name = colon_directive_match.group(1)
+                if directive_name in myst_directives:
+                    issues.append({
+                        'type': 'wrong_fence_type',
+                        'line': i + 1,
+                        'message': f"Directive '{directive_name}' should use backtick fence (```) not colon fence (:::)",
+                        'severity': 'warning',
+                        'fixable': False
+                    })
+
+            # Check for colon fence code blocks (should be backtick fences)
+            colon_code_match = re.match(r':::\{(python|bash|shell|javascript|java|c|cpp|matlab|r)\}', line.strip())
+            if colon_code_match:
+                lang = colon_code_match.group(1)
+                issues.append({
+                    'type': 'wrong_fence_type',
+                    'line': i + 1,
+                    'message': f"Code block with language '{lang}' should use backtick fence (```) not colon fence (:::)",
+                    'severity': 'warning',
+                    'fixable': False,
+                    'suggestion': f"Change :::{{{lang}}} to ```{lang}"
+                })
 
         return issues
 

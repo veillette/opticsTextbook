@@ -133,7 +133,9 @@ This equation creates a bridge between three seemingly unrelated mathematical co
 
 ### A.2.2 Understanding Why Euler's Formula Works
 
-```{dropdown} Mathematical Proof Using Taylor Series
+```{dropdown}
+**Mathematical Proof Using Taylor Series**
+
 The proof relies on the Taylor series expansions of the exponential and trigonometric functions:
 
 $$e^x = 1 + x + \frac{x^2}{2!} + \frac{x^3}{3!} + \frac{x^4}{4!} + \frac{x^5}{5!} + \cdots$$
@@ -747,7 +749,9 @@ c) $(1 + i)^4$
 d) $\sqrt{3 + 4i}$
 ```
 
-```{dropdown} Solution to Problem A.1
+```{dropdown}
+**Solution to Problem A.1**
+
 a) $(3 + 2i)(1 - 4i) = 3 - 12i + 2i - 8i^2 = 3 - 10i + 8 = 11 - 10i$
 
 b) $\frac{2 + 3i}{1 - i} = \frac{(2 + 3i)(1 + i)}{(1 - i)(1 + i)} = \frac{2 + 2i + 3i - 3}{1 + 1} = \frac{-1 + 5i}{2} = -\frac{1}{2} + \frac{5}{2}i$
@@ -776,7 +780,9 @@ c) For what values of $\phi$ is the intensity minimum?
 d) Plot the intensity as a function of $\phi$ from 0 to $4\pi$
 ```
 
-```{dropdown} Solution to Problem A.2
+```{dropdown}
+**Solution to Problem A.2**
+
 a) $E_{\text{total}} = E_0(1 + e^{i\phi}) = E_0(1 + \cos\phi + i\sin\phi)$
 
    $|E_{\text{total}}|^2 = E_0^2[(1 + \cos\phi)^2 + \sin^2\phi] = E_0^2[1 + 2\cos\phi + \cos^2\phi + \sin^2\phi]$
@@ -802,7 +808,9 @@ c) How far does light travel before its intensity drops to 1/e of its initial va
 d) What fraction of the intensity remains after traveling 10 μm?
 ```
 
-```{dropdown} Solution to Problem A.3
+```{dropdown}
+**Solution to Problem A.3**
+
 a) Phase velocity: $v = c/n = 3 \times 10^8 / 1.6 = 1.875 \times 10^8$ m/s
 
 b) Absorption coefficient: $\alpha = 2\omega k/c = 4\pi k/\lambda_0 = 4\pi \times 0.05/(600 \times 10^{-9}) = 1.047 \times 10^6$ m$^{-1}$
@@ -825,7 +833,9 @@ b) This light passes through a half-wave plate with fast axis at 45°. Find the 
 c) What angle does the final polarization make with the x-axis?
 ```
 
-```{dropdown} Solution to Problem A.4
+```{dropdown}
+**Solution to Problem A.4**
+
 a) $\vec{E}_0 = E_0(\frac{\sqrt{3}}{2}\hat{x} + \frac{1}{2}\hat{y})$
 
 b) A half-wave plate at 45° can be represented by the Jones matrix:

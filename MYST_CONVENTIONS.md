@@ -1,0 +1,237 @@
+# MyST Markdown Conventions for Optics Textbook
+
+This document defines the MyST Markdown conventions used throughout this
+textbook to ensure consistency and proper rendering.
+
+## Fence Syntax Convention
+
+### Use Backtick Fences (` ``` `) for:
+
+**All MyST directives AND code blocks** - Backtick fences work for both MyST
+directives and code blocks, providing better IDE support and syntax
+highlighting:
+
+- **Admonitions**: `note`, `warning`, `important`, `tip`, `caution`,
+  `attention`, `danger`, `error`, `hint`, `seealso`
+- **Collapsible content**: `dropdown`, `card`, `tab-set`, `tab-item`
+- **Figures and media**: `figure`, `subfigure`, `video`
+- **Mathematical content**: `proof`, `theorem`, `lemma`, `definition`,
+  `example`, `exercise`
+- **Layout elements**: `grid`, `column`, `margin`, `sidebar`
+- **Special blocks**: `epigraph`, `bibliography`, `glossary`
+- **Code blocks**: Python, MATLAB, shell commands, etc.
+
+**Rationale**: Backtick fences provide better IDE support, syntax highlighting,
+and editor tooling compared to colon fences. While colon fences may render
+slightly better on GitHub, the improved editing experience is more important for
+active development.
+
+**Example**:
+
+```markdown
+```{note}
+This is an important concept in wave optics.
+```
+
+```{dropdown}
+**Solution to Problem 1**
+
+**Step 1**: Apply Snell's law...
+```
+
+```{figure} path/to/image.png
+:name: fig-diffraction
+:align: center
+
+Caption describing the diffraction pattern.
+```
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+
+wavelength = 633e-9  # HeNe laser wavelength in meters
+k = 2 * np.pi / wavelength
+```
+
+```
+
+### Use Colon Fences (`:::`) only for:
+
+**Legacy compatibility** - Colon fences are supported but not preferred. Convert
+them to backtick fences when editing files
+
+### Directive Syntax Rules
+
+1. **Title placement**: Place directive titles on a separate line after the opening fence, formatted in bold:
+   ```markdown
+   ```{dropdown}
+   **Solution to Problem 1**
+
+   Content here...
+   ```
+
+   ```
+
+2. **Options**: Use colon-prefixed options on separate lines:
+   ```markdown
+   ```{figure} image.png
+   :name: fig-label
+   :align: center
+   :width: 80%
+
+   Caption text here.
+   ```
+
+   ```
+
+3. **Nesting**: Indent nested directives by 3 spaces:
+   ```markdown
+   ```{admonition} Example
+   This is the outer content.
+
+      ```{note}
+      This is nested inside.
+      ```
+   ```
+
+   ```
+
+## Specific Directive Conventions
+
+### Dropdowns
+
+Used for collapsible solutions, proofs, and supplementary material:
+
+```markdown
+```{dropdown}
+**Solution to Problem X**
+
+Detailed solution content...
+```
+
+```
+
+### Figures
+
+Always include name, alignment, and descriptive caption:
+
+```markdown
+```{figure} path/to/image.png
+:name: fig-unique-label
+:align: center
+:width: 70%
+
+Descriptive caption explaining what the figure shows and its relevance.
+```
+
+```
+
+### Admonitions
+
+Use appropriate semantic types:
+
+- `note`: General information or clarification
+- `important`: Critical concepts students must understand
+- `warning`: Common mistakes or pitfalls to avoid
+- `tip`: Helpful hints or best practices
+- `example`: Worked examples (use `admonition` with custom title for numbered
+  examples)
+
+```markdown
+```{note}
+Maxwell's equations are linear, so superposition applies.
+```
+
+```{warning}
+**Common Mistake**: Don't confuse phase velocity with group velocity.
+```
+
+```{admonition} Example 4.2: Double-Slit Interference
+:class: example
+
+Calculate the fringe spacing for...
+```
+
+```
+
+### Math Blocks
+
+Use standard LaTeX delimiters for equations:
+
+- Inline: `$E = mc^2$`
+- Display (unnumbered):
+  `$$\nabla \times \vec{E} = -\frac{\partial \vec{B}}{\partial t}$$`
+- Display (numbered with label):
+  ```markdown
+  $$E = \hbar \omega$$ (eq:photon-energy)
+  ```
+
+## Cross-References
+
+- **Equations**: `{eq}eq:label`
+- **Figures**: `{numref}fig-label` or `{ref}fig-label`
+- **Sections**: `{ref}section-label`
+- **Tables**: `{numref}table-label`
+
+## Linting Rules
+
+The project includes automated linting to enforce these conventions:
+
+1. **Directive fence check**: All MyST directives must use backtick fences (
+   ` ``` `)
+2. **Title placement**: Dropdown and card titles must be on separate line after
+   opening fence
+3. **Figure captions**: All figures must have non-empty caption text
+4. **Directive closure**: All directives must be properly closed with matching
+   fence
+
+Run linting with:
+
+```bash
+python3 scripts/lint_myst_markdown.py
+```
+
+## Migration from Old Syntax
+
+If you find old colon-fence directives (`:::{dropdown}`), convert them to
+backtick fences:
+
+**Before**:
+
+```markdown
+:::{dropdown}
+**Title Text**
+
+Content
+:::
+```
+
+**After**:
+
+```markdown
+```{dropdown}
+**Title Text**
+
+Content
+```
+
+```
+
+## Why These Conventions?
+
+1. **Consistency**: Uniform syntax throughout the book aids readability and
+   maintenance
+2. **IDE Support**: Backtick fences provide better syntax highlighting and
+   editor tooling
+3. **Developer Experience**: Better editing experience is more important than
+   slightly better GitHub rendering
+4. **Maintainability**: Automated linting catches errors early
+5. **Standards compliance**: Follows MyST documentation patterns
+
+## References
+
+- [MyST Guide: Directives and Roles](https://mystmd.org/guide/directives-and-roles)
+- [MyST Guide: Dropdowns, Cards, and Tabs](https://mystmd.org/guide/dropdowns-cards-and-tabs)
+- [MyST Guide: Figures](https://mystmd.org/guide/figures)
+- [MyST Syntax Guide](https://mystmd.org/guide/syntax-overview)
