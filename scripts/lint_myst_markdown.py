@@ -37,6 +37,10 @@ from pathlib import Path
 from collections import defaultdict
 from datetime import datetime
 
+# Import shared utilities
+from shared_utils import ensure_directory
+from report_utils import ReportGenerator, MarkdownReportBuilder
+
 class MystLinter:
     def __init__(self, fix_mode=False):
         self.fix_mode = fix_mode
@@ -464,38 +468,65 @@ def print_summary(all_issues, files_with_issues, total_files, fix_mode):
         print(f"\n💡 {fixable_count} issues can be automatically fixed with --fix")
 
 def save_report(all_issues, output_file):
-    """Save detailed report to file."""
-    os.makedirs('reports', exist_ok=True)
+    """Save detailed report to file using shared report utilities."""
+    # Extract report name from output_file
+    report_name = Path(output_file).stem
 
-    if not output_file.startswith('reports/'):
-        output_file = os.path.join('reports', os.path.basename(output_file))
+    # Create report generator
+    gen = ReportGenerator(report_name)
 
-    timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    # Build markdown report
+    builder = MarkdownReportBuilder("MyST Markdown Lint Report")
 
-    with open(output_file, 'w', encoding='utf-8') as f:
-        f.write(f"# MyST Markdown Lint Report\n\n")
-        f.write(f"Generated: {timestamp}\n\n")
+    # Add summary
+    total_issues = sum(len(issues) for issues in all_issues.values())
+    builder.add_section("Summary", level=2)
+    builder.add_list([
+        f"Total files checked: {len(all_issues)}",
+        f"Total issues found: {total_issues}"
+    ])
 
-        total_issues = sum(len(issues) for issues in all_issues.values())
-        f.write(f"## Summary\n\n")
-        f.write(f"- Total files checked: {len(all_issues)}\n")
-        f.write(f"- Total issues found: {total_issues}\n\n")
+    # Add issues by file
+    builder.add_section("Issues by File", level=2)
 
-        f.write(f"## Issues by File\n\n")
+    for file_path in sorted(all_issues.keys()):
+        issues = all_issues[file_path]
+        builder.add_section(file_path, level=3)
+        builder.add_text(f"Found {len(issues)} issues:\n")
 
-        for file_path in sorted(all_issues.keys()):
-            issues = all_issues[file_path]
-            f.write(f"### {file_path}\n\n")
-            f.write(f"Found {len(issues)} issues:\n\n")
+        issue_lines = []
+        for issue in issues:
+            severity = issue.get('severity', 'info').upper()
+            fixable = " [FIXABLE]" if issue.get('fixable') else ""
+            issue_lines.append(f"**Line {issue['line']}** [{severity}]{fixable}: {issue['message']}")
 
-            for issue in issues:
-                severity = issue.get('severity', 'info').upper()
-                fixable = " [FIXABLE]" if issue.get('fixable') else ""
-                f.write(f"- **Line {issue['line']}** [{severity}]{fixable}: {issue['message']}\n")
+        builder.add_list(issue_lines)
 
-            f.write("\n")
+    # Write markdown report
+    markdown_content = builder.build()
+    filepath = gen.write_markdown(markdown_content)
 
-    return output_file
+    # Also write JSON report for machine processing
+    json_data = {
+        'total_files': len(all_issues),
+        'total_issues': total_issues,
+        'files': {
+            file_path: [
+                {
+                    'line': issue['line'],
+                    'type': issue['type'],
+                    'severity': issue.get('severity', 'info'),
+                    'message': issue['message'],
+                    'fixable': issue.get('fixable', False)
+                }
+                for issue in issues
+            ]
+            for file_path, issues in all_issues.items()
+        }
+    }
+    gen.write_json(json_data)
+
+    return str(filepath)
 
 def main():
     parser = argparse.ArgumentParser(

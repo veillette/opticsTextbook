@@ -37,7 +37,8 @@ from typing import List, Dict, Tuple, Optional
 # Import shared utilities
 from shared_utils import (
     CHAPTERS, IMAGE_EXTENSIONS,
-    to_snake_case, is_properly_named, extract_figure_references
+    to_snake_case, is_properly_named, extract_figure_references,
+    extract_descriptive_name, find_markdown_files_in_chapter
 )
 
 def get_all_chapter_images(chapter_dir: Path, chapter_num: int) -> List[Dict]:
@@ -59,44 +60,6 @@ def get_all_chapter_images(chapter_dir: Path, chapter_num: int) -> List[Dict]:
 
     return images
 
-def find_markdown_files(chapter_dir: Path) -> List[Path]:
-    """Find all markdown files in a chapter directory."""
-    md_files = []
-
-    # Main chapter file
-    md_files.extend(chapter_dir.glob("*.md"))
-
-    # Problems directory
-    problems_dir = chapter_dir / "Problems"
-    if problems_dir.exists():
-        md_files.extend(problems_dir.glob("*.md"))
-
-    return sorted(md_files)
-
-def extract_descriptive_name(filename: str) -> str:
-    """Extract a descriptive name from a filename, handling various formats."""
-    # Remove extension
-    name = os.path.splitext(filename)[0]
-
-    # Remove chapter/number prefix if present
-    name = re.sub(r'^\d{1,2}_\d{1,2}_', '', name)
-
-    # Remove vestigial prefixes like "Fiber_03_" or "2_05a_"
-    name = re.sub(r'^[A-Za-z]+_\d+[a-z]?_', '', name)
-    name = re.sub(r'^\d+_\d+[a-z]?_', '', name)
-
-    # Remove date suffixes like _210308
-    name = re.sub(r'_\d{6}$', '', name)
-
-    # Convert to snake_case
-    name = to_snake_case(name)
-
-    # If name is empty or too short, use a generic name
-    if len(name) < 2:
-        name = "figure"
-
-    return name
-
 def build_chapter_reference_order(chapter_dir: Path, chapter_num: int,
                                    images_dir: Path, verbose: bool = False) -> Dict:
     """
@@ -106,7 +69,7 @@ def build_chapter_reference_order(chapter_dir: Path, chapter_num: int,
         print(f"\n  Building reference order for Chapter {chapter_num}...")
 
     # Find all markdown files
-    md_files = find_markdown_files(chapter_dir)
+    md_files = find_markdown_files_in_chapter(chapter_dir)
 
     # Track all image references in order
     all_references = []
@@ -210,7 +173,7 @@ def update_markdown_files(chapter_dir: Path, reference_mapping: Dict, dry_run: b
 
     print(f"\n  {'[DRY RUN] ' if dry_run else ''}Updating markdown references...")
 
-    md_files = find_markdown_files(chapter_dir)
+    md_files = find_markdown_files_in_chapter(chapter_dir)
 
     for md_file in md_files:
         with open(md_file, 'r', encoding='utf-8') as f:

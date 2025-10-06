@@ -1,5 +1,9 @@
 {
+  "_comment": "Configuration file for optics textbook utility scripts",
+  "_version": "1.0.0",
+
   "chapters": {
+    "_comment": "Chapter mappings: Each chapter has a directory and main file. Keys are chapter numbers (1-11).",
     "1": {
       "dir": "content/Chap01Basics",
       "file": "Basics.md"
@@ -45,6 +49,7 @@
       "file": "RayMatrix.md"
     }
   },
+  "_image_extensions_comment": "Supported image file extensions (without leading dot)",
   "image_extensions": [
     "png",
     "jpg",
@@ -53,12 +58,18 @@
     "svg",
     "webp"
   ],
+  "_naming_convention_comment": "Template for standardized image filenames. Available placeholders: {chapter}, {position}, {name}, {ext}. Example: 03_07_lens_diagram.png",
   "naming_convention": "{chapter:02d}_{position:02d}_{name}.{ext}",
+  "_image_optimization_comment": "Settings for image compression and optimization (used by optimize-images.js)",
   "image_optimization": {
+    "_max_dimension_note": "Maximum width or height in pixels. Larger images will be resized.",
     "max_dimension": 1920,
+    "_quality_note": "JPEG/WebP quality (0-100). 80 provides good balance of size vs quality.",
     "quality": 80,
+    "_min_size_mb_note": "Only optimize images larger than this threshold (in megabytes)",
     "min_size_mb": 0.5
   },
+  "_reports_comment": "Configuration for report generation. All reports are saved to the output_dir (created automatically if needed).",
   "reports": {
     "output_dir": "reports",
     "formats": [

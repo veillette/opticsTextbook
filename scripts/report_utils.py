@@ -4,6 +4,91 @@ Standardized report generation utilities for optics textbook scripts.
 
 This module provides consistent report generation across all scripts,
 with support for multiple output formats and standardized file locations.
+
+Key Features:
+    - Multi-format report generation (Markdown, JSON, plain text)
+    - Centralized output directory (reports/)
+    - Timestamp support for versioned reports
+    - Fluent API for building markdown reports
+    - Standardized validation and file list report templates
+    - Automatic directory creation
+
+Classes:
+    ReportGenerator: Main class for generating reports in multiple formats
+    MarkdownReportBuilder: Fluent API for building structured markdown reports
+
+Utility Functions:
+    create_validation_report: Generate standardized validation reports
+    create_file_list_report: Generate simple file listing reports
+    print_report_paths: Pretty-print generated report paths
+
+Usage Examples:
+
+    Basic report generation:
+        >>> from report_utils import ReportGenerator
+        >>>
+        >>> gen = ReportGenerator("my_report")
+        >>> gen.write_markdown("# Results\\n\\nAll checks passed.")
+        >>> gen.write_json({"status": "success", "count": 42})
+        >>> gen.write_text(["file1.txt", "file2.txt"])
+
+    Building structured markdown:
+        >>> from report_utils import MarkdownReportBuilder
+        >>>
+        >>> builder = MarkdownReportBuilder("Analysis Report")
+        >>> builder.add_section("Findings")
+        >>> builder.add_list(["Finding 1", "Finding 2"])
+        >>> builder.add_table(["File", "Issues"], [
+        ...     ["test.md", "3"],
+        ...     ["example.md", "1"]
+        ... ])
+        >>> markdown = builder.build()
+        >>>
+        >>> gen = ReportGenerator("analysis")
+        >>> gen.write_markdown(markdown)
+
+    Validation reports:
+        >>> from report_utils import create_validation_report, ReportGenerator
+        >>>
+        >>> issues = {
+        ...     "missing_refs": ["ref1", "ref2"],
+        ...     "broken_links": ["link1"]
+        ... }
+        >>> summary = {"total_issues": 3, "files_checked": 10}
+        >>>
+        >>> markdown, json_data = create_validation_report(
+        ...     "Validation Results", issues, summary
+        ... )
+        >>>
+        >>> gen = ReportGenerator("validation_report")
+        >>> gen.write_all(markdown, json_data)
+
+    File list reports:
+        >>> from report_utils import create_file_list_report, ReportGenerator
+        >>>
+        >>> files = ["img1.png", "img2.png", "img3.png"]
+        >>> markdown, text = create_file_list_report(
+        ...     "Unreferenced Images",
+        ...     files,
+        ...     description="Images not referenced in any markdown file"
+        ... )
+        >>>
+        >>> gen = ReportGenerator("unreferenced_images")
+        >>> gen.write_markdown(markdown)
+        >>> gen.write_text(text)
+
+Integration:
+    This module works seamlessly with shared_utils.py for validation and
+    file operations. All reports are saved to the reports/ directory by default,
+    which is automatically created if it doesn't exist.
+
+    Reports can include timestamps for versioning:
+        >>> gen = ReportGenerator("deletion_log")
+        >>> gen.write_json(data, include_timestamp=True)
+        # Creates: reports/deletion_log_20251006_143052.json
+
+Author: Optics Textbook Scripts Package
+Version: 1.0.0
 """
 
 import json

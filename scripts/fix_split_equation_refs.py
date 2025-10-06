@@ -15,6 +15,9 @@ import sys
 import argparse
 from pathlib import Path
 
+# Import shared utilities for logging support
+from shared_utils import logger
+
 def fix_split_references(content):
     """
     Fix split equation and reference patterns in content.

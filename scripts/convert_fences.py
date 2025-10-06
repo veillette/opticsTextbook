@@ -22,6 +22,9 @@ import argparse
 from pathlib import Path
 from collections import defaultdict
 
+# Import shared utilities for logging support
+from shared_utils import logger
+
 class FenceConverter:
     """Converts colon directive fences to backtick fences."""
 

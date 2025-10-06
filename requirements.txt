@@ -9,3 +9,4 @@ sphinx-exercise
 sphinx-proof
 sphinx-thebe
 jupyter-book
+pytest
