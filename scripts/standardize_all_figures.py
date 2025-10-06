@@ -34,104 +34,11 @@ from pathlib import Path
 from collections import defaultdict
 from typing import List, Dict, Tuple, Optional
 
-# Define chapter mapping
-CHAPTERS = {
-    1: ("content/Chap01Basics", "Basics.md"),
-    2: ("content/Chap02GeometricalOptics", "GeometricalOptics.md"),
-    3: ("content/Chap03OpticalInstrument", "OpticalInstruments.md"),
-    4: ("content/Chap04Polarization", "Polarization.md"),
-    5: ("content/Chap05Wave", "Wave.md"),
-    6: ("content/Chap06Interference", "InterferenceCoherence.md"),
-    7: ("content/Chap07Diffraction", "DiffractiveOptics.md"),
-    8: ("content/Chap08Lasers", "Lasers.md"),
-    9: ("content/Chap09AdvancedInstruments", "AdvancedInstruments.md"),
-    10: ("content/Chap10FiberOptics", "FiberOptics.md"),
-    11: ("content/Chap11RayMatrix", "RayMatrix.md"),
-}
-
-IMAGE_EXTENSIONS = ['png', 'jpg', 'jpeg', 'gif', 'svg', 'webp']
-
-def to_snake_case(name):
-    """Convert name to snake_case."""
-    # Remove any existing chapter/number prefix
-    name = re.sub(r'^\d{2}_\d{2}_', '', name)
-
-    # Insert underscore before uppercase letters
-    s1 = re.sub('(.)([A-Z][a-z]+)', r'\1_\2', name)
-    s2 = re.sub('([a-z0-9])([A-Z])', r'\1_\2', s1)
-
-    # Convert to lowercase
-    result = s2.lower()
-
-    # Replace hyphens, spaces, and dots with underscores
-    result = result.replace('-', '_').replace(' ', '_').replace('.', '_')
-
-    # Remove multiple consecutive underscores
-    result = re.sub(r'_+', '_', result)
-
-    # Remove leading/trailing underscores
-    result = result.strip('_')
-
-    # Fix common acronyms
-    result = result.replace('si_o2', 'sio2').replace('si_o_2', 'sio2')
-
-    return result
-
-def is_properly_named(filename: str, chapter_num: int) -> bool:
-    """Check if a filename follows the naming convention."""
-    pattern = rf'^{chapter_num:02d}_\d{{2}}_[a-z0-9_]+\.\w+$'
-    return bool(re.match(pattern, filename))
-
-def extract_figure_references(md_file: Path, images_dir: Path) -> List[Dict]:
-    """Extract all figure references from a markdown file in order of appearance."""
-    references = []
-
-    try:
-        with open(md_file, 'r', encoding='utf-8') as f:
-            lines = f.readlines()
-
-        # MyST figure/image patterns
-        patterns = [
-            r'```\{figure\}\s+([^\s\n]+)',          # ```{figure} path
-            r'```\{image\}\s+([^\s\n]+)',           # ```{image} path
-            r'!\[.*?\]\(([^)]+)\)',                  # ![alt](path)
-            r'<img[^>]+src=["\']([^"\']+)["\']',    # <img src="path">
-        ]
-
-        for line_num, line in enumerate(lines, 1):
-            for pattern in patterns:
-                matches = re.findall(pattern, line, re.IGNORECASE)
-                for match in matches:
-                    # Clean up the path
-                    path = match.split('#')[0].split('?')[0].strip()
-
-                    # Skip URLs
-                    if path.startswith(('http://', 'https://', 'ftp://')):
-                        continue
-
-                    # Extract filename
-                    if 'Images/' in path:
-                        filename = path.split('Images/')[-1]
-                    elif '../Images/' in path:
-                        filename = path.split('../Images/')[-1]
-                    else:
-                        filename = os.path.basename(path)
-
-                    # Check if this image file exists
-                    image_path = images_dir / filename
-                    if image_path.exists():
-                        references.append({
-                            'filename': filename,
-                            'line': line_num,
-                            'line_content': line.strip(),
-                            'full_path': image_path,
-                            'original_reference': path
-                        })
-
-    except Exception as e:
-        print(f"  ⚠️  Error reading {md_file.name}: {e}")
-
-    return references
+# Import shared utilities
+from shared_utils import (
+    CHAPTERS, IMAGE_EXTENSIONS,
+    to_snake_case, is_properly_named, extract_figure_references
+)
 
 def get_all_chapter_images(chapter_dir: Path, chapter_num: int) -> List[Dict]:
     """Get all images in a chapter's Images directory."""

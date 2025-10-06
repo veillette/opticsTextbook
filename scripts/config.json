@@ -1,0 +1,70 @@
+{
+  "chapters": {
+    "1": {
+      "dir": "content/Chap01Basics",
+      "file": "Basics.md"
+    },
+    "2": {
+      "dir": "content/Chap02GeometricalOptics",
+      "file": "GeometricalOptics.md"
+    },
+    "3": {
+      "dir": "content/Chap03OpticalInstrument",
+      "file": "OpticalInstruments.md"
+    },
+    "4": {
+      "dir": "content/Chap04Polarization",
+      "file": "Polarization.md"
+    },
+    "5": {
+      "dir": "content/Chap05Wave",
+      "file": "Wave.md"
+    },
+    "6": {
+      "dir": "content/Chap06Interference",
+      "file": "InterferenceCoherence.md"
+    },
+    "7": {
+      "dir": "content/Chap07Diffraction",
+      "file": "DiffractiveOptics.md"
+    },
+    "8": {
+      "dir": "content/Chap08Lasers",
+      "file": "Lasers.md"
+    },
+    "9": {
+      "dir": "content/Chap09AdvancedInstruments",
+      "file": "AdvancedInstruments.md"
+    },
+    "10": {
+      "dir": "content/Chap10FiberOptics",
+      "file": "FiberOptics.md"
+    },
+    "11": {
+      "dir": "content/Chap11RayMatrix",
+      "file": "RayMatrix.md"
+    }
+  },
+  "image_extensions": [
+    "png",
+    "jpg",
+    "jpeg",
+    "gif",
+    "svg",
+    "webp"
+  ],
+  "naming_convention": "{chapter:02d}_{position:02d}_{name}.{ext}",
+  "image_optimization": {
+    "max_dimension": 1920,
+    "quality": 80,
+    "min_size_mb": 0.5
+  },
+  "reports": {
+    "output_dir": "reports",
+    "formats": [
+      "markdown",
+      "json",
+      "text"
+    ]
+  }
+}

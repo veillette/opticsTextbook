@@ -30,6 +30,9 @@ from pathlib import Path
 from collections import defaultdict
 from datetime import datetime
 
+# Import shared utilities
+from report_utils import ReportGenerator
+
 def read_file_list(filename):
     """Read a list of files from a text file, ignoring comments."""
     if not os.path.exists(filename):
@@ -169,11 +172,8 @@ def preview_deletion(analysis, delete_images=True, delete_ai=True):
 
 def create_backup_log(analysis, delete_images=True, delete_ai=True):
     """Create a backup log of what will be deleted."""
-    # Create reports directory if it doesn't exist
-    os.makedirs('reports', exist_ok=True)
-
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-    log_file = f"reports/deletion_log_{timestamp}.json"
+    report_gen = ReportGenerator(f"deletion_log_{timestamp}")
 
     backup_data = {
         'timestamp': timestamp,
@@ -195,10 +195,8 @@ def create_backup_log(analysis, delete_images=True, delete_ai=True):
         }
     }
 
-    with open(log_file, 'w', encoding='utf-8') as f:
-        json.dump(backup_data, f, indent=2, ensure_ascii=False)
-
-    return log_file
+    log_file = report_gen.write_json(backup_data)
+    return str(log_file)
 
 def delete_files(file_paths, file_type, dry_run=False):
     """Delete a list of files with progress tracking."""

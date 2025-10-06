@@ -34,43 +34,8 @@ import argparse
 from pathlib import Path
 from collections import defaultdict
 
-# Define chapter mapping
-CHAPTERS = {
-    1: ("content/Chap01Basics", "Basics.md"),
-    2: ("content/Chap02GeometricalOptics", "GeometricalOptics.md"),
-    3: ("content/Chap03OpticalInstrument", "OpticalInstruments.md"),
-    4: ("content/Chap04Polarization", "Polarization.md"),
-    5: ("content/Chap05Wave", "Wave.md"),
-    6: ("content/Chap06Interference", "InterferenceCoherence.md"),
-    7: ("content/Chap07Diffraction", "DiffractiveOptics.md"),
-    8: ("content/Chap08Lasers", "Lasers.md"),
-    9: ("content/Chap09AdvancedInstruments", "AdvancedInstruments.md"),
-    10: ("content/Chap10FiberOptics", "FiberOptics.md"),
-    11: ("content/Chap11RayMatrix", "RayMatrix.md"),
-}
-
-def to_snake_case(name):
-    """Convert name to snake_case."""
-    # Remove extension if present
-    name = os.path.splitext(name)[0]
-
-    # Insert underscore before uppercase letters
-    s1 = re.sub('(.)([A-Z][a-z]+)', r'\1_\2', name)
-    s2 = re.sub('([a-z0-9])([A-Z])', r'\1_\2', s1)
-
-    # Convert to lowercase
-    result = s2.lower()
-
-    # Replace hyphens and spaces with underscores
-    result = result.replace('-', '_').replace(' ', '_')
-
-    # Remove multiple consecutive underscores
-    result = re.sub(r'_+', '_', result)
-
-    # Remove leading/trailing underscores
-    result = result.strip('_')
-
-    return result
+# Import shared utilities
+from shared_utils import CHAPTERS, to_snake_case
 
 def get_existing_figures(chapter_dir, chapter_num):
     """Get all existing figures in a chapter sorted by position number."""

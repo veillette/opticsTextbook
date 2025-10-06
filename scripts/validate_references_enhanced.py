@@ -30,21 +30,9 @@ from collections import defaultdict, Counter
 from datetime import datetime
 import tempfile
 
-def run_myst_command(command, timeout=180):
-    """Run a MyST command and capture detailed output."""
-    try:
-        result = subprocess.run(
-            command,
-            capture_output=True,
-            text=True,
-            timeout=timeout,
-            cwd=os.getcwd()
-        )
-        return result.stdout, result.stderr, result.returncode
-    except subprocess.TimeoutExpired:
-        return "", f"Command timed out after {timeout} seconds", 1
-    except FileNotFoundError:
-        return "", "Command not found", 1
+# Import shared utilities
+from shared_utils import run_myst_command
+from report_utils import ReportGenerator, MarkdownReportBuilder, create_validation_report
 
 def run_enhanced_myst_validation():
     """Run MyST validation with enhanced reporting."""
