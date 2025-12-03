@@ -1,8 +1,8 @@
 // Service Worker for Optics Textbook PWA
-// Version: 1.0.0
+// Version: 1.0.1
 
-const CACHE_NAME = 'optics-textbook-v1';
-const RUNTIME_CACHE = 'optics-runtime-v1';
+const CACHE_NAME = 'optics-textbook-v2';
+const RUNTIME_CACHE = 'optics-runtime-v2';
 
 // Core assets to cache immediately on installation
 const CORE_ASSETS = [
@@ -103,8 +103,8 @@ self.addEventListener('fetch', (event) => {
         // Not in cache, fetch from network
         return fetch(request)
           .then((networkResponse) => {
-            // Cache successful responses
-            if (networkResponse && networkResponse.status === 200) {
+            // Only cache successful responses (not 404s or other errors)
+            if (networkResponse && networkResponse.status === 200 && networkResponse.type !== 'error') {
               const responseToCache = networkResponse.clone();
 
               caches.open(RUNTIME_CACHE)
@@ -114,6 +114,9 @@ self.addEventListener('fetch', (event) => {
                 .catch(err => {
                   console.warn('[Service Worker] Failed to cache response:', err);
                 });
+            } else if (networkResponse && networkResponse.status === 404) {
+              // Don't cache 404 responses - let them retry on next visit
+              console.log('[Service Worker] Not caching 404 for:', request.url);
             }
 
             return networkResponse;
