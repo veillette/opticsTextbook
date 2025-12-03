@@ -26,9 +26,16 @@ The field of optics continues to evolve rapidly, with new discoveries and applic
 
 ## Accessing This Textbook
 
-This textbook is available in multiple formats:
-- **PDF Version**: Download a complete PDF of the textbook using the download button at the top right of the page
-- **Source Files**: Markdown source files are also available for download using the button on the top right
+This textbook is available online and can be accessed in multiple formats:
+- **Web Version**: Read directly in your browser with full navigation and search capabilities
+- **PDF Version**: A PDF download option will appear at the top right once generated (requires LaTeX installation)
+- **Source Files**: Markdown source files are available via the repository linked above
+
+To generate the PDF locally, install LaTeX dependencies:
+```bash
+sudo apt-get install latexmk texlive-latex-extra texlive-fonts-recommended
+npx mystmd build --pdf
+```
 
 This book is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
 
