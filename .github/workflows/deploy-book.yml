@@ -35,8 +35,12 @@ jobs:
         
     - name: Build book
       run: |
-        cd ${{ env.BOOK_DIR }}
-        jupyter-book build .
+        jupyter-book build ${{ env.BOOK_DIR }} --all
+
+    - name: List build output
+      run: |
+        echo "Checking build output..."
+        ls -la _build/html/ || echo "ERROR: _build/html/ does not exist!"
 
     - name: Deploy to GitHub Pages
       if: github.ref == 'refs/heads/concise' && github.event_name == 'push'  # Only deploy on push to concise branch
