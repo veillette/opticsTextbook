@@ -28,8 +28,24 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
+      - name: Record build start time
+        run: |
+          echo "BUILD_START_TIME=$(date +%s)" >> $GITHUB_ENV
+          echo "STEP_START_TIME=$(date +%s)" >> $GITHUB_ENV
+          echo "# 📊 Build Performance Metrics" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "Build started at: $(date -u '+%Y-%m-%d %H:%M:%S UTC')" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+
       - name: Checkout repository
         uses: actions/checkout@v4
+
+      - name: Record checkout time
+        run: |
+          STEP_END_TIME=$(date +%s)
+          DURATION=$((STEP_END_TIME - STEP_START_TIME))
+          echo "CHECKOUT_TIME=$DURATION" >> $GITHUB_ENV
+          echo "STEP_START_TIME=$(date +%s)" >> $GITHUB_ENV
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
@@ -40,8 +56,22 @@ jobs:
           node-version: ${{ env.NODE_VERSION }}
           cache: 'npm'
 
+      - name: Record setup time
+        run: |
+          STEP_END_TIME=$(date +%s)
+          DURATION=$((STEP_END_TIME - STEP_START_TIME))
+          echo "SETUP_TIME=$DURATION" >> $GITHUB_ENV
+          echo "STEP_START_TIME=$(date +%s)" >> $GITHUB_ENV
+
       - name: Install dependencies
         run: npm ci
+
+      - name: Record npm install time
+        run: |
+          STEP_END_TIME=$(date +%s)
+          DURATION=$((STEP_END_TIME - STEP_START_TIME))
+          echo "NPM_INSTALL_TIME=$DURATION" >> $GITHUB_ENV
+          echo "STEP_START_TIME=$(date +%s)" >> $GITHUB_ENV
 
       - name: Cache LaTeX installation
         uses: actions/cache@v4
@@ -74,6 +104,13 @@ jobs:
           sudo apt-get install -y imagemagick
           echo "✅ LaTeX packages installed and will be cached for next run"
 
+      - name: Record LaTeX setup time
+        run: |
+          STEP_END_TIME=$(date +%s)
+          DURATION=$((STEP_END_TIME - STEP_START_TIME))
+          echo "LATEX_SETUP_TIME=$DURATION" >> $GITHUB_ENV
+          echo "STEP_START_TIME=$(date +%s)" >> $GITHUB_ENV
+
       - name: Install Typst
         uses: typst-community/setup-typst@v4
         with:
@@ -97,10 +134,24 @@ jobs:
           echo "Build PDF Assets, docx, and md"
           npx myst build -a
 
+      - name: Record PDF/DOCX build time
+        run: |
+          STEP_END_TIME=$(date +%s)
+          DURATION=$((STEP_END_TIME - STEP_START_TIME))
+          echo "PDF_BUILD_TIME=$DURATION" >> $GITHUB_ENV
+          echo "STEP_START_TIME=$(date +%s)" >> $GITHUB_ENV
+
       - name: Generate PWA Icons
         run: |
           echo "Generating PWA icons"
           npm run generate-icons
+
+      - name: Record icon generation time
+        run: |
+          STEP_END_TIME=$(date +%s)
+          DURATION=$((STEP_END_TIME - STEP_START_TIME))
+          echo "ICON_GEN_TIME=$DURATION" >> $GITHUB_ENV
+          echo "STEP_START_TIME=$(date +%s)" >> $GITHUB_ENV
 
       - name: Build HTML Assets
         run: |
@@ -109,10 +160,24 @@ jobs:
         env:
           NODE_OPTIONS: "--max-old-space-size=4096"
 
+      - name: Record HTML build time
+        run: |
+          STEP_END_TIME=$(date +%s)
+          DURATION=$((STEP_END_TIME - STEP_START_TIME))
+          echo "HTML_BUILD_TIME=$DURATION" >> $GITHUB_ENV
+          echo "STEP_START_TIME=$(date +%s)" >> $GITHUB_ENV
+
       - name: Setup PWA
         run: |
           echo "Setting up PWA (service worker, manifest, icons)"
           npm run setup-pwa
+
+      - name: Record PWA setup time
+        run: |
+          STEP_END_TIME=$(date +%s)
+          DURATION=$((STEP_END_TIME - STEP_START_TIME))
+          echo "PWA_SETUP_TIME=$DURATION" >> $GITHUB_ENV
+          echo "STEP_START_TIME=$(date +%s)" >> $GITHUB_ENV
 
       - name: Copy PDFs and DOCX files to _build/html for download access
         run: |
@@ -153,17 +218,119 @@ jobs:
             fi
           fi
 
+      - name: Record file copy time
+        run: |
+          STEP_END_TIME=$(date +%s)
+          DURATION=$((STEP_END_TIME - STEP_START_TIME))
+          echo "FILE_COPY_TIME=$DURATION" >> $GITHUB_ENV
+          echo "STEP_START_TIME=$(date +%s)" >> $GITHUB_ENV
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: '_build/html'
 
+      - name: Record upload time
+        run: |
+          STEP_END_TIME=$(date +%s)
+          DURATION=$((STEP_END_TIME - STEP_START_TIME))
+          echo "UPLOAD_TIME=$DURATION" >> $GITHUB_ENV
+          echo "STEP_START_TIME=$(date +%s)" >> $GITHUB_ENV
+
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-        
-      - name: Deployment summary
+
+      - name: Record deployment time
         run: |
-          echo "🚀 Successfully deployed to https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}"
-          echo "Build completed at $(date)"
+          STEP_END_TIME=$(date +%s)
+          DURATION=$((STEP_END_TIME - STEP_START_TIME))
+          echo "DEPLOY_TIME=$DURATION" >> $GITHUB_ENV
+
+      - name: Build performance summary
+        if: always()
+        run: |
+          BUILD_END_TIME=$(date +%s)
+          TOTAL_TIME=$((BUILD_END_TIME - BUILD_START_TIME))
+
+          # Convert seconds to minutes:seconds format
+          format_time() {
+            local seconds=$1
+            local minutes=$((seconds / 60))
+            local remaining_seconds=$((seconds % 60))
+            printf "%dm %02ds" $minutes $remaining_seconds
+          }
+
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "## ⏱️ Build Time Breakdown" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "| Step | Duration | Percentage |" >> $GITHUB_STEP_SUMMARY
+          echo "|------|----------|------------|" >> $GITHUB_STEP_SUMMARY
+
+          # Function to add row with percentage
+          add_row() {
+            local name=$1
+            local time=$2
+            local formatted=$(format_time $time)
+            local percentage=$((time * 100 / TOTAL_TIME))
+            echo "| $name | $formatted | ${percentage}% |" >> $GITHUB_STEP_SUMMARY
+          }
+
+          add_row "Checkout repository" ${CHECKOUT_TIME:-0}
+          add_row "Setup (Pages + Node.js)" ${SETUP_TIME:-0}
+          add_row "npm install" ${NPM_INSTALL_TIME:-0}
+          add_row "LaTeX setup (cache/install)" ${LATEX_SETUP_TIME:-0}
+          add_row "Build PDF/DOCX exports" ${PDF_BUILD_TIME:-0}
+          add_row "Generate PWA icons" ${ICON_GEN_TIME:-0}
+          add_row "Build HTML site" ${HTML_BUILD_TIME:-0}
+          add_row "Setup PWA" ${PWA_SETUP_TIME:-0}
+          add_row "Copy export files" ${FILE_COPY_TIME:-0}
+          add_row "Upload artifact" ${UPLOAD_TIME:-0}
+          add_row "Deploy to Pages" ${DEPLOY_TIME:-0}
+
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "### 🎯 Total Build Time: $(format_time $TOTAL_TIME)" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "Build completed at: $(date -u '+%Y-%m-%d %H:%M:%S UTC')" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+
+          # Add performance indicators
+          echo "## 📈 Performance Indicators" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+
+          # Check if build is faster or slower than timeout
+          TIMEOUT_SECONDS=$((15 * 60))
+          USAGE_PERCENTAGE=$((TOTAL_TIME * 100 / TIMEOUT_SECONDS))
+
+          if [ $USAGE_PERCENTAGE -lt 50 ]; then
+            echo "✅ **Excellent**: Build time is ${USAGE_PERCENTAGE}% of timeout limit" >> $GITHUB_STEP_SUMMARY
+          elif [ $USAGE_PERCENTAGE -lt 75 ]; then
+            echo "✓ **Good**: Build time is ${USAGE_PERCENTAGE}% of timeout limit" >> $GITHUB_STEP_SUMMARY
+          elif [ $USAGE_PERCENTAGE -lt 90 ]; then
+            echo "⚠️ **Warning**: Build time is ${USAGE_PERCENTAGE}% of timeout limit" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "❌ **Critical**: Build time is ${USAGE_PERCENTAGE}% of timeout limit" >> $GITHUB_STEP_SUMMARY
+          fi
+
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "**Top 3 slowest steps:**" >> $GITHUB_STEP_SUMMARY
+
+          # Create sorted list of times (simple approach)
+          {
+            echo "${PDF_BUILD_TIME:-0} Build PDF/DOCX exports"
+            echo "${HTML_BUILD_TIME:-0} Build HTML site"
+            echo "${LATEX_SETUP_TIME:-0} LaTeX setup"
+            echo "${NPM_INSTALL_TIME:-0} npm install"
+            echo "${UPLOAD_TIME:-0} Upload artifact"
+            echo "${DEPLOY_TIME:-0} Deploy to Pages"
+          } | sort -rn | head -3 | while read time name; do
+            if [ $time -gt 0 ]; then
+              echo "- $name: $(format_time $time)" >> $GITHUB_STEP_SUMMARY
+            fi
+          done
+
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "---" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "🚀 Successfully deployed to https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}" >> $GITHUB_STEP_SUMMARY
         

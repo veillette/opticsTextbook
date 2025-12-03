@@ -17,8 +17,24 @@ jobs:
     timeout-minutes: 15
 
     steps:
+      - name: Record validation start time
+        run: |
+          echo "BUILD_START_TIME=$(date +%s)" >> $GITHUB_ENV
+          echo "STEP_START_TIME=$(date +%s)" >> $GITHUB_ENV
+          echo "# 📊 Validation Performance Metrics" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "Validation started at: $(date -u '+%Y-%m-%d %H:%M:%S UTC')" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+
       - name: Checkout repository
         uses: actions/checkout@v4
+
+      - name: Record checkout time
+        run: |
+          STEP_END_TIME=$(date +%s)
+          DURATION=$((STEP_END_TIME - STEP_START_TIME))
+          echo "CHECKOUT_TIME=$DURATION" >> $GITHUB_ENV
+          echo "STEP_START_TIME=$(date +%s)" >> $GITHUB_ENV
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -32,6 +48,13 @@ jobs:
           python-version: ${{ env.PYTHON_VERSION }}
           cache: 'pip'
 
+      - name: Record setup time
+        run: |
+          STEP_END_TIME=$(date +%s)
+          DURATION=$((STEP_END_TIME - STEP_START_TIME))
+          echo "SETUP_TIME=$DURATION" >> $GITHUB_ENV
+          echo "STEP_START_TIME=$(date +%s)" >> $GITHUB_ENV
+
       - name: Cache MyST build
         uses: actions/cache@v4
         with:
@@ -43,8 +66,22 @@ jobs:
       - name: Install Node.js dependencies
         run: npm ci
 
+      - name: Record npm install time
+        run: |
+          STEP_END_TIME=$(date +%s)
+          DURATION=$((STEP_END_TIME - STEP_START_TIME))
+          echo "NPM_INSTALL_TIME=$DURATION" >> $GITHUB_ENV
+          echo "STEP_START_TIME=$(date +%s)" >> $GITHUB_ENV
+
       - name: Install Python dependencies
         run: pip install -r requirements.txt
+
+      - name: Record pip install time
+        run: |
+          STEP_END_TIME=$(date +%s)
+          DURATION=$((STEP_END_TIME - STEP_START_TIME))
+          echo "PIP_INSTALL_TIME=$DURATION" >> $GITHUB_ENV
+          echo "STEP_START_TIME=$(date +%s)" >> $GITHUB_ENV
 
       - name: Run MyST Markdown Linter
         run: |
@@ -53,6 +90,13 @@ jobs:
         continue-on-error: true
         id: lint
 
+      - name: Record lint time
+        run: |
+          STEP_END_TIME=$(date +%s)
+          DURATION=$((STEP_END_TIME - STEP_START_TIME))
+          echo "LINT_TIME=$DURATION" >> $GITHUB_ENV
+          echo "STEP_START_TIME=$(date +%s)" >> $GITHUB_ENV
+
       - name: Run Reference Validation
         run: |
           echo "🔗 Validating references and citations..."
@@ -60,12 +104,26 @@ jobs:
         continue-on-error: true
         id: validate
 
+      - name: Record validation time
+        run: |
+          STEP_END_TIME=$(date +%s)
+          DURATION=$((STEP_END_TIME - STEP_START_TIME))
+          echo "VALIDATE_TIME=$DURATION" >> $GITHUB_ENV
+          echo "STEP_START_TIME=$(date +%s)" >> $GITHUB_ENV
+
       - name: Run Python Unit Tests
         run: |
           echo "🧪 Running Python unit tests..."
           pytest scripts/tests/ -v --tb=short
         continue-on-error: true
         id: tests
+
+      - name: Record test time
+        run: |
+          STEP_END_TIME=$(date +%s)
+          DURATION=$((STEP_END_TIME - STEP_START_TIME))
+          echo "TEST_TIME=$DURATION" >> $GITHUB_ENV
+          echo "STEP_START_TIME=$(date +%s)" >> $GITHUB_ENV
 
       - name: Build HTML Documentation
         run: |
@@ -75,12 +133,26 @@ jobs:
           NODE_OPTIONS: "--max-old-space-size=4096"
         id: build
 
+      - name: Record build time
+        run: |
+          STEP_END_TIME=$(date +%s)
+          DURATION=$((STEP_END_TIME - STEP_START_TIME))
+          echo "BUILD_TIME=$DURATION" >> $GITHUB_ENV
+          echo "STEP_START_TIME=$(date +%s)" >> $GITHUB_ENV
+
       - name: Run Link Checking
         run: |
           echo "🌐 Checking external links..."
           npm run checklinks || echo "⚠️ Some links may be unreachable (network issues possible)"
         continue-on-error: true
         id: links
+
+      - name: Record link check time
+        run: |
+          STEP_END_TIME=$(date +%s)
+          DURATION=$((STEP_END_TIME - STEP_START_TIME))
+          echo "LINK_CHECK_TIME=$DURATION" >> $GITHUB_ENV
+          echo "STEP_START_TIME=$(date +%s)" >> $GITHUB_ENV
 
       - name: Upload Build Artifacts
         uses: actions/upload-artifact@v4
@@ -101,6 +173,110 @@ jobs:
       - name: Validation Summary
         if: always()
         run: |
+          BUILD_END_TIME=$(date +%s)
+          TOTAL_TIME=$((BUILD_END_TIME - BUILD_START_TIME))
+
+          # Convert seconds to minutes:seconds format
+          format_time() {
+            local seconds=$1
+            local minutes=$((seconds / 60))
+            local remaining_seconds=$((seconds % 60))
+            printf "%dm %02ds" $minutes $remaining_seconds
+          }
+
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "## 📋 Validation Results" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "| Check | Status | Duration |" >> $GITHUB_STEP_SUMMARY
+          echo "|-------|--------|----------|" >> $GITHUB_STEP_SUMMARY
+
+          # Function to get status icon
+          get_status() {
+            case "$1" in
+              success) echo "✅" ;;
+              failure) echo "❌" ;;
+              skipped) echo "⏭️" ;;
+              *) echo "⚠️" ;;
+            esac
+          }
+
+          echo "| MyST Linter | $(get_status '${{ steps.lint.outcome }}') ${{ steps.lint.outcome }} | $(format_time ${LINT_TIME:-0}) |" >> $GITHUB_STEP_SUMMARY
+          echo "| Reference Validation | $(get_status '${{ steps.validate.outcome }}') ${{ steps.validate.outcome }} | $(format_time ${VALIDATE_TIME:-0}) |" >> $GITHUB_STEP_SUMMARY
+          echo "| Python Tests | $(get_status '${{ steps.tests.outcome }}') ${{ steps.tests.outcome }} | $(format_time ${TEST_TIME:-0}) |" >> $GITHUB_STEP_SUMMARY
+          echo "| Build HTML | $(get_status '${{ steps.build.outcome }}') ${{ steps.build.outcome }} | $(format_time ${BUILD_TIME:-0}) |" >> $GITHUB_STEP_SUMMARY
+          echo "| Link Checking | $(get_status '${{ steps.links.outcome }}') ${{ steps.links.outcome }} | $(format_time ${LINK_CHECK_TIME:-0}) |" >> $GITHUB_STEP_SUMMARY
+
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "## ⏱️ Performance Breakdown" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "| Step | Duration | Percentage |" >> $GITHUB_STEP_SUMMARY
+          echo "|------|----------|------------|" >> $GITHUB_STEP_SUMMARY
+
+          # Function to add row with percentage
+          add_row() {
+            local name=$1
+            local time=$2
+            local formatted=$(format_time $time)
+            local percentage=$((time * 100 / TOTAL_TIME))
+            echo "| $name | $formatted | ${percentage}% |" >> $GITHUB_STEP_SUMMARY
+          }
+
+          add_row "Checkout repository" ${CHECKOUT_TIME:-0}
+          add_row "Setup (Node.js + Python)" ${SETUP_TIME:-0}
+          add_row "npm install" ${NPM_INSTALL_TIME:-0}
+          add_row "pip install" ${PIP_INSTALL_TIME:-0}
+          add_row "MyST Linter" ${LINT_TIME:-0}
+          add_row "Reference Validation" ${VALIDATE_TIME:-0}
+          add_row "Python Tests" ${TEST_TIME:-0}
+          add_row "Build HTML" ${BUILD_TIME:-0}
+          add_row "Link Checking" ${LINK_CHECK_TIME:-0}
+
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "### 🎯 Total Validation Time: $(format_time $TOTAL_TIME)" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "Validation completed at: $(date -u '+%Y-%m-%d %H:%M:%S UTC')" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+
+          # Add performance indicators
+          echo "## 📈 Performance Indicators" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+
+          # Check if validation is faster or slower than timeout
+          TIMEOUT_SECONDS=$((15 * 60))
+          USAGE_PERCENTAGE=$((TOTAL_TIME * 100 / TIMEOUT_SECONDS))
+
+          if [ $USAGE_PERCENTAGE -lt 50 ]; then
+            echo "✅ **Excellent**: Validation time is ${USAGE_PERCENTAGE}% of timeout limit" >> $GITHUB_STEP_SUMMARY
+          elif [ $USAGE_PERCENTAGE -lt 75 ]; then
+            echo "✓ **Good**: Validation time is ${USAGE_PERCENTAGE}% of timeout limit" >> $GITHUB_STEP_SUMMARY
+          elif [ $USAGE_PERCENTAGE -lt 90 ]; then
+            echo "⚠️ **Warning**: Validation time is ${USAGE_PERCENTAGE}% of timeout limit" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "❌ **Critical**: Validation time is ${USAGE_PERCENTAGE}% of timeout limit" >> $GITHUB_STEP_SUMMARY
+          fi
+
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "**Top 3 slowest steps:**" >> $GITHUB_STEP_SUMMARY
+
+          # Create sorted list of times
+          {
+            echo "${BUILD_TIME:-0} Build HTML"
+            echo "${LINK_CHECK_TIME:-0} Link Checking"
+            echo "${TEST_TIME:-0} Python Tests"
+            echo "${VALIDATE_TIME:-0} Reference Validation"
+            echo "${LINT_TIME:-0} MyST Linter"
+            echo "${NPM_INSTALL_TIME:-0} npm install"
+          } | sort -rn | head -3 | while read time name; do
+            if [ $time -gt 0 ]; then
+              echo "- $name: $(format_time $time)" >> $GITHUB_STEP_SUMMARY
+            fi
+          done
+
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "---" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+
+          # Console output
           echo "📊 Validation Summary"
           echo "===================="
           echo ""
@@ -113,7 +289,13 @@ jobs:
           echo "🎯 Critical Check Status:"
           if [ "${{ steps.build.outcome }}" = "success" ]; then
             echo "  ✅ HTML build succeeded - ready to merge!"
+            echo "" >> $GITHUB_STEP_SUMMARY
+            echo "### ✅ Ready to Merge" >> $GITHUB_STEP_SUMMARY
+            echo "All critical checks passed!" >> $GITHUB_STEP_SUMMARY
           else
             echo "  ❌ Build failed - fix errors above"
+            echo "" >> $GITHUB_STEP_SUMMARY
+            echo "### ❌ Build Failed" >> $GITHUB_STEP_SUMMARY
+            echo "Please fix the errors above before merging." >> $GITHUB_STEP_SUMMARY
             exit 1
           fi
