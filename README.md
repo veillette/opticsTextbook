@@ -16,7 +16,6 @@ The text then delves into Polarization, covering various types of light polariza
 
 The chapter on Lasers ties together many previously discussed concepts, exploring laser properties, optical resonators, and stimulated emission through Einstein's theory.  We have included a chapter on the application of ray matrices to thick lens analysis.
 
-Throughout the text, each chapter includes carefully crafted practice problems, with more challenging exercises marked with an asterisk (*).
 
 ## Contributions and Acknowledgments
 
