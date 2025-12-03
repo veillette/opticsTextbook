@@ -1,0 +1,36 @@
+#!/bin/sh
+
+echo ""
+echo "🔍 Running pre-commit validation checks..."
+echo ""
+
+# Run MyST linter (shows warnings, doesn't block commit)
+echo "📝 Checking MyST markdown..."
+python3 scripts/lint_myst_markdown.py --quiet
+
+# Run Python unit tests (must pass to commit)
+echo "🧪 Running Python unit tests..."
+pytest scripts/tests/ -q
+TEST_EXIT=$?
+
+echo ""
+echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+
+# Check test results (only tests are blocking)
+if [ $TEST_EXIT -ne 0 ]; then
+    echo ""
+    echo "❌ Unit tests failed - commit blocked!"
+    echo ""
+    echo "  • Fix failing tests above"
+    echo ""
+    echo "💡 Tip: Use 'git commit --no-verify' to bypass (not recommended)"
+    echo ""
+    exit 1
+else
+    echo ""
+    echo "✅ Pre-commit checks passed!"
+    echo ""
+    echo "📝 Tip: Run 'npm run lint:fix' to auto-fix any linting issues"
+    echo ""
+    exit 0
+fi

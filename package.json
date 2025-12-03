@@ -41,6 +41,11 @@
     "clean-unreferenced": "python3 scripts/delete_unreferenced_images_myst.py",
     "clean-unreferenced-dry": "python3 scripts/delete_unreferenced_images_myst.py --dry-run",
     "validate-enhanced": "python3 scripts/validate_references_enhanced.py",
-    "validate-enhanced-quiet": "python3 scripts/validate_references_enhanced.py --quiet"
+    "validate-enhanced-quiet": "python3 scripts/validate_references_enhanced.py --quiet",
+    "lint": "python3 scripts/lint_myst_markdown.py",
+    "lint:fix": "python3 scripts/lint_myst_markdown.py --fix"
+  },
+  "devDependencies": {
+    "husky": "^9.1.7"
   }
 }
