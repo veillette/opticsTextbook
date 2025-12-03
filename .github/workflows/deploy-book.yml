@@ -97,12 +97,22 @@ jobs:
           echo "Build PDF Assets, docx, and md"
           npx myst build -a
 
+      - name: Generate PWA Icons
+        run: |
+          echo "Generating PWA icons"
+          npm run generate-icons
+
       - name: Build HTML Assets
         run: |
           echo "Building site with BASE_URL: $BASE_URL"
           npx myst build --html
         env:
           NODE_OPTIONS: "--max-old-space-size=4096"
+
+      - name: Setup PWA
+        run: |
+          echo "Setting up PWA (service worker, manifest, icons)"
+          npm run setup-pwa
 
       - name: Copy PDFs to _build/html for download access
         run: |

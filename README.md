@@ -12,7 +12,17 @@ This textbook covers advanced topics in optics while maintaining accessibility f
 
 ## Key Features and Contents
 
-The textbook combines comprehensive coverage with interactive elements in its digital version, all freely available under a Creative Commons Attribution 4.0 International License. Beginning with Basic Electromagnetic and Wave Optics, the text builds a strong foundation in Maxwell's equations, wave equations, and their special solutions, including plane waves and electric dipole fields. Time-harmonic fields are thoroughly explored, along with Fresnel coefficients and evanescent waves.
+The textbook combines comprehensive coverage with interactive elements in its digital version, all freely available under a Creative Commons Attribution 4.0 International License.
+
+**Progressive Web App (PWA)**: The textbook is now available as a Progressive Web App, which means you can:
+- Install it on your device (desktop, mobile, or tablet) for app-like experience
+- Access content offline once cached
+- Enjoy fast loading times with optimized caching
+- Read in standalone mode without browser UI
+
+See [PWA_SETUP.md](PWA_SETUP.md) for details on PWA features and usage.
+
+Beginning with Basic Electromagnetic and Wave Optics, the text builds a strong foundation in Maxwell's equations, wave equations, and their special solutions, including plane waves and electric dipole fields. Time-harmonic fields are thoroughly explored, along with Fresnel coefficients and evanescent waves.
 
 Moving into Geometrical Optics, students learn about ray-based light propagation, exploring Fermat's Principle, Snell's Law and  paraxial theory. The Optical Instruments section brings theory into practice, examining everyday devices from pinhole cameras to modern imaging systems, microscopes, and telescopes.
 
