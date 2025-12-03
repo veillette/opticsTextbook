@@ -28,6 +28,8 @@ project:
   downloads:
    - id: pdf
      title: "Download PDF"
+   - id: docx
+     title: "Download DOCX"
   exclude:
     - _build/**
     - exports/**
@@ -66,6 +68,26 @@ project:
     - format: pdf
       id: pdf
       output: exports/textbook.pdf
+      author: Martin Veillette
+      subject: Optics Textbook
+      keywords: [optics, physics, education]
+      articles:
+        - content/Preface/Preface.md
+        - content/Chap01Basics/Basics.md
+        - content/Chap02GeometricalOptics/GeometricalOptics.md
+        - content/Chap03OpticalInstrument/OpticalInstruments.md
+        - content/Chap04Polarization/Polarization.md
+        - content/Chap05Wave/Wave.md
+        - content/Chap06Interference/InterferenceCoherence.md
+        - content/Chap07Diffraction/DiffractiveOptics.md
+        - content/Chap08Lasers/Lasers.md
+        - content/Chap09AdvancedInstruments/AdvancedInstruments.md
+        - content/Chap10FiberOptics/FiberOptics.md
+        - content/Chap11RayMatrix/RayMatrix.md
+    # Full textbook DOCX export
+    - format: docx
+      id: docx
+      output: exports/textbook.docx
       author: Martin Veillette
       subject: Optics Textbook
       keywords: [optics, physics, education]

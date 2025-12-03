@@ -114,7 +114,7 @@ jobs:
           echo "Setting up PWA (service worker, manifest, icons)"
           npm run setup-pwa
 
-      - name: Copy PDFs to _build/html for download access
+      - name: Copy PDFs and DOCX files to _build/html for download access
         run: |
           mkdir -p _build/html/exports
           mkdir -p _build/html/exports/chapters
@@ -127,12 +127,29 @@ jobs:
             echo "⚠️ Full textbook PDF not found"
           fi
 
+          # Copy full textbook DOCX
+          if [ -f exports/textbook.docx ]; then
+            cp exports/textbook.docx _build/html/exports/
+            echo "✅ Full textbook DOCX copied"
+          else
+            echo "⚠️ Full textbook DOCX not found"
+          fi
+
           # Copy chapter PDFs
           if [ -d exports/chapters ]; then
             cp exports/chapters/*.pdf _build/html/exports/chapters/ 2>/dev/null || echo "⚠️ No chapter PDFs found"
             chapter_count=$(ls -1 _build/html/exports/chapters/*.pdf 2>/dev/null | wc -l)
             if [ "$chapter_count" -gt 0 ]; then
               echo "✅ $chapter_count chapter PDFs copied"
+            fi
+          fi
+
+          # Copy chapter DOCX files
+          if [ -d exports/chapters ]; then
+            cp exports/chapters/*.docx _build/html/exports/chapters/ 2>/dev/null || echo "⚠️ No chapter DOCX files found"
+            docx_count=$(ls -1 _build/html/exports/chapters/*.docx 2>/dev/null | wc -l)
+            if [ "$docx_count" -gt 0 ]; then
+              echo "✅ $docx_count chapter DOCX files copied"
             fi
           fi
 
