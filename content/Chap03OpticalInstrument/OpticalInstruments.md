@@ -71,6 +71,8 @@ Cross section of a human eye (from [Wikimedia Commons](https://commons.wikimedia
 After passing the cornea, the rays reach the **aqueous humour** ($n\approx$1.336) with the **iris** or pupil. It can expand or contract from a 2&nbsp;mm (bright sun) to 8&nbsp;mm (low light) diameter to adapt to the light intensity. The iris gives color to the eye. After the iris, the rays reach the flexible **crystalline lens** which has the size of a bean (9&nbsp;mm in diameter, and 4&nbsp;mm thick in relaxed condition). Its index of refraction varies from 1.406 in the center to 1.386 at the edge.
 
 ```{figure} Images/03_06_focus_in_an_eye_a.png
+
+Ray diagram showing light focusing in the human eye. Parallel rays from a distant object are refracted by the cornea and crystalline lens to converge at the retina, forming a sharp inverted image on the photoreceptor layer.
 ```
 ```{figure} Images/03_07_accomodation_eye.png
 :name: Fig_3_06_Eye
@@ -84,8 +86,7 @@ In relaxed condition, the object focal distance of the lens system is $f_o=16$
 &nbsp;mm as measured from the cornea while the image focal distance is equal to
 the length of the eye: $f_i=24$&nbsp;mm. These focal distances are different,
 because the refractive indices of the surrounding medium (air and vitreous
-humour) differ. The power of the healthy relaxed eye is according to {eq}
-`eq:ray:thin-lens-matrix`, {eq}`eq:ray:thin-lens-matrix-focal`:
+humour) differ. The power of the healthy relaxed eye is according to {eq}`eq:ray:thin-lens-matrix`, {eq}`eq:ray:thin-lens-matrix-focal`:
 
 ```{math}
 :label: eq:inst:eye-dioptric-power
@@ -153,8 +154,7 @@ then $f_i=s_i= -2$ m. Hence the required power of the lens is:
 ```
 
 The lens is best put in the front focal plane of the relaxed eye, i.e. at
-approximately 16 mm in front of the cornea. This follows from {eq}
-`eq:ray:lensmaker-formula` and the fact that the distance of the retina to the
+approximately 16 mm in front of the cornea. This follows from {eq}`eq:ray:lensmaker-formula` and the fact that the distance of the retina to the
 eye lens is roughly 22 mm while the refractive index of the vitrous humor is
 1.337. Hence, the focal distance in air of the relaxed eye
 of $22/1.337 \approx 16 \text{ mm}$. The reason for putting the lens at the
@@ -306,8 +306,7 @@ The magnifying power of the entire system is the product of the transverse linea
 \end{align*}
 ```
 
-According to {eq}
-`eq:ray:transverse-magnification`: $M_{T}=\mathbin{-} x_i/f_i^{obj}$,
+According to {eq}`eq:ray:transverse-magnification`: $M_{T}=\mathbin{-} x_i/f_i^{obj}$,
 where $x_i$ is the distance of the image made by the objective to its back focal
 plane with focal distance $f_i^{obj}$. We have $x_i=L$ which is the tube length,
 i.e. the distance between the second focal point of the objective and the first

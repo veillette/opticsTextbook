@@ -138,8 +138,7 @@ Derive the ray matrix between a plane to the left of the surface and at distance
 - **b)** Derive the conditions such that the plane at distance $d_2$ is the
   image of the plane at distance $d_1$. Express the formula in
   coordinates $s_o=-d_1$, $s_i=d_2$ with respect to the vertex as origin and
-  show that the result is identical to formula {eq}
-  `eq:geo:single-surface-power-form`
+  show that the result is identical to formula {eq}`eq:geo:single-surface-power-form`
 
 - **c)** Assume that
 $n_1=1$, $n_2=2$ and $R= 2$ cm.
@@ -212,8 +211,7 @@ between two planes.
 - **d)** Use the condition that you found in a) to derive the image focal
   distance of a system consisting of two thin lenses with image focal
   distances $f_{1i}$ and $f_{2i}$ and distance $d$. Verify that the result
-  agrees with the distance for the image focal plane {eq}
-  `eq:ray:two-lens-image-focal`.
+  agrees with the distance for the image focal plane {eq}`eq:ray:two-lens-image-focal`.
 Hint: let $f_i$ be the distance of the image focal point of the two-lens system to the second lens. Write the transfer matrix between the lens immediately before the first lens and the plane through the image focal point.
 
 - **e)** Add a third thin lens with image focal distance $f_{3i}$ is in contact to the second lens. Derive the ray matrix of this system.
@@ -241,8 +239,7 @@ $$
 f_o = \frac{P_1+P_2 + \frac{d}{n} {\cal P}_1{\cal P}_2}{n \left( 1 - \frac{d}{n}\right){\cal P}_1 }.
 $$ (eq.fo)
 
-- **c)** Verify that these formulae are equivalent to {eq}
-  `eq:ray:two-lens-object-focal`,{eq}`eq:ray:two-lens-image-focal`.
+- **c)** Verify that these formulae are equivalent to {eq}`eq:ray:two-lens-object-focal`,{eq}`eq:ray:two-lens-image-focal`.
 
 
 10. Entrance pupil of a system of two lenses.
@@ -258,7 +255,7 @@ $d = 6$ cm. Suppose that the aperture stop is as shown in {numref}`Fig_2_34_Two_
 
 ```{figure} ../Images/02_23_two_thin_lenses.png
 :name: Fig_2_34_Two_thin_lenses
-Two thin lenses
+Optical system with two thin lenses and an aperture stop. Lens L₁ (focal length f₁ = 10 cm) and lens L₂ (focal length f₂ = 12 cm) are separated by distance d = 6 cm, with an aperture diaphragm (diameter Dₐ = 5 cm) positioned 1.5 cm in front of L₁. This configuration is used to analyze entrance and exit pupils.
 ```
 
 

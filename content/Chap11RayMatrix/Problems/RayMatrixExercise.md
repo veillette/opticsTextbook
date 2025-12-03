@@ -21,7 +21,7 @@ Consider a thick lens made of a glass of refractive index $n$ with thickness $d$
 
 ```{figure} ../Images/11_01_thick_lens.png
 :name: fig:Thicklens1
-Thick lens.
+Thick lens geometry showing the two curved surfaces with vertices V₁ and V₂ separated by thickness d. The lens has refractive index n and is surrounded by air, with radii of curvature R₁ and R₂ for the left and right surfaces respectively.
 ```
 
 
@@ -66,8 +66,7 @@ where
 \end{align*}
 ```
 
-- **c)** By using the following abbreviation for the matrix {eq}
-  `eq:ray:thick-lens-vertex-matrix`:
+- **c)** By using the following abbreviation for the matrix {eq}`eq:ray:thick-lens-vertex-matrix`:
 
 ```{math}
 :label: eq:ray:matrix-abbreviation

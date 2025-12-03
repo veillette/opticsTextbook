@@ -120,10 +120,8 @@ u_m(y)=
 \end{align*}
 ```
 
-The first few of these distributions are plotted in {numref}
-`figFiberMirrorModes`, from which it is observed that $m$ corresponds to the
-amount of maxima in the distribution. The pre-factors $\sqrt{2/d}$ in {eq}
-`eq:fiber:mode-distributions` are chosen such that the functions are
+The first few of these distributions are plotted in {numref}`figFiberMirrorModes`, from which it is observed that $m$ corresponds to the
+amount of maxima in the distribution. The pre-factors $\sqrt{2/d}$ in {eq}`eq:fiber:mode-distributions` are chosen such that the functions are
 orthonormal, meaning
 ```{math}
 \begin{align*}
@@ -146,6 +144,8 @@ This concludes our discussion on fiber modes in the planar-mirror waveguide. To 
 
 ```{figure} Images/10_04_circular_waveguide.png
 :width: 50%
+
+Circular waveguide cross-section showing the cylindrical geometry of optical fibers. The circumferential self-consistency condition requires that light rays complete an integer number of cycles as they propagate around the fiber core.
 ```
 ```{figure} Images/10_05_modes3.png
 :name: figFiberModes
@@ -218,8 +218,7 @@ v_{z,m}=c\cos(\bar{\theta}_m)=c\sqrt{1-\left(m\dfrac{\lambda_0}{2d}\right)^2}
 \end{align*}
 ```
 
-Here we used that $\cos^2(\theta)+\sin^2(\theta)=1$ along with {eq}
-`eq:fiber:self-consistency-condition`.
+Here we used that $\cos^2(\theta)+\sin^2(\theta)=1$ along with {eq}`eq:fiber:self-consistency-condition`.
 
 Now consider an infinitely short pulse that consists of light in the $i^{\text{th}}$ and the $j^{\text{th}}$ mode only, with $i<j$. For the sake of the argument, we still presume that the light is monochromatic, although in reality this is not the case (see below). Then these modes travel in $z$-direction with a velocity difference
 ```{math}
@@ -260,16 +259,19 @@ Now we consider a signal pulse propagating through a medium. The pulse has a cen
 ```
 
 Hence all wavelength components present in the pulse travel at slightly
-different velocity and dispersion is the result. From {eq}
-`eq:fiber:group-refractive-index` we see, however, that the effect only occurs
+different velocity and dispersion is the result. From {eq}`eq:fiber:group-refractive-index` we see, however, that the effect only occurs
 whenever $\mathrm{d}^2n/\mathrm{d}\lambda^2\neq 0$ (NB: if $n$ is constant or of
 the form $n=a\lambda+b$, {eq}`eq:fiber:group-refractive-index` still yields
 a constant group refractive index). This is the case for SiO$_2$ as can be
 observed in {numref}`figFiberDispersion`(c).
 
 ```{figure} Images/10_07_dispersion.png
+
+Pulse broadening due to dispersion in optical fibers. As a light pulse propagates through a fiber, different wavelength components travel at slightly different velocities, causing the pulse to spread out over time. This temporal broadening limits the maximum data transmission rate in fiber optic communication systems.
 ```
 ```{figure} Images/10_08_dispersion.png
+
+Relationship between pulse duration and spectral width. Shorter optical pulses contain a broader range of wavelengths (larger spectral width), while longer pulses have narrower spectral content. This fundamental relationship, based on the Fourier transform, explains why ultrashort pulses are more susceptible to dispersion effects.
 ```
 ```{figure} Images/10_09_sio2.png
 :name: figFiberDispersion
@@ -292,8 +294,7 @@ However, in practice often the dispersion is reported as
 in units of $\text{ps}/(\text{km} \cdot \text{nm})$. That is, the increase in pulse width (in $\text{ps}$) per $\text{km}$ of fiber with the source's spectral width in $\text{nm}$. Typical values of this parameter are $10$ to $20\text{ps}/(\text{km}\cdot \text{nm})$.
 
 A second effect of the spectral width of light pulses is that they disperse even
-if light propagates in a single mode. As observed from {eq}
-`eq:fiber:self-consistency-condition`, the angle $\bar{\theta}_m$ not only
+if light propagates in a single mode. As observed from {eq}`eq:fiber:self-consistency-condition`, the angle $\bar{\theta}_m$ not only
 depends on the mode $m$, but also on the wavelength of the light. Therefore, all
 wavelength components of the light will propagate at a slightly
 different $\bar{\theta}_m$. This will cause dispersion in the same fashion as
@@ -317,11 +318,9 @@ Material and waveguide dispersion for a SiO$_2$ SMF. Taking the sum of both effe
 Dispersion effects may cancel each other or engineered, such that dispersionless
 fibers can be constructed. E.g., for SMFs, in which only material and waveguide
 dispersion play a role, the total dispersion is given
-as $D=D^{\text{mat}}+D^{\text{wav}}$. Notice from {eq}
-`eq:fiber:material-dispersion` and {eq}`eq:fiber:waveguide-dispersion`
+as $D=D^{\text{mat}}+D^{\text{wav}}$. Notice from {eq}`eq:fiber:material-dispersion` and {eq}`eq:fiber:waveguide-dispersion`
 that $D^{\text{mat}}$ and $D^{\text{wav}}$ have an opposite sign and if we plot
-both expressions using SiO$_2$ as fiber material, see {numref}
-`figFiberDispersionSiO2`, it is observed that these dispersion effects cancel
+both expressions using SiO$_2$ as fiber material, see {numref}`figFiberDispersionSiO2`, it is observed that these dispersion effects cancel
 at $\lambda_0=1310\text{nm}$. This makes $1310\text{nm}$ a popular wavelength
 for building optical fiber networks.
 
@@ -373,6 +372,8 @@ To prevent macro-bending losses, the critical radius of fibers should be noted. 
 \begin{figure}[htbp]
 
 ```{figure} Images/10_12_bending_loss.png
+
+Macro-scale bending loss in optical fibers. When a fiber is bent with too small a radius of curvature, light rays can exceed the critical angle for total internal reflection at the core-cladding interface, causing light to escape from the fiber and resulting in transmission losses.
 ```
 
 ```{figure} Images/10_13_bending_loss.png
@@ -471,8 +472,7 @@ where $f_{\text{coll}}$ is the focal length of the collimating
 lens. $w_{\text{coll}}$ is in the order of $1\text{mm}$ for a typical fiber NA
 of $0.1$ and an $f_{\text{coll}}=1\text{cm}$. On the other hand, it should be
 realized that upon coupling light into a fiber from a collimated beam, the (
-incoming) beam width should be smaller the value resulting from {eq}
-`eq:fiber:collimator-beam-width`. If the beam is broader, some light will not
+incoming) beam width should be smaller the value resulting from {eq}`eq:fiber:collimator-beam-width`. If the beam is broader, some light will not
 couple into the fiber and is therefore lost. This results
 from $\bar{\theta}_{\text{e,c}}$ (see {numref}`figFiberTIR`) being exceeded by
 part of the light beam.
@@ -489,8 +489,7 @@ which light from $N_{\text{in}}$ input channels is redistributed
 over $N_{\text{out}}$ output channels. Couplers are based on the phenomenon of
 evanescent fields. Although light rays are confined to fiber cores, their
 associated EM-fields extend in the fiber cladding, the evanescent field, as
-briefly mentioned in {ref}`secFiberModes` and illustrated in {numref}
-`figFiberCouplerEv`. If two fiber cores are brought in close proximity, energy
+briefly mentioned in {ref}`secFiberModes` and illustrated in {numref}`figFiberCouplerEv`. If two fiber cores are brought in close proximity, energy
 from the evanescent field from light transmitting through the one fiber core
 enters the other fiber's core and continues its path there. The amount of light
 coupling depends only on distance between the two fiber cores and the length

@@ -207,7 +207,7 @@ We can conclude that in any point of an arbitrary time-harmonic electromagnetic 
 
 ```{figure} Images/04_01_dphi_000pi_f1_bw.png
 :name: 4_01_Dphi_000pi_f1_BW
-Linear polarization
+Linear polarization state of electromagnetic waves. The electric field vector oscillates along a single fixed direction perpendicular to the direction of propagation, tracing out a straight line in the plane perpendicular to the wave vector.
 ```
 
 ```{figure} Images/04_02_dphi_05pi_f1_bw.png
@@ -249,8 +249,7 @@ Suppose $n_e>n_o$ and that the fast axis, which corresponds to $n_o$ is aligned 
 ### Jones Matrices
 
 By letting light pass through crystals of different thicknesses $d$ we can create different phase differences between the orthogonal field components and in this way we can create different states of polarization.
-To be specific, let $\mathbf{J}$, as given by {eq}
-`eq:pol:jones-vector-definition`, be the Jones vector of the plane wave before
+To be specific, let $\mathbf{J}$, as given by {eq}`eq:pol:jones-vector-definition`, be the Jones vector of the plane wave before
 the crystal. Then we have, for the Jones vector after the passage through the
 crystal:
 
@@ -348,8 +347,7 @@ $\hat{\mathbf{x}}$, $\hat{\mathbf{y}}$
 \widehat{\mathbf{y}}' &= -\sin\theta \, \widehat{\mathbf{x}} + \cos \theta \, \widehat{\mathbf{y}},\end{align*}
 ```
 
-By substituting {eq}`eq:pol:x-prime-unit-vector` and {eq}
-`eq:pol:y-prime-unit-vector` into {eq}`eq:pol:field-rotated-basis` we find
+By substituting {eq}`eq:pol:x-prime-unit-vector` and {eq}`eq:pol:y-prime-unit-vector` into {eq}`eq:pol:field-rotated-basis` we find
 
 ```{math}
 :label: eq:pol:field-basis-transformation
@@ -385,8 +383,7 @@ where ${\cal R}_{\theta}$ is the rotation matrix over an angle $\theta$ in the a
 That ${\cal R}(\theta)$ indeed is a rotation over angle $\theta$ in the anti-clockwise direction is easy to see by considering what happens when ${\cal R}_\theta$ is applied to the vector $(1,0)^T$ {cite:p}`hecht`.
 
 This relationship expresses the components $E_{x'}$, $E_{y'}$ of the Jones vector on the $\widehat{\mathbf{x}}'$, $\widehat{\mathbf{y}}'$ basis, which is aligned with the fast and slow axes of the crystal, in terms of the components $E_x$ and $E_y$ on the original basis $\widehat{\mathbf{x}}$, $\widehat{\mathbf{y}}$.
-If the matrix ${\cal M}$ describes the Jones matrix as defined in {eq}
-`eq:pol:jones-matrix-waveplate`, then the matrix $M_{\theta}$ for the same wave
+If the matrix ${\cal M}$ describes the Jones matrix as defined in {eq}`eq:pol:jones-matrix-waveplate`, then the matrix $M_{\theta}$ for the same wave
 plate but with $x'$ as slow and $y'$ as fast axis, is, with respect to
 the $\widehat{\mathbf{x}}$, $\widehat{\mathbf{y}}$ basis, given by:
 
@@ -439,8 +436,7 @@ The amplitude of the transmitted field is reduced by the factor $\cos\alpha$, wh
 
 Natural light such as sun light is unpolarized. The instantaneous polarization
 of unpolarized light fluctuates rapidly in a random manner. A linear polarizer
-produces linear polarized light from unpolarized light. It follows from {eq}
-`eq:pol:malus-law-derivation` that the intensity transmitted by a linear
+produces linear polarized light from unpolarized light. It follows from {eq}`eq:pol:malus-law-derivation` that the intensity transmitted by a linear
 polarizer when unpolarized light is incident, is the average value
 of $\cos^2\alpha$ namely $\frac{1}{2}$, times the incident intensity.
 
@@ -601,8 +597,7 @@ where $d$ is the thickness of the plate and $k$ is the wave number. Hence to ver
 
 **3.** **Jones matrix for propagation through sugars** In sugars, left and right
 circular-polarized light propagate with their own refractive index. Therefore
-sugars are called **circular birefringent**. The matrix {eq}
-`eq:pol:general-jones-matrix` corresponds to propagation through sugar when
+sugars are called **circular birefringent**. The matrix {eq}`eq:pol:general-jones-matrix` corresponds to propagation through sugar when
 there are two real orthogonal unit vectors
 $\hat{\mathbf{v}}$ and $\hat{\mathbf{w}}$ such that the circular polarization states
 

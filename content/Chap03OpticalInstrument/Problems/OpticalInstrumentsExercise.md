@@ -77,7 +77,7 @@ In this problem we investigate whether it is possible to image an object with a 
 
 ```{figure} ../Images/03_16_planar_interface.png
 :name: fig:PlanarInterface
-Planar Interface
+Planar interface between two media with different refractive indices. An object at distance d from the interface on the left side can potentially form an image at distance d on the right side, demonstrating the principle of a Veselago lens when the refractive index condition is satisfied.
 ```
 
 - **c)** Assuming that $d>0$, what condition has to be fulfilled in order to create an image in the plane behind the interface? Such an imaging system is called a **Veselago lens**.

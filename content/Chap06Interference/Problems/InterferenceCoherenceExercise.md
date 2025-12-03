@@ -13,7 +13,7 @@ $S_1$ and $S_2$ are coherent and emit radio waves with a wavelength of 3 m. The 
 
 ```{figure} ../Images/06_14_1_sources.png
 :name: fig:ex5_1
-Sources Figure
+Geometry for two-source interference problem. Two coherent radio wave sources S₁ and S₂ are separated by 3 m, and an observer is positioned at a perpendicular distance from the baseline connecting the sources. The path difference between waves from the two sources determines whether constructive or destructive interference occurs at the observation point.
 ```
 
 - **b)**

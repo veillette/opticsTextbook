@@ -161,8 +161,7 @@ E(z)=A e^{2i k_0 n L} e^{i k_0 n z}.
 \end{align*}
 ```
 
-A high field builds up when this wave constructively interferes with {eq}
-`eq:laser:plane-wave-propagation`, i.e. when
+A high field builds up when this wave constructively interferes with {eq}`eq:laser:plane-wave-propagation`, i.e. when
 
 ```{math}
 :label: eq:laser:resonance-condition
@@ -234,8 +233,7 @@ is the total number of atoms (which is constant). The rate of absorption is the 
 where the constant $B_{12}>0$ has
 dimension $\text{m}^3 \text{J}^{-1} \text{s}^{-2}$. Without any external
 influence, an atom that is in the excited state will usually transfer to state 1
-within 1 ns or so, while emitting a photon of energy {eq}
-`eq:laser:photon-energy`. This process is called **spontaneous emission**, since
+within 1 ns or so, while emitting a photon of energy {eq}`eq:laser:photon-energy`. This process is called **spontaneous emission**, since
 it happens also without an electromagnetic field present. The rate of
 spontaneous emission is given by:
 
@@ -306,9 +304,7 @@ But in thermal equilibrium:
 \end{align*}
 ```
 
-By substituting {eq}`eq:laser:boltzmann-population` into {eq}
-`eq:laser:energy-density-equilibrium`, and comparing the result with {eq}
-`eq:laser:planck-blackbody-law`, it follows that both expressions
+By substituting {eq}`eq:laser:boltzmann-population` into {eq}`eq:laser:energy-density-equilibrium`, and comparing the result with {eq}`eq:laser:planck-blackbody-law`, it follows that both expressions
 for $W_T(\omega)$ are identical for all temperatures only if
 
 ```{math}
@@ -366,8 +362,7 @@ random phase.
 
 When $N_2>N_1$, the light is **amplified**. This state is called **population
 inversion** and it is essential for the operation of the laser. Note that the
-ratio of the spontaneous and stimulated emission rates is, according to {eq}
-`eq:laser:einstein-coefficients-relation`, proportional to $\omega^3$. Hence for
+ratio of the spontaneous and stimulated emission rates is, according to {eq}`eq:laser:einstein-coefficients-relation`, proportional to $\omega^3$. Hence for
 shorter wavelengths such as x-rays, it is much more difficult to make lasers
 than for visible light.
 
@@ -395,8 +390,7 @@ Hence, for $\Delta N=N_2-N_1$:
 ```
 
 where as before: $N=N_1+N_2$ is constant. If initially (i.e. at $t=0$) all atoms
-are in the lowest state: $\Delta N(t=0)=-N$, then it follows from {eq}
-`eq:laser:population-difference-rate`:
+are in the lowest state: $\Delta N(t=0)=-N$, then it follows from {eq}`eq:laser:population-difference-rate`:
 
 ```{math}
 :label: eq:laser:population-difference-time
@@ -405,8 +399,7 @@ are in the lowest state: $\Delta N(t=0)=-N$, then it follows from {eq}
 \end{align*}
 ```
 
-An example where $A_{21}/B_{12}W(\omega)=0.5$ is shown in {numref}
-`Fig_7_08_Laser_dNN`. We always have $\Delta N<0$, hence $N_2(t)< N_1(r)$ for
+An example where $A_{21}/B_{12}W(\omega)=0.5$ is shown in {numref}`Fig_7_08_Laser_dNN`. We always have $\Delta N<0$, hence $N_2(t)< N_1(r)$ for
 all times $t$. Therefore, a system with only two levels cannot have population
 inversion.
 ```{figure} Images/08_08_laser_d_nn.png
@@ -510,7 +503,7 @@ where $\omega_{13}$ is the frequency for the transition $1 \rightarrow 3$ as see
 
 ```{figure} Images/08_16_pumping_meta.png
 :name: Fig_7_16_Pumping_a
-Optical pumping.
+Optical pumping mechanism in a three-level laser system. Atoms are excited from the ground state (level 1) to a higher energy state (level 3) by absorbing pump light. The atoms then rapidly decay to an intermediate metastable state (level 2), where population inversion can be achieved relative to the ground state, enabling laser action.
 ```
 
 In the dye laser  the amplifier is a liquid (e.g. Rhodamine6G). It is optically pumped by an argon laser and has a huge gain width, which covers almost the complete visible wavelength range. We can select a certain wavelength by inserting a dispersive element like the Fabry-Perot cavity inside the laser cavity and rotating it at the right angle to select the desired wavelength, as explained above.

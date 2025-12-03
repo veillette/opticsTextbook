@@ -15,8 +15,12 @@
 
 Although the model of geometrical optics helps us to design optical systems and explains many phenomena, there are properties of light that require a more elaborate model. For example, interference fringes observed in Young's double-slit experiment or the Arago spot ({numref}`Arago`) indicate that light is more accurately modeled as a wave.
 ```{figure} Images/06_01_arago1.jpg
+
+Arago spot observed with a 4 mm diameter circular disc. The bright central spot appears at the center of the disc's shadow, demonstrating the wave nature of light through constructive interference of diffracted waves. Image captured at 1 m distance using 633 nm laser light.
 ```
 ```{figure} Images/06_02_arago2.jpg
+
+Arago spot observed with a 2 mm diameter circular disc. The relative size of the central bright spot increases compared to the disc diameter, as diffraction effects become more pronounced with smaller obstacles. Image captured at 1 m distance using 633 nm laser light.
 ```
 ```{figure} Images/06_03_arago3.jpg
 :name: Arago
@@ -1248,8 +1252,7 @@ With a similar derivation as for {eq}`eq.lambdafree`
 \end{align*}
 ```
 
-A Fabry-Perot can be used as a high resolution spectrometer. {eq}
-`eq.resolution2` implies that the resolution increases for higher order $m$.
+A Fabry-Perot can be used as a high resolution spectrometer. {eq}`eq.resolution2` implies that the resolution increases for higher order $m$.
 However, $M $ can not be made arbitrary large because increasing $m$ means
 according to {eq}`eq.freewavel` that the free spectral range decreases.
 The ratio

@@ -192,8 +192,7 @@ The travel time must be minimum, hence there must hold
 \end{align*}
 ```
 
-where the travel time has been multiplied by the speed of light in vacuum. {eq}
-`eq:geo:refraction-minimum-condition` implies
+where the travel time has been multiplied by the speed of light in vacuum. {eq}`eq:geo:refraction-minimum-condition` implies
 
 ```{math}
 :label: eq:geo:snell-law
@@ -216,6 +215,8 @@ Hence we have derived the law of reflection and Snell's law from Fermat's princi
 In this section, the conic sections ellipse, hyperbole and parabola are important. In {numref}`Fig_2_05_ConicSection` their definitions are shown as a quick reminder[^3].
 
 ```{figure} Images/02_05_conic_section.png
+
+Geometric construction of conic sections (ellipse, hyperbola, and parabola) showing their traditional definitions. The ellipse is the locus of points with constant sum of distances to two foci, the hyperbola has a constant difference of distances, and the parabola maintains equal distances to a focus and a directrix.
 ```
 ```{figure} Images/02_06_conic_section.png
 :name: Fig_2_05_ConicSection
@@ -295,8 +296,7 @@ point of intersection is $V$. Since for this ray the angle of incidence with the
 local normal on the surface vanishes, the ray continues into the second medium
 without refraction and passes through the center $C$ of the sphere. Next we draw
 a ray that hits the spherical surface in some point $A$ and draw the refracted
-ray in medium 2 using Snell's law in the paraxial form {eq}
-`eq:geo:snell-paraxial`. Note that the angles of incidence and transmission must
+ray in medium 2 using Snell's law in the paraxial form {eq}`eq:geo:snell-paraxial`. Note that the angles of incidence and transmission must
 be measured with respect to the local normal at $A$, i.e. with respect to $CA$.
 We assume that this ray intersects the first ray in point $P$. We will show that
 within the approximation of Gaussian geometrical optics, all rays from $S$ pass
@@ -344,8 +344,7 @@ Similarly, from $\Delta \,\text{CPA}$ we find
 \end{align*}
 ```
 
-By substitution into the paraxial version of Snell's Law {eq}
-`eq:geo:snell-paraxial`, we obtain
+By substitution into the paraxial version of Snell's Law {eq}`eq:geo:snell-paraxial`, we obtain
 
 ```{math}
 :label: eq:geo:paraxial-snell-angles
@@ -391,8 +390,7 @@ becomes
 \end{align*}
 ```
 
-By substituting {eq}`eq:geo:simplified-angles` and {eq}
-`eq:geo:small-angle-varphi` into {eq}`eq:geo:paraxial-snell-angles` we find
+By substituting {eq}`eq:geo:simplified-angles` and {eq}`eq:geo:small-angle-varphi` into {eq}`eq:geo:paraxial-snell-angles` we find
 
 ```{math}
 \begin{align*}
@@ -473,8 +471,7 @@ the surface makes bundles of incident rays convergent or less divergent.
 If the power is negative, incident bundles are made divergent or less convergent. The power of the surface can be negative because of two reasons:
 1) $R$>0 and $n_1>n_2$, or
 2) $R$<0 and $n_1<n_2$, but the effect of the two cases is the same.
-   For any object to the left of the surface: $s_o<0$, {eq}
-   `eq:geo:single-surface-power-form` and a negative power imply that $s_i<0$,
+   For any object to the left of the surface: $s_o<0$, {eq}`eq:geo:single-surface-power-form` and a negative power imply that $s_i<0$,
    which suggests that the image is to the left of the surface. Indeed, in both
    Figs.
 the diverging ray bundle emitted by S is made more strongly divergent by the surface. By extending these rays in image space back to object space (without refraction at the surface), they are seen to intersect in a point $P$ to the left of the surface. This implies that for an observer at the right of the surface it looks as if the diverging rays in image space are emitted by $P$. Because there is no actual concentration of light intensity at $P$, it is called a **virtual image**, in contrast with the **real images** that occur to the right of the surface and where there is an actual concentration of light energy. We have in this case $f_o>0$ and $f_<0$, which means that the object and image focal points are to the right and left, respectively, of the surface.
@@ -498,8 +495,7 @@ In such a case, it can easily happen that an intermediate image is to the right
 of the next surface and hence is a virtual object for that surface. In the case
 of {numref}`Fig_2_13_Convex_Virtual_Object` at the left, the power is positive,
 hence the convergent bundle of incident rays is made even more convergent which
-leads to a real image point. Indeed when $s_o>0$ and ${\cal P}>0$ then {eq}
-`eq:geo:single-surface-imaging` implies that always $s_i>0$. At the right of
+leads to a real image point. Indeed when $s_o>0$ and ${\cal P}>0$ then {eq}`eq:geo:single-surface-imaging` implies that always $s_i>0$. At the right of
 {numref}`Fig_2_13_Convex_Virtual_Object` the power is negative but is not
 sufficiently strong to turn the convergent incident bundle into a divergent
 bundle. So the image is still real. However, the image will be virtual when the
@@ -541,8 +537,7 @@ The **entrance pupil** is the image of the aperture stop by all elements to the 
 For any object point, the **chief ray** is the ray in the cone that passes through the center of the entrance pupil, and hence also through the centers of the aperture stop and the exit pupil. A marginal ray is the ray that for an object point on the optical axis passes through the rim of the entrance pupil (and hence also through the rims of the aperture stop and the exit pupil).
 
 For a fixed diameter $D$ of the exit pupil and for given $x_o$, the
-magnification of the system is according to {eq}
-`eq:ray:transverse-magnification` and {eq}`eq:ray:newton-lens-equation` given
+magnification of the system is according to {eq}`eq:ray:transverse-magnification` and {eq}`eq:ray:newton-lens-equation` given
 by $M=-x_i/f_i=f_i/x_o$. It follows that when $f_i$ is increased, the
 magnification increases.
 A larger magnification means a lower energy density, hence a longer exposure time, i.e. **the speed of the lens is reduced**. Camera lenses are usually specified by two numbers: the focal length $f$, measured with respect to the exit pupil and the diameter $D$ of the exit pupil. The **$f$-number** is the ratio of the focal length to this diameter:
