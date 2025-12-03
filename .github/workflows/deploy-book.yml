@@ -43,12 +43,28 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Cache LaTeX packages
+      - name: Cache LaTeX installation
         uses: actions/cache@v4
         id: cache-latex
         with:
-          path: /var/lib/apt/lists
-          key: ${{ runner.os }}-latex-${{ hashFiles('**/*.tex') }}
+          path: |
+            /usr/share/texlive
+            /usr/share/texmf
+            /var/lib/texmf
+            /usr/bin/latexmk
+            /usr/bin/xelatex
+            /usr/bin/pdflatex
+          key: ${{ runner.os }}-latex-v2-${{ hashFiles('.github/workflows/deploy-book.yml') }}
+          restore-keys: |
+            ${{ runner.os }}-latex-v2-
+
+      - name: LaTeX cache status
+        run: |
+          if [ "${{ steps.cache-latex.outputs.cache-hit }}" == "true" ]; then
+            echo "✅ LaTeX packages restored from cache"
+          else
+            echo "📦 LaTeX packages will be installed"
+          fi
 
       - name: Install LaTeX, latexmk, and ImageMagick
         if: steps.cache-latex.outputs.cache-hit != 'true'
@@ -56,6 +72,7 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y texlive-xetex texlive-fonts-recommended texlive-fonts-extra latexmk texlive-latex-extra
           sudo apt-get install -y imagemagick
+          echo "✅ LaTeX packages installed and will be cached for next run"
 
       - name: Install Typst
         uses: typst-community/setup-typst@v4
