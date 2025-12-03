@@ -70,10 +70,6 @@ jobs:
           restore-keys: |
             myst-build-
 
-      - name: Add frontmatter to markdown files
-        run: |
-          node scripts/addFrontMatter.js
-
       - name: Create downloads directory
         run: |
           mkdir -p _build/downloads
@@ -90,10 +86,6 @@ jobs:
           npx myst build --html
         env:
           NODE_OPTIONS: "--max-old-space-size=4096"
-
-      - name: Clean up frontmatter to markdown files
-        run: |
-          node scripts/removeFrontMatter.js
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
