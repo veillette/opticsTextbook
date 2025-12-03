@@ -1,0 +1,51 @@
+# Pre-commit configuration for Python code quality
+# Install: pip install pre-commit && pre-commit install
+# Run manually: pre-commit run --all-files
+#
+# Note: This is separate from the Husky pre-commit hook (.husky/pre-commit)
+# which runs MyST linting and pytest. This config is for Python-specific linting.
+#
+# To use both:
+# 1. Install pre-commit: pip install pre-commit
+# 2. Install hooks: pre-commit install
+# 3. Both hooks will run on git commit
+
+repos:
+  # Python code formatting with black
+  - repo: https://github.com/psf/black
+    rev: 24.10.0
+    hooks:
+      - id: black
+        language_version: python3
+        args: ['--line-length=100']
+        files: ^scripts/.*\.py$
+
+  # Python linting with ruff (fast alternative to flake8, isort, etc.)
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.8.4
+    hooks:
+      - id: ruff
+        args: ['--fix', '--line-length=100']
+        files: ^scripts/.*\.py$
+
+  # Type checking with mypy (optional - can be commented out if too strict)
+  # - repo: https://github.com/pre-commit/mirrors-mypy
+  #   rev: v1.13.0
+  #   hooks:
+  #     - id: mypy
+  #       files: ^scripts/.*\.py$
+  #       additional_dependencies: [types-all]
+
+  # General file checks
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v5.0.0
+    hooks:
+      - id: trailing-whitespace
+        exclude: '\.md$'
+      - id: end-of-file-fixer
+      - id: check-yaml
+      - id: check-json
+      - id: check-added-large-files
+        args: ['--maxkb=5000']
+      - id: mixed-line-ending
+        args: ['--fix=lf']

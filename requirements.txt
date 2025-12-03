@@ -2,11 +2,4 @@ numpy
 scipy
 matplotlib
 plotly
-myst_nb
-jupyterquiz
-jupyterlite-sphinx
-sphinx-exercise
-sphinx-proof
-sphinx-thebe
-jupyter-book
 pytest
