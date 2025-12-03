@@ -107,6 +107,8 @@ project:
   toc:
     - title: Preface
       file: content/Preface/Preface.md
+    - title: Search & Navigation Guide
+      file: content/SearchAndNavigation.md
     - title: Chapters
       children:
         - title: Chapter 1 - Basics
@@ -171,6 +173,8 @@ project:
               file: content/Appendices/FourierTransform.md
             - title: Appendix D - Vector Calculus for Electromagnetic Fields
               file: content/Appendices/VectorCalculus.md
+            - title: Mathematical Notation Index
+              file: content/Appendices/MathematicalNotation.md
         - title: Author
           children:
             - file: content/Author/author.md
@@ -190,6 +194,10 @@ site:
     use_edit_page_button: true
     use_repository_button: true
     use_issues_button: true
+    search:
+      mininum_characters: 2
+      max_results: 20
+      index_all: true
   nav:
     - title: "Contribute"
       children:
