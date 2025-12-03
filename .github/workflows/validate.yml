@@ -1,0 +1,111 @@
+name: Validation & Testing
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+env:
+  NODE_VERSION: '22.x'
+  PYTHON_VERSION: '3.9'
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: 'npm'
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+          cache: 'pip'
+
+      - name: Install Node.js dependencies
+        run: npm ci
+
+      - name: Install Python dependencies
+        run: pip install -r requirements.txt pytest
+
+      - name: Run MyST Markdown Linter
+        run: |
+          echo "🔍 Running MyST Markdown Linter..."
+          python3 scripts/lint_myst_markdown.py --quiet
+        continue-on-error: true
+        id: lint
+
+      - name: Run Reference Validation
+        run: |
+          echo "🔗 Validating references and citations..."
+          npm run validate-enhanced-quiet
+        continue-on-error: true
+        id: validate
+
+      - name: Run Python Unit Tests
+        run: |
+          echo "🧪 Running Python unit tests..."
+          pytest scripts/tests/ -v --tb=short
+        continue-on-error: true
+        id: tests
+
+      - name: Build HTML Documentation
+        run: |
+          echo "📚 Building HTML documentation..."
+          npm run build
+        env:
+          NODE_OPTIONS: "--max-old-space-size=4096"
+        id: build
+
+      - name: Run Link Checking
+        run: |
+          echo "🌐 Checking external links..."
+          npm run checklinks || echo "⚠️ Some links may be unreachable (network issues possible)"
+        continue-on-error: true
+        id: links
+
+      - name: Upload Build Artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: html-build
+          path: _build/html/
+          retention-days: 5
+
+      - name: Check Reports
+        run: |
+          echo "📋 Generated Reports:"
+          if [ -d "reports" ]; then
+            ls -lh reports/ || echo "No reports generated"
+          else
+            echo "No reports directory found"
+          fi
+
+      - name: Validation Summary
+        if: always()
+        run: |
+          echo "📊 Validation Summary"
+          echo "===================="
+          echo ""
+          echo "✓ MyST Linter: ${{ steps.lint.outcome }}"
+          echo "✓ Reference Validation: ${{ steps.validate.outcome }}"
+          echo "✓ Python Tests: ${{ steps.tests.outcome }}"
+          echo "✓ Build Status: ${{ steps.build.outcome }}"
+          echo "✓ Link Checking: ${{ steps.links.outcome }}"
+          echo ""
+          echo "🎯 Critical Check Status:"
+          if [ "${{ steps.build.outcome }}" = "success" ]; then
+            echo "  ✅ HTML build succeeded - ready to merge!"
+          else
+            echo "  ❌ Build failed - fix errors above"
+            exit 1
+          fi
