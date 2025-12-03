@@ -21,6 +21,9 @@ project:
     '\Vector': '\boldsymbol{#1}'
     '\Real': '\mathbb{R}'
     '\Complex': '\mathbb{C}'
+  options:
+    cache: true
+    cache-expire: 7
 #  downloads:
 #    - id: pdf
 #      title: "Download PDF"

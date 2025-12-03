@@ -297,8 +297,13 @@ def to_snake_case(name: str) -> str:
     Returns:
         snake_case version of the name
     """
-    # Remove extension if present
-    name = os.path.splitext(name)[0]
+    # Remove known file extensions if present (be smart about dots)
+    # Only strip if it's actually a file extension we know about
+    known_extensions = tuple(get_image_extensions()) + ('md', 'txt', 'ai', 'psd')
+    for ext in known_extensions:
+        if name.lower().endswith('.' + ext):
+            name = name[:-len(ext)-1]
+            break
 
     # Remove any existing chapter/number prefix
     name = re.sub(r'^\d{2}_\d{2}_', '', name)
