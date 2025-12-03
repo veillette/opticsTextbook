@@ -1376,7 +1376,7 @@ the two constituent orthogonal linearly polarized states of natural light cannot
 
 
 ```{admonition} External sources in recommended order
-1. [KhanAcademy - Interference of light waves](https://www.khanacademy.org/science/physics/light-waves/interference-of-light-waves/v/wave-interference): Playlist on wave interference at secondary school level.
+1. [KhanAcademy - Interference of light waves](https://www.khanacademy.org/science/ap-physics-1/ap-mechanical-waves-and-sound/wave-interference-ap/v/wave-interference-pulses): Playlist on wave interference at secondary school level.
 2. [Yale Courses - 18. Wave Theory of Light](https://www.youtube.com/watch?v=5tKPLfZ9JVQ)
 3. {cite:t}`born_wolf_coherence`: Comprehensive treatment of coherence theory
 4. {cite:t}`michelson_interferometer`: Original paper on interferometry
@@ -1393,7 +1393,7 @@ Demonstration of an interference pattern obtained with sunlight.
 
 [^4]: [MIT OCW - Coherence Length and Source Spectrum](https://ocw.mit.edu/resources/res-6-006-video-demonstrations-in-lasers-and-optics-spring-2008/demonstrations-in-physical-optics/coherence-length-and-source-spectrum/): Demonstration of how the coherence length depends on the spectrum of the laser light.
 
-[^5]: [KhanAcademy - Young's Double slit part 1](https://www.khanacademy.org/science/physics/light-waves/interference-of-light-waves/v/youngs-double-split-part-1)
+[^5]: [KhanAcademy - Young's Double slit part 1](https://www.khanacademy.org/science/in-in-class-12th-physics-india/in-in-wave-optics/x51bd77206da864f3:young-s-double-slit-experiment/v/youngs-double-split-part-1)
 
 ## References
 
