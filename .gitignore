@@ -43,7 +43,6 @@ yarn-error.log*
 # Claude Code local MCP configuration
 .claude_code_mcp.json
 
-CLAUDE.md
 !/.claude/
 
 # Script reports
