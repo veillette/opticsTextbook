@@ -111,11 +111,6 @@ jobs:
           echo "LATEX_SETUP_TIME=$DURATION" >> $GITHUB_ENV
           echo "STEP_START_TIME=$(date +%s)" >> $GITHUB_ENV
 
-      - name: Install Typst
-        uses: typst-community/setup-typst@v4
-        with:
-          cache-dependency-path: requirements.typ
-      
       - name: Cache build artifacts
         uses: actions/cache@v4
         with:
