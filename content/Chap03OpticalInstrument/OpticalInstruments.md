@@ -20,8 +20,7 @@ If a film would be used to record the image, very long exposure times are howeve
 
 ```{figure} Images/03_01_camera_obscura.jpg
 :name: Fig_3_01_Camera_obscura
-The principle of the camera obscura (from [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Camera_obscura_1.jpg) in Fizyka z. (1910) / Public Domain). Examples of pictures made with a camera obscura can be found
-		[here](https://www.pinterest.com/bonfoton/camera-obscura-photographs/).
+The principle of the camera obscura (from [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Camera_obscura_1.jpg) in Fizyka z. (1910) / Public Domain). Contemporary examples of camera obscura photography can be found in the work of [Abelardo Morell](https://www.abelardomorell.net/selectedworks/camera-obscura).
 ```
 
 
