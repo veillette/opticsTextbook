@@ -4,7 +4,7 @@ An interactive open textbook on optics for undergraduate students in physics, el
 
 ## Overview
 
-This textbook covers advanced topics in optics while maintaining accessibility for students with a basic understanding of physics and optics concepts. The text focuses on practical applications and approximate theories that provide insights into optical phenomena without requiring extensive quantum mechanics knowledge. The content is presented in a way that emphasizes understanding physical phenomena through simplified models, making complex concepts more approachable while maintaining scientific rigor.
+This textbook covers advanced topics in optics while maintaining accessibility for students with a basic understanding of physics and optics concepts. The text focuses on practical applications that provide insights into optical phenomena. The content is presented in a way that emphasizes understanding physical phenomena through simplified models, making complex concepts more approachable while maintaining scientific rigor.
 
 ## Key Features and Contents
 
