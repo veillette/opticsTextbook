@@ -84,7 +84,11 @@ def validate_config(config: Dict) -> None:
             raise ConfigurationError(f"Missing required config field: '{field}'")
 
     # Validate chapter structure
+    # Skip metadata fields (keys starting with underscore)
     for chapter_num, info in config['chapters'].items():
+        # Skip metadata comment fields
+        if chapter_num.startswith('_'):
+            continue
         if not isinstance(info, dict):
             raise ConfigurationError(f"Chapter {chapter_num} info must be a dictionary")
         if 'dir' not in info:
@@ -113,7 +117,8 @@ def get_chapters() -> Dict[int, Tuple[str, str]]:
         Dictionary mapping chapter number to (directory, main_file) tuple
     """
     config = load_config()
-    return {int(k): (v['dir'], v['file']) for k, v in config['chapters'].items()}
+    # Skip metadata fields (keys starting with underscore)
+    return {int(k): (v['dir'], v['file']) for k, v in config['chapters'].items() if not k.startswith('_')}
 
 
 @functools.lru_cache(maxsize=1)
