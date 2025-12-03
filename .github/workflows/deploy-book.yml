@@ -38,9 +38,6 @@ jobs:
         cd ${{ env.BOOK_DIR }}
         jupyter-book build .
 
-    - name: Add .nojekyll file
-      run: touch ./_build/html/.nojekyll
-
     - name: Deploy to GitHub Pages
       if: github.ref == 'refs/heads/concise' && github.event_name == 'push'  # Only deploy on push to concise branch
       uses: peaceiris/actions-gh-pages@v4
@@ -49,4 +46,5 @@ jobs:
         publish_dir: ./_build/html
         full_commit_message: Deploy book to GitHub Pages
         force_orphan: true # Keep gh-pages branch clean
+        enable_jekyll: false # Add .nojekyll file automatically
         
