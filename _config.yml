@@ -56,7 +56,7 @@ html:
   analytics:
     google_analytics_id: "G-BT4TZCELT2"
   home_page_in_navbar: true
-  baseurl: ""
+  baseurl: "/opticsTextbook"
   comments:
     hypothesis: true
     utterances: false
