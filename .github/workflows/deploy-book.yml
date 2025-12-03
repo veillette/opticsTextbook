@@ -43,19 +43,36 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Cache LaTeX packages
+      - name: Cache LaTeX installation
         uses: actions/cache@v4
         id: cache-latex
         with:
-          path: /var/lib/apt/lists
-          key: ${{ runner.os }}-latex-${{ hashFiles('**/*.tex') }}
+          path: |
+            /usr/share/texlive
+            /usr/share/texmf
+            /var/lib/texmf
+            /usr/bin/latexmk
+            /usr/bin/xelatex
+            /usr/bin/pdflatex
+          key: ${{ runner.os }}-latex-v2-${{ hashFiles('.github/workflows/deploy-book.yml') }}
+          restore-keys: |
+            ${{ runner.os }}-latex-v2-
 
-      - name: Install XeTeX and ImageMagick
+      - name: LaTeX cache status
+        run: |
+          if [ "${{ steps.cache-latex.outputs.cache-hit }}" == "true" ]; then
+            echo "✅ LaTeX packages restored from cache"
+          else
+            echo "📦 LaTeX packages will be installed"
+          fi
+
+      - name: Install LaTeX, latexmk, and ImageMagick
         if: steps.cache-latex.outputs.cache-hit != 'true'
         run: |
           sudo apt-get update
-          sudo apt-get install -y texlive-xetex texlive-fonts-recommended texlive-fonts-extra
+          sudo apt-get install -y texlive-xetex texlive-fonts-recommended texlive-fonts-extra latexmk texlive-latex-extra
           sudo apt-get install -y imagemagick
+          echo "✅ LaTeX packages installed and will be cached for next run"
 
       - name: Install Typst
         uses: typst-community/setup-typst@v4
@@ -86,6 +103,28 @@ jobs:
           npx myst build --html
         env:
           NODE_OPTIONS: "--max-old-space-size=4096"
+
+      - name: Copy PDFs to _build/html for download access
+        run: |
+          mkdir -p _build/html/exports
+          mkdir -p _build/html/exports/chapters
+
+          # Copy full textbook PDF
+          if [ -f exports/textbook.pdf ]; then
+            cp exports/textbook.pdf _build/html/exports/
+            echo "✅ Full textbook PDF copied"
+          else
+            echo "⚠️ Full textbook PDF not found"
+          fi
+
+          # Copy chapter PDFs
+          if [ -d exports/chapters ]; then
+            cp exports/chapters/*.pdf _build/html/exports/chapters/ 2>/dev/null || echo "⚠️ No chapter PDFs found"
+            chapter_count=$(ls -1 _build/html/exports/chapters/*.pdf 2>/dev/null | wc -l)
+            if [ "$chapter_count" -gt 0 ]; then
+              echo "✅ $chapter_count chapter PDFs copied"
+            fi
+          fi
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
