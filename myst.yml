@@ -23,15 +23,23 @@ project:
     '\Complex': '\mathbb{C}'
   options:
     cache: true
+
     cache-expire: 30
-#  downloads:
-#    - id: pdf
-#      title: "Download PDF"
+  downloads:
+   - id: pdf
+     title: "Download PDF"
   exclude:
     - _build/**
     - exports/**
     - content/exports**
   exports:
+    # Typst export - Currently disabled due to compatibility issues
+    # Issues found:
+    # - LaTeX-specific commands like \boxed are not supported in Typst
+    # - Some admonition types are not recognized
+    # - Bibliography handling needs improvement
+    # - WebP images need imagemagick for conversion
+    # To enable: Install typst CLI (cargo install typst-cli) and fix compatibility issues
 #    - format: typst
 #      id: typstpdf
 #      template: https://github.com/rowanc1/typst-book.git
@@ -52,25 +60,28 @@ project:
 #        - content/Chap09AdvancedInstruments/AdvancedInstruments.md
 #        - content/Chap10FiberOptics/FiberOptics.md
 #        - content/Chap11RayMatrix/RayMatrix.md
-#    - format: pdf
-#      id: pdf
-#      output: exports/textbook.pdf
-#      author: Martin Veillette
-#      subject: Optics Textbook
-#      keywords: [optics, physics, education]
-#      articles:
-#        - content/Preface/Preface.md
-#        - content/Chap01Basics/Basics.md
-#        - content/Chap02GeometricalOptics/GeometricalOptics.md
-#        - content/Chap03OpticalInstrument/OpticalInstruments.md
-#        - content/Chap04Polarization/Polarization.md
-#        - content/Chap05Wave/Wave.md
-#        - content/Chap06Interference/InterferenceCoherence.md
-#        - content/Chap07Diffraction/DiffractiveOptics.md
-#        - content/Chap08Lasers/Lasers.md
-#        - content/Chap09AdvancedInstruments/AdvancedInstruments.md
-#        - content/Chap10FiberOptics/FiberOptics.md
-#        - content/Chap11RayMatrix/RayMatrix.md
+    # Traditional PDF export using LaTeX
+    # Requirements: latexmk, texlive-latex-extra, texlive-fonts-recommended
+    # Install: sudo apt-get install latexmk texlive-latex-extra texlive-fonts-recommended
+    - format: pdf
+      id: pdf
+      output: exports/textbook.pdf
+      author: Martin Veillette
+      subject: Optics Textbook
+      keywords: [optics, physics, education]
+      articles:
+        - content/Preface/Preface.md
+        - content/Chap01Basics/Basics.md
+        - content/Chap02GeometricalOptics/GeometricalOptics.md
+        - content/Chap03OpticalInstrument/OpticalInstruments.md
+        - content/Chap04Polarization/Polarization.md
+        - content/Chap05Wave/Wave.md
+        - content/Chap06Interference/InterferenceCoherence.md
+        - content/Chap07Diffraction/DiffractiveOptics.md
+        - content/Chap08Lasers/Lasers.md
+        - content/Chap09AdvancedInstruments/AdvancedInstruments.md
+        - content/Chap10FiberOptics/FiberOptics.md
+        - content/Chap11RayMatrix/RayMatrix.md
     - format: docx
       output: exports/chapters/chapter-01-basics.docx
       article: content/Chap01Basics/Basics.md
