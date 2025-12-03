@@ -8,6 +8,18 @@ project:
   license: CC-BY-SA-4.0
   github: https://github.com/veillette/opticsTextbook/
   bibliography: references.bib
+  # Exclude YouTube URLs from link checking (YouTube blocks automated link checkers)
+  error_rules:
+    - rule: link-resolves
+      severity: ignore
+      keys:
+        - https://www.youtube.com/watch?v=bxGgcgSbQBA
+        - https://www.youtube.com/watch?v=qm4QR_ycRhY
+        - https://www.youtube.com/watch?v=k1oh3lXR5PE
+        - https://www.youtube.com/watch?v=ZhkcKlksV1g
+        - https://www.youtube.com/watch?v=HriBBJ-6gd8
+        - https://www.youtube.com/watch?v=5tKPLfZ9JVQ
+        - https://www.youtube.com/watch?v=Iuv6hY6zsd0
   numbering:
     headings: true
     math: true
