@@ -278,7 +278,7 @@ def process_chapter(chapter_num: int, dry_run: bool = False, verbose: bool = Fal
         print(f"    ✓ Renamed {len(renamed)} images")
         print(f"    ✓ Updated markdown references")
 
-def main():
+def main() -> int:
     parser = argparse.ArgumentParser(
         description='Standardize all figure filenames across chapters',
         formatter_class=argparse.RawDescriptionHelpFormatter,

@@ -14,11 +14,12 @@ import re
 import sys
 import argparse
 from pathlib import Path
+from typing import Tuple, List, Union
 
 # Import shared utilities for logging support
 from shared_utils import logger
 
-def fix_split_references(content):
+def fix_split_references(content: str) -> Tuple[str, List[str]]:
     """
     Fix split equation and reference patterns in content.
 
@@ -43,7 +44,7 @@ def fix_split_references(content):
 
     return new_content, changes
 
-def process_file(file_path, dry_run=False):
+def process_file(file_path: Union[str, Path], dry_run: bool = False) -> int:
     """Process a single markdown file."""
     try:
         with open(file_path, 'r', encoding='utf-8') as f:
@@ -69,7 +70,7 @@ def process_file(file_path, dry_run=False):
         print(f"❌ Error processing {file_path}: {e}")
         return 0
 
-def find_markdown_files(content_dir='content'):
+def find_markdown_files(content_dir: str = 'content') -> List[str]:
     """Find all markdown files in the content directory."""
     md_files = []
     for root, dirs, files in os.walk(content_dir):
@@ -78,7 +79,7 @@ def find_markdown_files(content_dir='content'):
                 md_files.append(os.path.join(root, file))
     return sorted(md_files)
 
-def main():
+def main() -> int:
     parser = argparse.ArgumentParser(
         description='Fix split equation references in MyST markdown files'
     )

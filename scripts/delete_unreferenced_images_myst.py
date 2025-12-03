@@ -29,6 +29,7 @@ import argparse
 from pathlib import Path
 from collections import defaultdict
 from datetime import datetime
+from typing import List, Dict, Tuple, Optional, Any
 
 # Import shared utilities
 from report_utils import ReportGenerator
@@ -248,7 +249,7 @@ def remove_empty_directories(base_dir='content', dry_run=False):
 
     return removed_dirs
 
-def main():
+def main() -> int:
     parser = argparse.ArgumentParser(description='Delete unreferenced images and .ai files')
     parser.add_argument('--dry-run', action='store_true',
                        help='Show what would be deleted without actually deleting')
