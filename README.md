@@ -21,6 +21,56 @@ The text then delves into Polarization, covering various types of light polariza
 The chapter on Lasers ties together many previously discussed concepts, exploring laser properties, optical resonators, and stimulated emission through Einstein's theory.  We have included a chapter on the application of ray matrices to thick lens analysis.
 
 
+## For Contributors
+
+### Quick Start
+
+To contribute to this textbook, you'll need Node.js and Python installed. Follow these steps to get started:
+
+```bash
+# Clone the repository
+git clone https://github.com/veillette/opticsTextbook.git
+cd opticsTextbook
+
+# Install dependencies
+npm install
+pip install -r requirements.txt
+
+# Launch development server (with live reload)
+npm run start
+# Open http://localhost:3000 in your browser
+```
+
+### Development Workflow
+
+**Before committing your changes:**
+
+```bash
+# Auto-fix linting issues
+npm run lint:fix
+
+# Validate all references and citations
+npm run validate-enhanced
+
+# Build HTML to ensure everything works
+npm run build
+```
+
+The pre-commit hook will automatically run linting and unit tests. If tests fail, the commit will be blocked until you fix the issues.
+
+### Documentation
+
+For detailed workflows and maintenance tasks, see:
+
+- **[MAINTENANCE.md](MAINTENANCE.md)** - Comprehensive guide for common tasks
+- **[MYST_CONVENTIONS.md](MYST_CONVENTIONS.md)** - MyST Markdown conventions
+- **[scripts/README.md](scripts/README.md)** - Utility scripts documentation
+
+### Need Help?
+
+- Report issues: [GitHub Issues](https://github.com/veillette/opticsTextbook/issues)
+- View workflows: [GitHub Actions](https://github.com/veillette/opticsTextbook/actions)
+
 ## Contributions and Acknowledgments
 
 This repository is a fork of the Interactive Textbook (https://books.open.tudelft.nl/home/catalog/book/232) developed at TU Delft. We acknowledge and thank the original authors for their foundational work, which has made this adaptation possible.
