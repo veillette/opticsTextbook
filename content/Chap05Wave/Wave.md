@@ -1,3 +1,11 @@
+---
+exports:
+  - format: pdf
+    output: ../exports/chapters/chapter-05-wave.pdf
+  - format: docx
+    output: ../exports/chapters/chapter-05-wave.docx
+---
+
 (chapter.wave)=
 # Wave Equations
 

@@ -5,6 +5,11 @@ jupytext:
     format_name: myst
     format_version: 0.13
     jupytext_version: 1.16.7
+exports:
+  - format: pdf
+    output: ../exports/chapters/chapter-02-geometrical-optics.pdf
+  - format: docx
+    output: ../exports/chapters/chapter-02-geometrical-optics.docx
 ---
 
 (chapter.GeomOptics)=

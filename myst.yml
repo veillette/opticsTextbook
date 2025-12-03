@@ -192,6 +192,8 @@ project:
       file: content/Preface/Preface.md
     - title: Search & Navigation Guide
       file: content/SearchAndNavigation.md
+    - title: Downloads
+      file: content/Downloads.md
     - title: Chapters
       children:
         - title: Chapter 1 - Basics

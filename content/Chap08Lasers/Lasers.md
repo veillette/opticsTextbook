@@ -1,3 +1,11 @@
+---
+exports:
+  - format: pdf
+    output: ../exports/chapters/chapter-08-laser.pdf
+  - format: docx
+    output: ../exports/chapters/chapter-08-laser.docx
+---
+
 (chapter.lasers)=
 # Lasers
 

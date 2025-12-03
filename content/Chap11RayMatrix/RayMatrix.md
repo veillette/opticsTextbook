@@ -1,3 +1,11 @@
+---
+exports:
+  - format: pdf
+    output: ../exports/chapters/chapter-11-ray-matrix.pdf
+  - format: docx
+    output: ../exports/chapters/chapter-11-ray-matrix.docx
+---
+
 (chapter.RayMatrices)=
 # Ray Vectors and Ray Matrices
 

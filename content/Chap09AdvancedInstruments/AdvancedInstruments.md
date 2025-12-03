@@ -1,3 +1,11 @@
+---
+exports:
+  - format: pdf
+    output: ../exports/chapters/chapter-09-advanced-instruments.pdf
+  - format: docx
+    output: ../exports/chapters/chapter-09-advanced-instruments.docx
+---
+
 # Advanced Optical Microscopes
 
 Many attempts have been and are still being done to achieve better images. An obvious way of improving the resolution is to use shorter wavelengths. However, at wavelengths below 200 nm (i.e. at deep, extreme ultraviolet, soft x-rays and hard x-rays) most materials have low optical contrast and refractive optics (lenses) are not practical. Instead of reducing the wavelength, other methods have been invented to achieve higher resolution. Some of these (certainly not all) are discussed in this chapter.

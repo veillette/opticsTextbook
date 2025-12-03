@@ -1,3 +1,11 @@
+---
+exports:
+  - format: pdf
+    output: ../exports/chapters/chapter-06-interference.pdf
+  - format: docx
+    output: ../exports/chapters/chapter-06-interference.docx
+---
+
 (chapter.coherence)=
 # Interference and Coherence
 

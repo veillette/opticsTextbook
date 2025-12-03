@@ -1,3 +1,11 @@
+---
+exports:
+  - format: pdf
+    output: ../exports/chapters/chapter-10-fiber-optics.pdf
+  - format: docx
+    output: ../exports/chapters/chapter-10-fiber-optics.docx
+---
+
 (chapter.fiber)=
 # Fiber Optics
 

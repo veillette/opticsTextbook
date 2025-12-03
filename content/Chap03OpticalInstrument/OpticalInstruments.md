@@ -1,3 +1,11 @@
+---
+exports:
+  - format: pdf
+    output: ../exports/chapters/chapter-03-optical-instrument.pdf
+  - format: docx
+    output: ../exports/chapters/chapter-03-optical-instrument.docx
+---
+
 (chapter.instrument)=
 # Optical Instruments
 

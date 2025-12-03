@@ -1,3 +1,11 @@
+---
+exports:
+  - format: pdf
+    output: ../exports/chapters/chapter-04-polarization.pdf
+  - format: docx
+    output: ../exports/chapters/chapter-04-polarization.docx
+---
+
 (chapter.polarization)=
 # Polarization
 
