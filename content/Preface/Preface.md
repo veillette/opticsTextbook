@@ -24,7 +24,13 @@ The modular structure allows instructors to adapt the material to various course
 
 The field of optics continues to evolve rapidly, with new discoveries and applications emerging regularly. While this text provides a solid foundation in established principles, I encourage students to view it as a launching point for further exploration of this fascinating and vital area of physics.
 
-This book is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>. MarkDown source files are available for download using the button on the top right.
+## Accessing This Textbook
+
+This textbook is available in multiple formats:
+- **PDF Version**: Download a complete PDF of the textbook using the download button at the top right of the page
+- **Source Files**: Markdown source files are also available for download using the button on the top right
+
+This book is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
 
 *Martin Veillette*
 
