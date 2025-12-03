@@ -104,14 +104,26 @@ jobs:
         env:
           NODE_OPTIONS: "--max-old-space-size=4096"
 
-      - name: Copy PDF to _build/html for download access
+      - name: Copy PDFs to _build/html for download access
         run: |
+          mkdir -p _build/html/exports
+          mkdir -p _build/html/exports/chapters
+
+          # Copy full textbook PDF
           if [ -f exports/textbook.pdf ]; then
-            mkdir -p _build/html/exports
             cp exports/textbook.pdf _build/html/exports/
-            echo "✅ PDF copied to _build/html/exports/"
+            echo "✅ Full textbook PDF copied"
           else
-            echo "⚠️ PDF not found at exports/textbook.pdf"
+            echo "⚠️ Full textbook PDF not found"
+          fi
+
+          # Copy chapter PDFs
+          if [ -d exports/chapters ]; then
+            cp exports/chapters/*.pdf _build/html/exports/chapters/ 2>/dev/null || echo "⚠️ No chapter PDFs found"
+            chapter_count=$(ls -1 _build/html/exports/chapters/*.pdf 2>/dev/null | wc -l)
+            if [ "$chapter_count" -gt 0 ]; then
+              echo "✅ $chapter_count chapter PDFs copied"
+            fi
           fi
 
       - name: Upload artifact
