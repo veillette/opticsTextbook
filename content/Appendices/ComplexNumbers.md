@@ -1,3 +1,4 @@
+(appendix:complex-numbers)=
 # Appendix A: Complex Numbers in Optics
 
 ```{epigraph}

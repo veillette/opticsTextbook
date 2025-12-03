@@ -1,3 +1,4 @@
+(appendix:vector-calculus)=
 # Appendix D: Vector Calculus for Electromagnetic Fields
 
 ```{epigraph}
