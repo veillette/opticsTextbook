@@ -1,3 +1,4 @@
+(appendix:matrix-multiplication)=
 # Appendix B: Matrix Multiplication in Optics
 
 ```{epigraph}

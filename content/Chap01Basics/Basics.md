@@ -138,7 +138,14 @@ All electromagnetic waves, regardless of their wavelength or frequency, travel a
 The relationship between wavelength $\lambda$ and frequency $\nu$ is given by:
 $$c = \lambda\nu $$
 
-This simple equation reveals an inverse relationship: as wavelength increases, frequency decreases proportionally. The energy of electromagnetic radiation is quantized in units called photons, with each photon carrying energy $E = h\nu$, where $h$ is Planck's constant. This quantization means that electromagnetic waves can only gain or lose energy in discrete amounts proportional to their frequency.
+This simple equation reveals an inverse relationship: as wavelength increases, frequency decreases proportionally. The energy of electromagnetic radiation is quantized in units called photons, with each photon carrying energy:
+
+```{math}
+:label: photon-energy
+E = h\nu
+```
+
+where $h$ is Planck's constant. This quantization means that electromagnetic waves can only gain or lose energy in discrete amounts proportional to their frequency.
 
 
 ```{figure} Images/01_02_electromagnetic_spectrum_f1.png

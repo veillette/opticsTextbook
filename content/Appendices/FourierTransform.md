@@ -1,3 +1,4 @@
+(appendix:fourier-transform)=
 # Appendix C: Fourier Transform in Optics
 
 ```{epigraph}
