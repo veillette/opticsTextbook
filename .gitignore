@@ -45,7 +45,6 @@ yarn-error.log*
 
 CLAUDE.md
 !/.claude/
-MyST*
 
 # Script reports
 reports/

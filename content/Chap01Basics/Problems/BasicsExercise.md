@@ -41,16 +41,3 @@ Which has the shorter wavelength?
 (c) the number of photons emitted per second if the oven generates 800 W of microwave power
 
 **1.10** An AM radio station broadcasts at 1200 kHz with a power of 50 kW. An FM station broadcasts at 101.5 MHz with the same power. Calculate the number of photons per second emitted by each station and comment on the detectability of individual photons.
-
-
-### QUIZ TRYOUT
-The following are some possible ways to include questions inline. Source: [Jupyter quiz](https://pypi.org/project/jupyterquiz/#description). The content of the questions can be found in the file ```questions_ch1.json```
-
-```{code-cell} ipython3
-:tags: [remove-input]
-
-from jupyterquiz import display_quiz
-git_path="https://raw.githubusercontent.com/jmshea/jupyterquiz/main/examples/"
-# display_quiz(git_path+"questions.json")
-display_quiz("questions_ch1.json")
-```

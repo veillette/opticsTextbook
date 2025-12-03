@@ -23,10 +23,11 @@ project:
     '\Complex': '\mathbb{C}'
   options:
     cache: true
-    cache-expire: 7
+
+    cache-expire: 30
   downloads:
-    - id: pdf
-      title: "Download PDF"
+   - id: pdf
+     title: "Download PDF"
   exclude:
     - _build/**
     - exports/**
