@@ -336,8 +336,10 @@ W(\omega) \mathrm{d}\omega = I /c.
 \end{align*}
 ```
 A typical value for the frequency width of a narrow emission line of an ordinary light source is: $10^{10}$ Hz, i.e. $\mathrm{d}\omega = 2\pi \times 10^{10}$ Hz. The spontaneous and stimulated emission rates are then identical if the intensity is $I=2.95 \times 10^4$ W/m$^2$. As seen from {numref}`table_laser2`, only for laser light stimulated emission is larger than spontaneous emission. For classical light sources the spontaneous emission rate is much larger than the stimulated emission rate.
-```{table} Typical intensities of light sources.
+```{table}
 :name: table_laser2
+
+Typical intensities of light sources
 | | $I$ (W $\text{m}^{-2}$) |
 | :--- | :--: |
 | Mercury lamp | $10^4$ |

@@ -53,9 +53,7 @@ When the refractive index is not constant, Maxwell's equations are no longer equ
 We will describe two equivalent methods to compute the propagation of the field through homogeneous matter, namely the angular spectrum method and the Rayleigh-Sommerfeld diffraction formula. Our goal is to derive the field in some point $(x,y,z)$ with $z>0$, given the field in the plane $z=0$, as is illustrated in {numref}`Fig_6_02_Propagation_Math`.
 Although both methods in the end describe the same, they give physical insight into different aspects of propagation.
 
-```{index} Angular Spectrum Method
-:name: sec:angularspectrum
-```
+(sec:angularspectrum)=
 ### Angular Spectrum Method
 
 

@@ -282,9 +282,7 @@ In Gaussian geometrical optics only paraxial rays and spherical surfaces are con
 ```
 
 
-```{index} Gaussian Imaging by a Single Spherical Surface
-:name: section.Gaussian_SSS
-```
+(section.Gaussian_SSS)=
 ### Gaussian Imaging by a Single Spherical Surface
 
 We will first show that within Gaussian optics a single spherical surface
@@ -447,9 +445,7 @@ With {eq}`eq:geo:image-focal-distance` and {eq}`eq:geo:object-focal-distance`,
 ```
 
 
-```{index} Virtual Images and Virtual Objects of a Single Spherical Surface
-:name: subsection.virtualSSS
-```
+(subsection.virtualSSS)=
 ### Virtual Images and Virtual Objects of a Single Spherical Surface
 
 If we adopt the sign convention listed in
@@ -513,8 +509,13 @@ In conclusion: provided the sign convention listed in {numref}`table_signconv`
 is used, formula {eq}`eq:geo:single-surface-imaging`
 can always be used to determine the image of a given object by a spherical surface.
 
-```{table} Sign convention for spherical surfaces and thin lenses. The convention for $s_o$, $f_o$, $s_i$, $f_i$ follows from the fact that these are $z$-coordinates with the origin at vertex $V$ of the spherical surface (or the center of the thin lens) and the positive $z$-axis is pointing to the right. The convention for the $y$-coordinate follows from the fact that the $y$-axis is positive upwards.
+The convention for $s_o$, $f_o$, $s_i$, $f_i$ follows from the fact that these are $z$-coordinates with the origin at vertex $V$ of the spherical surface (or the center of the thin lens) and the positive $z$-axis is pointing to the right. The convention for the $y$-coordinate follows from the fact that the $y$-axis is positive upwards.
+
+```{table}
 :name: table_signconv
+
+Sign convention for spherical surfaces and thin lenses
+
 | **quantity** | **positive** | **negative** |
 | :--: | :--: | :--: |
 | $s_o$, $s_i$. $f_0$, $f_i$ | corresponding point is to the right of vertex | corresponding point is to left of vertex |
@@ -524,9 +525,7 @@ can always be used to determine the image of a given object by a spherical surfa
 ```
 
 
-```{index} Stops
-:name: sec.stops
-```
+(sec.stops)=
 
 ### Stops
 
