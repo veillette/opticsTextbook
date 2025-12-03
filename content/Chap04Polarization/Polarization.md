@@ -224,7 +224,7 @@ Illustration of different types of polarization. The horizontal and vertical arr
 
 
 ```{admonition} External source
-- [KhanAcademy - Polarization of light, linear and circular](https://www.khanacademy.org/science/physics/light-waves/introduction-to-light-waves/v/polarization-of-light-linear-and-circular): Explanation of different polarization states and their applications.
+- [KhanAcademy - Polarization of light, linear and circular](https://www.khanacademy.org/science/ap-physics-2/ap-light-waves/ap-introduction-to-light-waves/v/polarization-of-light-linear-and-circular): Explanation of different polarization states and their applications.
 ```
 
 ## Creating and Manipulating Polarization States
