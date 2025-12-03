@@ -265,6 +265,7 @@ site:
     logo_dark: img/advanced_optics_logo_dark.svg
     logo_text: Optics Textbook
     logo: img/advanced_optics_logo_white.svg
+    favicon: img/favicon.ico
     analytics:
       google: G-BT4TZCELT2
     hide_myst_branding: true
