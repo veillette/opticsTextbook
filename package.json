@@ -30,6 +30,7 @@
     "start": "myst start",
     "export": "myst build -a",
     "checklinks": "myst build --check-links",
+    "prebuild": "npm run optimize-images",
     "build": "myst build --html",
     "clean": "myst clean",
     "serve": "npx serve _build/html",
