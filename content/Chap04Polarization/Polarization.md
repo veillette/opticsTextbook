@@ -393,9 +393,9 @@ the $\widehat{\mathbf{x}}$, $\widehat{\mathbf{y}}$ basis, given by:
 
 ```{math}
 :label: eq:pol:rotated-jones-matrix
-\boxed{\begin{align*}
+\begin{align*}
 	{\cal M}_{\theta}={\cal R}_{\theta}{\cal M} {\cal R}_{-\theta}.
-	\end{align*}}
+	\end{align*}
 ```
 
 This is a standard result from linear algebra involving basis transformations.

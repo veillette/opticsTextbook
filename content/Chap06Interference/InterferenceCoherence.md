@@ -395,9 +395,9 @@ In particular, the ratio of the interference term and the other terms is the sam
 The **self coherence function** $\Gamma(\tau)$ is defined by
 
 ```{math}
-\boxed{ \begin{align*}
+\begin{align*}
 \Gamma(\tau)=\braket{U(t)U(t-\tau)^*} \hspace{1.5cm}\textbf{self-coherence}.
-\end{align*}}
+\end{align*}
 ```
 
 The intensity of $U(t)$ is
@@ -412,9 +412,9 @@ The **complex degree of self-coherence** is defined by:
 
 ```{math}
 :label: eq.defgamma
-\boxed{\begin{align*}
+\begin{align*}
 \gamma(\tau)=\frac{\Gamma(\tau)}{\Gamma(0)}. \hspace{1.2cm} \textbf{complex degree of self-coherence}
-\end{align*}}
+\end{align*}
 ```
  Using Bessel's inequality it can be shown that this is a complex number with modulus between $0$ and $1$:
 
@@ -623,9 +623,9 @@ We define the **mutual coherence function** by:
 
 ```{math}
 :label: eq.mutcoh
-\boxed{\begin{align*}
+\begin{align*}
 \Gamma_{12}(\tau)=\braket{\,U(\mathbf{r}_1,t)U(\mathbf{r}_2,t-\tau)^*\,}, \hspace{1.5cm} \textbf{mutual coherence}.
-\end{align*}}
+\end{align*}
 ```
 
 With the intensities
@@ -643,9 +643,9 @@ the **complex degree of mutual coherence** is defined by
 
 ```{math}
 :label: eq.defgamma12
-\boxed{\begin{align*}
+\begin{align*}
 \gamma_{12}(\tau)=\frac{\Gamma_{12}(\tau)}{\sqrt{ \Gamma_{11}(0)}\sqrt{\Gamma_{22}(0)}}, \quad \textbf{complex degree of mutual coherence}.
-\end{align*}}
+\end{align*}
 ```
 
 It can be proved using Bessel's inequality that
@@ -954,9 +954,9 @@ We have seen that when the interference term
 $\text{Re} \braket{ U_1 U_2^* }$ vanishes, no fringes form, while when this term is nonzero, there are fringes. The **fringe contrast** is expressed directly in measurable intensities. Given some interference intensity pattern $I(x)$ as in {numref}`Fig_5_09_Visibility`, the fringe contrast is defined as
 
 ```{math}
-\boxed{ \begin{align*}
+\begin{align*}
 \mathcal{V}=\frac{I_{\text{max}}-I_{\text{min}}}{I_{\text{max}}+I_{\text{min}}}. \hspace{1.5cm} \textbf{fringe contrast}.
-\end{align*}}
+\end{align*}
 ```
 
 For example, if we have two perfectly coherent, monochromatic point sources emitting the fields $U_1$, $U_2$

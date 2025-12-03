@@ -453,9 +453,9 @@ This requires that
 
 ```{math}
 :label: eq:ray:imaging-condition
-\boxed{\begin{align*}
+\begin{align*}
 C=0, \quad \textbf{condition for imaging}.
-\end{align*}}
+\end{align*}
 ```
 
 The ratio of $y_2$ and $y_1$ IS the magnification $M$. Hence,
@@ -489,10 +489,10 @@ The imaging condition {eq}`eq:ray:imaging-condition` implies:
 
 ```{math}
 :label: eq:ray:lensmaker-formula
-\boxed{\begin{align*}
+\begin{align*}
 -\frac{n_1}{s_o} + \frac{n_2}{s_i}={\cal P},
 \quad \bf{Lensmaker's \;\; Formula},
-\end{align*}}
+\end{align*}
 ```
 where we have written $s_o=z_1$ and $s_i=z_2$ for the $z$-coordinates of the object and the image.
 Because for the thin lens matrix {eq}
@@ -563,9 +563,9 @@ By multiplying these two equations we get the **Newtonian form** of the lens equ
 
 ```{math}
 :label: eq:ray:newton-lens-equation
-\boxed{\begin{align*}
+\begin{align*}
 x_o x_i =- f_i^2=- f_o^2,
-\end{align*}}
+\end{align*}
 ```
 
 where $x_o$ and $x_i$ are the $z$-coordinates of the object and image relative to those of the first and second focal point, respectively:

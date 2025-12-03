@@ -98,9 +98,9 @@ The **optical path length** [m] of the ray between S and P is defined by:
 
 ```{math}
 :label: eq:geo:optical-path-length
-\boxed{\begin{align*}
+\begin{align*}
 \text{OPL} = \int_0^{s_P} n(\mathbf{r}(s)) \mathrm{d}s,
-\end{align*}}
+\end{align*}
 ```
 
 So the OPL is the distance weighted by the refractive index.
@@ -419,9 +419,9 @@ Its $z$-coordinate is given by:
 
 ```{math}
 :label: eq:geo:image-focal-distance
-\boxed{\begin{align*}
+\begin{align*}
 	f_i = \frac{n_2}{{\cal P}}=\frac{n_2 R}{n_2-n_1},
-	\end{align*}}
+	\end{align*}
 ```
 
 and its absolute value (it is negative when $n_2<n_1$) is called the **second focal length** or **image focal length**.
@@ -430,9 +430,9 @@ When $s_i\rightarrow \infty$, the rays after refraction are parallel to the $z$-
 
 ```{math}
 :label: eq:geo:object-focal-distance
-\boxed{\begin{align*}
+\begin{align*}
 f_o=-\frac{n_1}{{\cal P}}= -\frac{n_1 R}{n_2-n_1}.
-\end{align*}}
+\end{align*}
 ```
 
 The absolute value $|f_o|$ of $f_o$ is called the **front focal length** or **object focal length**.
@@ -443,9 +443,9 @@ With {eq}`eq:geo:image-focal-distance` and {eq}`eq:geo:object-focal-distance`,
 
 ```{math}
 :label: eq:geo:single-surface-power-form
-\boxed{\begin{align*}
+\begin{align*}
 -\frac{n_1}{s_o} + \frac{n_2}{s_i} = {\cal P} =-\frac{n_2}{f_i}= -\frac{n_1}{f_o}.
-\end{align*}}
+\end{align*}
 ```
 
 
@@ -550,9 +550,9 @@ A larger magnification means a lower energy density, hence a longer exposure tim
 
 ```{math}
 :label: eq:geo:f-number-definition
-\boxed{\begin{align*}
+\begin{align*}
 \text{f-number}=f/D.
-\end{align*}}
+\end{align*}
 ```
 
 For example, f-number$=2$ means $f = 2D$. Since the exposure time is proportional to the square of the f-number, a lens with f-number 1.4 is twice as fast as a lens with f-number 2.

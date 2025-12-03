@@ -107,9 +107,9 @@ Therefore, the field $U(x,y,z)$ in the plane $z$ (for some $z>0$) is given by
 
 ```{math}
 :label: eq.planewave1
-\boxed{\begin{align*}
+\begin{align*}
 U(x,y,z)=\frac{1}{4\pi^2} \int\int {\cal F}(U_0)\left(\frac{k_x}{2\pi},\frac{k_y}{2\pi}\right)e^{i (k_x x + k_y y+k_z z)} \,\text{d}k_x\,\text{d}k_y,
-\end{align*}}
+\end{align*}
 ```
 
 where
@@ -353,7 +353,7 @@ With this approximation, we arrive at the **Fresnel diffraction integral**, whic
 
 ```{math}
 :label: eq.FresnelF
-\boxed{\begin{align*}
+\begin{align*}
 \begin{split}
 U(x,y,z) &\approx
 \frac{e^{ikz}}{i\lambda z}\int\!\int U_0(x',y')e^{\frac{ik}{2z}\left[(x-x')^2+(y-y')^2\right]}\,\text{d}x'\,\text{d}y' \\
@@ -361,7 +361,7 @@ U(x,y,z) &\approx
 \frac{ e^{ikz}e^{\frac{ik(x^2+y^2)}{2z}}}{i\lambda z}\int\!\int U_0(x',y') e^{\frac{ik(x'^2+y'^2)}{2z}}e^{-ik\left(\frac{x}{z}x'+\frac{y}{z}y'\right)}\,\text{d}x'\,\text{d}y' \\
 &= \frac{e^{ikz}e^{\frac{ik(x^2+y^2)}{2z}}}{i\lambda z} \mathcal{F}\left\{U_0(x',y')e^{\frac{ik(x'^2+y'^2)}{2z}}\right\}\left(\frac{x}{ \lambda z },\frac{y}{\lambda z}\right)
 \end{split}
-\end{align*}}
+\end{align*}
 ```
 
 Especially the last expression is interesting, because it shows that
@@ -396,10 +396,10 @@ Hence we have omitted the quadratic terms $x'^2+y'^2$, and in comparison with th
 
 ```{math}
 :label: eq.Fraunhofer
-\boxed{\begin{align*}
+\begin{align*}
 U(x,y,z)\approx \frac{e^{ikz}e^{\frac{ik(x^2+y^2)}{2z}}}{i\lambda z} \mathcal{F}(U_0)\left(\frac{x }{ \lambda z},
 \frac {y}{\lambda z }\right).
-\end{align*}}
+\end{align*}
 ```
 
 This leads to the following important observation:
@@ -459,9 +459,9 @@ The Fresnel number is defined by
 
 ```{math}
 :label: eq.NF
-\boxed{\begin{align*}
+\begin{align*}
 N_F = \frac{D^2}{\lambda z}, \;\;\; \textbf{Fresnel number}.
-\end{align*}}
+\end{align*}
 ```
 
 When $N_F < 0.1$ the Fraunhofer approximation is accurate, while for $N_F>0.1$ it is better to use the Fresnel approximation (see {numref}`Fig_6_08_FresnelFraunhoferSlit`).
@@ -698,9 +698,9 @@ The diffraction amplitude is maximum for angles where both the denominator and n
 
 ```{math}
 :label: eq.orderm
-\boxed{\begin{align*}
+\begin{align*}
 \theta_m= \frac{ m \lambda}{ p },\;\;\; m=0,\pm1, \pm 2, \ldots, \hspace{0.6cm} \textbf{diffraction orders.}
-\end{align*}}
+\end{align*}
 ```
 
 These directions are called diffraction orders and since
@@ -724,10 +724,10 @@ The angular width of a diffraction order is half the angular distance to the nea
 
 ```{math}
 :label: eq.widthorder
-\boxed{\begin{align*}
+\begin{align*}
 \Delta \theta = \frac{\lambda}{M p},
 \hspace{1cm} \textbf{angular width of a diffraction order.}
-\end{align*}}
+\end{align*}
 ```
 
 If there are more slits the intensity peaks into which the energy is diffracted are narrower and the peaks are higher.
@@ -908,8 +908,8 @@ For a general field $U_0(x,y)$ incident on the lens, i.e. in the entrance pupil,
 
 ```{math}
 :label: eq.lens3
-\boxed{\begin{align*}
-& U_0(x,y) \to U_0(x,y) 1_{\bigodot_a}(x,y) e^{- i k \frac{x^2 + y^2}{2 f_i}}, \end{align*}}
+\begin{align*}
+& U_0(x,y) \to U_0(x,y) 1_{\bigodot_a}(x,y) e^{- i k \frac{x^2 + y^2}{2 f_i}}, \end{align*}
 ```
 
 The function that multiplies $U_0(x,y)$ is the **transmission function of the lens**:
@@ -980,18 +980,18 @@ $\xi = \frac{x}{\lambda f_i}$, $\eta =\frac{ y}{\lambda f_i}$. This field is cal
 
 ```{math}
 :label: eq.Airy_image
-\boxed{\begin{align*}
+\begin{align*}
 U(x,y,z)=\frac{ \pi a^2}{\lambda f_i} \, \frac{ 2 J_1\left(2\pi \frac{ a }{\lambda f_i } \sqrt{x^2 + y^2} \right) }
 { \frac{2\pi a }{\lambda f_i } \sqrt{x^2 + y^2} }, \hspace{1cm} \textbf{Airy pattern for focusing},
-\end{align*}}
+\end{align*}
 ```
 
 where $J_1$ is the Bessel function of the first kind and where the phase factors in front of the Fourier transform have been omitted. The pattern is shown in {numref}`Fig_6_17_AirySpot`. It is circular symmetric and consists of a central maximum surrounded by concentric rings of alternating zeros and secondary maxima with decreasing amplitudes. In cross-section, as function of $r=\sqrt{x^2+y^2}$, the Airy pattern is similar (but not identical) to the $\text{ sinc}$-function. From the uncertainty principle illustrated in {numref}`Fig_6_07_Uncertainty` it follows that the size of the focal spot decreases as $a$ increases, and from {eq}`eq.Airy_image` we see that the Airy function is a function of the dimensionless variable $a r/(\lambda f_i)$. Hence the focal spot becomes narrower as $a/(\lambda f_i)$ increases. The Numerical Aperture ($\textit{NA}$) is defined by
 
 ```{math}
-\boxed{ \begin{align*}
+\begin{align*}
 \text{NA}=\frac{a}{f_i}, \hspace{1cm} \textbf{numerical aperture}.
-\end{align*}}
+\end{align*}
 ```
 
 Since the first zero of the Airy pattern occurs for $a r/(\lambda f_i)= 0.61$, the width of the focal spot can be estimated by
@@ -999,9 +999,9 @@ Since the first zero of the Airy pattern occurs for $a r/(\lambda f_i)= 0.61$, t
 
 ```{math}
 :label: eq.resolution
-\boxed{\begin{align*}
+\begin{align*}
 \textbf{Size of focal spot} \approx 0.61 \frac{\lambda}{\text{NA}}
-\end{align*}}
+\end{align*}
 ```
 
 ```{figure} Images/07_19_airy_disk_color.png
@@ -1023,9 +1023,9 @@ where $s_i$ is the image coordinate as given by the Lensmaker's Formula. This fi
 
 ```{math}
 :label: eq.PSF
-\boxed{\begin{align*}
+\begin{align*}
 \text{PSF}(x,y) =\frac{ \pi a^2}{\lambda s_i} \frac{J_1\left(2\pi \frac{ a }{\lambda s_i } \sqrt{x^2 + y^2} \right) }{ \frac{2\pi a }{\lambda s_i } \sqrt{x^2 + y^2} }, \hspace{1cm} \textbf{Airy pattern for imaging}.
-\end{align*}}
+\end{align*}
 ```
 
 For object points that are not on the optical axis, the PSF is translated such that it remains centerd on the ideal Gaussian image point.
