@@ -29,12 +29,13 @@ from pathlib import Path
 from collections import defaultdict, Counter
 from datetime import datetime
 import tempfile
+from typing import Dict, List, Tuple, Any, Optional
 
 # Import shared utilities
 from shared_utils import run_myst_command
 from report_utils import ReportGenerator, MarkdownReportBuilder, create_validation_report
 
-def run_enhanced_myst_validation():
+def run_enhanced_myst_validation() -> Dict[str, Any]:
     """Run MyST validation with enhanced reporting."""
     print("Running enhanced MyST validation...")
 
@@ -66,7 +67,7 @@ def run_enhanced_myst_validation():
 
     return validation_results
 
-def parse_enhanced_myst_output(validation_results):
+def parse_enhanced_myst_output(validation_results: Dict[str, Any]) -> Dict[str, List[Dict[str, Any]]]:
     """Parse MyST output with enhanced pattern matching."""
     issues = {
         'missing_figures': [],
@@ -173,7 +174,7 @@ def parse_enhanced_myst_output(validation_results):
 
     return issues
 
-def extract_figure_error(line):
+def extract_figure_error(line: str) -> Dict[str, str]:
     """Extract detailed information from figure/image error messages."""
     patterns = [
         r'(\S+\.md).*?(\S+\.(png|jpg|jpeg|gif|svg|webp))',
@@ -195,7 +196,7 @@ def extract_figure_error(line):
 
     return {'message': line.strip(), 'type': 'missing_figure'}
 
-def extract_cross_ref_error(line):
+def extract_cross_ref_error(line: str) -> Dict[str, str]:
     """Extract detailed information from cross-reference errors."""
     patterns = [
         r'(\S+\.md).*?Cross reference target was not found:\s*(.+?)(?:\s|$)',
@@ -217,7 +218,7 @@ def extract_cross_ref_error(line):
 
     return {'message': line.strip(), 'type': 'broken_cross_ref'}
 
-def extract_link_error(line):
+def extract_link_error(line: str) -> Dict[str, str]:
     """Extract information from external link errors."""
     url_pattern = r'(https?://[^\s]+)'
     file_pattern = r'(\S+\.md)'
@@ -232,7 +233,7 @@ def extract_link_error(line):
         'type': 'external_link_error'
     }
 
-def extract_equation_error(line):
+def extract_equation_error(line: str) -> Dict[str, str]:
     """Extract information from equation errors."""
     patterns = [
         r'Equation\s+(.+?)\s+not found.*?(\S+\.md)',
@@ -253,7 +254,7 @@ def extract_equation_error(line):
 
     return {'message': line.strip(), 'type': 'equation_error'}
 
-def extract_citation_error(line):
+def extract_citation_error(line: str) -> Dict[str, str]:
     """Extract information from citation errors."""
     patterns = [
         r'Citation\s+(.+?)\s+not found.*?(\S+\.md)',
@@ -274,7 +275,7 @@ def extract_citation_error(line):
 
     return {'message': line.strip(), 'type': 'citation_error'}
 
-def extract_syntax_error(line):
+def extract_syntax_error(line: str) -> Dict[str, str]:
     """Extract information from syntax errors."""
     file_pattern = r'(\S+\.md)'
     line_pattern = r'line\s+(\d+)'
@@ -289,7 +290,7 @@ def extract_syntax_error(line):
         'type': 'syntax_error'
     }
 
-def generate_fix_suggestions(issues):
+def generate_fix_suggestions(issues: Dict[str, List[Dict[str, Any]]]) -> Dict[str, List[str]]:
     """Generate fix suggestions for common issues."""
     suggestions = {
         'missing_figures': [],
@@ -345,7 +346,7 @@ def generate_fix_suggestions(issues):
 
     return suggestions
 
-def analyze_patterns(issues):
+def analyze_patterns(issues: Dict[str, List[Dict[str, Any]]]) -> Dict[str, Any]:
     """Analyze patterns in the validation issues."""
     analysis = {
         'files_with_most_issues': Counter(),
@@ -389,7 +390,7 @@ def analyze_patterns(issues):
 
     return analysis
 
-def print_enhanced_report(issues, analysis, include_suggestions=False):
+def print_enhanced_report(issues: Dict[str, List[Dict[str, Any]]], analysis: Dict[str, Any], include_suggestions: bool = False) -> None:
     """Print an enhanced validation report."""
     print(f"\n=== ENHANCED MyST VALIDATION REPORT ===")
 
@@ -426,7 +427,7 @@ def print_enhanced_report(issues, analysis, include_suggestions=False):
         suggestions = generate_fix_suggestions(issues)
         print_fix_suggestions(suggestions)
 
-def get_error_emoji(error_type):
+def get_error_emoji(error_type: str) -> str:
     """Get appropriate emoji for error type."""
     emoji_map = {
         'missing_figures': '🖼️',
@@ -440,7 +441,7 @@ def get_error_emoji(error_type):
     }
     return emoji_map.get(error_type, '❓')
 
-def print_detailed_issues(issues):
+def print_detailed_issues(issues: Dict[str, List[Dict[str, Any]]]) -> None:
     """Print detailed breakdown of issues."""
     # Critical issues first
     critical_types = ['build_errors', 'syntax_errors']
@@ -455,7 +456,7 @@ def print_detailed_issues(issues):
         if issues[issue_type]:
             print_issue_section(issue_type, issues[issue_type], critical=False)
 
-def print_issue_section(issue_type, issue_list, critical=False):
+def print_issue_section(issue_type: str, issue_list: List[Dict[str, Any]], critical: bool = False) -> None:
     """Print a section for a specific issue type."""
     emoji = get_error_emoji(issue_type)
     readable_name = issue_type.replace('_', ' ').title()
@@ -485,7 +486,7 @@ def print_issue_section(issue_type, issue_list, critical=False):
         if len(file_issues) > 5:
             print(f"  ... and {len(file_issues) - 5} more issues")
 
-def print_fix_suggestions(suggestions):
+def print_fix_suggestions(suggestions: Dict[str, List[str]]) -> None:
     """Print fix suggestions."""
     print(f"\n=== FIX SUGGESTIONS ===")
 
@@ -496,7 +497,7 @@ def print_fix_suggestions(suggestions):
             for suggestion in suggestion_list:
                 print(f"  💡 {suggestion}")
 
-def save_enhanced_report(issues, analysis, output_file, include_suggestions=False):
+def save_enhanced_report(issues: Dict[str, List[Dict[str, Any]]], analysis: Dict[str, Any], output_file: str, include_suggestions: bool = False) -> Tuple[str, str]:
     """Save enhanced report to file."""
     # Create reports directory if it doesn't exist
     os.makedirs('reports', exist_ok=True)
@@ -573,7 +574,7 @@ def save_enhanced_report(issues, analysis, output_file, include_suggestions=Fals
 
     return md_file, json_file
 
-def main():
+def main() -> int:
     parser = argparse.ArgumentParser(description='Enhanced MyST reference validation')
     parser.add_argument('--output-file', default='validation_report',
                        help='Base name for output files (will create .md and .json)')

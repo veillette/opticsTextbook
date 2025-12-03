@@ -94,7 +94,7 @@ Version: 1.0.0
 import json
 from pathlib import Path
 from datetime import datetime
-from typing import Any, Dict, List, Optional, Union
+from typing import Any, Dict, List, Optional, Union, Tuple
 
 
 class ReportGenerator:
@@ -274,8 +274,8 @@ class MarkdownReportBuilder:
         return ''.join(self.lines)
 
 
-def create_validation_report(title: str, issues: Dict[str, List],
-                             summary: Dict[str, int]) -> tuple[str, Dict]:
+def create_validation_report(title: str, issues: Dict[str, List[Any]],
+                             summary: Dict[str, int]) -> Tuple[str, Dict[str, Any]]:
     """
     Create a standardized validation report.
 
@@ -311,7 +311,7 @@ def create_validation_report(title: str, issues: Dict[str, List],
 
 
 def create_file_list_report(title: str, files: List[str],
-                            description: str = "") -> tuple[str, str]:
+                            description: str = "") -> Tuple[str, str]:
     """
     Create a simple file list report.
 

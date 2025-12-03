@@ -13,7 +13,7 @@ import subprocess
 import logging
 import functools
 from pathlib import Path
-from typing import List, Dict, Tuple, Optional, Callable
+from typing import List, Dict, Tuple, Optional, Callable, Union, Any
 
 # Set up logging
 logger = logging.getLogger(__name__)
@@ -46,7 +46,7 @@ class ChapterError(Exception):
 # ============================================================================
 
 @functools.lru_cache(maxsize=1)
-def load_config() -> Dict:
+def load_config() -> Dict[str, Any]:
     """
     Load and validate configuration from config.json.
 
@@ -67,7 +67,7 @@ def load_config() -> Dict:
         raise ConfigurationError(f"Invalid JSON in configuration file: {e}")
 
 
-def validate_config(config: Dict) -> None:
+def validate_config(config: Dict[str, Any]) -> None:
     """
     Validate that configuration has required fields and structure.
 
@@ -161,7 +161,7 @@ IMAGE_EXTENSIONS = _constants.IMAGE_EXTENSIONS
 # Path Handling Utilities
 # ============================================================================
 
-def ensure_path(path_like) -> Path:
+def ensure_path(path_like: Union[str, Path]) -> Path:
     """
     Convert string or Path-like to Path object.
 
@@ -174,7 +174,7 @@ def ensure_path(path_like) -> Path:
     return Path(path_like) if not isinstance(path_like, Path) else path_like
 
 
-def ensure_directory(directory: Path) -> Path:
+def ensure_directory(directory: Union[str, Path]) -> Path:
     """
     Ensure directory exists, create if necessary.
 
@@ -229,7 +229,7 @@ def validate_image_extension(filename: str) -> bool:
     return ext in get_image_extensions()
 
 
-def validate_file_exists(filepath: Path) -> bool:
+def validate_file_exists(filepath: Union[str, Path]) -> bool:
     """
     Validate that a file exists.
 
@@ -389,7 +389,7 @@ def is_properly_named(filename: str, chapter_num: int) -> bool:
 # Figure Reference Extraction
 # ============================================================================
 
-def extract_figure_references(md_file: Path, images_dir: Optional[Path] = None) -> List[Dict]:
+def extract_figure_references(md_file: Union[str, Path], images_dir: Optional[Union[str, Path]] = None) -> List[Dict[str, Any]]:
     """
     Extract all figure references from a markdown file in order of appearance.
 
@@ -460,7 +460,7 @@ def extract_figure_references(md_file: Path, images_dir: Optional[Path] = None) 
 # File and Directory Discovery
 # ============================================================================
 
-def find_markdown_files_in_chapter(chapter_dir: Path) -> List[Path]:
+def find_markdown_files_in_chapter(chapter_dir: Union[str, Path]) -> List[Path]:
     """
     Find all markdown files in a chapter directory.
 
@@ -550,7 +550,7 @@ def format_file_size(size_bytes: int) -> str:
 # Progress Callback Support
 # ============================================================================
 
-def create_progress_callback(total: int, description: str = "Processing") -> Callable:
+def create_progress_callback(total: int, description: str = "Processing") -> Callable[[int, str], None]:
     """
     Create a simple progress callback function.
 
@@ -569,9 +569,9 @@ def create_progress_callback(total: int, description: str = "Processing") -> Cal
     return callback
 
 
-def process_with_progress(items: List, process_func: Callable,
+def process_with_progress(items: List[Any], process_func: Callable[[Any], Any],
                          description: str = "Processing",
-                         callback: Optional[Callable] = None) -> List:
+                         callback: Optional[Callable[[int, str], None]] = None) -> List[Any]:
     """
     Process items with optional progress reporting.
 

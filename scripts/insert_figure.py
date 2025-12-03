@@ -33,6 +33,7 @@ import shutil
 import argparse
 from pathlib import Path
 from collections import defaultdict
+from typing import List, Dict, Tuple, Optional, Union, Any
 
 # Import shared utilities
 from shared_utils import CHAPTERS, to_snake_case
@@ -231,7 +232,7 @@ def validate_inputs(args):
 
     return errors
 
-def main():
+def main() -> int:
     parser = argparse.ArgumentParser(
         description='Insert a new figure into a chapter and renumber subsequent figures',
         formatter_class=argparse.RawDescriptionHelpFormatter,

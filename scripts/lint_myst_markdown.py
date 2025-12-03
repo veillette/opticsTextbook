@@ -36,17 +36,18 @@ import argparse
 from pathlib import Path
 from collections import defaultdict
 from datetime import datetime
+from typing import List, Dict, Tuple, DefaultDict, Any, Union
 
 # Import shared utilities
 from shared_utils import ensure_directory
 from report_utils import ReportGenerator, MarkdownReportBuilder
 
 class MystLinter:
-    def __init__(self, fix_mode=False):
-        self.fix_mode = fix_mode
-        self.issues = defaultdict(list)
+    def __init__(self, fix_mode: bool = False) -> None:
+        self.fix_mode: bool = fix_mode
+        self.issues: DefaultDict[str, List[Dict[str, Any]]] = defaultdict(list)
 
-    def check_file(self, file_path):
+    def check_file(self, file_path: Union[str, Path]) -> List[Dict[str, Any]]:
         """Check a single markdown file for issues."""
         try:
             with open(file_path, 'r', encoding='utf-8') as f:
@@ -79,7 +80,7 @@ class MystLinter:
         except Exception as e:
             return [{'type': 'error', 'line': 0, 'message': f"Error reading file: {e}"}]
 
-    def _check_split_references(self, lines, file_path):
+    def _check_split_references(self, lines: List[str], file_path: Union[str, Path]) -> List[Dict[str, Any]]:
         """Check for split reference roles across lines."""
         issues = []
         pattern = r'\{(eq|numref|ref|doc|cite)\}\s*$'
@@ -98,7 +99,7 @@ class MystLinter:
 
         return issues
 
-    def _check_blank_lines_in_math(self, lines, file_path):
+    def _check_blank_lines_in_math(self, lines: List[str], file_path: Union[str, Path]) -> List[Dict[str, Any]]:
         """Check for blank lines inside math blocks."""
         issues = []
         in_math_block = False
@@ -133,7 +134,7 @@ class MystLinter:
 
         return issues
 
-    def _check_missing_math_labels(self, lines, file_path):
+    def _check_missing_math_labels(self, lines: List[str], file_path: Union[str, Path]) -> List[Dict[str, Any]]:
         """Check for math blocks without labels (numbered equations should have labels)."""
         issues = []
         in_math_block = False
@@ -172,7 +173,7 @@ class MystLinter:
 
         return issues
 
-    def _check_equation_label_format(self, lines, file_path):
+    def _check_equation_label_format(self, lines: List[str], file_path: Union[str, Path]) -> List[Dict[str, Any]]:
         """Check equation label format consistency."""
         issues = []
         label_pattern = r':label:\s*([^\s\n]+)'
@@ -196,7 +197,7 @@ class MystLinter:
 
         return issues
 
-    def _check_trailing_whitespace(self, lines, file_path):
+    def _check_trailing_whitespace(self, lines: List[str], file_path: Union[str, Path]) -> List[Dict[str, Any]]:
         """Check for trailing whitespace."""
         issues = []
 
@@ -212,7 +213,7 @@ class MystLinter:
 
         return issues
 
-    def _check_multiple_blank_lines(self, lines, file_path):
+    def _check_multiple_blank_lines(self, lines: List[str], file_path: Union[str, Path]) -> List[Dict[str, Any]]:
         """Check for more than 2 consecutive blank lines."""
         issues = []
         blank_count = 0
@@ -236,7 +237,7 @@ class MystLinter:
 
         return issues
 
-    def _check_malformed_directives(self, lines, file_path):
+    def _check_malformed_directives(self, lines: List[str], file_path: Union[str, Path]) -> List[Dict[str, Any]]:
         """Check for malformed directive syntax."""
         issues = []
 
@@ -282,7 +283,7 @@ class MystLinter:
 
         return issues
 
-    def _check_figure_alt_text(self, lines, file_path):
+    def _check_figure_alt_text(self, lines: List[str], file_path: Union[str, Path]) -> List[Dict[str, Any]]:
         """Check for figures without alt text or captions."""
         issues = []
         in_figure = False
@@ -322,7 +323,7 @@ class MystLinter:
 
         return issues
 
-    def _check_fence_convention(self, lines, file_path):
+    def _check_fence_convention(self, lines: List[str], file_path: Union[str, Path]) -> List[Dict[str, Any]]:
         """Check that directives use backtick fences (our preferred convention)."""
         issues = []
 
@@ -366,7 +367,7 @@ class MystLinter:
 
         return issues
 
-    def _apply_fixes(self, content, issues):
+    def _apply_fixes(self, content: str, issues: List[Dict[str, Any]]) -> str:
         """Apply automatic fixes to content."""
         # Fix split references
         content = re.sub(
@@ -394,7 +395,7 @@ class MystLinter:
 
         return content
 
-def process_directory(content_dir, linter, quiet=False):
+def process_directory(content_dir: str, linter: MystLinter, quiet: bool = False) -> Tuple[Dict[str, List[Dict[str, Any]]], int, int]:
     """Process all markdown files in directory."""
     md_files = []
     for root, dirs, files in os.walk(content_dir):
@@ -427,7 +428,7 @@ def process_directory(content_dir, linter, quiet=False):
 
     return all_issues, files_with_issues, len(md_files)
 
-def print_summary(all_issues, files_with_issues, total_files, fix_mode):
+def print_summary(all_issues: Dict[str, List[Dict[str, Any]]], files_with_issues: int, total_files: int, fix_mode: bool) -> None:
     """Print summary of linting results."""
     total_issues = sum(len(issues) for issues in all_issues.values())
 
@@ -467,7 +468,7 @@ def print_summary(all_issues, files_with_issues, total_files, fix_mode):
     if not fix_mode and fixable_count > 0:
         print(f"\n💡 {fixable_count} issues can be automatically fixed with --fix")
 
-def save_report(all_issues, output_file):
+def save_report(all_issues: Dict[str, List[Dict[str, Any]]], output_file: str) -> str:
     """Save detailed report to file using shared report utilities."""
     # Extract report name from output_file
     report_name = Path(output_file).stem
@@ -528,7 +529,7 @@ def save_report(all_issues, output_file):
 
     return str(filepath)
 
-def main():
+def main() -> int:
     parser = argparse.ArgumentParser(
         description='Lint MyST Markdown files for common issues'
     )

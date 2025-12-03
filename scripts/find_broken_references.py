@@ -21,17 +21,18 @@ import glob
 import argparse
 from pathlib import Path
 from collections import defaultdict
+from typing import List, Dict, Tuple, Optional, Union, Any
 
 # Import shared utilities
 from shared_utils import ensure_directory
 from report_utils import ReportGenerator, MarkdownReportBuilder
 
-def find_markdown_files(content_dir):
+def find_markdown_files(content_dir: str) -> List[str]:
     """Find all markdown files in the content directory."""
     md_pattern = os.path.join(content_dir, '**', '*.md')
     return glob.glob(md_pattern, recursive=True)
 
-def extract_figure_references(md_file):
+def extract_figure_references(md_file: Union[str, Path]) -> List[Dict[str, Any]]:
     """Extract all figure/image references from a markdown file."""
     references = []
     
@@ -66,7 +67,7 @@ def extract_figure_references(md_file):
     
     return references
 
-def extract_cross_references(md_file):
+def extract_cross_references(md_file: Union[str, Path]) -> List[Dict[str, Any]]:
     """Extract cross-references like {ref}`label` from a markdown file."""
     references = []
     
@@ -98,7 +99,7 @@ def extract_cross_references(md_file):
     
     return references
 
-def extract_labels(md_file):
+def extract_labels(md_file: Union[str, Path]) -> List[str]:
     """Extract all labels defined in a markdown file."""
     labels = []
     
@@ -123,7 +124,7 @@ def extract_labels(md_file):
     
     return labels
 
-def normalize_image_path(image_path, md_file_dir, content_dir):
+def normalize_image_path(image_path: str, md_file_dir: str, content_dir: str) -> Tuple[Optional[str], str]:
     """Normalize an image path to find the actual file location."""
     # Remove any URL fragments or query parameters
     clean_path = image_path.split('#')[0].split('?')[0]
@@ -162,7 +163,7 @@ def normalize_image_path(image_path, md_file_dir, content_dir):
     
     return possible_paths[0] if possible_paths else clean_path, 'missing'
 
-def find_broken_references(content_dir='content'):
+def find_broken_references(content_dir: str = 'content') -> Tuple[List[Dict[str, Any]], List[Dict[str, Any]], List[str]]:
     """Main function to find broken figure references."""
     if not os.path.exists(content_dir):
         print(f"Content directory '{content_dir}' not found!")
@@ -221,7 +222,7 @@ def find_broken_references(content_dir='content'):
     
     return broken_figure_refs, broken_cross_refs, all_labels
 
-def print_results(broken_figure_refs, broken_cross_refs, all_labels):
+def print_results(broken_figure_refs: List[Dict[str, Any]], broken_cross_refs: List[Dict[str, Any]], all_labels: List[str]) -> None:
     """Print the results of the broken reference check."""
     print(f"\n=== BROKEN REFERENCE ANALYSIS ===")
     
@@ -272,7 +273,7 @@ def print_results(broken_figure_refs, broken_cross_refs, all_labels):
     else:
         print(f"\n✅ No broken cross-references found!")
 
-def save_results(broken_figure_refs, broken_cross_refs, output_file):
+def save_results(broken_figure_refs: List[Dict[str, Any]], broken_cross_refs: List[Dict[str, Any]], output_file: str) -> str:
     """Save results to a file using shared report utilities."""
     # Extract report name from output_file
     report_name = Path(output_file).stem
@@ -360,7 +361,7 @@ def save_results(broken_figure_refs, broken_cross_refs, output_file):
 
     return str(filepath)
 
-def main():
+def main() -> int:
     """Main entry point."""
     parser = argparse.ArgumentParser(description='Find broken references in the optics textbook')
     parser.add_argument('--content-dir', default='content',

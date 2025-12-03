@@ -28,6 +28,7 @@ from pathlib import Path
 from collections import defaultdict, Counter
 import tempfile
 import shutil
+from typing import Tuple, List, Dict, Set, Any, Optional
 
 # Import shared utilities
 from shared_utils import run_myst_command
@@ -344,7 +345,7 @@ def print_summary(results, include_ai=True):
             if len(files) > 3:
                 print(f"    ... and {len(files) - 3} more")
 
-def main():
+def main() -> int:
     parser = argparse.ArgumentParser(description='Find unreferenced images using MyST functionality')
     parser.add_argument('--content-dir', default='content',
                        help='Content directory to scan (default: content)')

@@ -21,6 +21,7 @@ import sys
 import argparse
 from pathlib import Path
 from collections import defaultdict
+from typing import List, Union, DefaultDict
 
 # Import shared utilities for logging support
 from shared_utils import logger
@@ -39,12 +40,12 @@ class FenceConverter:
         'epigraph', 'bibliography', 'glossary', 'list-table'
     ]
 
-    def __init__(self, dry_run=False, verbose=False):
-        self.dry_run = dry_run
-        self.verbose = verbose
-        self.stats = defaultdict(int)
+    def __init__(self, dry_run: bool = False, verbose: bool = False) -> None:
+        self.dry_run: bool = dry_run
+        self.verbose: bool = verbose
+        self.stats: DefaultDict[str, int] = defaultdict(int)
 
-    def convert_file(self, file_path):
+    def convert_file(self, file_path: Union[str, Path]) -> bool:
         """Convert a single file."""
         try:
             with open(file_path, 'r', encoding='utf-8') as f:
@@ -78,7 +79,7 @@ class FenceConverter:
             print(f"❌ Error processing {file_path}: {e}")
             return False
 
-    def _convert_lines(self, lines, file_path):
+    def _convert_lines(self, lines: List[str], file_path: Union[str, Path]) -> List[str]:
         """Convert directives in lines."""
         converted = []
         i = 0
@@ -124,7 +125,7 @@ class FenceConverter:
 
         return converted
 
-    def _count_changes(self, original, converted):
+    def _count_changes(self, original: str, converted: str) -> int:
         """Count number of directives converted."""
         # Count colons in original
         count = 0
@@ -132,7 +133,7 @@ class FenceConverter:
             count += original.count(f':::{{{directive}}}')
         return count
 
-    def _show_diff(self, original_lines, converted_lines):
+    def _show_diff(self, original_lines: List[str], converted_lines: List[str]) -> None:
         """Show line-by-line diff."""
         for i, (orig, conv) in enumerate(zip(original_lines, converted_lines), 1):
             if orig != conv:
@@ -140,7 +141,7 @@ class FenceConverter:
                 print(f"    - {orig.rstrip()}")
                 print(f"    + {conv.rstrip()}")
 
-def process_directory(content_dir, converter):
+def process_directory(content_dir: str, converter: FenceConverter) -> None:
     """Process all markdown files in directory."""
     md_files = []
     for root, dirs, files in os.walk(content_dir):
@@ -163,7 +164,7 @@ def process_directory(content_dir, converter):
     print(f"Files that need/needed conversion: {converter.stats['files_modified']}")
     print(f"Total directives converted: {converter.stats['directives_converted']}")
 
-def main():
+def main() -> int:
     parser = argparse.ArgumentParser(
         description='Convert MyST directive fences from backticks to colons'
     )
