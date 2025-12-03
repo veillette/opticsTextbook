@@ -167,9 +167,10 @@ async function main() {
         try {
             await fs.access(IMAGE_DIR);
         } catch (error) {
-            console.error(`Error: Image directory not found: ${IMAGE_DIR}`);
-            console.error('Please run "npm run build" first to generate the build output.');
-            process.exit(1);
+            console.log(`Image directory not found: ${IMAGE_DIR}`);
+            console.log('Skipping image optimization (directory will be created during build).');
+            console.log('No images to optimize yet!');
+            return;
         }
 
         console.log('Scanning for large images...');
