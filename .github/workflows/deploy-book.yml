@@ -50,11 +50,11 @@ jobs:
           path: /var/lib/apt/lists
           key: ${{ runner.os }}-latex-${{ hashFiles('**/*.tex') }}
 
-      - name: Install XeTeX and ImageMagick
+      - name: Install LaTeX, latexmk, and ImageMagick
         if: steps.cache-latex.outputs.cache-hit != 'true'
         run: |
           sudo apt-get update
-          sudo apt-get install -y texlive-xetex texlive-fonts-recommended texlive-fonts-extra
+          sudo apt-get install -y texlive-xetex texlive-fonts-recommended texlive-fonts-extra latexmk texlive-latex-extra
           sudo apt-get install -y imagemagick
 
       - name: Install Typst
@@ -86,6 +86,16 @@ jobs:
           npx myst build --html
         env:
           NODE_OPTIONS: "--max-old-space-size=4096"
+
+      - name: Copy PDF to _build/html for download access
+        run: |
+          if [ -f exports/textbook.pdf ]; then
+            mkdir -p _build/html/exports
+            cp exports/textbook.pdf _build/html/exports/
+            echo "✅ PDF copied to _build/html/exports/"
+          else
+            echo "⚠️ PDF not found at exports/textbook.pdf"
+          fi
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
