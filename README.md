@@ -2,6 +2,10 @@
 
 An interactive open textbook on optics for undergraduate students in physics, electrical engineering, and related fields.
 
+[![Validate & Test](https://github.com/veillette/opticsTextbook/actions/workflows/validate.yml/badge.svg?branch=main)](https://github.com/veillette/opticsTextbook/actions/workflows/validate.yml)
+[![Deploy](https://github.com/veillette/opticsTextbook/actions/workflows/deploy-book.yml/badge.svg?branch=main)](https://github.com/veillette/opticsTextbook/actions/workflows/deploy-book.yml)
+[![License: CC BY-SA 4.0](https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-sa/4.0/)
+
 ## Overview
 
 This textbook covers advanced topics in optics while maintaining accessibility for students with a basic understanding of physics and optics concepts. The text focuses on practical applications and approximate theories that provide insights into optical phenomena without requiring extensive quantum mechanics knowledge. The content is presented in a way that emphasizes understanding physical phenomena through simplified models, making complex concepts more approachable while maintaining scientific rigor.
