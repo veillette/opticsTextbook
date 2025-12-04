@@ -147,10 +147,10 @@ function injectServiceWorkerRegistration() {
 </script>
 `;
 
-  const manifestLink = \`<link rel="manifest" href="${pathWithBase('manifest.json')}">\`;
+  const manifestLink = `<link rel="manifest" href="${pathWithBase('manifest.json')}">`;
   const themeColorMeta = '<meta name="theme-color" content="#1e40af">';
-  const appleTouchIcon = \`<link rel="apple-touch-icon" href="${pathWithBase('icons/apple-touch-icon.png')}">\`;
-  const appleMobileCapable = '<meta name="apple-mobile-web-app-capable" content="yes">';
+  const appleTouchIcon = `<link rel="apple-touch-icon" href="${pathWithBase('icons/apple-touch-icon.png')}">`;
+  const mobileWebAppCapable = '<meta name="mobile-web-app-capable" content="yes">';
   const appleMobileStatusBar = '<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">';
   const appleMobileTitle = '<meta name="apple-mobile-web-app-title" content="Optics Textbook">';
 
@@ -172,7 +172,7 @@ function injectServiceWorkerRegistration() {
       // Inject in the <head> section
       if (content.includes('</head>')) {
         const headCloseIndex = content.indexOf('</head>');
-        const pwaTags = `\n  ${manifestLink}\n  ${themeColorMeta}\n  ${appleTouchIcon}\n  ${appleMobileCapable}\n  ${appleMobileStatusBar}\n  ${appleMobileTitle}\n  `;
+        const pwaTags = `\n  ${manifestLink}\n  ${themeColorMeta}\n  ${appleTouchIcon}\n  ${mobileWebAppCapable}\n  ${appleMobileStatusBar}\n  ${appleMobileTitle}\n  `;
 
         content = content.slice(0, headCloseIndex) + pwaTags + content.slice(headCloseIndex);
       }
