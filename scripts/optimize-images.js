@@ -67,8 +67,10 @@ async function findLargeImages(directory, minSizeMB) {
 
 async function optimizeImage(imagePath, maxDimension, quality, dryRun = false) {
     try {
-        const image = sharp(imagePath);
-        const metadata = await image.metadata();
+        const original = sharp(imagePath);
+        const metadata = await original.metadata();
+        const fileExt = path.extname(imagePath).toLowerCase();
+        const outputFormat = fileExt === '.png' ? 'png' : 'jpeg';
 
         // Calculate new dimensions while maintaining aspect ratio
         let width = metadata.width;
@@ -95,19 +97,31 @@ async function optimizeImage(imagePath, maxDimension, quality, dryRun = false) {
             if (resized) {
                 console.log(`  New dimensions: ${width}x${height}`);
             }
-            console.log(`  Quality: ${quality}`);
+            if (outputFormat === 'jpeg') {
+                console.log(`  Quality: ${quality}`);
+            }
+            console.log(`  Output format: ${outputFormat.toUpperCase()}`);
             return null;
         }
 
         // Create optimized version
         const tempPath = imagePath + '.optimized';
-        await image
+        let pipeline = original
             .resize(width, height, {
                 fit: 'inside',
                 withoutEnlargement: true
-            })
-            .jpeg({quality: quality, mozjpeg: true})
-            .toFile(tempPath);
+            });
+
+        if (outputFormat === 'png') {
+            pipeline = pipeline.png({
+                compressionLevel: 9,
+                adaptiveFiltering: true
+            });
+        } else {
+            pipeline = pipeline.jpeg({quality: quality, mozjpeg: true});
+        }
+
+        await pipeline.toFile(tempPath);
 
         // Get file sizes
         const originalSize = (await fs.stat(imagePath)).size;
@@ -120,6 +134,7 @@ async function optimizeImage(imagePath, maxDimension, quality, dryRun = false) {
         if (resized) {
             console.log(`  Resized: ${metadata.width}x${metadata.height} → ${width}x${height}`);
         }
+        console.log(`  Format preserved: ${outputFormat.toUpperCase()}`);
 
         // Replace original with optimized version
         await fs.unlink(imagePath);
