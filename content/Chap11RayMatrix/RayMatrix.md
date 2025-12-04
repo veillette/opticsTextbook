@@ -535,10 +535,10 @@ $\Delta\,\text{BV}\text{F}_i$ and $\Delta\, \text{P}_2\text{P}_1\text{F}_i$ that
 ```{math}
 :label: eq:ray:similar-triangles-1
 \begin{align*}
-\frac{y_o}{|y_i|} = \frac{f_i}{s_i -f_i},
+\frac{y_o}{|y_i|} = \frac{f_i}{s_i -f_i}.
 \end{align*}
 ```
-.
+
 From the similar triangles $\Delta\, \text{S}_2\text{S}_1\text{F}_o$ and $\Delta\, \text{AVF}_o$:
 
 ```{math}
