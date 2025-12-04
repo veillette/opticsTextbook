@@ -14,7 +14,6 @@ on:
   workflow_dispatch:
 
 env:
-  NODE_VERSION: '22.x'
   PYTHON_VERSION: '3.11'
 
 concurrency:
@@ -25,6 +24,9 @@ jobs:
   validate:
     runs-on: ubuntu-latest
     timeout-minutes: 15
+    strategy:
+      matrix:
+        node-version: ['20.x', '22.x']
 
     steps:
       - name: Record validation start time
@@ -49,7 +51,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: ${{ env.NODE_VERSION }}
+          node-version: ${{ matrix.node-version }}
           cache: 'npm'
 
       - name: Setup Python

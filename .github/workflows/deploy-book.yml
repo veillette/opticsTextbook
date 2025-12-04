@@ -31,7 +31,6 @@ on:
 
 env:
   BASE_URL: /${{ github.event.repository.name }}
-  NODE_VERSION: '22.x'
 
 permissions:
   contents: read
@@ -49,6 +48,9 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     timeout-minutes: 20
+    strategy:
+      matrix:
+        node-version: ['20.x', '22.x']
     steps:
       - name: Record build start time
         run: |
@@ -76,7 +78,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: ${{ env.NODE_VERSION }}
+          node-version: ${{ matrix.node-version }}
           cache: 'npm'
 
       - name: Record setup time
