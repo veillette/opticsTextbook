@@ -25,9 +25,9 @@ This guide covers the expectations and workflows for contributors. Please read i
 ## Project Expectations
 
 - **Read the docs first.** Skim the resources below before changing files:
-  - `README.md` – project overview and quick commands
-  - `MAINTENANCE.md` – detailed workflows and troubleshooting
-  - `MYST_CONVENTIONS.md` – required MyST syntax and accessibility rules
+- `README.md` – project overview and quick commands
+- `doc/MAINTENANCE.md` – detailed workflows and troubleshooting
+- `doc/MYST_CONVENTIONS.md` – required MyST syntax and accessibility rules
   - `CLAUDE.md` – guidance for AI assistants contributing to this repo
 - **Match existing conventions.** Follow directory layout, naming schemes, and MyST directives already in use.
 - **Validate everything.** The automated tooling expects clean linting, reference integrity, and a successful build before a PR is reviewed.
@@ -39,7 +39,7 @@ This guide covers the expectations and workflows for contributors. Please read i
 - **Content improvements:** Clarify explanations, fix typos, add examples, or expand problem sets in `content/`.
 - **Figures & images:** Update diagrams, improve accessibility, or replace outdated graphics in `content/ChapXX.../Images/`.
 - **Tooling & scripts:** Enhance utilities inside `scripts/` (Python or Node) that automate validation, builds, or image processing.
-- **Documentation:** Improve guides such as `README.md`, `MAINTENANCE.md`, or this file.
+- **Documentation:** Improve guides such as `README.md`, `doc/MAINTENANCE.md`, or this file.
 - **Tests & validation:** Strengthen unit tests (`scripts/tests/`) or add new checks for references and figures.
 
 If you’re unsure where to start, look for issues labeled **good first issue**, **documentation**, or **help wanted**.
@@ -108,7 +108,7 @@ pip install -r requirements.txt
 ## Content and Style Guidelines
 
 - **File locations:** Each chapter lives in `content/ChapXX.../`. Exercises go under `content/ChapXX.../Problems/`.
-- **MyST syntax:** Use backtick fences for directives and follow the exact patterns documented in `MYST_CONVENTIONS.md`. Never use `:::` fences.
+- **MyST syntax:** Use backtick fences for directives and follow the exact patterns documented in `doc/MYST_CONVENTIONS.md`. Never use `:::` fences.
 - **Sections & references:** Add section labels using `(label-name)=` syntax. Keep cross-references on a single line, e.g., `See {ref}`section:lasers``.
 - **Figures:** Every figure needs `:name:`, `:width:`, `:align:` (if not center), and a descriptive caption (>20 characters). Use `{numref}` for cross-references.
 - **Accessibility:** Write captions that explain what a figure shows and why it matters. Avoid purely decorative images.
@@ -141,7 +141,7 @@ Before submitting, run `npm run validate-enhanced` to catch missing labels, malf
 
 ## Tooling & Code Changes
 
-- **Scripts directory:** Python utilities live in `scripts/`. Node scripts for PWA/build tasks also live here. Update `scripts/README.md` when adding or changing behavior.
+- **Scripts directory:** Python utilities live in `scripts/`. Node scripts for PWA/build tasks also live here. Update `doc/scripts/README.md` when adding or changing behavior.
 - **Configuration:** Some scripts rely on `scripts/config.json` (chapter mappings) and `myst.yml` (TOC, exports). Update both when adding chapters or exports.
 - **Testing:** Add or update tests in `scripts/tests/` when you change Python utilities. For Node scripts, add practical instructions or unit tests when feasible.
 - **Service worker & PWA:** When modifying `service-worker.js` or `manifest.json`, bump cache versions and document changes in the PR description.
@@ -167,9 +167,9 @@ Before submitting, run `npm run validate-enhanced` to catch missing labels, malf
 - **Issues:** https://github.com/veillette/opticsTextbook/issues
 - **Discussions / Questions:** Open a discussion or comment on related issues if guidance is needed.
 - **Documentation references:**
-  - [`MAINTENANCE.md`](MAINTENANCE.md)
-  - [`MYST_CONVENTIONS.md`](MYST_CONVENTIONS.md)
-  - [`scripts/README.md`](scripts/README.md)
+  - [`MAINTENANCE.md`](doc/MAINTENANCE.md)
+  - [`MYST_CONVENTIONS.md`](doc/MYST_CONVENTIONS.md)
+  - [`scripts/README.md`](doc/scripts/README.md)
   - [`CLAUDE.md`](CLAUDE.md)
 
 ---

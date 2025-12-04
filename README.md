@@ -20,7 +20,7 @@ The textbook combines comprehensive coverage with interactive elements in its di
 - Enjoy fast loading times with optimized caching
 - Read in standalone mode without browser UI
 
-See [PWA_SETUP.md](PWA_SETUP.md) for details on PWA features and usage.
+See [PWA_SETUP.md](doc/PWA_SETUP.md) for details on PWA features and usage.
 
 Beginning with Basic Electromagnetic and Wave Optics, the text builds a strong foundation in Maxwell's equations, wave equations, and their special solutions, including plane waves and electric dipole fields. Time-harmonic fields are thoroughly explored, along with Fresnel coefficients and evanescent waves.
 
@@ -70,11 +70,11 @@ The pre-commit hook will automatically run linting and unit tests. If tests fail
 
 ### Documentation
 
-For detailed workflows and maintenance tasks, see:
+For detailed workflows and maintenance tasks, see the `doc/` directory:
 
-- **[MAINTENANCE.md](MAINTENANCE.md)** - Comprehensive guide for common tasks
-- **[MYST_CONVENTIONS.md](MYST_CONVENTIONS.md)** - MyST Markdown conventions
-- **[scripts/README.md](scripts/README.md)** - Utility scripts documentation
+- **[MAINTENANCE.md](doc/MAINTENANCE.md)** - Comprehensive guide for common tasks
+- **[MYST_CONVENTIONS.md](doc/MYST_CONVENTIONS.md)** - MyST Markdown conventions
+- **[scripts/README.md](doc/scripts/README.md)** - Utility scripts documentation
 
 ### Need Help?
 
