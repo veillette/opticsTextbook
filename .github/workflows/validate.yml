@@ -130,7 +130,7 @@ jobs:
           echo "📚 Building HTML documentation..."
           npm run build
         env:
-          NODE_OPTIONS: "--max-old-space-size=4096"
+          NODE_OPTIONS: "--max-old-space-size=8192"
         id: build
 
       - name: Record build time

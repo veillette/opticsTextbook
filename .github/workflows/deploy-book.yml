@@ -128,6 +128,8 @@ jobs:
         run: |
           echo "Build PDF Assets, docx, and md"
           npx myst build -a
+        env:
+          NODE_OPTIONS: "--max-old-space-size=8192"
 
       - name: Record PDF/DOCX build time
         run: |
@@ -153,7 +155,7 @@ jobs:
           echo "Building site with BASE_URL: $BASE_URL"
           npx myst build --html
         env:
-          NODE_OPTIONS: "--max-old-space-size=4096"
+          NODE_OPTIONS: "--max-old-space-size=8192"
 
       - name: Record HTML build time
         run: |
