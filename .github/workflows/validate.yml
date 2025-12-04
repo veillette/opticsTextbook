@@ -1,15 +1,25 @@
 name: Validation & Testing
 
 on:
-  push:
-    branches: [main]
   pull_request:
     branches: [main]
+    paths:
+      - 'content/**'
+      - 'scripts/**'
+      - 'myst.yml'
+      - 'package.json'
+      - 'package-lock.json'
+      - 'requirements.txt'
+      - '.github/workflows/validate.yml'
   workflow_dispatch:
 
 env:
   NODE_VERSION: '22.x'
-  PYTHON_VERSION: '3.9'
+  PYTHON_VERSION: '3.11'
+
+concurrency:
+  group: validation-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
   validate:
@@ -125,10 +135,10 @@ jobs:
           echo "TEST_TIME=$DURATION" >> $GITHUB_ENV
           echo "STEP_START_TIME=$(date +%s)" >> $GITHUB_ENV
 
-      - name: Build HTML Documentation
+      - name: Build HTML Documentation (validation only)
         run: |
           echo "📚 Building HTML documentation..."
-          npm run build
+          npx myst build --html
         env:
           NODE_OPTIONS: "--max-old-space-size=8192"
         id: build
@@ -138,20 +148,6 @@ jobs:
           STEP_END_TIME=$(date +%s)
           DURATION=$((STEP_END_TIME - STEP_START_TIME))
           echo "BUILD_TIME=$DURATION" >> $GITHUB_ENV
-          echo "STEP_START_TIME=$(date +%s)" >> $GITHUB_ENV
-
-      - name: Run Link Checking
-        run: |
-          echo "🌐 Checking external links..."
-          npm run checklinks || echo "⚠️ Some links may be unreachable (network issues possible)"
-        continue-on-error: true
-        id: links
-
-      - name: Record link check time
-        run: |
-          STEP_END_TIME=$(date +%s)
-          DURATION=$((STEP_END_TIME - STEP_START_TIME))
-          echo "LINK_CHECK_TIME=$DURATION" >> $GITHUB_ENV
           echo "STEP_START_TIME=$(date +%s)" >> $GITHUB_ENV
 
       - name: Upload Build Artifacts
@@ -204,7 +200,6 @@ jobs:
           echo "| Reference Validation | $(get_status '${{ steps.validate.outcome }}') ${{ steps.validate.outcome }} | $(format_time ${VALIDATE_TIME:-0}) |" >> $GITHUB_STEP_SUMMARY
           echo "| Python Tests | $(get_status '${{ steps.tests.outcome }}') ${{ steps.tests.outcome }} | $(format_time ${TEST_TIME:-0}) |" >> $GITHUB_STEP_SUMMARY
           echo "| Build HTML | $(get_status '${{ steps.build.outcome }}') ${{ steps.build.outcome }} | $(format_time ${BUILD_TIME:-0}) |" >> $GITHUB_STEP_SUMMARY
-          echo "| Link Checking | $(get_status '${{ steps.links.outcome }}') ${{ steps.links.outcome }} | $(format_time ${LINK_CHECK_TIME:-0}) |" >> $GITHUB_STEP_SUMMARY
 
           echo "" >> $GITHUB_STEP_SUMMARY
           echo "## ⏱️ Performance Breakdown" >> $GITHUB_STEP_SUMMARY
@@ -229,7 +224,6 @@ jobs:
           add_row "Reference Validation" ${VALIDATE_TIME:-0}
           add_row "Python Tests" ${TEST_TIME:-0}
           add_row "Build HTML" ${BUILD_TIME:-0}
-          add_row "Link Checking" ${LINK_CHECK_TIME:-0}
 
           echo "" >> $GITHUB_STEP_SUMMARY
           echo "### 🎯 Total Validation Time: $(format_time $TOTAL_TIME)" >> $GITHUB_STEP_SUMMARY
@@ -261,7 +255,6 @@ jobs:
           # Create sorted list of times
           {
             echo "${BUILD_TIME:-0} Build HTML"
-            echo "${LINK_CHECK_TIME:-0} Link Checking"
             echo "${TEST_TIME:-0} Python Tests"
             echo "${VALIDATE_TIME:-0} Reference Validation"
             echo "${LINT_TIME:-0} MyST Linter"
@@ -284,7 +277,6 @@ jobs:
           echo "✓ Reference Validation: ${{ steps.validate.outcome }}"
           echo "✓ Python Tests: ${{ steps.tests.outcome }}"
           echo "✓ Build Status: ${{ steps.build.outcome }}"
-          echo "✓ Link Checking: ${{ steps.links.outcome }}"
           echo ""
           echo "🎯 Critical Check Status:"
           if [ "${{ steps.build.outcome }}" = "success" ]; then

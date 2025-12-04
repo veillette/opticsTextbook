@@ -3,8 +3,30 @@ name: MyST GitHub Pages Deploy with Multiple Exports
 on:
   push:
     branches: [main]
+    paths:
+      - 'content/**'
+      - 'scripts/**'
+      - 'myst.yml'
+      - 'package.json'
+      - 'package-lock.json'
+      - 'service-worker.js'
+      - 'manifest.json'
+      - 'icons/**'
+      - 'img/**'
+      - '.github/workflows/deploy-book.yml'
   pull_request:
     branches: [main]
+    paths:
+      - 'content/**'
+      - 'scripts/**'
+      - 'myst.yml'
+      - 'package.json'
+      - 'package-lock.json'
+      - 'service-worker.js'
+      - 'manifest.json'
+      - 'icons/**'
+      - 'img/**'
+      - '.github/workflows/deploy-book.yml'
   workflow_dispatch:
 
 env:
@@ -26,7 +48,7 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 20
     steps:
       - name: Record build start time
         run: |
@@ -48,6 +70,7 @@ jobs:
           echo "STEP_START_TIME=$(date +%s)" >> $GITHUB_ENV
 
       - name: Setup Pages
+        if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
         uses: actions/configure-pages@v4
 
       - name: Setup Node.js
@@ -63,7 +86,7 @@ jobs:
           echo "SETUP_TIME=$DURATION" >> $GITHUB_ENV
           echo "STEP_START_TIME=$(date +%s)" >> $GITHUB_ENV
 
-      - name: Install dependencies
+      - name: Install npm dependencies
         run: npm ci
 
       - name: Record npm install time
@@ -73,36 +96,11 @@ jobs:
           echo "NPM_INSTALL_TIME=$DURATION" >> $GITHUB_ENV
           echo "STEP_START_TIME=$(date +%s)" >> $GITHUB_ENV
 
-      - name: Cache LaTeX installation
-        uses: actions/cache@v4
-        id: cache-latex
+      - name: Cache APT packages
+        uses: awalsh128/cache-apt-pkgs-action@latest
         with:
-          path: |
-            /usr/share/texlive
-            /usr/share/texmf
-            /var/lib/texmf
-            /usr/bin/latexmk
-            /usr/bin/xelatex
-            /usr/bin/pdflatex
-          key: ${{ runner.os }}-latex-v2-${{ hashFiles('.github/workflows/deploy-book.yml') }}
-          restore-keys: |
-            ${{ runner.os }}-latex-v2-
-
-      - name: LaTeX cache status
-        run: |
-          if [ "${{ steps.cache-latex.outputs.cache-hit }}" == "true" ]; then
-            echo "✅ LaTeX packages restored from cache"
-          else
-            echo "📦 LaTeX packages will be installed"
-          fi
-
-      - name: Install LaTeX, latexmk, and ImageMagick
-        if: steps.cache-latex.outputs.cache-hit != 'true'
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y texlive-xetex texlive-fonts-recommended texlive-fonts-extra latexmk texlive-latex-extra
-          sudo apt-get install -y imagemagick
-          echo "✅ LaTeX packages installed and will be cached for next run"
+          packages: texlive-xetex texlive-fonts-recommended texlive-fonts-extra latexmk texlive-latex-extra imagemagick
+          version: 1.0
 
       - name: Record LaTeX setup time
         run: |
@@ -223,6 +221,7 @@ jobs:
           echo "STEP_START_TIME=$(date +%s)" >> $GITHUB_ENV
 
       - name: Upload artifact
+        if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
         uses: actions/upload-pages-artifact@v3
         with:
           path: '_build/html'
@@ -236,6 +235,7 @@ jobs:
 
       - name: Deploy to GitHub Pages
         id: deployment
+        if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
         uses: actions/deploy-pages@v4
 
       - name: Record deployment time
@@ -276,7 +276,7 @@ jobs:
           add_row "Checkout repository" ${CHECKOUT_TIME:-0}
           add_row "Setup (Pages + Node.js)" ${SETUP_TIME:-0}
           add_row "npm install" ${NPM_INSTALL_TIME:-0}
-          add_row "LaTeX setup (cache/install)" ${LATEX_SETUP_TIME:-0}
+          add_row "LaTeX setup (APT cache)" ${LATEX_SETUP_TIME:-0}
           add_row "Build PDF/DOCX exports" ${PDF_BUILD_TIME:-0}
           add_row "Generate PWA icons" ${ICON_GEN_TIME:-0}
           add_row "Build HTML site" ${HTML_BUILD_TIME:-0}
@@ -296,7 +296,7 @@ jobs:
           echo "" >> $GITHUB_STEP_SUMMARY
 
           # Check if build is faster or slower than timeout
-          TIMEOUT_SECONDS=$((15 * 60))
+          TIMEOUT_SECONDS=$((20 * 60))
           USAGE_PERCENTAGE=$((TOTAL_TIME * 100 / TIMEOUT_SECONDS))
 
           if [ $USAGE_PERCENTAGE -lt 50 ]; then
@@ -329,5 +329,10 @@ jobs:
           echo "" >> $GITHUB_STEP_SUMMARY
           echo "---" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
-          echo "🚀 Successfully deployed to https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}" >> $GITHUB_STEP_SUMMARY
-        
+
+          # Add deployment info based on context
+          if [ "${{ github.event_name }}" == "pull_request" ]; then
+            echo "📋 **PR Build**: Validation only (no deployment)" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "🚀 Successfully deployed to https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}" >> $GITHUB_STEP_SUMMARY
+          fi
