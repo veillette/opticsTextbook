@@ -198,8 +198,6 @@ project:
   toc:
     - title: Preface
       file: content/Preface/Preface.md
-    - title: Search & Navigation Guide
-      file: content/SearchAndNavigation.md
     - title: Downloads
       file: content/Downloads.md
     - title: Chapters
