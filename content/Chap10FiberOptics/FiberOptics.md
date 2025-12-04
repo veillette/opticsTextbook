@@ -63,20 +63,20 @@ To introduce the concept of fiber modes, we consider the planar mirror waveguide
 In order for a light ray to represent a mode, we impose a self-consistency condition that guarantees the invariance of distribution and polarization under propagation. In practice, this boils down to the wave repeating itself after every second bounce. With reference to {numref}`figFiberModesIntro`, the self-consistency condition thus imposes that the phase acquired by the reflected wave traveling from A to C equals the phase acquired by the ''non-reflected'' wave traveling from A to the virtual point B up to an integer multiple of $2\pi$. Of course, as the mirrors are considered perfect, both reflections add a phase shift of $\pi$, such that
 ```{math}
 \begin{align*}
-\Delta\phi=\dfrac{2\pi |AC|}{\lambda_0}-2\pi-\dfrac{2\pi |AB|}{\lambda_0}=2\pi q,\quad q=0,1,2,\dots
+\Delta\phi=\frac{2\pi |AC|}{\lambda_0}-2\pi-\frac{2\pi |AB|}{\lambda_0}=2\pi q,\quad q=0,1,2,\dots
 \end{align*}
 ```
 or
 ```{math}
 \begin{align*}
-\dfrac{2\pi(|AC|-|AB|)}{\lambda_0}=2\pi m,\quad m\in q+1=1,2,3,\dots.
+\frac{2\pi(|AC|-|AB|)}{\lambda_0}=2\pi m,\quad m\in q+1=1,2,3,\dots.
 \end{align*}
 ```
 Using elementary geometry and the relation $\cos(2\bar{\theta})=1-2\sin^2(\bar{\theta})$, it can be shown that $|AC|-|AB|=2d\sin(\bar{\theta})$ and thus the self-consistency condition becomes
 ```{math}
 :label: eq:fiber:self-consistency-condition
 \begin{align*}
-	\sin(\bar{\theta}_m)=m\dfrac{\lambda_0}{2d}.
+	\sin(\bar{\theta}_m)=m\frac{\lambda_0}{2d}.
 \end{align*}
 ```
 
@@ -88,7 +88,7 @@ because $\max(\sin(\bar{\theta}_m))=1$. This implies that:
 - the maximum number of modes $M$ possibly propagating through the waveguide equals
 ```{math}
 \begin{align*}
-M=\text{floor}\left(\dfrac{2d}{\lambda}\right),
+M=\text{floor}\left(\frac{2d}{\lambda}\right),
 \end{align*}
 ```
 where the *floor*-function rounds the fraction $2d/\lambda$ down to the nearest integer value;
@@ -122,8 +122,8 @@ in which $E_0$ is the field's amplitude and the mode distributions
 \begin{align*}
 u_m(y)=
 \begin{cases}
-\sqrt{\dfrac{2}{d}}\cos\left(\dfrac{m\pi}{d}y\right),& \text{if } m=1,3,5,\dots\\
-\sqrt{\dfrac{2}{d}}\sin\left(\dfrac{m\pi}{d}y\right),& \text{if } m=2,4,6,\dots
+\sqrt{\frac{2}{d}}\cos\left(\frac{m\pi}{d}y\right),& \text{if } m=1,3,5,\dots\\
+\sqrt{\frac{2}{d}}\sin\left(\frac{m\pi}{d}y\right),& \text{if } m=2,4,6,\dots
 \end{cases}
 \end{align*}
 ```
@@ -147,7 +147,7 @@ In practice this implies that all possible light pulses transmitting through the
 The first five modes ($m=1$ through $5$) in the mirror waveguide.
 ```
 
-This concludes our discussion on fiber modes in the planar-mirror waveguide. To generalize this discussion to optical step-index fibers, two considerations are added. First, in optical fibers the EM-fields are not bounded by the core. Rather, the fields also enter the cladding partly in which the field amplitude is rapidly diminishing, or evanescent. Second, apart from the ''linear'' self-consistency discussed for the planar-mirror waveguide, fibers additionally have a ''circumferential'' self-consistency condition, as depicted in {numref}`figFiberModes`(a). This implies fiber modes are labeled by two indices, generally $m$ (linear self-consistency) and $l$ (circumferential self-consistency). A selection of fiber mode field distributions is depicted in {numref}`figFiberModes`(b). A distinction is made between single mode fibers (SMF) and multimode fibers (MMF). In the former only the $(m,l)=(1,0)$ mode can propagate, whereas the MMF supports more or even many modes.
+This concludes our discussion on fiber modes in the planar-mirror waveguide. To generalize this discussion to optical step-index fibers, two considerations are added. First, in optical fibers the EM-fields are not bounded by the core. Rather, the fields also enter the cladding partly in which the field amplitude is rapidly diminishing, or evanescent. Second, apart from the ''linear'' self-consistency discussed for the planar-mirror waveguide, fibers additionally have a ''circumferential'' self-consistency condition, as depicted in {numref}`figFiberModes` (a). This implies fiber modes are labeled by two indices, generally $m$ (linear self-consistency) and $l$ (circumferential self-consistency). A selection of fiber mode field distributions is depicted in {numref}`figFiberModes` (b). A distinction is made between single mode fibers (SMF) and multimode fibers (MMF). In the former only the $(m,l)=(1,0)$ mode can propagate, whereas the MMF supports more or even many modes.
 
 
 ```{figure} Images/10_04_circular_waveguide.png
@@ -167,7 +167,7 @@ Modes in step-index fibers. (a) Apart from the linear self-consistency condition
 Optical fibers can be characterized by a number of parameters. Here we list a selection of these numbers.
 - **$\Delta$-parameter** -- The $\Delta$-parameter is directly related to the relative difference in core and cladding refractive index, see {numref}`figFiberTIR`. It is defined as
 	\begin{align*}\label{eqDelta}
-		\Delta=\dfrac{n_1^2-n_2^2}{2n_1^2}\approx \dfrac{n_1-n_2}{n_1}.
+		\Delta=\frac{n_1^2-n_2^2}{2n_1^2}\approx \frac{n_1-n_2}{n_1}.
 	\end{align*}
 The approximation, which entails the relative difference of $n_1$ and $n_2$ holds for the weakly guiding fibers under consideration in this chapter. It follows from setting $n_2=n_1-\Delta n$ and neglecting terms of order $\Delta n^2$. For $n_1=1.448$ and $n_2=1.444$, $\Delta=5.5\times 10^{-3}$.
 - **Numerical aperture (NA)** -- The NA relates the fiber and the (external) critical angle under which it accepts (or emits) light, $\bar{\theta}_{\text{e,c}}$. That is, the maximum value of $\bar{\theta}_{\text{e}}$ in {numref}`figFiberTIR` such that TIR occurs. The NA for fibers is defined as
@@ -182,7 +182,7 @@ and equals $0.11$ if $n_1=1.448$ and $n_2=1.444$. With reference to {numref}`fig
 \begin{align*}
 \sin\left(\bar{\theta}_{\text{e,c}}\right)&=n_1\sin\left(\bar{\theta}_{\text{i,c}}\right)\\
 			&=n_1\sqrt{1-\cos^2\left(\bar{\theta}_{\text{i,c}}\right)}\\
-			&=n_1\sqrt{1-\left(\dfrac{n_2}{n_1}\right)^2}\\
+			&=n_1\sqrt{1-\left(\frac{n_2}{n_1}\right)^2}\\
 			&=\sqrt{n_1^2-n_2^2}
 \end{align*}
 ```
@@ -192,7 +192,7 @@ in which we use that $\bar{\theta}_{\text{i,c}}=\pi/2-\arcsin(n_2/n_1)=\arccos(n
 	```{math}
 	:label: eq:fiber:v-number
 	\begin{align*}
-		V=\dfrac{\pi d}{\lambda_0}\mathrm{NA}.
+		V=\frac{\pi d}{\lambda_0}\mathrm{NA}.
 	\end{align*}
 	```
 
@@ -208,7 +208,7 @@ in which we use that $\bar{\theta}_{\text{i,c}}=\pi/2-\arcsin(n_2/n_1)=\arccos(n
 (secFiberDispersion)=
 ## Fiber dispersion
 
-Light propagating though fibers often suffers from dispersion, or pulse broadening. The cause for dispersion is that transmitting waves (e.g. at different wavelength) do not travel at the same velocity, which may cause information loss. In e.g. telecommunication, information is typically sent using short pulses of light, which may start to overlap in time upon broadening, see {numref}`figFiberDispersion`(a). Once two pulses overlap, they cannot be separated anymore and the information contained in the original pulses is lost. Here three main causes for dispersion are discussed, modal dispersion, material dispersion and waveguide dispersion.
+Light propagating though fibers often suffers from dispersion, or pulse broadening. The cause for dispersion is that transmitting waves (e.g. at different wavelength) do not travel at the same velocity, which may cause information loss. In e.g. telecommunication, information is typically sent using short pulses of light, which may start to overlap in time upon broadening, see {numref}`figFiberDispersion (a). Once two pulses overlap, they cannot be separated anymore and the information contained in the original pulses is lost. Here three main causes for dispersion are discussed, modal dispersion, material dispersion and waveguide dispersion.
 
 Modal dispersion is relevant for MMFs, in which several modes of light are
 present simultaneously. As discussed in {ref}`secFiberModes`, light rays bounce
@@ -222,7 +222,7 @@ propagation velocity $v_z$, the velocity at which the wave travels in $z$
 waveguide in vacuum the propagation velocity for the $m^{\text{th}}$ mode is
 ```{math}
 \begin{align*}
-v_{z,m}=c\cos(\bar{\theta}_m)=c\sqrt{1-\left(m\dfrac{\lambda_0}{2d}\right)^2}
+v_{z,m}=c\cos(\bar{\theta}_m)=c\sqrt{1-\left(m\frac{\lambda_0}{2d}\right)^2}
 \end{align*}
 ```
 
@@ -231,14 +231,14 @@ Here we used that $\cos^2(\theta)+\sin^2(\theta)=1$ along with {eq}`eq:fiber:sel
 Now consider an infinitely short pulse that consists of light in the $i^{\text{th}}$ and the $j^{\text{th}}$ mode only, with $i<j$. For the sake of the argument, we still presume that the light is monochromatic, although in reality this is not the case (see below). Then these modes travel in $z$-direction with a velocity difference
 ```{math}
 \begin{align*}
-\Delta v=c\left(\sqrt{1-\left(i\dfrac{\lambda_0}{2d}\right)^2}-\sqrt{1-\left(j\dfrac{\lambda_0}{2d}\right)^2}\right).
+\Delta v=c\left(\sqrt{1-\left(i\frac{\lambda_0}{2d}\right)^2}-\sqrt{1-\left(j\frac{\lambda_0}{2d}\right)^2}\right).
 \end{align*}
 ```
 Due to the velocity difference, the difference in arrival time of the two modes at the end of the waveguide of length $L$ is
 ```{math}
 :label: eq:fiber:mirror-waveguide-dispersion
 \begin{align*}
-	\Delta\tau=\dfrac{L}{\Delta v}=\dfrac{L}{c\left(\sqrt{1-\left(i\dfrac{\lambda_0}{2d}\right)^2}-\sqrt{1-\left(j\dfrac{\lambda_0}{2d}\right)^2}\right)},
+	\Delta\tau=\frac{L}{\Delta v}=\frac{L}{c\left(\sqrt{1-\left(i\frac{\lambda_0}{2d}\right)^2}-\sqrt{1-\left(j\frac{\lambda_0}{2d}\right)^2}\right)},
 \end{align*}
 ```
 which is depicted in {numref}`figFiberMirrorDispersion` for several combinations of $i$ and $j$. Thus, the infinitely short pulse that we started with has broadened to a ''width'' $\Delta\tau$ at the end of the waveguide. This limits the signal pulse repetition rate to $1/\Delta\tau$: if the rate is increased beyond this value, consecutive pulses start to overlap and information is lost.
@@ -251,18 +251,18 @@ Modal dispersion in the mirror waveguide, see {eq}`eq:fiber:mirror-waveguide-dis
 In reality, light pulses in multimode waveguides contain many modes and are not infinitely short. However, the same ideas hold: due to modal dispersion the pulse broadens, thereby limiting the rate of information transfer. This is also true for optical fibers. In this case one can calculate for the time delay between the fastest mode (the $(m,l)=(1,0)$ mode) and the slowest mode (mode at the critical angle) that
 ```{math}
 \begin{align*}
-\dfrac{\Delta\tau^{\text{mod}}}{L}=\dfrac{n_1-n_2}{c}\left(1-\dfrac{\pi}{V}\right).
+\frac{\Delta\tau^{\text{mod}}}{L}=\frac{n_1-n_2}{c}\left(1-\frac{\pi}{V}\right).
 \end{align*}
 ```
 Hence, for a step index fiber with $n_1=1.448$, $n_2=1.444$ and a V-number of $5$, $\Delta\tau/L=5\text{ns/km}$.
 
-Up to this point we have implicitly assumed that the light transmitted through optical fibers is monochromatic. This is not the case: in telecommunication information is sent through fibers by means of short pulses of light. However, the shorter the pulse, the broader its wavelength spectrum, as schematically depicted in {numref}`figFiberDispersion`(b). Apart from this effect, any light source has an intrinsic width of their emitted wavelength spectrum.
+Up to this point we have implicitly assumed that the light transmitted through optical fibers is monochromatic. This is not the case: in telecommunication information is sent through fibers by means of short pulses of light. However, the shorter the pulse, the broader its wavelength spectrum, as schematically depicted in {numref}`figFiberDispersion (b). Apart from this effect, any light source has an intrinsic width of their emitted wavelength spectrum.
 
 Now we consider a signal pulse propagating through a medium. The pulse has a central wavelength $\lambda_0$ and a spectral width $\Delta\lambda$. If the index of refraction is wavelength-dependent, $n=n(\lambda)$, such as in SiO$_2$ , the spectral width of the signal propagating through a fiber results in dispersion. This is due to the fact that the pulse's (group) propagation velocity is imposed by the group refractive index $n_{\text{g}}$ as $v_{\text{g}}=c/n_{\text{g}}$, which in turn depends on $n(\lambda)$ as
 ```{math}
 :label: eq:fiber:group-refractive-index
 \begin{align*}
-	n_{\text{g}}=n-\lambda\dfrac{\mathrm{d}n}{\mathrm{d}\lambda}.
+	n_{\text{g}}=n-\lambda\frac{\mathrm{d}n}{\mathrm{d}\lambda}.
 \end{align*}
 ```
 
@@ -271,7 +271,7 @@ different velocity and dispersion is the result. From {eq}`eq:fiber:group-refrac
 whenever $\mathrm{d}^2n/\mathrm{d}\lambda^2\neq 0$ (NB: if $n$ is constant or of
 the form $n=a\lambda+b$, {eq}`eq:fiber:group-refractive-index` still yields
 a constant group refractive index). This is the case for SiO$_2$ as can be
-observed in {numref}`figFiberDispersion`(c).
+observed in {numref}`figFiberDispersion (c).
 
 ```{figure} Images/10_07_dispersion.png
 
@@ -289,14 +289,14 @@ Dispersion in optical fibers. (a) Dispersion, or pulse broadening, causes light 
 Due to material dispersion, the change in pulse width after fiber length $L$ is given by
 ```{math}
 \begin{align*}
-\Delta\tau^{\text{mat}}=-\dfrac{L}{c}\lambda_0^2\dfrac{\mathrm{d}^2n}{\mathrm{d}\lambda^2}\dfrac{\Delta\lambda}{\lambda_0}.
+\Delta\tau^{\text{mat}}=-\frac{L}{c}\lambda_0^2\frac{\mathrm{d}^2n}{\mathrm{d}\lambda^2}\frac{\Delta\lambda}{\lambda_0}.
 \end{align*}
 ```
 However, in practice often the dispersion is reported as
 ```{math}
 :label: eq:fiber:material-dispersion
 \begin{align*}
-	D^{\text{mat}}=\dfrac{\Delta\tau^{\text{mat}}}{L\Delta\lambda}=\dfrac{\lambda_0}{c}\dfrac{\mathrm{d}^2n}{\mathrm{d}\lambda^2}
+	D^{\text{mat}}=\frac{\Delta\tau^{\text{mat}}}{L\Delta\lambda}=\frac{\lambda_0}{c}\frac{\mathrm{d}^2n}{\mathrm{d}\lambda^2}
 \end{align*}
 ```
 in units of $\text{ps}/(\text{km} \cdot \text{nm})$. That is, the increase in pulse width (in $\text{ps}$) per $\text{km}$ of fiber with the source's spectral width in $\text{nm}$. Typical values of this parameter are $10$ to $20\text{ps}/(\text{km}\cdot \text{nm})$.
@@ -313,7 +313,7 @@ For step-index optical fibers, waveguide dispersion can be calculated as
 ```{math}
 :label: eq:fiber:waveguide-dispersion
 \begin{align*}
-	D^{\text{wav}}=-\dfrac{n_1-n_2}{c\lambda_0}.
+	D^{\text{wav}}=-\frac{n_1-n_2}{c\lambda_0}.
 \end{align*}
 ```
 It should be noted that $D^{\text{wav}}<0$ as $n_1>n_2$ for TIR, see {ref}`secFiberTIR`. Typical values of this parameter are $-5$ to $-10\text{ps}/(\text{km}\cdot \text{nm})$.
@@ -353,7 +353,7 @@ Fiber loss as function of wavelength. Material losses occur due to scattering an
 Rayleigh scattering occurs as a result of SiO$_2$ crystal imperfections in the fiber. These occur if the crystal lacks Si- or O-atoms in its lattice at some positions, or when an additional atom is ''squeezed in''. Due to these lattice distortions, some of the light is scattered in a random direction. The average loss factor from Rayleigh scattering is given by
 ```{math}
 \begin{align*}
-\alpha_{\text{R}}=\alpha_0^{\text{R}}\left(\dfrac{\lambda_0^{\text{R}}}{\lambda}\right)^4,
+\alpha_{\text{R}}=\alpha_0^{\text{R}}\left(\frac{\lambda_0^{\text{R}}}{\lambda}\right)^4,
 \end{align*}
 ```
 where $\alpha_0^{\text{R}}$ is the loss factor experimentally measured at a wavelength $\lambda_0^{\text{R}}$. For SiO$_2$, $\alpha_0^{\text{R}}$ is approximately $0.15\text{dB/km}$ at $\lambda_0^{\text{R}}=1550\text{nm}$. This makes Rayleigh scattering the dominant loss mechanism in SiO$_2$ for lower wavelengths.
@@ -361,7 +361,7 @@ where $\alpha_0^{\text{R}}$ is the loss factor experimentally measured at a wave
 At larger wavelengths infrared absorption becomes the dominant loss mechanism in SiO$_2$ fibers. Infrared light may excite vibrational states of SiO$_2$, which excitation energy is subsequently dissipated as heat in the fiber. The loss coefficient for infrared absorption is given by
 ```{math}
 \begin{align*}
-\alpha_{\text{IR}}=\alpha_0^{\text{IR}}\exp\left(-\dfrac{\lambda_0^{\text{IR}}}{\lambda}\right).
+\alpha_{\text{IR}}=\alpha_0^{\text{IR}}\exp\left(-\frac{\lambda_0^{\text{IR}}}{\lambda}\right).
 \end{align*}
 ```
 For SiO$_2$ fibers $\alpha_0^{\text{IR}}$ is in the order of $10^{12}$ dB/km and $\lambda_0^{\text{IR}}$ equals approximately $50\mu \text{m}$.
@@ -374,7 +374,7 @@ Beside the intrinsic losses of Rayleigh scattering and absorption, losses also o
 
 In case an optical fiber bends, losses may occur if the bending radius is too small. This can be understood from considering the light rays in the fiber. As these travel on straight paths, a bend changes the angle under which the rays hit the core-cladding boundary, see {numref}`figFiberBendingLoss`. As such, the ray may reach this boundary under an angle $\theta_{\text{i}}$ below the internal critical angle. As a result some of the light refracts into the cladding and is lost.
 
-Bending may occur on macro-scale ({numref}`figFiberBendingLoss`(a)) while intentionally making a fiber bend during installation, or on micro-scale ({numref}`figFiberBendingLoss`(b)). The latter may as a result of improper fiber handling, e.g. when the fiber is strained excessively.
+Bending may occur on macro-scale ({numref}`figFiberBendingLoss` (a)) while intentionally making a fiber bend during installation, or on micro-scale ({numref}`figFiberBendingLoss` (b)). The latter may as a result of improper fiber handling, e.g. when the fiber is strained excessively.
 
 To prevent macro-bending losses, the critical radius of fibers should be noted. This parameter is listed in the fiber datasheet. Making bends tighter than this critical radius results in macro-bending losses.
 \begin{figure}[htbp]

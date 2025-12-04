@@ -275,7 +275,7 @@ Another aspect of the Fourier transform is the **uncertainty principle**. It sta
 \end{align*}
 ```
 which simply states that the more $h(x)$ is squeezed by increasing $a$, the more its Fourier transform
-$\mathcal{F}(h)$ spreads out. This principle is illustrated in {numref}`Fig_6_07_Uncertainty`. The uncertainty principle is familiar from quantum physics where it is stated that a particle cannot have both a definite momentum and a definite position. In fact, this is just one particular manifestation of the uncertainty principle just described. A quantum state $\ket{\psi}$ can be described in the position basis $\psi_{x}(x)$ as well as in the momentum basis $\psi_p(p)$. The basis transformation that links these two expressions is the Fourier transform
+$\mathcal{F}(h)$ spreads out. This principle is illustrated in {numref}`Fig_6_07_Uncertainty`. The uncertainty principle is familiar from quantum physics where it is stated that a particle cannot have both a definite momentum and a definite position. In fact, this is just one particular manifestation of the uncertainty principle just described. A quantum state $|\psi\rangle$ can be described in the position basis $\psi_{x}(x)$ as well as in the momentum basis $\psi_p(p)$. The basis transformation that links these two expressions is the Fourier transform
 
 ```{math}
 \begin{align*}
@@ -387,12 +387,12 @@ To obtain the Fraunhofer approximation, we will make one further approximation t
 :label: eq.r_fresnel
 \begin{align*}
 r
-&\approx & z+\frac{(x-x')^2+(y-y')^2}{2 z} \quad\textbf{Fresnel approximation} \end{align*}
+&\approx & z+\frac{(x-x')^2+(y-y')^2}{2 z} \quad\mathbf{Fresnel approximation} \end{align*}
 ```
 ```{math}
 :label: eq.r_Fraunhofer
 \begin{align*}
-&\approx & z+\frac{x^2+y^2-2xx'-2yy'}{2 z} \quad\textbf{Fraunhofer approximation}.\end{align*}
+&\approx & z+\frac{x^2+y^2-2xx'-2yy'}{2 z} \quad\mathbf{Fraunhofer approximation}.\end{align*}
 ```
 Hence we have omitted the quadratic terms $x'^2+y'^2$, and in comparison with the Fresnel diffraction integral, we omit the factor $ \exp\left[ik(x'^2+y'^2)/(2z)\right]$ to obtain the **Fraunhofer diffraction integral**:
 
@@ -449,13 +449,13 @@ In contrast, due to the additional quadratic phase factor in the integrand of th
 ```{math}
 :label: eq.eisFresnel
 \begin{align*}
-\frac{z}{\lambda} & \gg & \left( \frac{\max_{(x',y')\in{\cal A}}\sqrt{(x-x')^2+(y-y')^2}}{\lambda}\right)^{4/3}, \;\; \textbf{Fresnel} \end{align*}
+\frac{z}{\lambda} & \gg & \left( \frac{\max_{(x',y')\in{\cal A}}\sqrt{(x-x')^2+(y-y')^2}}{\lambda}\right)^{4/3}, \;\; \mathbf{Fresnel} \end{align*}
 ```
 ```{math}
 :label: eq.eisFraunhofer
 \begin{align*}
 \\
-\frac{z}{\lambda} & \gg & \left( \frac{D}{\lambda}\right)^{2}, \;\; \textbf{Fraunhofer}\end{align*}
+\frac{z}{\lambda} & \gg & \left( \frac{D}{\lambda}\right)^{2}, \;\; \mathbf{Fraunhofer}\end{align*}
 ```
 The Fresnel number is defined by
 
@@ -463,7 +463,7 @@ The Fresnel number is defined by
 ```{math}
 :label: eq.NF
 \begin{align*}
-N_F = \frac{D^2}{\lambda z}, \;\;\; \textbf{Fresnel number}.
+N_F = \frac{D^2}{\lambda z}, \;\;\; \mathbf{Fresnel number}.
 \end{align*}
 ```
 
@@ -499,15 +499,15 @@ We apply the Fresnel approximation for large $z$:
 ```{math}
 :label: eq.fresnelps
 \begin{align*}
-|\mathbf{r}-\mathbf{r}_s^\pm| &= z \sqrt{ 1 + \frac{(x\mp a/2)^2 + y^2}{z^2}}  \\
-& \approx & z + \frac{(x\mp a/2)^2 + y^2}{2 z}  \\
-&= z + \frac{x^2+ y^2+a^2/4}{2z} \mp \frac{a x}{2z}.
+|\mathbf{r}-\mathbf{r}_s^\pm| &= z \sqrt{ 1 + \frac{(x∓ a/2)^2 + y^2}{z^2}}  \\
+& \approx & z + \frac{(x∓ a/2)^2 + y^2}{2 z}  \\
+&= z + \frac{x^2+ y^2+a^2/4}{2z} ∓ \frac{a x}{2z}.
 \end{align*}
 ```
 Hence,
 
 $$
-U_\pm(\mathbf{r}) \approx \frac{e^{ikz}}{z} e^{i k \frac{x^2+y^2}{2z} } e^{ i k\frac{ a^2}{8z}} \, e^{\mp i k \frac{a x}{2z}},
+U_\pm(\mathbf{r}) \approx \frac{e^{ikz}}{z} e^{i k \frac{x^2+y^2}{2z} } e^{ i k\frac{ a^2}{8z}} \, e^{∓ i k \frac{a x}{2z}},
 $$ (eq.Ufresnel)
 
 where in the denominator we replaced $|\mathbf{r}-\mathbf{r}_s^\pm|$ by $z$. Note that the Fraunhofer approximation amounts to $e^{ i k a^2/(8z)} \approx 1$ while the phase factor $e^{i k \frac{x^2+y^2}{2z} } $ remains. The intensity on a screen $z=\text{constant}$ of the sum of the two fields for the case that the sources have equal strength and emit in phase is:
@@ -702,7 +702,7 @@ The diffraction amplitude is maximum for angles where both the denominator and n
 ```{math}
 :label: eq.orderm
 \begin{align*}
-\theta_m= \frac{ m \lambda}{ p },\;\;\; m=0,\pm1, \pm 2, \ldots, \hspace{0.6cm} \textbf{diffraction orders.}
+\theta_m= \frac{ m \lambda}{ p },\;\;\; m=0,\pm1, \pm 2, \ldots, \hspace{0.6cm} \mathbf{diffraction orders.}
 \end{align*}
 ```
 
@@ -729,7 +729,7 @@ The angular width of a diffraction order is half the angular distance to the nea
 :label: eq.widthorder
 \begin{align*}
 \Delta \theta = \frac{\lambda}{M p},
-\hspace{1cm} \textbf{angular width of a diffraction order.}
+\hspace{1cm} \mathbf{angular width of a diffraction order.}
 \end{align*}
 ```
 
@@ -876,7 +876,7 @@ The exit pupil of the lens is in the plane $z=0$ where, according to {eq}`eq.sph
 ```{math}
 :label: eq.lens1
 \begin{align*}
-1_{\bigodot_a}(x,y) \frac{e^{-i k \sqrt{x^2 + y^2 + f_i^2}}}{
+1_{⊙_a}(x,y) \frac{e^{-i k \sqrt{x^2 + y^2 + f_i^2}}}{
 \sqrt{ x^2 + y^2 + f_i^2}},
 \end{align*}
 ```
@@ -884,12 +884,12 @@ where the time dependence has been omitted and
 
 ```{math}
 \begin{align*}
-1_{\bigodot_a}(x,y)= \left\{ \begin{array}{l}1 \;\;\; \text{ if } x^2+y^2< a^2, \\0 \;\;\; \text{ otherwise}
+1_{⊙_a}(x,y)= \left\{ \begin{array}{l}1 \;\;\; \text{ if } x^2+y^2< a^2, \\0 \;\;\; \text{ otherwise}
 \end{array}
 \right.
 \end{align*}
 ```
-i.e. $1_{\bigodot_a}(x,y)=1$ for $(x,y)$ in the exit pupil of the lens and $=0$ otherwise.
+i.e. $1_{⊙_a}(x,y)=1$ for $(x,y)$ in the exit pupil of the lens and $=0$ otherwise.
 If $a/f_i$ is sufficiently small, we may replace the distance $\sqrt{x^2 +y^2 + f_i^2}$ between a point in the exit pupil and the image focal point in the denominator of {eq}`eq.lens1` by $f_i$. This is not allowed in the exponent, however, because of the multiplication by the large wave number $k$. In the exponent we therefore use instead the first two terms of the Taylor series {eq}`eq.approxpar`:
 
 ```{math}
@@ -903,7 +903,7 @@ which is valid for $a/f_i$ sufficiently small. Then {eq}`eq.lens1` becomes:
 ```{math}
 :label: eq.lens2
 \begin{align*}
-1_{\bigodot_a}(x,y) e^{-i k \frac{x^2 + y^2}{2 f_i}},
+1_{⊙_a}(x,y) e^{-i k \frac{x^2 + y^2}{2 f_i}},
 \end{align*}
 ```
 where we dropped the constant factors $e^{i k f_i}$ and $1/f_i$.
@@ -912,7 +912,7 @@ For a general field $U_0(x,y)$ incident on the lens, i.e. in the entrance pupil,
 ```{math}
 :label: eq.lens3
 \begin{align*}
-& U_0(x,y) \to U_0(x,y) 1_{\bigodot_a}(x,y) e^{- i k \frac{x^2 + y^2}{2 f_i}}, \end{align*}
+& U_0(x,y) \to U_0(x,y) 1_{⊙_a}(x,y) e^{- i k \frac{x^2 + y^2}{2 f_i}}, \end{align*}
 ```
 
 The function that multiplies $U_0(x,y)$ is the **transmission function of the lens**:
@@ -920,7 +920,7 @@ The function that multiplies $U_0(x,y)$ is the **transmission function of the le
 ```{math}
 :label: eq.translens
 \begin{align*}
-\tau_{\text{lens}}(x,y) = 1_{\bigodot_a}(x,y) e^{-ik \frac{x^2 + y^2}{2 f_i}}.
+\tau_{\text{lens}}(x,y) = 1_{⊙_a}(x,y) e^{-ik \frac{x^2 + y^2}{2 f_i}}.
 \end{align*}
 ```
 This result makes sense: in the center $(x,y)=0$ the lens is thickest, so the phase is shifted the most
@@ -932,7 +932,7 @@ We substitute the field in the exit pupil in the Fresnel diffraction integral {e
 
 ```{math}
 \begin{align*}
-U(x,y,z)=\frac{e^{ikz}e^{\frac{ik(x^2+y^2)}{2z}}}{i\lambda z} \mathcal{F}\left\{U_0(x',y') 1_{\bigodot_a}(x',y') e^{ik\frac{x'^2+y'^2}{2}\left(\frac{1}{z}-\frac{1}{f_i}\right)}\right\}\left(\frac{x}{\lambda z },\frac{y}{ \lambda z }\right).
+U(x,y,z)=\frac{e^{ikz}e^{\frac{ik(x^2+y^2)}{2z}}}{i\lambda z} \mathcal{F}\left\{U_0(x',y') 1_{⊙_a}(x',y') e^{ik\frac{x'^2+y'^2}{2}\left(\frac{1}{z}-\frac{1}{f_i}\right)}\right\}\left(\frac{x}{\lambda z },\frac{y}{ \lambda z }\right).
 \end{align*}
 ```
 The intensity $I=|U|^2$ is shown at the bottom left of {numref}`Fig_6_16_Focusing_Lens`. It is seen that the intensity does not monotonically increase for decreasing distance to the focal point. Instead, secondary maxima occur along the optical axis. Also the boundary of the light cone is not sharp, as predicted by geometrical optics, but diffuse. The bottom right of {numref}`Fig_6_16_Focusing_Lens` shows the phase in the focal region. The wave fronts are close to but not exactly spherical inside the cones.
@@ -947,7 +947,7 @@ For points in the image focal plane of the lens, i.e. $z=f_i$, we have
 ```{math}
 :label: fourierlens
 \begin{align*}
-U(x,y,f_i)= \frac{e^{ikf_i}e^{\frac{ik(x^2+y^2)}{2f_i}}}{i\lambda f_i} \mathcal{F}\left\{U_0(x',y')1_{\bigodot_a}(x',y') \right\}\left(\frac{ x}{ \lambda f_i},\frac{ y}{ \lambda f_i }\right),
+U(x,y,f_i)= \frac{e^{ikf_i}e^{\frac{ik(x^2+y^2)}{2f_i}}}{i\lambda f_i} \mathcal{F}\left\{U_0(x',y')1_{⊙_a}(x',y') \right\}\left(\frac{ x}{ \lambda f_i},\frac{ y}{ \lambda f_i }\right),
 \end{align*}
 ```
 which is the same as the Fraunhofer integral for propagation over the distance $f_i$!
@@ -977,7 +977,7 @@ $$
 $$
 which is indeed a shifted delta peak (i.e. a shifted focal spot).
 
-It seems that the diffraction model of light confirms what we know from geometrical optics. But in the previous two examples we discarded the influence of the finite size of the pupil, i.e. we have left out of consideration the function $1_{\bigodot_a}$ in calculating the Fourier transform. If $U_0(x,y)=1$ in the entrance pupil and we take the finite size of the pupil properly into account, the $\delta$-peaks become blurred: the focused field is then given by the Fourier transform of the circular disc with radius $a$, evaluated at spatial frequencies
+It seems that the diffraction model of light confirms what we know from geometrical optics. But in the previous two examples we discarded the influence of the finite size of the pupil, i.e. we have left out of consideration the function $1_{⊙_a}$ in calculating the Fourier transform. If $U_0(x,y)=1$ in the entrance pupil and we take the finite size of the pupil properly into account, the $\delta$-peaks become blurred: the focused field is then given by the Fourier transform of the circular disc with radius $a$, evaluated at spatial frequencies
 $\xi = \frac{x}{\lambda f_i}$, $\eta =\frac{ y}{\lambda f_i}$. This field is called the **Airy spot** and is given by (See {eq}`eq.Airy_image`):
 
 
@@ -985,15 +985,15 @@ $\xi = \frac{x}{\lambda f_i}$, $\eta =\frac{ y}{\lambda f_i}$. This field is cal
 :label: eq.Airy_image
 \begin{align*}
 U(x,y,z)=\frac{ \pi a^2}{\lambda f_i} \, \frac{ 2 J_1\left(2\pi \frac{ a }{\lambda f_i } \sqrt{x^2 + y^2} \right) }
-{ \frac{2\pi a }{\lambda f_i } \sqrt{x^2 + y^2} }, \hspace{1cm} \textbf{Airy pattern for focusing},
+{ \frac{2\pi a }{\lambda f_i } \sqrt{x^2 + y^2} }, \hspace{1cm} \mathbf{Airy pattern for focusing},
 \end{align*}
 ```
 
-where $J_1$ is the Bessel function of the first kind and where the phase factors in front of the Fourier transform have been omitted. The pattern is shown in {numref}`Fig_6_17_AirySpot`. It is circular symmetric and consists of a central maximum surrounded by concentric rings of alternating zeros and secondary maxima with decreasing amplitudes. In cross-section, as function of $r=\sqrt{x^2+y^2}$, the Airy pattern is similar (but not identical) to the $\text{ sinc}$-function. From the uncertainty principle illustrated in {numref}`Fig_6_07_Uncertainty` it follows that the size of the focal spot decreases as $a$ increases, and from {eq}`eq.Airy_image` we see that the Airy function is a function of the dimensionless variable $a r/(\lambda f_i)$. Hence the focal spot becomes narrower as $a/(\lambda f_i)$ increases. The Numerical Aperture ($\textit{NA}$) is defined by
+where $J_1$ is the Bessel function of the first kind and where the phase factors in front of the Fourier transform have been omitted. The pattern is shown in {numref}`Fig_6_17_AirySpot`. It is circular symmetric and consists of a central maximum surrounded by concentric rings of alternating zeros and secondary maxima with decreasing amplitudes. In cross-section, as function of $r=\sqrt{x^2+y^2}$, the Airy pattern is similar (but not identical) to the $\text{ sinc}$-function. From the uncertainty principle illustrated in {numref}`Fig_6_07_Uncertainty` it follows that the size of the focal spot decreases as $a$ increases, and from {eq}`eq.Airy_image` we see that the Airy function is a function of the dimensionless variable $a r/(\lambda f_i)$. Hence the focal spot becomes narrower as $a/(\lambda f_i)$ increases. The Numerical Aperture ($\text{NA}$) is defined by
 
 ```{math}
 \begin{align*}
-\text{NA}=\frac{a}{f_i}, \hspace{1cm} \textbf{numerical aperture}.
+\text{NA}=\frac{a}{f_i}, \hspace{1cm} \mathbf{numerical aperture}.
 \end{align*}
 ```
 
@@ -1003,7 +1003,7 @@ Since the first zero of the Airy pattern occurs for $a r/(\lambda f_i)= 0.61$, t
 ```{math}
 :label: eq.resolution
 \begin{align*}
-\textbf{Size of focal spot} \approx 0.61 \frac{\lambda}{\text{NA}}
+\mathbf{Size of focal spot} \approx 0.61 \frac{\lambda}{\text{NA}}
 \end{align*}
 ```
 
@@ -1027,7 +1027,7 @@ where $s_i$ is the image coordinate as given by the Lensmaker's Formula. This fi
 ```{math}
 :label: eq.PSF
 \begin{align*}
-\text{PSF}(x,y) =\frac{ \pi a^2}{\lambda s_i} \frac{J_1\left(2\pi \frac{ a }{\lambda s_i } \sqrt{x^2 + y^2} \right) }{ \frac{2\pi a }{\lambda s_i } \sqrt{x^2 + y^2} }, \hspace{1cm} \textbf{Airy pattern for imaging}.
+\text{PSF}(x,y) =\frac{ \pi a^2}{\lambda s_i} \frac{J_1\left(2\pi \frac{ a }{\lambda s_i } \sqrt{x^2 + y^2} \right) }{ \frac{2\pi a }{\lambda s_i } \sqrt{x^2 + y^2} }, \hspace{1cm} \mathbf{Airy pattern for imaging}.
 \end{align*}
 ```
 
@@ -1107,12 +1107,12 @@ The resolution that can be obtained with an optical system consisting of lenses 
 ```{math}
 :label: eq.resol
 \begin{align*}
-\lambda/\textit{NA}_i,
+\lambda/\text{NA}_i,
 \end{align*}
 ```
-where $\textit{NA}_i=a/s_i$ is the numerical aperture in image space, i.e. it is the sinus of half the opening angle of the cone extended by the exit pupil at the Gaussian image point on the optical axis. This resolution limit is called the diffraction limit.
+where $\text{NA}_i=a/s_i$ is the numerical aperture in image space, i.e. it is the sinus of half the opening angle of the cone extended by the exit pupil at the Gaussian image point on the optical axis. This resolution limit is called the diffraction limit.
 
-The size of the image of a point as given by the PSF in {eq}`eq.PSF` is influenced by the magnification of the system. To characterize the resolution of a diffraction-limited system, it is therefore better to consider the numerical aperture on the object side: $\textit{NA}_o = \textit{NA}_i |M| = a/s_o$. The value of $\textit{NA}_o$ is the sinus of the half angle of the cone subtended by the entrance pupil of the system on the object point on the optical axis. This is the cone of wave vectors emitted by this object point that can contribute to the image (they are "accepted" by the optical system). The larger the half angle of this cone, the more spatial frequencies can contribute to the image and hence the larger the information about finer details of the object that can reach the image plane.
+The size of the image of a point as given by the PSF in {eq}`eq.PSF` is influenced by the magnification of the system. To characterize the resolution of a diffraction-limited system, it is therefore better to consider the numerical aperture on the object side: $\text{NA}_o = \text{NA}_i |M| = a/s_o$. The value of $\text{NA}_o$ is the sinus of the half angle of the cone subtended by the entrance pupil of the system on the object point on the optical axis. This is the cone of wave vectors emitted by this object point that can contribute to the image (they are "accepted" by the optical system). The larger the half angle of this cone, the more spatial frequencies can contribute to the image and hence the larger the information about finer details of the object that can reach the image plane.
 
 It should be clear by now that beating the diffraction limit is extremely difficult. Nevertheless, a lot of research in optics is directed towards realizing this goal. Many attempts have been made, some successful, others not so, but, whether successful or not, most were based on very ingenious ideas. To close this chapter on diffraction theory, we will give examples of attempts to achieve what is called super-resolution.
 

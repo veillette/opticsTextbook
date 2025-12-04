@@ -97,7 +97,7 @@ If a perfectly collimated beam is focused with a lens with very small aberration
 ```{math}
 :label: eq:laser:diffraction-limited-spot
 \begin{align*}
-\text{diffraction-limited spot size}= 0.6 \frac{f}{D}\lambda = 0.6 \frac{\lambda}{\textit{NA}}.
+\text{diffraction-limited spot size}= 0.6 \frac{f}{D}\lambda = 0.6 \frac{\lambda}{\text{NA}}.
 \end{align*}
 ```
 With a laser one can achieve a diffraction-limited spot with a very high intensity.
@@ -210,15 +210,15 @@ We consider two atomic energy levels $E_2>E_1$. By absorbing a photon of energy
 ```{math}
 :label: eq:laser:photon-energy
 \begin{align*}
-\hbar\omega = E_2-E_1,
+ℏ\omega = E_2-E_1,
 \end{align*}
 ```
-an atom that is initially in the lower energy state $1$ can be excited to state 2. Here $\hbar$ is Planck's constant:
+an atom that is initially in the lower energy state $1$ can be excited to state 2. Here $ℏ$ is Planck's constant:
 
 ```{math}
 :label: eq:laser:planck-constant
 \begin{align*}
-\hbar= \frac{6.626070040}{2\pi} \times 10^{-34} \;\; \text{ Js }.
+ℏ= \frac{6.626070040}{2\pi} \times 10^{-34} \;\; \text{ Js }.
 \end{align*}
 ```
 Suppose $W(\omega)$ is the time-averaged electromagnetic energy density *per unit of frequency interval* around frequency $\omega$. Hence $W$ has dimension $\text{J}\text{s}\text{m}^3$. Let $N_1$ and $N_2$ be the number of atoms in state 1 and 2, respectively, where
@@ -234,7 +234,7 @@ is the total number of atoms (which is constant). The rate of absorption is the 
 ```{math}
 :label: eq:laser:absorption-rate
 \begin{align*}
-\frac{d N_1}{dt} = - B_{12} N_1 W(\omega), \hspace{1cm} \textbf{absorption},
+\frac{d N_1}{dt} = - B_{12} N_1 W(\omega), \hspace{1cm} \mathbf{absorption},
 \end{align*}
 ```
 
@@ -248,7 +248,7 @@ spontaneous emission is given by:
 ```{math}
 :label: eq:laser:spontaneous-emission-rate
 \begin{align*}
-\frac{d N_2}{dt} = - A_{21} N_2, \hspace{1cm} \textbf{spontaneous emission},
+\frac{d N_2}{dt} = - A_{21} N_2, \hspace{1cm} \mathbf{spontaneous emission},
 \end{align*}
 ```
 where $A_{21}$ has dimension $\text{s}^{-1}$. The lifetime of spontaneous transmission is $\tau_{sp}=1/A_{21}$. It is important to note that the spontaneously emitted photon is emitted in a **random direction**. Furthermore, since the radiation occurs at a random time, there is no phase relation between the spontaneously emitted field and the field that excites the atom.
@@ -256,9 +256,9 @@ where $A_{21}$ has dimension $\text{s}^{-1}$. The lifetime of spontaneous transm
 It is less obvious that in the presence of an electromagnetic field of frequency close to the atomic resonance, an atom in the excited state can also be **stimulated** by that field to emit a photon and transfer to the lower energy state. The rate of **stimulated emission** is proportional to the number of excited atoms and to the energy density of the field:
 
 ```{math}
-:label: eq. stimulated emission
+:label: eq.stimulated-emission
 \begin{align*}
-\frac{d N_2}{dt} = - B_{21} N_2 W(\omega), \hspace{1cm} \textbf{stimulated emission},
+\frac{d N_2}{dt} = - B_{21} N_2 W(\omega), \hspace{1cm} \mathbf{stimulated emission},
 \end{align*}
 ```
 where $B_{21}$ has the same dimension as $B_{12}$. It is very important to remark that stimulated emission occurs in the **same electromagnetic mode** (e.g. a plane wave) as the mode of the field that excites the transmission and that the phase of the radiated field is **identical** to that of the exciting field. This implies that stimulated emission enhances the electromagnetic field by constructive interference. This property is crucial for the operation of the laser.
@@ -276,7 +276,7 @@ Consider a black body, such as a closed empty box. Because no radiation is enter
 ```{math}
 :label: eq:laser:planck-blackbody-law
 \begin{align*}
-W_T(\omega) = \frac{\hbar \omega^3}{\pi^2 c^3} \frac{1}{ \exp\left(\frac{\hbar \omega}{k_B T}\right) -1},
+W_T(\omega) = \frac{ℏ \omega^3}{\pi^2 c^3} \frac{1}{ \exp\left(\frac{ℏ \omega}{k_B T}\right) -1},
 \end{align*}
 ```
 where $k_B$ is Boltzmann's constant:
@@ -308,7 +308,7 @@ But in thermal equilibrium:
 ```{math}
 :label: eq:laser:boltzmann-population
 \begin{align*}
-\frac{N_2}{N_1} = \exp\left( -\frac{E_2-E_1}{k_B T}\right) = \exp\left( -\frac{\hbar \omega}{k_B T}\right).
+\frac{N_2}{N_1} = \exp\left( -\frac{E_2-E_1}{k_B T}\right) = \exp\left( -\frac{ℏ \omega}{k_B T}\right).
 \end{align*}
 ```
 
@@ -318,7 +318,7 @@ for $W_T(\omega)$ are identical for all temperatures only if
 ```{math}
 :label: eq:laser:einstein-coefficients-relation
 \begin{align*}
-B_{12}=B_{21}, \;\;\; A_{21} = \frac{\hbar \omega^3}{\pi^2 c^3} B_{21}.
+B_{12}=B_{21}, \;\;\; A_{21} = \frac{ℏ \omega^3}{\pi^2 c^3} B_{21}.
 \end{align*}
 ```
 
@@ -418,13 +418,13 @@ $\Delta N/N$ as function of $t/(A_{21}+2B_{12}W)$ when all atoms are in the grou
 ```
 
 
-A way to achieve population inversion of levels 1 and 2 and hence amplification of the radiation with frequency $\omega$ with $\hbar \omega = E_2-E_1$ is to use more atomic levels, for example three. In {numref}`Fig_7_09_Laser_3level` the ground state is state 1 with two upper levels 2 and 3 such that $E_1<E_2<E_3$. The transition of interest is still that from level 2 to level 1. Initially almost all atoms are in the ground state 1. Then atoms are pumped with rate $R$ from level 1 directly to level 3. The transition $3 \rightarrow 2$ is non-radiative and has a high rate $A_{32}$ so that level 3 is quickly emptied and therefore $N_3$ remains small. State 2 is called a metastable state, because the residence time in this state is for every atom relatively long. Therefore its population tends to increase, leading to population inversion between the metastable state 2 and the lower ground state 1 (which is continuously being depopulated by pumping to the highest level).
+A way to achieve population inversion of levels 1 and 2 and hence amplification of the radiation with frequency $\omega$ with $ℏ \omega = E_2-E_1$ is to use more atomic levels, for example three. In {numref}`Fig_7_09_Laser_3level` the ground state is state 1 with two upper levels 2 and 3 such that $E_1<E_2<E_3$. The transition of interest is still that from level 2 to level 1. Initially almost all atoms are in the ground state 1. Then atoms are pumped with rate $R$ from level 1 directly to level 3. The transition $3 \rightarrow 2$ is non-radiative and has a high rate $A_{32}$ so that level 3 is quickly emptied and therefore $N_3$ remains small. State 2 is called a metastable state, because the residence time in this state is for every atom relatively long. Therefore its population tends to increase, leading to population inversion between the metastable state 2 and the lower ground state 1 (which is continuously being depopulated by pumping to the highest level).
 
 Note that $A_{31}$ has to be small, because otherwise level 1 will quickly be filled, by which population inversion will be stopped. This effect can be utilized to obtain a series of laser pulses as output, but is undesirable for a continuous output power.
 
 Pumping may be done optically as described, but the energy to transfer atoms from level 1 to level 3 can also be supplied by an electrical discharge in a gas or by an electric current.
 After the pumping has achieved population inversion, initially no light is emitted. So how does the laser actually start?
-Lasing starts by spontaneous emission. The spontaneously emitted photons stimulate emission of the atoms in level 2 to decay to level 1, while emitting a photon of energy $\hbar \omega$. The **stimulated emission occurs in phase with the exciting light** and hence the light amplitude continuously builds up coherently, while it is bouncing back and forth between the mirrors of the resonator. Because one of the mirrors is slightly transparent a certain laser power is emtted.
+Lasing starts by spontaneous emission. The spontaneously emitted photons stimulate emission of the atoms in level 2 to decay to level 1, while emitting a photon of energy $ℏ \omega$. The **stimulated emission occurs in phase with the exciting light** and hence the light amplitude continuously builds up coherently, while it is bouncing back and forth between the mirrors of the resonator. Because one of the mirrors is slightly transparent a certain laser power is emtted.
 
 
 ```{figure} Images/08_09_laser_3level.png
@@ -506,7 +506,7 @@ The energy to transfer the atom $A$ from the ground state to the excited state i
 ```{math}
 :label: eq:laser:optical-pumping
 \begin{align*}
-\hbar \omega_{13} + A \rightarrow A^*,
+ℏ \omega_{13} + A \rightarrow A^*,
 \end{align*}
 ```
 where $\omega_{13}$ is the frequency for the transition $1 \rightarrow 3$ as seen in {numref}`Fig_7_18_Pumping`. The Ruby laser, of which the amplifying medium consists of $\text{Al}_2\text{O}_3$ with 0.05 weight percent $\text{Cr}_2\text{O}_3$, was the first laser, invented in 1960. It emits pulses of light of wavelength 694.3 nm and is optically pumped with a gas discharge lamp. Other optically pumped lasers are the YAG, glass, fiber, semiconductor and dye laser.
@@ -528,7 +528,7 @@ A+e (\mathcal{E}_3) \rightarrow A^* + e(\mathcal{E}_1),
 \end{align*}
 ```
 where $e(\mathcal{E}_3)$ means an electron with energy $\mathcal{E}_3$ and where $\mathcal{E}_3-\mathcal{E}_1$ is equal to
-$\hbar \omega_{13}$ so that the atom is transferred from the ground state 1 to state 3 to obtain population inversion.
+$ℏ \omega_{13}$ so that the atom is transferred from the ground state 1 to state 3 to obtain population inversion.
 Examples are the HeNe, Argon, Krypton, Xenon, Nitrogen and Copper lasers. Electrons can be created by a discharge or by an electron beam.
 
 ```{figure} Images/08_17_hene.png

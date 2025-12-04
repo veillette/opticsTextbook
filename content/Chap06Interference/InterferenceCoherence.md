@@ -101,7 +101,7 @@ We recall the definition of the time average over an interval of length $T$ at a
 ```{math}
 :label: eq.averageII
 \begin{align*}
-\braket{f(t)}= \frac{1}{T}\int_{t}^{t+T}f(t')\,\text{d}t',
+\langle f(t) \rangle= \frac{1}{T}\int_{t}^{t+T}f(t')\,\text{d}t',
 \end{align*}
 ```
 where $T$ is a time interval that is the response time of a typical detector, i.e. $T\approx 10^{-6}\,\text{s}$ which is extremely long compared to the period of visible light which is of the order of $10^{-14}\, \text{s}$.
@@ -110,9 +110,9 @@ Indeed for {eq}`eq.U1plusU2` we get
 
 ```{math}
 \begin{align*}
-I &= \braket{(\mathcal{U}_1(t)+\mathcal{U}_2(t))^2}
-&=4\cos^2(\varphi/2) \braket{\cos^2(\omega t+\varphi/2)}
-&= 2(1+\cos\phi) \braket{\cos^2(\omega t+\varphi/2)}  \\
+I &= \langle (\mathcal{U}_1(t)+\mathcal{U}_2(t))^2 \rangle
+&=4\cos^2(\varphi/2) \langle \cos^2(\omega t+\varphi/2) \rangle
+&= 2(1+\cos\phi) \langle \cos^2(\omega t+\varphi/2) \rangle  \\
 &= 1 +\cos(\varphi)
 \end{align*}
 ```
@@ -339,10 +339,10 @@ we get
 ```{math}
 :label: eq.poly10
 \begin{align*}
-\braket{ \mathcal{U}(\mathbf{r},t)^2 } &= \frac{1}{4} \braket{ (U(\mathbf{r},t)+U(\mathbf{r},t)^*)(U(\mathbf{r},t)+U(\mathbf{r},t)^*)} \nonumber \\
-&= \frac{1}{4} \left\{ \braket{U(\mathbf{r},t)^2} + \braket{(U(\mathbf{r},t)^*)^2} + 2 \braket{U(\mathbf{r},t)^* U(\mathbf{r},t)}\right\} \nonumber \\
-& \approx & \frac{1}{2} \braket{U(\mathbf{r},t)U(\mathbf{r},t)^*} \nonumber \\
-&= \frac{1}{2} \braket{|U(\mathbf{r},t)|^2 },
+\langle  \mathcal{U}(\mathbf{r},t)^2  \rangle &= \frac{1}{4} \langle  (U(\mathbf{r},t)+U(\mathbf{r},t)^*)(U(\mathbf{r},t)+U(\mathbf{r},t)^*) \rangle \nonumber \\
+&= \frac{1}{4} \left\{ \langle U(\mathbf{r},t)^2 \rangle + \langle (U(\mathbf{r},t)^*)^2 \rangle + 2 \langle U(\mathbf{r},t)^* U(\mathbf{r},t) \rangle\right\} \nonumber \\
+& \approx & \frac{1}{2} \langle U(\mathbf{r},t)U(\mathbf{r},t)^* \rangle \nonumber \\
+&= \frac{1}{2} \langle |U(\mathbf{r},t)|^2  \rangle,
 \end{align*}
 ```
 ```{math}
@@ -367,7 +367,7 @@ We use for the intensity again the expression without the factor $1/2$ in front,
 ```{math}
 :label: eq.defI
 \begin{align*}
-I(\mathbf{r}) &= \braket{ |U(\mathbf{r},t)|^2}.
+I(\mathbf{r}) &= \langle  |U(\mathbf{r},t)|^2 \rangle.
 \end{align*}
 ```
 The time-averaged intensity has hereby been expressed in terms of the **time-average of the squared modulus of the complex field**.
@@ -383,7 +383,7 @@ we let the field in that point interfere with itself but delayed in time, i.e. w
 $U(\mathbf{r},t)$ interfere with $U(\mathbf{r}, t-\tau)$.
 Because, when studying temporal coherence, the point $\mathbf{r}$ is always the same, we omit it from the formula. Furthermore, for easier understanding of the phenomena, we assume for the time being that the field considered is emitted by a single atom (i.e. a point source).
 
-Temporal coherence is closely related to the spectral content of the light: if the light consists of fewer frequencies (think of monochromatic light), then it is more temporally coherent. To study the interference of $U(t)$ with $U(t-\tau)$, a Michelson interferometer, shown in {numref}`Fig_5_02_Temporal_Coherence`, is a suitable setup. The light that goes through one arm takes time $t$ to reach the detector, while the light that goes through the other (longer) arm takes time $t+\tau$ which means that it was radiated earlier. Therefore, the detector observes the time-averaged intensity $\braket{|U(t)+U(t-\tau)|^2}$. As remarked before, this averaged intensity does not depend on the time the average is taken, it only depends on the time difference $\tau$ between the two beams.
+Temporal coherence is closely related to the spectral content of the light: if the light consists of fewer frequencies (think of monochromatic light), then it is more temporally coherent. To study the interference of $U(t)$ with $U(t-\tau)$, a Michelson interferometer, shown in {numref}`Fig_5_02_Temporal_Coherence`, is a suitable setup. The light that goes through one arm takes time $t$ to reach the detector, while the light that goes through the other (longer) arm takes time $t+\tau$ which means that it was radiated earlier. Therefore, the detector observes the time-averaged intensity $\langle |U(t)+U(t-\tau)|^2 \rangle$. As remarked before, this averaged intensity does not depend on the time the average is taken, it only depends on the time difference $\tau$ between the two beams.
 ```{figure} Images/06_05_temporal_coherence.png
 :name: Fig_5_02_Temporal_Coherence
 A Michelson interferometer to study the temporal coherence of a field. A beam is split in two by a beam splitter, and the two beams propagate over different distances which corresponds to a time difference $\tau$ and then interfere at the detector.
@@ -394,9 +394,9 @@ We have
 ```{math}
 :label: eq.Itau
 \begin{align*}
-I(\tau)&= \braket{|U(t)+U(t-\tau)|^2}
-&= \braket{|U(t)|^2}+\braket{|U(t-\tau)|^2}+2\text{Re} \braket{U(t)U(t-\tau)^*}  \\
-&= 2 \braket{|U(t)|^2} + 2\text{Re}\braket{U(t)U(t-\tau)^*}.
+I(\tau)&= \langle |U(t)+U(t-\tau)|^2 \rangle
+&= \langle |U(t)|^2 \rangle+\langle |U(t-\tau)|^2 \rangle+2\text{Re} \langle U(t)U(t-\tau)^* \rangle  \\
+&= 2 \langle |U(t)|^2 \rangle + 2\text{Re}\langle U(t)U(t-\tau)^* \rangle.
 \end{align*}
 ```
 The detected intensity varies with the difference in arm length.
@@ -408,7 +408,7 @@ The **self coherence function** $\Gamma(\tau)$ is defined by
 
 ```{math}
 \begin{align*}
-\Gamma(\tau)=\braket{U(t)U(t-\tau)^*} \hspace{1.5cm}\textbf{self-coherence}.
+\Gamma(\tau)=\langle U(t)U(t-\tau)^* \rangle \hspace{1.5cm}\mathbf{self-coherence}.
 \end{align*}
 ```
 
@@ -416,7 +416,7 @@ The intensity of $U(t)$ is
 
 ```{math}
 \begin{align*}
-I_0=\braket{|U(t)|^2} = \Gamma(0).
+I_0=\langle |U(t)|^2 \rangle = \Gamma(0).
 \end{align*}
 ```
 The **complex degree of self-coherence** is defined by:
@@ -425,7 +425,7 @@ The **complex degree of self-coherence** is defined by:
 ```{math}
 :label: eq.defgamma
 \begin{align*}
-\gamma(\tau)=\frac{\Gamma(\tau)}{\Gamma(0)}. \hspace{1.2cm} \textbf{complex degree of self-coherence}
+\gamma(\tau)=\frac{\Gamma(\tau)}{\Gamma(0)}. \hspace{1.2cm} \mathbf{complex degree of self-coherence}
 \end{align*}
 ```
  Using Bessel's inequality it can be shown that this is a complex number with modulus between $0$ and $1$:
@@ -461,7 +461,7 @@ In that case we get for the self-coherence
 :label: eq.SelfG_mono
 \begin{align*}
 \begin{split}
-\Gamma(\tau)&=\braket{e^{-i\omega t}e^{i\omega (t-\tau)}}
+\Gamma(\tau)&=\langle e^{-i\omega t}e^{i\omega (t-\tau)} \rangle
 =e^{-i\omega \tau},
 \end{split}
 \end{align*}
@@ -500,7 +500,7 @@ Then:
 ```{math}
 :label: eq.fringe
 \begin{align*}
-\Gamma(\tau)&=\frac{1}{4}\braket{\left(e^{-i(\mathbf{a}r{\omega}+\Delta\omega/2) t}+e^{-i(\mathbf{a}r{\omega}-\Delta\omega/2) t}\right)\left(e^{i(\mathbf{a}r{\omega}+\Delta\omega/2) (t-\tau)}+e^{i(\mathbf{a}r{\omega}-\Delta\omega/2) (t-\tau)}\right)}
+\Gamma(\tau)&=\frac{1}{4}\langle \left(e^{-i(\mathbf{a}r{\omega}+\Delta\omega/2) t}+e^{-i(\mathbf{a}r{\omega}-\Delta\omega/2) t}\right)\left(e^{i(\mathbf{a}r{\omega}+\Delta\omega/2) (t-\tau)}+e^{i(\mathbf{a}r{\omega}-\Delta\omega/2) (t-\tau)}\right) \rangle
 &\approx & \frac{e^{-i(\mathbf{a}r{\omega}+\Delta\omega/2) \tau}+e^{-i(\mathbf{a}r{\omega}-\Delta\omega/2) \tau}}{4}
  \\
 &= \cos\left(\Delta\omega\,\tau/2\right)\frac{e^{-i \mathbf{a}r{\omega} \tau}}{2},
@@ -531,7 +531,7 @@ We conclude with some further interpretations of the degree of self-coherence $\
 
 **Remarks.**
 
-1. In stochastic signal analysis $\Gamma(\tau)=\braket{U(t)U(t-\tau)^*}$ is
+1. In stochastic signal analysis $\Gamma(\tau)=\langle U(t)U(t-\tau)^* \rangle$ is
    called the **autocorrelation** of $U(t)$. Informally, one can interpret the
    autocorrelation function as the ability to predict the field $U$ at time $t$
    given the field at time $t-\tau$.
@@ -619,12 +619,12 @@ Using {eq}`eq.tau2`, the interference pattern on the screen is then, apart from 
 ```{math}
 :label: eq.fringe_sp
 \begin{align*}
-I(\tau)&= \braket{ \, |U_1(\mathbf{r},t) + U_2(\mathbf{r},t) |^2 \, }
-&= \braket{\, | U(\mathbf{r}_1, t-|\mathbf{r}-\mathbf{r}_1||/c) + U(\mathbf{r}_2, t-|\mathbf{r}-\mathbf{r}_2||/c)|^2 \, }  \\
-&= \braket{\, |U(\mathbf{r}_1,t)+U(\mathbf{r}_2,t- \tau)|^2\, }  \\
-&=\braket{\, |U(\mathbf{r}_1,t)|^2}+\braket{|U(\mathbf{r}_2,t-\tau)|^2\,}+2\text{Re}\braket{\,U(\mathbf{r}_1,t)U(\mathbf{r}_2,t-\tau)^*\, }
+I(\tau)&= \langle  \, |U_1(\mathbf{r},t) + U_2(\mathbf{r},t) |^2 \,  \rangle
+&= \langle \, | U(\mathbf{r}_1, t-|\mathbf{r}-\mathbf{r}_1||/c) + U(\mathbf{r}_2, t-|\mathbf{r}-\mathbf{r}_2||/c)|^2 \,  \rangle  \\
+&= \langle \, |U(\mathbf{r}_1,t)+U(\mathbf{r}_2,t- \tau)|^2\,  \rangle  \\
+&=\langle \, |U(\mathbf{r}_1,t)|^2 \rangle+\langle |U(\mathbf{r}_2,t-\tau)|^2\, \rangle+2\text{Re}\langle \,U(\mathbf{r}_1,t)U(\mathbf{r}_2,t-\tau)^*\,  \rangle
  \\
-&= \braket{\, |U(\mathbf{r}_1,t)|^2\,}+\braket{\, |U(\mathbf{r}_2,t)|^2\, }+2\text{Re}\braket{\, U(\mathbf{r}_1,t)U(\mathbf{r}_2,t-\tau)^*\,},
+&= \langle \, |U(\mathbf{r}_1,t)|^2\, \rangle+\langle \, |U(\mathbf{r}_2,t)|^2\,  \rangle+2\text{Re}\langle \, U(\mathbf{r}_1,t)U(\mathbf{r}_2,t-\tau)^*\, \rangle,
 \end{align*}
 ```
 where in the third and last line we used that the time average does not depend on the time it is taken because the light source is assumed to be stationary.
@@ -634,7 +634,7 @@ We define the **mutual coherence function** by:
 ```{math}
 :label: eq.mutcoh
 \begin{align*}
-\Gamma_{12}(\tau)=\braket{\,U(\mathbf{r}_1,t)U(\mathbf{r}_2,t-\tau)^*\,}, \hspace{1.5cm} \textbf{mutual coherence}.
+\Gamma_{12}(\tau)=\langle \,U(\mathbf{r}_1,t)U(\mathbf{r}_2,t-\tau)^*\, \rangle, \hspace{1.5cm} \mathbf{mutual coherence}.
 \end{align*}
 ```
 
@@ -643,8 +643,8 @@ With the intensities
 ```{math}
 \begin{align*}
 \begin{split}
-I_1&=\braket{\, |U(\mathbf{r}_1,t)|^2\, } = \Gamma_{11}(0),\\
-I_2&=\braket{\, |U(\mathbf{r}_2,t)|^2\, } = \Gamma_{22}(0).
+I_1&=\langle \, |U(\mathbf{r}_1,t)|^2\,  \rangle = \Gamma_{11}(0),\\
+I_2&=\langle \, |U(\mathbf{r}_2,t)|^2\,  \rangle = \Gamma_{22}(0).
 \end{split}
 \end{align*}
 ```
@@ -654,7 +654,7 @@ the **complex degree of mutual coherence** is defined by
 ```{math}
 :label: eq.defgamma12
 \begin{align*}
-\gamma_{12}(\tau)=\frac{\Gamma_{12}(\tau)}{\sqrt{ \Gamma_{11}(0)}\sqrt{\Gamma_{22}(0)}}, \quad \textbf{complex degree of mutual coherence}.
+\gamma_{12}(\tau)=\frac{\Gamma_{12}(\tau)}{\sqrt{ \Gamma_{11}(0)}\sqrt{\Gamma_{22}(0)}}, \quad \mathbf{complex degree of mutual coherence}.
 \end{align*}
 ```
 
@@ -685,7 +685,7 @@ In that case
 ```{math}
 \begin{align*}
 \begin{split}
-\Gamma_{12}(\tau) &= \braket{A(\mathbf{r}_1)A(\mathbf{r}_2)^*e^{-i\omega t}e^{i\omega (t-\tau)}} \\
+\Gamma_{12}(\tau) &= \langle A(\mathbf{r}_1)A(\mathbf{r}_2)^*e^{-i\omega t}e^{i\omega (t-\tau)} \rangle \\
 &= A(\mathbf{r}_1) A(\mathbf{r}_2)^*e^{-i\omega \tau}
 \end{split}
 \end{align*}
@@ -740,7 +740,7 @@ where $d$ is the distance between the slits and $m$ is an integer[^5].
 
 **Remarks**.
 
-1. The mutual coherence $\Gamma_{12}(\tau)= \braket{U(\mathbf{r}_1,t)U(\mathbf{r}_2,t-\tau)^*}$ is the **cross-correlation** of the two signals $U(\mathbf{r}_1,t)$ and $U(\mathbf{r}_2,t)$.
+1. The mutual coherence $\Gamma_{12}(\tau)= \langle U(\mathbf{r}_1,t)U(\mathbf{r}_2,t-\tau)^* \rangle$ is the **cross-correlation** of the two signals $U(\mathbf{r}_1,t)$ and $U(\mathbf{r}_2,t)$.
 
 
 2. As remarked above, by moving the point of observation $\mathbf{r}$ over the screen, one can obtain the real part of the complex degree of mutual coherence. To derive also the imaginary part, one can put a piece of glass behind one of the pinholes with thickness such that for the center frequency $\mathbf{a}r{\omega}$ an additional phase difference of $\pi/2$ is obtained of the fields in $\mathbf{r}_1$ and $\mathbf{r}_2$. If the frequency band $\Delta \omega$ is sufficiently narrow this phase difference applies in good approximations to all frequencies in the band.
@@ -828,7 +828,7 @@ For $z$ sufficiently large all distances $|S_iP_j|$ in the denominators may be r
 ```{math}
 :label: eq.GammaP1P2
 \begin{align*}
-\Gamma_{P_1P_2}(0) &= \braket{\, U(P_1,t)U(P_2,t)^*\,}  \\
+\Gamma_{P_1P_2}(0) &= \langle \, U(P_1,t)U(P_2,t)^*\, \rangle  \\
 &= \Gamma_{S_1S_1}\left( \frac{ |S_1P_2|-|S_1P_1|}{c}\right)
 + \Gamma_{S_1S_2}\left( \frac{|S_2P_2|- |S_1P_1|}{c}\right)  \\
 & & + \Gamma_{S_2S_1}\left( \frac{|S_1P_2|-|S_2P_1|}{c}\right)
@@ -959,11 +959,11 @@ Left: a stellar interferometer with two telescopes that can be moved around to m
 ## Fringe contrast
 
 We have seen that when the interference term
-$\text{Re} \braket{ U_1 U_2^* }$ vanishes, no fringes form, while when this term is nonzero, there are fringes. The **fringe contrast** is expressed directly in measurable intensities. Given some interference intensity pattern $I(x)$ as in {numref}`Fig_5_09_Visibility`, the fringe contrast is defined as
+$\text{Re} \langle  U_1 U_2^*  \rangle$ vanishes, no fringes form, while when this term is nonzero, there are fringes. The **fringe contrast** is expressed directly in measurable intensities. Given some interference intensity pattern $I(x)$ as in {numref}`Fig_5_09_Visibility`, the fringe contrast is defined as
 
 ```{math}
 \begin{align*}
-\mathcal{V}=\frac{I_{\text{max}}-I_{\text{min}}}{I_{\text{max}}+I_{\text{min}}}. \hspace{1.5cm} \textbf{fringe contrast}.
+\mathcal{V}=\frac{I_{\text{max}}-I_{\text{min}}}{I_{\text{max}}+I_{\text{min}}}. \hspace{1.5cm} \mathbf{fringe contrast}.
 \end{align*}
 ```
 
@@ -1215,7 +1215,7 @@ which implies with $\sin^2(m\pi + \Delta \delta/2) \approx (\Delta \delta/2)^2$:
 
 $$
 \Delta \delta = \frac{2}{\sqrt{F}}.
-$$ (eq/width)
+$$ (eq.width)
 
 Using again $k_0=2\pi/\lambda_0$ and the fact that the width in terms of wavelength is small:
 
@@ -1332,8 +1332,8 @@ If the fields are randomly polarized, the time average of the $\bot$-part will e
 ```{math}
 \begin{align*}
 \begin{split}
-I &= 2\braket{\mathcal{E}_{1\bot}^2 + \mathcal{E}_{2\bot}^2 + 2\mathcal{E}_{1\bot} \mathcal{E}_{2\bot}} \\
-&= 2\braket{\mathcal{E}_{1\parallel}^2 + \mathcal{E}_{2\parallel}^2 + 2\mathcal{E}_{1\parallel} \mathcal{E}_{2\parallel}}
+I &= 2\langle \mathcal{E}_{1\bot}^2 + \mathcal{E}_{2\bot}^2 + 2\mathcal{E}_{1\bot} \mathcal{E}_{2\bot} \rangle \\
+&= 2\langle \mathcal{E}_{1\parallel}^2 + \mathcal{E}_{2\parallel}^2 + 2\mathcal{E}_{1\parallel} \mathcal{E}_{2\parallel} \rangle
 \end{split}
 \end{align*}
 ```

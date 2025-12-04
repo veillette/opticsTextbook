@@ -50,7 +50,7 @@ $$\frac{\partial^2 y}{\partial x^2} = \frac{\partial}{\partial x}\left(\frac{\pa
 For the temporal derivatives, we must account for the sign in the coordinate transformation:
 $$\frac{\partial y}{\partial t} = \frac{\partial f}{\partial x'} \frac{\partial x'}{\partial t} = \pm v \frac{\partial f}{\partial x'}$$
 
-where $\frac{\partial x'}{\partial t} = \mp v$ (minus for rightward motion, plus for leftward motion).
+where $\frac{\partial x'}{\partial t} = ∓ v$ (minus for rightward motion, plus for leftward motion).
 
 The second temporal derivative is:
 $$\frac{\partial^2 y}{\partial t^2} = \pm v \frac{\partial}{\partial t}\left(\frac{\partial f}{\partial x'}\right) = \pm v \frac{\partial^2 f}{\partial x'^2} \frac{\partial x'}{\partial t} = v^2 \frac{\partial^2 f}{\partial x'^2}$$
@@ -139,7 +139,7 @@ Points of constant phase move through space at a specific velocity called the ph
 $$d\varphi = 0 = k(dx \pm vdt)$$
 
 Solving for the velocity of points of constant phase:
-$$\frac{dx}{dt} = \mp v$$
+$$\frac{dx}{dt} = ∓ v$$
 
 This confirms that features of the wave (such as crests and troughs) move at speed $v$ in the direction determined by the sign in the wave function.
 

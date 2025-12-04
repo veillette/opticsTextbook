@@ -247,12 +247,11 @@ Perfect imaging: a cone of rays which diverge from $S$ and all intersect in poin
 We summarize the main examples of stigmatic systems.
 
 **1.**
-**Perfect focusing and imaging by refraction.** A parallel bundle of rays propagating in a medium with refractive index $n_2$ can be focused into a point $F$ in a medium $n_1$. If $n_2>n_1$, the interface between the media should be a hyperbole with focus $F$, whereas if $n_2<n_1$ the interface should be an ellipse with focus $F$ (see {numref}`Fig_2_07_Focus-Right` and
-{numref}`Fig_2_08_Perfect_Imaging`). By reversing the rays we obtain perfect collimation. Therefore, a point $S$ in air can be perfectly imaged onto a point $F$ in air by inserting a piece of glass in between them with hyperbolic surfaces as shown in {numref}`Fig_2_08_Perfect_Imaging`. These properties are derived in Problem 2.2.
+**Perfect focusing and imaging by refraction.** A parallel bundle of rays propagating in a medium with refractive index $n_2$ can be focused into a point $F$ in a medium $n_1$. If $n_2>n_1$, the interface between the media should be a hyperbole with focus $F$, whereas if $n_2<n_1$ the interface should be an ellipse with focus $F$. By reversing the rays we obtain perfect collimation. Therefore, a point $S$ in air can be perfectly imaged onto a point $F$ in air by inserting a piece of glass in between them with hyperbolic surfaces. These properties are derived in Problem 2.2.
 
 **2.**
 **Perfect focusing of parallel rays by a mirror**.
-A bundle of parallel rays in air can be focused into a point $F$ by a mirror of parabolic shape with $F$ as focus (see {numref}`Fig_2_09_Para_Mirror`). This is derived in Problem 2.3.
+A bundle of parallel rays in air can be focused into a point $F$ by a mirror of parabolic shape with $F$ as focus. This is derived in Problem 2.3.
 By reversing the arrows, we get (within geometrical optics) a perfectly parallel beam.
 Parabolic mirrors are used everywhere, from automobile headlights to radio telescopes.
 

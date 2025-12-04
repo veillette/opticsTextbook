@@ -118,7 +118,7 @@ For a single lens the dioptric power is defined by:
 
 ```{math}
 \begin{align*}
-\mathfrak{D} = \dfrac{n_m}{f}=(n_l-n_m)\left(\dfrac{1}{R_1}-\dfrac{1}{R_2}\right)
+\mathfrak{D} = \frac{n_m}{f}=(n_l-n_m)\left(\frac{1}{R_1}-\frac{1}{R_2}\right)
 \end{align*}
 ```
 with $R_1$ and $R_2$ the radii of the thin lens measured in meter, $n_l$ is the index of refraction of the lens and $n_m$ that of the ambient medium.
@@ -127,7 +127,7 @@ For two lenses in contact, the focal length is given by:
 
 ```{math}
 \begin{align*}
-\dfrac{1}{f}=\dfrac{1}{f_1}+\dfrac{1}{f_2},
+\frac{1}{f}=\frac{1}{f_1}+\frac{1}{f_2},
 \end{align*}
 ```
 hence the combined power of the two lenses in contact is the sum of the individual powers:
@@ -221,7 +221,7 @@ To estimate the size of the retinal image, we compare in both cases where **the 
 
 ```{math}
 \begin{align*}
-\text{MP}=\dfrac{\alpha_a}{\alpha_u},
+\text{MP}=\frac{\alpha_a}{\alpha_u},
 \end{align*}
 ```
 where $\alpha_a$ and $\alpha_u$ are the angles between the optical axis and the chief rays for the aided and the unaided eye, respectively, as shown in {numref}`Fig_3_09_Magnifier`. Working with these angles instead of distances is in particular useful when the virtual image of the magnifying glass is at infinity.
@@ -230,7 +230,7 @@ Using $\alpha_a\approx y_i/L$ and $\alpha_u\approx y_0/d_0$ with $y_i$ and $y_0$
 ```{math}
 :label: eq:inst:magnifying-power
 \begin{align*}
-\text{MP}=\dfrac{y_id_0}{y_0 L}.
+\text{MP}=\frac{y_id_0}{y_0 L}.
 \end{align*}
 ```
 Since $s_i<0$ and $f_o<0$ we have,
@@ -314,7 +314,7 @@ The magnifying power of the entire system is the product of the transverse linea
 \end{align*}
 ```
 
-According to {eq}`eq:ray:transverse-magnification`: $M_{T}=\mathbin{-} x_i/f_i^{obj}$,
+According to {eq}`eq:ray:transverse-magnification`: $M_{T}=- x_i/f_i^{obj}$,
 where $x_i$ is the distance of the image made by the objective to its back focal
 plane with focal distance $f_i^{obj}$. We have $x_i=L$ which is the tube length,
 i.e. the distance between the second focal point of the objective and the first
@@ -325,7 +325,7 @@ we obtain:
 
 ```{math}
 \begin{align*}
-\text{MP}=\frac{\mathbin{-} x_i}{f_i^{obj}} \frac{d_o}{f_i^e} = \dfrac{\mathbin{-} 16}{f_0}.\dfrac{25}{f_e},
+\text{MP}=\frac{- x_i}{f_i^{obj}} \frac{d_o}{f_i^e} = \frac{- 16}{f_0}.\frac{25}{f_e},
 \end{align*}
 ```
 with the standard near-point $d_o=$25&nbsp;cm. As an example, an Amici objective gives $40 \times$ and combined with a $10\times$ eyepiece one gets $MP=400$.

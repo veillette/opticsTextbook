@@ -87,7 +87,7 @@ Because furthermore $y_2=y_1$, we conclude
     &= \left( \begin{array}{cc}1 & -P \\    0 & 1
 \end{array}\right)\left(
     \begin{array}{c}n_1 \alpha_1 \\    y_1
-\end{array}\right), \quad \textbf{spherical surface,}
+\end{array}\right), \quad \mathbf{spherical surface,}
 \end{align*}
 ```
 where
@@ -111,7 +111,7 @@ We will show that the ray matrix between the planes just before and after the mi
 &= \left( \begin{array}{cc}1 & -{\cal P} \\0 & 1
 \end{array}\right)\left(
 \begin{array}{c}n_1 \alpha_1 \\y_1
-\end{array}\right), \quad \textbf{spherical reflector,}
+\end{array}\right), \quad \mathbf{spherical reflector,}
 \end{align*}
 ```
 where
@@ -189,7 +189,7 @@ $\alpha_2=\alpha_1$ and $y_2=y_1 + \alpha_1(z_2-z_1)$, hence
 :label: eq:ray:homogeneous-propagation-matrix
 \begin{align*}
 {\cal M}=\left( \begin{array}{cc}1 & 0 \\\frac{z_2-z_1}{n} & 1
-\end{array}\right), \quad \textbf{homogeneous space}.
+\end{array}\right), \quad \mathbf{homogeneous space}.
 \end{align*}
 ```
 Note that if the light propagates from the left to the right: $z_2>z_1$ and hence $z_2-z_1$ in the first column and second row of the matrix is positive, i.e. it is the distance between the planes.
@@ -351,7 +351,7 @@ Hence the matrix that maps ray vectors in the plane immediately before the lens 
 \begin{align*}
 {\cal M}&= {\cal M}_3 {\cal M}_2 {\cal M}_1  \\
 &= \left( \begin{array}{cc}1 - \frac{d}{n_l}P_2 & -P_1 - P_2 + \frac{d}{n_l} P_1P_2 \\\frac{d}{n_l} & 1 -\frac{d}{n_l}P_1
-\end{array}\right), \quad \textbf{lens}.
+\end{array}\right), \quad \mathbf{lens}.
 \end{align*}
 ```
 The quantity
@@ -374,7 +374,7 @@ For a thin lens the vertices $V_1$ and $V_2$ coincide and $d=0$, hence {eq}`eq:r
 :label: eq:ray:thin-lens-matrix
 \begin{align*}
 {\cal M} = \left( \begin{array}{cc}1 & -P\\0 & 1
-\end{array}\right), \quad \textbf{thin lens},
+\end{array}\right), \quad \mathbf{thin lens},
 \end{align*}
 ```
 where
@@ -422,7 +422,7 @@ With the results obtained for the focal coordinates we can rewrite the lens matr
 :label: eq:ray:thin-lens-matrix-focal
 \begin{align*}
 {\cal M} = \left( \begin{array}{cc}1 & -\frac{n_2}{f_i} \\0 & 1
-\end{array}\right), \quad \textbf{thin lens}.
+\end{array}\right), \quad \mathbf{thin lens}.
 \end{align*}
 ```
 
@@ -450,7 +450,7 @@ This requires that
 ```{math}
 :label: eq:ray:imaging-condition
 \begin{align*}
-C=0, \quad \textbf{condition for imaging}.
+C=0, \quad \mathbf{condition for imaging}.
 \end{align*}
 ```
 
@@ -645,7 +645,7 @@ result into {eq}`eq:ray:second-lens-imaging`, we find
 ```{math}
 :label: eq:ray:two-lens-image-coordinate
 \begin{align*}
-s_i = \frac{ -d f_{1i}f_{2i} + f_{2i}(f_{i1}-d)s_o }{f_{1i}(f_{2i}-d) + (f_{1i}+f_{2i}-d) s_o}, \;\;\; \quad \textbf{two thin lenses}.
+s_i = \frac{ -d f_{1i}f_{2i} + f_{2i}(f_{i1}-d)s_o }{f_{1i}(f_{2i}-d) + (f_{1i}+f_{2i}-d) s_o}, \;\;\; \quad \mathbf{two thin lenses}.
 \end{align*}
 ```
 By taking the limit $s_o \rightarrow -\infty$, we obtain the $z$-coordinate $f_i$ of the image focal point of the two lenses, while $s_i\rightarrow \infty$ gives the $z$-coordinate $f_o$ of the object focal point:
@@ -738,7 +738,7 @@ refractive index $n_l$ and thickness $d$:
 \begin{align*}
 {\cal M}_{V_1V_2}
 &= \left( \begin{array}{cc}1 - \frac{d}{n_l}P_2 & -P \\\frac{d}{n_l} & 1 -\frac{d}{n_l}P_1
-\end{array}\right), \quad \textbf{thick lens},
+\end{array}\right), \quad \mathbf{thick lens},
 \end{align*}
 ```
 where

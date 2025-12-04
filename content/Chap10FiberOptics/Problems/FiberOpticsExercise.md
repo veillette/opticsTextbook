@@ -23,7 +23,7 @@
 	To make your estimation, neglect reflection due to refractive index mismatch and assume the incoming light has a Gaussian beam profile with intensity
 	```{math}
 	\begin{align*}
-	I(r,z)=I_0\left(\dfrac{d/4}{d/4+\mathrm{NA}\cdot z}\right)^2\exp\left(\dfrac{-2r^2}{(d/4+\mathrm{NA}\cdot z)^2}\right).
+	I(r,z)=I_0\left(\frac{d/4}{d/4+\mathrm{NA}\cdot z}\right)^2\exp\left(\frac{-2r^2}{(d/4+\mathrm{NA}\cdot z)^2}\right).
 	\end{align*}
 	```
 
