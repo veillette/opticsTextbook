@@ -135,46 +135,29 @@ class MystLinter:
         return issues
 
     def _check_missing_math_labels(self, lines: List[str], file_path: Union[str, Path]) -> List[Dict[str, Any]]:
-        """Check for math blocks without labels (numbered equations should have labels)."""
-        issues = []
-        in_math_block = False
-        math_start = 0
-        has_label = False
+        """Check for math blocks without labels.
 
-        for i, line in enumerate(lines):
-            if re.match(r'```\{math\}', line):
-                in_math_block = True
-                math_start = i
-                has_label = False
-                continue
+        Note: This check is intentionally disabled/empty because:
+        - Not all equations need labels (only those being cross-referenced)
+        - Adding labels to all equations creates unnecessary noise
+        - Labels should be added intentionally when needed, not by default
 
-            if in_math_block and re.match(r':label:\s*\S+', line):
-                has_label = True
-
-            if in_math_block and line.strip() == '```':
-                # Check if this math block has important content but no label
-                # (heuristic: contains \begin{align} or similar)
-                block_lines = lines[math_start:i+1]
-                block_content = ''.join(block_lines)
-
-                if not has_label and (r'\begin{align' in block_content or
-                                     r'\begin{equation' in block_content):
-                    # Check if it's in a boxed environment (those are often key equations)
-                    if r'\boxed' not in block_content:
-                        issues.append({
-                            'type': 'missing_math_label',
-                            'line': math_start + 1,
-                            'message': "Math block with align/equation environment has no label",
-                            'severity': 'info',
-                            'fixable': False
-                        })
-
-                in_math_block = False
-
-        return issues
+        If you need to find unlabeled equations, use grep instead:
+            grep -n "begin{align" content/ -r | grep -v ":label:"
+        """
+        # Return empty - this check generates too much noise
+        # Labels are only needed for equations that are cross-referenced
+        return []
 
     def _check_equation_label_format(self, lines: List[str], file_path: Union[str, Path]) -> List[Dict[str, Any]]:
-        """Check equation label format consistency."""
+        """Check equation label format consistency.
+
+        Accepts multiple valid conventions:
+        - eq:chapter:description (preferred, e.g., eq:geo:snell-law)
+        - eq.description (legacy, e.g., eq.Fraunhofer)
+        - bare-name (legacy, e.g., photon-energy)
+        - fig:name, table:name, Fig_XX_YY (figure/table labels)
+        """
         issues = []
         label_pattern = r':label:\s*([^\s\n]+)'
 
@@ -182,18 +165,34 @@ class MystLinter:
             match = re.search(label_pattern, line)
             if match:
                 label = match.group(1)
-                # Check for consistent naming convention
-                # Expected format: eq:chapter:description
-                if not re.match(r'^eq:[a-z]+:[a-z\-]+$', label):
-                    # Check if it's at least prefixed with 'eq'
-                    if not label.startswith('eq:') and not label.startswith('fig') and not label.startswith('table'):
-                        issues.append({
-                            'type': 'inconsistent_label',
-                            'line': i + 1,
-                            'message': f"Label '{label}' doesn't follow naming convention (eq:chapter:description)",
-                            'severity': 'info',
-                            'fixable': False
-                        })
+
+                # Accept valid patterns:
+                # - eq:chapter:description (preferred)
+                # - eq.description (legacy with period)
+                # - eq-description (legacy with hyphen)
+                # - fig:, table:, Fig_, table_ prefixes
+                # - bare names (legacy, still functional)
+                valid_patterns = [
+                    r'^eq:[a-z]+:[a-z0-9\-]+$',      # eq:chapter:description (preferred)
+                    r'^eq\.[a-zA-Z0-9_\-]+$',         # eq.description (legacy)
+                    r'^eq-[a-zA-Z0-9_\-]+$',          # eq-description (legacy)
+                    r'^fig[:_]',                      # figure labels
+                    r'^Fig_',                         # Figure labels (uppercase)
+                    r'^table[:_]',                    # table labels
+                    r'^[a-z][a-z0-9\-]*$',            # bare lowercase names (legacy)
+                ]
+
+                is_valid = any(re.match(pattern, label) for pattern in valid_patterns)
+
+                # Only flag truly problematic labels (e.g., with spaces or special chars)
+                if not is_valid and not re.match(r'^[a-zA-Z][a-zA-Z0-9_\-:.]+$', label):
+                    issues.append({
+                        'type': 'invalid_label',
+                        'line': i + 1,
+                        'message': f"Label '{label}' contains invalid characters",
+                        'severity': 'warning',
+                        'fixable': False
+                    })
 
         return issues
 
