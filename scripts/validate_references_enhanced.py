@@ -48,19 +48,19 @@ def run_enhanced_myst_validation() -> Dict[str, Any]:
         'return_codes': []
     }
 
-    # 1. Standard build
-    stdout, stderr, code = run_myst_command(['npm', 'run', 'build'])
+    # 1. Standard HTML build without prebuild side effects
+    stdout, stderr, code = run_myst_command(['npx', 'myst', 'build', '--html', '--strict'])
     validation_results['build_output'] = stdout
     validation_results['build_errors'] = stderr
     validation_results['return_codes'].append(code)
 
-    # 2. Build with link checking if available
-    stdout, stderr, code = run_myst_command(['npm', 'run', 'checklinks'])
+    # 2. Link checking pass (skips npm prebuild hook)
+    stdout, stderr, code = run_myst_command(['npx', 'myst', 'build', '--check-links'])
     validation_results['check_output'] = stdout
     validation_results['check_errors'] = stderr
     validation_results['return_codes'].append(code)
 
-    # 3. Try direct myst commands for more detailed output
+    # 3. Direct MyST validation with verbose diagnostics
     stdout, stderr, code = run_myst_command(['npx', 'myst', 'build', '--check', '--verbose'])
     validation_results['build_output'] += "\n" + stdout
     validation_results['build_errors'] += "\n" + stderr
