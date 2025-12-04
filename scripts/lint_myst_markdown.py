@@ -284,12 +284,23 @@ class MystLinter:
         return issues
 
     def _check_figure_alt_text(self, lines: List[str], file_path: Union[str, Path]) -> List[Dict[str, Any]]:
-        """Check for figures without alt text or captions."""
+        """Check for figures without alt text or captions.
+
+        In MyST, figure captions go INSIDE the figure block, after the options.
+        Example:
+            ```{figure} path/to/image.png
+            :name: fig-label
+            :width: 80%
+
+            This is the caption text (inside the block, after options).
+            ```
+        """
         issues = []
         in_figure = False
         figure_start = 0
         has_caption = False
         has_alt = False
+        past_options = False  # Track when we're past the option lines
 
         for i, line in enumerate(lines):
             if re.match(r'```\{figure\}', line):
@@ -297,19 +308,22 @@ class MystLinter:
                 figure_start = i
                 has_caption = False
                 has_alt = False
+                past_options = False
                 continue
 
             if in_figure:
+                stripped = line.strip()
+
+                # Check for alt text option
                 if re.match(r':alt:', line):
                     has_alt = True
-                if re.match(r':name:', line):
-                    # Name line doesn't mean caption, but check for text after closing
-                    pass
-                if line.strip() == '```':
-                    # End of figure block - check for caption after
-                    if i + 1 < len(lines) and lines[i + 1].strip() != '':
-                        has_caption = True
 
+                # Options start with : and have a value
+                if stripped.startswith(':') and ':' in stripped[1:]:
+                    # Still in options section
+                    pass
+                elif stripped == '```':
+                    # End of figure block
                     if not has_caption:
                         issues.append({
                             'type': 'missing_figure_caption',
@@ -318,8 +332,16 @@ class MystLinter:
                             'severity': 'warning',
                             'fixable': False
                         })
-
                     in_figure = False
+                elif stripped == '':
+                    # Blank line - marks end of options section
+                    past_options = True
+                elif past_options or (not stripped.startswith(':')):
+                    # Non-empty, non-option line after options = caption text
+                    # Also count lines that don't start with : as caption
+                    # (handles case where caption immediately follows options without blank line)
+                    if stripped:
+                        has_caption = True
 
         return issues
 

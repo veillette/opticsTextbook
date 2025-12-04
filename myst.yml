@@ -275,7 +275,7 @@ site:
     use_repository_button: true
     use_issues_button: true
     search:
-      mininum_characters: 2
+      minimum_characters: 2
       max_results: 20
       index_all: true
   nav:
