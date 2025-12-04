@@ -2,6 +2,14 @@ version: 1
 project:
   title: "Exploring Optics: From Fundamentals to Advanced Applications"
   description: "A comprehensive textbook on optics, covering fundamental principles, advanced topics, and practical applications in modern optical technologies."
+  parts:
+    abstract: >
+      This comprehensive textbook covers the fundamental principles of optics,
+      from geometrical optics and wave phenomena to advanced topics including
+      lasers, fiber optics, and optical instrumentation. Designed for
+      undergraduate students in physics and electrical engineering, it provides
+      a rigorous yet accessible treatment of topics including ray optics, 
+      interference, diffraction, polarization, lasers, and fiber optics.
   keywords: [optics, physics, education, textbook, light, lenses, lasers, fiber optics, polarization, interference, diffraction]
   authors:
     - name: Martin Veillette
@@ -56,6 +64,12 @@ project:
       author: Martin Veillette
       subject: Optics Textbook
       keywords: [optics, physics, education]
+      parts:
+        abstract: >
+          This comprehensive textbook covers the fundamental principles of optics,
+          from geometrical optics and wave phenomena to advanced topics including
+          lasers, fiber optics, and optical instrumentation. Designed for
+          undergraduate students in physics and electrical engineering.
       articles:
         - content/Preface/Preface.md
         - content/Chap01Basics/Basics.md

@@ -1,11 +1,9 @@
 (appendix:vector-calculus)=
 # Appendix D: Vector Calculus for Electromagnetic Fields
 
-```{epigraph}
-"The theory of the electromagnetic field is the most successful physical theory we have. It describes precisely how electromagnetic fields propagate and interact with matter."
-
--- Richard Feynman
-```
+> "The theory of the electromagnetic field is the most successful physical theory we have. It describes precisely how electromagnetic fields propagate and interact with matter."
+>
+> — Richard Feynman
 
 ```{note}
 Vector calculus provides the mathematical language of electromagnetism. While Maxwell's equations can be written in component form, their true elegance and physical meaning emerge when expressed using vector notation. This mathematical framework doesn't just simplify calculations—it reveals the fundamental geometric and topological properties of electromagnetic fields that govern all optical phenomena.
@@ -17,7 +15,7 @@ Vector calculus forms the mathematical foundation for understanding electromagne
 
 ### D.1.1 The Vector Nature of Electromagnetic Fields
 
-```{margin}
+```{tip}
 Unlike scalar quantities like temperature or pressure, electromagnetic fields have both magnitude and direction at each point in space. This directional information is crucial for understanding polarization, wave propagation, and field interactions.
 ```
 
@@ -688,11 +686,9 @@ d) What happens to the Poynting vector at the interface?
 
 Vector calculus provides more than computational tools—it reveals the geometric and topological structure underlying electromagnetic phenomena. The elegance of Maxwell's equations in vector form reflects deep symmetries in space and time that govern how information and energy propagate through the universe.
 
-```{epigraph}
-"Maxwell's equations are the most beautiful equations in physics. They connect electricity, magnetism, and light in a unified theory that has stood unchanged for over 150 years."
-
--- Freeman Dyson
-```
+> "Maxwell's equations are the most beautiful equations in physics. They connect electricity, magnetism, and light in a unified theory that has stood unchanged for over 150 years."
+>
+> — Freeman Dyson
 
 The mathematical framework we've explored connects to fundamental concepts throughout physics:
 

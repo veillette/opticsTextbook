@@ -1,11 +1,9 @@
 (appendix:fourier-transform)=
 # Appendix C: Fourier Transform in Optics
 
-```{epigraph}
-"The Fourier transform is a tool that breaks down a signal into its constituent frequencies. In optics, it reveals how light decomposes into its spatial frequency components."
-
--- Joseph Fourier (paraphrased)
-```
+> "The Fourier transform is a tool that breaks down a signal into its constituent frequencies. In optics, it reveals how light decomposes into its spatial frequency components."
+>
+> — Joseph Fourier (paraphrased)
 
 ```{note}
 While the Fourier transform may initially seem like abstract mathematics, it becomes the cornerstone of modern optics. From understanding diffraction patterns to designing optical processors, Fourier analysis provides the mathematical foundation for spatial frequency domain optics. This transform doesn't just simplify calculations—it reveals the fundamental wave nature of light itself.
@@ -17,7 +15,7 @@ The Fourier transform stands as one of the most powerful mathematical tools in a
 
 ### C.1.1 The Fundamental Concept
 
-```{margin}
+```{tip}
 The word "frequency" in spatial Fourier analysis refers to how rapidly a pattern oscillates in space—high spatial frequencies correspond to fine details, while low spatial frequencies represent broad features.
 ```
 
@@ -651,11 +649,9 @@ d) What sampling requirements must be satisfied to avoid aliasing?
 
 The Fourier transform reveals a profound truth about wave phenomena: **every localized disturbance is composed of extended waves, and every pure wave requires infinite space**. This duality—localization versus frequency purity—appears throughout physics and represents a fundamental limitation of wave-based information processing.
 
-```{epigraph}
-"The Fourier transform is a tool that reveals the hidden periodicities in data. In optics, it shows us the plane wave components that combine to create complex optical fields."
-
--- Ronald Bracewell, "The Fourier Transform and Its Applications"
-```
+> "The Fourier transform is a tool that reveals the hidden periodicities in data. In optics, it shows us the plane wave components that combine to create complex optical fields."
+>
+> — Ronald Bracewell, "The Fourier Transform and Its Applications"
 
 In optics, this manifests as:
 - **Heisenberg uncertainty**: $\Delta x \Delta k \geq 1/2$

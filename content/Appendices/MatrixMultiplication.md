@@ -1,11 +1,9 @@
 (appendix:matrix-multiplication)=
 # Appendix B: Matrix Multiplication in Optics
 
-```{epigraph}
-"In mathematics you don't understand things. You just get used to them."
-
--- John von Neumann
-```
+> "In mathematics you don't understand things. You just get used to them."
+>
+> — John von Neumann
 
 ```{note}
 While matrix multiplication may initially seem like abstract algebra, it becomes an indispensable tool in optics. Matrices elegantly describe how light transforms as it propagates through optical systems, making complex calculations surprisingly manageable. From polarization analysis to ray tracing, matrices reveal the underlying mathematical structure of optical phenomena.
@@ -17,7 +15,7 @@ Matrix multiplication provides one of the most powerful and systematic approache
 
 ### The Power of Linear Transformations
 
-```{margin}
+```{tip}
 Linear transformations are fundamental in optics because Maxwell's equations are linear—if you have two solutions, their sum is also a solution. This linearity propagates through all optical phenomena.
 ```
 
@@ -565,8 +563,8 @@ d) What happens to the angular magnification?
 
 ## Solutions to Practice Problems
 
-```{dropdown}
-**Solution to Problem 1**
+```{admonition} Solution to Problem 1
+:class: dropdown
 
 a) $\begin{pmatrix} 2 & 1 \\ 0 & 3 \end{pmatrix}\begin{pmatrix} 1 & 4 \\ 2 & 1 \end{pmatrix} = \begin{pmatrix} 4 & 9 \\ 6 & 3 \end{pmatrix}$
 
@@ -575,14 +573,14 @@ b) $\begin{pmatrix} 1 & 0 \\ -1/50 & 1 \end{pmatrix}\begin{pmatrix} 1 & 100 \\ 0
 c) $\begin{pmatrix} \cos 2\theta & -\sin 2\theta \\ \sin 2\theta & \cos 2\theta \end{pmatrix}$ (rotation by $2\theta$)
 ```
 
-```{dropdown}
-**Solution to Problem 2**
+```{admonition} Solution to Problem 2
+:class: dropdown
 
 This requires step-by-step matrix multiplication through all three elements. The QWP converts the 45° linear to circular, the HWP rotates the polarization, and the final polarizer extracts the component along 60°. The calculation involves complex arithmetic due to the QWP matrix.
 ```
 
-```{dropdown}
-**Solution to Problem 3**
+```{admonition} Solution to Problem 3
+:class: dropdown
 
 The thick lens matrix is the product of three matrices:
 $$\mathbf{M} = \mathbf{M}_{back} \cdot \mathbf{M}_{thickness} \cdot \mathbf{M}_{front}$$
@@ -590,8 +588,8 @@ $$\mathbf{M} = \mathbf{M}_{back} \cdot \mathbf{M}_{thickness} \cdot \mathbf{M}_{
 where each matrix represents refraction at interfaces and propagation through the material.
 ```
 
-```{dropdown}
-**Solution to Problem 4**
+```{admonition} Solution to Problem 4
+:class: dropdown
 
 a) Distances: 200 mm + 100 mm = 300 mm separation
 b) The 4f system has the special property that A = -1, B = 0, giving perfect imaging
@@ -603,11 +601,9 @@ d) Angular magnification = -f₁/f₂ = -2
 
 Matrix multiplication reveals deep structural relationships in optics that would be nearly impossible to see otherwise. The mathematical framework doesn't just make calculations easier—it reveals the underlying symmetries and conservation laws that govern how light behaves.
 
-```{epigraph}
-"Mathematics is the language with which God has written the universe."
-
--- Galileo Galilei
-```
+> "Mathematics is the language with which God has written the universe."
+>
+> — Galileo Galilei
 
 As you continue studying optics, you'll discover that matrix methods appear everywhere: from the simplest polarizer to the most sophisticated laser system. The investment in understanding these mathematical tools pays dividends throughout your career in optics and photonics.
 

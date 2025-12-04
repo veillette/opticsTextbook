@@ -1,11 +1,9 @@
 (appendix:complex-numbers)=
 # Appendix A: Complex Numbers in Optics
 
-```{epigraph}
-"God made the integers, all the rest is the work of man."
-
--- Leopold Kronecker
-```
+> "God made the integers, all the rest is the work of man."
+>
+> — Leopold Kronecker
 
 ```{note}
 While Kronecker may have dismissed complex numbers as artificial constructs, they have become absolutely essential in physics and engineering. In optics, complex numbers aren't just mathematical conveniences—they reveal deep physical insights about wave phenomena that would be nearly impossible to see otherwise.
@@ -17,7 +15,7 @@ Complex numbers provide one of the most elegant and powerful mathematical framew
 
 ### A.1.1 The Historical Motivation
 
-```{margin}
+```{tip}
 The term "imaginary" is unfortunately misleading—these numbers are just as "real" as any other mathematical concept. The name stuck from historical prejudice, but modern physicists and engineers know that complex numbers describe very real phenomena.
 ```
 
@@ -120,11 +118,9 @@ The polar form is particularly powerful because:
 
 ### A.2.1 The Most Beautiful Equation in Mathematics
 
-```{epigraph}
-"Euler's formula reaches down into the very depths of existence."
-
--- Keith Devlin, mathematician
-```
+> "Euler's formula reaches down into the very depths of existence."
+>
+> — Keith Devlin, mathematician
 
 **Euler's formula** stands as one of the most remarkable discoveries in mathematics:
 
@@ -134,8 +130,8 @@ This equation creates a bridge between three seemingly unrelated mathematical co
 
 ### A.2.2 Understanding Why Euler's Formula Works
 
-```{dropdown}
-**Mathematical Proof Using Taylor Series**
+```{admonition} Mathematical Proof Using Taylor Series
+:class: dropdown
 
 The proof relies on the Taylor series expansions of the exponential and trigonometric functions:
 
@@ -161,7 +157,7 @@ The first parentheses contain exactly the series for $\cos\theta$, and the secon
 
 Euler's formula has a beautiful geometric meaning: $e^{i\theta}$ represents a point on the unit circle at angle $\theta$ from the positive real axis. As $\theta$ increases, $e^{i\theta}$ traces out circular motion in the complex plane.
 
-```{margin}
+```{tip}
 This is why complex exponentials are perfect for describing oscillatory motion—they naturally encode both the magnitude and phase of oscillations.
 ```
 
@@ -325,7 +321,7 @@ The intensity of light is proportional to the time-averaged square of the electr
 
 $$I \propto \langle|E(t)|^2\rangle = \langle E(t) \cdot E^*(t)\rangle$$
 
-```{margin}
+```{tip}
 The time averaging $\langle \cdot \rangle$ removes the rapidly oscillating terms at frequency $2\omega$, leaving only the slowly varying envelope.
 ```
 
@@ -750,8 +746,8 @@ c) $(1 + i)^4$
 d) $\sqrt{3 + 4i}$
 ```
 
-```{dropdown}
-**Solution to Problem A.1**
+```{admonition} Solution to Problem A.1
+:class: dropdown
 
 a) $(3 + 2i)(1 - 4i) = 3 - 12i + 2i - 8i^2 = 3 - 10i + 8 = 11 - 10i$
 
@@ -781,8 +777,8 @@ c) For what values of $\phi$ is the intensity minimum?
 d) Plot the intensity as a function of $\phi$ from 0 to $4\pi$
 ```
 
-```{dropdown}
-**Solution to Problem A.2**
+```{admonition} Solution to Problem A.2
+:class: dropdown
 
 a) $E_{\text{total}} = E_0(1 + e^{i\phi}) = E_0(1 + \cos\phi + i\sin\phi)$
 
@@ -809,8 +805,8 @@ c) How far does light travel before its intensity drops to 1/e of its initial va
 d) What fraction of the intensity remains after traveling 10 μm?
 ```
 
-```{dropdown}
-**Solution to Problem A.3**
+```{admonition} Solution to Problem A.3
+:class: dropdown
 
 a) Phase velocity: $v = c/n = 3 \times 10^8 / 1.6 = 1.875 \times 10^8$ m/s
 
@@ -834,8 +830,8 @@ b) This light passes through a half-wave plate with fast axis at 45°. Find the 
 c) What angle does the final polarization make with the x-axis?
 ```
 
-```{dropdown}
-**Solution to Problem A.4**
+```{admonition} Solution to Problem A.4
+:class: dropdown
 
 a) $\vec{E}_0 = E_0(\frac{\sqrt{3}}{2}\hat{x} + \frac{1}{2}\hat{y})$
 
@@ -880,9 +876,6 @@ Complex numbers in optics connect to many other areas of physics and mathematics
 ```
 
 ### A.13.3 Recommended Further Reading
-
-```{bibliography}
-```
 
 **Further Reading:**
 
@@ -939,11 +932,9 @@ In optics, these mathematical structures manifest as:
 - **Symmetry principles**: The invariances that lead to conservation laws
 - **Analytical properties**: The mathematical constraints that ensure physical causality
 
-```{epigraph}
-"The unreasonable effectiveness of mathematics in the natural sciences is a wonderful gift which we neither understand nor deserve."
-
--- Eugene Wigner, Nobel Prize in Physics
-```
+> "The unreasonable effectiveness of mathematics in the natural sciences is a wonderful gift which we neither understand nor deserve."
+>
+> — Eugene Wigner, Nobel Prize in Physics
 
 As you continue your journey through optics, remember that the mathematics isn't separate from the physics—it *is* the physics, expressed in its most elegant and universal form. Complex numbers are your passport to this deeper understanding.
 

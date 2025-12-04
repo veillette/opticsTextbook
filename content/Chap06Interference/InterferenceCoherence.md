@@ -1402,7 +1402,4 @@ Demonstration of an interference pattern obtained with sunlight.
 
 ## References
 
-```{bibliography}
-```
-
-<!-- Bibliography entries moved to references.bib -->
+<!-- Bibliography is rendered from references.bib in HTML output -->

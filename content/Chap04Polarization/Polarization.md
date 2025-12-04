@@ -675,7 +675,4 @@ To see what happens to an arbitrary elliptical polarization state in a circular 
 
 ## References
 
-```{bibliography}
-```
-
-<!-- Bibliography entries moved to references.bib -->
+<!-- Bibliography is rendered from references.bib in HTML output -->
