@@ -15,7 +15,7 @@ Download individual chapters in PDF or DOCX format:
 - [PDF](../build/chapter-01-basics.pdf) (1.0 MB)
 - [DOCX](../build/chapter-01-basics.docx) (624 KB)
 
-### Chapter 2 - Geometrical Optics  
+### Chapter 2 - Geometrical Optics
 - [PDF](../build/chapter-02-geometrical-optics.pdf) (3.4 MB)
 - [DOCX](../build/chapter-02-geometrical-optics.docx) (3.2 MB)
 

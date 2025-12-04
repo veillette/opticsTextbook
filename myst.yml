@@ -172,19 +172,19 @@ project:
     - format: docx
       output: exports/chapters/chapter-06-interference.docx
       article: content/Chap06Interference/InterferenceCoherence.md
-    - format : docx
+    - format: docx
       output: exports/chapters/chapter-07-diffraction.docx
       article: content/Chap07Diffraction/DiffractiveOptics.md
-    - format : docx
+    - format: docx
       output: exports/chapters/chapter-08-laser.docx
       article: content/Chap08Lasers/Lasers.md
-    - format : docx
+    - format: docx
       output: exports/chapters/chapter-09-advanced-instruments.docx
       article: content/Chap09AdvancedInstruments/AdvancedInstruments.md
-    - format : docx
+    - format: docx
       output: exports/chapters/chapter-10-fiber-optics.docx
       article: content/Chap10FiberOptics/FiberOptics.md
-    - format : docx
+    - format: docx
       output: exports/chapters/chapter-11-ray-matrix.docx
       article: content/Chap11RayMatrix/RayMatrix.md
   toc:
@@ -281,7 +281,7 @@ site:
     use_repository_button: true
     use_issues_button: true
     search:
-      mininum_characters: 2
+      minimum_characters: 2
       max_results: 20
       index_all: true
   nav:
