@@ -11,6 +11,27 @@ const BUILD_DIR = path.join(ROOT_DIR, '_build', 'html');
 const ICONS_DIR = path.join(ROOT_DIR, 'icons');
 const BUILD_ICONS_DIR = path.join(BUILD_DIR, 'icons');
 const SCREENSHOTS_DIR = path.join(ROOT_DIR, 'screenshots');
+const RAW_BASE_PATH = process.env.BASE_URL || '';
+const NORMALIZED_BASE_PATH = (() => {
+  if (!RAW_BASE_PATH || RAW_BASE_PATH === '/') {
+    return '';
+  }
+  return RAW_BASE_PATH.endsWith('/') ? RAW_BASE_PATH.slice(0, -1) : RAW_BASE_PATH;
+})();
+
+const pathWithBase = (resource = '') => {
+  const trimmed = resource.replace(/^\//, '');
+  if (!trimmed) {
+    return NORMALIZED_BASE_PATH ? `${NORMALIZED_BASE_PATH}/` : '/';
+  }
+  if (!NORMALIZED_BASE_PATH) {
+    return `/${trimmed}`;
+  }
+  return `${NORMALIZED_BASE_PATH}/${trimmed}`;
+};
+
+const serviceWorkerUrl = pathWithBase('service-worker.js');
+const serviceWorkerScope = pathWithBase('');
 
 // Files to copy
 const PWA_FILES = [
@@ -76,10 +97,12 @@ function injectServiceWorkerRegistration() {
   const swRegisterScript = `
 <!-- PWA Service Worker Registration -->
 <script>
+  const PWA_BASE_PATH = '${serviceWorkerScope}';
+  const SERVICE_WORKER_URL = '${serviceWorkerUrl}';
   if ('serviceWorker' in navigator) {
     window.addEventListener('load', () => {
-      navigator.serviceWorker.register('/opticsTextbook/service-worker.js', {
-        scope: '/opticsTextbook/'
+      navigator.serviceWorker.register(SERVICE_WORKER_URL, {
+        scope: PWA_BASE_PATH
       })
       .then((registration) => {
         console.log('✅ Service Worker registered:', registration.scope);
@@ -124,9 +147,9 @@ function injectServiceWorkerRegistration() {
 </script>
 `;
 
-  const manifestLink = '<link rel="manifest" href="/opticsTextbook/manifest.json">';
+  const manifestLink = \`<link rel="manifest" href="${pathWithBase('manifest.json')}">\`;
   const themeColorMeta = '<meta name="theme-color" content="#1e40af">';
-  const appleTouchIcon = '<link rel="apple-touch-icon" href="/opticsTextbook/icons/apple-touch-icon.png">';
+  const appleTouchIcon = \`<link rel="apple-touch-icon" href="${pathWithBase('icons/apple-touch-icon.png')}">\`;
   const appleMobileCapable = '<meta name="apple-mobile-web-app-capable" content="yes">';
   const appleMobileStatusBar = '<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">';
   const appleMobileTitle = '<meta name="apple-mobile-web-app-title" content="Optics Textbook">';
