@@ -1,8 +1,8 @@
 // Service Worker for Optics Textbook PWA
-// Version: 1.0.1
+// Version: 1.0.2
 
-const CACHE_NAME = 'optics-textbook-v2';
-const RUNTIME_CACHE = 'optics-runtime-v2';
+const CACHE_NAME = 'optics-textbook-v3';
+const RUNTIME_CACHE = 'optics-runtime-v3';
 
 // Core assets to cache immediately on installation
 const CORE_ASSETS = [
@@ -10,6 +10,7 @@ const CORE_ASSETS = [
   '/opticsTextbook/index.html',
   '/opticsTextbook/manifest.json',
   '/opticsTextbook/myst-theme.css',
+  '/opticsTextbook/offline.html',
   '/opticsTextbook/searchandnavigation',
   '/opticsTextbook/basics',
   '/opticsTextbook/geometricaloptics',

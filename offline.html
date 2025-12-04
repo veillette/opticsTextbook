@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Optics Textbook - Offline Page">
+  <title>Offline - Optics Textbook</title>
+  <link rel="icon" type="image/png" href="/opticsTextbook/img/favicon.png">
+  <style>
+    :root {
+      --primary: #1e40af;
+      --primary-light: #3b82f6;
+      --primary-dark: #1e3a8a;
+      --bg-gradient-start: #0f172a;
+      --bg-gradient-end: #1e293b;
+      --text-primary: #f8fafc;
+      --text-secondary: #94a3b8;
+      --card-bg: rgba(30, 41, 59, 0.8);
+      --card-border: rgba(59, 130, 246, 0.3);
+      --link-color: #60a5fa;
+      --link-hover: #93c5fd;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      background: linear-gradient(135deg, var(--bg-gradient-start) 0%, var(--bg-gradient-end) 100%);
+      min-height: 100vh;
+      color: var(--text-primary);
+      line-height: 1.6;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Decorative background elements */
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: 
+        radial-gradient(circle at 20% 80%, rgba(59, 130, 246, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(147, 51, 234, 0.08) 0%, transparent 50%),
+        radial-gradient(circle at 50% 50%, rgba(59, 130, 246, 0.05) 0%, transparent 70%);
+      pointer-events: none;
+      z-index: -1;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      flex: 1;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 3rem;
+      padding-top: 2rem;
+    }
+
+    .offline-icon {
+      width: 80px;
+      height: 80px;
+      margin: 0 auto 1.5rem;
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 10px 40px rgba(59, 130, 246, 0.3);
+      animation: pulse 2s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.05); opacity: 0.9; }
+    }
+
+    .offline-icon svg {
+      width: 40px;
+      height: 40px;
+      fill: white;
+    }
+
+    h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+      background: linear-gradient(135deg, var(--text-primary) 0%, var(--primary-light) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .subtitle {
+      color: var(--text-secondary);
+      font-size: 1.1rem;
+    }
+
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      padding: 1.75rem;
+      margin-bottom: 1.5rem;
+      backdrop-filter: blur(10px);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 30px rgba(59, 130, 246, 0.15);
+    }
+
+    .card h2 {
+      font-size: 1.25rem;
+      margin-bottom: 1rem;
+      color: var(--text-primary);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .card h2 svg {
+      width: 24px;
+      height: 24px;
+      fill: var(--primary-light);
+    }
+
+    .card p {
+      color: var(--text-secondary);
+      margin-bottom: 1rem;
+    }
+
+    .chapter-list {
+      list-style: none;
+      display: grid;
+      gap: 0.5rem;
+    }
+
+    .chapter-list li a {
+      display: flex;
+      align-items: center;
+      padding: 0.75rem 1rem;
+      background: rgba(59, 130, 246, 0.1);
+      border-radius: 8px;
+      color: var(--link-color);
+      text-decoration: none;
+      transition: all 0.2s ease;
+      border: 1px solid transparent;
+    }
+
+    .chapter-list li a:hover {
+      background: rgba(59, 130, 246, 0.2);
+      color: var(--link-hover);
+      border-color: var(--card-border);
+      transform: translateX(4px);
+    }
+
+    .chapter-list li a::before {
+      content: '📖';
+      margin-right: 0.75rem;
+      font-size: 1.1rem;
+    }
+
+    .tip-list {
+      list-style: none;
+    }
+
+    .tip-list li {
+      padding: 0.5rem 0;
+      padding-left: 1.5rem;
+      position: relative;
+      color: var(--text-secondary);
+    }
+
+    .tip-list li::before {
+      content: '→';
+      position: absolute;
+      left: 0;
+      color: var(--primary-light);
+      font-weight: bold;
+    }
+
+    .retry-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.875rem 1.5rem;
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      text-decoration: none;
+      margin-top: 0.5rem;
+    }
+
+    .retry-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(59, 130, 246, 0.4);
+    }
+
+    .retry-btn svg {
+      width: 20px;
+      height: 20px;
+      fill: currentColor;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      color: var(--text-secondary);
+      font-size: 0.875rem;
+      border-top: 1px solid var(--card-border);
+      margin-top: auto;
+    }
+
+    footer a {
+      color: var(--link-color);
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      color: var(--link-hover);
+      text-decoration: underline;
+    }
+
+    @media (max-width: 640px) {
+      .container {
+        padding: 1rem;
+      }
+
+      h1 {
+        font-size: 1.5rem;
+      }
+
+      .card {
+        padding: 1.25rem;
+      }
+
+      .chapter-list {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="offline-icon">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M23.64 7c-.45-.34-4.93-4-11.64-4C5.28 3 .81 6.66.36 7L12 21.5 23.64 7z"/>
+          <path d="M2.92 9.07C5.51 7.08 8.67 6 12 6c3.33 0 6.49 1.08 9.08 3.07l1.14-1.41C19.26 5.09 15.74 4 12 4S4.74 5.09 1.78 7.66l1.14 1.41z" fill-opacity="0.3"/>
+        </svg>
+      </div>
+      <h1>You're Offline</h1>
+      <p class="subtitle">No internet connection detected</p>
+    </header>
+
+    <div class="card">
+      <h2>
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+        </svg>
+        Previously Cached Chapters
+      </h2>
+      <p>These chapters may be available offline if you've visited them before:</p>
+      <ul class="chapter-list">
+        <li><a href="/opticsTextbook/">Table of Contents</a></li>
+        <li><a href="/opticsTextbook/basics">Chapter 1: Basics of Optics</a></li>
+        <li><a href="/opticsTextbook/geometricaloptics">Chapter 2: Geometrical Optics</a></li>
+        <li><a href="/opticsTextbook/opticalinstruments">Chapter 3: Optical Instruments</a></li>
+        <li><a href="/opticsTextbook/polarization">Chapter 4: Polarization</a></li>
+        <li><a href="/opticsTextbook/wave">Chapter 5: Wave Optics</a></li>
+        <li><a href="/opticsTextbook/interferencecoherence">Chapter 6: Interference & Coherence</a></li>
+        <li><a href="/opticsTextbook/diffractiveoptics">Chapter 7: Diffractive Optics</a></li>
+        <li><a href="/opticsTextbook/lasers">Chapter 8: Lasers</a></li>
+        <li><a href="/opticsTextbook/advancedinstruments">Chapter 9: Advanced Instruments</a></li>
+        <li><a href="/opticsTextbook/fiberoptics">Chapter 10: Fiber Optics</a></li>
+        <li><a href="/opticsTextbook/raymatrix">Appendix: Ray Matrices</a></li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M11 7h2v2h-2zm0 4h2v6h-2zm1-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
+        </svg>
+        Tips for Offline Access
+      </h2>
+      <ul class="tip-list">
+        <li>Visit chapters while online to cache them for offline reading</li>
+        <li>Core chapters are automatically cached when you first visit the site</li>
+        <li>Images and figures are cached when you view them</li>
+        <li>Some interactive features may require an internet connection</li>
+      </ul>
+    </div>
+
+    <div class="card" style="text-align: center;">
+      <h2 style="justify-content: center;">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M17.65 6.35C16.2 4.9 14.21 4 12 4c-4.42 0-7.99 3.58-7.99 8s3.57 8 7.99 8c3.73 0 6.84-2.55 7.73-6h-2.08c-.82 2.33-3.04 4-5.65 4-3.31 0-6-2.69-6-6s2.69-6 6-6c1.66 0 3.14.69 4.22 1.78L13 11h7V4l-2.35 2.35z"/>
+        </svg>
+        Try Again
+      </h2>
+      <p>Check your internet connection and try refreshing the page.</p>
+      <button class="retry-btn" onclick="window.location.reload()">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M17.65 6.35C16.2 4.9 14.21 4 12 4c-4.42 0-7.99 3.58-7.99 8s3.57 8 7.99 8c3.73 0 6.84-2.55 7.73-6h-2.08c-.82 2.33-3.04 4-5.65 4-3.31 0-6-2.69-6-6s2.69-6 6-6c1.66 0 3.14.69 4.22 1.78L13 11h7V4l-2.35 2.35z"/>
+        </svg>
+        Refresh Page
+      </button>
+    </div>
+  </div>
+
+  <footer>
+    <p>
+      <strong>Exploring Optics: From Fundamentals to Advanced Applications</strong><br>
+      <a href="/opticsTextbook/">Return to Table of Contents</a>
+    </p>
+  </footer>
+</body>
+</html>
+
