@@ -1,46 +1,101 @@
 // Service Worker for Optics Textbook PWA
-// Version: 1.0.2
+// Version: 1.1.0 - Fixed navigation caching issues
 
-const CACHE_NAME = 'optics-textbook-v3';
-const RUNTIME_CACHE = 'optics-runtime-v3';
+const CACHE_NAME = 'optics-textbook-v4';
+const RUNTIME_CACHE = 'optics-runtime-v4';
 
-// Core assets to cache immediately on installation
-const CORE_ASSETS = [
-  '/opticsTextbook/',
-  '/opticsTextbook/index.html',
-  '/opticsTextbook/manifest.json',
-  '/opticsTextbook/myst-theme.css',
-  '/opticsTextbook/offline.html',
-  '/opticsTextbook/searchandnavigation',
-  '/opticsTextbook/basics',
-  '/opticsTextbook/geometricaloptics',
-  '/opticsTextbook/opticalinstruments',
-  '/opticsTextbook/polarization',
-  '/opticsTextbook/wave',
-  '/opticsTextbook/interferencecoherence',
-  '/opticsTextbook/diffractiveoptics',
-  '/opticsTextbook/lasers',
-  '/opticsTextbook/advancedinstruments',
-  '/opticsTextbook/fiberoptics',
-  '/opticsTextbook/raymatrix'
+// Static assets to cache (CSS, JS, images, fonts)
+// These use cache-first strategy
+const STATIC_ASSET_PATTERNS = [
+  /\.css$/,
+  /\.js$/,
+  /\.woff2?$/,
+  /\.ttf$/,
+  /\.eot$/,
+  /\.ico$/,
+  /\.png$/,
+  /\.jpg$/,
+  /\.jpeg$/,
+  /\.gif$/,
+  /\.svg$/,
+  /\.webp$/,
+  /\/build\//,  // MyST build assets
 ];
+
+// Core pages to pre-cache (with trailing slashes for GitHub Pages)
+const CORE_PAGES = [
+  '/opticsTextbook/',
+  '/opticsTextbook/searchandnavigation/',
+  '/opticsTextbook/basics/',
+  '/opticsTextbook/geometricaloptics/',
+  '/opticsTextbook/opticalinstruments/',
+  '/opticsTextbook/polarization/',
+  '/opticsTextbook/wave/',
+  '/opticsTextbook/interferencecoherence/',
+  '/opticsTextbook/diffractiveoptics/',
+  '/opticsTextbook/lasers/',
+  '/opticsTextbook/advancedinstruments/',
+  '/opticsTextbook/fiberoptics/',
+  '/opticsTextbook/raymatrix/'
+];
+
+// Core static assets to pre-cache
+const CORE_ASSETS = [
+  '/opticsTextbook/manifest.json',
+  '/opticsTextbook/offline.html'
+];
+
+// Check if a request is for a static asset
+function isStaticAsset(url) {
+  return STATIC_ASSET_PATTERNS.some(pattern => pattern.test(url.pathname));
+}
+
+// Check if a request is a navigation request (HTML page)
+function isNavigationRequest(request) {
+  return request.mode === 'navigate' ||
+         (request.method === 'GET' && request.headers.get('accept')?.includes('text/html'));
+}
+
+// Normalize URL by ensuring trailing slash for pages
+function normalizeUrl(url) {
+  const urlObj = new URL(url);
+  // Add trailing slash to page URLs (not to files with extensions)
+  if (!urlObj.pathname.includes('.') && !urlObj.pathname.endsWith('/')) {
+    urlObj.pathname += '/';
+  }
+  return urlObj.href;
+}
 
 // Install event - cache core assets
 self.addEventListener('install', (event) => {
-  console.log('[Service Worker] Installing...');
+  console.log('[Service Worker] Installing v1.1.0...');
 
   event.waitUntil(
     caches.open(CACHE_NAME)
       .then((cache) => {
         console.log('[Service Worker] Caching core assets');
-        // Cache core assets one by one to avoid failing if one fails
-        return Promise.allSettled(
-          CORE_ASSETS.map(url =>
-            cache.add(url).catch(err => {
-              console.warn(`[Service Worker] Failed to cache ${url}:`, err);
-            })
-          )
+
+        // Cache static assets
+        const staticPromises = CORE_ASSETS.map(url =>
+          cache.add(url).catch(err => {
+            console.warn(`[Service Worker] Failed to cache ${url}:`, err);
+          })
         );
+
+        // Cache pages (these might redirect, so fetch them properly)
+        const pagePromises = CORE_PAGES.map(url =>
+          fetch(url, { redirect: 'follow' })
+            .then(response => {
+              if (response.ok) {
+                return cache.put(url, response);
+              }
+            })
+            .catch(err => {
+              console.warn(`[Service Worker] Failed to cache page ${url}:`, err);
+            })
+        );
+
+        return Promise.allSettled([...staticPromises, ...pagePromises]);
       })
       .then(() => {
         console.log('[Service Worker] Core assets cached');
@@ -59,7 +114,7 @@ self.addEventListener('activate', (event) => {
         return Promise.all(
           cacheNames
             .filter(cacheName => {
-              // Delete old versions of caches
+              // Delete old versions of our caches
               return cacheName.startsWith('optics-') &&
                      cacheName !== CACHE_NAME &&
                      cacheName !== RUNTIME_CACHE;
@@ -77,13 +132,18 @@ self.addEventListener('activate', (event) => {
   );
 });
 
-// Fetch event - serve from cache, fallback to network
+// Fetch event - different strategies for different content types
 self.addEventListener('fetch', (event) => {
   const { request } = event;
   const url = new URL(request.url);
 
-  // Skip cross-origin requests and non-GET requests
-  if (url.origin !== location.origin || request.method !== 'GET') {
+  // Skip cross-origin requests
+  if (url.origin !== location.origin) {
+    return;
+  }
+
+  // Skip non-GET requests
+  if (request.method !== 'GET') {
     return;
   }
 
@@ -92,73 +152,122 @@ self.addEventListener('fetch', (event) => {
     return;
   }
 
-  event.respondWith(
-    caches.match(request)
-      .then((cachedResponse) => {
-        if (cachedResponse) {
-          // Return cached version and update cache in background
-          updateCache(request);
-          return cachedResponse;
-        }
+  // Strategy 1: Static assets - Cache first, then network
+  if (isStaticAsset(url)) {
+    event.respondWith(cacheFirstStrategy(request));
+    return;
+  }
 
-        // Not in cache, fetch from network
-        return fetch(request)
-          .then((networkResponse) => {
-            // Only cache successful responses (not 404s or other errors)
-            if (networkResponse && networkResponse.status === 200 && networkResponse.type !== 'error') {
-              const responseToCache = networkResponse.clone();
+  // Strategy 2: Navigation requests (HTML pages) - Network first, then cache
+  // This ensures fresh content for page navigation
+  if (isNavigationRequest(request)) {
+    event.respondWith(networkFirstStrategy(request));
+    return;
+  }
 
-              caches.open(RUNTIME_CACHE)
-                .then((cache) => {
-                  cache.put(request, responseToCache);
-                })
-                .catch(err => {
-                  console.warn('[Service Worker] Failed to cache response:', err);
-                });
-            } else if (networkResponse && networkResponse.status === 404) {
-              // Don't cache 404 responses - let them retry on next visit
-              console.log('[Service Worker] Not caching 404 for:', request.url);
-            }
-
-            return networkResponse;
-          })
-          .catch((err) => {
-            console.warn('[Service Worker] Fetch failed:', err);
-
-            // Return offline page or fallback content if available
-            return caches.match('/opticsTextbook/offline.html')
-              .then(offlineResponse => {
-                if (offlineResponse) {
-                  return offlineResponse;
-                }
-
-                // Return a basic offline response
-                return new Response(
-                  '<html><body><h1>Offline</h1><p>This content is not available offline. Please check your connection.</p></body></html>',
-                  {
-                    headers: { 'Content-Type': 'text/html' }
-                  }
-                );
-              });
-          });
-      })
-  );
+  // Strategy 3: Everything else - Stale while revalidate
+  event.respondWith(staleWhileRevalidate(request));
 });
 
-// Helper function to update cache in background
-function updateCache(request) {
-  return fetch(request)
-    .then((response) => {
-      if (response && response.status === 200) {
-        return caches.open(RUNTIME_CACHE)
-          .then((cache) => {
-            cache.put(request, response);
-          });
+// Cache-first strategy for static assets
+async function cacheFirstStrategy(request) {
+  const cachedResponse = await caches.match(request);
+  if (cachedResponse) {
+    return cachedResponse;
+  }
+
+  try {
+    const networkResponse = await fetch(request);
+    if (networkResponse.ok) {
+      const cache = await caches.open(RUNTIME_CACHE);
+      cache.put(request, networkResponse.clone());
+    }
+    return networkResponse;
+  } catch (error) {
+    console.warn('[Service Worker] Cache-first fetch failed:', error);
+    return new Response('Asset not available offline', { status: 503 });
+  }
+}
+
+// Network-first strategy for HTML pages
+async function networkFirstStrategy(request) {
+  const normalizedUrl = normalizeUrl(request.url);
+
+  try {
+    // Try network first
+    const networkResponse = await fetch(request, { redirect: 'follow' });
+
+    if (networkResponse.ok) {
+      // Cache the successful response
+      const cache = await caches.open(RUNTIME_CACHE);
+      cache.put(normalizedUrl, networkResponse.clone());
+      return networkResponse;
+    } else if (networkResponse.status === 404) {
+      // Don't cache 404s, return as-is
+      console.log('[Service Worker] Page not found:', request.url);
+      return networkResponse;
+    }
+
+    // For other errors, try cache
+    throw new Error(`Network response not ok: ${networkResponse.status}`);
+  } catch (error) {
+    console.warn('[Service Worker] Network-first failed, trying cache:', error);
+
+    // Try cache with normalized URL
+    let cachedResponse = await caches.match(normalizedUrl);
+    if (cachedResponse) {
+      return cachedResponse;
+    }
+
+    // Try cache with original URL
+    cachedResponse = await caches.match(request);
+    if (cachedResponse) {
+      return cachedResponse;
+    }
+
+    // Return offline page
+    const offlineResponse = await caches.match('/opticsTextbook/offline.html');
+    if (offlineResponse) {
+      return offlineResponse;
+    }
+
+    return new Response(
+      '<html><body><h1>Offline</h1><p>This page is not available offline. Please check your connection.</p></body></html>',
+      { headers: { 'Content-Type': 'text/html' }, status: 503 }
+    );
+  }
+}
+
+// Stale-while-revalidate strategy
+async function staleWhileRevalidate(request) {
+  const cachedResponse = await caches.match(request);
+
+  // Start network fetch in background
+  const networkPromise = fetch(request)
+    .then(async (networkResponse) => {
+      if (networkResponse.ok) {
+        const cache = await caches.open(RUNTIME_CACHE);
+        cache.put(request, networkResponse.clone());
       }
+      return networkResponse;
     })
-    .catch((err) => {
-      console.warn('[Service Worker] Background update failed:', err);
+    .catch(err => {
+      console.warn('[Service Worker] Background fetch failed:', err);
+      return null;
     });
+
+  // Return cached response immediately if available
+  if (cachedResponse) {
+    return cachedResponse;
+  }
+
+  // Otherwise wait for network
+  const networkResponse = await networkPromise;
+  if (networkResponse) {
+    return networkResponse;
+  }
+
+  return new Response('Content not available', { status: 503 });
 }
 
 // Listen for messages from the client
@@ -167,38 +276,14 @@ self.addEventListener('message', (event) => {
     self.skipWaiting();
   }
 
-  if (event.data && event.data.type === 'CACHE_URLS') {
-    const urlsToCache = event.data.urls || [];
-
-    caches.open(RUNTIME_CACHE)
-      .then((cache) => {
-        return Promise.all(
-          urlsToCache.map(url =>
-            cache.add(url).catch(err => {
-              console.warn(`[Service Worker] Failed to cache ${url}:`, err);
-            })
-          )
-        );
+  // Allow clients to request cache clearing
+  if (event.data && event.data.type === 'CLEAR_CACHE') {
+    caches.keys().then(cacheNames => {
+      cacheNames.forEach(cacheName => {
+        if (cacheName.startsWith('optics-')) {
+          caches.delete(cacheName);
+        }
       });
-  }
-});
-
-// Periodic background sync (if supported)
-self.addEventListener('sync', (event) => {
-  if (event.tag === 'update-cache') {
-    event.waitUntil(updateAllCaches());
-  }
-});
-
-// Helper function to update all caches
-function updateAllCaches() {
-  return caches.open(CACHE_NAME)
-    .then((cache) => {
-      return cache.keys()
-        .then((requests) => {
-          return Promise.all(
-            requests.map((request) => updateCache(request))
-          );
-        });
     });
-}
+  }
+});
