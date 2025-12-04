@@ -10,7 +10,15 @@ An interactive open textbook on optics for undergraduate students in physics, el
 
 This textbook covers advanced topics in optics while maintaining accessibility for students with a basic understanding of physics and optics concepts. The text focuses on practical applications that provide insights into optical phenomena. The content is presented in a way that emphasizes understanding physical phenomena through simplified models, making complex concepts more approachable while maintaining scientific rigor.
 
-## Key Features and Contents
+Beginning with Basic Electromagnetic and Wave Optics, the text builds a strong foundation in Maxwell's equations, wave equations, and their special solutions, including plane waves and electric dipole fields. Time-harmonic fields are thoroughly explored, along with Fresnel coefficients and evanescent waves.
+
+Moving into Geometrical Optics, students learn about ray-based light propagation, exploring Fermat's Principle, Snell's Law and  paraxial theory. The Optical Instruments section brings theory into practice, examining everyday devices from pinhole cameras to modern imaging systems, microscopes, and telescopes.
+
+The text then delves into Polarization, covering various types of light polarization and their manipulation through Jones matrices and vectors. The Interference and Coherence chapter explores time and spatial coherence, wave superposition, and their applications in stellar interferometry. Scalar Diffraction Optics follows, examining diffraction theory, interference patterns, and the fundamental limits of optical resolution.
+
+The chapter on Lasers ties together many previously discussed concepts, exploring laser properties, optical resonators, and stimulated emission through Einstein's theory.  We have included a chapter on the application of ray matrices to thick lens analysis.
+
+## Key Features
 
 The textbook combines comprehensive coverage with interactive elements in its digital version, all freely available under a Creative Commons Attribution 4.0 International License.
 
@@ -21,15 +29,6 @@ The textbook combines comprehensive coverage with interactive elements in its di
 - Read in standalone mode without browser UI
 
 See [PWA_SETUP.md](doc/PWA_SETUP.md) for details on PWA features and usage.
-
-Beginning with Basic Electromagnetic and Wave Optics, the text builds a strong foundation in Maxwell's equations, wave equations, and their special solutions, including plane waves and electric dipole fields. Time-harmonic fields are thoroughly explored, along with Fresnel coefficients and evanescent waves.
-
-Moving into Geometrical Optics, students learn about ray-based light propagation, exploring Fermat's Principle, Snell's Law and  paraxial theory. The Optical Instruments section brings theory into practice, examining everyday devices from pinhole cameras to modern imaging systems, microscopes, and telescopes.
-
-The text then delves into Polarization, covering various types of light polarization and their manipulation through Jones matrices and vectors. The Interference and Coherence chapter explores time and spatial coherence, wave superposition, and their applications in stellar interferometry. Scalar Diffraction Optics follows, examining diffraction theory, interference patterns, and the fundamental limits of optical resolution.
-
-The chapter on Lasers ties together many previously discussed concepts, exploring laser properties, optical resonators, and stimulated emission through Einstein's theory.  We have included a chapter on the application of ray matrices to thick lens analysis.
-
 
 ## For Contributors
 
@@ -50,23 +49,6 @@ pip install -r config/requirements.txt
 npm run start
 # Open http://localhost:3000 in your browser
 ```
-
-### Development Workflow
-
-**Before committing your changes:**
-
-```bash
-# Auto-fix linting issues
-npm run lint:fix
-
-# Validate all references and citations
-npm run validate-enhanced
-
-# Build HTML to ensure everything works
-npm run build
-```
-
-The pre-commit hook will automatically run linting and unit tests. If tests fail, the commit will be blocked until you fix the issues.
 
 ### Documentation
 
