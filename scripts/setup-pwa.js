@@ -190,71 +190,6 @@ function findHtmlFiles(dir, fileList = []) {
   return fileList;
 }
 
-function createNojekyllFile() {
-  // Create .nojekyll file to prevent GitHub Pages from running Jekyll
-  // This is CRITICAL for GitHub Pages to serve the site correctly
-  const nojekyllPath = path.join(BUILD_DIR, '.nojekyll');
-  fs.writeFileSync(nojekyllPath, '');
-  console.log('✅ Created .nojekyll file (prevents GitHub Pages Jekyll processing)');
-}
-
-function create404Page() {
-  // Create a 404.html page that redirects to the main site
-  // This helps with SPA-style navigation on GitHub Pages
-  const html404 = `<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Page Not Found - Optics Textbook</title>
-  <meta http-equiv="refresh" content="0; url=/opticsTextbook/">
-  <link rel="canonical" href="https://veillette.github.io/opticsTextbook/">
-  <style>
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      min-height: 100vh;
-      margin: 0;
-      background: linear-gradient(135deg, #1e3a5f 0%, #2d5a87 100%);
-      color: white;
-      text-align: center;
-      padding: 20px;
-    }
-    h1 { font-size: 2.5rem; margin-bottom: 1rem; }
-    p { font-size: 1.2rem; margin-bottom: 2rem; max-width: 500px; }
-    a {
-      color: #7dd3fc;
-      text-decoration: none;
-      padding: 12px 24px;
-      border: 2px solid #7dd3fc;
-      border-radius: 8px;
-      transition: all 0.3s ease;
-    }
-    a:hover {
-      background: #7dd3fc;
-      color: #1e3a5f;
-    }
-  </style>
-</head>
-<body>
-  <h1>Page Not Found</h1>
-  <p>The page you're looking for doesn't exist or has been moved. You'll be redirected to the homepage automatically.</p>
-  <a href="/opticsTextbook/">Go to Homepage</a>
-  <script>
-    // Store the attempted path for potential SPA routing
-    sessionStorage.setItem('redirect', window.location.pathname + window.location.search + window.location.hash);
-  </script>
-</body>
-</html>`;
-
-  const page404Path = path.join(BUILD_DIR, '404.html');
-  fs.writeFileSync(page404Path, html404, 'utf8');
-  console.log('✅ Created 404.html page (handles missing pages gracefully)');
-}
-
 function setupPWA() {
   console.log('=== PWA Setup Script ===\n');
 
@@ -266,13 +201,8 @@ function setupPWA() {
 
   console.log(`Build directory: ${BUILD_DIR}\n`);
 
-  // Create .nojekyll file FIRST - critical for GitHub Pages
-  console.log('Creating GitHub Pages configuration:');
-  createNojekyllFile();
-  create404Page();
-
   // Copy PWA files
-  console.log('\nCopying PWA files:');
+  console.log('Copying PWA files:');
   PWA_FILES.forEach(({ src, dest }) => {
     copyFile(src, dest);
   });
