@@ -15,7 +15,7 @@ pip install pytest
 Or install all requirements:
 
 ```bash
-pip install -r requirements.txt
+pip install -r config/requirements.txt
 ```
 
 ### Run All Tests
@@ -80,6 +80,6 @@ These tests can be integrated into CI/CD pipelines:
 # Example GitHub Actions workflow
 - name: Run tests
   run: |
-    pip install -r requirements.txt
+    pip install -r config/requirements.txt
     pytest scripts/tests/ -v
 ```

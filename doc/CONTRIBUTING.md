@@ -68,7 +68,7 @@ npm install
 
 # Install Python dependencies
 python -m venv .venv && source .venv/bin/activate  # optional but recommended
-pip install -r requirements.txt
+pip install -r config/requirements.txt
 ```
 
 ### Helpful Scripts
@@ -144,7 +144,7 @@ Before submitting, run `npm run validate-enhanced` to catch missing labels, malf
 - **Scripts directory:** Python utilities live in `scripts/`. Node scripts for PWA/build tasks also live here. Update `doc/scripts/README.md` when adding or changing behavior.
 - **Configuration:** Some scripts rely on `scripts/config.json` (chapter mappings) and `myst.yml` (TOC, exports). Update both when adding chapters or exports.
 - **Testing:** Add or update tests in `scripts/tests/` when you change Python utilities. For Node scripts, add practical instructions or unit tests when feasible.
-- **Service worker & PWA:** When modifying `service-worker.js` or `manifest.json`, bump cache versions and document changes in the PR description.
+- **Service worker & PWA:** When modifying `pwa/service-worker.js` or `pwa/manifest.json`, bump cache versions and document changes in the PR description.
 
 ---
 

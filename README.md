@@ -42,6 +42,10 @@ To contribute to this textbook, you'll need Node.js and Python installed. Follow
 git clone https://github.com/veillette/opticsTextbook.git
 cd opticsTextbook
 
+# Install dependencies
+npm install
+pip install -r config/requirements.txt
+
 # Launch development server (with live reload)
 npm run start
 # Open http://localhost:3000 in your browser

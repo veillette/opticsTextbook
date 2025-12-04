@@ -9,6 +9,7 @@ on:
       - 'myst.yml'
       - 'package.json'
       - 'package-lock.json'
+      - 'config/requirements.txt'
       - '.github/workflows/validate.yml'
   workflow_dispatch:
 
@@ -82,7 +83,7 @@ jobs:
           echo "STEP_START_TIME=$(date +%s)" >> $GITHUB_ENV
 
       - name: Install Python dependencies
-        run: pip install -r requirements.txt
+        run: pip install -r config/requirements.txt
 
       - name: Record pip install time
         run: |

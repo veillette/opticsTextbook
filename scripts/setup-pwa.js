@@ -14,8 +14,9 @@ const SCREENSHOTS_DIR = path.join(ROOT_DIR, 'screenshots');
 
 // Files to copy
 const PWA_FILES = [
-  { src: 'manifest.json', dest: 'manifest.json' },
-  { src: 'service-worker.js', dest: 'service-worker.js' },
+  { src: 'pwa/manifest.json', dest: 'manifest.json' },
+  { src: 'pwa/service-worker.js', dest: 'service-worker.js' },
+  { src: 'pwa/offline.html', dest: 'offline.html' },
   { src: 'img/favicon.ico', dest: 'favicon.ico' }
 ];
 
