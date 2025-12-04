@@ -402,7 +402,7 @@ cd opticsTextbook
 
 # Install dependencies
 npm install
-pip install -r requirements.txt
+pip install -r config/requirements.txt
 
 # Verify setup
 npm run build

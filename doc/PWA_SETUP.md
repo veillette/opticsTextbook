@@ -16,12 +16,12 @@ The Optics Textbook is now available as a Progressive Web App (PWA), which means
 
 ### Core PWA Features
 
-1. **Web App Manifest** (`manifest.json`)
+1. **Web App Manifest** (`pwa/manifest.json`)
    - Defines app name, icons, theme colors, and display settings
    - Enables installation prompts on compatible browsers
    - Provides shortcuts to key sections (Table of Contents, Search)
 
-2. **Service Worker** (`service-worker.js`)
+2. **Service Worker** (`pwa/service-worker.js`)
    - Caches core pages and assets for offline access
    - Implements cache-first strategy with network fallback
    - Automatically updates cached content in the background
@@ -85,8 +85,10 @@ npm run setup-pwa
 
 ```
 opticsTextbook/
-├── manifest.json              # Web app manifest
-├── service-worker.js          # Service worker for caching
+├── pwa/
+│   ├── manifest.json          # Web app manifest
+│   ├── service-worker.js      # Service worker for caching
+│   └── offline.html           # Offline fallback page
 ├── icons/                     # Generated PWA icons
 │   ├── icon-72x72.png
 │   ├── icon-192x192.png
@@ -182,7 +184,7 @@ The service worker caches:
 
 ### Updating Colors
 
-Edit `manifest.json` to change app colors:
+Edit `pwa/manifest.json` to change app colors:
 
 ```json
 {
@@ -199,7 +201,7 @@ Edit `manifest.json` to change app colors:
 
 ### Updating Service Worker
 
-Edit `service-worker.js` to:
+Edit `pwa/service-worker.js` to:
 - Change cache strategy
 - Add/remove cached resources
 - Modify offline behavior
@@ -211,14 +213,14 @@ Edit `service-worker.js` to:
 ### PWA Not Installing
 
 1. Ensure HTTPS is enabled (required for service workers)
-2. Check manifest.json is accessible
+2. Check `pwa/manifest.json` is accessible
 3. Verify icons are correct sizes
 4. Use Chrome DevTools > Application > Manifest to debug
 
 ### Service Worker Not Registering
 
 1. Check browser console for errors
-2. Verify service-worker.js is accessible
+2. Verify `pwa/service-worker.js` is accessible
 3. Ensure HTTPS is enabled
 4. Check service worker scope matches site base URL
 

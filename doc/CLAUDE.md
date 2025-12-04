@@ -85,18 +85,22 @@ opticsTextbook/
 ├── exports/                    # Generated export files
 │   ├── textbook.pdf           # Full textbook PDF (37 MB)
 │   └── chapters/              # Individual chapter PDFs and DOCX
+├── pwa/                        # Progressive Web App assets
+│   ├── manifest.json          # Web app manifest
+│   ├── service-worker.js      # Service worker for offline caching
+│   └── offline.html           # Offline fallback page
+├── config/                     # Configuration files
+│   ├── pyproject.toml         # Python project configuration
+│   └── requirements.txt        # Python dependencies
 ├── icons/                      # PWA icons (multiple sizes)
 ├── img/                        # Site assets (logos, favicon)
 ├── myst.yml                    # MyST configuration
 ├── package.json                # npm scripts
-├── service-worker.js           # PWA service worker
-├── manifest.json               # PWA manifest
 ├── .github/workflows/          # CI/CD workflows
 │   ├── deploy-book.yml        # GitHub Pages deployment
-│   └── validate.yml           # Validation checks
+│   ├── validate.yml           # Validation checks
+│   └── link-check.yml         # Weekly link validation
 ├── README.md                   # User-facing docs
-├── CLAUDE.md                   # This file
-└── CONTRIBUTING.md             # Contributor guidelines
 ```
 
 ## MyST Markdown Conventions
@@ -287,11 +291,13 @@ When you commit, Husky automatically runs:
 
 - **doc/MAINTENANCE.md** - Comprehensive guide for all workflows
 - **doc/MYST_CONVENTIONS.md** - MyST syntax rules and examples
+- **doc/CLAUDE.md** - This file (guidance for AI assistants)
 - **scripts/config.json** - Chapter mappings (update when adding chapters!)
 - **myst.yml** - MyST configuration, table of contents, and export settings
 - **doc/scripts/README.md** - Documentation for utility scripts
-- **service-worker.js** - PWA service worker (handles offline caching)
-- **manifest.json** - PWA manifest (app metadata)
+- **pwa/service-worker.js** - PWA service worker (handles offline caching)
+- **pwa/manifest.json** - PWA manifest (app metadata)
+- **config/requirements.txt** - Python dependencies
 
 ## Quality Standards
 
@@ -429,7 +435,7 @@ If some pages work but others return 404:
 
 ### Service Worker
 
-**Location:** `service-worker.js`
+**Location:** `pwa/service-worker.js`
 
 **Features:**
 - Caches core assets for offline use
@@ -444,14 +450,14 @@ If some pages work but others return 404:
 - Automatic cache cleanup of old versions
 
 **Updating Service Worker:**
-1. Bump version in `service-worker.js`
+1. Bump version in `pwa/service-worker.js`
 2. Change `CACHE_NAME` and `RUNTIME_CACHE` versions
 3. Push to trigger deployment
 4. Users' browsers will auto-update within 24 hours
 
 ### Manifest
 
-**Location:** `manifest.json`
+**Location:** `pwa/manifest.json`
 
 **Includes:**
 - App metadata (name, description)

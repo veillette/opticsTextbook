@@ -581,7 +581,7 @@ logger.error("Error occurred")
 Install Python requirements:
 
 ```bash
-pip install -r requirements.txt
+pip install -r config/requirements.txt
 ```
 
 ### Node.js Scripts

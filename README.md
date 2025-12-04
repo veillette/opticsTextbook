@@ -44,7 +44,7 @@ cd opticsTextbook
 
 # Install dependencies
 npm install
-pip install -r requirements.txt
+pip install -r config/requirements.txt
 
 # Launch development server (with live reload)
 npm run start
