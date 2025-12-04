@@ -10,6 +10,7 @@ const ROOT_DIR = path.join(__dirname, '..');
 const BUILD_DIR = path.join(ROOT_DIR, '_build', 'html');
 const ICONS_DIR = path.join(ROOT_DIR, 'icons');
 const BUILD_ICONS_DIR = path.join(BUILD_DIR, 'icons');
+const SCREENSHOTS_DIR = path.join(ROOT_DIR, 'screenshots');
 
 // Files to copy
 const PWA_FILES = [
@@ -212,6 +213,14 @@ function setupPWA() {
     copyDirectory('icons', 'icons');
   } else {
     console.warn('⚠️  Icons directory not found. Run "npm run generate-icons" first.');
+  }
+
+  // Copy screenshots directory if it exists (optional for PWA install dialogs)
+  console.log('\nCopying screenshots:');
+  if (fs.existsSync(SCREENSHOTS_DIR)) {
+    copyDirectory('screenshots', 'screenshots');
+  } else {
+    console.log('ℹ️  Screenshots directory not found (optional - used for PWA install dialogs)');
   }
 
   // Inject service worker registration and PWA meta tags

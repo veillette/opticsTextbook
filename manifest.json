@@ -99,20 +99,6 @@
       ]
     }
   ],
-  "screenshots": [
-    {
-      "src": "/opticsTextbook/screenshots/desktop-screenshot.png",
-      "sizes": "1280x720",
-      "type": "image/png",
-      "form_factor": "wide"
-    },
-    {
-      "src": "/opticsTextbook/screenshots/mobile-screenshot.png",
-      "sizes": "750x1334",
-      "type": "image/png",
-      "form_factor": "narrow"
-    }
-  ],
   "related_applications": [],
   "prefer_related_applications": false
 }
