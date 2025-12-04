@@ -9,7 +9,6 @@ on:
       - 'myst.yml'
       - 'package.json'
       - 'package-lock.json'
-      - 'requirements.txt'
       - '.github/workflows/validate.yml'
   workflow_dispatch:
 
