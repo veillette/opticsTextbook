@@ -27,7 +27,7 @@ This is an **interactive optics textbook** built with MyST Markdown and deployed
 ### Before Making Changes
 
 1. **Read relevant files first** - Never propose changes without reading the code
-2. **Check existing conventions** - Review MYST_CONVENTIONS.md and MAINTENANCE.md
+2. **Check existing conventions** - Review `doc/MYST_CONVENTIONS.md` and `doc/MAINTENANCE.md`
 3. **Understand the structure** - Content is in `content/`, scripts in `scripts/`
 
 ### Essential Commands
@@ -74,6 +74,14 @@ opticsTextbook/
 │   ├── fix_split_equation_refs.py
 │   ├── optimize-images.js     # Image optimization
 │   └── setup-pwa.js           # PWA configuration
+├── doc/                        # Centralized documentation
+│   ├── MAINTENANCE.md         # Detailed workflows
+│   ├── MYST_CONVENTIONS.md    # MyST syntax rules
+│   ├── LATEX_TO_TYPST_MIGRATION.md
+│   ├── MyST_Comprehensive_Reference.md
+│   ├── PWA_SETUP.md
+│   └── scripts/               # Script-specific docs
+│       └── README.md
 ├── exports/                    # Generated export files
 │   ├── textbook.pdf           # Full textbook PDF (37 MB)
 │   └── chapters/              # Individual chapter PDFs and DOCX
@@ -87,9 +95,8 @@ opticsTextbook/
 │   ├── deploy-book.yml        # GitHub Pages deployment
 │   └── validate.yml           # Validation checks
 ├── README.md                   # User-facing docs
-├── MAINTENANCE.md              # Detailed workflows
-├── MYST_CONVENTIONS.md         # MyST syntax rules
-└── CLAUDE.md                   # This file
+├── CLAUDE.md                   # This file
+└── CONTRIBUTING.md             # Contributor guidelines
 ```
 
 ## MyST Markdown Conventions
@@ -278,11 +285,11 @@ When you commit, Husky automatically runs:
 
 ## Important Files to Know
 
-- **MAINTENANCE.md** - Comprehensive guide for all workflows
-- **MYST_CONVENTIONS.md** - MyST syntax rules and examples
+- **doc/MAINTENANCE.md** - Comprehensive guide for all workflows
+- **doc/MYST_CONVENTIONS.md** - MyST syntax rules and examples
 - **scripts/config.json** - Chapter mappings (update when adding chapters!)
 - **myst.yml** - MyST configuration, table of contents, and export settings
-- **scripts/README.md** - Documentation for utility scripts
+- **doc/scripts/README.md** - Documentation for utility scripts
 - **service-worker.js** - PWA service worker (handles offline caching)
 - **manifest.json** - PWA manifest (app metadata)
 
@@ -673,7 +680,7 @@ Completed issues:
 2. **Check existing patterns** - Look at other chapters for examples
 3. **Use validation tools** - Run `npm run validate-enhanced` frequently
 4. **Test changes** - Always run `npm run build` before committing
-5. **Follow MyST conventions** - Review MYST_CONVENTIONS.md
+5. **Follow MyST conventions** - Review `doc/MYST_CONVENTIONS.md`
 6. **Keep it simple** - Don't over-engineer or add unnecessary features
 7. **Update this file** - If you discover new patterns or conventions
 

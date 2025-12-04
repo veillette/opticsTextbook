@@ -435,8 +435,17 @@ opticsTextbook/
 │   └── pre-commit            # Local validation before commit
 ├── myst.yml                  # MyST configuration
 ├── package.json              # npm scripts and dependencies
+├── doc/                      # Centralized documentation
+│   ├── MAINTENANCE.md        # Detailed workflows (this file)
+│   ├── MYST_CONVENTIONS.md   # MyST syntax rules
+│   ├── LATEX_TO_TYPST_MIGRATION.md
+│   ├── MyST_Comprehensive_Reference.md
+│   ├── PWA_SETUP.md
+│   └── scripts/
+│       └── README.md
 ├── README.md                 # User-facing documentation
-└── MAINTENANCE.md            # This file
+├── CONTRIBUTING.md           # Contributor onboarding
+└── CLAUDE.md                 # AI assistant guidance
 ```
 
 ---
@@ -462,7 +471,7 @@ opticsTextbook/
 
 ## **Code Quality Standards**
 
-### MyST Conventions (See MYST_CONVENTIONS.md)
+### MyST Conventions (See [MYST_CONVENTIONS.md](MYST_CONVENTIONS.md))
 - Use backtick fences (` ``` `) for directives
 - All figures must have captions
 - All equations must have labels
@@ -485,10 +494,10 @@ opticsTextbook/
 ## **Getting Help**
 
 ### For MyST/syntax issues
-See: `MYST_CONVENTIONS.md`
+See: [`MYST_CONVENTIONS.md`](MYST_CONVENTIONS.md)
 
 ### For script usage
-See: `scripts/README.md`
+See: [`scripts/README.md`](scripts/README.md)
 
 ### For this repository
 - Issues: https://github.com/veillette/opticsTextbook/issues

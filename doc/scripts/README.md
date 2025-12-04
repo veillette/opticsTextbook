@@ -357,7 +357,7 @@ Check MyST markdown for common syntax issues and convention violations.
 - Checks for missing labels on math blocks
 - Validates equation label format
 - Checks broken figure references
-- Enforces fence conventions (see `MYST_CONVENTIONS.md`)
+- Enforces fence conventions (see [`MYST_CONVENTIONS.md`](../MYST_CONVENTIONS.md))
 - Auto-fix mode available
 
 **Usage:**
@@ -411,7 +411,7 @@ pytest scripts/tests/ --cov=scripts --cov-report=html
 - Exception raising
 - File size formatting
 
-See `scripts/tests/README.md` for detailed testing documentation.
+See [`tests/README.md`](tests/README.md) for detailed testing documentation.
 
 ---
 

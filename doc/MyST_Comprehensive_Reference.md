@@ -3,16 +3,24 @@
 This comprehensive reference combines the official MyST Markdown documentation from [mystmd.org](https://mystmd.org/guide) with specific patterns and conventions used in the "Exploring Optics" textbook.
 
 ## Table of Contents
-1. [MyST Overview](#myst-overview)
-2. [Document Structure & Frontmatter](#document-structure--frontmatter)
-3. [Mathematical Content](#mathematical-content)
-4. [Cross-References & Navigation](#cross-references--navigation)
-5. [Figures & Images](#figures--images)
-6. [Admonitions & Callouts](#admonitions--callouts)
-7. [Code & Computational Content](#code--computational-content)
-8. [Tables](#tables)
-9. [Advanced Directives](#advanced-directives)
-10. [Project-Specific Patterns](#project-specific-patterns)
+1. [Project Quick Reference](#project-quick-reference)
+2. [MyST Overview](#myst-overview)
+3. [Document Structure & Frontmatter](#document-structure--frontmatter)
+4. [Mathematical Content](#mathematical-content)
+5. [Cross-References & Navigation](#cross-references--navigation)
+6. [Figures & Images](#figures--images)
+7. [Admonitions & Callouts](#admonitions--callouts)
+8. [Code & Computational Content](#code--computational-content)
+9. [Tables](#tables)
+10. [Advanced Directives](#advanced-directives)
+11. [Project-Specific Patterns](#project-specific-patterns)
+
+## Project Quick Reference
+
+- **Content layout:** Chapters live in `content/ChapXXTopic/` with exercises in `Problems/` and figures in `Images/`.
+- **Documentation hub:** The `doc/` directory hosts `MAINTENANCE.md`, `MYST_CONVENTIONS.md`, this reference, Typst migration notes, and script docs.
+- **Frequently used commands:** `npm run start`, `npm run build`, `npm run validate-enhanced`, and `pytest scripts/tests/ -v`.
+- **Need workflows?** See `doc/MAINTENANCE.md` for end-to-end procedures.
 
 ## MyST Overview
 
