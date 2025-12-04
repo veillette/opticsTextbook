@@ -1,8 +1,8 @@
 // Service Worker for Optics Textbook PWA
-// Version: 1.1.0 - Fixed navigation caching issues
+// Version: 1.2.0 - Fixed trailing slash navigation issues
 
-const CACHE_NAME = 'optics-textbook-v4';
-const RUNTIME_CACHE = 'optics-runtime-v4';
+const CACHE_NAME = 'optics-textbook-v5';
+const RUNTIME_CACHE = 'optics-runtime-v5';
 
 // Static assets to cache (CSS, JS, images, fonts)
 // These use cache-first strategy
@@ -68,7 +68,7 @@ function normalizeUrl(url) {
 
 // Install event - cache core assets
 self.addEventListener('install', (event) => {
-  console.log('[Service Worker] Installing v1.1.0...');
+  console.log('[Service Worker] Installing v1.2.0...');
 
   event.waitUntil(
     caches.open(CACHE_NAME)
@@ -192,19 +192,25 @@ async function cacheFirstStrategy(request) {
 // Network-first strategy for HTML pages
 async function networkFirstStrategy(request) {
   const normalizedUrl = normalizeUrl(request.url);
+  const requestUrl = request.url;
 
   try {
-    // Try network first
-    const networkResponse = await fetch(request, { redirect: 'follow' });
+    // Try network first with normalized URL (with trailing slash)
+    // This ensures GitHub Pages serves the correct page
+    const networkResponse = await fetch(normalizedUrl, { redirect: 'follow' });
 
     if (networkResponse.ok) {
-      // Cache the successful response
+      // Cache the successful response using normalized URL
       const cache = await caches.open(RUNTIME_CACHE);
       cache.put(normalizedUrl, networkResponse.clone());
+      // Also cache with original URL for direct access
+      if (requestUrl !== normalizedUrl) {
+        cache.put(requestUrl, networkResponse.clone());
+      }
       return networkResponse;
     } else if (networkResponse.status === 404) {
       // Don't cache 404s, return as-is
-      console.log('[Service Worker] Page not found:', request.url);
+      console.log('[Service Worker] Page not found:', normalizedUrl);
       return networkResponse;
     }
 
