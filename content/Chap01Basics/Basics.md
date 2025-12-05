@@ -11,9 +11,16 @@ kernelspec:
   name: python3
 exports:
   - format: pdf
+    id: chapter-01-pdf
     output: ../exports/chapters/chapter-01-basics.pdf
   - format: docx
+    id: chapter-01-docx
     output: ../exports/chapters/chapter-01-basics.docx
+downloads:
+  - id: chapter-01-pdf
+    title: Download Chapter PDF
+  - id: chapter-01-docx
+    title: Download Chapter DOCX
 ---
 
 (chapter.basics)=

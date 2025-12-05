@@ -7,9 +7,16 @@ jupytext:
     jupytext_version: 1.16.7
 exports:
   - format: pdf
+    id: chapter-02-pdf
     output: ../exports/chapters/chapter-02-geometrical-optics.pdf
   - format: docx
+    id: chapter-02-docx
     output: ../exports/chapters/chapter-02-geometrical-optics.docx
+downloads:
+  - id: chapter-02-pdf
+    title: Download Chapter PDF
+  - id: chapter-02-docx
+    title: Download Chapter DOCX
 ---
 
 (chapter.GeomOptics)=

@@ -1,9 +1,16 @@
 ---
 exports:
   - format: pdf
+    id: chapter-08-pdf
     output: ../exports/chapters/chapter-08-laser.pdf
   - format: docx
+    id: chapter-08-docx
     output: ../exports/chapters/chapter-08-laser.docx
+downloads:
+  - id: chapter-08-pdf
+    title: Download Chapter PDF
+  - id: chapter-08-docx
+    title: Download Chapter DOCX
 ---
 
 (chapter.lasers)=
