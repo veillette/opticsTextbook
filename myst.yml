@@ -56,36 +56,10 @@ project:
     - exports/**
     - content/exports**
   exports:
-    # Typst export - Full textbook PDF using Typst (faster than LaTeX)
-    # Note: Cross-reference warnings may appear for inter-chapter links due to case sensitivity
-    - format: typst
-      id: typstpdf
-      output: exports/textbook-typst.pdf
-      author: Martin Veillette
-      subject: Optics Textbook
-      keywords: [optics, physics, education]
-      parts:
-        abstract: >
-          This comprehensive textbook covers the fundamental principles of optics,
-          from geometrical optics and wave phenomena to advanced topics including
-          lasers, fiber optics, and optical instrumentation. Designed for
-          undergraduate students in physics and electrical engineering.
-      articles:
-        - content/Preface/Preface.md
-        - content/Chap01Basics/Basics.md
-        - content/Chap02GeometricalOptics/GeometricalOptics.md
-        - content/Chap03OpticalInstrument/OpticalInstruments.md
-        - content/Chap04Polarization/Polarization.md
-        - content/Chap05Wave/Wave.md
-        - content/Chap06Interference/InterferenceCoherence.md
-        - content/Chap07Diffraction/DiffractiveOptics.md
-        - content/Chap08Lasers/Lasers.md
-        - content/Chap09AdvancedInstruments/AdvancedInstruments.md
-        - content/Chap10FiberOptics/FiberOptics.md
-        - content/Chap11RayMatrix/RayMatrix.md
-    # Traditional PDF export using LaTeX
+    # Full textbook PDF using LaTeX
     # Requirements: latexmk, texlive-latex-extra, texlive-fonts-recommended
     # Install: sudo apt-get install latexmk texlive-latex-extra texlive-fonts-recommended
+    # NOTE: The id 'pdf' is referenced in the downloads section above to create download buttons
     - format: pdf
       id: pdf
       output: exports/textbook.pdf
