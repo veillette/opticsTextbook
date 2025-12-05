@@ -19,6 +19,17 @@ downloads:
 (chapter.basics)=
 # Nature of Light
 
+```{note} What you should know and be able to do after studying this chapter
+- Understand the historical development of our understanding of light, from Newton's corpuscular theory through Huygens' wave theory to Maxwell's electromagnetic theory and quantum mechanics.
+- Explain wave-particle duality and how different experiments reveal different aspects of light's nature.
+- Apply the fundamental quantum mechanical equations relating energy, momentum, wavelength, and velocity for both photons and material particles.
+- Calculate photon properties (energy, momentum, wavelength) using the relationships $E = h\nu$, $p = E/c$, and $\lambda = hc/E$.
+- Describe the electromagnetic spectrum and identify the characteristics of different regions (radio, microwave, infrared, visible, ultraviolet, X-ray, gamma ray).
+- Understand the concept of refractive index and calculate the speed of light in various media.
+- Know the ray model of light and when geometric optics is applicable.
+- Distinguish between Fermi-Dirac statistics (fermions) and Bose-Einstein statistics (bosons) and their implications for electrons and photons.
+```
+
 This chapter provides a comprehensive introduction to the nature of light, covering its historical development, wave-particle duality, the electromagnetic spectrum, and radiometry. It establishes the foundational concepts necessary for understanding optical phenomena and technologies discussed in later chapters.
 
 ## Introduction

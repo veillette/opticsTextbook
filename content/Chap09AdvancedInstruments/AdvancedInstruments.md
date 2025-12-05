@@ -8,6 +8,16 @@ downloads:
 
 # Advanced Optical Microscopes
 
+```{note} What you should know and be able to do after studying this chapter
+- Understand the fundamental resolution limits of optical microscopy and why shorter wavelengths alone cannot always improve resolution.
+- Explain the principle of phase contrast microscopy and how it converts phase information into amplitude (intensity) information for imaging transparent objects.
+- Describe the operation of a confocal microscope, including the role of the pinhole and focused illumination in achieving improved axial and lateral resolution.
+- Understand how fluorescence microscopy works, including the use of fluorescent molecules (such as GFP) and dichromatic mirrors.
+- Explain the principles of Scanning Near-Field Optical Microscopy (SNOM) and how it achieves super-resolution by detecting evanescent waves.
+- Compare and contrast collection mode and excitation mode SNOM configurations.
+- Recognize the limitations of each microscopy technique, including sample requirements and measurement artifacts.
+```
+
 Many attempts have been and are still being done to achieve better images. An obvious way of improving the resolution is to use shorter wavelengths. However, at wavelengths below 200 nm (i.e. at deep, extreme ultraviolet, soft x-rays and hard x-rays) most materials have low optical contrast and refractive optics (lenses) are not practical. Instead of reducing the wavelength, other methods have been invented to achieve higher resolution. Some of these (certainly not all) are discussed in this chapter.
 Apart from these already existing systems, research is continuing to achieve higher resolution. Pendry's paper on a superlens based on negative refraction[^1] has started a very active research on super-resolution using metamaterials, in particular hyperbolic materials. We will not go into these topics here and instead refer interested students to the master course *Advanced Photonics*.
 

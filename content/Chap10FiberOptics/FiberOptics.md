@@ -9,8 +9,7 @@ downloads:
 (chapter.fiber)=
 # Fiber Optics
 
-```{note} What you should know and be able to after studying this chapter
-After studying this chapter you should know and be able to:
+```{note} What you should know and be able to do after studying this chapter
 - Have a basic understanding on the principles of fiber optics. You understand how light can be confined by total internal reflection and you know how optical fibers give rise to propagation modes. You can list the various dispersion and loss mechanisms that play a role in light propagation through fibers.
 - Describe optical fibers using typical fiber parameters. You know the most important fiber types and connectors, along with their (dis)advantages.
 - List important components that are typically found in optical fiber research setups and other applications and have a basic understanding on the working principles of these components

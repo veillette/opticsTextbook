@@ -75,11 +75,11 @@ project:
         - content/Preface/Preface.md
         - content/Chap01Basics/Basics.md
         - content/Chap02GeometricalOptics/GeometricalOptics.md
-        - content/Chap03OpticalInstrument/OpticalInstruments.md
+        - content/Chap03OpticalInstruments/OpticalInstruments.md
         - content/Chap04Polarization/Polarization.md
         - content/Chap05Wave/Wave.md
-        - content/Chap06Interference/InterferenceCoherence.md
-        - content/Chap07Diffraction/DiffractiveOptics.md
+        - content/Chap06InterferenceCoherence/InterferenceCoherence.md
+        - content/Chap07Diffraction/Diffraction.md
         - content/Chap08Lasers/Lasers.md
         - content/Chap09AdvancedInstruments/AdvancedInstruments.md
         - content/Chap10FiberOptics/FiberOptics.md
@@ -97,11 +97,11 @@ project:
     #     - content/Preface/Preface.md
     #     - content/Chap01Basics/Basics.md
     #     - content/Chap02GeometricalOptics/GeometricalOptics.md
-    #     - content/Chap03OpticalInstrument/OpticalInstruments.md
+    #     - content/Chap03OpticalInstruments/OpticalInstruments.md
     #     - content/Chap04Polarization/Polarization.md
     #     - content/Chap05Wave/Wave.md
-    #     - content/Chap06Interference/InterferenceCoherence.md
-    #     - content/Chap07Diffraction/DiffractiveOptics.md
+    #     - content/Chap06InterferenceCoherence/InterferenceCoherence.md
+    #     - content/Chap07Diffraction/Diffraction.md
     #     - content/Chap08Lasers/Lasers.md
     #     - content/Chap09AdvancedInstruments/AdvancedInstruments.md
     #     - content/Chap10FiberOptics/FiberOptics.md
@@ -118,7 +118,7 @@ project:
     - format: typst
       id: chapter-03-pdf
       output: exports/chapters/chapter-03-optical-instrument.pdf
-      article: content/Chap03OpticalInstrument/OpticalInstruments.md
+      article: content/Chap03OpticalInstruments/OpticalInstruments.md
     - format: typst
       id: chapter-04-pdf
       output: exports/chapters/chapter-04-polarization.pdf
@@ -130,11 +130,11 @@ project:
     - format: typst
       id: chapter-06-pdf
       output: exports/chapters/chapter-06-interference.pdf
-      article: content/Chap06Interference/InterferenceCoherence.md
+      article: content/Chap06InterferenceCoherence/InterferenceCoherence.md
     - format: typst
       id: chapter-07-pdf
       output: exports/chapters/chapter-07-diffraction.pdf
-      article: content/Chap07Diffraction/DiffractiveOptics.md
+      article: content/Chap07Diffraction/Diffraction.md
     - format: typst
       id: chapter-08-pdf
       output: exports/chapters/chapter-08-laser.pdf
@@ -163,7 +163,7 @@ project:
     - format: docx
       id: chapter-03-docx
       output: exports/chapters/chapter-03-optical-instrument.docx
-      article: content/Chap03OpticalInstrument/OpticalInstruments.md
+      article: content/Chap03OpticalInstruments/OpticalInstruments.md
     - format: docx
       id: chapter-04-docx
       output: exports/chapters/chapter-04-polarization.docx
@@ -175,11 +175,11 @@ project:
     - format: docx
       id: chapter-06-docx
       output: exports/chapters/chapter-06-interference.docx
-      article: content/Chap06Interference/InterferenceCoherence.md
+      article: content/Chap06InterferenceCoherence/InterferenceCoherence.md
     - format: docx
       id: chapter-07-docx
       output: exports/chapters/chapter-07-diffraction.docx
-      article: content/Chap07Diffraction/DiffractiveOptics.md
+      article: content/Chap07Diffraction/Diffraction.md
     - format: docx
       id: chapter-08-docx
       output: exports/chapters/chapter-08-laser.docx
@@ -212,10 +212,10 @@ project:
             - title: Problems
               file: content/Chap02GeometricalOptics/Problems/GeometricalOpticsExercise.md
         - title: Chapter 3 - Optical Instruments
-          file: content/Chap03OpticalInstrument/OpticalInstruments.md
+          file: content/Chap03OpticalInstruments/OpticalInstruments.md
           children:
             - title: Problems
-              file: content/Chap03OpticalInstrument/Problems/OpticalInstrumentsExercise.md
+              file: content/Chap03OpticalInstruments/Problems/OpticalInstrumentsExercise.md
         - title: Chapter 4 - Polarization
           file: content/Chap04Polarization/Polarization.md
           children:
@@ -227,15 +227,15 @@ project:
             - title: Problems
               file: content/Chap05Wave/Problems/WaveExercise.md
         - title: Chapter 6 - Interference and Coherence
-          file: content/Chap06Interference/InterferenceCoherence.md
+          file: content/Chap06InterferenceCoherence/InterferenceCoherence.md
           children:
             - title: Problems
-              file: content/Chap06Interference/Problems/InterferenceCoherenceExercise.md
+              file: content/Chap06InterferenceCoherence/Problems/InterferenceCoherenceExercise.md
         - title: Chapter 7 - Diffraction
-          file: content/Chap07Diffraction/DiffractiveOptics.md
+          file: content/Chap07Diffraction/Diffraction.md
           children:
             - title: Problems
-              file: content/Chap07Diffraction/Problems/DiffractiveOpticsExercise.md
+              file: content/Chap07Diffraction/Problems/DiffractionExercise.md
         - title: Chapter 8 - Lasers
           file: content/Chap08Lasers/Lasers.md
           children:

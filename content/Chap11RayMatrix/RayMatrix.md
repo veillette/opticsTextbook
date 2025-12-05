@@ -9,6 +9,19 @@ downloads:
 (chapter.RayMatrices)=
 # Ray Vectors and Ray Matrices
 
+```{note} What you should know and be able to do after studying this chapter
+- Understand the concept of ray vectors $(n\alpha, y)^T$ and how they describe rays in paraxial optics.
+- Know the ray matrices for fundamental optical elements: spherical surfaces, spherical mirrors, and propagation through homogeneous media.
+- Apply ray matrix multiplication to analyze optical systems with multiple elements, understanding that matrices are multiplied in reverse order of light propagation.
+- Derive and use the lens matrix for both thin and thick lenses, including the concept of optical power $\mathcal{P}$.
+- Apply the imaging condition ($C = 0$) to determine when two planes are conjugate (image each other).
+- Use the Lensmaker's Formula to relate object and image distances for thin lenses.
+- Calculate magnification from ray matrix elements and understand the Newtonian form of the lens equation.
+- Analyze two-lens systems and calculate combined focal lengths and magnifications.
+- Understand principal planes for thick lenses and how they simplify imaging calculations.
+- Distinguish between meridional and skew rays in paraxial theory.
+```
+
 Now that we know that within Gaussian geometrical optics a single spherical surface images every object point to a perfect, real or virtual, image point it is easy to see that any row of spherical surfaces separated by homogeneous materials will also image any point perfectly. We first determine the intermediate image of the object point under the most left spherical surface as if the other surfaces are not present and use this intermediate image point as object point for imaging by the next spherical surface and so on. Of course, the intermediate image and object points can be virtual.
 
 Although this procedure is in principle simple, it is nevertheless convenient in Gaussian geometrical optics to introduce the concept of ray vectors and ray matrices to deal with optical system consisting of several spherical surfaces.
