@@ -65,8 +65,7 @@ opticsTextbook/
 │   ├── Chap02GeometricalOptics/
 │   ├── ...                    # Chapters 1-11
 │   ├── Appendices/            # Mathematical appendices
-│   ├── Preface/               # Textbook introduction
-│   └── SearchAndNavigation.md # User guide
+│   └── Preface/               # Textbook introduction
 ├── scripts/                    # Utility scripts
 │   ├── config.json            # Chapter mappings (IMPORTANT!)
 │   ├── lint_myst_markdown.py  # MyST linter
