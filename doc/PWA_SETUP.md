@@ -85,10 +85,11 @@ npm run setup-pwa
 
 ```
 opticsTextbook/
+├── js/
+│   └── custom-scripts.js      # Custom JavaScript (keyboard nav, etc.)
 ├── pwa/
 │   ├── manifest.json          # Web app manifest
 │   ├── service-worker.js      # Service worker for caching
-│   ├── custom-scripts.js      # Custom JavaScript (keyboard nav, etc.)
 │   └── offline.html           # Offline fallback page
 ├── icons/                     # Generated PWA icons
 │   ├── icon-72x72.png
@@ -190,14 +191,14 @@ MyST MD currently does not support adding custom client-side JavaScript to sites
 
 The `scripts/inject-scripts.js` script runs after `myst build --html` and:
 
-1. Copies `pwa/custom-scripts.js` to the build output directory
+1. Copies `js/custom-scripts.js` to the build output directory
 2. Injects a `<script>` tag into all HTML files before the closing `</body>` tag
 
 ### Adding Custom JavaScript
 
 To add custom JavaScript functionality:
 
-1. Edit `pwa/custom-scripts.js` with your code
+1. Edit `js/custom-scripts.js` with your code
 2. The script will be automatically injected during the build process
 
 ### Current Features

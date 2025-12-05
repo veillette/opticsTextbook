@@ -13,7 +13,7 @@ const path = require('path');
 
 const ROOT_DIR = path.join(__dirname, '..');
 const BUILD_DIR = path.join(ROOT_DIR, '_build', 'html');
-const CUSTOM_SCRIPTS_SRC = path.join(ROOT_DIR, 'pwa', 'custom-scripts.js');
+const CUSTOM_SCRIPTS_SRC = path.join(ROOT_DIR, 'js', 'custom-scripts.js');
 const CUSTOM_SCRIPTS_DEST = 'custom-scripts.js';
 
 // Base path for deployed site (e.g., /opticsTextbook for GitHub Pages)
@@ -131,7 +131,7 @@ function main() {
   // Check if custom scripts file exists
   if (!fs.existsSync(CUSTOM_SCRIPTS_SRC)) {
     console.log('\u2139\uFE0F  No custom-scripts.js file found. Skipping script injection.');
-    console.log('    Create pwa/custom-scripts.js to add custom JavaScript.');
+    console.log('    Create js/custom-scripts.js to add custom JavaScript.');
     return;
   }
 
