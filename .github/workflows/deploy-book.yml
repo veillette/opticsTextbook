@@ -205,6 +205,10 @@ jobs:
             fi
           fi
 
+          # Create .nojekyll file to prevent GitHub Pages from processing files with Jekyll
+          touch _build/html/.nojekyll
+          echo "✅ .nojekyll file created (prevents Jekyll processing)"
+
       - name: Record file copy time
         run: |
           STEP_END_TIME=$(date +%s)
