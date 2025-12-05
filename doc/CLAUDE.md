@@ -260,7 +260,7 @@ The build process ensures export files exist before HTML build:
 - `exports/chapters/*.pdf` - 11 individual chapter PDFs
 - `exports/chapters/*.docx` - 11 individual chapter DOCX files
 
-These are automatically copied to `_build/html/build/` with cache-busting hashes.
+These are automatically copied to `_build/html/exports/` during deployment.
 
 ## Git Workflow
 

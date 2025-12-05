@@ -1,5 +1,7 @@
 # Export Fixes Summary
 
+> **Note:** This is historical documentation describing fixes applied during initial PDF/DOCX export setup. These issues have been resolved and the fixes are now integrated into the build process.
+
 ## Issues Identified
 
 ### Typst Export Errors
