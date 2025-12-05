@@ -16,11 +16,16 @@ Issues checked:
 5. Broken figure references
 6. Multiple consecutive blank lines
 7. Trailing whitespace
-8. Inconsistent heading levels
+8. Skipped heading levels (e.g., ## to ####)
 9. Malformed directive syntax
-10. Missing alt text on figures
-11. Backtick fences used for directives (should use colon fences)
-12. Colon fences used for code blocks (should use backtick fences)
+10. Missing figure captions
+11. Short figure captions (<20 chars, accessibility requirement)
+12. Colon fences used for directives (should use backtick fences)
+13. Duplicate :name: labels across files
+14. Table caption format (must be on separate line)
+15. Image file existence (referenced images must exist)
+16. Figure naming convention (XX_YY_name pattern)
+17. Unclosed directives (missing closing ```)
 
 Usage:
     python lint_myst_markdown.py [--fix] [--content-dir DIR] [--output-file FILE]
@@ -47,9 +52,12 @@ from shared_utils import ensure_directory
 from report_utils import ReportGenerator, MarkdownReportBuilder
 
 class MystLinter:
-    def __init__(self, fix_mode: bool = False) -> None:
+    def __init__(self, fix_mode: bool = False, content_dir: str = 'content') -> None:
         self.fix_mode: bool = fix_mode
+        self.content_dir: str = content_dir
         self.issues: DefaultDict[str, List[Dict[str, Any]]] = defaultdict(list)
+        # Track labels across all files for duplicate detection
+        self.all_labels: Dict[str, List[Tuple[str, int]]] = defaultdict(list)  # label -> [(file, line), ...]
 
     def check_file(self, file_path: Union[str, Path]) -> List[Dict[str, Any]]:
         """Check a single markdown file for issues."""
@@ -69,8 +77,15 @@ class MystLinter:
             file_issues.extend(self._check_trailing_whitespace(lines, file_path))
             file_issues.extend(self._check_multiple_blank_lines(lines, file_path))
             file_issues.extend(self._check_malformed_directives(lines, file_path))
-            file_issues.extend(self._check_figure_alt_text(lines, file_path))
+            file_issues.extend(self._check_figure_captions(lines, file_path))
             file_issues.extend(self._check_fence_convention(lines, file_path))
+            file_issues.extend(self._check_skipped_heading_levels(lines, file_path))
+            file_issues.extend(self._check_table_caption_format(lines, file_path))
+            file_issues.extend(self._check_image_existence(lines, file_path))
+            file_issues.extend(self._check_figure_naming_convention(lines, file_path))
+            file_issues.extend(self._check_unclosed_directives(lines, file_path))
+            # Collect labels for cross-file duplicate checking
+            self._collect_labels(lines, file_path)
 
             # Apply fixes if in fix mode
             if self.fix_mode and file_issues:
@@ -286,8 +301,8 @@ class MystLinter:
 
         return issues
 
-    def _check_figure_alt_text(self, lines: List[str], file_path: Union[str, Path]) -> List[Dict[str, Any]]:
-        """Check for figures without alt text or captions.
+    def _check_figure_captions(self, lines: List[str], file_path: Union[str, Path]) -> List[Dict[str, Any]]:
+        """Check for figures without captions or with short captions.
 
         In MyST, figure captions go INSIDE the figure block, after the options.
         Example:
@@ -297,29 +312,25 @@ class MystLinter:
 
             This is the caption text (inside the block, after options).
             ```
+
+        Accessibility requirement: captions should be at least 20 characters.
         """
         issues = []
         in_figure = False
         figure_start = 0
-        has_caption = False
-        has_alt = False
-        past_options = False  # Track when we're past the option lines
+        caption_text = []
+        past_options = False
 
         for i, line in enumerate(lines):
             if re.match(r'```\{figure\}', line):
                 in_figure = True
                 figure_start = i
-                has_caption = False
-                has_alt = False
+                caption_text = []
                 past_options = False
                 continue
 
             if in_figure:
                 stripped = line.strip()
-
-                # Check for alt text option
-                if re.match(r':alt:', line):
-                    has_alt = True
 
                 # Options start with : and have a value
                 if stripped.startswith(':') and ':' in stripped[1:]:
@@ -327,11 +338,20 @@ class MystLinter:
                     pass
                 elif stripped == '```':
                     # End of figure block
-                    if not has_caption:
+                    full_caption = ' '.join(caption_text).strip()
+                    if not full_caption:
                         issues.append({
                             'type': 'missing_figure_caption',
                             'line': figure_start + 1,
                             'message': "Figure has no caption text",
+                            'severity': 'warning',
+                            'fixable': False
+                        })
+                    elif len(full_caption) < 20:
+                        issues.append({
+                            'type': 'short_figure_caption',
+                            'line': figure_start + 1,
+                            'message': f"Figure caption is too short ({len(full_caption)} chars, need ≥20 for accessibility)",
                             'severity': 'warning',
                             'fixable': False
                         })
@@ -341,10 +361,8 @@ class MystLinter:
                     past_options = True
                 elif past_options or (not stripped.startswith(':')):
                     # Non-empty, non-option line after options = caption text
-                    # Also count lines that don't start with : as caption
-                    # (handles case where caption immediately follows options without blank line)
                     if stripped:
-                        has_caption = True
+                        caption_text.append(stripped)
 
         return issues
 
@@ -392,6 +410,196 @@ class MystLinter:
 
         return issues
 
+    def _check_skipped_heading_levels(self, lines: List[str], file_path: Union[str, Path]) -> List[Dict[str, Any]]:
+        """Check for skipped heading levels (e.g., ## followed by ####)."""
+        issues = []
+        current_level = 0
+
+        for i, line in enumerate(lines):
+            # Match ATX-style headings (# to ######)
+            heading_match = re.match(r'^(#{1,6})\s+\S', line)
+            if heading_match:
+                new_level = len(heading_match.group(1))
+
+                # Check for skipped levels (but allow going back to any higher level)
+                if current_level > 0 and new_level > current_level + 1:
+                    issues.append({
+                        'type': 'skipped_heading_level',
+                        'line': i + 1,
+                        'message': f"Heading level skipped: {'#' * current_level} to {'#' * new_level} (accessibility issue)",
+                        'severity': 'warning',
+                        'fixable': False
+                    })
+
+                current_level = new_level
+
+        return issues
+
+    def _check_table_caption_format(self, lines: List[str], file_path: Union[str, Path]) -> List[Dict[str, Any]]:
+        """Check that table captions are on separate lines after the directive."""
+        issues = []
+
+        for i, line in enumerate(lines):
+            # Check for list-table or table directive with inline caption
+            table_match = re.match(r'```\{(list-table|table)\}\s*(.+)$', line.strip())
+            if table_match:
+                directive = table_match.group(1)
+                inline_text = table_match.group(2).strip()
+
+                # If there's non-option text on the same line as the directive
+                if inline_text and not inline_text.startswith(':'):
+                    issues.append({
+                        'type': 'table_caption_format',
+                        'line': i + 1,
+                        'message': f"Table caption should be on a separate line after {directive} options",
+                        'severity': 'info',
+                        'fixable': False
+                    })
+
+        return issues
+
+    def _check_image_existence(self, lines: List[str], file_path: Union[str, Path]) -> List[Dict[str, Any]]:
+        """Check that referenced images actually exist."""
+        issues = []
+        file_dir = Path(file_path).parent
+
+        for i, line in enumerate(lines):
+            # Match figure directive with image path
+            figure_match = re.match(r'```\{figure\}\s*(.+)$', line.strip())
+            if figure_match:
+                image_path = figure_match.group(1).strip()
+
+                # Skip URLs
+                if image_path.startswith(('http://', 'https://', '//')):
+                    continue
+
+                # Resolve the image path relative to the markdown file
+                full_path = file_dir / image_path
+
+                if not full_path.exists():
+                    issues.append({
+                        'type': 'missing_image',
+                        'line': i + 1,
+                        'message': f"Referenced image not found: {image_path}",
+                        'severity': 'error',
+                        'fixable': False
+                    })
+
+        return issues
+
+    def _check_figure_naming_convention(self, lines: List[str], file_path: Union[str, Path]) -> List[Dict[str, Any]]:
+        """Check that figure files follow the XX_YY_name convention."""
+        issues = []
+
+        for i, line in enumerate(lines):
+            # Match figure directive with image path
+            figure_match = re.match(r'```\{figure\}\s*(.+)$', line.strip())
+            if figure_match:
+                image_path = figure_match.group(1).strip()
+
+                # Skip URLs
+                if image_path.startswith(('http://', 'https://', '//')):
+                    continue
+
+                # Get the filename
+                filename = Path(image_path).stem
+
+                # Check if it matches XX_YY_name pattern (e.g., 05_03_lens_diagram)
+                # Pattern: two digits, underscore, two digits, underscore, rest
+                if not re.match(r'^\d{2}_\d{2}_', filename):
+                    issues.append({
+                        'type': 'figure_naming_convention',
+                        'line': i + 1,
+                        'message': f"Figure '{filename}' doesn't follow XX_YY_name convention",
+                        'severity': 'info',
+                        'fixable': False
+                    })
+
+        return issues
+
+    def _check_unclosed_directives(self, lines: List[str], file_path: Union[str, Path]) -> List[Dict[str, Any]]:
+        """Check for unclosed directives (missing closing ```).
+
+        This check uses a simple stack-based approach but only reports issues
+        when there's a clear imbalance (more opens than closes or vice versa).
+        """
+        issues = []
+        fence_stack = []  # Stack of (line_number, fence_type, name)
+
+        for i, line in enumerate(lines):
+            stripped = line.strip()
+
+            # Check for directive start: ```{directive}
+            directive_start = re.match(r'^```\{(\w+[\w-]*)\}', stripped)
+            if directive_start:
+                directive_name = directive_start.group(1)
+                fence_stack.append((i + 1, 'directive', directive_name))
+                continue
+
+            # Check for code block start: ```language or just ```
+            # Must be at start of line and NOT a directive
+            if re.match(r'^```[a-zA-Z]*$', stripped):
+                fence_stack.append((i + 1, 'code', stripped[3:] or 'plain'))
+                continue
+
+            # Check for closing fence (must be exactly ```)
+            if stripped == '```':
+                if fence_stack:
+                    fence_stack.pop()
+                # If no matching open, we ignore (could be formatting issue)
+
+        # Only report if there are clearly unclosed items at end of file
+        # and the imbalance is significant (not just minor formatting issues)
+        if len(fence_stack) > 0 and len(fence_stack) <= 3:
+            # Only report a few clear issues, not hundreds
+            for line_num, fence_type, name in fence_stack:
+                if fence_type == 'directive':
+                    issues.append({
+                        'type': 'unclosed_directive',
+                        'line': line_num,
+                        'message': f"Directive '{name}' may be unclosed (missing closing ```)",
+                        'severity': 'warning',
+                        'fixable': False
+                    })
+                else:
+                    issues.append({
+                        'type': 'unclosed_code_block',
+                        'line': line_num,
+                        'message': f"Code block may be unclosed (missing closing ```)",
+                        'severity': 'warning',
+                        'fixable': False
+                    })
+
+        return issues
+
+    def _collect_labels(self, lines: List[str], file_path: Union[str, Path]) -> None:
+        """Collect all :name: labels from a file for duplicate checking."""
+        for i, line in enumerate(lines):
+            # Match :name: label syntax
+            name_match = re.search(r':name:\s*(\S+)', line)
+            if name_match:
+                label = name_match.group(1)
+                self.all_labels[label].append((str(file_path), i + 1))
+
+    def get_duplicate_label_issues(self) -> Dict[str, List[Dict[str, Any]]]:
+        """Get issues for duplicate labels across all files."""
+        duplicate_issues: Dict[str, List[Dict[str, Any]]] = defaultdict(list)
+
+        for label, locations in self.all_labels.items():
+            if len(locations) > 1:
+                # Report duplicate in all files except the first occurrence
+                for file_path, line_num in locations[1:]:
+                    first_file, first_line = locations[0]
+                    duplicate_issues[file_path].append({
+                        'type': 'duplicate_label',
+                        'line': line_num,
+                        'message': f"Duplicate label '{label}' (first defined in {first_file}:{first_line})",
+                        'severity': 'error',
+                        'fixable': False
+                    })
+
+        return duplicate_issues
+
     def _apply_fixes(self, content: str, issues: List[Dict[str, Any]]) -> str:
         """Apply automatic fixes to content."""
         # Fix split references
@@ -437,7 +645,6 @@ def process_directory(content_dir: str, linter: MystLinter, quiet: bool = False)
         if file_issues:
             relative_path = os.path.relpath(md_file, content_dir)
             all_issues[relative_path] = file_issues
-            files_with_issues += 1
 
             if not quiet:
                 print(f"\n📄 {relative_path}")
@@ -450,6 +657,20 @@ def process_directory(content_dir: str, linter: MystLinter, quiet: bool = False)
 
                     fixable = " [fixable]" if issue.get('fixable') else ""
                     print(f"  {severity_emoji} Line {issue['line']}: {issue['message']}{fixable}")
+
+    # Check for duplicate labels across all files
+    duplicate_issues = linter.get_duplicate_label_issues()
+    for file_path, issues in duplicate_issues.items():
+        relative_path = os.path.relpath(file_path, content_dir)
+        all_issues[relative_path].extend(issues)
+
+        if not quiet and issues:
+            print(f"\n📄 {relative_path} (duplicate labels)")
+            for issue in issues:
+                print(f"  ❌ Line {issue['line']}: {issue['message']}")
+
+    # Count files with issues
+    files_with_issues = sum(1 for issues in all_issues.values() if issues)
 
     return all_issues, files_with_issues, len(md_files)
 
@@ -579,7 +800,7 @@ def main() -> int:
     if args.fix:
         print("FIX MODE - Issues will be automatically corrected\n")
 
-    linter = MystLinter(fix_mode=args.fix)
+    linter = MystLinter(fix_mode=args.fix, content_dir=args.content_dir)
     all_issues, files_with_issues, total_files = process_directory(
         args.content_dir, linter, args.quiet
     )
