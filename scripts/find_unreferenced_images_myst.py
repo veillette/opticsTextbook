@@ -2,6 +2,10 @@
 """
 Enhanced script to identify unreferenced images using MyST's built-in functionality.
 
+Status: UTILITY - Maintenance script
+    Run periodically to identify unused images for cleanup.
+    Run via: npm run find-unreferenced / npm run find-unreferenced-dry
+
 This improved script:
 1. Leverages MyST's AST parsing for more accurate reference detection
 2. Handles .ai files paired with their corresponding image files (.png/.jpg)

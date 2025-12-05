@@ -4,6 +4,10 @@ MyST Markdown Linter for Optics Textbook
 
 This script checks for common MyST markdown issues that can cause rendering problems.
 
+Status: ACTIVE - Core workflow script
+    Used in pre-commit hooks and CI validation.
+    Run via: npm run lint / npm run lint:fix
+
 Issues checked:
 1. Split equation/reference roles ({eq}, {numref}, {ref}, etc.) across lines
 2. Blank lines inside math blocks (between :label: and equation content)

@@ -5,6 +5,10 @@ Bulk Fence Converter for MyST Markdown
 Converts MyST directives from colon fences (:::) to backtick fences (```)
 to comply with doc/MYST_CONVENTIONS.md (updated to prefer backticks for IDE support)
 
+Status: UTILITY - Occasional use
+    Run when bulk fence conversion is needed (e.g., after importing content
+    from other sources that use colon fences).
+
 Usage:
     python convert_fences.py [--dry-run] [--content-dir DIR] [--file FILE]
 

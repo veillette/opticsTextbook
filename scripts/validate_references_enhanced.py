@@ -2,6 +2,10 @@
 """
 Enhanced script to validate references using advanced MyST functionality.
 
+Status: ACTIVE - Core workflow script
+    Used in CI validation pipeline.
+    Run via: npm run validate-enhanced
+
 This improved script:
 1. Uses MyST's AST parsing for more accurate validation
 2. Provides detailed analysis of different reference types
