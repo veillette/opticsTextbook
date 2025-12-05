@@ -26,6 +26,7 @@ The Optics Textbook is now available as a Progressive Web App (PWA), which means
    - Implements cache-first strategy with network fallback
    - Automatically updates cached content in the background
    - Provides offline fallback pages
+   - Injects keyboard navigation for arrow key page navigation (see below)
 
 3. **App Icons**
    - Multiple sizes (72x72 to 512x512) for different devices
@@ -180,6 +181,50 @@ The service worker caches:
 - Cache version is incremented when service worker changes
 - Users can clear cache through browser settings
 
+## Keyboard Navigation
+
+The service worker injects keyboard navigation functionality into all pages, allowing users to navigate between chapters using arrow keys.
+
+### Usage
+
+- **Right Arrow (→)**: Navigate to the next page/chapter
+- **Left Arrow (←)**: Navigate to the previous page/chapter
+
+Navigation is automatically disabled when:
+- Focus is in an input field or textarea
+- Modifier keys are pressed (Ctrl, Alt, Cmd)
+
+### Why This Workaround Exists
+
+MyST MD currently does not support adding custom client-side JavaScript to sites. While custom CSS is supported via `site.options.style`, there is no equivalent `site.options.scripts` configuration for JavaScript.
+
+This limitation is tracked in: https://github.com/jupyter-book/myst-theme/issues/437
+
+As a workaround, the service worker intercepts HTML responses and injects the keyboard navigation script before the closing `</body>` tag. This approach:
+
+1. Works transparently for all pages
+2. Doesn't require modifications to the MyST build process
+3. Can be easily removed when MyST adds native script support
+
+### Implementation Details
+
+The keyboard navigation script is defined in `pwa/service-worker.js` as `KEYBOARD_NAV_SCRIPT`. The `injectKeyboardNavigation()` function handles the injection:
+
+1. Checks if the response is HTML (`content-type: text/html`)
+2. Reads the HTML content
+3. Replaces `</body>` with the script + `</body>`
+4. Returns the modified response
+
+### Removing This Workaround
+
+When MyST MD adds native support for custom scripts (via `site.options.scripts` or similar), you should:
+
+1. Remove the `KEYBOARD_NAV_SCRIPT` constant from `pwa/service-worker.js`
+2. Remove the `injectKeyboardNavigation()` function
+3. Remove the injection call in `networkFirstStrategy()`
+4. Add the keyboard navigation script using the native MyST configuration
+5. Increment the service worker cache version
+
 ## Customization
 
 ### Updating Colors
@@ -264,6 +309,7 @@ Update the service worker (`CACHE_NAME` version) when:
 
 Potential improvements:
 
+- [x] Keyboard navigation for page navigation (implemented via service worker injection)
 - [ ] Background sync for offline form submissions
 - [ ] Push notifications for content updates
 - [ ] Advanced caching strategies (network-first for certain resources)
@@ -271,3 +317,4 @@ Potential improvements:
 - [ ] Analytics for PWA installations and usage
 - [ ] App shortcuts for frequently accessed sections
 - [ ] Share target API for sharing content to the app
+- [ ] Native MyST script support (replace service worker injection when available)
