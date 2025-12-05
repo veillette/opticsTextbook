@@ -1,11 +1,4 @@
 ---
-exports:
-  - format: pdf
-    id: chapter-09-pdf
-    output: ../exports/chapters/chapter-09-advanced-instruments.pdf
-  - format: docx
-    id: chapter-09-docx
-    output: ../exports/chapters/chapter-09-advanced-instruments.docx
 downloads:
   - id: chapter-09-pdf
     title: Download Chapter PDF

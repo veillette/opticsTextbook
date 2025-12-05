@@ -5,13 +5,6 @@ jupytext:
     format_name: myst
     format_version: 0.13
     jupytext_version: 1.16.7
-exports:
-  - format: pdf
-    id: chapter-02-pdf
-    output: ../exports/chapters/chapter-02-geometrical-optics.pdf
-  - format: docx
-    id: chapter-02-docx
-    output: ../exports/chapters/chapter-02-geometrical-optics.docx
 downloads:
   - id: chapter-02-pdf
     title: Download Chapter PDF

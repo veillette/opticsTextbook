@@ -1,11 +1,4 @@
 ---
-exports:
-  - format: pdf
-    id: chapter-03-pdf
-    output: ../exports/chapters/chapter-03-optical-instrument.pdf
-  - format: docx
-    id: chapter-03-docx
-    output: ../exports/chapters/chapter-03-optical-instrument.docx
 downloads:
   - id: chapter-03-pdf
     title: Download Chapter PDF
