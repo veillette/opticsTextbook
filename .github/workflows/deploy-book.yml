@@ -93,18 +93,8 @@ jobs:
           echo "NPM_INSTALL_TIME=$DURATION" >> $GITHUB_ENV
           echo "STEP_START_TIME=$(date +%s)" >> $GITHUB_ENV
 
-      - name: Cache APT packages
-        uses: awalsh128/cache-apt-pkgs-action@latest
-        with:
-          packages: texlive-xetex texlive-fonts-recommended texlive-fonts-extra latexmk texlive-latex-extra imagemagick
-          version: 1.0
-
-      - name: Record LaTeX setup time
-        run: |
-          STEP_END_TIME=$(date +%s)
-          DURATION=$((STEP_END_TIME - STEP_START_TIME))
-          echo "LATEX_SETUP_TIME=$DURATION" >> $GITHUB_ENV
-          echo "STEP_START_TIME=$(date +%s)" >> $GITHUB_ENV
+      # Note: Typst is included in mystmd, no additional dependencies needed
+      # Previous LaTeX dependencies removed since we switched to Typst for faster builds
 
       - name: Cache build artifacts
         uses: actions/cache@v4
@@ -319,8 +309,7 @@ jobs:
           add_row "Checkout repository" ${CHECKOUT_TIME:-0}
           add_row "Setup (Pages + Node.js)" ${SETUP_TIME:-0}
           add_row "npm install" ${NPM_INSTALL_TIME:-0}
-          add_row "LaTeX setup (APT cache)" ${LATEX_SETUP_TIME:-0}
-          add_row "Build PDF/DOCX exports" ${PDF_BUILD_TIME:-0}
+          add_row "Build PDF/DOCX exports (Typst)" ${PDF_BUILD_TIME:-0}
           add_row "Generate PWA icons" ${ICON_GEN_TIME:-0}
           add_row "Build HTML site" ${HTML_BUILD_TIME:-0}
           add_row "Setup PWA" ${PWA_SETUP_TIME:-0}
@@ -357,12 +346,12 @@ jobs:
 
           # Create sorted list of times (simple approach)
           {
-            echo "${PDF_BUILD_TIME:-0} Build PDF/DOCX exports"
+            echo "${PDF_BUILD_TIME:-0} Build PDF/DOCX exports (Typst)"
             echo "${HTML_BUILD_TIME:-0} Build HTML site"
-            echo "${LATEX_SETUP_TIME:-0} LaTeX setup"
             echo "${NPM_INSTALL_TIME:-0} npm install"
             echo "${UPLOAD_TIME:-0} Upload artifact"
             echo "${DEPLOY_TIME:-0} Deploy to Pages"
+            echo "${PWA_SETUP_TIME:-0} Setup PWA"
           } | sort -rn | head -3 | while read time name; do
             if [ $time -gt 0 ]; then
               echo "- $name: $(format_time $time)" >> $GITHUB_STEP_SUMMARY
