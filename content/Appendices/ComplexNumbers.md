@@ -82,13 +82,6 @@ The complex conjugate has a beautiful geometric interpretation: it reflects the 
 
 ### A.1.4 Geometric Representation: The Complex Plane
 
-```{figure} #complex-plane-fig
-:name: complex-plane
-:align: center
-
-The complex plane representation of several complex numbers. Each point represents a complex number, with the horizontal axis showing the real part and vertical axis showing the imaginary part.
-```
-
 One of the most illuminating ways to understand complex numbers is through their geometric representation in the **complex plane**. This is a coordinate system where:
 - The horizontal axis represents the real part
 - The vertical axis represents the imaginary part

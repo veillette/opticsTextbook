@@ -211,7 +211,7 @@ In the ray matrix approach all rays stay in the same plane, namely the plane thr
    considered below are products of these elementary matrices, the determinant
    of every ray matrix considered is unity.
 
-### The Lens Matrix
+## The Lens Matrix
 We apply ray matrices to a lens.
 {numref}`Fig_2_16_Spherical_Lens_simplified` shows a lens with two spherical surfaces. The refractive index of the lens is $n_l$ and that of the media to the left and to the right of the lens is $n_1$ and $n_2$, respectively. Let the distance between the vertices be $d$.
 
@@ -366,7 +366,7 @@ is called the **power** of the lens. It has dimension 1/length and is given in d
 The space to the left of the lens is called the **object space** and that to the right of the lens is called the **image space**.
 
 (subsection.focthin)=
-### Focusing with a Thin Lens
+## Focusing with a Thin Lens
 
 For a thin lens the vertices $V_1$ and $V_2$ coincide and $d=0$, hence {eq}`eq:ray:thick-lens-matrix` becomes
 
@@ -428,7 +428,7 @@ With the results obtained for the focal coordinates we can rewrite the lens matr
 
 
 (subsection.imagingthinlens)=
-### Imaging with a Thin Lens
+## Imaging with a Thin Lens
 
 We first consider a general ray matrix {eq}`eq:ray:general-ray-matrix`, {eq}`eq:ray:matrix-elements` between two planes $z=z_1$ and $z=z_2$ and ask the
 following question:
@@ -597,7 +597,7 @@ Real and virtual objects and images for a divergent thin lens with the same refr
 
 
 (subsection.twolenses)=
-### Two Thin Lenses
+## Two Thin Lenses
 
 The ray matrix is a suitable method to study the imaging of a system consisting of several thin lenses. For two lenses however, the imaging can still easily be obtained by construction.
 We simply construct the image obtained by the first lens as if the second lens were not present and use this image as (possibly virtual) object for the second lens.
@@ -703,7 +703,7 @@ In particular, by the using two identical lenses in contact, the focal length is
    relatively easily in the object distance, for systems with more lenses
    finding the overall ray matrix and then using the image condition {eq}`eq:ray:imaging-condition` is a much better strategy.
 
-### The Thick Lens
+## The Thick Lens
 
 At the left of {numref}`Fig_2_22_Thick_Lens_Principle_plane` a thick lens is shown. The object focal point is defined as the point whose rays are refracted such that the emerging rays are parallel to the optical axis. By extending the incident and emerging rays by straight segments, the points of intersection are found to be on a curved surface, which close to the optical axis, i.e. in the paraxial approximation, is in good approximation a plane perpendicular to the optical axis. This plane is called the **primary principal plane** and its intersection with the optical axis is called the primary principal point $H_1$.
 
