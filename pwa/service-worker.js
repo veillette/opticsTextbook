@@ -1,70 +1,5 @@
 // Service Worker for MyST Project PWA
-// Version: 2.1.0 - Content-agnostic implementation with keyboard navigation
-
-// =============================================================================
-// KEYBOARD NAVIGATION INJECTION
-// =============================================================================
-// Purpose: Enable arrow key navigation between chapters/pages
-//
-// Why this workaround exists:
-// MyST MD does not currently support adding custom client-side JavaScript to
-// sites. While custom CSS is supported via `site.options.style`, there is no
-// equivalent `site.options.scripts` configuration. This is tracked in:
-// https://github.com/jupyter-book/myst-theme/issues/437
-//
-// This service worker injects keyboard navigation functionality by modifying
-// HTML responses before they reach the browser. When official MyST support for
-// custom scripts is added, this workaround should be replaced.
-//
-// Functionality:
-// - Left Arrow: Navigate to previous page (triggers prev pagination link)
-// - Right Arrow: Navigate to next page (triggers next pagination link)
-// - Navigation is disabled when focus is in input/textarea fields
-// =============================================================================
-
-const KEYBOARD_NAV_SCRIPT = `
-<script>
-/* Keyboard Navigation for MyST Site
- * Injected by service worker as a workaround for lack of native script support
- * See: https://github.com/jupyter-book/myst-theme/issues/437
- */
-(function() {
-  document.addEventListener('keydown', function(e) {
-    // Don't intercept when user is typing in form fields
-    var tag = e.target.tagName;
-    if (tag === 'INPUT' || tag === 'TEXTAREA' || e.target.isContentEditable) {
-      return;
-    }
-
-    // Don't intercept if modifier keys are pressed (allow browser shortcuts)
-    if (e.ctrlKey || e.metaKey || e.altKey) {
-      return;
-    }
-
-    var link = null;
-
-    if (e.key === 'ArrowRight') {
-      // MyST book-theme uses .myst-footer-link-next for next page navigation
-      link = document.querySelector('.myst-footer-link-next') ||
-             document.querySelector('a[rel="next"]') ||
-             document.querySelector('[aria-label="Next page"]');
-    }
-
-    if (e.key === 'ArrowLeft') {
-      // MyST book-theme uses .myst-footer-link-prev for previous page navigation
-      link = document.querySelector('.myst-footer-link-prev') ||
-             document.querySelector('a[rel="prev"]') ||
-             document.querySelector('[aria-label="Previous page"]');
-    }
-
-    if (link && link.href) {
-      e.preventDefault(); // Prevent default horizontal scroll behavior
-      link.click();
-    }
-  });
-})();
-</script>
-</body>`;
+// Version: 2.0.0 - Content-agnostic implementation
 
 // Auto-detect cache prefix from the current URL path
 // This makes the service worker work for any MyST project
@@ -135,48 +70,9 @@ function normalizeUrl(url) {
   return urlObj.href;
 }
 
-// Inject keyboard navigation script into HTML responses
-// This is a workaround for MyST MD's lack of native custom script support
-// See header comments for full explanation
-async function injectKeyboardNavigation(response) {
-  const contentType = response.headers.get('content-type') || '';
-
-  // Only inject into HTML responses
-  if (!contentType.includes('text/html')) {
-    return response;
-  }
-
-  try {
-    const html = await response.text();
-
-    // Check if the page has a </body> tag to inject before
-    if (html.includes('</body>')) {
-      const modifiedHtml = html.replace('</body>', KEYBOARD_NAV_SCRIPT);
-
-      // Create new response with modified HTML
-      return new Response(modifiedHtml, {
-        status: response.status,
-        statusText: response.statusText,
-        headers: response.headers
-      });
-    }
-
-    // If no </body> tag found, return original response
-    return new Response(html, {
-      status: response.status,
-      statusText: response.statusText,
-      headers: response.headers
-    });
-  } catch (error) {
-    console.warn('[Service Worker] Failed to inject keyboard navigation:', error);
-    // Return a new response since we consumed the original
-    return response;
-  }
-}
-
 // Install event - cache core assets
 self.addEventListener('install', (event) => {
-  console.log(`[Service Worker] Installing v2.1.0 for ${CACHE_PREFIX}...`);
+  console.log(`[Service Worker] Installing v2.0.0 for ${CACHE_PREFIX}...`);
 
   event.waitUntil(
     caches.open(CACHE_NAME)
@@ -308,17 +204,14 @@ async function networkFirstStrategy(request) {
     const networkResponse = await fetch(normalizedUrl, { redirect: 'follow' });
 
     if (networkResponse.ok) {
-      // Inject keyboard navigation script into HTML responses
-      const modifiedResponse = await injectKeyboardNavigation(networkResponse);
-
-      // Cache the modified response using normalized URL
+      // Cache the successful response using normalized URL
       const cache = await caches.open(RUNTIME_CACHE);
-      cache.put(normalizedUrl, modifiedResponse.clone());
+      cache.put(normalizedUrl, networkResponse.clone());
       // Also cache with original URL for direct access
       if (requestUrl !== normalizedUrl) {
-        cache.put(requestUrl, modifiedResponse.clone());
+        cache.put(requestUrl, networkResponse.clone());
       }
-      return modifiedResponse;
+      return networkResponse;
     } else if (networkResponse.status === 404) {
       // Don't cache 404s, return as-is
       console.log('[Service Worker] Page not found:', normalizedUrl);
