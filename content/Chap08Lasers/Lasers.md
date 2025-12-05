@@ -141,7 +141,7 @@ Damped oscillation (left) and frequency spectrum of a damped oscillation (right)
 ```
 
 
-The optical resonator  is a Fabry-Perot resonator filled with some material with refractive index $n$ bounded by two aligned, highly reflective mirrors at a distance $L$. The Fabry-Perot resonator is discussed extensively in [](#section.fabryperot) but to understand this chapter a detailed analysis of the Fabry-Perot is not needed.
+The optical resonator  is a Fabry-Perot resonator filled with some material with refractive index $n$ bounded by two aligned, highly reflective mirrors at a distance $L$. The Fabry-Perot resonator is discussed extensively in the Fabry-Perot Interferometer section of the Interference chapter but to understand this chapter a detailed analysis of the Fabry-Perot is not needed.
 
 Let the $z$-axis be chosen along the axis of the cavity as shown in {numref}`Fig_7_05_Fabry_Perrot_resonance_mode`, and assume that the transverse directions are so large that the light can be considered a plane wave bouncing back and forth along the $z$-axis between the two mirrors. Let $\omega$ be the frequency and $k_0=\omega/c$ the wave number in vacuum. The plane wave that propagates in the positive $z$-direction is given by:
 

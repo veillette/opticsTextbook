@@ -540,8 +540,9 @@ The **entrance pupil** is the image of the aperture stop by all elements to the 
 For any object point, the **chief ray** is the ray in the cone that passes through the center of the entrance pupil, and hence also through the centers of the aperture stop and the exit pupil. A marginal ray is the ray that for an object point on the optical axis passes through the rim of the entrance pupil (and hence also through the rims of the aperture stop and the exit pupil).
 
 For a fixed diameter $D$ of the exit pupil and for given $x_o$, the
-magnification of the system is according to {eq}`eq:ray:transverse-magnification` and {eq}`eq:ray:newton-lens-equation` given
-by $M=-x_i/f_i=f_i/x_o$. It follows that when $f_i$ is increased, the
+magnification of the system is according to the transverse magnification
+$M=y_i/y_o = s_i/s_o = -x_i/f_i$ and Newton's lens equation $x_o x_i = -f_i^2$
+(see the Ray Matrix chapter) given by $M=-x_i/f_i=f_i/x_o$. It follows that when $f_i$ is increased, the
 magnification increases.
 A larger magnification means a lower energy density, hence a longer exposure time, i.e. **the speed of the lens is reduced**. Camera lenses are usually specified by two numbers: the focal length $f$, measured with respect to the exit pupil and the diameter $D$ of the exit pupil. The **$f$-number** is the ratio of the focal length to this diameter:
 

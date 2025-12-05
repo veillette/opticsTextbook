@@ -94,7 +94,7 @@ In relaxed condition, the object focal distance of the lens system is $f_o=16$
 &nbsp;mm as measured from the cornea while the image focal distance is equal to
 the length of the eye: $f_i=24$&nbsp;mm. These focal distances are different,
 because the refractive indices of the surrounding medium (air and vitreous
-humour) differ. The power of the healthy relaxed eye is according to {eq}`eq:ray:thin-lens-matrix`, {eq}`eq:ray:thin-lens-matrix-focal`:
+humour) differ. The power of the healthy relaxed eye is (see the thin lens matrix equations in the Ray Matrix chapter):
 
 ```{math}
 :label: eq:inst:eye-dioptric-power
@@ -151,7 +151,7 @@ are focused in front of the retina by the relaxed eye. The far point is thus not
 at infinity, but closer. This can be corrected by a negative lens. Suppose the
 far point is at 2 m. If the concave lens makes a virtual image of a distant
 object at distance 2 m in front of the cornea, the relaxed eye can see it
-clearly. The lens Law {eq}`eq:ray:lensmaker-formula`, with $s_o=-\infty$ implies
+clearly. The Lensmaker's Formula $-n_1/s_o + n_2/s_i = \mathcal{P}$ (see the Ray Matrix chapter), with $s_o=-\infty$ implies
 then $f_i=s_i= -2$ m. Hence the required power of the lens is:
 
 ```{math}
@@ -162,7 +162,7 @@ then $f_i=s_i= -2$ m. Hence the required power of the lens is:
 ```
 
 The lens is best put in the front focal plane of the relaxed eye, i.e. at
-approximately 16 mm in front of the cornea. This follows from {eq}`eq:ray:lensmaker-formula` and the fact that the distance of the retina to the
+approximately 16 mm in front of the cornea. This follows from the Lensmaker's Formula (see the Ray Matrix chapter) and the fact that the distance of the retina to the
 eye lens is roughly 22 mm while the refractive index of the vitrous humor is
 1.337. Hence, the focal distance in air of the relaxed eye
 of $22/1.337 \approx 16 \text{ mm}$. The reason for putting the lens at the
@@ -314,7 +314,7 @@ The magnifying power of the entire system is the product of the transverse linea
 \end{align*}
 ```
 
-According to {eq}`eq:ray:transverse-magnification`: $M_{T}=- x_i/f_i^{obj}$,
+According to the transverse magnification equation (see the Ray Matrix chapter): $M_{T}=- x_i/f_i^{obj}$,
 where $x_i$ is the distance of the image made by the objective to its back focal
 plane with focal distance $f_i^{obj}$. We have $x_i=L$ which is the tube length,
 i.e. the distance between the second focal point of the objective and the first

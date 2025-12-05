@@ -1029,7 +1029,7 @@ such that the reflecting surfaces are at $z=0$ and $z=d$. The refractive indices
 
 Let there be a plane wave **with unit amplitude** incident from $z<0$ under angle $\theta_1$ with the normal as shown in {numref}`Fig_FP1`. The incident wave is assumed to be either s- or p-polarized. There are a reflected plane wave in $z<0$, two plane waves in medium 2 one propagating in the positive $z$-direction and the other in the negative $z$-direction and there is a transmitted plane wave in $z>d$. It follows from the boundary conditions that the tangential component of the electric and magnetic field are continuous across the interfaces, that the tangential components of the wave vectors of all these plane waves are identical.
 
-Let $r_{ij}$ and $t_{ij}$ be the reflection and transmission coefficient for a wave that is incident from medium $i$ on the interface with medium $j$. When the wave is s-polarized, $r_{12}$ and $t_{12}$ are given by Fresnel coefficients {eq}`eq.rs`,(\ref{eq.ts}), whereas if the wave is p-polarized, they are given by the p-polarized Fresnel coefficients.
+Let $r_{ij}$ and $t_{ij}$ be the reflection and transmission coefficient for a wave that is incident from medium $i$ on the interface with medium $j$. When the wave is s-polarized, $r_{12}$ and $t_{12}$ are given by the Fresnel coefficients (see the Rayleigh-Sommerfeld Diffraction Integral section in the Diffraction chapter), whereas if the wave is p-polarized, they are given by the p-polarized Fresnel coefficients.
 ```{figure} Images/06_12_fabry_perot.png
 :name: Fig_FP1
 Fabry-Perot with 3 layers.The light comes from the bottom and is reflected by each interface.
@@ -1267,7 +1267,7 @@ should therefore be large.
 
 
 **Example.**
-For a wavelength of $\lambda_0=600\text{nm}$ and $n_f d= 12 \text{mm}$ we have for normal incidence $m=40000$. Then, if the reflection coefficients satisfy $|r_{12}|^2=|r_{23}|^2=0.9$, we have $F=360$ and $G=0$. The resolution is more than one million which is better than the grating spectrometers, which will be discussed in [](#section.examples).
+For a wavelength of $\lambda_0=600\text{nm}$ and $n_f d= 12 \text{mm}$ we have for normal incidence $m=40000$. Then, if the reflection coefficients satisfy $|r_{12}|^2=|r_{23}|^2=0.9$, we have $F=360$ and $G=0$. The resolution is more than one million which is better than the grating spectrometers, which will be discussed in the Fresnel and Fraunhofer examples section of the Diffraction chapter.
 
 
 **Remark.** Although in the derivation we have assumed that all refractive indices are real, the final formulae also apply to the case that $n_2$ is complex. In that case $k^{(2)}_z$ and the reflection coefficients are complex.
