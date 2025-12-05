@@ -76,7 +76,11 @@ npm run setup-pwa
    - Creates standard and maskable icons
    - Generates Apple Touch Icon and favicons
 
-2. **`scripts/setup-pwa.js`**
+2. **`scripts/inject-scripts.js`**
+   - Copies `js/custom-scripts.js` to the build directory
+   - Injects `<script>` tags into all HTML files
+
+3. **`scripts/setup-pwa.js`**
    - Copies PWA files to the build directory
    - Injects service worker registration into HTML files
    - Adds PWA meta tags to all pages
@@ -148,9 +152,10 @@ The PWA is automatically set up during GitHub Actions deployment:
 
 1. Icons are generated from the source logo
 2. HTML is built with MyST
-3. PWA files are copied to `_build/html`
-4. Service worker registration and PWA tags are injected into HTML
-5. Everything is deployed to GitHub Pages
+3. Custom scripts are injected into HTML files
+4. PWA files are copied to `_build/html`
+5. Service worker registration and PWA tags are injected into HTML
+6. Everything is deployed to GitHub Pages
 
 ## Browser Support
 
