@@ -266,9 +266,9 @@ project:
         - title: Mathematical Notation Index
           file: content/Appendices/MathematicalNotation.md
     - title: Downloads
-          file: content/Downloads.md
+      file: content/Downloads.md
     - title: Author
-        - file: content/Author/author.md
+      file: content/Author/author.md
 site:
   template: book-theme
   title: "Exploring Optics: From Fundamentals to Advanced Applications"
