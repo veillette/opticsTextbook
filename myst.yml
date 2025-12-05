@@ -199,8 +199,6 @@ project:
   toc:
     - title: Preface
       file: content/Preface/Preface.md
-    - title: Downloads
-      file: content/Downloads.md
     - title: Chapters
       children:
         - title: Chapter 1 - Basics
@@ -267,8 +265,9 @@ project:
           file: content/Appendices/VectorCalculus.md
         - title: Mathematical Notation Index
           file: content/Appendices/MathematicalNotation.md
+    - title: Downloads
+          file: content/Downloads.md
     - title: Author
-      children:
         - file: content/Author/author.md
 site:
   template: book-theme
