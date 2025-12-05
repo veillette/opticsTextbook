@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 """
-Shared utility functions and constants for optics textbook scripts.
+Shared utility functions and constants for MyST markdown projects.
 
 This module provides common functionality used across multiple scripts
-to avoid code duplication and ensure consistency.
+to avoid code duplication and ensure consistency. It works with any
+MyST markdown project by auto-discovering content structure.
 """
 
 import os
@@ -108,17 +109,87 @@ def validate_config(config: Dict[str, Any]) -> None:
             raise ConfigurationError(f"Missing image_optimization field: '{field}'")
 
 
+def auto_discover_chapters(content_dir: str = 'content', pattern: str = 'Chap*') -> Dict[int, Tuple[str, str]]:
+    """
+    Auto-discover chapters from the content directory.
+
+    Args:
+        content_dir: Content directory path
+        pattern: Glob pattern to match chapter directories
+
+    Returns:
+        Dictionary mapping chapter number to (directory, main_file) tuple
+    """
+    import glob
+
+    chapters = {}
+    content_path = Path(content_dir)
+
+    if not content_path.exists():
+        logger.warning(f"Content directory not found: {content_dir}")
+        return {}
+
+    # Find all chapter directories
+    chapter_dirs = sorted(content_path.glob(pattern))
+
+    for chapter_dir in chapter_dirs:
+        if not chapter_dir.is_dir():
+            continue
+
+        # Extract chapter number from directory name
+        # Matches patterns like Chap01, Chap02, etc.
+        match = re.search(r'Chap(\d+)', chapter_dir.name, re.IGNORECASE)
+        if not match:
+            continue
+
+        chapter_num = int(match.group(1))
+
+        # Find the main markdown file (largest .md file, excluding Problems directory)
+        md_files = [f for f in chapter_dir.glob('*.md')]
+
+        if not md_files:
+            logger.warning(f"No markdown files found in {chapter_dir}")
+            continue
+
+        # Use the largest file as the main file (typically the chapter content)
+        main_file = max(md_files, key=lambda f: f.stat().st_size)
+
+        # Store relative paths
+        chapters[chapter_num] = (str(chapter_dir), main_file.name)
+
+    return chapters
+
+
 @functools.lru_cache(maxsize=1)
 def get_chapters() -> Dict[int, Tuple[str, str]]:
     """
     Get chapter mapping dictionary.
 
+    Attempts to auto-discover chapters if configured, otherwise loads from config.json.
+
     Returns:
         Dictionary mapping chapter number to (directory, main_file) tuple
     """
     config = load_config()
-    # Skip metadata fields (keys starting with underscore)
-    return {int(k): (v['dir'], v['file']) for k, v in config['chapters'].items() if not k.startswith('_')}
+    chapters_config = config.get('chapters', {})
+
+    # Check if auto-discovery is enabled
+    if chapters_config.get('_auto_discover', False):
+        content_dir = chapters_config.get('_content_directory', 'content')
+        pattern = chapters_config.get('_chapter_pattern', 'Chap*')
+        discovered = auto_discover_chapters(content_dir, pattern)
+
+        # Merge with any explicitly defined chapters (explicit definitions take precedence)
+        explicit_chapters = {int(k): (v['dir'], v['file'])
+                           for k, v in chapters_config.items()
+                           if not k.startswith('_') and isinstance(v, dict)}
+
+        # Explicit chapters override discovered ones
+        discovered.update(explicit_chapters)
+        return discovered
+
+    # Fall back to explicit configuration
+    return {int(k): (v['dir'], v['file']) for k, v in chapters_config.items() if not k.startswith('_')}
 
 
 @functools.lru_cache(maxsize=1)

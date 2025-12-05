@@ -1,8 +1,9 @@
 """
-Optics Textbook Utility Scripts
+MyST Markdown Project Utility Scripts
 
 This package provides utility scripts for maintaining and validating
-the optics textbook content built with MyST Markdown.
+MyST Markdown projects. The scripts are content-agnostic and work
+with any MyST project structure.
 
 Modules:
     shared_utils: Common functions and constants

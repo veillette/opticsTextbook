@@ -1,10 +1,12 @@
 /**
  * Setup PWA files after MyST build
  * This script copies PWA-related files to the build directory
+ * Configuration is read from myst.yml for project-agnostic setup
  */
 
 const fs = require('fs');
 const path = require('path');
+const yaml = require('js-yaml');
 
 const ROOT_DIR = path.join(__dirname, '..');
 const BUILD_DIR = path.join(ROOT_DIR, '_build', 'html');
@@ -18,6 +20,28 @@ const NORMALIZED_BASE_PATH = (() => {
   }
   return RAW_BASE_PATH.endsWith('/') ? RAW_BASE_PATH.slice(0, -1) : RAW_BASE_PATH;
 })();
+
+/**
+ * Load MyST configuration from myst.yml
+ */
+function loadMystConfig() {
+  const mystConfigPath = path.join(ROOT_DIR, 'myst.yml');
+
+  if (!fs.existsSync(mystConfigPath)) {
+    console.warn('⚠️  myst.yml not found. Using fallback values.');
+    return null;
+  }
+
+  try {
+    const fileContents = fs.readFileSync(mystConfigPath, 'utf8');
+    return yaml.load(fileContents);
+  } catch (e) {
+    console.warn('⚠️  Error parsing myst.yml:', e.message);
+    return null;
+  }
+}
+
+const MYST_CONFIG = loadMystConfig();
 
 const pathWithBase = (resource = '') => {
   const trimmed = resource.replace(/^\//, '');
@@ -147,12 +171,16 @@ function injectServiceWorkerRegistration() {
 </script>
 `;
 
+  // Get project title from myst.yml or use fallback
+  const projectTitle = MYST_CONFIG?.project?.title || MYST_CONFIG?.site?.title || 'MyST Project';
+  const shortTitle = MYST_CONFIG?.site?.options?.logo_text || projectTitle;
+
   const manifestLink = `<link rel="manifest" href="${pathWithBase('manifest.json')}">`;
   const themeColorMeta = '<meta name="theme-color" content="#1e40af">';
   const appleTouchIcon = `<link rel="apple-touch-icon" href="${pathWithBase('icons/apple-touch-icon.png')}">`;
   const mobileWebAppCapable = '<meta name="mobile-web-app-capable" content="yes">';
   const appleMobileStatusBar = '<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">';
-  const appleMobileTitle = '<meta name="apple-mobile-web-app-title" content="Optics Textbook">';
+  const appleMobileTitle = `<meta name="apple-mobile-web-app-title" content="${shortTitle}">`;
 
   // Find all HTML files in the build directory
   const htmlFiles = findHtmlFiles(BUILD_DIR);

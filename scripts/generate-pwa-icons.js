@@ -1,15 +1,80 @@
 /**
- * Generate PWA icons from the existing logo
+ * Generate PWA icons from the project logo
  * This script uses Sharp to resize the logo to various sizes needed for PWA
+ * Logo path is auto-discovered from myst.yml configuration
  */
 
 const sharp = require('sharp');
 const fs = require('fs');
 const path = require('path');
+const yaml = require('js-yaml');
 
 const ICON_SIZES = [72, 96, 128, 144, 152, 192, 384, 512];
-const SOURCE_LOGO = path.join(__dirname, '..', 'img', 'advanced_optics_logo_white.png');
-const ICONS_DIR = path.join(__dirname, '..', 'icons');
+const ROOT_DIR = path.join(__dirname, '..');
+const ICONS_DIR = path.join(ROOT_DIR, 'icons');
+
+/**
+ * Load MyST configuration from myst.yml
+ */
+function loadMystConfig() {
+  const mystConfigPath = path.join(ROOT_DIR, 'myst.yml');
+
+  if (!fs.existsSync(mystConfigPath)) {
+    console.error('❌ myst.yml not found. Please ensure you have a valid MyST project.');
+    process.exit(1);
+  }
+
+  try {
+    const fileContents = fs.readFileSync(mystConfigPath, 'utf8');
+    return yaml.load(fileContents);
+  } catch (e) {
+    console.error('❌ Error parsing myst.yml:', e.message);
+    process.exit(1);
+  }
+}
+
+/**
+ * Find the source logo from myst.yml site options
+ */
+function findSourceLogo(config) {
+  // Try to get logo from site.options.logo
+  const logo = config?.site?.options?.logo;
+
+  if (!logo) {
+    console.error('❌ No logo found in myst.yml under site.options.logo');
+    console.error('Please add a logo path to your myst.yml configuration:');
+    console.error('site:');
+    console.error('  options:');
+    console.error('    logo: img/your-logo.png');
+    process.exit(1);
+  }
+
+  const logoPath = path.join(ROOT_DIR, logo);
+
+  if (!fs.existsSync(logoPath)) {
+    console.error(`❌ Logo file not found: ${logo}`);
+    console.error(`Looked for: ${logoPath}`);
+    process.exit(1);
+  }
+
+  return logoPath;
+}
+
+/**
+ * Get theme color from myst.yml or use default
+ */
+function getThemeColor(config) {
+  // Default blue theme color
+  const defaultColor = { r: 30, g: 64, b: 175, alpha: 1 };
+
+  // Try to parse theme color from manifest if available
+  // For now, use default - could be enhanced to read from manifest.json
+  return defaultColor;
+}
+
+const MYST_CONFIG = loadMystConfig();
+const SOURCE_LOGO = findSourceLogo(MYST_CONFIG);
+const THEME_COLOR = getThemeColor(MYST_CONFIG);
 
 // Ensure icons directory exists
 if (!fs.existsSync(ICONS_DIR)) {
@@ -41,7 +106,7 @@ async function generateIcons() {
       await sharp(SOURCE_LOGO)
         .resize(size, size, {
           fit: 'contain',
-          background: { r: 30, g: 64, b: 175, alpha: 1 } // theme color background
+          background: THEME_COLOR
         })
         .png()
         .toFile(outputPath);
@@ -63,7 +128,7 @@ async function generateIcons() {
           width: size,
           height: size,
           channels: 4,
-          background: { r: 30, g: 64, b: 175, alpha: 1 } // theme color background
+          background: THEME_COLOR
         }
       })
         .composite([{
@@ -88,7 +153,7 @@ async function generateIcons() {
     await sharp(SOURCE_LOGO)
       .resize(32, 32, {
         fit: 'contain',
-        background: { r: 30, g: 64, b: 175, alpha: 1 }
+        background: THEME_COLOR
       })
       .png()
       .toFile(path.join(ICONS_DIR, 'favicon-32x32.png'));
@@ -97,7 +162,7 @@ async function generateIcons() {
     await sharp(SOURCE_LOGO)
       .resize(16, 16, {
         fit: 'contain',
-        background: { r: 30, g: 64, b: 175, alpha: 1 }
+        background: THEME_COLOR
       })
       .png()
       .toFile(path.join(ICONS_DIR, 'favicon-16x16.png'));
@@ -108,7 +173,7 @@ async function generateIcons() {
     await sharp(SOURCE_LOGO)
       .resize(180, 180, {
         fit: 'contain',
-        background: { r: 30, g: 64, b: 175, alpha: 1 }
+        background: THEME_COLOR
       })
       .png()
       .toFile(path.join(ICONS_DIR, 'apple-touch-icon.png'));

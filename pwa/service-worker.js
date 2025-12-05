@@ -1,8 +1,17 @@
-// Service Worker for Optics Textbook PWA
-// Version: 1.2.0 - Fixed trailing slash navigation issues
+// Service Worker for MyST Project PWA
+// Version: 2.0.0 - Content-agnostic implementation
 
-const CACHE_NAME = 'optics-textbook-v5';
-const RUNTIME_CACHE = 'optics-runtime-v5';
+// Auto-detect cache prefix from the current URL path
+// This makes the service worker work for any MyST project
+const CACHE_PREFIX = (() => {
+  const path = self.location.pathname;
+  const match = path.match(/^\/([^\/]+)\//);
+  return match ? match[1] : 'myst';
+})();
+
+const CACHE_VERSION = 'v6';
+const CACHE_NAME = `${CACHE_PREFIX}-cache-${CACHE_VERSION}`;
+const RUNTIME_CACHE = `${CACHE_PREFIX}-runtime-${CACHE_VERSION}`;
 
 // Static assets to cache (CSS, JS, images, fonts)
 // These use cache-first strategy
@@ -22,27 +31,22 @@ const STATIC_ASSET_PATTERNS = [
   /\/build\//,  // MyST build assets
 ];
 
-// Core pages to pre-cache (with trailing slashes for GitHub Pages)
+// Auto-detect base path from service worker location
+const BASE_PATH = (() => {
+  const path = self.location.pathname.replace('/service-worker.js', '');
+  return path || '/';
+})();
+
+// Core pages to pre-cache - only cache the homepage and offline page
+// Project-specific pages will be cached as they are visited
 const CORE_PAGES = [
-  '/opticsTextbook/',
-  '/opticsTextbook/searchandnavigation/',
-  '/opticsTextbook/basics/',
-  '/opticsTextbook/geometricaloptics/',
-  '/opticsTextbook/opticalinstruments/',
-  '/opticsTextbook/polarization/',
-  '/opticsTextbook/wave/',
-  '/opticsTextbook/interferencecoherence/',
-  '/opticsTextbook/diffractiveoptics/',
-  '/opticsTextbook/lasers/',
-  '/opticsTextbook/advancedinstruments/',
-  '/opticsTextbook/fiberoptics/',
-  '/opticsTextbook/raymatrix/'
+  `${BASE_PATH}/`
 ];
 
 // Core static assets to pre-cache
 const CORE_ASSETS = [
-  '/opticsTextbook/manifest.json',
-  '/opticsTextbook/offline.html'
+  `${BASE_PATH}/manifest.json`,
+  `${BASE_PATH}/offline.html`
 ];
 
 // Check if a request is for a static asset
@@ -68,7 +72,7 @@ function normalizeUrl(url) {
 
 // Install event - cache core assets
 self.addEventListener('install', (event) => {
-  console.log('[Service Worker] Installing v1.2.0...');
+  console.log(`[Service Worker] Installing v2.0.0 for ${CACHE_PREFIX}...`);
 
   event.waitUntil(
     caches.open(CACHE_NAME)
@@ -115,7 +119,7 @@ self.addEventListener('activate', (event) => {
           cacheNames
             .filter(cacheName => {
               // Delete old versions of our caches
-              return cacheName.startsWith('optics-') &&
+              return cacheName.startsWith(`${CACHE_PREFIX}-`) &&
                      cacheName !== CACHE_NAME &&
                      cacheName !== RUNTIME_CACHE;
             })
@@ -232,7 +236,7 @@ async function networkFirstStrategy(request) {
     }
 
     // Return offline page
-    const offlineResponse = await caches.match('/opticsTextbook/offline.html');
+    const offlineResponse = await caches.match(`${BASE_PATH}/offline.html`);
     if (offlineResponse) {
       return offlineResponse;
     }
@@ -286,7 +290,7 @@ self.addEventListener('message', (event) => {
   if (event.data && event.data.type === 'CLEAR_CACHE') {
     caches.keys().then(cacheNames => {
       cacheNames.forEach(cacheName => {
-        if (cacheName.startsWith('optics-')) {
+        if (cacheName.startsWith(`${CACHE_PREFIX}-`)) {
           caches.delete(cacheName);
         }
       });
