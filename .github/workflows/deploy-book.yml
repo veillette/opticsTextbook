@@ -121,6 +121,24 @@ jobs:
         env:
           NODE_OPTIONS: "--max-old-space-size=8192"
 
+      - name: Verify PDF/DOCX exports were created
+        run: |
+          echo "=== Verifying exports were generated ==="
+          echo ""
+          echo "Full textbook PDF:"
+          ls -lh exports/textbook.pdf 2>/dev/null && echo "✅ Found" || echo "❌ NOT FOUND"
+          echo ""
+          echo "Full textbook DOCX:"
+          ls -lh exports/textbook.docx 2>/dev/null && echo "✅ Found" || echo "⚠️  Not found (expected)"
+          echo ""
+          echo "Chapter exports:"
+          ls -lh exports/chapters/ 2>/dev/null || echo "❌ chapters directory not found"
+          echo ""
+          pdf_count=$(ls -1 exports/chapters/*.pdf 2>/dev/null | wc -l)
+          docx_count=$(ls -1 exports/chapters/*.docx 2>/dev/null | wc -l)
+          echo "Chapter PDFs: $pdf_count"
+          echo "Chapter DOCX: $docx_count"
+
       - name: Record PDF/DOCX build time
         run: |
           STEP_END_TIME=$(date +%s)
@@ -208,6 +226,35 @@ jobs:
           # Create .nojekyll file to prevent GitHub Pages from processing files with Jekyll
           touch _build/html/.nojekyll
           echo "✅ .nojekyll file created (prevents Jekyll processing)"
+
+      - name: Verify exports in build directory
+        run: |
+          echo "=== Verifying exports directory structure ==="
+          echo ""
+          echo "Contents of _build/html/exports:"
+          ls -lh _build/html/exports/ || echo "❌ exports directory not found"
+          echo ""
+          echo "Contents of _build/html/exports/chapters:"
+          ls -lh _build/html/exports/chapters/ || echo "❌ chapters directory not found"
+          echo ""
+          echo "=== Checking for symbolic links (not allowed by upload-pages-artifact) ==="
+          find _build/html/exports -type l 2>/dev/null | while read link; do
+            echo "⚠️  Found symbolic link: $link -> $(readlink $link)"
+          done
+          echo ""
+          echo "=== File count summary ==="
+          pdf_count=$(find _build/html/exports -name "*.pdf" 2>/dev/null | wc -l)
+          docx_count=$(find _build/html/exports -name "*.docx" 2>/dev/null | wc -l)
+          echo "Total PDF files: $pdf_count"
+          echo "Total DOCX files: $docx_count"
+          echo ""
+          echo "=== Checking for zero-byte or corrupted files ==="
+          find _build/html/exports -name "*.pdf" -size 0 2>/dev/null | while read file; do
+            echo "⚠️  Zero-byte PDF: $file"
+          done
+          find _build/html/exports -name "*.docx" -size 0 2>/dev/null | while read file; do
+            echo "⚠️  Zero-byte DOCX: $file"
+          done
 
       - name: Record file copy time
         run: |
