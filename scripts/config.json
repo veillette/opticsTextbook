@@ -1,53 +1,12 @@
 {
-  "_comment": "Configuration file for optics textbook utility scripts",
+  "_comment": "Configuration file for MyST markdown project utility scripts",
   "_version": "1.0.0",
 
   "chapters": {
-    "_comment": "Chapter mappings: Each chapter has a directory and main file. Keys are chapter numbers (1-11).",
-    "1": {
-      "dir": "content/Chap01Basics",
-      "file": "Basics.md"
-    },
-    "2": {
-      "dir": "content/Chap02GeometricalOptics",
-      "file": "GeometricalOptics.md"
-    },
-    "3": {
-      "dir": "content/Chap03OpticalInstrument",
-      "file": "OpticalInstruments.md"
-    },
-    "4": {
-      "dir": "content/Chap04Polarization",
-      "file": "Polarization.md"
-    },
-    "5": {
-      "dir": "content/Chap05Wave",
-      "file": "Wave.md"
-    },
-    "6": {
-      "dir": "content/Chap06Interference",
-      "file": "InterferenceCoherence.md"
-    },
-    "7": {
-      "dir": "content/Chap07Diffraction",
-      "file": "DiffractiveOptics.md"
-    },
-    "8": {
-      "dir": "content/Chap08Lasers",
-      "file": "Lasers.md"
-    },
-    "9": {
-      "dir": "content/Chap09AdvancedInstruments",
-      "file": "AdvancedInstruments.md"
-    },
-    "10": {
-      "dir": "content/Chap10FiberOptics",
-      "file": "FiberOptics.md"
-    },
-    "11": {
-      "dir": "content/Chap11RayMatrix",
-      "file": "RayMatrix.md"
-    }
+    "_comment": "Chapter mappings are auto-discovered from the content directory. Chapters are identified by directories matching 'Chap*' pattern. The main markdown file is auto-detected as the largest .md file in the chapter directory. You can override auto-discovery by explicitly defining chapters here with format: 'chapter_number': {'dir': 'content/ChapXX...', 'file': 'MainFile.md'}",
+    "_auto_discover": true,
+    "_content_directory": "content",
+    "_chapter_pattern": "Chap*"
   },
   "_image_extensions_comment": "Supported image file extensions (without leading dot)",
   "image_extensions": [

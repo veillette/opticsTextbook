@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Standardized report generation utilities for optics textbook scripts.
+Standardized report generation utilities for MyST markdown project scripts.
 
 This module provides consistent report generation across all scripts,
 with support for multiple output formats and standardized file locations.

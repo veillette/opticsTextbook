@@ -23,6 +23,7 @@
     "npm": ">=9.0.0"
   },
   "dependencies": {
+    "js-yaml": "^4.1.1",
     "mystmd": "^1.6.2",
     "sharp": "^0.33.2"
   },
@@ -40,7 +41,8 @@
     "generate-exports": "npm run pdf",
     "optimize-images": "node scripts/optimize-images.js",
     "generate-icons": "node scripts/generate-pwa-icons.js",
-    "setup-pwa": "node scripts/setup-pwa.js",
+    "generate-manifest": "node scripts/generate-pwa-manifest.js",
+    "setup-pwa": "npm run generate-manifest && node scripts/setup-pwa.js",
     "find-unreferenced": "python3 scripts/find_unreferenced_images_myst.py",
     "find-unreferenced-dry": "python3 scripts/find_unreferenced_images_myst.py --dry-run",
     "clean-unreferenced": "python3 scripts/delete_unreferenced_images_myst.py",
