@@ -9,6 +9,20 @@ downloads:
 (chapter.wave)=
 # Wave Equations
 
+```{note} What you should know and be able to do after studying this chapter
+- Derive and understand the one-dimensional wave equation and verify that functions of the form $f(x \pm vt)$ are solutions.
+- Describe harmonic waves using wavelength $\lambda$, frequency $\nu$, angular frequency $\omega$, wave number $k$, and phase velocity $v$.
+- Understand the relationships between wave parameters: $v = \lambda\nu$, $k = 2\pi/\lambda$, $\omega = 2\pi\nu$.
+- Use complex number representation and Euler's formula to simplify wave calculations.
+- Express harmonic waves in complex exponential form $\tilde{y} = Ae^{i(kx-\omega t)}$ and extract physical quantities.
+- Understand plane waves and the propagation vector $\vec{k}$, including the dot product form $\psi = A\sin(\vec{k} \cdot \vec{r} - \omega t)$.
+- Describe spherical waves and explain the $1/r$ amplitude dependence and the inverse square law for intensity.
+- Know the properties of electromagnetic waves: transverse nature, speed $c = 1/\sqrt{\varepsilon_0\mu_0}$, and the relationship $E_0 = cB_0$.
+- Calculate energy density, Poynting vector, and irradiance for electromagnetic waves.
+- Understand polarization states: linear, circular, and elliptical polarization.
+- Apply the Doppler effect formula for electromagnetic waves and calculate frequency/wavelength shifts.
+```
+
 ## Introduction
 
 Wave phenomena are fundamental to understanding many aspects of physics, from mechanical vibrations to electromagnetic radiation. This chapter develops the mathematical framework necessary to describe wave motion in general, with particular emphasis on harmonic waves as the most practically useful special case. The harmonic wave functions we will derive serve as the foundation for understanding electromagnetic waves and light waves, which are central to optics and modern physics.
