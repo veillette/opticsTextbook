@@ -1,9 +1,16 @@
 ---
 exports:
   - format: pdf
+    id: chapter-04-pdf
     output: ../exports/chapters/chapter-04-polarization.pdf
   - format: docx
+    id: chapter-04-docx
     output: ../exports/chapters/chapter-04-polarization.docx
+downloads:
+  - id: chapter-04-pdf
+    title: Download Chapter PDF
+  - id: chapter-04-docx
+    title: Download Chapter DOCX
 ---
 
 (chapter.polarization)=

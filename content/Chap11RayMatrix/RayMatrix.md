@@ -1,9 +1,16 @@
 ---
 exports:
   - format: pdf
+    id: chapter-11-pdf
     output: ../exports/chapters/chapter-11-ray-matrix.pdf
   - format: docx
+    id: chapter-11-docx
     output: ../exports/chapters/chapter-11-ray-matrix.docx
+downloads:
+  - id: chapter-11-pdf
+    title: Download Chapter PDF
+  - id: chapter-11-docx
+    title: Download Chapter DOCX
 ---
 
 (chapter.RayMatrices)=

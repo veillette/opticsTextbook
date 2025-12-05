@@ -107,6 +107,31 @@ npm run lint       # check for issues
 npm run lint:fix   # fix issues automatically
 ```
 
+## Build and Export Scripts
+
+### copy-exports.js
+
+Copies PDF and DOCX export files to the build directory for web access:
+
+```bash
+npm run copy-exports
+```
+
+**Purpose:**
+- Mirrors the behavior of the GitHub Actions workflow
+- Ensures local builds match production builds
+- Copies exports from `exports/` to `_build/html/exports/`
+- Creates `.nojekyll` file to prevent Jekyll processing on GitHub Pages
+
+**Actions:**
+- Copies full textbook PDF to `_build/html/exports/textbook.pdf`
+- Copies full textbook DOCX (if available)
+- Copies all chapter PDFs to `_build/html/exports/chapters/`
+- Copies all chapter DOCX files to `_build/html/exports/chapters/`
+- Creates `.nojekyll` file in `_build/html/`
+
+**Note:** This script is automatically run as part of `npm run build`, so you typically don't need to run it manually.
+
 ## PWA (Progressive Web App) Scripts
 
 The PWA scripts automatically generate PWA assets from your `myst.yml` configuration.
@@ -188,8 +213,9 @@ Add the required dependencies and scripts from this project's `package.json`:
   "scripts": {
     "generate-icons": "node scripts/generate-pwa-icons.js",
     "generate-manifest": "node scripts/generate-pwa-manifest.js",
+    "copy-exports": "node scripts/copy-exports.js",
     "setup-pwa": "npm run generate-manifest && node scripts/setup-pwa.js",
-    "build": "myst build --html && npm run setup-pwa"
+    "build": "myst build --html && npm run copy-exports && npm run setup-pwa"
   }
 }
 ```
