@@ -9,13 +9,6 @@ kernelspec:
   display_name: Python 3
   language: python
   name: python3
-exports:
-  - format: pdf
-    id: chapter-01-pdf
-    output: ../exports/chapters/chapter-01-basics.pdf
-  - format: docx
-    id: chapter-01-docx
-    output: ../exports/chapters/chapter-01-basics.docx
 downloads:
   - id: chapter-01-pdf
     title: Download Chapter PDF

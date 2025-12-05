@@ -108,70 +108,92 @@ project:
     #     - content/Chap11RayMatrix/RayMatrix.md
     # Individual chapter PDFs (using Typst for faster builds)
     - format: typst
+      id: chapter-01-pdf
       output: exports/chapters/chapter-01-basics.pdf
       article: content/Chap01Basics/Basics.md
     - format: typst
+      id: chapter-02-pdf
       output: exports/chapters/chapter-02-geometrical-optics.pdf
       article: content/Chap02GeometricalOptics/GeometricalOptics.md
     - format: typst
+      id: chapter-03-pdf
       output: exports/chapters/chapter-03-optical-instrument.pdf
       article: content/Chap03OpticalInstrument/OpticalInstruments.md
     - format: typst
+      id: chapter-04-pdf
       output: exports/chapters/chapter-04-polarization.pdf
       article: content/Chap04Polarization/Polarization.md
     - format: typst
+      id: chapter-05-pdf
       output: exports/chapters/chapter-05-wave.pdf
       article: content/Chap05Wave/Wave.md
     - format: typst
+      id: chapter-06-pdf
       output: exports/chapters/chapter-06-interference.pdf
       article: content/Chap06Interference/InterferenceCoherence.md
     - format: typst
+      id: chapter-07-pdf
       output: exports/chapters/chapter-07-diffraction.pdf
       article: content/Chap07Diffraction/DiffractiveOptics.md
     - format: typst
+      id: chapter-08-pdf
       output: exports/chapters/chapter-08-laser.pdf
       article: content/Chap08Lasers/Lasers.md
     - format: typst
+      id: chapter-09-pdf
       output: exports/chapters/chapter-09-advanced-instruments.pdf
       article: content/Chap09AdvancedInstruments/AdvancedInstruments.md
     - format: typst
+      id: chapter-10-pdf
       output: exports/chapters/chapter-10-fiber-optics.pdf
       article: content/Chap10FiberOptics/FiberOptics.md
     - format: typst
+      id: chapter-11-pdf
       output: exports/chapters/chapter-11-ray-matrix.pdf
       article: content/Chap11RayMatrix/RayMatrix.md
     # Individual chapter DOCX files
     - format: docx
+      id: chapter-01-docx
       output: exports/chapters/chapter-01-basics.docx
       article: content/Chap01Basics/Basics.md
     - format: docx
+      id: chapter-02-docx
       output: exports/chapters/chapter-02-geometrical-optics.docx
       article: content/Chap02GeometricalOptics/GeometricalOptics.md
     - format: docx
+      id: chapter-03-docx
       output: exports/chapters/chapter-03-optical-instrument.docx
       article: content/Chap03OpticalInstrument/OpticalInstruments.md
     - format: docx
+      id: chapter-04-docx
       output: exports/chapters/chapter-04-polarization.docx
       article: content/Chap04Polarization/Polarization.md
     - format: docx
+      id: chapter-05-docx
       output: exports/chapters/chapter-05-wave.docx
       article: content/Chap05Wave/Wave.md
     - format: docx
+      id: chapter-06-docx
       output: exports/chapters/chapter-06-interference.docx
       article: content/Chap06Interference/InterferenceCoherence.md
-    - format : docx
+    - format: docx
+      id: chapter-07-docx
       output: exports/chapters/chapter-07-diffraction.docx
       article: content/Chap07Diffraction/DiffractiveOptics.md
-    - format : docx
+    - format: docx
+      id: chapter-08-docx
       output: exports/chapters/chapter-08-laser.docx
       article: content/Chap08Lasers/Lasers.md
-    - format : docx
+    - format: docx
+      id: chapter-09-docx
       output: exports/chapters/chapter-09-advanced-instruments.docx
       article: content/Chap09AdvancedInstruments/AdvancedInstruments.md
-    - format : docx
+    - format: docx
+      id: chapter-10-docx
       output: exports/chapters/chapter-10-fiber-optics.docx
       article: content/Chap10FiberOptics/FiberOptics.md
-    - format : docx
+    - format: docx
+      id: chapter-11-docx
       output: exports/chapters/chapter-11-ray-matrix.docx
       article: content/Chap11RayMatrix/RayMatrix.md
   toc:

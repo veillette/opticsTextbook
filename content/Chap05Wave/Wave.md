@@ -1,11 +1,4 @@
 ---
-exports:
-  - format: pdf
-    id: chapter-05-pdf
-    output: ../exports/chapters/chapter-05-wave.pdf
-  - format: docx
-    id: chapter-05-docx
-    output: ../exports/chapters/chapter-05-wave.docx
 downloads:
   - id: chapter-05-pdf
     title: Download Chapter PDF

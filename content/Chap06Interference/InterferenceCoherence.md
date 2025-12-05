@@ -1,11 +1,4 @@
 ---
-exports:
-  - format: pdf
-    id: chapter-06-pdf
-    output: ../exports/chapters/chapter-06-interference.pdf
-  - format: docx
-    id: chapter-06-docx
-    output: ../exports/chapters/chapter-06-interference.docx
 downloads:
   - id: chapter-06-pdf
     title: Download Chapter PDF
