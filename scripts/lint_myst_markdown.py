@@ -536,17 +536,19 @@ class MystLinter:
                 fence_stack.append((i + 1, 'directive', directive_name))
                 continue
 
-            # Check for code block start: ```language or just ```
-            # Must be at start of line and NOT a directive
-            if re.match(r'^```[a-zA-Z]*$', stripped):
-                fence_stack.append((i + 1, 'code', stripped[3:] or 'plain'))
-                continue
-
-            # Check for closing fence (must be exactly ```)
+            # Check for closing fence FIRST (must be exactly ```)
+            # This must come before code block check since ```[a-zA-Z]* matches ``` too
             if stripped == '```':
                 if fence_stack:
                     fence_stack.pop()
                 # If no matching open, we ignore (could be formatting issue)
+                continue
+
+            # Check for code block start: ```language (requires at least one letter)
+            # Must be at start of line and NOT a directive
+            if re.match(r'^```[a-zA-Z]+$', stripped):
+                fence_stack.append((i + 1, 'code', stripped[3:]))
+                continue
 
         # Only report if there are clearly unclosed items at end of file
         # and the imbalance is significant (not just minor formatting issues)

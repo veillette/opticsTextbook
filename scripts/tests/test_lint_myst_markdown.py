@@ -372,6 +372,363 @@ class TestSaveReport:
         assert Path(filepath).exists()
 
 
+class TestShortFigureCaptions:
+    """Tests for short figure caption detection."""
+
+    def test_detect_short_caption(self, tmp_path):
+        """Test detecting figure with too short caption."""
+        md_file = tmp_path / "test.md"
+        content = """```{figure} image.png
+:name: fig-test
+
+Short caption.
+```"""
+        md_file.write_text(content)
+
+        linter = MystLinter(fix_mode=False)
+        issues = linter.check_file(md_file)
+
+        short_issues = [i for i in issues if i['type'] == 'short_figure_caption']
+        assert len(short_issues) == 1
+        assert '20' in short_issues[0]['message']  # Should mention 20 char requirement
+
+    def test_allow_long_caption(self, tmp_path):
+        """Test that captions >=20 chars are allowed."""
+        md_file = tmp_path / "test.md"
+        content = """```{figure} image.png
+:name: fig-test
+
+This is a sufficiently long caption for accessibility requirements.
+```"""
+        md_file.write_text(content)
+
+        linter = MystLinter(fix_mode=False)
+        issues = linter.check_file(md_file)
+
+        short_issues = [i for i in issues if i['type'] == 'short_figure_caption']
+        assert len(short_issues) == 0
+
+
+class TestSkippedHeadingLevels:
+    """Tests for skipped heading level detection."""
+
+    def test_detect_skipped_level(self, tmp_path):
+        """Test detecting skipped heading levels."""
+        md_file = tmp_path / "test.md"
+        content = """# Title
+
+## Section
+
+#### Skipped to h4
+"""
+        md_file.write_text(content)
+
+        linter = MystLinter(fix_mode=False)
+        issues = linter.check_file(md_file)
+
+        skip_issues = [i for i in issues if i['type'] == 'skipped_heading_level']
+        assert len(skip_issues) == 1
+        assert 'accessibility' in skip_issues[0]['message'].lower()
+
+    def test_allow_proper_nesting(self, tmp_path):
+        """Test that proper heading nesting is allowed."""
+        md_file = tmp_path / "test.md"
+        content = """# Title
+
+## Section
+
+### Subsection
+
+#### Sub-subsection
+"""
+        md_file.write_text(content)
+
+        linter = MystLinter(fix_mode=False)
+        issues = linter.check_file(md_file)
+
+        skip_issues = [i for i in issues if i['type'] == 'skipped_heading_level']
+        assert len(skip_issues) == 0
+
+    def test_allow_going_back_levels(self, tmp_path):
+        """Test that going back to higher levels is allowed."""
+        md_file = tmp_path / "test.md"
+        content = """# Title
+
+## Section 1
+
+### Subsection 1.1
+
+## Section 2
+
+### Subsection 2.1
+"""
+        md_file.write_text(content)
+
+        linter = MystLinter(fix_mode=False)
+        issues = linter.check_file(md_file)
+
+        skip_issues = [i for i in issues if i['type'] == 'skipped_heading_level']
+        assert len(skip_issues) == 0
+
+
+class TestTableCaptionFormat:
+    """Tests for table caption format detection."""
+
+    def test_detect_inline_caption(self, tmp_path):
+        """Test detecting table with inline caption."""
+        md_file = tmp_path / "test.md"
+        content = """```{list-table} This is inline caption
+:header-rows: 1
+
+* - Col1
+  - Col2
+```"""
+        md_file.write_text(content)
+
+        linter = MystLinter(fix_mode=False)
+        issues = linter.check_file(md_file)
+
+        table_issues = [i for i in issues if i['type'] == 'table_caption_format']
+        assert len(table_issues) == 1
+
+    def test_allow_separate_caption(self, tmp_path):
+        """Test allowing table with no inline caption."""
+        md_file = tmp_path / "test.md"
+        content = """```{list-table}
+:header-rows: 1
+
+* - Col1
+  - Col2
+```"""
+        md_file.write_text(content)
+
+        linter = MystLinter(fix_mode=False)
+        issues = linter.check_file(md_file)
+
+        table_issues = [i for i in issues if i['type'] == 'table_caption_format']
+        assert len(table_issues) == 0
+
+
+class TestImageExistence:
+    """Tests for image file existence checking."""
+
+    def test_detect_missing_image(self, tmp_path):
+        """Test detecting reference to non-existent image."""
+        md_file = tmp_path / "test.md"
+        content = """```{figure} Images/nonexistent.png
+:name: fig-test
+
+Caption text for accessibility.
+```"""
+        md_file.write_text(content)
+
+        linter = MystLinter(fix_mode=False)
+        issues = linter.check_file(md_file)
+
+        missing_issues = [i for i in issues if i['type'] == 'missing_image']
+        assert len(missing_issues) == 1
+        assert missing_issues[0]['severity'] == 'error'
+
+    def test_allow_existing_image(self, tmp_path):
+        """Test allowing reference to existing image."""
+        # Create the image file
+        images_dir = tmp_path / "Images"
+        images_dir.mkdir()
+        (images_dir / "exists.png").write_bytes(b"fake image")
+
+        md_file = tmp_path / "test.md"
+        content = """```{figure} Images/exists.png
+:name: fig-test
+
+Caption text for accessibility.
+```"""
+        md_file.write_text(content)
+
+        linter = MystLinter(fix_mode=False)
+        issues = linter.check_file(md_file)
+
+        missing_issues = [i for i in issues if i['type'] == 'missing_image']
+        assert len(missing_issues) == 0
+
+    def test_skip_url_images(self, tmp_path):
+        """Test that URL images are skipped."""
+        md_file = tmp_path / "test.md"
+        content = """```{figure} https://example.com/image.png
+:name: fig-test
+
+Caption text for accessibility.
+```"""
+        md_file.write_text(content)
+
+        linter = MystLinter(fix_mode=False)
+        issues = linter.check_file(md_file)
+
+        missing_issues = [i for i in issues if i['type'] == 'missing_image']
+        assert len(missing_issues) == 0
+
+
+class TestFigureNamingConvention:
+    """Tests for figure naming convention checking."""
+
+    def test_detect_wrong_naming(self, tmp_path):
+        """Test detecting figure that doesn't follow XX_YY_name convention."""
+        images_dir = tmp_path / "Images"
+        images_dir.mkdir()
+        (images_dir / "bad_name.png").write_bytes(b"fake image")
+
+        md_file = tmp_path / "test.md"
+        content = """```{figure} Images/bad_name.png
+:name: fig-test
+
+Caption text for accessibility.
+```"""
+        md_file.write_text(content)
+
+        linter = MystLinter(fix_mode=False)
+        issues = linter.check_file(md_file)
+
+        naming_issues = [i for i in issues if i['type'] == 'figure_naming_convention']
+        assert len(naming_issues) == 1
+        assert 'XX_YY_name' in naming_issues[0]['message']
+
+    def test_allow_correct_naming(self, tmp_path):
+        """Test allowing figure with correct XX_YY_name convention."""
+        images_dir = tmp_path / "Images"
+        images_dir.mkdir()
+        (images_dir / "05_03_lens_diagram.png").write_bytes(b"fake image")
+
+        md_file = tmp_path / "test.md"
+        content = """```{figure} Images/05_03_lens_diagram.png
+:name: fig-test
+
+Caption text for accessibility.
+```"""
+        md_file.write_text(content)
+
+        linter = MystLinter(fix_mode=False)
+        issues = linter.check_file(md_file)
+
+        naming_issues = [i for i in issues if i['type'] == 'figure_naming_convention']
+        assert len(naming_issues) == 0
+
+
+class TestUnclosedDirectives:
+    """Tests for unclosed directive detection."""
+
+    def test_detect_unclosed_directive(self, tmp_path):
+        """Test detecting unclosed directive."""
+        md_file = tmp_path / "test.md"
+        content = """```{note}
+This note is never closed.
+
+Some more text.
+"""
+        md_file.write_text(content)
+
+        linter = MystLinter(fix_mode=False)
+        issues = linter.check_file(md_file)
+
+        unclosed_issues = [i for i in issues if i['type'] == 'unclosed_directive']
+        assert len(unclosed_issues) == 1
+
+    def test_allow_closed_directive(self, tmp_path):
+        """Test allowing properly closed directive."""
+        md_file = tmp_path / "test.md"
+        content = """```{note}
+This note is properly closed.
+```
+"""
+        md_file.write_text(content)
+
+        linter = MystLinter(fix_mode=False)
+        issues = linter.check_file(md_file)
+
+        unclosed_issues = [i for i in issues if i['type'] in ('unclosed_directive', 'unclosed_code_block')]
+        assert len(unclosed_issues) == 0
+
+    def test_detect_unclosed_code_block(self, tmp_path):
+        """Test detecting unclosed code block."""
+        md_file = tmp_path / "test.md"
+        content = """```python
+def foo():
+    pass
+
+More text without closing.
+"""
+        md_file.write_text(content)
+
+        linter = MystLinter(fix_mode=False)
+        issues = linter.check_file(md_file)
+
+        unclosed_issues = [i for i in issues if i['type'] == 'unclosed_code_block']
+        assert len(unclosed_issues) == 1
+
+
+class TestDuplicateLabels:
+    """Tests for duplicate label detection across files."""
+
+    def test_detect_duplicate_labels(self, tmp_path):
+        """Test detecting duplicate :name: labels across files."""
+        content_dir = tmp_path / "content"
+        content_dir.mkdir()
+
+        # Create two files with the same label
+        (content_dir / "file1.md").write_text("""```{figure} image1.png
+:name: fig-duplicate
+
+Caption for first figure with enough characters.
+```""")
+
+        (content_dir / "file2.md").write_text("""```{figure} image2.png
+:name: fig-duplicate
+
+Caption for second figure with enough characters.
+```""")
+
+        linter = MystLinter(fix_mode=False, content_dir=str(content_dir))
+        all_issues, files_with_issues, total_files = process_directory(
+            str(content_dir), linter, quiet=True
+        )
+
+        # Flatten all issues to find duplicates
+        all_issue_list = []
+        for issues in all_issues.values():
+            all_issue_list.extend(issues)
+
+        dup_issues = [i for i in all_issue_list if i['type'] == 'duplicate_label']
+        assert len(dup_issues) == 1  # Second occurrence is flagged
+        assert 'fig-duplicate' in dup_issues[0]['message']
+
+    def test_no_duplicate_with_unique_labels(self, tmp_path):
+        """Test no duplicate detection with unique labels."""
+        content_dir = tmp_path / "content"
+        content_dir.mkdir()
+
+        (content_dir / "file1.md").write_text("""```{figure} image1.png
+:name: fig-unique-one
+
+Caption for first figure with enough characters.
+```""")
+
+        (content_dir / "file2.md").write_text("""```{figure} image2.png
+:name: fig-unique-two
+
+Caption for second figure with enough characters.
+```""")
+
+        linter = MystLinter(fix_mode=False, content_dir=str(content_dir))
+        all_issues, files_with_issues, total_files = process_directory(
+            str(content_dir), linter, quiet=True
+        )
+
+        all_issue_list = []
+        for issues in all_issues.values():
+            all_issue_list.extend(issues)
+
+        dup_issues = [i for i in all_issue_list if i['type'] == 'duplicate_label']
+        assert len(dup_issues) == 0
+
+
 class TestEquationLabelFormat:
     """Tests for equation label format checking."""
 
