@@ -1,0 +1,51 @@
+/* Custom styles for Optics Textbook */
+
+/* Auto-expand all table of contents items in the left sidebar */
+/* This keeps all navigation items visible without requiring clicks */
+
+/* Target the navigation items in the primary sidebar */
+.bd-sidebar-primary .toctree-l1 > .toc-toggle,
+.bd-sidebar-primary .toctree-l2 > .toc-toggle,
+.bd-sidebar-primary .toctree-l3 > .toc-toggle,
+.bd-sidebar-primary .toctree-l4 > .toc-toggle {
+  /* Hide the expand/collapse toggle icons */
+  display: none;
+}
+
+/* Force all nested items to be visible */
+.bd-sidebar-primary .toctree-l1 > ul,
+.bd-sidebar-primary .toctree-l2 > ul,
+.bd-sidebar-primary .toctree-l3 > ul,
+.bd-sidebar-primary .toctree-l4 > ul {
+  display: block !important;
+  max-height: none !important;
+}
+
+/* Alternative selectors for book-theme specific classes */
+nav.bd-docs-nav .nav-item .children,
+nav.bd-docs-nav .nav-item > ul {
+  display: block !important;
+  max-height: none !important;
+}
+
+/* Hide toggle chevrons/icons */
+nav.bd-docs-nav .nav-link .toc-toggle,
+nav.bd-docs-nav button.toc-toggle {
+  display: none;
+}
+
+/* Ensure all list items are visible */
+.bd-sidebar .nav > .nav-item > .children {
+  display: block !important;
+}
+
+/* For MyST book theme - expand all navigation items */
+aside.bd-sidebar .bd-toc-item .bd-sidenav {
+  display: block !important;
+}
+
+/* Keep the sidebar scrollable if content is too long */
+.bd-sidebar-primary {
+  overflow-y: auto;
+  max-height: calc(100vh - 4rem);
+}
