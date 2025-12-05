@@ -210,6 +210,18 @@ jobs:
           echo "HTML_BUILD_TIME=$DURATION" >> $GITHUB_ENV
           echo "STEP_START_TIME=$(date +%s)" >> $GITHUB_ENV
 
+      - name: Inject custom scripts
+        run: |
+          echo "Injecting custom JavaScript into HTML files"
+          npm run inject-scripts
+
+      - name: Record script injection time
+        run: |
+          STEP_END_TIME=$(date +%s)
+          DURATION=$((STEP_END_TIME - STEP_START_TIME))
+          echo "SCRIPT_INJECT_TIME=$DURATION" >> $GITHUB_ENV
+          echo "STEP_START_TIME=$(date +%s)" >> $GITHUB_ENV
+
       - name: Setup PWA
         run: |
           echo "Setting up PWA (service worker, manifest, icons)"
@@ -363,6 +375,7 @@ jobs:
           add_row "Build other exports (MD/JATS)" ${OTHER_BUILD_TIME:-0}
           add_row "Generate PWA icons" ${ICON_GEN_TIME:-0}
           add_row "Build HTML site" ${HTML_BUILD_TIME:-0}
+          add_row "Inject custom scripts" ${SCRIPT_INJECT_TIME:-0}
           add_row "Setup PWA" ${PWA_SETUP_TIME:-0}
           add_row "Copy export files" ${FILE_COPY_TIME:-0}
           add_row "Upload artifact" ${UPLOAD_TIME:-0}
