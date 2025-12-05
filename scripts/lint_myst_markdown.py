@@ -22,7 +22,7 @@ Issues checked:
 11. Short figure captions (<20 chars, accessibility requirement)
 12. Colon fences used for directives (should use backtick fences)
 13. Duplicate :name: labels across files
-14. Table caption format (must be on separate line)
+14. Table caption format (for {table} directive only; {list-table} inline captions are valid)
 15. Image file existence (referenced images must exist)
 16. Figure naming convention (XX_YY_name pattern)
 17. Unclosed directives (missing closing ```)
@@ -436,22 +436,25 @@ class MystLinter:
         return issues
 
     def _check_table_caption_format(self, lines: List[str], file_path: Union[str, Path]) -> List[Dict[str, Any]]:
-        """Check that table captions are on separate lines after the directive."""
+        """Check that table captions follow MyST conventions.
+
+        Note: {list-table} inline captions are valid MyST syntax and are NOT flagged.
+        This check only flags {table} directives with inline captions.
+        """
         issues = []
 
         for i, line in enumerate(lines):
-            # Check for list-table or table directive with inline caption
-            table_match = re.match(r'```\{(list-table|table)\}\s*(.+)$', line.strip())
+            # Only check {table} directive - {list-table} inline captions are valid MyST syntax
+            table_match = re.match(r'```\{table\}\s*(.+)$', line.strip())
             if table_match:
-                directive = table_match.group(1)
-                inline_text = table_match.group(2).strip()
+                inline_text = table_match.group(1).strip()
 
                 # If there's non-option text on the same line as the directive
                 if inline_text and not inline_text.startswith(':'):
                     issues.append({
                         'type': 'table_caption_format',
                         'line': i + 1,
-                        'message': f"Table caption should be on a separate line after {directive} options",
+                        'message': "Table caption should be on a separate line after table options",
                         'severity': 'info',
                         'fixable': False
                     })

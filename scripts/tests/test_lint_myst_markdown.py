@@ -472,10 +472,14 @@ class TestSkippedHeadingLevels:
 
 
 class TestTableCaptionFormat:
-    """Tests for table caption format detection."""
+    """Tests for table caption format detection.
 
-    def test_detect_inline_caption(self, tmp_path):
-        """Test detecting table with inline caption."""
+    Note: {list-table} inline captions are valid MyST syntax and should NOT be flagged.
+    Only {table} directives with inline captions should be flagged.
+    """
+
+    def test_allow_list_table_inline_caption(self, tmp_path):
+        """Test that list-table inline captions are allowed (valid MyST syntax)."""
         md_file = tmp_path / "test.md"
         content = """```{list-table} This is inline caption
 :header-rows: 1
@@ -489,16 +493,35 @@ class TestTableCaptionFormat:
         issues = linter.check_file(md_file)
 
         table_issues = [i for i in issues if i['type'] == 'table_caption_format']
+        assert len(table_issues) == 0  # list-table inline captions are valid
+
+    def test_detect_table_inline_caption(self, tmp_path):
+        """Test detecting {table} directive with inline caption."""
+        md_file = tmp_path / "test.md"
+        content = """```{table} This is inline caption
+:name: my-table
+
+| Col1 | Col2 |
+|------|------|
+| A    | B    |
+```"""
+        md_file.write_text(content)
+
+        linter = MystLinter(fix_mode=False)
+        issues = linter.check_file(md_file)
+
+        table_issues = [i for i in issues if i['type'] == 'table_caption_format']
         assert len(table_issues) == 1
 
-    def test_allow_separate_caption(self, tmp_path):
-        """Test allowing table with no inline caption."""
+    def test_allow_table_no_inline_caption(self, tmp_path):
+        """Test allowing {table} with no inline caption."""
         md_file = tmp_path / "test.md"
-        content = """```{list-table}
-:header-rows: 1
+        content = """```{table}
+:name: my-table
 
-* - Col1
-  - Col2
+| Col1 | Col2 |
+|------|------|
+| A    | B    |
 ```"""
         md_file.write_text(content)
 
