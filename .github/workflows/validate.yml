@@ -134,6 +134,58 @@ jobs:
           echo "TEST_TIME=$DURATION" >> $GITHUB_ENV
           echo "STEP_START_TIME=$(date +%s)" >> $GITHUB_ENV
 
+      - name: Validate Documentation Links
+        run: |
+          echo "📄 Checking documentation links..."
+          ERRORS=0
+
+          # Check all markdown files in doc/ for broken internal links
+          for file in doc/*.md doc/**/*.md; do
+            [ -f "$file" ] || continue
+            dir=$(dirname "$file")
+
+            # Extract markdown links [text](path) and check if target exists
+            while IFS= read -r link; do
+              # Skip external links, anchors, and empty links
+              [[ "$link" =~ ^https?:// ]] && continue
+              [[ "$link" =~ ^# ]] && continue
+              [[ -z "$link" ]] && continue
+
+              # Remove anchor from link
+              target="${link%%#*}"
+              [[ -z "$target" ]] && continue
+
+              # Resolve relative path
+              if [[ "$target" = /* ]]; then
+                full_path=".$target"
+              else
+                full_path="$dir/$target"
+              fi
+
+              # Check if file exists
+              if [ ! -f "$full_path" ]; then
+                echo "❌ Broken link in $file: $link -> $full_path not found"
+                ERRORS=$((ERRORS + 1))
+              fi
+            done < <(grep -oP '\]\(\K[^)]+' "$file" 2>/dev/null || true)
+          done
+
+          if [ $ERRORS -gt 0 ]; then
+            echo "Found $ERRORS broken documentation links"
+            exit 1
+          else
+            echo "✅ All documentation links are valid"
+          fi
+        continue-on-error: true
+        id: doclinks
+
+      - name: Record doc link check time
+        run: |
+          STEP_END_TIME=$(date +%s)
+          DURATION=$((STEP_END_TIME - STEP_START_TIME))
+          echo "DOCLINK_TIME=$DURATION" >> $GITHUB_ENV
+          echo "STEP_START_TIME=$(date +%s)" >> $GITHUB_ENV
+
       - name: Build HTML Documentation (validation only)
         run: |
           echo "📚 Building HTML documentation..."
@@ -198,6 +250,7 @@ jobs:
           echo "| MyST Linter | $(get_status '${{ steps.lint.outcome }}') ${{ steps.lint.outcome }} | $(format_time ${LINT_TIME:-0}) |" >> $GITHUB_STEP_SUMMARY
           echo "| Reference Validation | $(get_status '${{ steps.validate.outcome }}') ${{ steps.validate.outcome }} | $(format_time ${VALIDATE_TIME:-0}) |" >> $GITHUB_STEP_SUMMARY
           echo "| Python Tests | $(get_status '${{ steps.tests.outcome }}') ${{ steps.tests.outcome }} | $(format_time ${TEST_TIME:-0}) |" >> $GITHUB_STEP_SUMMARY
+          echo "| Doc Link Check | $(get_status '${{ steps.doclinks.outcome }}') ${{ steps.doclinks.outcome }} | $(format_time ${DOCLINK_TIME:-0}) |" >> $GITHUB_STEP_SUMMARY
           echo "| Build HTML | $(get_status '${{ steps.build.outcome }}') ${{ steps.build.outcome }} | $(format_time ${BUILD_TIME:-0}) |" >> $GITHUB_STEP_SUMMARY
 
           echo "" >> $GITHUB_STEP_SUMMARY
@@ -222,6 +275,7 @@ jobs:
           add_row "MyST Linter" ${LINT_TIME:-0}
           add_row "Reference Validation" ${VALIDATE_TIME:-0}
           add_row "Python Tests" ${TEST_TIME:-0}
+          add_row "Doc Link Check" ${DOCLINK_TIME:-0}
           add_row "Build HTML" ${BUILD_TIME:-0}
 
           echo "" >> $GITHUB_STEP_SUMMARY
@@ -257,6 +311,7 @@ jobs:
             echo "${TEST_TIME:-0} Python Tests"
             echo "${VALIDATE_TIME:-0} Reference Validation"
             echo "${LINT_TIME:-0} MyST Linter"
+            echo "${DOCLINK_TIME:-0} Doc Link Check"
             echo "${NPM_INSTALL_TIME:-0} npm install"
           } | sort -rn | head -3 | while read time name; do
             if [ $time -gt 0 ]; then
@@ -275,6 +330,7 @@ jobs:
           echo "✓ MyST Linter: ${{ steps.lint.outcome }}"
           echo "✓ Reference Validation: ${{ steps.validate.outcome }}"
           echo "✓ Python Tests: ${{ steps.tests.outcome }}"
+          echo "✓ Doc Link Check: ${{ steps.doclinks.outcome }}"
           echo "✓ Build Status: ${{ steps.build.outcome }}"
           echo ""
           echo "🎯 Critical Check Status:"

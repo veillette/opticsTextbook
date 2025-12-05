@@ -2,6 +2,10 @@
 """
 Script to fix split equation references in MyST markdown files.
 
+Status: UTILITY - Fix script
+    Run when split references are detected by the linter.
+    The linter (lint_myst_markdown.py --fix) can also fix these automatically.
+
 This script finds instances where {eq} or similar roles are at the end of a line
 with the backtick-wrapped label on the next line, and joins them properly.
 

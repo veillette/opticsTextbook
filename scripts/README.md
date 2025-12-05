@@ -23,7 +23,7 @@ The scripts have been designed to automatically discover project structure and c
 
 ```bash
 # Install Python dependencies (if using Python scripts)
-pip install -r requirements.txt  # if you have one
+pip install -r config/requirements.txt
 
 # Install Node.js dependencies
 npm install

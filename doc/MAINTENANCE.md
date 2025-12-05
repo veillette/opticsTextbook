@@ -441,11 +441,11 @@ opticsTextbook/
 │   ├── LATEX_TO_TYPST_MIGRATION.md
 │   ├── MyST_Comprehensive_Reference.md
 │   ├── PWA_SETUP.md
+│   ├── CONTRIBUTING.md       # Contributor onboarding
+│   ├── CLAUDE.md             # AI assistant guidance
 │   └── scripts/
 │       └── README.md
-├── README.md                 # User-facing documentation
-├── CONTRIBUTING.md           # Contributor onboarding
-└── CLAUDE.md                 # AI assistant guidance
+└── README.md                 # User-facing documentation
 ```
 
 ---

@@ -2,6 +2,9 @@
 """
 Shared utility functions and constants for MyST markdown projects.
 
+Status: ACTIVE - Core library module
+    Imported by most other scripts. Do not modify without testing all dependents.
+
 This module provides common functionality used across multiple scripts
 to avoid code duplication and ensure consistency. It works with any
 MyST markdown project by auto-discovering content structure.

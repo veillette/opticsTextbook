@@ -2,6 +2,11 @@
 """
 Fix unsupported admonition types for Typst export.
 Converts tip, important, and generic admonition blocks to supported types.
+
+Status: HISTORICAL - One-time migration script
+    Used during initial Typst export setup (December 2025).
+    Retained for reference and potential future use if new admonition
+    types are introduced that need conversion.
 """
 import re
 import sys
