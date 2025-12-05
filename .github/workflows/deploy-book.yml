@@ -167,6 +167,23 @@ jobs:
           echo "DOCX_BUILD_TIME=$DURATION" >> $GITHUB_ENV
           echo "STEP_START_TIME=$(date +%s)" >> $GITHUB_ENV
 
+      - name: Build other exports (MD, JATS, etc.)
+        run: |
+          echo "Building any remaining export formats"
+          # Build all exports that aren't PDF or DOCX (e.g., MD, JATS, TEX)
+          # This is a catch-all for any other configured exports
+          npx myst build --md 2>/dev/null || echo "No MD exports configured"
+          npx myst build --jats 2>/dev/null || echo "No JATS exports configured"
+        env:
+          NODE_OPTIONS: "--max-old-space-size=8192"
+
+      - name: Record other exports build time
+        run: |
+          STEP_END_TIME=$(date +%s)
+          DURATION=$((STEP_END_TIME - STEP_START_TIME))
+          echo "OTHER_BUILD_TIME=$DURATION" >> $GITHUB_ENV
+          echo "STEP_START_TIME=$(date +%s)" >> $GITHUB_ENV
+
       - name: Generate PWA Icons
         run: |
           echo "Generating PWA icons"
@@ -343,6 +360,7 @@ jobs:
           add_row "Setup Typst" ${TYPST_SETUP_TIME:-0}
           add_row "Build PDF exports (Typst)" ${PDF_BUILD_TIME:-0}
           add_row "Build DOCX exports" ${DOCX_BUILD_TIME:-0}
+          add_row "Build other exports (MD/JATS)" ${OTHER_BUILD_TIME:-0}
           add_row "Generate PWA icons" ${ICON_GEN_TIME:-0}
           add_row "Build HTML site" ${HTML_BUILD_TIME:-0}
           add_row "Setup PWA" ${PWA_SETUP_TIME:-0}
@@ -381,6 +399,7 @@ jobs:
           {
             echo "${PDF_BUILD_TIME:-0} Build PDF exports (Typst)"
             echo "${DOCX_BUILD_TIME:-0} Build DOCX exports"
+            echo "${OTHER_BUILD_TIME:-0} Build other exports (MD/JATS)"
             echo "${HTML_BUILD_TIME:-0} Build HTML site"
             echo "${NPM_INSTALL_TIME:-0} npm install"
             echo "${TYPST_SETUP_TIME:-0} Setup Typst"
