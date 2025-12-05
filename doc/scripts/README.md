@@ -737,15 +737,4 @@ When creating new utility scripts:
 
 ---
 
-## Maintenance
-
-These scripts are maintained as part of the optics textbook project. If you
-encounter issues or have suggestions for improvements, please file an issue in
-the project repository.
-
-For detailed information about recent refactorings and improvements, see:
-
-- `REFACTORING_NOTES.md` - Initial refactoring summary
-- `REFACTORING_COMPLETE.md` - Comprehensive refactoring documentation
-
 **Last Updated:** October 2025
