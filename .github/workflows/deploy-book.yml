@@ -1,4 +1,4 @@
-name: MyST GitHub Pages Deploy with Multiple Exports
+name: MyST Deploy with Exports
 
 on:
   push:
