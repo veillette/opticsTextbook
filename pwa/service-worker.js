@@ -41,26 +41,25 @@ const KEYBOARD_NAV_SCRIPT = `
       return;
     }
 
+    var link = null;
+
     if (e.key === 'ArrowRight') {
-      // Try multiple selectors for next page link (MyST theme variations)
-      var next = document.querySelector('a[rel="next"]') ||
-                 document.querySelector('.pagination-next a') ||
-                 document.querySelector('[aria-label="Next page"]') ||
-                 document.querySelector('.next-link a');
-      if (next && next.href) {
-        next.click();
-      }
+      // MyST book-theme uses .myst-footer-link-next for next page navigation
+      link = document.querySelector('.myst-footer-link-next') ||
+             document.querySelector('a[rel="next"]') ||
+             document.querySelector('[aria-label="Next page"]');
     }
 
     if (e.key === 'ArrowLeft') {
-      // Try multiple selectors for previous page link (MyST theme variations)
-      var prev = document.querySelector('a[rel="prev"]') ||
-                 document.querySelector('.pagination-prev a') ||
-                 document.querySelector('[aria-label="Previous page"]') ||
-                 document.querySelector('.prev-link a');
-      if (prev && prev.href) {
-        prev.click();
-      }
+      // MyST book-theme uses .myst-footer-link-prev for previous page navigation
+      link = document.querySelector('.myst-footer-link-prev') ||
+             document.querySelector('a[rel="prev"]') ||
+             document.querySelector('[aria-label="Previous page"]');
+    }
+
+    if (link && link.href) {
+      e.preventDefault(); // Prevent default horizontal scroll behavior
+      link.click();
     }
   });
 })();
