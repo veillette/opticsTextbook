@@ -93,8 +93,17 @@ jobs:
           echo "NPM_INSTALL_TIME=$DURATION" >> $GITHUB_ENV
           echo "STEP_START_TIME=$(date +%s)" >> $GITHUB_ENV
 
-      # Note: Typst is included in mystmd, no additional dependencies needed
-      # Previous LaTeX dependencies removed since we switched to Typst for faster builds
+      - name: Setup Typst
+        uses: typst-community/setup-typst@v4
+        with:
+          typst-version: 'latest'
+
+      - name: Record Typst setup time
+        run: |
+          STEP_END_TIME=$(date +%s)
+          DURATION=$((STEP_END_TIME - STEP_START_TIME))
+          echo "TYPST_SETUP_TIME=$DURATION" >> $GITHUB_ENV
+          echo "STEP_START_TIME=$(date +%s)" >> $GITHUB_ENV
 
       - name: Cache build artifacts
         uses: actions/cache@v4
@@ -309,6 +318,7 @@ jobs:
           add_row "Checkout repository" ${CHECKOUT_TIME:-0}
           add_row "Setup (Pages + Node.js)" ${SETUP_TIME:-0}
           add_row "npm install" ${NPM_INSTALL_TIME:-0}
+          add_row "Setup Typst" ${TYPST_SETUP_TIME:-0}
           add_row "Build PDF/DOCX exports (Typst)" ${PDF_BUILD_TIME:-0}
           add_row "Generate PWA icons" ${ICON_GEN_TIME:-0}
           add_row "Build HTML site" ${HTML_BUILD_TIME:-0}
@@ -349,6 +359,7 @@ jobs:
             echo "${PDF_BUILD_TIME:-0} Build PDF/DOCX exports (Typst)"
             echo "${HTML_BUILD_TIME:-0} Build HTML site"
             echo "${NPM_INSTALL_TIME:-0} npm install"
+            echo "${TYPST_SETUP_TIME:-0} Setup Typst"
             echo "${UPLOAD_TIME:-0} Upload artifact"
             echo "${DEPLOY_TIME:-0} Deploy to Pages"
             echo "${PWA_SETUP_TIME:-0} Setup PWA"
