@@ -9,7 +9,7 @@ exports:
 (chapter.fiber)=
 # Fiber Optics
 
-```{admonition} What you should know and be able to after studying this chapter
+```{note} What you should know and be able to after studying this chapter
 After studying this chapter you should know and be able to:
 - Have a basic understanding on the principles of fiber optics. You understand how light can be confined by total internal reflection and you know how optical fibers give rise to propagation modes. You can list the various dispersion and loss mechanisms that play a role in light propagation through fibers.
 - Describe optical fibers using typical fiber parameters. You know the most important fiber types and connectors, along with their (dis)advantages.
@@ -556,7 +556,7 @@ Other areas of current and future development of fiber optic applications are ph
 
 With new applications of fiber optics arising in sectors such as agriculture, food, space, defense and energy, the field is steadily expanding. It holds a promise for developments making processes in those sectors better measurable, more cost effective and more energy efficient. This makes the field very interesting to follow in the upcoming years.
 
-```{admonition} External sources in recommended order
+```{note} External sources in recommended order
 General optics and theory of optical fibers:
 1. Pedrotti, Pedrotti and Pedrotti, *Introduction to optics*, Cambridge University Press
 2. Hecht, *Optics*, Pearson

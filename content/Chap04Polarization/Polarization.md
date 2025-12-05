@@ -9,7 +9,7 @@ exports:
 (chapter.polarization)=
 # Polarization
 
-```{admonition} What you should know and be able to do after studying this chapter
+```{note} What you should know and be able to do after studying this chapter
 - Understand how different states of polarization are related to the ratio of the amplitudes and the difference in phase between two orthogonal components of the electric field.
 - Know that elliptical polarization is the most general state of polarization.
 - Know that linear polarization and circular polarization are special cases.
@@ -231,7 +231,7 @@ Illustration of different types of polarization. The horizontal and vertical arr
 ```
 
 
-```{admonition} External source
+```{note} External source
 - [KhanAcademy - Polarization of light, linear and circular](https://www.khanacademy.org/science/ap-physics-2/ap-light-waves/ap-introduction-to-light-waves/v/polarization-of-light-linear-and-circular): Explanation of different polarization states and their applications.
 ```
 
@@ -646,7 +646,7 @@ We conclude that to study what happens to elliptic polarization, it suffices to 
 
 To see what happens to an arbitrary elliptical polarization state in a circular birefringent material, the incident light is best written as linear combination of left-and right-circular polarizations.
 
-```{admonition} External sources in recommended order
+```{note} External sources in recommended order
 1. [Double Vision - Sixty Symbols](https://www.youtube.com/watch?v=k1oh3lXR5PE): Demonstration of double refraction by a calcite crystal due to birefringence.
 2. [MIT OCW - Linear Polarizer](https://ocw.mit.edu/resources/res-6-006-video-demonstrations-in-lasers-and-optics-spring-2008/demonstrations-in-physical-optics/linear-polarizer/): Demonstration of linear polarizers and linear polarization.
 3. [MIT OCW - Polarization Rotation Using Polarizers](https://ocw.mit.edu/resources/res-6-006-video-demonstrations-in-lasers-and-optics-spring-2008/demonstrations-in-physical-optics/polarization-rotation-using-polarizers/): Demonstration of polarization rotation using linear polarizers.
