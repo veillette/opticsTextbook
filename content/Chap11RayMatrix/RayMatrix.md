@@ -35,7 +35,7 @@ In any plane perpendicular to the $z$-axis, a ray is determined by the $y$-coord
 ```
 
 Examples of positive and negative $\alpha$ are given in {numref}`Fig.alpha`. The case $z_2-z_1<0$ occurs when a ray propagates in the negative $z$-direction after it has been reflected by a mirror.
-According to {numref}`table_signconv` the refractive index of the ambient medium should after the reflection be taken negative. After a second reflection due to which the ray propagates again in the positive $z$-direction the refractive index should be chosen positive again.
+According to the sign convention table in the Geometrical Optics chapter, the refractive index of the ambient medium should after the reflection be taken negative. After a second reflection due to which the ray propagates again in the positive $z$-direction the refractive index should be chosen positive again.
 
 ```{figure} Images/11_03_angle_definition.png
 :name: Fig.alpha
@@ -75,8 +75,8 @@ where
 ```
 The elements of matrix ${\cal M}$ depend on the optical components and materials between the planes $z=z_1$ and $z=z_2$.
 
-As an example consider the ray matrix that relates a ray vector in the plane immediately before the spherical surface in {numref}`Fig_2_10_Spherical_interface` to the corresponding ray vector in the plane immediately behind that surface.
-Using {eq}`eq:geo:paraxial-snell-angles` and {eq}`eq:geo:small-angle-varphi` it
+As an example consider the ray matrix that relates a ray vector in the plane immediately before a spherical surface (see the Geometrical Optics chapter for details on spherical interface imaging) to the corresponding ray vector in the plane immediately behind that surface.
+Using the paraxial Snell's law and small-angle approximations from the Geometrical Optics chapter, it
 follows
 
 ```{math}
@@ -86,8 +86,8 @@ n_1 \alpha_1 - n_2 \alpha_2 = \frac{(n_2-n_1)y_1}{R},
 \end{align*}
 ```
 
-where we have replaced $\alpha_2$ by $-\alpha_2$ in {eq}`eq:geo:paraxial-snell-angles`, because according to the sign convention, the
-angle $\alpha_2$ in {numref}`Fig_2_10_Spherical_interface` should be taken
+where we have replaced $\alpha_2$ by $-\alpha_2$ in the paraxial Snell's law equation from the Geometrical Optics chapter, because according to the sign convention, the
+angle $\alpha_2$ should be taken
 negative.
 Because furthermore $y_2=y_1$, we conclude
 
@@ -516,9 +516,9 @@ where we have written now $y_o$ and $y_i$ instead of $y_1$ and $y_2$, respective
 
 **Remark.**
 The Lensmaker's formula for imaging by a thin lens can alternatively be derived
-by using the imaging formula {eq}`eq:geo:single-surface-imaging` of the two
+by using the single-surface imaging formula from the Geometrical Optics chapter for the two
 spherical surfaces of the lens. We first image a given point $S$ by the left
-spherical surface using {eq}`eq:geo:single-surface-imaging` as if the second
+spherical surface using that imaging formula as if the second
 surface were absent. The obtained intermediate image $P'$ is then imaged by the
 second spherical surface as if the first surface were absent. $P'$ can be a real
 or virtual object for the second surface. The derivation is carried out in

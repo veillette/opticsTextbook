@@ -176,7 +176,7 @@ Alternatively, one can propagate only the $E_x$- and $E_y$-components and afterw
 (sec:rayleighsommerfeld)=
 ### Rayleigh-Sommerfeld Diffraction Integral
 
-Another method to propagate a wave field is by using the **Rayleigh-Sommerfeld** integral. A very good approximation of this integral states that each point in the plane $z=0$ emits spherical waves with amplitude proportional to the field in the plane $z=0$. To find the field in a point $(x, y,z)$, we have to add the contributions from all these point sources together. This corresponds to the Huygens-Fresnel principle postulated earlier in [](#section.spatcoh). Because a more rigorous derivation starting from the Helmholtz equation[^2] would be rather lengthy, we will just give the final result:
+Another method to propagate a wave field is by using the **Rayleigh-Sommerfeld** integral. A very good approximation of this integral states that each point in the plane $z=0$ emits spherical waves with amplitude proportional to the field in the plane $z=0$. To find the field in a point $(x, y,z)$, we have to add the contributions from all these point sources together. This corresponds to the Huygens-Fresnel principle postulated earlier in the Spatial Coherence section of the Interference chapter. Because a more rigorous derivation starting from the Helmholtz equation[^2] would be rather lengthy, we will just give the final result:
 
 ````{note}
 ```{math}
@@ -488,7 +488,7 @@ When $x/z>1$, the spatial frequency $k_x = \frac{2 \pi x}{z \lambda} > k$ associ
 
 **Fresnel approximation of the field of two point sources.**
 
-Consider two mutual coherent time-harmonic point sources in $\mathbf{r}_s^+=(a/2,0,0)$ and $\mathbf{r}_s^-=(-a/2,0,0)$. The fields in $\mathbf{r}=(x,y,z)$ emitted are according to {eq}`eq.timeharm` proportional to
+Consider two mutual coherent time-harmonic point sources in $\mathbf{r}_s^+=(a/2,0,0)$ and $\mathbf{r}_s^-=(-a/2,0,0)$. The fields in $\mathbf{r}=(x,y,z)$ emitted are according to the time-harmonic field equation (see the Interference chapter) proportional to
 
 $$
 U_{\pm}(\mathbf{r}) = \frac{e^{i k |\mathbf{r}-\mathbf{r}_s^\pm|}}{|\mathbf{r} -\mathbf{r}_s^\pm|}.
@@ -1013,7 +1013,7 @@ Left: cross section of the field of the Airy pattern. Right: intensity of the Ai
 ```
 
 **Remark**.
-In the simple case of a single thin lens, the entrance and exit pupils coincide with the lens itself. As has been explained in [](#sec.stops), the exit pupil in systems consisting of several lenses is the real or virtual image of the aperture stop under all optical lenses to the right of the stop. To model the effect of diffraction in such more complicated systems, diffraction is assumed to take place entirely in the exit pupil. The field in the exit pupil is first determined by non-paraxial ray tracing and is then integrated over the exit pupil using the Fresnel diffraction integral.
+In the simple case of a single thin lens, the entrance and exit pupils coincide with the lens itself. As has been explained in the Stops section of the Geometrical Optics chapter, the exit pupil in systems consisting of several lenses is the real or virtual image of the aperture stop under all optical lenses to the right of the stop. To model the effect of diffraction in such more complicated systems, diffraction is assumed to take place entirely in the exit pupil. The field in the exit pupil is first determined by non-paraxial ray tracing and is then integrated over the exit pupil using the Fresnel diffraction integral.
 
 ### Imaging by a lens
 It follows from the derivations in the previous section that the Airy pattern is the image of a point source infinitely far in front of a lens. In this section we study the imaging of a general object at finite distance to the lens.
@@ -1079,7 +1079,7 @@ I_i(x,y,s_i) = \ \int\!\int \left|\text{PSF}\left(x-M x_o, y- M x_o \right)\righ
 where $I_o=|U_o|^2$ is the intensity distribution of the extended source.
 Hence the image intensity is expressed in the intensity of the source by a convolution with the intensity of the PSF. This system is called a **incoherent imaging system**.
 
-3. An object is often illuminated by a spatially incoherent extended light source and then imaged. According to the discussion in [](#section.scprop), the field that illuminates the object is then partially coherent. It is more coherent when the angle that the source extends at the object is smaller. The intensity in the image plane can be computed by splitting the spatially incoherent source into sufficiently many mutually incoherent point sources and computing the intensities in the image plane due to the illumination of the object by each individual point source. The total intensity in the image plane is then the sum of these intensities.
+3. An object is often illuminated by a spatially incoherent extended light source and then imaged. According to the discussion in the Propagation of Mutual Coherence section of the Interference chapter, the field that illuminates the object is then partially coherent. It is more coherent when the angle that the source extends at the object is smaller. The intensity in the image plane can be computed by splitting the spatially incoherent source into sufficiently many mutually incoherent point sources and computing the intensities in the image plane due to the illumination of the object by each individual point source. The total intensity in the image plane is then the sum of these intensities.
 
 4. We have considered only scalar diffraction theory. However, for a lens with numerical aperture larger than 0.6, the change of polarization can be important. Then a more general diffraction theory is needed [^8].
 

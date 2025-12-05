@@ -186,7 +186,7 @@ $$
 
 
 - **e)** Derive the Lensmaker's formula for the thin lens
-  {eq}`eq:ray:lensmaker-formula` by taking the limit $d\rightarrow 0$ in d).
+  (see the Ray Matrix chapter) by taking the limit $d\rightarrow 0$ in d).
 
 8. System matrix for focusing.
 
