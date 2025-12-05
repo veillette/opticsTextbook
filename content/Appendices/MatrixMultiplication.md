@@ -15,8 +15,10 @@ Matrix multiplication provides one of the most powerful and systematic approache
 
 ### The Power of Linear Transformations
 
-```{tip}
-Linear transformations are fundamental in optics because Maxwell's equations are linear—if you have two solutions, their sum is also a solution. This linearity propagates through all optical phenomena.
+```{note}
+:class: tip
+
+**Tip:** Linear transformations are fundamental in optics because Maxwell's equations are linear—if you have two solutions, their sum is also a solution. This linearity propagates through all optical phenomena.
 ```
 
 Most optical phenomena can be described as **linear transformations**—processes that take input light and produce output light in a predictable, systematic way. Consider some common examples:
@@ -34,8 +36,10 @@ A matrix is a rectangular array of numbers arranged in rows and columns. For opt
 
 $$\mathbf{M} = \begin{pmatrix} m_{11} & m_{12} \\ m_{21} & m_{22} \end{pmatrix}$$
 
-```{important}
-**Index Convention**: The first subscript indicates the row, the second indicates the column. So $m_{12}$ is the element in the first row, second column.
+```{warning}
+:class: important
+
+**Important:** **Index Convention**: The first subscript indicates the row, the second indicates the column. So $m_{12}$ is the element in the first row, second column.
 ```
 
 ### Vectors: Representing Optical States
@@ -79,7 +83,7 @@ $$\mathbf{A} = \begin{pmatrix} a_{11} & a_{12} \\ a_{21} & a_{22} \end{pmatrix},
 The product $\mathbf{C} = \mathbf{AB}$ has elements:
 $$\mathbf{C} = \begin{pmatrix} a_{11}b_{11} + a_{12}b_{21} & a_{11}b_{12} + a_{12}b_{22} \\ a_{21}b_{11} + a_{22}b_{21} & a_{21}b_{12} + a_{22}b_{22} \end{pmatrix}$$
 
-```{admonition} Example: Basic Matrix Multiplication
+```{note} Example: Basic Matrix Multiplication
 Let's multiply two simple matrices:
 $$\mathbf{A} = \begin{pmatrix} 1 & 2 \\ 3 & 4 \end{pmatrix}, \quad \mathbf{B} = \begin{pmatrix} 5 & 6 \\ 7 & 8 \end{pmatrix}$$
 
@@ -145,7 +149,7 @@ For any matrix $\mathbf{A}$ or vector $\vec{v}$:
 A **rotation matrix** rotates vectors by angle $\theta$:
 $$\mathbf{R}(\theta) = \begin{pmatrix} \cos\theta & -\sin\theta \\ \sin\theta & \cos\theta \end{pmatrix}$$
 
-```{admonition} Example: 45° Rotation Matrix
+```{note} Example: 45° Rotation Matrix
 For $\theta = 45°$:
 $$\mathbf{R}(45°) = \begin{pmatrix} \frac{1}{\sqrt{2}} & -\frac{1}{\sqrt{2}} \\ \frac{1}{\sqrt{2}} & \frac{1}{\sqrt{2}} \end{pmatrix}$$
 
@@ -215,7 +219,7 @@ $$\mathbf{H}(\theta) = \mathbf{R}(-\theta) \begin{pmatrix} 1 & 0 \\ 0 & -1 \end{
 
 ### Worked Example: Polarization Analysis
 
-```{admonition} Example: Light Through Crossed Polarizers
+```{note} Example: Light Through Crossed Polarizers
 Analyze what happens when horizontally polarized light passes through:
 1. A 45° polarizer
 2. A vertical polarizer
@@ -246,7 +250,7 @@ Without the intermediate polarizer, crossed polarizers would transmit zero inten
 
 Real optical systems often involve complex Jones matrices with both real and imaginary elements:
 
-```{admonition} Example: Quarter-Wave Plate Action
+```{note} Example: Quarter-Wave Plate Action
 A quarter-wave plate with fast axis along x converts linear polarization to circular:
 
 **QWP matrix:** $\mathbf{Q} = \begin{pmatrix} 1 & 0 \\ 0 & i \end{pmatrix}$
@@ -301,7 +305,7 @@ For multiple elements in series, multiply their matrices **in reverse order**:
 
 $$\mathbf{M}_{total} = \mathbf{M}_N \mathbf{M}_{N-1} \cdots \mathbf{M}_2 \mathbf{M}_1$$
 
-```{admonition} Example: Simple Telescope
+```{note} Example: Simple Telescope
 Analyze a telescope consisting of:
 1. Objective lens (focal length $f_1 = 100$ mm)
 2. Distance $d = 120$ mm
@@ -337,8 +341,10 @@ $$\begin{pmatrix} y_{out} \\ \theta_{out} \end{pmatrix} = \begin{pmatrix} A & B 
 - **C**: Angle change per unit input height (optical power, m⁻¹)
 - **D**: Angle magnification ($\theta_{out}/\theta_{in}$ when $y_{in} = 0$)
 
-```{important}
-**Determinant Rule**: For any optical system in the same medium: $AD - BC = 1$
+```{warning}
+:class: important
+
+**Important:** **Determinant Rule**: For any optical system in the same medium: $AD - BC = 1$
 
 This constraint comes from the reversibility of light rays and ensures energy conservation.
 ```
@@ -347,7 +353,7 @@ This constraint comes from the reversibility of light rays and ensures energy co
 
 ### Polarization State Analysis
 
-```{admonition} Example: Complete Polarization System
+```{note} Example: Complete Polarization System
 Design a system to convert right-handed circular polarization to 30° linear polarization.
 
 **Solution:**
@@ -367,7 +373,7 @@ This systematic approach using matrix multiplication makes complex polarization 
 
 ### Optical System Design
 
-```{admonition} Example: Beam Expander Design
+```{note} Example: Beam Expander Design
 Design a Galilean beam expander with 3× magnification using lenses with focal lengths 50 mm and -150 mm.
 
 **Solution:**
@@ -496,7 +502,7 @@ Matrix multiplication succeeds in optics because:
 
 ### Practical Benefits
 
-```{admonition} Why Learn Matrix Methods?
+```{note} Why Learn Matrix Methods?
 **Design**: Systematic approach to complex optical systems
 **Analysis**: Reveal system properties (stability, bandwidth, etc.)
 **Optimization**: Mathematical framework for improvement
@@ -508,7 +514,7 @@ Matrix multiplication succeeds in optics because:
 
 ### Basic Matrix Operations
 
-```{admonition} Problem 1
+```{note} Problem 1
 :class: exercise
 
 Calculate the following matrix products:
@@ -522,7 +528,7 @@ c) $\begin{pmatrix} \cos\theta & -\sin\theta \\ \sin\theta & \cos\theta \end{pma
 
 ### Polarization Analysis
 
-```{admonition} Problem 2
+```{note} Problem 2
 :class: exercise
 
 Light starts as 45° linear polarization and passes through:
@@ -535,7 +541,7 @@ Find the final Jones vector and intensity (as a fraction of input).
 
 ### Ray Optics System
 
-```{admonition} Problem 3
+```{note} Problem 3
 :class: exercise
 
 A thick lens can be modeled as:
@@ -548,7 +554,7 @@ Find the ABCD matrix for the complete thick lens.
 
 ### System Design
 
-```{admonition} Problem 4
+```{note} Problem 4
 :class: exercise
 
 Design a 4f optical processor (two lenses separated by sum of focal lengths) using:
@@ -563,7 +569,7 @@ d) What happens to the angular magnification?
 
 ## Solutions to Practice Problems
 
-```{admonition} Solution to Problem 1
+```{note} Solution to Problem 1
 :class: dropdown
 
 a) $\begin{pmatrix} 2 & 1 \\ 0 & 3 \end{pmatrix}\begin{pmatrix} 1 & 4 \\ 2 & 1 \end{pmatrix} = \begin{pmatrix} 4 & 9 \\ 6 & 3 \end{pmatrix}$
@@ -573,13 +579,13 @@ b) $\begin{pmatrix} 1 & 0 \\ -1/50 & 1 \end{pmatrix}\begin{pmatrix} 1 & 100 \\ 0
 c) $\begin{pmatrix} \cos 2\theta & -\sin 2\theta \\ \sin 2\theta & \cos 2\theta \end{pmatrix}$ (rotation by $2\theta$)
 ```
 
-```{admonition} Solution to Problem 2
+```{note} Solution to Problem 2
 :class: dropdown
 
 This requires step-by-step matrix multiplication through all three elements. The QWP converts the 45° linear to circular, the HWP rotates the polarization, and the final polarizer extracts the component along 60°. The calculation involves complex arithmetic due to the QWP matrix.
 ```
 
-```{admonition} Solution to Problem 3
+```{note} Solution to Problem 3
 :class: dropdown
 
 The thick lens matrix is the product of three matrices:
@@ -588,7 +594,7 @@ $$\mathbf{M} = \mathbf{M}_{back} \cdot \mathbf{M}_{thickness} \cdot \mathbf{M}_{
 where each matrix represents refraction at interfaces and propagation through the material.
 ```
 
-```{admonition} Solution to Problem 4
+```{note} Solution to Problem 4
 :class: dropdown
 
 a) Distances: 200 mm + 100 mm = 300 mm separation
@@ -607,8 +613,10 @@ Matrix multiplication reveals deep structural relationships in optics that would
 
 As you continue studying optics, you'll discover that matrix methods appear everywhere: from the simplest polarizer to the most sophisticated laser system. The investment in understanding these mathematical tools pays dividends throughout your career in optics and photonics.
 
-```{tip}
-**Developing Matrix Intuition**: The key to mastering matrix methods is developing physical intuition for what each mathematical operation means:
+```{note}
+:class: tip
+
+**Tip:** **Developing Matrix Intuition**: The key to mastering matrix methods is developing physical intuition for what each mathematical operation means:
 - Matrix multiplication = sequential operations
 - Matrix inverse = reverse operation
 - Determinant = scaling factor

@@ -9,7 +9,7 @@ exports:
 (chapter.coherence)=
 # Interference and Coherence
 
-```{admonition} What you should know and be able to do after studying this chapter
+```{note} What you should know and be able to do after studying this chapter
 - Understand time coherence and spatial coherence.
 - Know how the degree of time coherence can be measured with a Michelson interferometer.
 - Understand the connection between the time coherence and the frequency bandwidth.
@@ -40,7 +40,7 @@ In this chapter we will study the wave model of light. It will be shown that the
 
 It is important to note that the concepts of interference and coherence are not just restricted to optics. Since quantum mechanics dictates that particles have a wave-like nature, interference and coherence also play a role in e.g. solid state physics and quantum information.
 
-```{admonition} External sources in recommended order
+```{note} External sources in recommended order
 - [KhanAcademy - Interference of light waves](https://www.khanacademy.org/science/physics/light-waves/interference-of-light-waves/v/wave-interference): Playlist on wave interference at secondary school level.
 - [Yale Courses - 18. Wave Theory of Light](https://www.youtube.com/watch?v=5tKPLfZ9JVQ)
 - {cite:t}`born_wolf_coherence`: Comprehensive treatment of coherence theory
@@ -1380,7 +1380,7 @@ the two constituent orthogonal linearly polarized states of natural light cannot
 ```
 
 
-```{admonition} External sources in recommended order
+```{note} External sources in recommended order
 1. [KhanAcademy - Interference of light waves](https://www.khanacademy.org/science/ap-physics-1/ap-mechanical-waves-and-sound/wave-interference-ap/v/wave-interference-pulses): Playlist on wave interference at secondary school level.
 2. [Yale Courses - 18. Wave Theory of Light](https://www.youtube.com/watch?v=5tKPLfZ9JVQ)
 3. {cite:t}`born_wolf_coherence`: Comprehensive treatment of coherence theory

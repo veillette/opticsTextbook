@@ -16,7 +16,7 @@ exports:
 # Geometrical Optics
 
 
-```{admonition} What you should know and be able to do after studying this chapter
+```{note} What you should know and be able to do after studying this chapter
 - Principle of Fermat.
 - Understand the approximation made in Gaussian geometrical optics.
 - Know how to work with the sign convention of the Lens Maker's Formula (not the derivation of the formula).
@@ -260,7 +260,7 @@ Parabolic mirrors are used everywhere, from automobile headlights to radio teles
 Although we found that conic surfaces give perfect imaging for a certain pair of points, other points do *not* have perfect images in the sense that for a certain cone of rays, all rays are refracted (or reflected) to the same point.
 
 
-```{admonition} External sources in recommended order
+```{note} External sources in recommended order
 - [KhanAcademy - Geometrical Optics](https://www.khanacademy.org/science/physics/geometric-optics): Playlist on elementary geometrical optics.
 - [Yale Courses - 16. Ray or Geometrical Optics I](https://www.youtube.com/watch?v=bxGgcgSbQBA) - Lecture by Ramamurti Shankar
 - [Yale Courses - 17. Ray or Geometrical Optics II](https://www.youtube.com/watch?v=qm4QR_ycRhY) - Lecture by Ramamurti Shankar

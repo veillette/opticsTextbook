@@ -15,8 +15,10 @@ Vector calculus forms the mathematical foundation for understanding electromagne
 
 ### D.1.1 The Vector Nature of Electromagnetic Fields
 
-```{tip}
-Unlike scalar quantities like temperature or pressure, electromagnetic fields have both magnitude and direction at each point in space. This directional information is crucial for understanding polarization, wave propagation, and field interactions.
+```{note}
+:class: tip
+
+**Tip:** Unlike scalar quantities like temperature or pressure, electromagnetic fields have both magnitude and direction at each point in space. This directional information is crucial for understanding polarization, wave propagation, and field interactions.
 ```
 
 Electromagnetic fields are fundamentally **vector fields**—quantities that have both magnitude and direction at every point in space. The electric field $\vec{E}(\vec{r}, t)$ and magnetic field $\vec{B}(\vec{r}, t)$ specify not just how strong the field is at each location, but also which direction it points.
@@ -62,8 +64,10 @@ $$\nabla \cdot \vec{B} = 0 \quad \text{(No magnetic monopoles)}$$
 $$\nabla \times \vec{E} = -\frac{\partial \vec{B}}{\partial t} \quad \text{(Faraday's law)}$$
 $$\nabla \times \vec{B} = \mu_0 \vec{J} + \mu_0 \epsilon_0 \frac{\partial \vec{E}}{\partial t} \quad \text{(Ampère-Maxwell law)}$$
 
-```{important}
-These equations connect the spatial derivatives of fields (described by vector calculus operators) to their sources and time evolution. Understanding these operators is essential for solving electromagnetic problems in optics.
+```{warning}
+:class: important
+
+**Important:** These equations connect the spatial derivatives of fields (described by vector calculus operators) to their sources and time evolution. Understanding these operators is essential for solving electromagnetic problems in optics.
 ```
 
 ## D.2 Vector Fields and Coordinate Systems
@@ -95,7 +99,7 @@ A **vector field** assigns a vector to each point in space. In optics, we common
 - Unit vectors: $\hat{r}, \hat{\theta}, \hat{\phi}$ (all change direction!)
 - Position vector: $\vec{r} = r\hat{r}$
 
-```{admonition} Example: Plane Wave in Different Coordinates
+```{note} Example: Plane Wave in Different Coordinates
 A plane wave traveling in the z-direction:
 
 **Cartesian**: $\vec{E} = E_0 \cos(kz - \omega t)\hat{x}$
@@ -122,8 +126,10 @@ The **gradient** of a scalar field $f(\vec{r})$ is:
 
 $$\nabla f = \frac{\partial f}{\partial x}\hat{x} + \frac{\partial f}{\partial y}\hat{y} + \frac{\partial f}{\partial z}\hat{z}$$
 
-```{important}
-**Physical Interpretation**: The gradient points in the direction of steepest increase of the function and has magnitude equal to the rate of increase in that direction.
+```{warning}
+:class: important
+
+**Important:** **Physical Interpretation**: The gradient points in the direction of steepest increase of the function and has magnitude equal to the rate of increase in that direction.
 ```
 
 ### D.3.2 Gradient in Different Coordinate Systems
@@ -141,7 +147,7 @@ $$\nabla f = \frac{\partial f}{\partial r}\hat{r} + \frac{1}{r}\frac{\partial f}
 
 **Electric potential**: If the electric field derives from a potential, $\vec{E} = -\nabla V$
 
-```{admonition} Example: Spherical Wave Potential
+```{note} Example: Spherical Wave Potential
 For a point source at the origin:
 $$V(r) = \frac{A}{r}e^{i(kr - \omega t)}$$
 
@@ -165,8 +171,10 @@ The **divergence** of a vector field $\vec{F}(\vec{r})$ is:
 
 $$\nabla \cdot \vec{F} = \frac{\partial F_x}{\partial x} + \frac{\partial F_y}{\partial y} + \frac{\partial F_z}{\partial z}$$
 
-```{important}
-**Physical Interpretation**: Divergence measures the "outflow" of the vector field from a point. Positive divergence indicates a source, negative divergence indicates a sink, and zero divergence indicates incompressible flow.
+```{warning}
+:class: important
+
+**Important:** **Physical Interpretation**: Divergence measures the "outflow" of the vector field from a point. Positive divergence indicates a source, negative divergence indicates a sink, and zero divergence indicates incompressible flow.
 ```
 
 ### D.4.2 Divergence in Different Coordinate Systems
@@ -202,7 +210,7 @@ $$\nabla \cdot \vec{B} = 0$$
 
 Magnetic field lines always form closed loops—they have no beginning or end.
 
-```{admonition} Example: Spherical Wave Divergence
+```{note} Example: Spherical Wave Divergence
 For a spherical wave $\vec{E} = \frac{A}{r}e^{i(kr - \omega t)}\hat{r}$:
 
 $$\nabla \cdot \vec{E} = \frac{1}{r^2}\frac{\partial}{\partial r}\left(r^2 \frac{A}{r}e^{i(kr - \omega t)}\right) = \frac{A}{r^2}\frac{\partial}{\partial r}(re^{i(kr - \omega t)})$$
@@ -222,8 +230,10 @@ $$\nabla \times \vec{F} = \begin{vmatrix} \hat{x} & \hat{y} & \hat{z} \\ \frac{\
 
 $$= \left(\frac{\partial F_z}{\partial y} - \frac{\partial F_y}{\partial z}\right)\hat{x} + \left(\frac{\partial F_x}{\partial z} - \frac{\partial F_z}{\partial x}\right)\hat{y} + \left(\frac{\partial F_y}{\partial x} - \frac{\partial F_x}{\partial y}\right)\hat{z}$$
 
-```{important}
-**Physical Interpretation**: Curl measures the local rotation or "twist" of the vector field. The direction of the curl vector follows the right-hand rule for the axis of rotation.
+```{warning}
+:class: important
+
+**Important:** **Physical Interpretation**: Curl measures the local rotation or "twist" of the vector field. The direction of the curl vector follows the right-hand rule for the axis of rotation.
 ```
 
 ### D.5.2 Curl in Different Coordinate Systems
@@ -256,7 +266,7 @@ $$\nabla \times \vec{B} = \mu_0 \vec{J} + \mu_0 \epsilon_0 \frac{\partial \vec{E
 
 Current and time-varying electric fields create circulating magnetic fields.
 
-```{admonition} Example: Circularly Polarized Wave
+```{note} Example: Circularly Polarized Wave
 For a circularly polarized wave $\vec{E} = E_0(\hat{x} + i\hat{y})e^{i(kz - \omega t)}$:
 
 $$\nabla \times \vec{E} = \frac{\partial E_y}{\partial z}\hat{x} - \frac{\partial E_x}{\partial z}\hat{y} = ik E_0(-i\hat{x} + \hat{y})e^{i(kz - \omega t)} = ikE_0(-\hat{y} - i\hat{x})e^{i(kz - \omega t)}$$
@@ -299,7 +309,7 @@ $$\nabla^2 \vec{B} - \mu_0 \epsilon_0 \frac{\partial^2 \vec{B}}{\partial t^2} = 
 $$\nabla^2 \vec{E} + k^2 \vec{E} = 0$$
 where $k = \omega\sqrt{\mu_0\epsilon_0} = \omega/c$.
 
-```{admonition} Example: Gaussian Beam Solution
+```{note} Example: Gaussian Beam Solution
 The Gaussian beam is a solution to the paraxial wave equation (approximation to Helmholtz equation):
 
 $$\vec{E}(x,y,z) = E_0 \frac{w_0}{w(z)} \exp\left(-\frac{x^2 + y^2}{w^2(z)}\right) \exp\left(ikz - ik\frac{x^2 + y^2}{2R(z)} + i\zeta(z)\right)$$
@@ -403,7 +413,7 @@ $$\vec{E}(r,\theta,\phi) = \frac{f(\theta,\phi)}{r} e^{i(kr - \omega t)} \hat{\t
 
 The radial component vanishes in the far field due to the transversality condition $\nabla \cdot \vec{E} = 0$.
 
-```{admonition} Example: Electric Dipole Radiation
+```{note} Example: Electric Dipole Radiation
 An oscillating electric dipole $\vec{p}(t) = p_0 \cos(\omega t)\hat{z}$ produces:
 
 $$\vec{E}(r,\theta,t) = \frac{\mu_0 \omega^2 p_0 \sin\theta}{4\pi r} \cos(\omega t - kr + \phi) \hat{\theta}$$
@@ -558,7 +568,7 @@ $$\frac{\partial u}{\partial t} + \nabla \cdot \vec{S} = -\vec{J} \cdot \vec{E}$
 
 ### D.13.1 Rectangular Waveguide Analysis
 
-```{admonition} Problem: TE₁₀ Mode in Rectangular Waveguide
+```{note} Problem: TE₁₀ Mode in Rectangular Waveguide
 Find the field components for the TE₁₀ mode in a rectangular waveguide with dimensions $a \times b$.
 
 **Solution:**
@@ -583,7 +593,7 @@ For $\omega > \omega_c$, the mode propagates. For $\omega < \omega_c$, the mode 
 
 ### D.13.2 Electromagnetic Wave Scattering
 
-```{admonition} Problem: Plane Wave Scattering by a Sphere
+```{note} Problem: Plane Wave Scattering by a Sphere
 Analyze the scattering of a plane wave by a dielectric sphere using vector spherical harmonics.
 
 **Solution:**
@@ -609,7 +619,7 @@ $$\sigma_{scat} = \frac{2\pi}{k^2} \sum_{l=1}^{\infty} (2l+1)(|a_l|^2 + |b_l|^2)
 
 ### D.13.3 Gaussian Beam Propagation
 
-```{admonition} Problem: Gaussian Beam Through a Lens
+```{note} Problem: Gaussian Beam Through a Lens
 A Gaussian beam with waist $w_0$ is focused by a lens of focal length $f$. Find the new waist size and location.
 
 **Solution:**
@@ -636,7 +646,7 @@ $$q_{out} = \frac{iz_R}{-iz_R/f + 1} = \frac{iz_R f}{f - iz_R}$$
 
 ### D.14.1 Vector Operations
 
-```{admonition} Problem D.1
+```{note} Problem D.1
 :class: exercise
 
 Calculate the following for the vector field $\vec{F} = x^2 y \hat{x} + y^2 z \hat{y} + z^2 x \hat{z}$:
@@ -648,7 +658,7 @@ d) Is this field conservative? Why or why not?
 
 ### D.14.2 Electromagnetic Waves
 
-```{admonition} Problem D.2
+```{note} Problem D.2
 :class: exercise
 
 A plane electromagnetic wave has electric field $\vec{E} = E_0(\hat{x} + i\hat{y})e^{i(kz - \omega t)}$.
@@ -660,7 +670,7 @@ d) Calculate the time-averaged energy density
 
 ### D.14.3 Waveguide Modes
 
-```{admonition} Problem D.3
+```{note} Problem D.3
 :class: exercise
 
 For a step-index optical fiber with core radius $a = 5$ μm, core index $n_1 = 1.46$, and cladding index $n_2 = 1.45$:
@@ -672,7 +682,7 @@ d) What happens if the wavelength is changed to 800 nm?
 
 ### D.14.4 Boundary Conditions
 
-```{admonition} Problem D.4
+```{note} Problem D.4
 :class: exercise
 
 Light travels from air (n₁ = 1) into glass (n₂ = 1.5) at 45° incidence:
@@ -709,8 +719,10 @@ Practice visualizing these operations geometrically, and the mathematical formal
 
 As you continue studying optics, remember that every optical phenomenon—from simple refraction to complex laser dynamics—emerges from the vector calculus operations we've explored. Master these mathematical tools, and you'll have the foundation for understanding how light behaves in any situation, from the cosmic to the quantum scale.
 
-```{tip}
-**Connecting Mathematics to Physics**: Always ask these questions when working with vector calculus:
+```{note}
+:class: tip
+
+**Tip:** **Connecting Mathematics to Physics**: Always ask these questions when working with vector calculus:
 - What does this gradient represent physically?
 - Why is the divergence zero (or non-zero) here?
 - What physical process creates this curl?

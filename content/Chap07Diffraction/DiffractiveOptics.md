@@ -20,7 +20,7 @@ exports:
 # Scalar Diffraction Optics
 
 
-```{admonition} What you should know and be able to do after studying this chapter
+```{note} What you should know and be able to do after studying this chapter
 - Be able to derive the angular spectrum decomposition, also known as the plane wave expansion, and understand its physical interpretation.
 - Know the Rayleigh-Sommerfeld formula; in particular be able to write down the integral over spherical waves with amplitudes proportional to the field in the starting plane.
 - Know how to deduce the Fresnel and Fraunhofer approximation of the Rayleigh-Sommerfeld integral and understand their relation to the Fourier transformation.
@@ -1145,7 +1145,7 @@ Spot used for excitation (top left) and for depletion (top middle). Fluorescence
 ```
 
 
-```{admonition} External sources in recommended order
+```{note} External sources in recommended order
 1. {cite}`SixtySymbols_Fourier` Basic explanation of Fourier transforms. Also see {ref}`sec:fourierintuition`.
 1. {cite}`SixtySymbols_Heisenberg` Basic explanation of the uncertainty principle (though in the context of quantum physics).
 1. E. Hecht, *Optics*, &sect; 7.4.4, subsection '*Fourier Analysis and Diffraction*'.

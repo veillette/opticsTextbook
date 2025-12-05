@@ -9,7 +9,7 @@ exports:
 (chapter.instrument)=
 # Optical Instruments
 
-```{admonition} What you should know and be able to do after studying this chapter
+```{note} What you should know and be able to do after studying this chapter
 - Understand the working principle of a camera.
 - Understand the optics of the eye and its accommodation with the near and far point.
 - The working of eye glasses.

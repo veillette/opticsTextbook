@@ -9,7 +9,7 @@ exports:
 (chapter.lasers)=
 # Lasers
 
-```{admonition} What you should know and be able to do after studying this chapter
+```{note} What you should know and be able to do after studying this chapter
 - Know the special properties of laser sources.
 - Understand the optical resonator and why it is needed.
 - Understand the role of the amplifier and explain what the gain curve is.

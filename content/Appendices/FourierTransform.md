@@ -15,8 +15,10 @@ The Fourier transform stands as one of the most powerful mathematical tools in a
 
 ### C.1.1 The Fundamental Concept
 
-```{tip}
-The word "frequency" in spatial Fourier analysis refers to how rapidly a pattern oscillates in space—high spatial frequencies correspond to fine details, while low spatial frequencies represent broad features.
+```{note}
+:class: tip
+
+**Tip:** The word "frequency" in spatial Fourier analysis refers to how rapidly a pattern oscillates in space—high spatial frequencies correspond to fine details, while low spatial frequencies represent broad features.
 ```
 
 In temporal signal processing, we're familiar with the idea that any complex waveform can be decomposed into sinusoidal components of different frequencies. The **Fourier transform** extends this concept to spatial dimensions: any spatial pattern can be decomposed into spatial sinusoidal components with different **spatial frequencies**.
@@ -37,8 +39,10 @@ The **inverse Fourier transform** recovers the original function:
 
 $$f(x,y) = \frac{1}{(2\pi)^2} \int_{-\infty}^{\infty} \int_{-\infty}^{\infty} F(k_x, k_y) e^{i(k_x x + k_y y)} dk_x dk_y$$
 
-```{important}
-**Spatial Frequencies**: $k_x$ and $k_y$ are spatial frequencies measured in radians per unit length. They tell us how many cycles per unit distance a sinusoidal pattern completes in the x and y directions.
+```{warning}
+:class: important
+
+**Important:** **Spatial Frequencies**: $k_x$ and $k_y$ are spatial frequencies measured in radians per unit length. They tell us how many cycles per unit distance a sinusoidal pattern completes in the x and y directions.
 ```
 
 ### C.1.3 Physical Interpretation in Optics
@@ -92,7 +96,7 @@ $$\mathcal{F}[af(x,y) + bg(x,y)] = a\mathcal{F}[f(x,y)] + b\mathcal{F}[g(x,y)]$$
 A spatial shift in the object domain becomes a phase factor in frequency domain:
 $$\mathcal{F}[f(x-x_0, y-y_0)] = F(k_x, k_y) e^{-i(k_x x_0 + k_y y_0)}$$
 
-```{admonition} Example: Understanding Phase Shifts
+```{note} Example: Understanding Phase Shifts
 If we move a diffraction grating laterally, its Fourier transform magnitude stays the same, but each spatial frequency component picks up a phase proportional to the displacement. This is why interference fringes shift when you move one of the interfering beams.
 ```
 
@@ -111,8 +115,10 @@ $$\mathcal{F}[f \star g] = \mathcal{F}[f] \cdot \mathcal{F}[g]$$
 
 where $\star$ denotes convolution: $(f \star g)(x,y) = \int \int f(x',y') g(x-x', y-y') dx' dy'$
 
-```{important}
-**Optics Application**: When light propagates through an optical system, the output is often the convolution of the input with the system's impulse response. In Fourier space, this becomes simple multiplication—the system's **transfer function** multiplies the input spectrum.
+```{warning}
+:class: important
+
+**Important:** **Optics Application**: When light propagates through an optical system, the output is often the convolution of the input with the system's impulse response. In Fourier space, this becomes simple multiplication—the system's **transfer function** multiplies the input spectrum.
 ```
 
 ### C.2.5 Parseval's Theorem
@@ -154,7 +160,7 @@ $$\text{rect}\left(\frac{x}{a}\right)\text{rect}\left(\frac{y}{b}\right) \leftri
 
 where $\text{sinc}(u) = \sin(u)/u$.
 
-```{admonition} Example: Single-Slit Diffraction
+```{note} Example: Single-Slit Diffraction
 A single slit of width $a$ has Fourier transform proportional to $\text{sinc}(k_x a/2)$. The diffraction pattern intensity is the square of this: $\text{sinc}^2(k_x a/2)$. The first zeros occur when $k_x a/2 = \pi$, giving $k_x = 2\pi/a$. Since $k_x = k\sin\theta$ for small angles, the angular position of the first minimum is $\theta \approx \lambda/a$—exactly the familiar diffraction formula!
 ```
 
@@ -193,8 +199,10 @@ The beauty of the angular spectrum approach is that **free space propagation** b
 
 $$U(x,y,z) = \mathcal{F}^{-1}[A(k_x, k_y) e^{ik_z z}]$$
 
-```{important}
-**Propagation Rule**: In Fourier space, propagation just multiplies each spatial frequency component by a phase factor $e^{ik_z z}$. Different spatial frequencies propagate with different $k_z$ values, leading to diffraction effects.
+```{warning}
+:class: important
+
+**Important:** **Propagation Rule**: In Fourier space, propagation just multiplies each spatial frequency component by a phase factor $e^{ik_z z}$. Different spatial frequencies propagate with different $k_z$ values, leading to diffraction effects.
 ```
 
 ### C.4.3 Fresnel and Fraunhofer Approximations
@@ -221,7 +229,7 @@ A converging lens performs a spatial Fourier transform under the right condition
 
 $$U_{back}(x,y) \propto \mathcal{F}[U_{front}(x,y)]$$
 
-```{admonition} Example: 4f Optical Processor
+```{note} Example: 4f Optical Processor
 The classic 4f system (two lenses separated by the sum of their focal lengths) is a spatial frequency processor:
 
 1. **Input plane**: Object $f(x,y)$
@@ -245,8 +253,10 @@ $$H(k_x, k_y) = \begin{cases}
 0 & \text{otherwise}
 \end{cases}$$
 
-```{important}
-**Resolution Limit**: The cutoff frequency $k_c = 2\pi R/(\lambda z)$ determines the finest detail the lens can resolve. This leads directly to the Rayleigh criterion for optical resolution.
+```{warning}
+:class: important
+
+**Important:** **Resolution Limit**: The cutoff frequency $k_c = 2\pi R/(\lambda z)$ determines the finest detail the lens can resolve. This leads directly to the Rayleigh criterion for optical resolution.
 ```
 
 ### C.5.3 Coherent vs. Incoherent Imaging
@@ -275,7 +285,7 @@ $$I(\theta) = I_0 \text{sinc}^2\left(\frac{ka\sin\theta}{2}\right) \cos^2\left(\
 **Circular aperture** (radius $R$):
 $$I(\theta) = I_0 \left[\frac{2J_1(kR\sin\theta)}{kR\sin\theta}\right]^2$$
 
-```{admonition} Example: Diffraction Grating Analysis
+```{note} Example: Diffraction Grating Analysis
 A transmission grating with $N$ slits can be analyzed by taking the Fourier transform of the aperture function:
 
 $$f(x) = \sum_{n=0}^{N-1} \text{rect}\left(\frac{x - nd}{a}\right)$$
@@ -481,7 +491,7 @@ $$W(a,b) = \int_{-\infty}^{\infty} f(x) \psi^*\left(\frac{x-b}{a}\right) dx$$
 
 ### C.11.1 Design of a Spatial Filter
 
-```{admonition} Problem: Noise Removal
+```{note} Problem: Noise Removal
 An image contains high-frequency noise that you want to remove while preserving the main features. Design an optical spatial filter.
 
 **Solution:**
@@ -508,7 +518,7 @@ $$r = \frac{6.28 \times 10^5 \times 632.8 \times 10^{-9} \times 0.2}{2\pi} = 12.
 
 ### C.11.2 Diffraction Grating Analysis
 
-```{admonition} Problem: Grating Resolution
+```{note} Problem: Grating Resolution
 A diffraction grating has 600 lines/mm and is illuminated by λ = 500 nm light. Calculate the angular positions and widths of the diffraction orders.
 
 **Solution:**
@@ -531,7 +541,7 @@ For m = 1: $\Delta\theta_1 \approx \frac{500 \times 10^{-9}}{0.01 \times \cos(17
 
 ### C.11.3 Lens Resolution Calculation
 
-```{admonition} Problem: Microscope Resolution
+```{note} Problem: Microscope Resolution
 A microscope objective has numerical aperture NA = 1.4 and operates at λ = 400 nm. What is the theoretical resolution limit?
 
 **Solution:**
@@ -587,7 +597,7 @@ The Fourier transform succeeds in optics because it captures the wave nature of 
 
 ### C.12.3 Modern Applications
 
-```{admonition} Contemporary Uses of Fourier Optics
+```{note} Contemporary Uses of Fourier Optics
 **Adaptive optics**: Real-time wavefront correction using spatial frequency analysis
 **Optical communications**: Signal processing in fiber optic systems
 **Medical imaging**: OCT, ultrasound, and MRI all rely on Fourier analysis
@@ -599,7 +609,7 @@ The Fourier transform succeeds in optics because it captures the wave nature of 
 
 ### C.13.1 Basic Fourier Analysis
 
-```{admonition} Problem C.1
+```{note} Problem C.1
 :class: exercise
 
 Calculate the Fourier transform of the following functions:
@@ -611,7 +621,7 @@ d) A triangular function $f(x) = \Lambda(x/a)$ where $\Lambda$ is the triangle f
 
 ### C.13.2 Diffraction Patterns
 
-```{admonition} Problem C.2
+```{note} Problem C.2
 :class: exercise
 
 A circular aperture of radius R is illuminated by a plane wave of wavelength λ.
@@ -623,7 +633,7 @@ d) How does the pattern change if the aperture radius doubles?
 
 ### C.13.3 Optical System Design
 
-```{admonition} Problem C.3
+```{note} Problem C.3
 :class: exercise
 
 Design a 4f optical correlator to detect a specific pattern in an image:
@@ -635,7 +645,7 @@ d) How does noise in the input affect the correlation peak?
 
 ### C.13.4 Numerical Implementation
 
-```{admonition} Problem C.4
+```{note} Problem C.4
 :class: exercise
 
 Implement numerical beam propagation:
@@ -664,8 +674,10 @@ In optics, this manifests as:
 
 As you continue your journey through optics, remember that Fourier analysis isn't just a mathematical technique—it's a way of understanding how information propagates through optical systems. Whether designing a telescope, analyzing a laser beam, or processing an image, the Fourier transform provides the conceptual framework that connects the mathematics to the physics.
 
-```{tip}
-**Developing Fourier Intuition**: Practice visualizing these key relationships:
+```{note}
+:class: tip
+
+**Tip:** **Developing Fourier Intuition**: Practice visualizing these key relationships:
 - Sharp edges in space ↔ High frequencies in Fourier space
 - Large features in space ↔ Low frequencies in Fourier space
 - Periodic patterns ↔ Discrete frequency peaks

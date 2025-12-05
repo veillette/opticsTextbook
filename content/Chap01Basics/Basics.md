@@ -203,7 +203,7 @@ The electromagnetic spectrum thus represents a continuum of radiation unified by
 
 # The Speed of Light
 
-```{admonition} Learning Objectives
+```{note} Learning Objectives
 :class: tip
 
 By the end of this section, you will be able to:
@@ -354,7 +354,7 @@ $$v = \frac{c}{n} = \frac{3.00 \times 10^8 \, \text{m/s}}{1.923} = 1.56 \times 1
 
 This speed is slightly larger than half the speed of light in vacuum—still incredibly fast by everyday standards, yet significantly reduced from light's maximum speed.
 
-```{admonition} Check Your Understanding
+```{note} Check Your Understanding
 :class: warning
 
 From [](#table:refractive-indices), ethanol and fresh water have indices of refraction of 1.361 and 1.333, respectively. By what percentage do the speeds of light in these liquids differ?
@@ -402,7 +402,7 @@ Since light rays follow straight-line paths and change direction according to ge
 
 These laws, combined with the ray model, provide powerful tools for analyzing optical systems ranging from simple mirrors to complex telescope designs.
 
-```{admonition} Key Takeaways
+```{note} Key Takeaways
 :class: note
 
 - The speed of light in vacuum ($c = 3.00 \times 10^8 \, \text{m/s}$) is a fundamental constant

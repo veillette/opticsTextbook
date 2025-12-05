@@ -15,8 +15,10 @@ Complex numbers provide one of the most elegant and powerful mathematical framew
 
 ### A.1.1 The Historical Motivation
 
-```{tip}
-The term "imaginary" is unfortunately misleading—these numbers are just as "real" as any other mathematical concept. The name stuck from historical prejudice, but modern physicists and engineers know that complex numbers describe very real phenomena.
+```{note}
+:class: tip
+
+**Tip:** The term "imaginary" is unfortunately misleading—these numbers are just as "real" as any other mathematical concept. The name stuck from historical prejudice, but modern physicists and engineers know that complex numbers describe very real phenomena.
 ```
 
 Complex numbers emerged from a simple but frustrating problem: what is $\sqrt{-1}$? For centuries, mathematicians considered this question meaningless. But in the 16th century, while solving cubic equations, Italian mathematicians discovered that even when seeking real solutions, intermediate steps often required manipulating square roots of negative numbers.
@@ -33,13 +35,15 @@ where $a$ and $b$ are ordinary real numbers, and $i$ is the **imaginary unit** d
 
 $$i^2 = -1$$
 
-```{important}
-The real part $a = \text{Re}(z)$ and imaginary part $b = \text{Im}(z)$ are both real numbers. The "imaginary" part isn't imaginary in the colloquial sense—it's a perfectly concrete mathematical quantity.
+```{warning}
+:class: important
+
+**Important:** The real part $a = \text{Re}(z)$ and imaginary part $b = \text{Im}(z)$ are both real numbers. The "imaginary" part isn't imaginary in the colloquial sense—it's a perfectly concrete mathematical quantity.
 ```
 
 Let's explore what this means through some examples:
 
-```{admonition} Example A.1: Understanding Complex Number Components
+```{note} Example A.1: Understanding Complex Number Components
 Consider the complex number $z = 3 + 4i$.
 - The real part is $\text{Re}(z) = 3$
 - The imaginary part is $\text{Im}(z) = 4$ (note: not $4i$, just $4$)
@@ -60,7 +64,7 @@ This makes intuitive sense: real parts combine with real parts, imaginary parts 
 Here's where things get interesting. Using the distributive property and $i^2 = -1$:
 $$(a + bi)(c + di) = ac + adi + bci + bdi^2 = (ac - bd) + (ad + bc)i$$
 
-```{admonition} Example A.2: Complex Multiplication
+```{note} Example A.2: Complex Multiplication
 Let's multiply $(2 + 3i)(1 + 4i)$:
 - First terms: $2 \times 1 = 2$
 - Outer terms: $2 \times 4i = 8i$
@@ -102,7 +106,7 @@ where:
 - $r = |z| = \sqrt{a^2 + b^2}$ is the **magnitude** or **modulus**
 - $\theta = \arg(z) = \arctan(b/a)$ is the **argument** or **phase**
 
-```{admonition} Example A.3: Converting to Polar Form
+```{note} Example A.3: Converting to Polar Form
 For $z = 3 + 4i$:
 - Magnitude: $r = \sqrt{3^2 + 4^2} = \sqrt{25} = 5$
 - Phase: $\theta = \arctan(4/3) \approx 0.927$ radians or about $53.1°$
@@ -130,7 +134,7 @@ This equation creates a bridge between three seemingly unrelated mathematical co
 
 ### A.2.2 Understanding Why Euler's Formula Works
 
-```{admonition} Mathematical Proof Using Taylor Series
+```{note} Mathematical Proof Using Taylor Series
 :class: dropdown
 
 The proof relies on the Taylor series expansions of the exponential and trigonometric functions:
@@ -157,8 +161,10 @@ The first parentheses contain exactly the series for $\cos\theta$, and the secon
 
 Euler's formula has a beautiful geometric meaning: $e^{i\theta}$ represents a point on the unit circle at angle $\theta$ from the positive real axis. As $\theta$ increases, $e^{i\theta}$ traces out circular motion in the complex plane.
 
-```{tip}
-This is why complex exponentials are perfect for describing oscillatory motion—they naturally encode both the magnitude and phase of oscillations.
+```{note}
+:class: tip
+
+**Tip:** This is why complex exponentials are perfect for describing oscillatory motion—they naturally encode both the magnitude and phase of oscillations.
 ```
 
 This insight is crucial for optics because light waves are oscillatory phenomena. The phase $\theta$ in Euler's formula will correspond to the phase of an electromagnetic wave, while the magnitude can represent the amplitude.
@@ -193,8 +199,10 @@ Several important special cases emerge from Euler's formula:
   - Full rotation
 ```
 
-```{important}
-**Euler's Identity**: $e^{i\pi} + 1 = 0$
+```{warning}
+:class: important
+
+**Important:** **Euler's Identity**: $e^{i\pi} + 1 = 0$
 
 This equation connects five fundamental mathematical constants ($e$, $i$, $\pi$, $1$, and $0$) in a single, elegant relationship. Richard Feynman called it "the most remarkable formula in mathematics."
 ```
@@ -220,7 +228,7 @@ $$x(t) = A \cos(\omega t + \phi)$$
 
 While this real function perfectly describes the physical motion, working with it mathematically can be cumbersome. Derivatives of cosines give sines, integrals mix sines and cosines, and keeping track of phase relationships becomes complex (pun intended).
 
-```{admonition} The Complex Solution
+```{note} The Complex Solution
 Instead of working directly with $A \cos(\omega t + \phi)$, we use the complex representation:
 
 $$\tilde{x}(t) = A e^{i(\omega t + \phi)}$$
@@ -300,7 +308,7 @@ $$E_2 = E_{02} e^{i(kz - \omega t + \phi_2)}$$
 The total field is:
 $$E_{\text{total}} = E_1 + E_2 = e^{i(kz - \omega t)}[E_{01}e^{i\phi_1} + E_{02}e^{i\phi_2}]$$
 
-```{admonition} Example A.4: Two-Wave Interference
+```{note} Example A.4: Two-Wave Interference
 Suppose we have two waves with equal amplitudes $E_{01} = E_{02} = E_0$ but phases $\phi_1 = 0$ and $\phi_2 = \phi$:
 
 $$E_{\text{total}} = E_0 e^{i(kz - \omega t)}[1 + e^{i\phi}]$$
@@ -321,8 +329,10 @@ The intensity of light is proportional to the time-averaged square of the electr
 
 $$I \propto \langle|E(t)|^2\rangle = \langle E(t) \cdot E^*(t)\rangle$$
 
-```{tip}
-The time averaging $\langle \cdot \rangle$ removes the rapidly oscillating terms at frequency $2\omega$, leaving only the slowly varying envelope.
+```{note}
+:class: tip
+
+**Tip:** The time averaging $\langle \cdot \rangle$ removes the rapidly oscillating terms at frequency $2\omega$, leaving only the slowly varying envelope.
 ```
 
 For our two-wave interference example:
@@ -357,8 +367,10 @@ $$\tilde{k} = \frac{\omega \tilde{n}}{c} = \frac{\omega(n + ik)}{c} = \frac{\ome
 The wave in the medium becomes:
 $$E(z) = E_0 e^{i\tilde{k}z} = E_0 e^{i(\omega n/c)z} e^{-(\omega k/c)z}$$
 
-```{important}
-This expression reveals the physical meaning of the complex refractive index:
+```{warning}
+:class: important
+
+**Important:** This expression reveals the physical meaning of the complex refractive index:
 - The real part $n$ gives oscillatory behavior: $e^{i(\omega n/c)z}$
 - The imaginary part $k$ gives exponential decay: $e^{-(\omega k/c)z}$
 
@@ -410,7 +422,7 @@ $$r_s = \frac{n_1\cos\theta_1 - n_2\cos\theta_2}{n_1\cos\theta_1 + n_2\cos\theta
 
 where angles are related by Snell's law: $n_1\sin\theta_1 = n_2\sin\theta_2$.
 
-```{admonition} Total Internal Reflection
+```{note} Total Internal Reflection
 When $n_1 > n_2$ and $\theta_1$ exceeds the critical angle $\theta_c = \arcsin(n_2/n_1)$, something remarkable happens:
 
 $\sin\theta_2 = \frac{n_1}{n_2}\sin\theta_1 > 1$
@@ -532,7 +544,7 @@ Complex numbers work beautifully in optics because they match the mathematical s
 
 Beyond mathematical convenience, complex numbers often reveal physical insights:
 
-```{admonition} Physical Insights from Complex Analysis
+```{note} Physical Insights from Complex Analysis
 - **Causality**: The relationship between real and imaginary parts of the refractive index (Kramers-Kronig relations) ensures that materials respond to light in physically reasonable ways
 - **Energy conservation**: Complex analysis helps prove that energy is conserved in optical systems
 - **Symmetries**: Many optical phenomena have symmetries that are most naturally expressed using complex numbers
@@ -605,8 +617,10 @@ As you progress through this textbook, you'll encounter complex numbers in virtu
 - **Quantum optics**: Photon statistics and coherence
 - **Metamaterials**: Effective medium theory
 
-```{tip}
-**Developing Intuition**: The key to mastering complex numbers in optics is developing physical intuition for what the mathematical operations mean. Practice visualizing:
+```{note}
+:class: tip
+
+**Tip:** **Developing Intuition**: The key to mastering complex numbers in optics is developing physical intuition for what the mathematical operations mean. Practice visualizing:
 - Complex numbers as points/vectors in the complex plane
 - Multiplication as rotation and scaling
 - Addition as vector addition
@@ -619,7 +633,7 @@ With time, these operations will become as natural as ordinary arithmetic, and y
 
 ### A.11.1 Young's Double-Slit Interference
 
-```{admonition} Problem Setup
+```{note} Problem Setup
 Two coherent sources separated by distance $d$ illuminate a screen at distance $L \gg d$. Find the intensity pattern on the screen using complex analysis.
 ```
 
@@ -651,7 +665,7 @@ This derivation using complex numbers is much more straightforward than the trad
 
 ### A.11.2 Transmission Through an Absorbing Slab
 
-```{admonition} Problem Setup
+```{note} Problem Setup
 Light with intensity $I_0$ passes through a glass slab of thickness $t$ with complex refractive index $\tilde{n} = 1.5 + 0.01i$. Find the transmitted intensity, accounting for both reflection losses and absorption.
 ```
 
@@ -691,8 +705,10 @@ $T = (1-R_1)(1-R_2)e^{-2(2\pi/\lambda_0)(0.01t)}$
 $= (1-0.0399)^2 e^{-(4\pi \cdot 0.01t)/\lambda_0}$
 $= 0.922 \cdot e^{-0.126t/\lambda_0}$
 
-```{important}
-For typical glass at $\lambda_0 = 500$ nm and $t = 1$ mm:
+```{warning}
+:class: important
+
+**Important:** For typical glass at $\lambda_0 = 500$ nm and $t = 1$ mm:
 $T = 0.922 \cdot e^{-0.126 \times 10^{-3}/(500 \times 10^{-9})} = 0.922 \cdot e^{-252} \approx 0$
 
 The slab is essentially opaque! This shows why the imaginary part of the refractive index must be very small for transparent materials.
@@ -700,7 +716,7 @@ The slab is essentially opaque! This shows why the imaginary part of the refract
 
 ### A.11.3 Circular Polarization Analysis
 
-```{admonition} Problem Setup
+```{note} Problem Setup
 Light passes through a linear polarizer oriented at 45° to the x-axis, then through a quarter-wave plate with fast axis along x. Determine the final polarization state.
 ```
 
@@ -736,7 +752,7 @@ Complex notation makes polarization analysis much simpler than using Jones matri
 
 ### A.12.1 Basic Complex Arithmetic
 
-```{admonition} Problem A.1
+```{note} Problem A.1
 :class: exercise
 
 Calculate the following and express in the form $a + bi$:
@@ -746,7 +762,7 @@ c) $(1 + i)^4$
 d) $\sqrt{3 + 4i}$
 ```
 
-```{admonition} Solution to Problem A.1
+```{note} Solution to Problem A.1
 :class: dropdown
 
 a) $(3 + 2i)(1 - 4i) = 3 - 12i + 2i - 8i^2 = 3 - 10i + 8 = 11 - 10i$
@@ -767,7 +783,7 @@ d) Let $\sqrt{3 + 4i} = a + bi$. Then $(a + bi)^2 = 3 + 4i$.
 
 ### A.12.2 Wave Interference
 
-```{admonition} Problem A.2
+```{note} Problem A.2
 :class: exercise
 
 Two coherent plane waves with equal amplitudes $E_0$ interfere. Wave 1 has phase 0, and Wave 2 has phase $\phi$.
@@ -777,7 +793,7 @@ c) For what values of $\phi$ is the intensity minimum?
 d) Plot the intensity as a function of $\phi$ from 0 to $4\pi$
 ```
 
-```{admonition} Solution to Problem A.2
+```{note} Solution to Problem A.2
 :class: dropdown
 
 a) $E_{\text{total}} = E_0(1 + e^{i\phi}) = E_0(1 + \cos\phi + i\sin\phi)$
@@ -795,7 +811,7 @@ d) $I(\phi) = I_0 \cos^2(\phi/2)$ where $I_0 = 4E_0^2$ is the maximum intensity.
 
 ### A.12.3 Complex Refractive Index
 
-```{admonition} Problem A.3
+```{note} Problem A.3
 :class: exercise
 
 A material has refractive index $\tilde{n} = 1.6 + 0.05i$ at wavelength $\lambda_0 = 600$ nm.
@@ -805,7 +821,7 @@ c) How far does light travel before its intensity drops to 1/e of its initial va
 d) What fraction of the intensity remains after traveling 10 μm?
 ```
 
-```{admonition} Solution to Problem A.3
+```{note} Solution to Problem A.3
 :class: dropdown
 
 a) Phase velocity: $v = c/n = 3 \times 10^8 / 1.6 = 1.875 \times 10^8$ m/s
@@ -821,7 +837,7 @@ d) After 10 μm: $I/I_0 = e^{-\alpha \times 10^{-5}} = e^{-10.47} = 2.8 \times 1
 
 ### A.12.4 Polarization
 
-```{admonition} Problem A.4
+```{note} Problem A.4
 :class: exercise
 
 Light is initially polarized at 30° to the x-axis: $\vec{E}_0 = E_0(\cos 30° \hat{x} + \sin 30° \hat{y})$.
@@ -830,7 +846,7 @@ b) This light passes through a half-wave plate with fast axis at 45°. Find the 
 c) What angle does the final polarization make with the x-axis?
 ```
 
-```{admonition} Solution to Problem A.4
+```{note} Solution to Problem A.4
 :class: dropdown
 
 a) $\vec{E}_0 = E_0(\frac{\sqrt{3}}{2}\hat{x} + \frac{1}{2}\hat{y})$
@@ -865,7 +881,7 @@ The development of complex numbers and their application to physics is a fascina
 
 Complex numbers in optics connect to many other areas of physics and mathematics:
 
-```{admonition} Interdisciplinary Connections
+```{note} Interdisciplinary Connections
 **Quantum Mechanics**: The wavefunction $\psi$ is complex, and the probability density is $|\psi|^2$—exactly analogous to optical intensity.
 
 **Signal Processing**: Fourier transforms, filters, and modulation all use complex exponentials, directly paralleling Fourier optics.
