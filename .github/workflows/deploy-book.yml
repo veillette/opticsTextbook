@@ -113,36 +113,58 @@ jobs:
           restore-keys: |
             myst-build-
 
-      - name: Build PDF, DOCX, and md Assets
+      - name: Build PDF exports with Typst
         run: |
-          echo "Build PDF Assets, docx, and md"
-          npx myst build -a
+          echo "Building PDF exports using Typst"
+          npx myst build --pdf
         env:
           NODE_OPTIONS: "--max-old-space-size=8192"
 
-      - name: Verify PDF/DOCX exports were created
+      - name: Verify PDF exports were created
         run: |
-          echo "=== Verifying exports were generated ==="
+          echo "=== Verifying PDF exports were generated ==="
           echo ""
           echo "Full textbook PDF:"
           ls -lh exports/textbook.pdf 2>/dev/null && echo "✅ Found" || echo "❌ NOT FOUND"
           echo ""
-          echo "Full textbook DOCX:"
-          ls -lh exports/textbook.docx 2>/dev/null && echo "✅ Found" || echo "⚠️  Not found (expected)"
+          echo "Chapter PDFs:"
+          ls -lh exports/chapters/*.pdf 2>/dev/null || echo "❌ No chapter PDFs found"
           echo ""
-          echo "Chapter exports:"
-          ls -lh exports/chapters/ 2>/dev/null || echo "❌ chapters directory not found"
-          echo ""
-          pdf_count=$(ls -1 exports/chapters/*.pdf 2>/dev/null | wc -l)
-          docx_count=$(ls -1 exports/chapters/*.docx 2>/dev/null | wc -l)
-          echo "Chapter PDFs: $pdf_count"
-          echo "Chapter DOCX: $docx_count"
+          pdf_count=$(find exports -name "*.pdf" 2>/dev/null | wc -l)
+          echo "Total PDF files: $pdf_count"
 
-      - name: Record PDF/DOCX build time
+      - name: Record PDF build time
         run: |
           STEP_END_TIME=$(date +%s)
           DURATION=$((STEP_END_TIME - STEP_START_TIME))
           echo "PDF_BUILD_TIME=$DURATION" >> $GITHUB_ENV
+          echo "STEP_START_TIME=$(date +%s)" >> $GITHUB_ENV
+
+      - name: Build DOCX exports
+        run: |
+          echo "Building DOCX exports"
+          npx myst build --docx
+        env:
+          NODE_OPTIONS: "--max-old-space-size=8192"
+
+      - name: Verify DOCX exports were created
+        run: |
+          echo "=== Verifying DOCX exports were generated ==="
+          echo ""
+          echo "Full textbook DOCX:"
+          ls -lh exports/textbook.docx 2>/dev/null && echo "✅ Found" || echo "⚠️  Not found (expected - no combined DOCX)"
+          echo ""
+          echo "Chapter DOCX files:"
+          ls -lh exports/chapters/*.docx 2>/dev/null || echo "❌ No chapter DOCX found"
+          echo ""
+          docx_count=$(find exports -name "*.docx" 2>/dev/null | wc -l)
+          echo "Total DOCX files: $docx_count"
+
+      - name: Record DOCX build time
+        run: |
+          STEP_END_TIME=$(date +%s)
+          DURATION=$((STEP_END_TIME - STEP_START_TIME))
+          echo "DOCX_BUILD_TIME=$DURATION" >> $GITHUB_ENV
           echo "STEP_START_TIME=$(date +%s)" >> $GITHUB_ENV
 
       - name: Generate PWA Icons
@@ -319,7 +341,8 @@ jobs:
           add_row "Setup (Pages + Node.js)" ${SETUP_TIME:-0}
           add_row "npm install" ${NPM_INSTALL_TIME:-0}
           add_row "Setup Typst" ${TYPST_SETUP_TIME:-0}
-          add_row "Build PDF/DOCX exports (Typst)" ${PDF_BUILD_TIME:-0}
+          add_row "Build PDF exports (Typst)" ${PDF_BUILD_TIME:-0}
+          add_row "Build DOCX exports" ${DOCX_BUILD_TIME:-0}
           add_row "Generate PWA icons" ${ICON_GEN_TIME:-0}
           add_row "Build HTML site" ${HTML_BUILD_TIME:-0}
           add_row "Setup PWA" ${PWA_SETUP_TIME:-0}
@@ -356,7 +379,8 @@ jobs:
 
           # Create sorted list of times (simple approach)
           {
-            echo "${PDF_BUILD_TIME:-0} Build PDF/DOCX exports (Typst)"
+            echo "${PDF_BUILD_TIME:-0} Build PDF exports (Typst)"
+            echo "${DOCX_BUILD_TIME:-0} Build DOCX exports"
             echo "${HTML_BUILD_TIME:-0} Build HTML site"
             echo "${NPM_INSTALL_TIME:-0} npm install"
             echo "${TYPST_SETUP_TIME:-0} Setup Typst"
