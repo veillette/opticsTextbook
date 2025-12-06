@@ -1,3 +1,8 @@
+---
+tags:
+  - resources
+---
+
 # Download Options
 
 ## Full Textbook

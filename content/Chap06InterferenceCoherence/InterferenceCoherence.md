@@ -1,4 +1,10 @@
 ---
+tags:
+  - interference
+  - wave-optics
+  - intermediate
+  - theory
+  - experimental
 downloads:
   - id: chapter-06-pdf
     title: Download Chapter PDF

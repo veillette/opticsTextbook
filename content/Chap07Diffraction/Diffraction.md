@@ -9,6 +9,12 @@ kernelspec:
   display_name: Python 3
   language: python
   name: python3
+tags:
+  - diffraction
+  - wave-optics
+  - advanced
+  - theory
+  - experimental
 downloads:
   - id: chapter-07-pdf
     title: Download Chapter PDF

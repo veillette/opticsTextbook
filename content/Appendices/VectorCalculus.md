@@ -1,3 +1,10 @@
+---
+tags:
+  - mathematics
+  - reference
+  - electromagnetic-theory
+---
+
 (appendix:vector-calculus)=
 # Appendix D: Vector Calculus for Electromagnetic Fields
 

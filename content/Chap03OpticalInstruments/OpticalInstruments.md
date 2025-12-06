@@ -1,4 +1,8 @@
 ---
+tags:
+  - optical-instruments
+  - intermediate
+  - applications
 downloads:
   - id: chapter-03-pdf
     title: Download Chapter PDF
