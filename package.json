@@ -51,7 +51,10 @@
     "validate-enhanced": "python3 scripts/validate_references_enhanced.py",
     "validate-enhanced-quiet": "python3 scripts/validate_references_enhanced.py --quiet",
     "lint": "python3 scripts/lint_myst_markdown.py",
-    "lint:fix": "python3 scripts/lint_myst_markdown.py --fix"
+    "lint:fix": "python3 scripts/lint_myst_markdown.py --fix",
+    "lint:equations": "python3 scripts/lint_equation_labels.py",
+    "lint:equations:fix": "python3 scripts/lint_equation_labels.py --fix",
+    "lint:equations:verbose": "python3 scripts/lint_equation_labels.py --verbose"
   },
   "devDependencies": {
     "husky": "^9.1.7"
