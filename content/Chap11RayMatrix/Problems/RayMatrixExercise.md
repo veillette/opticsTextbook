@@ -28,7 +28,7 @@ Thick lens geometry showing the two curved surfaces with vertices V₁ and V₂ 
 - **a)** Derive that the transfer matrix between the surfaces through the two vertices of the thick lens is given by:
 
 ```{math}
-:label: eq:ray:thick-lens-vertex-matrix
+:label: eq:ray:thickLensVertexMatrix
 \begin{align*}
 {\cal L}_{V_2V_1} =
 \left( \begin{array}{cc}1 - k_2 \frac{d}{n} & -k_1 -k_2 + k_1 k_2 \frac{d}{n} \\\frac{d}{n} & 1-k_1 \frac{d}{n}
@@ -53,7 +53,7 @@ Thick lens with principle planes.
 The transformation of a ray from the primary principle plane ${\cal H}_1$ to the secondary principle plane ${\cal H}_2$ is:
 
 ```{math}
-:label: eq:ray:principal-plane-transform
+:label: eq:ray:principalPlaneTransform
 \left( \begin{array}{c}\alpha_1 \\y_1
 \end{array}\right) = {\cal L}_{{\cal H}_1{\cal H}_2} \left( \begin{array}{c}\alpha_2 \\y_2
 \end{array}\right),
@@ -67,10 +67,10 @@ where
 \end{align*}
 ```
 
-- **c)** By using the following abbreviation for the matrix {eq}`eq:ray:thick-lens-vertex-matrix`:
+- **c)** By using the following abbreviation for the matrix {eq}`eq:ray:thickLensVertexMatrix`:
 
 ```{math}
-:label: eq:ray:matrix-abbreviation
+:label: eq:ray:matrixAbbreviation
 \begin{align*}
 \left( \begin{array}{cc}1 - k_2 \frac{d}{n} & -k_1 -k_2 + k_1 k_2 \frac{d}{n} \\\frac{d}{n} & 1-k_1 \frac{d}{n}
 \end{array}\right) = \left(
@@ -81,7 +81,7 @@ where
 derive that:
 
 ```{math}
-:label: eq:ray:principal-plane-matrix-expanded
+:label: eq:ray:principalPlaneMatrixExpanded
 \begin{align*}
 {\cal L}_{{\cal H}_2{\cal H}_1} = \left( \begin{array}{cc}a_{11} + T_1 a_{12} & \; a_{12} \\T_2 (a_{11} +T_1 a_{12}) + a_{21} + T_1 a_{22} & \; a_{22} + T_2 a_{12}
 \end{array}\right)
@@ -102,7 +102,7 @@ T_1&= \frac{1-a_{11}}{a_{12}}
 With the solutions for $T_1$ and $T_2$ the system matrix between the principal planes becomes:
 
 ```{math}
-:label: eq:ray:principal-plane-matrix
+:label: eq:ray:principalPlaneMatrix
 {\cal L}_{{\cal H}_2{\cal H}_1} = \left( \begin{array}{cc}1 & a_{12} \\0 & 1
 \end{array}\right)
 ```

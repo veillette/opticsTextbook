@@ -21,7 +21,7 @@ downloads:
 - Name the main applications of fiber optics.
 ```
 
-(sec:fiber:intro-fib)=
+(sec:fiber:introFib)=
 ## Introduction to fiber optics
 
 This chapter introduces the field of fiber optics. In comparison to free space optics considered so far, fibers confine light to a small volume, which prevents power loss by diffraction. As such, optical signals can propagate over large distances enabling, among others, fast and reliable communication all over the world.
@@ -33,7 +33,7 @@ In this chapter we will restrict ourselves to the cylindrical step-index fiber t
 Light ray transmission through a cylindrical step-index fiber. These fibers have a core, cladding and often a jacket. For $n_1>n_2$ total internal reflection may occur, such that the light remains confined to the fiber.
 ```
 
-This chapter can be subdivided in three parts in which we move gradually from theory to application. Based on the step index fiber, this chapter first discusses light confinement by total internal reflection. Then, in {ref}`sec:fiber:modes`, the concept of modes of light propagating through an optical fiber is introduced. This gives rise to certain figures of merit and leads to the important distinction between ''single mode'' and ''multimode'' fibers, discussed in {ref}`sec:fiber:figures-merit`. Although fiber optics has advantages over free space optics in terms of light propagation, propagation is not ideal. The effects and causes of dispersion and loss are therefore introduced and discussed in {ref}`sec:fiber:dispersion` and {ref}`sec:fiber:loss` respectively.
+This chapter can be subdivided in three parts in which we move gradually from theory to application. Based on the step index fiber, this chapter first discusses light confinement by total internal reflection. Then, in {ref}`sec:fiber:modes`, the concept of modes of light propagating through an optical fiber is introduced. This gives rise to certain figures of merit and leads to the important distinction between ''single mode'' and ''multimode'' fibers, discussed in {ref}`sec:fiber:figuresMerit`. Although fiber optics has advantages over free space optics in terms of light propagation, propagation is not ideal. The effects and causes of dispersion and loss are therefore introduced and discussed in {ref}`sec:fiber:dispersion` and {ref}`sec:fiber:loss` respectively.
 
 After this theoretical view on optical fibers, we zoom out a little to introduce various other fiber types in {ref}`sec:fiber:types`, since the step-index fiber is not the only implementation of optical fibers (although it is the most common). In {ref}`sec:fiber:connections`, we discuss how optical fibers can be connected to the outside world. What this outside world may consist of is shortly discussed in {ref}`sec:fiber:components`. This section introduces common fiber optic components used to manipulate light propagating through fibers enabling us to build useful setups and applications. Some of these applications are elaborated on in {ref}`sec:fiber:applications`. This section also provides an outlook in the possible directions the rich field of fiber optics is headed.
 
@@ -48,7 +48,7 @@ Now consider Snell's law for the core-cladding boundary in {numref}`fig:fiber:ti
 n_1 \sin\left(\theta_{\text{i}}\right) = n_2 \sin\left(\theta_{\text{cl}}\right).
 \end{align*}
 ```
-For angles $\theta_{\text{i}}$ in excess of the angle $\theta_{\text{i,c}}=\arcsin(n_2/n_1)$ refraction no longer occurs (the maximum value of a sine is 1) and light is totally reflected back into the core. Therefore we will refer to $\theta_{\text{i,c}}$ as the internal critical angle. This automatically implies that the fiber does not accept light from all directions, which leads to the definition of the (external) critical angle $\bar{\theta}_{\text{e,c}}$. This angle will be further discussed in {ref}`sec:fiber:figures-merit`. For $\text{SiO}_2$, in which $n_2\approx 1.444$ at telecom wavelengths ($\lambda=1550 \text{nm}$), TIR occurs if $\theta_1>85.7^{\circ}$ if the core $n_1=1.448$. Because this $\theta_{\text{i}}$ is close to $90^{\circ}$, fibers with $n_1\approx n_2$ are also referred to as ''weakly guiding''.
+For angles $\theta_{\text{i}}$ in excess of the angle $\theta_{\text{i,c}}=\arcsin(n_2/n_1)$ refraction no longer occurs (the maximum value of a sine is 1) and light is totally reflected back into the core. Therefore we will refer to $\theta_{\text{i,c}}$ as the internal critical angle. This automatically implies that the fiber does not accept light from all directions, which leads to the definition of the (external) critical angle $\bar{\theta}_{\text{e,c}}$. This angle will be further discussed in {ref}`sec:fiber:figuresMerit`. For $\text{SiO}_2$, in which $n_2\approx 1.444$ at telecom wavelengths ($\lambda=1550 \text{nm}$), TIR occurs if $\theta_1>85.7^{\circ}$ if the core $n_1=1.448$. Because this $\theta_{\text{i}}$ is close to $90^{\circ}$, fibers with $n_1\approx n_2$ are also referred to as ''weakly guiding''.
 
 Since the angle of reflection equals the angle of incidence upon reflection, TIR occurs at every core-cladding interface and the light remains confined to the core (strictly speaking, this argument only holds for straight fibers. The influence of bends in fibers is discussed in {ref}`sec:fiber:loss`). Because optical losses in $\text{SiO}_2$ are small (in the order of $0.1\text{dB/km}$,[^1] see {ref}`sec:fiber:loss`), this implies fibers can easily carry optical signals over distances in the order of several kilometers without considerable loss.
 
@@ -58,13 +58,13 @@ Since the angle of reflection equals the angle of incidence upon reflection, TIR
 Although some of the properties of optical fibers can be understood from ray optics, the exact propagation of light through fibers is described by Maxwell's equations. These give rise to certain modes that propagate through fibers, electromagnetic (EM) fields that have a constant distribution and polarization along the fiber axis. All possible EM-fields in fibers can be described as a superposition of fiber modes, like a musical tone played by an instrument can be described using a superposition of a note and its overtones.
 
 ```{figure} Images/10_02_wavefront_mirror_waveguide.png
-:name: fig:fiber:modes-intro
+:name: fig:fiber:modesIntro
 Wavefront transmission through a mirror waveguide. The transmission of light can be described using EM-field modes that only allow specific angles $\theta$.
 ```
 
-To introduce the concept of fiber modes, we consider the planar mirror waveguide in {numref}`fig:fiber:modes-intro`. This waveguide consists of two (perfect) planar mirrors placed in the $(x,z)$-plane in vacuum at positions $y=\pm d/2$ (hence their separation is $d$). Monochromatic light rays with wavelength $\lambda_0$ enter the waveguide under an angle $\bar{\theta}$. They propagate through the waveguide while constantly bouncing back and forth between the mirrors. This waveguide is a simplification from the optical fibers we are considering in this chapter, but it is more straightforward to study. Modes in optical fibers follow from the same considerations and the necessary generalizations are touched upon toward the end of this section.
+To introduce the concept of fiber modes, we consider the planar mirror waveguide in {numref}`fig:fiber:modesIntro`. This waveguide consists of two (perfect) planar mirrors placed in the $(x,z)$-plane in vacuum at positions $y=\pm d/2$ (hence their separation is $d$). Monochromatic light rays with wavelength $\lambda_0$ enter the waveguide under an angle $\bar{\theta}$. They propagate through the waveguide while constantly bouncing back and forth between the mirrors. This waveguide is a simplification from the optical fibers we are considering in this chapter, but it is more straightforward to study. Modes in optical fibers follow from the same considerations and the necessary generalizations are touched upon toward the end of this section.
 
-In order for a light ray to represent a mode, we impose a self-consistency condition that guarantees the invariance of distribution and polarization under propagation. In practice, this boils down to the wave repeating itself after every second bounce. With reference to {numref}`fig:fiber:modes-intro`, the self-consistency condition thus imposes that the phase acquired by the reflected wave traveling from A to C equals the phase acquired by the ''non-reflected'' wave traveling from A to the virtual point B up to an integer multiple of $2\pi$. Of course, as the mirrors are considered perfect, both reflections add a phase shift of $\pi$, such that
+In order for a light ray to represent a mode, we impose a self-consistency condition that guarantees the invariance of distribution and polarization under propagation. In practice, this boils down to the wave repeating itself after every second bounce. With reference to {numref}`fig:fiber:modesIntro`, the self-consistency condition thus imposes that the phase acquired by the reflected wave traveling from A to C equals the phase acquired by the ''non-reflected'' wave traveling from A to the virtual point B up to an integer multiple of $2\pi$. Of course, as the mirrors are considered perfect, both reflections add a phase shift of $\pi$, such that
 ```{math}
 \begin{align*}
 \Delta\phi=\frac{2\pi |AC|}{\lambda_0}-2\pi-\frac{2\pi |AB|}{\lambda_0}=2\pi q,\quad q=0,1,2,\dots
@@ -78,7 +78,7 @@ or
 ```
 Using elementary geometry and the relation $\cos(2\bar{\theta})=1-2\sin^2(\bar{\theta})$, it can be shown that $|AC|-|AB|=2d\sin(\bar{\theta})$ and thus the self-consistency condition becomes
 ```{math}
-:label: eq:fiber:self-consistency-condition
+:label: eq:fiber:selfConsistencyCondition
 \begin{align*}
 	\sin(\bar{\theta}_m)=m\frac{\lambda_0}{2d}.
 \end{align*}
@@ -86,7 +86,7 @@ Using elementary geometry and the relation $\cos(2\bar{\theta})=1-2\sin^2(\bar{\
 
 We thus find that only certain bouncing angles $\bar{\theta}_m$ are allowed by
 the self-consistency condition and these are referred to as the $m$ modes of
-propagation. From {eq}`eq:fiber:self-consistency-condition` we can draw the
+propagation. From {eq}`eq:fiber:selfConsistencyCondition` we can draw the
 important conclusion that the number of modes in the waveguide is limited,
 because $\max(\sin(\bar{\theta}_m))=1$. This implies that:
 - the maximum number of modes $M$ possibly propagating through the waveguide equals
@@ -99,7 +99,7 @@ where the *floor*-function rounds the fraction $2d/\lambda$ down to the nearest 
 - for $M=1$, the waveguide is a single mode waveguide, and if $M>1$ the waveguide is said to be multimode;
 - if $M=0$, no light can propagate. This defines $\lambda_{\text{c}}=2d$, the cut-off wavelength, as the largest wavelength for propagation, i.e., if $\lambda_0>\lambda_{\text{c}}$ no propagation occurs.
 
-To obtain the field distributions of the EM-fields propagating through the waveguide, consider a wave propagating along the waveguide in $z$-direction, which is polarized in $x$-direction. It should be realized that such a wave actually consists of two superposed waves, one in the upward and one in the downward direction due to internal reflection of the wave fronts, see {numref}`fig:fiber:mirror-modes`. In case the up-propagating wave is described by
+To obtain the field distributions of the EM-fields propagating through the waveguide, consider a wave propagating along the waveguide in $z$-direction, which is polarized in $x$-direction. It should be realized that such a wave actually consists of two superposed waves, one in the upward and one in the downward direction due to internal reflection of the wave fronts, see {numref}`fig:fiber:mirrorModes`. In case the up-propagating wave is described by
 ```{math}
 \begin{align*}
 E_{\text{up}}=A_m\exp(-ik_{y,m}y-ik_{z,m}z),
@@ -107,7 +107,7 @@ E_{\text{up}}=A_m\exp(-ik_{y,m}y-ik_{z,m}z),
 ```
 the down-propagating wave is described by
 ```{math}
-:label: eq:fiber:down-propagating-wave
+:label: eq:fiber:downPropagatingWave
 \begin{align*}
 	E_{\text{down}}=A_m\exp(i[m-1]\pi)\exp(+ik_{y,m}y-ik_{z,m}z).
 \end{align*}
@@ -122,7 +122,7 @@ E_x(y,z)= E_{\text{up}}+E_{\text{down}}= E_0 u_m(y)\exp(-ik_{z,m}z)
 in which $E_0$ is the field's amplitude and the mode distributions
 
 ```{math}
-:label: eq:fiber:mode-distributions
+:label: eq:fiber:modeDistributions
 \begin{align*}
 u_m(y)=
 \begin{cases}
@@ -132,8 +132,8 @@ u_m(y)=
 \end{align*}
 ```
 
-The first few of these distributions are plotted in {numref}`fig:fiber:mirror-modes`, from which it is observed that $m$ corresponds to the
-amount of maxima in the distribution. The pre-factors $\sqrt{2/d}$ in {eq}`eq:fiber:mode-distributions` are chosen such that the functions are
+The first few of these distributions are plotted in {numref}`fig:fiber:mirrorModes`, from which it is observed that $m$ corresponds to the
+amount of maxima in the distribution. The pre-factors $\sqrt{2/d}$ in {eq}`eq:fiber:modeDistributions` are chosen such that the functions are
 orthonormal, meaning
 ```{math}
 \begin{align*}
@@ -147,7 +147,7 @@ orthonormal, meaning
 In practice this implies that all possible light pulses transmitting through the waveguide can be written as a linear combination, or superposition, of modes. As stressed before, this is analogous to tones played by a musical instrument.
 
 ```{figure} Images/10_03_mode_waveguide.png
-:name: fig:fiber:mirror-modes
+:name: fig:fiber:mirrorModes
 The first five modes ($m=1$ through $5$) in the mirror waveguide.
 ```
 
@@ -165,19 +165,19 @@ Circular waveguide cross-section showing the cylindrical geometry of optical fib
 Modes in step-index fibers. (a) Apart from the linear self-consistency condition, modes in optical fibers also follow from circumferential self-consistency. This imposes that rays representing a mode should bounce around the core an integer number of steps during one up-down cycle of the rays. (b) Collection of step-index fiber EM-field modes. $m$ represents the linear self-consistency condition and $l$ the circumferential self-consistency condition.
 ```
 
-(sec:fiber:figures-merit)=
+(sec:fiber:figuresMerit)=
 ## Fiber parameters
 
 Optical fibers can be characterized by a number of parameters. Here we list a selection of these numbers.
 - **$\Delta$-parameter** -- The $\Delta$-parameter is directly related to the relative difference in core and cladding refractive index, see {numref}`fig:fiber:tir`. It is defined as
 ```{math}
-:label: eq:fiber:delta-parameter
+:label: eq:fiber:deltaParameter
 \Delta=\frac{n_1^2-n_2^2}{2n_1^2}\approx \frac{n_1-n_2}{n_1}.
 ```
 The approximation, which entails the relative difference of $n_1$ and $n_2$ holds for the weakly guiding fibers under consideration in this chapter. It follows from setting $n_2=n_1-\Delta n$ and neglecting terms of order $\Delta n^2$. For $n_1=1.448$ and $n_2=1.444$, $\Delta=5.5\times 10^{-3}$.
 - **Numerical aperture (NA)** -- The NA relates the fiber and the (external) critical angle under which it accepts (or emits) light, $\bar{\theta}_{\text{e,c}}$. That is, the maximum value of $\bar{\theta}_{\text{e}}$ in {numref}`fig:fiber:tir` such that TIR occurs. The NA for fibers is defined as
 ```{math}
-:label: eq:fiber:numerical-aperture
+:label: eq:fiber:numericalAperture
 \begin{align*}
 	\mathrm{NA}=\sin\left(\bar{\theta}_{\text{e,c}}\right)=\sqrt{n_1^2-n_2^2}
 \end{align*}
@@ -195,7 +195,7 @@ in which we use that $\bar{\theta}_{\text{i,c}}=\pi/2-\arcsin(n_2/n_1)=\arccos(n
 
 - **$V$-number** – The $V$-number, or fiber parameter, governs the number of modes supported in the fiber. It is defined as
 	```{math}
-	:label: eq:fiber:v-number
+	:label: eq:fiber:vNumber
 	\begin{align*}
 		V=\frac{\pi d}{\lambda_0}\mathrm{NA}.
 	\end{align*}
@@ -218,9 +218,9 @@ Light propagating though fibers often suffers from dispersion, or pulse broadeni
 Modal dispersion is relevant for MMFs, in which several modes of light are
 present simultaneously. As discussed in {ref}`sec:fiber:modes`, light rays bounce
 through a fiber or any other waveguide. To introduce modal dispersion we refer
-back to the planar mirror waveguide depicted in {numref}`fig:fiber:modes-intro`.
+back to the planar mirror waveguide depicted in {numref}`fig:fiber:modesIntro`.
 Since the rays of higher-order modes are at larger angles $\bar{\theta}_m$ (see
-{eq}`eq:fiber:self-consistency-condition`) than lower-order modes, the
+{eq}`eq:fiber:selfConsistencyCondition`) than lower-order modes, the
 higher-order modes have a longer path length. This means that the effective
 propagation velocity $v_z$, the velocity at which the wave travels in $z$
 -direction, decreases with increasing mode number. For the planar mirror
@@ -231,7 +231,7 @@ v_{z,m}=c\cos(\bar{\theta}_m)=c\sqrt{1-\left(m\frac{\lambda_0}{2d}\right)^2}
 \end{align*}
 ```
 
-Here we used that $\cos^2(\theta)+\sin^2(\theta)=1$ along with {eq}`eq:fiber:self-consistency-condition`.
+Here we used that $\cos^2(\theta)+\sin^2(\theta)=1$ along with {eq}`eq:fiber:selfConsistencyCondition`.
 
 Now consider an infinitely short pulse that consists of light in the $i^{\text{th}}$ and the $j^{\text{th}}$ mode only, with $i<j$. For the sake of the argument, we still presume that the light is monochromatic, although in reality this is not the case (see below). Then these modes travel in $z$-direction with a velocity difference
 ```{math}
@@ -241,16 +241,16 @@ Now consider an infinitely short pulse that consists of light in the $i^{\text{t
 ```
 Due to the velocity difference, the difference in arrival time of the two modes at the end of the waveguide of length $L$ is
 ```{math}
-:label: eq:fiber:mirror-waveguide-dispersion
+:label: eq:fiber:mirrorWaveguideDispersion
 \begin{align*}
 	\Delta\tau=\frac{L}{\Delta v}=\frac{L}{c\left(\sqrt{1-\left(i\frac{\lambda_0}{2d}\right)^2}-\sqrt{1-\left(j\frac{\lambda_0}{2d}\right)^2}\right)},
 \end{align*}
 ```
-which is depicted in {numref}`fig:fiber:mirror-dispersion` for several combinations of $i$ and $j$. Thus, the infinitely short pulse that we started with has broadened to a ''width'' $\Delta\tau$ at the end of the waveguide. This limits the signal pulse repetition rate to $1/\Delta\tau$: if the rate is increased beyond this value, consecutive pulses start to overlap and information is lost.
+which is depicted in {numref}`fig:fiber:mirrorDispersion` for several combinations of $i$ and $j$. Thus, the infinitely short pulse that we started with has broadened to a ''width'' $\Delta\tau$ at the end of the waveguide. This limits the signal pulse repetition rate to $1/\Delta\tau$: if the rate is increased beyond this value, consecutive pulses start to overlap and information is lost.
 
 ```{figure} Images/10_06_mirror_dispersion.png
-:name: fig:fiber:mirror-dispersion
-Modal dispersion in the mirror waveguide, see {eq}`eq:fiber:mirror-waveguide-dispersion`
+:name: fig:fiber:mirrorDispersion
+Modal dispersion in the mirror waveguide, see {eq}`eq:fiber:mirrorWaveguideDispersion`
 ```
 
 In reality, light pulses in multimode waveguides contain many modes and are not infinitely short. However, the same ideas hold: due to modal dispersion the pulse broadens, thereby limiting the rate of information transfer. This is also true for optical fibers. In this case one can calculate for the time delay between the fastest mode (the $(m,l)=(1,0)$ mode) and the slowest mode (mode at the critical angle) that
@@ -265,16 +265,16 @@ Up to this point we have implicitly assumed that the light transmitted through o
 
 Now we consider a signal pulse propagating through a medium. The pulse has a central wavelength $\lambda_0$ and a spectral width $\Delta\lambda$. If the index of refraction is wavelength-dependent, $n=n(\lambda)$, such as in SiO$_2$ , the spectral width of the signal propagating through a fiber results in dispersion. This is due to the fact that the pulse's (group) propagation velocity is imposed by the group refractive index $n_{\text{g}}$ as $v_{\text{g}}=c/n_{\text{g}}$, which in turn depends on $n(\lambda)$ as
 ```{math}
-:label: eq:fiber:group-refractive-index
+:label: eq:fiber:groupRefractiveIndex
 \begin{align*}
 	n_{\text{g}}=n-\lambda\frac{\mathrm{d}n}{\mathrm{d}\lambda}.
 \end{align*}
 ```
 
 Hence all wavelength components present in the pulse travel at slightly
-different velocity and dispersion is the result. From {eq}`eq:fiber:group-refractive-index` we see, however, that the effect only occurs
+different velocity and dispersion is the result. From {eq}`eq:fiber:groupRefractiveIndex` we see, however, that the effect only occurs
 whenever $\mathrm{d}^2n/\mathrm{d}\lambda^2\neq 0$ (NB: if $n$ is constant or of
-the form $n=a\lambda+b$, {eq}`eq:fiber:group-refractive-index` still yields
+the form $n=a\lambda+b$, {eq}`eq:fiber:groupRefractiveIndex` still yields
 a constant group refractive index). This is the case for SiO$_2$ as can be
 observed in {numref}`figFiberDispersion (c).
 
@@ -299,7 +299,7 @@ Due to material dispersion, the change in pulse width after fiber length $L$ is 
 ```
 However, in practice often the dispersion is reported as
 ```{math}
-:label: eq:fiber:material-dispersion
+:label: eq:fiber:materialDispersion
 \begin{align*}
 	D^{\text{mat}}=\frac{\Delta\tau^{\text{mat}}}{L\Delta\lambda}=\frac{\lambda_0}{c}\frac{\mathrm{d}^2n}{\mathrm{d}\lambda^2}
 \end{align*}
@@ -307,7 +307,7 @@ However, in practice often the dispersion is reported as
 in units of $\text{ps}/(\text{km} \cdot \text{nm})$. That is, the increase in pulse width (in $\text{ps}$) per $\text{km}$ of fiber with the source's spectral width in $\text{nm}$. Typical values of this parameter are $10$ to $20\text{ps}/(\text{km}\cdot \text{nm})$.
 
 A second effect of the spectral width of light pulses is that they disperse even
-if light propagates in a single mode. As observed from {eq}`eq:fiber:self-consistency-condition`, the angle $\bar{\theta}_m$ not only
+if light propagates in a single mode. As observed from {eq}`eq:fiber:selfConsistencyCondition`, the angle $\bar{\theta}_m$ not only
 depends on the mode $m$, but also on the wavelength of the light. Therefore, all
 wavelength components of the light will propagate at a slightly
 different $\bar{\theta}_m$. This will cause dispersion in the same fashion as
@@ -316,7 +316,7 @@ relevant for SMFs.
 
 For step-index optical fibers, waveguide dispersion can be calculated as
 ```{math}
-:label: eq:fiber:waveguide-dispersion
+:label: eq:fiber:waveguideDispersion
 \begin{align*}
 	D^{\text{wav}}=-\frac{n_1-n_2}{c\lambda_0}.
 \end{align*}
@@ -324,16 +324,16 @@ For step-index optical fibers, waveguide dispersion can be calculated as
 It should be noted that $D^{\text{wav}}<0$ as $n_1>n_2$ for TIR, see {ref}`sec:fiber:tir`. Typical values of this parameter are $-5$ to $-10\text{ps}/(\text{km}\cdot \text{nm})$.
 
 ```{figure} Images/10_10_dispersion_fiber.png
-:name: fig:fiber:dispersion-si-o2
+:name: fig:fiber:dispersionSiO2
 Material and waveguide dispersion for a SiO$_2$ SMF. Taking the sum of both effects allows to create dispersionless fibers for a wavelength of $1310\text{nm}$
 ```
 
 Dispersion effects may cancel each other or engineered, such that dispersionless
 fibers can be constructed. E.g., for SMFs, in which only material and waveguide
 dispersion play a role, the total dispersion is given
-as $D=D^{\text{mat}}+D^{\text{wav}}$. Notice from {eq}`eq:fiber:material-dispersion` and {eq}`eq:fiber:waveguide-dispersion`
+as $D=D^{\text{mat}}+D^{\text{wav}}$. Notice from {eq}`eq:fiber:materialDispersion` and {eq}`eq:fiber:waveguideDispersion`
 that $D^{\text{mat}}$ and $D^{\text{wav}}$ have an opposite sign and if we plot
-both expressions using SiO$_2$ as fiber material, see {numref}`fig:fiber:dispersion-si-o2`, it is observed that these dispersion effects cancel
+both expressions using SiO$_2$ as fiber material, see {numref}`fig:fiber:dispersionSiO2`, it is observed that these dispersion effects cancel
 at $\lambda_0=1310\text{nm}$. This makes $1310\text{nm}$ a popular wavelength
 for building optical fiber networks.
 
@@ -377,9 +377,9 @@ As can be observed in {numref}`fig:fiber:loss`, fiber losses in SiO$_2$-fibers a
 
 Beside the intrinsic losses of Rayleigh scattering and absorption, losses also occur as a result of extrinsic factors, such as (excessive) bending and coupling.
 
-In case an optical fiber bends, losses may occur if the bending radius is too small. This can be understood from considering the light rays in the fiber. As these travel on straight paths, a bend changes the angle under which the rays hit the core-cladding boundary, see {numref}`fig:fiber:bending-loss`. As such, the ray may reach this boundary under an angle $\theta_{\text{i}}$ below the internal critical angle. As a result some of the light refracts into the cladding and is lost.
+In case an optical fiber bends, losses may occur if the bending radius is too small. This can be understood from considering the light rays in the fiber. As these travel on straight paths, a bend changes the angle under which the rays hit the core-cladding boundary, see {numref}`fig:fiber:bendingLoss`. As such, the ray may reach this boundary under an angle $\theta_{\text{i}}$ below the internal critical angle. As a result some of the light refracts into the cladding and is lost.
 
-Bending may occur on macro-scale ({numref}`fig:fiber:bending-loss` (a)) while intentionally making a fiber bend during installation, or on micro-scale ({numref}`fig:fiber:bending-loss` (b)). The latter may as a result of improper fiber handling, e.g. when the fiber is strained excessively.
+Bending may occur on macro-scale ({numref}`fig:fiber:bendingLoss` (a)) while intentionally making a fiber bend during installation, or on micro-scale ({numref}`fig:fiber:bendingLoss` (b)). The latter may as a result of improper fiber handling, e.g. when the fiber is strained excessively.
 
 To prevent macro-bending losses, the critical radius of fibers should be noted. This parameter is listed in the fiber datasheet. Making bends tighter than this critical radius results in macro-bending losses.
 \begin{figure}[htbp]
@@ -390,18 +390,18 @@ Macro-scale bending loss in optical fibers. When a fiber is bent with too small 
 ```
 
 ```{figure} Images/10_13_bending_loss.png
-:name: fig:fiber:bending-loss
+:name: fig:fiber:bendingLoss
 Bending on (a) macro-scale and (b) micro-scale (exaggerated) generate fiber loss if the internal critical angle is locally exceeded.
 
 ```
 
 Apart from internal fiber losses, losses may also occur while coupling fibers,
-see {numref}`fig:fiber:coupling-loss`. This happens when fiber cores are not
+see {numref}`fig:fiber:couplingLoss`. This happens when fiber cores are not
 aligned properly (they are shifted with respect to each other, placed under an
 angle or there is a gap in between the fibers), when a higher-NA fiber is
 coupled to a fiber with lower NA, or when the core size of the two fibers is
 different. In case of a mismatch in NA, the lower-NA fiber will support less
-modes (see {eq}`eq:fiber:v-number`) and the higher order modes will be lost.
+modes (see {eq}`eq:fiber:vNumber`) and the higher order modes will be lost.
 Apart from these issues with connecting fibers, internal reflections between
 different fiber cores cause losses. These reflections occur whenever the index
 of refraction changes. For each type of coupling loss, the loss factor can be
@@ -409,7 +409,7 @@ easily a few dB, as you can estimate yourself in one of the problems at the end
 of this chapter. Therefore care must be taken to couple fibers properly.
 
 ```{figure} Images/10_14_loss.png
-:name: fig:fiber:coupling-loss
+:name: fig:fiber:couplingLoss
 Collection of situations in which coupling loss occurs. $\delta$ is the misalignment parameter (different in every subfigure).
 ```
 
@@ -420,14 +420,14 @@ Apart from the step index fibers that we have considered up to this point, other
 
 In graded index fibers, the refractive index changes in a continuous fashion over the fiber diameter. At a cost of a more complex fabrication process, the advantage of GRIN fibers over step index fibers is that modal dispersion is less severe.
 
-Another fiber type is the so-called holey fiber, see {numref}`fig:fiber:holey-pbf`. Instead of changing the refractive index using dopants, the cladding of holey fibers contains a carefully designed array of holes containing air, which change the refractive index of the ''cladding'' (part of the fiber with holes) with respect to the ''core'' (part of the fiber without holes). These holes run over the whole length of the fiber. This implies holey fibers can be constructed from a single material.
+Another fiber type is the so-called holey fiber, see {numref}`fig:fiber:holeyPbf`. Instead of changing the refractive index using dopants, the cladding of holey fibers contains a carefully designed array of holes containing air, which change the refractive index of the ''cladding'' (part of the fiber with holes) with respect to the ''core'' (part of the fiber without holes). These holes run over the whole length of the fiber. This implies holey fibers can be constructed from a single material.
 
 ```{figure} Images/10_15_photonic_crystal_fiber_from_nrl.jpg
-:name: fig:fiber:holey-pbf
+:name: fig:fiber:holeyPbf
 SEM micrographs of US Naval Research Laboratory-produced photonic-crystal fiber. (left) The diameter of the solid core at the center of the fiber is $\sim 5\mu \text{m}$, while (right) the diameter of the holes is $4\sim \mu\text{m}$. (Image courtesy of US Naval Research Laboratory / CC BY-SA)
 ```
 
-Related to the holey fiber, the photonic bandgap fiber also contain air holes, see {numref}`fig:fiber:holey-pbf`. However, in PBFs these holes are arranged in a fashion that a bandgap is created in the cladding. Such a bandgap does not allow light of certain wavelength(s) to transmit through the cladding, thus confining light of this wavelength to the core. This is fundamentally different from fibers based on changes in refractive index. Where the latter only has a cut-off wavelength above which no propagation occurs, PBFs only confine light of a narrow wavelength band with a typical width of a few tens of nanometres.
+Related to the holey fiber, the photonic bandgap fiber also contain air holes, see {numref}`fig:fiber:holeyPbf`. However, in PBFs these holes are arranged in a fashion that a bandgap is created in the cladding. Such a bandgap does not allow light of certain wavelength(s) to transmit through the cladding, thus confining light of this wavelength to the core. This is fundamentally different from fibers based on changes in refractive index. Where the latter only has a cut-off wavelength above which no propagation occurs, PBFs only confine light of a narrow wavelength band with a typical width of a few tens of nanometres.
 
 Apart from wavelength, light also carries the property of polarization. In the fiber types discussed so far, no measures are taken to preserve the polarization of the light transmitting through the fiber. Therefore, crosstalk may occur between light transmitted in different polarizations as a result of, e.g., bends in the fiber. This is not a problem if the fibers are used in applications in which only the intensity of the transmitted light is considered, e.g., in telecommunication, in which information is stored in binary pulses that are either on (logical $1$) or off (logical $0$). However, in other applications such as quantum key distribution, information is stored in the polarization of the light: horizontal or vertical.
 
@@ -461,7 +461,7 @@ There is many types of connector. We report on the main ones here.
 
 **Multi-position optical (MPO) connector** -- The multi-position optical connector, also known under its trade name Multi-fiber Termination Push-on (MTP) connector, is designed for connecting MPO fibers containing $12$ or $24$ optical fibers in one bundle. Such fibers are often used for high-bandwidth optical parallel connections in, e.g., data centers and servers.
 
-**Physical contact (PC)** -- All of the above connectors are available in three forms of physical contact of the ferule, see {numref}`fig:fiber:pc`. PC indicates that the connectors are designed such that fibers are brought into physical contact upon coupling a connector to a photonic device or another connector. As a result of polishing, the air gap in a fiber connection is diminished, thus improving the transmission of light through the connection (and reducing the back-reflection). Ordinary PC connectors have a back reflection below $-40\text{dB}$. As variations, ultra-physical contact (UPC, connector colored blue) and angled physical contact (APC, colored green) connectors are available. UPC connectors have a finer polish which decreases back reflection to below $-50\text{dB}$. APC are polished under an angle of $8^{\circ}$, which changes the direction of the reflected light. As such, back-reflection of less than $-60\text{dB}$ is achieved. Improving physical contact comes with increased cost: PC connectors are cheapest, and UPC connectors most expensive of the three. Importantly, it should be noted that PC and UPC connectors are compatible, whereas APC connectors are incompatible with both. Connecting PC and APC fibers leads to a large air gap between the fibers, see {numref}`fig:fiber:coupling-loss`-(c), and thus to large losses.
+**Physical contact (PC)** -- All of the above connectors are available in three forms of physical contact of the ferule, see {numref}`fig:fiber:pc`. PC indicates that the connectors are designed such that fibers are brought into physical contact upon coupling a connector to a photonic device or another connector. As a result of polishing, the air gap in a fiber connection is diminished, thus improving the transmission of light through the connection (and reducing the back-reflection). Ordinary PC connectors have a back reflection below $-40\text{dB}$. As variations, ultra-physical contact (UPC, connector colored blue) and angled physical contact (APC, colored green) connectors are available. UPC connectors have a finer polish which decreases back reflection to below $-50\text{dB}$. APC are polished under an angle of $8^{\circ}$, which changes the direction of the reflected light. As such, back-reflection of less than $-60\text{dB}$ is achieved. Improving physical contact comes with increased cost: PC connectors are cheapest, and UPC connectors most expensive of the three. Importantly, it should be noted that PC and UPC connectors are compatible, whereas APC connectors are incompatible with both. Connecting PC and APC fibers leads to a large air gap between the fibers, see {numref}`fig:fiber:couplingLoss`-(c), and thus to large losses.
 
 ```{figure} Images/10_17_contact.png
 :name: fig:fiber:pc
@@ -475,7 +475,7 @@ Now that a solid background on the topic of optical fibers has been established,
 
 In order to couple light into or out of fiber setups from free space, collimators are used as a gateway. Collimators contain a positive lens and are attached to a fiber with its end placed in one of its focal points. As such, a collimated beam of light, such as laser light, can be coupled into the fiber. The opposite process can be used to couple light out of the fiber setup into free space and yields a collimated beam. This is illustrated in {numref}`fig:fiber:collimator`. In case the collimator is used to couple light out of a fiber, the beam width (half the beam diameter) of the resulting collimated beam can be reasonably approximated as
 ```{math}
-:label: eq:fiber:collimator-beam-width
+:label: eq:fiber:collimatorBeamWidth
 \begin{align*}
 	w_{\text{coll}}=f_{\text{coll}}\mathrm{NA},
 \end{align*}
@@ -485,7 +485,7 @@ where $f_{\text{coll}}$ is the focal length of the collimating
 lens. $w_{\text{coll}}$ is in the order of $1\text{mm}$ for a typical fiber NA
 of $0.1$ and an $f_{\text{coll}}=1\text{cm}$. On the other hand, it should be
 realized that upon coupling light into a fiber from a collimated beam, the (
-incoming) beam width should be smaller the value resulting from {eq}`eq:fiber:collimator-beam-width`. If the beam is broader, some light will not
+incoming) beam width should be smaller the value resulting from {eq}`eq:fiber:collimatorBeamWidth`. If the beam is broader, some light will not
 couple into the fiber and is therefore lost. This results
 from $\bar{\theta}_{\text{e,c}}$ (see {numref}`fig:fiber:tir`) being exceeded by
 part of the light beam.
@@ -502,7 +502,7 @@ which light from $N_{\text{in}}$ input channels is redistributed
 over $N_{\text{out}}$ output channels. Couplers are based on the phenomenon of
 evanescent fields. Although light rays are confined to fiber cores, their
 associated EM-fields extend in the fiber cladding, the evanescent field, as
-briefly mentioned in {ref}`sec:fiber:modes` and illustrated in {numref}`fig:fiber:coupler-ev`. If two fiber cores are brought in close proximity, energy
+briefly mentioned in {ref}`sec:fiber:modes` and illustrated in {numref}`fig:fiber:couplerEv`. If two fiber cores are brought in close proximity, energy
 from the evanescent field from light transmitting through the one fiber core
 enters the other fiber's core and continues its path there. The amount of light
 coupling depends only on distance between the two fiber cores and the length
@@ -513,7 +513,7 @@ bidirectional communication over a single fiber, which capacity is therefore
 multiplied by a large factor.
 
 ```{figure} Images/10_19_fused_biconal.png
-:name: fig:fiber:coupler-ev
+:name: fig:fiber:couplerEv
 EM-fields in optical fibers are not confined to the core but extend in the cladding. By bringing two fiber cores in close proximity, light can be coupled from one fiber into another.
 ```
 
@@ -532,10 +532,10 @@ Optical attenuation can be achieved by the methods that have so far been conside
 
 For optical amplification, an intense pump signal is coupled into an amplifier, along with the signal-to-be-amplified. The pump can be provided by a laser, or by an electronic signal. Due to stimulated emission in the amplifier, a little of the energy of the pump signal is transferred to the signal-to-be-amplified, thus increasing (amplifying) its intensity. The most well-known fiber amplifier is the Erbium-doped fiber amplifier (EDFA) that works for signals with wavelengths between approximately $1480$ and $1600\text{nm}$, enabling transatlantic optical communication at telecom wavelengths ($\lambda_0=1550\text{nm}$). This fiber is doped with Er-atoms causing stimulated emission. However, fiber amplifiers based on other rare-earth dopants are also available, in particular neodymium, ytterbium, praseodymium, or thulium.
 
-With polarization controllers the polarization of the light within an optical fiber can be influenced. These controllers consist of two or three ''flaps'' around which the fiber is wound, see {numref}`fig:fiber:polarization-controler`. By adjusting the position of these flaps, either manually or electronically, the polarization state of the propagating light is controlled as a result of stresses applied to the fiber. As such each input polarization state can be changed to any output polarization state.
+With polarization controllers the polarization of the light within an optical fiber can be influenced. These controllers consist of two or three ''flaps'' around which the fiber is wound, see {numref}`fig:fiber:polarizationControler`. By adjusting the position of these flaps, either manually or electronically, the polarization state of the propagating light is controlled as a result of stresses applied to the fiber. As such each input polarization state can be changed to any output polarization state.
 
 ```{figure} Images/10_20_fiber_polarization_controller_a1_780.jpg
-:name: fig:fiber:polarization-controler
+:name: fig:fiber:polarizationControler
 A fiber polarization controller (courtesy of [Thorlabs](https://www.thorlabs.com/newgrouppage9.cfm?objectgroup_id=343)).
 ```
 

@@ -9,12 +9,12 @@ This script checks for non-standard labels in MyST markdown files for:
 - Chapter labels
 - Appendix labels
 
-Standard formats:
-  - Figure: fig:chapter-code:descriptive-name
-  - Table: table:chapter-code:descriptive-name
-  - Section: (sec:chapter-code:descriptive-name)=
+Standard formats (using camelCase):
+  - Figure: fig:chapter-code:descriptiveName
+  - Table: table:chapter-code:descriptiveName
+  - Section: (sec:chapter-code:descriptiveName)=
   - Chapter: (chapter:chapter-code)=
-  - Appendix: (appendix:descriptive-name)=
+  - Appendix: (appendix:descriptiveName)=
 
 Chapter codes: basics, geo, inst, pol, wave, coh, diff, laser, adv, fiber, ray
 
@@ -86,59 +86,71 @@ def get_chapter_code(file_path: Path) -> Optional[str]:
 
 
 def normalize_label_name(name: str) -> str:
-    """Convert a label name to the standard format (lowercase, hyphens)."""
-    # Convert underscores to hyphens
-    name = name.replace('_', '-')
-    # Convert camelCase to hyphen-separated
-    name = re.sub(r'([a-z])([A-Z])', r'\1-\2', name)
-    # Convert to lowercase
-    name = name.lower()
-    # Remove any invalid characters (keep letters, numbers, hyphens)
-    name = re.sub(r'[^a-z0-9-]', '-', name)
-    # Remove consecutive hyphens
-    name = re.sub(r'-+', '-', name)
-    # Remove leading/trailing hyphens
-    name = name.strip('-')
-    return name
+    """Convert a label name to the standard format (camelCase)."""
+    # First, split on hyphens and underscores
+    parts = re.split(r'[-_]+', name)
+
+    # If already in camelCase, split on case transitions
+    expanded_parts = []
+    for part in parts:
+        # Split camelCase: "someWord" -> ["some", "Word"]
+        split_parts = re.sub(r'([a-z])([A-Z])', r'\1 \2', part).split()
+        expanded_parts.extend(split_parts)
+
+    # Remove empty parts and convert to lowercase
+    parts = [p.lower() for p in expanded_parts if p]
+
+    if not parts:
+        return ''
+
+    # First part stays lowercase, rest are capitalized
+    result = parts[0]
+    for part in parts[1:]:
+        result += part.capitalize()
+
+    # Remove any remaining invalid characters
+    result = re.sub(r'[^a-zA-Z0-9]', '', result)
+
+    return result
 
 
 def is_valid_figure_label(label: str, chapter_code: str) -> bool:
-    """Check if a figure label follows the standard format."""
+    """Check if a figure label follows the standard format (camelCase)."""
     if chapter_code in ['appendix', 'preface']:
         # Appendix/preface figures can use simplified format
-        pattern = r'^fig:[a-z0-9]([a-z0-9-]*[a-z0-9])?$'
+        pattern = r'^fig:[a-z][a-zA-Z0-9]*$'
     else:
-        pattern = rf'^fig:{chapter_code}:[a-z0-9]([a-z0-9-]*[a-z0-9])?$'
+        pattern = rf'^fig:{chapter_code}:[a-z][a-zA-Z0-9]*$'
     return bool(re.match(pattern, label))
 
 
 def is_valid_table_label(label: str, chapter_code: str) -> bool:
-    """Check if a table label follows the standard format."""
+    """Check if a table label follows the standard format (camelCase)."""
     if chapter_code in ['appendix', 'preface']:
-        pattern = r'^table:[a-z0-9]([a-z0-9-]*[a-z0-9])?$'
+        pattern = r'^table:[a-z][a-zA-Z0-9]*$'
     else:
-        pattern = rf'^table:{chapter_code}:[a-z0-9]([a-z0-9-]*[a-z0-9])?$'
+        pattern = rf'^table:{chapter_code}:[a-z][a-zA-Z0-9]*$'
     return bool(re.match(pattern, label))
 
 
 def is_valid_section_label(label: str, chapter_code: str) -> bool:
-    """Check if a section label follows the standard format."""
+    """Check if a section label follows the standard format (camelCase)."""
     if chapter_code in ['appendix', 'preface']:
-        pattern = r'^sec:[a-z0-9]([a-z0-9-]*[a-z0-9])?$'
+        pattern = r'^sec:[a-z][a-zA-Z0-9]*$'
     else:
-        pattern = rf'^sec:{chapter_code}:[a-z0-9]([a-z0-9-]*[a-z0-9])?$'
+        pattern = rf'^sec:{chapter_code}:[a-z][a-zA-Z0-9]*$'
     return bool(re.match(pattern, label))
 
 
 def is_valid_chapter_label(label: str) -> bool:
     """Check if a chapter label follows the standard format."""
-    pattern = r'^chapter:[a-z0-9]+$'
+    pattern = r'^chapter:[a-z][a-zA-Z0-9]*$'
     return bool(re.match(pattern, label))
 
 
 def is_valid_appendix_label(label: str) -> bool:
-    """Check if an appendix label follows the standard format."""
-    pattern = r'^appendix:[a-z0-9]([a-z0-9-]*[a-z0-9])?$'
+    """Check if an appendix label follows the standard format (camelCase)."""
+    pattern = r'^appendix:[a-z][a-zA-Z0-9]*$'
     return bool(re.match(pattern, label))
 
 

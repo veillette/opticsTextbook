@@ -9,10 +9,10 @@ A Michelson interferometer is illuminated with monochromatic light. One of its m
 
 2. Two sources.
 - **a)** Suppose the two sources
-$S_1$ and $S_2$ are coherent and emit radio waves with a wavelength of 3 m. The two sources are in phase, and they are separated by 3 m. How far should an observer be directly in front of either source (along a perpendicular to $\overline{S_1S_2}$, see {numref}`fig:coh:ex5-1`), to encounter a minimum of irradiance?
+$S_1$ and $S_2$ are coherent and emit radio waves with a wavelength of 3 m. The two sources are in phase, and they are separated by 3 m. How far should an observer be directly in front of either source (along a perpendicular to $\overline{S_1S_2}$, see {numref}`fig:coh:ex51`), to encounter a minimum of irradiance?
 
 ```{figure} ../Images/06_14_1_sources.png
-:name: fig:coh:ex5-1
+:name: fig:coh:ex51
 Geometry for two-source interference problem. Two coherent radio wave sources S₁ and S₂ are separated by 3 m, and an observer is positioned at a perpendicular distance from the baseline connecting the sources. The path difference between waves from the two sources determines whether constructive or destructive interference occurs at the observation point.
 ```
 
@@ -22,10 +22,10 @@ Suppose that the sources are mutually incoherent. There distance is again 3 m an
 
 3. Reflection coating.
 
-A thin planar film with an index of refraction of $n_2=1.5$ is immersed in air with $n_1=1$ as shown in {numref}`fig:coh:ex5-2`. A plane wave with a wavelength of $\lambda=632$ nm hits the film at an angle of incidence of $\theta_1=30$&deg; with respect to the normal on the surface. Some of the light will reflect directly at the air-film interface, and some of the light will make one or several round trips through the film and then adds to the directly reflected light. In this exercise we only consider the directly reflected light at the air-film interface and the light that makes one round trip inside the film.
+A thin planar film with an index of refraction of $n_2=1.5$ is immersed in air with $n_1=1$ as shown in {numref}`fig:coh:ex52`. A plane wave with a wavelength of $\lambda=632$ nm hits the film at an angle of incidence of $\theta_1=30$&deg; with respect to the normal on the surface. Some of the light will reflect directly at the air-film interface, and some of the light will make one or several round trips through the film and then adds to the directly reflected light. In this exercise we only consider the directly reflected light at the air-film interface and the light that makes one round trip inside the film.
 
 ```{figure} ../Images/06_15_2_planar_film.png
-:name: fig:coh:ex5-2
+:name: fig:coh:ex52
 Thin film illuminated by a plane wave.
 ```
 
@@ -36,10 +36,10 @@ What is the smallest film thickness for which we get a maximum reflectance of th
 - **b)** Describe what happens to the reflected field when the film is 237 \text{nm} thick?
 
 
-4. Let a point source $P$ be at $\mathbf{r}_p =(0,0,d)$ where $d>0$ is the distance to a mirror in the $z=0$ plane ({numref}`fig:coh:fig-ex-5-3`).
+4. Let a point source $P$ be at $\mathbf{r}_p =(0,0,d)$ where $d>0$ is the distance to a mirror in the $z=0$ plane ({numref}`fig:coh:figEx53`).
 
 ```{figure} ../Images/06_16_3_point_source_mirror_bw.png
-:name: fig:coh:fig-ex-5-3
+:name: fig:coh:figEx53
 A point source $P$ above a perfect mirror.
 ```
 
@@ -70,7 +70,7 @@ Suppose that the coherence time of the field radiated by the point source is $\t
 Two independently radiating small sources $S_1$ and $S_2$ emits light with center frequency $\omega_c$ and bandwidth $\Delta \omega \ll \omega_c$. (see the figure below). The coherence time of the sources is thus $\tau_c=\Delta \omega$. At a distance $z_1$ a first screen with pinholes $P_1$ and $P_2$ is placed. Far away, at (Fraunhofer) distance $z_2$ from the first screen a second screen is placed. Which of the following statements are true
 
 ```{figure} ../Images/06_17_extended_source_2pinhole.png
-:name: fig:coh:extended-source
+:name: fig:coh:extendedSource
 Two independent small sources $S_1$ and $S_2$ with 2 pinhole and a screen (Exercise 4).
 ```
 

@@ -176,11 +176,11 @@ Use standard LaTeX delimiters for equations:
 
 ## Label Naming Conventions
 
-All labels follow a standardized format for consistency and maintainability.
+All labels follow a standardized format using camelCase for consistency and maintainability.
 
 ### Standard Format
 
-Labels use lowercase letters, numbers, and hyphens (no underscores or mixed case):
+Labels use camelCase: lowercase start with capital letters for subsequent words (no hyphens or underscores):
 
 **Chapter codes**:
 - `basics` - Chapter 1 (Basics)
@@ -197,18 +197,18 @@ Labels use lowercase letters, numbers, and hyphens (no underscores or mixed case
 
 ### Equation Labels
 
-Format: `eq:chapter-code:descriptive-name`
+Format: `eq:chapter-code:descriptiveName`
 
 **Examples**:
 ```markdown
-:label: eq:geo:speed-light-medium
+:label: eq:geo:speedLightMedium
 :label: eq:diff:helmholtz
-:label: eq:fiber:self-consistency-condition
+:label: eq:fiber:selfConsistencyCondition
 ```
 
 ### Figure Labels
 
-Format: `fig:chapter-code:descriptive-name`
+Format: `fig:chapter-code:descriptiveName`
 
 **Examples**:
 ```markdown
@@ -220,7 +220,7 @@ Reflection from a curved mirror.
 ```
 
 ```{figure} Images/fresnel_zones.png
-:name: fig:diff:fresnel-zones
+:name: fig:diff:fresnelZones
 :align: center
 
 Fresnel zone construction.
@@ -229,12 +229,12 @@ Fresnel zone construction.
 
 ### Table Labels
 
-Format: `table:chapter-code:descriptive-name`
+Format: `table:chapter-code:descriptiveName`
 
 **Examples**:
 ```markdown
 ```{table} Sign convention for ray tracing
-:name: table:geo:sign-convention
+:name: table:geo:signConvention
 
 | Quantity | Positive | Negative |
 |----------|----------|----------|
@@ -244,14 +244,14 @@ Format: `table:chapter-code:descriptive-name`
 
 ### Section Labels
 
-Format: `(sec:chapter-code:descriptive-name)=`
+Format: `(sec:chapter-code:descriptiveName)=`
 
 **Examples**:
 ```markdown
-(sec:geo:gaussian-beams)=
+(sec:geo:gaussianBeams)=
 ## Gaussian Beams
 
-(sec:fiber:total-internal-reflection)=
+(sec:fiber:totalInternalReflection)=
 ### Total Internal Reflection
 ```
 
@@ -270,33 +270,33 @@ Format: `(chapter:chapter-code)=`
 
 ### Appendix Labels
 
-Format: `(appendix:descriptive-name)=`
+Format: `(appendix:descriptiveName)=`
 
 **Examples**:
 ```markdown
-(appendix:complex-numbers)=
+(appendix:complexNumbers)=
 # Complex Numbers
 
-(appendix:fourier-transform)=
+(appendix:fourierTransform)=
 # Fourier Transform
 ```
 
 ### Naming Guidelines
 
 1. **Descriptive**: Labels should clearly indicate content (e.g., `fig:geo:mirror` not `fig:geo:01`)
-2. **Lowercase**: All labels use lowercase letters only
-3. **Hyphens**: Use hyphens to separate words (not underscores or camelCase)
+2. **camelCase**: Start with lowercase, capitalize first letter of subsequent words
+3. **No separators**: Don't use hyphens or underscores (use camelCase instead)
 4. **Concise**: Keep labels reasonably short but meaningful
 5. **Unique**: Each label must be unique across the entire textbook
 
 **Good examples**:
-- `eq:wave:energy-density`
-- `fig:laser:cavity-modes`
-- `table:fiber:loss-mechanisms`
-- `sec:coh:temporal-coherence`
+- `eq:wave:energyDensity`
+- `fig:laser:cavityModes`
+- `table:fiber:lossMechanisms`
+- `sec:coh:temporalCoherence`
 
 **Bad examples**:
-- `eq:wave:EnergyDensity` (uses camelCase)
+- `eq:wave:energy-density` (uses hyphens)
 - `fig:laser:Fig_8_01` (uses underscores and numbers)
 - `table_fiber_loss` (uses underscores)
 - `section.coherence` (uses dot notation)

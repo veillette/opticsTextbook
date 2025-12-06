@@ -5,7 +5,7 @@ tags:
   - foundational
 ---
 
-(appendix:complex-numbers)=
+(appendix:complexNumbers)=
 # Appendix A: Complex Numbers in Optics
 
 > "God made the integers, all the rest is the work of man."
@@ -175,7 +175,7 @@ Several important special cases emerge from Euler's formula:
 
 ```{list-table} Important Special Cases
 :header-rows: 1
-:name: table:euler-special-cases
+:name: table:eulerSpecialCases
 
 * - Angle
   - Complex Exponential
@@ -381,7 +381,7 @@ The intensity decreases as $I(z) = I_0 e^{-2(\omega k/c)z}$, defining the absorp
 
 ```{list-table} Complex Refractive Index Examples
 :header-rows: 1
-:name: table:complex-index-examples
+:name: table:complexIndexExamples
 
 * - Material
   - Wavelength
@@ -446,7 +446,7 @@ The polarization state is determined by:
 
 ```{list-table} Polarization States
 :header-rows: 1
-:name: table:polarization-states
+:name: table:polarizationStates
 
 * - Polarization Type
   - Amplitude Condition
@@ -510,7 +510,7 @@ Complex numbers can be visualized as rotating vectors (phasors) in the complex p
 
 ```{list-table} Phasor Applications
 :header-rows: 1
-:name: table:phasor-applications
+:name: table:phasorApplications
 
 * - Phenomenon
   - Phasor Interpretation
@@ -591,7 +591,7 @@ Complex numbers are not mere mathematical conveniences in optics—they are fund
 
 ```{list-table} Summary of Benefits
 :header-rows: 1
-:name: table:summary-benefits
+:name: table:summaryBenefits
 
 * - Aspect
   - Benefit
@@ -917,7 +917,7 @@ Today's optical research relies heavily on computational tools that leverage com
 
 ```{list-table} Computational Tools for Complex Optics
 :header-rows: 1
-:name: table:computational-tools
+:name: table:computationalTools
 
 * - Tool/Language
   - Strengths

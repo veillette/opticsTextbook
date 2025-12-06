@@ -77,7 +77,7 @@ Schematic of a confocal microscope and its principle
 
 
 ```{figure} Images/09_02_confocal_1euro.png
-:name: fig:adv:confocal-euro
+:name: fig:adv:confocalEuro
 Partial surface profile of a 1 Euro coin, measured with a Nipkow disk confocal microscope. *Source Wikipedia*
 ```
 

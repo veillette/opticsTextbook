@@ -5,16 +5,16 @@ Lint Equation Labels
 This script checks for non-standard equation labels in MyST markdown files.
 It can be used as a pre-commit hook or standalone linter.
 
-Standard format: eq:chapter-code:descriptive-name
+Standard format: eq:chapter-code:descriptiveName
   - chapter-code: basics, geo, inst, pol, wave, coh, diff, laser, adv, fiber, ray
-  - descriptive-name: lowercase letters, numbers, and hyphens only
+  - descriptiveName: camelCase (starts lowercase, subsequent words capitalized)
 
 Non-standard patterns detected:
-  1. Dot notation: eq.name or eq.camelCase
+  1. Dot notation: eq.name or eq.Name
   2. LaTeX inline: \label{name} inside equations
   3. MyST inline: $$ ... $$ (label)
   4. Missing chapter code: eq:name without chapter prefix
-  5. Wrong format: uppercase, underscores, or other invalid characters
+  5. Wrong format: hyphens, underscores, or other invalid characters
 
 Usage:
   python lint_equation_labels.py [--fix] [--verbose] [file_path ...]
@@ -77,25 +77,39 @@ def get_chapter_code(file_path: Path) -> Optional[str]:
 
 
 def normalize_label_name(name: str) -> str:
-    """Convert a label name to the standard format (lowercase, hyphens)."""
-    # Convert underscores to hyphens
-    name = name.replace('_', '-')
-    # Convert camelCase to hyphen-separated
-    name = re.sub(r'([a-z])([A-Z])', r'\1-\2', name)
-    # Convert to lowercase
-    name = name.lower()
-    # Remove any invalid characters
-    name = re.sub(r'[^a-z0-9-]', '-', name)
-    # Remove consecutive hyphens
-    name = re.sub(r'-+', '-', name)
-    # Remove leading/trailing hyphens
-    name = name.strip('-')
-    return name
+    """Convert a label name to the standard format (camelCase)."""
+    # First, split on hyphens and underscores
+    parts = re.split(r'[-_]+', name)
+
+    # If already in camelCase, split on case transitions
+    expanded_parts = []
+    for part in parts:
+        # Split camelCase: "someWord" -> ["some", "Word"]
+        split_parts = re.sub(r'([a-z])([A-Z])', r'\1 \2', part).split()
+        expanded_parts.extend(split_parts)
+
+    # Remove empty parts and convert to lowercase
+    parts = [p.lower() for p in expanded_parts if p]
+
+    if not parts:
+        return ''
+
+    # First part stays lowercase, rest are capitalized
+    result = parts[0]
+    for part in parts[1:]:
+        result += part.capitalize()
+
+    # Remove any remaining invalid characters
+    result = re.sub(r'[^a-zA-Z0-9]', '', result)
+
+    return result
 
 
 def is_valid_label(label: str, chapter_code: str) -> bool:
-    """Check if a label follows the standard format."""
-    pattern = rf'^eq:{chapter_code}:[a-z0-9]([a-z0-9-]*[a-z0-9])?$'
+    """Check if a label follows the standard format (camelCase)."""
+    # Pattern: eq:chapter-code:lowerCamelCase
+    # Must start with lowercase letter, can contain letters and numbers (camelCase)
+    pattern = rf'^eq:{chapter_code}:[a-z][a-zA-Z0-9]*$'
     return bool(re.match(pattern, label))
 
 

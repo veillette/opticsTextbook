@@ -25,23 +25,23 @@ After the treatment in the preceding chapter of the laws of Gaussian geometrical
 ## The Camera Obscura
 
 The camera obscura or pinhole camera is the simplest image forming system.
-It consists of a closed box with a pinhole on one side. An inverted image is cast on the opposite side of the box as shown in {numref}`fig:inst:camera-obscura`.
+It consists of a closed box with a pinhole on one side. An inverted image is cast on the opposite side of the box as shown in {numref}`fig:inst:cameraObscura`.
 If the hole is too large, the image is very blurred. At the cost of less light, the image can be made sharper by reducing the aperture.
-The camera obscura can form images of objects across an extremely wide angular field due to great depth of focus and over a large range of distances (great depth of field) as you can see in the right picture of {numref}`fig:inst:camera-obscura`.
+The camera obscura can form images of objects across an extremely wide angular field due to great depth of focus and over a large range of distances (great depth of field) as you can see in the right picture of {numref}`fig:inst:cameraObscura`.
 If a film would be used to record the image, very long exposure times are however needed because only a small amount of light enters the pinhole, (f-number= 500). It is believed that painters such as Johannes Vermeer have used the camera obscura to make paintings of external scenes.
 
 ```{figure} Images/03_01_camera_obscura.jpg
-:name: fig:inst:camera-obscura
+:name: fig:inst:cameraObscura
 The principle of the camera obscura (from [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Camera_obscura_1.jpg) in Fizyka z. (1910) / Public Domain). Contemporary examples of camera obscura photography can be found in the work of [Abelardo Morell](https://www.abelardomorell.net/selectedworks/camera-obscura).
 ```
 
 
 ## The Camera
 
-In {numref}`fig:inst:reflex-camera` a single-lens reflex (SLR) camera is shown. The name does not mean that there is only one lens in the optical system, but that the photographer looks through the same lenses that the picture is taken with, instead of looking through a separate parallel optical system as in the twin reflex camera.
+In {numref}`fig:inst:reflexCamera` a single-lens reflex (SLR) camera is shown. The name does not mean that there is only one lens in the optical system, but that the photographer looks through the same lenses that the picture is taken with, instead of looking through a separate parallel optical system as in the twin reflex camera.
 After traversing the first few lens elements, the light passes through an iris diaphragm with adjustable diameter with which the $f$-number can be changed. After the lenses the light is reflected by a movable mirror tilted at $45^o$, passes through a prism and exits the camera through the finder eyepiece. When the shutter is released, the diaphragm closes to a preset value, the mirror swings up and the CCD is exposed. To focus the camera, the entire lens is moved toward or away from the detection plane. Autofocus is based on maximizing the contrast of the images.
 ```{figure} Images/03_02_reflex_camera.png
-:name: fig:inst:reflex-camera
+:name: fig:inst:reflexCamera
 Digital SLR camera. The pixelated digital sensor is behind a movable mirror at angle of 45 degrees with the optical axis. (from [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Reflex_camera_numeric.svg) by Jean François WITZ / CC BY-SA 3.0).
 ```
 
@@ -54,11 +54,11 @@ Angular field of view
 More complex systems can have a variable focal length by changing the distance between the lenses, i.e. they are able to *zoom* into a scene.
 
 The **depth of focus** is a range of object distances around a given distance for which the images on the sensor are sharp. The depth of focus depends on the diaphragm.
-When the aperture is wide open, rays forming the image will make larger angles with the optical axis. When these rays come from objects at various distances they will for a large diaphragm cause more blurred images on the sensor (see {numref}`fig:inst:lego-depth`). When the aperture is reduced, this effect is less and therefore a smaller diaphragm implies a larger depth of focus.
+When the aperture is wide open, rays forming the image will make larger angles with the optical axis. When these rays come from objects at various distances they will for a large diaphragm cause more blurred images on the sensor (see {numref}`fig:inst:legoDepth`). When the aperture is reduced, this effect is less and therefore a smaller diaphragm implies a larger depth of focus.
 The drawback is that less light reaches the sensor, therefore a longer exposure time is needed.
 
 ```{figure} Images/03_04_lego_depth.jpg
-:name: fig:inst:lego-depth
+:name: fig:inst:legoDepth
 Four images taken with different diaphragm and different focal plane. The image on bottom right is taken with a small diaphragm and the entire image appears clear (photos taken by Aur&egrave;le J.L. ADAM / CC BY-SA).
 ```
 
@@ -74,9 +74,9 @@ The method works very well under low light conditions, but is not accurate for o
 The eye is an adaptive imaging system.
 
 ### Anatomy
-The human eye is made of an almost spherical (24 mm long and 22 mm across) gelatinous substance called the **vitreous humor** with refractive index 1.337, surrounded by a white shell, the **sclera** ({numref}`fig:inst:three-internal-chambers-of-the-eye`). At the front, the sclera has an opening with a transparent lens called the **cornea**, with for green light an index of refraction of 1.376. Most of the bending of the rays takes place at the air-cornea interface and this is why it is difficult to see under water ($n_{water}=1.33$).
+The human eye is made of an almost spherical (24 mm long and 22 mm across) gelatinous substance called the **vitreous humor** with refractive index 1.337, surrounded by a white shell, the **sclera** ({numref}`fig:inst:threeInternalChambersOfTheEye`). At the front, the sclera has an opening with a transparent lens called the **cornea**, with for green light an index of refraction of 1.376. Most of the bending of the rays takes place at the air-cornea interface and this is why it is difficult to see under water ($n_{water}=1.33$).
 ```{figure} Images/03_05_three_internal_chambers_of_the_eye.png
-:name: fig:inst:three-internal-chambers-of-the-eye
+:name: fig:inst:threeInternalChambersOfTheEye
 Cross section of a human eye (from [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Three_Internal_chambers_of_the_Eye.png) by Holly Fischer / CC BY).
 ```
 
@@ -101,7 +101,7 @@ because the refractive indices of the surrounding medium (air and vitreous
 humour) differ. The power of the healthy relaxed eye is (see the thin lens matrix equations in the Ray Matrix chapter):
 
 ```{math}
-:label: eq:inst:eye-dioptric-power
+:label: eq:inst:eyeDioptricPower
 \begin{align*}
 \mathfrak{D} =\frac{n_{vh}}{f_i}= \frac{1.337}{0.024}= 55 \text{ Diopter}.
 \end{align*}
@@ -146,7 +146,7 @@ A positive lens of focal length $f_1$=10&nbsp;cm air has a dioptric power $\math
 
 ### Eyeglasses
 
-The eye can suffer from imperfections as seen in {numref}`fig:inst:eye-correction`. We discuss the most common imperfections and their solutions.
+The eye can suffer from imperfections as seen in {numref}`fig:inst:eyeCorrection`. We discuss the most common imperfections and their solutions.
 
 
 **a. Myopia or nearsightedness**.
@@ -159,7 +159,7 @@ clearly. The Lensmaker's Formula $-n_1/s_o + n_2/s_i = \mathcal{P}$ (see the Ray
 then $f_i=s_i= -2$ m. Hence the required power of the lens is:
 
 ```{math}
-:label: eq:inst:myopia-correction
+:label: eq:inst:myopiaCorrection
 \begin{align*}
 \mathfrak{D} =\frac{1}{f}= -0.5 \; \text{diopter}.
 \end{align*}
@@ -185,14 +185,14 @@ Contact lenses are very close to the eye lens and hence the total power of the e
 In this case a distant object is imaged by the relaxed eye behind the retina, i.e. the back focal distance of the relaxed eye is larger than the depth of the eye. Close objects can not be imaged on the retina, hence the near point is relatively far from the cornea. In order to bend the rays more, a positive lens is placed in front of the eye. Suppose that a hyperopic eye has near point at distance 125 cm. For an object at the normal near point $s_o=-25$ cm to have virtual image at $s_i=-125$ cm, so that it can be seen, the focal length of the positive lens must satisfy
 
 ```{math}
-:label: eq:inst:hyperopia-focal-length
+:label: eq:inst:hyperopiaFocalLength
 \begin{align*}
 \frac{1}{f}=-\frac{1}{s_o}+\frac{1}{s_i}= \frac{1}{0.25}-\frac{1}{1.25} =\frac{1}{0.31},
 \end{align*}
 ```
 hence the power must be $\mathfrak{D}=1/f=+3.2$ diopter.
 ```{figure} Images/03_08_eye_correction.png
-:name: fig:inst:eye-correction
+:name: fig:inst:eyeCorrection
 Correction of farsighted (left) and nearsighted (right) eye (adapted from [Wikimedia Commons](https://en.wikipedia.org/wiki/File:Myopia_and_lens_correction.svg) by Gumenyuk I.S. / CC BY-SA 4.0).
 ```
 
@@ -211,10 +211,10 @@ In recent years, to correct eye defects such as myopia and astigmatism, technolo
 
 ## Magnifying Glasses
 A magnifying glass causes an image on the retina which is larger than without the magnifier. In principle, the image on the retina can be increased by simply bringing the object closer to the eye (reduce $|s_o|$ at fixed $s_i$). But $|s_o|$ can not be smaller than the near point $d_o$, which we take here to be 25 cm. It is desirable to use a lens that makes a magnified erect image at a distance to the eye greater than $d_o$. This can be achieved by a positive lens with the object closer to the lens than the first focal point, thereby producing a magnified virtual image.
-An example is given in {numref}`fig:inst:magnifier-gruffalo`.
+An example is given in {numref}`fig:inst:magnifierGruffalo`.
 
 ```{figure} Images/03_09_magnifier_gruffalo_small.png
-:name: fig:inst:magnifier-gruffalo
+:name: fig:inst:magnifierGruffalo
 Example of a positive lens used as a magnifying glass (picture taken by A.J.L. Adam / CC-BY-SA 4.0).
 ```
 
@@ -232,7 +232,7 @@ where $\alpha_a$ and $\alpha_u$ are the angles between the optical axis and the 
 Using $\alpha_a\approx y_i/L$ and $\alpha_u\approx y_0/d_0$ with $y_i$ and $y_0$ positive and $L$ the positive distance from the image to the eye (with as requirement : $L\geq d_o$), we find
 
 ```{math}
-:label: eq:inst:magnifying-power
+:label: eq:inst:magnifyingPower
 \begin{align*}
 \text{MP}=\frac{y_id_0}{y_0 L}.
 \end{align*}
@@ -244,10 +244,10 @@ $$
 $$
 where we used the lens equation for the magnifying glass. We have $s_i = -|s_i|=-(L-\mathcal{l})$, where
 $\mathcal{l}$ is the distance between the magnifying glass and the eye. Hence,
-{eq}`eq:inst:magnifying-power` becomes:
+{eq}`eq:inst:magnifyingPower` becomes:
 
 ```{math}
-:label: eq:inst:magnifying-power-distance
+:label: eq:inst:magnifyingPowerDistance
 \begin{align*}
 \text{MP} &= \frac{d_0}{L} \left[ 1 + \frac{L-\mathcal{l}}{|f_o|} \right]  \\
 &= \frac{d_0}{L} \left[ 1 + {\cal P}\left(L-\mathcal{l}\right) \right],
@@ -273,7 +273,7 @@ We distinguish three situations:
 1. The object is at the focal point of the magnifier ($s_0=f_o$), so that the virtual image is at infinity ($L=\infty$) and hence
 
 ```{math}
-:label: eq:inst:magnifying-power-infinity
+:label: eq:inst:magnifyingPowerInfinity
 \begin{align*}
 \text{MP}|_{L=\infty}=d_0{\cal P},
 \end{align*}
@@ -293,19 +293,19 @@ The ocular provides a magnified virtual image of the image produced by the optic
 1. the field lens, which is the first lens in the ocular;
 2. the eye-lens, which is closest to the eye at a fixed distance called the **eye relief**.
 The aperture of the eyepiece is controlled by a field stop.
-An example is given in {numref}`fig:inst:eye-piece`.
+An example is given in {numref}`fig:inst:eyePiece`.
 ```{figure} Images/03_11_eye_piece.png
-:name: fig:inst:eye-piece
+:name: fig:inst:eyePiece
 Example of an eyepiece consisting of three lenses. 1) Real image, 2) field diaphragm, 3) eye relief, 4) eye pupil (adapted from [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Exitpupil.png) by Tamas-flex / CC BY-SA 3.0).
 ```
 
 
 ## The Compound Microscope
 A magnifier alone can provide very high magnification only at the cost of intolerable aberrations.
-The **compound microscope** is a magnifier of close objects with a high angular magnification, generally more than $30\times$. It was invented by Zacharias Janssen in Middelburg in 1590 (but this claim is disputed). The first element of the compound microscope is an objective (in {numref}`fig:inst:compound-microscope` a simple positive lens) which makes a real, inverted and magnified image of the object in the front focal plane of an eyepiece (where there is also the field stop). The eyepiece will make a virtual image at infinity, as explained above.
+The **compound microscope** is a magnifier of close objects with a high angular magnification, generally more than $30\times$. It was invented by Zacharias Janssen in Middelburg in 1590 (but this claim is disputed). The first element of the compound microscope is an objective (in {numref}`fig:inst:compoundMicroscope` a simple positive lens) which makes a real, inverted and magnified image of the object in the front focal plane of an eyepiece (where there is also the field stop). The eyepiece will make a virtual image at infinity, as explained above.
 
 ```{figure} Images/03_12_compound_microscope.png
-:name: fig:inst:compound-microscope
+:name: fig:inst:compoundMicroscope
 Simple compound microscope. The objective forms a real image of a nearby object. The eyepiece enlarges this intermediate image. The final image can be bigger than the barrel of the device, since it is virtual.
 ```
 
@@ -323,7 +323,7 @@ where $x_i$ is the distance of the image made by the objective to its back focal
 plane with focal distance $f_i^{obj}$. We have $x_i=L$ which is the tube length,
 i.e. the distance between the second focal point of the objective and the first
 focal point of the eyepiece. The tube length is standardized at 16&nbsp;cm.
-Furthermore, according to {eq}`eq:inst:magnifying-power-infinity`, the angular
+Furthermore, according to {eq}`eq:inst:magnifyingPowerInfinity`, the angular
 magnification is for a virtual image at infinity is : $M_{Ae}=d_o/f_i^e$. Hence,
 we obtain:
 
@@ -349,19 +349,19 @@ with $n_{im}$ the refractive index of the immersing medium, usually air, but it 
 ## The Telescope
 
 
-A telescope enlarges the retinal image of a distant object. Like a compound microscope, it is also composed of an objective and an eyepiece as seen in {numref}`fig:inst:kepler-telescope`.
+A telescope enlarges the retinal image of a distant object. Like a compound microscope, it is also composed of an objective and an eyepiece as seen in {numref}`fig:inst:keplerTelescope`.
 ```{figure} Images/03_13_kepler_telescope.png
-:name: fig:inst:kepler-telescope
+:name: fig:inst:keplerTelescope
 Keplerian astronomical telescope.
 ```
 
 The object in this figure is at a large but finite distance; therefore, an image is formed by the objective just after its second focal point. The eyepiece makes a virtual magnified image, to be viewed with a relaxed eye. Therefore, the intermediary image of the objective must be within the focal length $f_i^e$ from the eyepiece. The final image is inverted.
 
 As seen earlier, the angular magnification is:
-$\text{MP} = \alpha_a/\alpha_u$ where $\alpha_u$ is the half angle of the cone of light that would be collected without telescope and $\alpha_a$ is the half angle of the apparent cone of rays coming from the virtual image of the eyepiece. For an object at infinity we find considering the triangles $F_{o}^{obj}AB$ and $F_i^{e}CD$ in {numref}`fig:inst:rays-telescope` that
+$\text{MP} = \alpha_a/\alpha_u$ where $\alpha_u$ is the half angle of the cone of light that would be collected without telescope and $\alpha_a$ is the half angle of the apparent cone of rays coming from the virtual image of the eyepiece. For an object at infinity we find considering the triangles $F_{o}^{obj}AB$ and $F_i^{e}CD$ in {numref}`fig:inst:raysTelescope` that
 
 ```{math}
-:label: eq:inst:telescope-magnification
+:label: eq:inst:telescopeMagnification
 \begin{align*}
 \text{MP} = -\frac{f_i^{obj}}{f_i^e}.
 \end{align*}
@@ -369,6 +369,6 @@ $\text{MP} = \alpha_a/\alpha_u$ where $\alpha_u$ is the half angle of the cone o
 (The minus sign is because the image is inverted).
 
 ```{figure} Images/03_14_rays_telescope.png
-:name: fig:inst:rays-telescope
+:name: fig:inst:raysTelescope
 Ray angles for a telescope
 ```

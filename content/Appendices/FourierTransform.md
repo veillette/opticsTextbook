@@ -5,7 +5,7 @@ tags:
   - advanced
 ---
 
-(appendix:fourier-transform)=
+(appendix:fourierTransform)=
 # Appendix C: Fourier Transform in Optics
 
 > "The Fourier transform is a tool that breaks down a signal into its constituent frequencies. In optics, it reveals how light decomposes into its spatial frequency components."
@@ -58,7 +58,7 @@ In optics, the Fourier transform has profound physical meaning:
 
 ```{list-table} Fourier Transform Interpretations
 :header-rows: 1
-:name: table:fourier-interpretations
+:name: table:fourierInterpretations
 
 * - Domain
   - Variable
@@ -141,7 +141,7 @@ $$\int \int |f(x,y)|^2 dx dy = \frac{1}{(2\pi)^2} \int \int |F(k_x, k_y)|^2 dk_x
 
 ```{list-table} Essential Fourier Pairs
 :header-rows: 1
-:name: table:fourier-pairs
+:name: table:fourierPairs
 
 * - Function f(x,y)
   - Fourier Transform F(k_x, k_y)
@@ -575,7 +575,7 @@ The Fourier transform succeeds in optics because it captures the wave nature of 
 
 ```{list-table} Core Insights
 :header-rows: 1
-:name: table:core-insights
+:name: table:coreInsights
 
 * - Mathematical Property
   - Physical Principle

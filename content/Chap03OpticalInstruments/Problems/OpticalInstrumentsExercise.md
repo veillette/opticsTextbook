@@ -3,7 +3,7 @@
 1. Consider a ray transfer matrix
 
 ```{math}
-:label: eq:inst:transfer-matrix
+:label: eq:inst:transferMatrix
 \left( \begin{array}{cc}A & B \\C & D
 \end{array}\right)
 ```
@@ -74,10 +74,10 @@ In this problem we investigate whether it is possible to image an object with a 
 
 - **a)** We have two media with refractive indices $n_1$ and $n_2$, separated by a planar interface. Give the transfer matrix $\mathcal{T}$ for refraction at a planar interface using the paraxial approximation.
 
-- **b)** Suppose we have an object that is a distance $d$ from the interface. Give the system matrix that describes a ray propagating from the object to the plane that is a distance $d$ behind the interface (see {numref}`fig:inst:planar-interface`).
+- **b)** Suppose we have an object that is a distance $d$ from the interface. Give the system matrix that describes a ray propagating from the object to the plane that is a distance $d$ behind the interface (see {numref}`fig:inst:planarInterface`).
 
 ```{figure} ../Images/03_16_planar_interface.png
-:name: fig:inst:planar-interface
+:name: fig:inst:planarInterface
 Planar interface between two media with different refractive indices. An object at distance d from the interface on the left side can potentially form an image at distance d on the right side, demonstrating the principle of a Veselago lens when the refractive index condition is satisfied.
 ```
 
