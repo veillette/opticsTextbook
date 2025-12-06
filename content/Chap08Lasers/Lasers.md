@@ -256,7 +256,7 @@ where $A_{21}$ has dimension $\text{s}^{-1}$. The lifetime of spontaneous transm
 It is less obvious that in the presence of an electromagnetic field of frequency close to the atomic resonance, an atom in the excited state can also be **stimulated** by that field to emit a photon and transfer to the lower energy state. The rate of **stimulated emission** is proportional to the number of excited atoms and to the energy density of the field:
 
 ```{math}
-:label: eq.stimulated-emission
+:label: eq:laser:stimulated-emission
 \begin{align*}
 \frac{d N_2}{dt} = - B_{21} N_2 W(\omega), \hspace{1cm} \mathbf{stimulated emission},
 \end{align*}

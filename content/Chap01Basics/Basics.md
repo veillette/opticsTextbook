@@ -85,13 +85,25 @@ Similarly, electrons and other material particles, traditionally viewed as solid
 Quantum mechanics provides a unified mathematical framework that describes both material particles and photons through a set of fundamental relationships. For any particle or photon, the following equations connect energy, momentum, mass, and other properties:
 
 The **relativistic energy-momentum relation** gives us:
-$$p = \frac{\sqrt{E^2 - m^2c^4}}{c} \label{relativisticMomentum}$$
+
+```{math}
+:label: eq:basics:relativistic-momentum
+p = \frac{\sqrt{E^2 - m^2c^4}}{c}
+```
 
 The **de Broglie wavelength** relates the wave and particle aspects:
-$$\lambda = \frac{h}{p} = \frac{hc}{\sqrt{E^2 - m^2c^4}} \label{deBroglieWavelength}$$
+
+```{math}
+:label: eq:basics:de-broglie-wavelength
+\lambda = \frac{h}{p} = \frac{hc}{\sqrt{E^2 - m^2c^4}}
+```
 
 The **relativistic velocity** can be expressed as:
-$$v = \frac{pc^2}{E} = c\sqrt{1 - \frac{m^2c^4}{E^2}} \label{relativisticVelocity}$$
+
+```{math}
+:label: eq:basics:relativistic-velocity
+v = \frac{pc^2}{E} = c\sqrt{1 - \frac{m^2c^4}{E^2}}
+```
 
 These equations apply universally to both massive particles and massless photons, though they simplify considerably for the photon case.
 
@@ -99,12 +111,19 @@ These equations apply universally to both massive particles and massless photons
 
 For photons, which have zero rest mass ($m = 0$), the fundamental equations reduce to elegant, simpler forms. Setting $m = 0$ in the relativistic energy-momentum relation yields:
 
-$$p = \frac{E}{c} \label{momentum}$$
+```{math}
+:label: eq:basics:photon-momentum
+p = \frac{E}{c}
+```
 
 This tells us that a photon's momentum is directly proportional to its energy, with the speed of light as the proportionality constant.
 
 The de Broglie wavelength for photons becomes:
-$$\lambda = \frac{hc}{E} \label{lambda}$$
+
+```{math}
+:label: eq:basics:photon-wavelength
+\lambda = \frac{hc}{E}
+```
 
 This relationship directly connects the wave property (wavelength) with the particle property (energy) through Planck's constant $h$.
 
@@ -117,13 +136,13 @@ This universal speed is one of the defining characteristics of electromagnetic r
 
 To illustrate these concepts, consider an electron with kinetic energy $K = 2.5$ MeV. We can calculate its relativistic properties and compare them with a photon of the same total energy.
 
-For the electron, the total energy is $E = K + mc^2 = 2.5 + 0.511 = 3.011$ MeV. Using equation [](#relativisticMomentum), the momentum is:
+For the electron, the total energy is $E = K + mc^2 = 2.5 + 0.511 = 3.011$ MeV. Using equation {eq}`eq:basics:relativistic-momentum`, the momentum is:
 $$p = \frac{\sqrt{(3.011)^2 - (0.511)^2}}{c} = \frac{2.97}{c} \text{ MeV}$$
 
-The de Broglie wavelength from equation [](#deBroglieWavelength) is:
+The de Broglie wavelength from equation {eq}`eq:basics:de-broglie-wavelength` is:
 $$\lambda = \frac{hc}{pc} = \frac{1.24 \times 10^{-6}}{2.97} = 4.18 \times 10^{-7} \text{ m}$$
 
-The electron's speed from equation [](#relativisticVelocity) is:
+The electron's speed from equation {eq}`eq:basics:relativistic-velocity` is:
 $$v = c\sqrt{1 - \frac{(0.511)^2}{(3.011)^2}} = 0.987c$$
 
 For a photon with the same total energy (3.011 MeV), the momentum would be $p = E/c = 3.011$ MeV/c, the wavelength would be $\lambda = hc/E = 4.12 \times 10^{-7}$ m, and the speed would be exactly $c$.
@@ -157,7 +176,7 @@ $$c = \lambda\nu $$
 This simple equation reveals an inverse relationship: as wavelength increases, frequency decreases proportionally. The energy of electromagnetic radiation is quantized in units called photons, with each photon carrying energy:
 
 ```{math}
-:label: photon-energy
+:label: eq:basics:photon-energy
 E = h\nu
 ```
 
@@ -278,10 +297,10 @@ When light travels through materials other than vacuum, it slows down due to int
 
 We quantify how much a material slows light using the **index of refraction**, denoted $n$:
 
-$$
-\label{eq:index-refraction}
+```{math}
+:label: eq:basics:index-refraction
 n = \frac{c}{v}
-$$
+```
 
 where $v$ represents the observed speed of light in the material.
 
@@ -359,7 +378,7 @@ Let's calculate the speed of light in zircon, a material often used in jewelry a
 
 **Solution:**
 
-Rearranging [](#eq:index-refraction) to solve for $v$:
+Rearranging {eq}`eq:basics:index-refraction` to solve for $v$:
 
 $$v = \frac{c}{n} = \frac{3.00 \times 10^8 \, \text{m/s}}{1.923} = 1.56 \times 10^8 \, \text{m/s}$$
 

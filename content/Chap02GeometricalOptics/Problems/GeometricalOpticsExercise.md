@@ -193,7 +193,7 @@ $$
 Consider a ray transfer matrix
 
 ```{math}
-:label: eq.matrix
+:label: eq:geo:matrix
 \begin{align*}
 \left( \begin{array}{cc}A & B \\C & D
 \end{array}\right)
