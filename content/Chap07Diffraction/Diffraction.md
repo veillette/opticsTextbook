@@ -490,9 +490,10 @@ When $x/z>1$, the spatial frequency $k_x = \frac{2 \pi x}{z \lambda} > k$ associ
 
 Consider two mutual coherent time-harmonic point sources in $\mathbf{r}_s^+=(a/2,0,0)$ and $\mathbf{r}_s^-=(-a/2,0,0)$. The fields in $\mathbf{r}=(x,y,z)$ emitted are according to the time-harmonic field equation (see the Interference chapter) proportional to
 
-$$
+```{math}
+:label: eq:diff:point-source-field
 U_{\pm}(\mathbf{r}) = \frac{e^{i k |\mathbf{r}-\mathbf{r}_s^\pm|}}{|\mathbf{r} -\mathbf{r}_s^\pm|}.
-$$ (eq.Upm)
+```
 
 We apply the Fresnel approximation for large $z$:
 
@@ -506,9 +507,10 @@ We apply the Fresnel approximation for large $z$:
 ```
 Hence,
 
-$$
+```{math}
+:label: eq:diff:fresnel-field
 U_\pm(\mathbf{r}) \approx \frac{e^{ikz}}{z} e^{i k \frac{x^2+y^2}{2z} } e^{ i k\frac{ a^2}{8z}} \, e^{∓ i k \frac{a x}{2z}},
-$$ (eq.Ufresnel)
+```
 
 where in the denominator we replaced $|\mathbf{r}-\mathbf{r}_s^\pm|$ by $z$. Note that the Fraunhofer approximation amounts to $e^{ i k a^2/(8z)} \approx 1$ while the phase factor $e^{i k \frac{x^2+y^2}{2z} } $ remains. The intensity on a screen $z=\text{constant}$ of the sum of the two fields for the case that the sources have equal strength and emit in phase is:
 
@@ -672,10 +674,11 @@ Using
 ```
 we get
 
-$$
+```{math}
+:label: eq:diff:grating-fourier-transform
 {\cal F}(U_0)(\xi) =
 {\cal F}(W_{slit})(\xi) \frac{\sin( \pi M p \xi)}{ \sin(\pi p \xi)}.
-$$ (eq.Ftau)
+```
 
 The intensity of the Fraunhofer far ield is:
 
@@ -760,9 +763,10 @@ m\frac{\lambda_1}{p } + \frac{\lambda_1}{M p},
 $$
 which implies with $\Delta \lambda=\lambda_2-\lambda_1$ and $\lambda=\lambda_1$ that
 
-$$
+```{math}
+:label: eq:diff:grating-resolution
 \frac{\Delta \lambda}{\lambda}> \frac{1}{m M}.
-$$ (eq.gratres)
+```
 
 It follows that the resolution is higher when there are more slits and for larger diffraction order. However, the disadvantage of using higer diffraction orders is that often their intensity is less.
 For a grating with 1000 periods one can obtain a resolution of $\Delta \lambda/\lambda =10^{-3}$ in the first order.

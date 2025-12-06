@@ -2,10 +2,11 @@
 
 1. Consider a ray transfer matrix
 
-$$
+```{math}
+:label: eq:inst:transfer-matrix
 \left( \begin{array}{cc}A & B \\C & D
 \end{array}\right)
-$$ (eq.matrix3)
+```
 
 between two planes.
 

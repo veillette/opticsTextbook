@@ -222,22 +222,25 @@ Hint: let $f_i$ be the distance of the image focal point of the two-lens system 
 - **a)** Consider two thin lenses which are surrounded by a medium with refractive index $n$. Let the left and right lens have power ${\cal P}_1$ and ${\cal P}_2$, respectively and let the distance between their vertices be $d$.
 Derive that the matrix between the planes immediately to the left of the first lens and the plane immediately to the right of the second lens is given by
 
-$$
+```{math}
+:label: eq:geo:two-lens-matrix
 \left( \begin{array}{cc}1-\frac{d}{n}{\cal P}_1 & -{\cal P}_1-{\cal P}_2 - \frac{d}{n}{\cal P}_1{\cal P}_2 \\\frac{d}{n} & 1-\frac{d}{n}{\cal P}_2
 \end{array}\right).
-$$ (eq.matrix2)
+```
 
 - **b)**
 Show that the coordinates of the image and object focal points are given by:
 
-$$
+```{math}
+:label: eq:geo:image-focal-two-lens
 f_i = \frac{P_1+P_2 + \frac{d}{n} {\cal P}_1{\cal P}_2}{n \left( 1 - \frac{d}{n}\right){\cal P}_2 }
-$$ (eq.fi)
+```
 
 
-$$
+```{math}
+:label: eq:geo:object-focal-two-lens
 f_o = \frac{P_1+P_2 + \frac{d}{n} {\cal P}_1{\cal P}_2}{n \left( 1 - \frac{d}{n}\right){\cal P}_1 }.
-$$ (eq.fo)
+```
 
 - **c)** Verify that these formulae are equivalent to {eq}`eq:ray:two-lens-object-focal`,{eq}`eq:ray:two-lens-image-focal`.
 

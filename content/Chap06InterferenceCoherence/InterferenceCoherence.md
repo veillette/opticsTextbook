@@ -538,9 +538,10 @@ We conclude with some further interpretations of the degree of self-coherence $\
 
 2. The Wiener-Khinchin theorem says that (under the assumption of ergodicity and for stationary fields) the **Fourier transform of the self coherence function is the spectral power density of** $U(t)$:
 
-$$
+```{math}
+:label: eq:coh:wiener-khinchin
 \hat{\Gamma}(\omega)=|\hat{U}(\omega)|^2,
-$$ (eq.Gammaomegsa)
+```
 
 Using the uncertainty principle, we can see that the larger the spread of the frequencies of $U(t)$ (i.e. the larger the bandwidth), the more sharply peaked $\Gamma(\tau)$ is. Thus, the light gets temporally less coherent when it consists of a broader range of frequencies. Measuring the spectral power density with a spectroscope and applying a back Fourier transform is an alternative method to obtain the complex self-coherence function.
 
@@ -660,9 +661,10 @@ the **complex degree of mutual coherence** is defined by
 
 It can be proved using Bessel's inequality that
 
-$$
+```{math}
+:label: eq:coh:gamma12-bound
 |\gamma_{12}(\tau)| \leq 1.
-$$ (eq.gamma12)
+```
 
 We can now write {eq}`eq:coh:spatial-fringe` as
 
@@ -692,9 +694,10 @@ In that case
 ```
 and
 
-$$
+```{math}
+:label: eq:coh:gamma-self-coherence
 \Gamma_{11}(0)= |A(\mathbf{r}_1)|^2, \quad \Gamma_{22}(0)=|A(\mathbf{r}_2)|^2.
-$$ (eq.Gamma110)
+```
 
 So we get
 
@@ -930,9 +933,10 @@ the fields in $P_1$ and $P_2$ are at least partially mutually coherent.
 
 **Example**. We determine the maximum distance $d$ between two points on earth for which sun light is coherent. The sun subtends on earth the angle:
 
-$$
+```{math}
+:label: eq:coh:sun-angle
 \alpha = \frac{\text{AU}}{2R_\circ}\approx 0.015,
-$$ (eq.alphasun)
+```
 
 where $\text{AU}$ and $R_\circ$ are the distance of the sun to the earth and the radius of the sun.
 Hence, for green light $\lambda=550 nm$ and by requiring

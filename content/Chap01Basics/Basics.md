@@ -285,7 +285,10 @@ Albert Michelson (1852–1931) continued improving these techniques throughout h
 
 Today, the speed of light in vacuum is known with extraordinary precision and serves as a fundamental physical constant:
 
-$$c = 2.99792458 \times 10^8 \, \text{m/s} \approx 3.00 \times 10^8 \, \text{m/s}$$ (eq:speed-light)
+```{math}
+:label: eq:basics:speed-light
+c = 2.99792458 \times 10^8 \, \text{m/s} \approx 3.00 \times 10^8 \, \text{m/s}
+```
 
 The approximate value of $3.00 \times 10^8 \, \text{m/s}$ provides sufficient accuracy for most calculations requiring three-digit precision.
 
