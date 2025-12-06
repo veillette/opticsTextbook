@@ -1,7 +1,7 @@
-# Utility Scripts for Optics Textbook
+# Utility Scripts for MyST Projects
 
-This directory contains JavaScript utility scripts for maintaining and validating the
-optics textbook content. All scripts are written in Node.js and are integrated with
+This directory contains JavaScript utility scripts for maintaining and validating
+MyST Markdown project content. All scripts are written in Node.js and are integrated with
 npm for easy execution.
 
 ## Available Scripts
@@ -279,7 +279,7 @@ npm install
 
 Make sure you're running commands from the project root:
 ```bash
-cd /path/to/opticsTextbook
+cd /path/to/your-project
 npm run <command>
 ```
 
