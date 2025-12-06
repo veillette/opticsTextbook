@@ -35,7 +35,7 @@ See [PWA_SETUP.md](doc/PWA_SETUP.md) for details on PWA features and usage.
 
 ### Quick Start
 
-To contribute to this textbook, you'll need Node.js and Python installed. Follow these steps to get started:
+To contribute to this textbook, you'll need Node.js installed. Follow these steps to get started:
 
 ```bash
 # Clone the repository
@@ -44,7 +44,6 @@ cd opticsTextbook
 
 # Install dependencies
 npm install
-pip install -r config/requirements.txt
 
 # Launch development server (with live reload)
 npm run start
