@@ -1,5 +1,3 @@
-## Problems
-
 **1.1** Calculate the de Broglie wavelength of an electron moving at 2.5 × 10⁶ m/s. Compare this to the wavelength of a photon with the same momentum.
 
 **1.2** A photon has a wavelength of 550 nm (green light). Find its:
