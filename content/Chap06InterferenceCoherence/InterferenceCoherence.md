@@ -12,7 +12,7 @@ downloads:
     title: Download Chapter DOCX
 ---
 
-(chapter.coherence)=
+(chapter:coh)=
 # Interference and Coherence
 
 ```{note} What you should know and be able to do after studying this chapter
@@ -27,7 +27,7 @@ downloads:
 ```
 ## Introduction
 
-Although the model of geometrical optics helps us to design optical systems and explains many phenomena, there are properties of light that require a more elaborate model. For example, interference fringes observed in Young's double-slit experiment or the Arago spot ({numref}`Arago`) indicate that light is more accurately modeled as a wave.
+Although the model of geometrical optics helps us to design optical systems and explains many phenomena, there are properties of light that require a more elaborate model. For example, interference fringes observed in Young's double-slit experiment or the Arago spot ({numref}`fig:coh:arago`) indicate that light is more accurately modeled as a wave.
 ```{figure} Images/06_01_arago1.jpg
 
 Arago spot observed with a 4 mm diameter circular disc. The bright central spot appears at the center of the disc's shadow, demonstrating the wave nature of light through constructive interference of diffracted waves. Image captured at 1 m distance using 633 nm laser light.
@@ -37,7 +37,7 @@ Arago spot observed with a 4 mm diameter circular disc. The bright central spot 
 Arago spot observed with a 2 mm diameter circular disc. The relative size of the central bright spot increases compared to the disc diameter, as diffraction effects become more pronounced with smaller obstacles. Image captured at 1 m distance using 633 nm laser light.
 ```
 ```{figure} Images/06_03_arago3.jpg
-:name: Arago
+:name: fig:coh:arago
 The Arago spot is the bright spot which occurs at the center of the shadow of a circular disc and which is caused by diffraction. The disc has diameter 4&nbsp;mm, 2&nbsp;mm and 1&nbsp;mm, from left to right, the wavelength is 633&nbsp;nm and the intensity is recorded at 1&nbsp;m behind the disc and has width of 16&nbsp;mm
 ```
 
@@ -90,7 +90,7 @@ We can sum the two fields for arbitrary $\varphi$ more conveniently using comple
 Adding gives
 
 ```{math}
-:label: eq:coh:sum-fields
+:label: eq:coh:sumFields
 \begin{align*}
 \mathcal{U}_1(t)+\mathcal{U}_2(t)&= \text{Re}[e^{-i\omega t}(1+e^{-i\varphi})]
 &=\text{Re}[e^{-i\omega t}e^{-i\varphi/2}(e^{i\varphi/2}+e^{-i\varphi/2})]
@@ -105,14 +105,14 @@ we shall omit the factor $\sqrt{\epsilon/\mu_0}$ . As explained in Chapter 1, we
 We recall the definition of the time average over an interval of length $T$ at a specific time $t$ from Chapter 1:
 
 ```{math}
-:label: eq:coh:time-average
+:label: eq:coh:timeAverage
 \begin{align*}
 \langle f(t) \rangle= \frac{1}{T}\int_{t}^{t+T}f(t')\,\text{d}t',
 \end{align*}
 ```
 where $T$ is a time interval that is the response time of a typical detector, i.e. $T\approx 10^{-6}\,\text{s}$ which is extremely long compared to the period of visible light which is of the order of $10^{-14}\, \text{s}$.
 For a time-harmonic function, the long-time average is equal to the average over one period of the field and hence **it is independent of the time $t$ at which it is taken**.
-Indeed for {eq}`eq:coh:sum-fields` we get
+Indeed for {eq}`eq:coh:sumFields` we get
 
 ```{math}
 \begin{align*}
@@ -151,7 +151,7 @@ Then we find
 hence
 
 ```{math}
-:label: eq:coh:intensity-sum
+:label: eq:coh:intensitySum
 \begin{align*}
 I = \frac{1}{2}|U_1 + U_2|^2.
 \end{align*}
@@ -165,7 +165,7 @@ To see why this works, recall the time averaging formula and choose $A=B=U_1+U_2
 Hence we define $I_1=|U_1|^2$ and $I_2=|U_2|^2$, and we then find for the time-averaged intensity of the sum of $U_1$ and $U_2$:
 
 ```{math}
-:label: eq:coh:interference-general
+:label: eq:coh:interferenceGeneral
 \begin{align*}
 I &= |U_1+U_2|^2=(U_1+U_2)(U_1+U_2)^*
  \\
@@ -179,11 +179,11 @@ I &= |U_1+U_2|^2=(U_1+U_2)(U_1+U_2)^*
 where $\phi_1$ and $\phi_2$ are the arguments of $U_1$ and $U_2$ and $\phi_1-\phi_2$ is the phase difference.
 The term $2\text{Re}[U_1^* U_2]$ is known as the **interference term**. In the famous double-slit experiment (which we will discuss in a later section), we can interpret the terms as follows: let us say $U_1$ is the field that comes from slit 1, and $U_2$ comes from slit 2. If only slit 1 is open, we measure on the screen intensity $I_1$, and if only slit 2 is open, we measure $I_2$. If both slits are open, we would not measure $I_1+I_2$, but we would observe fringes due to the interference term $2\text{Re}[U_1^* U_2]$.
 
-The intensity {eq}`eq:coh:interference-general` varies when the phase difference varies. These variations are called fringes.
+The intensity {eq}`eq:coh:interferenceGeneral` varies when the phase difference varies. These variations are called fringes.
 The fringe contrast is defined by
 
 ```{math}
-:label: eq:coh:fringe-contrast
+:label: eq:coh:fringeContrast
 \begin{align*}
 \textrm{ Fringe contrast} = \frac{ I_{max}-I_{min}}{I_{max}+I_{min}}.
 \end{align*}
@@ -220,13 +220,13 @@ To understand the effect of polychromatic light, it is essential to understand t
 **difference in distances between these points and the source**. The distance itself to the source is **not** relevant.
 This will be made clear in this chapter.
 
-(subsection.cohsources)=
+(sec:coh:cohsources)=
 ### Coherence of Light Sources
 
 In a conventional light source such as a gas discharge lamp, photons are generated by **spontaneous emission** with energy equal to the energy difference between certain electronic states of the atoms of the gas. These transitions have a duration of the order of $10^{-8}$ to
 $10^{-9} \, \text{s}$. Because the emitted wave trains are finite, the emitted light does not have a single frequency; instead, there is a band of frequencies around a center frequency with width roughly equal to the reciprocal of the duration of the wave train. This spread of frequencies is called the **natural linewidth**. Random thermal motions of the molecules cause further broadening due to the Doppler effect. In addition, the atoms undergo collisions that interrupt the wave trains and therefore further broaden the frequency spectrum.
 
-We first consider a **single emitting atom**. When collisions are the dominant broadening effect and these collisions are sufficiently brief, so that any radiation emitted during the collision can be ignored, an accurate model for the emitted wave is a steady monochromatic wave train at frequency $\mathbf{a}r{\omega}$ at the center of the frequency band, interrupted by random phase jumps each time that a collision occurs. The discontinuities in the phase due to the collisions cause a spread of frequencies around the center frequency. An example is shown in {numref}`Fig_5_01_Atom_Random_Emission`. The average time $\tau_0$ between the collisions is typically less than $10^{-10}$&nbsp;s which implies that on average between two collisions roughly $10^6$ harmonic oscillations occur and that during an atom transition of the order of hundred collisions may occur. The coherence time $\Delta \tau_c$ is defined as the maximum time interval over which the phase of the electric field can be predicted. In the case of collisions-dominated emission by a single atom, the coherence time is equal to the average time between subsequent collisions: $\Delta \tau_c = \tau_0\text{ }10^{-10}$&nbsp;s.
+We first consider a **single emitting atom**. When collisions are the dominant broadening effect and these collisions are sufficiently brief, so that any radiation emitted during the collision can be ignored, an accurate model for the emitted wave is a steady monochromatic wave train at frequency $\mathbf{a}r{\omega}$ at the center of the frequency band, interrupted by random phase jumps each time that a collision occurs. The discontinuities in the phase due to the collisions cause a spread of frequencies around the center frequency. An example is shown in {numref}`fig:coh:atomRandomEmission`. The average time $\tau_0$ between the collisions is typically less than $10^{-10}$&nbsp;s which implies that on average between two collisions roughly $10^6$ harmonic oscillations occur and that during an atom transition of the order of hundred collisions may occur. The coherence time $\Delta \tau_c$ is defined as the maximum time interval over which the phase of the electric field can be predicted. In the case of collisions-dominated emission by a single atom, the coherence time is equal to the average time between subsequent collisions: $\Delta \tau_c = \tau_0\text{ }10^{-10}$&nbsp;s.
 
 To understand coherence and incoherence, it is helpful to use this model for the emission by a single atom as harmonic wave trains of many thousands of periods interrupted by roughly hundred random phase jumps. Due to the random phase jumps, the interference term of the sum of harmonic wave trains emitted by two atoms when integrated of the relatively long integration time of a detector becomes a sum over integrals over time intervals of average length $\tau_0$:
 
@@ -243,14 +243,14 @@ Light trains which have been spontaneously emitted by different atoms can not in
 
 
 ```{figure} Images/06_04_atom_random_emission.png
-:name: Fig_5_01_Atom_Random_Emission
+:name: fig:coh:atomRandomEmission
 The electric field amplitude of the harmonic wave train radiated by a single atom at the center frequency $\mathbf{a}r{\omega}$. The vertical lines are collisions separated by periods of free flight with mean duration $\tau_0$. The quantity $\mathbf{a}r{\omega}\tau_0$, which is the number of periods in a typical wave train, is chosen unrealistically small (namely 60, whereas a realistic value would be $10^5$) to show the random phase changes.
 ```
 
 The coherence time and the width $\Delta \omega$ of the frequency line are related as
 
 ```{math}
-:label: eq:coh:coherence-time
+:label: eq:coh:coherenceTime
 \begin{align*}
 \Delta \tau_c = \frac{2\pi}{\Delta \omega}.
 \end{align*}
@@ -258,7 +258,7 @@ The coherence time and the width $\Delta \omega$ of the frequency line are relat
 The coherence length is defined by
 
 ```{math}
-:label: eq:coh:coherence-length
+:label: eq:coh:coherenceLength
 \begin{align*}
 \Delta \ell_{c}= c \Delta \tau_c.
 \end{align*}
@@ -266,7 +266,7 @@ The coherence length is defined by
 Since $\lambda \omega = 2\pi c$, we have
 
 ```{math}
-:label: eq:coh:wavelength-frequency-ratio
+:label: eq:coh:wavelengthFrequencyRatio
 \begin{align*}
 \frac{\Delta \lambda}{\mathbf{a}r{\lambda}} = \frac{\Delta \omega}{\mathbf{a}r{\omega}},
 \end{align*}
@@ -274,15 +274,15 @@ Since $\lambda \omega = 2\pi c$, we have
 where $\mathbf{a}r{\lambda}$ and $\mathbf{a}r{\omega}$ are the wavelength and the frequency at the center of the line. Hence,
 
 ```{math}
-:label: eq:coh:coherence-length-wavelength
+:label: eq:coh:coherenceLengthWavelength
 \begin{align*}
 \Delta \ell_c = c \frac{2\pi}{\Delta \omega} = 2\pi \frac{c}{\mathbf{a}r{\omega}} \frac{\mathbf{a}r{\omega}}{\Delta \omega} = \frac{\mathbf{a}r{\lambda}^2}{\Delta \lambda}.
 \end{align*}
 ```
-The coherence length and coherence time of a number of sources are listed in {numref}`Table.coh`. For a laser, the linewidth is extremely small and the coherence time very long. This is because the photons in a laser are not generated predominantly by spontaneous emission as classical sources, but instead by **stimulated emission**. Lasers are discussed in [](#chapter.lasers).
+The coherence length and coherence time of a number of sources are listed in {numref}`table:coh:tableCoh`. For a laser, the linewidth is extremely small and the coherence time very long. This is because the photons in a laser are not generated predominantly by spontaneous emission as classical sources, but instead by **stimulated emission**. Lasers are discussed in [](#chapter.lasers).
 
 ```{table}
-:name: Table.coh
+:name: table:coh:tableCoh
 
 Coherence time and coherence length of several sources
 | Source | Mean wavelength | Linewidth | Coherence Length | Coherence Time |
@@ -300,7 +300,7 @@ Coherence time and coherence length of several sources
 When dealing with coherence one has to consider fields that consist of a range of different frequencies. Let ${\cal U}(\mathbf{r},t)$ be the real-valued field component. It is always possible to write ${\cal U}(\mathbf{r},t)$ as an integral over time-harmonic components:
 
 ```{math}
-:label: eq:coh:real-field-integral
+:label: eq:coh:realFieldIntegral
 \begin{align*}
 {\cal U}(\mathbf{r}, t) = \text{Re} \int_0^\infty A_\omega(\mathbf{r}) e^{-i \omega t} \, \, \text{d} \omega,
 \end{align*}
@@ -310,7 +310,7 @@ When there is only a certain frequency band that contributes, then $A_\omega=0$ 
 We define the **complex time-dependent field** $U(\mathbf{r},t)$ by
 
 ```{math}
-:label: eq:coh:complex-field-integral
+:label: eq:coh:complexFieldIntegral
 \begin{align*}
 U(\mathbf{r},t) = \int_0^\infty A_\omega(\mathbf{r}) e^{-i\omega t}\ \, \text{d} \omega.
 \end{align*}
@@ -318,7 +318,7 @@ U(\mathbf{r},t) = \int_0^\infty A_\omega(\mathbf{r}) e^{-i\omega t}\ \, \text{d}
 Then
 
 ```{math}
-:label: eq:coh:real-from-complex
+:label: eq:coh:realFromComplex
 \begin{align*}
 \mathcal{U}(\mathbf{r},t)= \text{Re}\, U(\mathbf{r},t).
 \end{align*}
@@ -331,7 +331,7 @@ The instantaneous energy flux is (as for monochromatic light) proportional to th
 $\mathcal{U}(\mathbf{r},t)^2$. We average the instantaneous intensity over the
 integration time $T$ of common detectors which, as stated before, is very long
 compared to the period at the center frequency $2\pi/\mathbf{a}r{\omega}$ of the
-field. Using {eq}`eq:coh:time-average` and
+field. Using {eq}`eq:coh:timeAverage` and
 
 ```{math}
 \begin{align*}
@@ -343,7 +343,7 @@ field. Using {eq}`eq:coh:time-average` and
 we get
 
 ```{math}
-:label: eq:coh:polychromatic-intensity
+:label: eq:coh:polychromaticIntensity
 \begin{align*}
 \langle  \mathcal{U}(\mathbf{r},t)^2  \rangle &= \frac{1}{4} \langle  (U(\mathbf{r},t)+U(\mathbf{r},t)^*)(U(\mathbf{r},t)+U(\mathbf{r},t)^*) \rangle \nonumber \\
 &= \frac{1}{4} \left\{ \langle U(\mathbf{r},t)^2 \rangle + \langle (U(\mathbf{r},t)^*)^2 \rangle + 2 \langle U(\mathbf{r},t)^* U(\mathbf{r},t) \rangle\right\} \nonumber \\
@@ -352,7 +352,7 @@ we get
 \end{align*}
 ```
 ```{math}
-:label: eq:coh:polychromatic-intensity-b
+:label: eq:coh:polychromaticIntensityB
 \begin{align*}
 \\\end{align*}
 ```
@@ -364,14 +364,14 @@ In contrast, $|U(\mathbf{r},t)|^2=U(\mathbf{r},t)^*U(\mathbf{r},t)$ has a DC-com
 We furthermore assume that the fields are **ergodic**, which means that taking
 the time-average over a long time interval amounts to the same as taking the
 average over the ensemble of possible fields. It can be shown that this property
-implies that the limit $T\rightarrow \infty$ in {eq}`eq:coh:time-average` indeed
+implies that the limit $T\rightarrow \infty$ in {eq}`eq:coh:timeAverage` indeed
 exists{cite:p}`mandel_wolf`.
 
 
 We use for the intensity again the expression without the factor $1/2$ in front, i.e.
 
 ```{math}
-:label: eq:coh:intensity-definition
+:label: eq:coh:intensityDefinition
 \begin{align*}
 I(\mathbf{r}) &= \langle  |U(\mathbf{r},t)|^2 \rangle.
 \end{align*}
@@ -381,7 +381,7 @@ The time-averaged intensity has hereby been expressed in terms of the **time-ave
 **Quasi-monochromatic field**.
 If the width $\Delta \omega$ of the frequency band is very narrow compared to the center frequency $\mathbf{a}r{\omega}$, we speak of a quasi-monochromatic field. In the propagation of quasi-monochromatic fields, we use the formula for time-harmonic fields at $\mathbf{a}r{\omega}$. The quasi-monochromatic assumption simplifies the computations considerably and will therefore be used frequently.
 
-(section.tempcoh)=
+(sec:coh:tempcoh)=
 ## Temporal Coherence and the Michelson Interferometer
 
 To investigate the time coherence of a field in a certain point $\mathbf{r}$,
@@ -389,16 +389,16 @@ we let the field in that point interfere with itself but delayed in time, i.e. w
 $U(\mathbf{r},t)$ interfere with $U(\mathbf{r}, t-\tau)$.
 Because, when studying temporal coherence, the point $\mathbf{r}$ is always the same, we omit it from the formula. Furthermore, for easier understanding of the phenomena, we assume for the time being that the field considered is emitted by a single atom (i.e. a point source).
 
-Temporal coherence is closely related to the spectral content of the light: if the light consists of fewer frequencies (think of monochromatic light), then it is more temporally coherent. To study the interference of $U(t)$ with $U(t-\tau)$, a Michelson interferometer, shown in {numref}`Fig_5_02_Temporal_Coherence`, is a suitable setup. The light that goes through one arm takes time $t$ to reach the detector, while the light that goes through the other (longer) arm takes time $t+\tau$ which means that it was radiated earlier. Therefore, the detector observes the time-averaged intensity $\langle |U(t)+U(t-\tau)|^2 \rangle$. As remarked before, this averaged intensity does not depend on the time the average is taken, it only depends on the time difference $\tau$ between the two beams.
+Temporal coherence is closely related to the spectral content of the light: if the light consists of fewer frequencies (think of monochromatic light), then it is more temporally coherent. To study the interference of $U(t)$ with $U(t-\tau)$, a Michelson interferometer, shown in {numref}`fig:coh:temporalCoherence`, is a suitable setup. The light that goes through one arm takes time $t$ to reach the detector, while the light that goes through the other (longer) arm takes time $t+\tau$ which means that it was radiated earlier. Therefore, the detector observes the time-averaged intensity $\langle |U(t)+U(t-\tau)|^2 \rangle$. As remarked before, this averaged intensity does not depend on the time the average is taken, it only depends on the time difference $\tau$ between the two beams.
 ```{figure} Images/06_05_temporal_coherence.png
-:name: Fig_5_02_Temporal_Coherence
+:name: fig:coh:temporalCoherence
 A Michelson interferometer to study the temporal coherence of a field. A beam is split in two by a beam splitter, and the two beams propagate over different distances which corresponds to a time difference $\tau$ and then interfere at the detector.
 ```
 
 We have
 
 ```{math}
-:label: eq:coh:intensity-time-delay
+:label: eq:coh:intensityTimeDelay
 \begin{align*}
 I(\tau)&= \langle |U(t)+U(t-\tau)|^2 \rangle
 &= \langle |U(t)|^2 \rangle+\langle |U(t-\tau)|^2 \rangle+2\text{Re} \langle U(t)U(t-\tau)^* \rangle  \\
@@ -407,7 +407,7 @@ I(\tau)&= \langle |U(t)+U(t-\tau)|^2 \rangle
 ```
 The detected intensity varies with the difference in arm length.
 
-So far we have considered a field that originates from a single atom. The total field emitted by an extended source is the sum of fields $U_i(t)$ corresponding to all atoms $i$. As has been explained already, the fields emitted by different atoms can not interfere. But the field emitted by an atom can interfere with the delayed field of that same atom and for every atom the interference is given by the same expression {eq}`eq:coh:intensity-time-delay`. The total intensity is simply that given by that of a single atom multiplied by the number of atoms.
+So far we have considered a field that originates from a single atom. The total field emitted by an extended source is the sum of fields $U_i(t)$ corresponding to all atoms $i$. As has been explained already, the fields emitted by different atoms can not interfere. But the field emitted by an atom can interfere with the delayed field of that same atom and for every atom the interference is given by the same expression {eq}`eq:coh:intensityTimeDelay`. The total intensity is simply that given by that of a single atom multiplied by the number of atoms.
 In particular, the ratio of the interference term and the other terms is the same for the entire source as for a single atom.
 
 The **self coherence function** $\Gamma(\tau)$ is defined by
@@ -429,7 +429,7 @@ The **complex degree of self-coherence** is defined by:
 
 
 ```{math}
-:label: eq:coh:self-coherence-degree
+:label: eq:coh:selfCoherenceDegree
 \begin{align*}
 \gamma(\tau)=\frac{\Gamma(\tau)}{\Gamma(0)}. \hspace{1.2cm} \mathbf{complex degree of self-coherence}
 \end{align*}
@@ -437,7 +437,7 @@ The **complex degree of self-coherence** is defined by:
  Using Bessel's inequality it can be shown that this is a complex number with modulus between $0$ and $1$:
 
 ```{math}
-:label: eq:coh:self-coherence-bounds
+:label: eq:coh:selfCoherenceBounds
 \begin{align*}
 0 \leq |\gamma(\tau)| \leq 1.
 \end{align*}
@@ -445,7 +445,7 @@ The **complex degree of self-coherence** is defined by:
 The observed intensity can then be written:
 
 ```{math}
-:label: eq:coh:interference-coherence
+:label: eq:coh:interferenceCoherence
 \begin{align*}
 I(\tau)=2 I_0 \left\{1 +\text{Re}\left[\gamma(\tau)
 \right]\right\},
@@ -464,7 +464,7 @@ U(t)=e^{-i\omega t}.
 In that case we get for the self-coherence
 
 ```{math}
-:label: eq:coh:self-coherence-monochromatic
+:label: eq:coh:selfCoherenceMonochromatic
 \begin{align*}
 \begin{split}
 \Gamma(\tau)&=\langle e^{-i\omega t}e^{i\omega (t-\tau)} \rangle
@@ -475,7 +475,7 @@ In that case we get for the self-coherence
 and
 
 ```{math}
-:label: eq:coh:gamma-monochromatic
+:label: eq:coh:gammaMonochromatic
 \begin{align*}
 \gamma(\tau) = e^{-i\omega \tau}.
 \end{align*}
@@ -483,7 +483,7 @@ and
 Hence the interference pattern is given by
 
 ```{math}
-:label: eq:coh:temporal-coherence
+:label: eq:coh:temporalCoherence
 \begin{align*}
 \begin{split}
 I(\tau)&=2\left[1+ \cos\left( \omega\tau \right) \right].
@@ -504,7 +504,7 @@ where $\left(2\pi/T\right) \ll \Delta \omega \ll \mathbf{a}r{\omega}$, where $T$
 Then:
 
 ```{math}
-:label: eq:coh:fringe-two-frequencies
+:label: eq:coh:fringeTwoFrequencies
 \begin{align*}
 \Gamma(\tau)&=\frac{1}{4}\langle \left(e^{-i(\mathbf{a}r{\omega}+\Delta\omega/2) t}+e^{-i(\mathbf{a}r{\omega}-\Delta\omega/2) t}\right)\left(e^{i(\mathbf{a}r{\omega}+\Delta\omega/2) (t-\tau)}+e^{i(\mathbf{a}r{\omega}-\Delta\omega/2) (t-\tau)}\right) \rangle
 &\approx & \frac{e^{-i(\mathbf{a}r{\omega}+\Delta\omega/2) \tau}+e^{-i(\mathbf{a}r{\omega}-\Delta\omega/2) \tau}}{4}
@@ -516,15 +516,15 @@ where in the second line the time average of terms that oscillate with time is s
 Hence, the complex degree of self-coherence is:
 
 ```{math}
-:label: eq:coh:gamma-two-frequencies
+:label: eq:coh:gammaTwoFrequencies
 \begin{align*}
 \gamma(\tau)= \cos\left(\Delta\omega\,\tau/2 \right) e^{-i \mathbf{a}r{\omega} \tau}
 \end{align*}
 ```
-and {eq}`eq:coh:interference-coherence` becomes
+and {eq}`eq:coh:interferenceCoherence` becomes
 
 ```{math}
-:label: eq:coh:intensity-two-frequencies
+:label: eq:coh:intensityTwoFrequencies
 \begin{align*}
 I(\tau)= \left\{1 +\text{Re}\left[\gamma(\tau)
 \right]\right\}= 1 + \cos\left(\Delta\omega\,\tau/2\right) \cos(\mathbf{a}r{\omega} \tau ).
@@ -545,31 +545,31 @@ We conclude with some further interpretations of the degree of self-coherence $\
 2. The Wiener-Khinchin theorem says that (under the assumption of ergodicity and for stationary fields) the **Fourier transform of the self coherence function is the spectral power density of** $U(t)$:
 
 ```{math}
-:label: eq:coh:wiener-khinchin
+:label: eq:coh:wienerKhinchin
 \hat{\Gamma}(\omega)=|\hat{U}(\omega)|^2,
 ```
 
 Using the uncertainty principle, we can see that the larger the spread of the frequencies of $U(t)$ (i.e. the larger the bandwidth), the more sharply peaked $\Gamma(\tau)$ is. Thus, the light gets temporally less coherent when it consists of a broader range of frequencies. Measuring the spectral power density with a spectroscope and applying a back Fourier transform is an alternative method to obtain the complex self-coherence function.
 
 
-(section.spatcoh)=
+(sec:coh:spatcoh)=
 ## Spatial Coherence and Young's Experiment
 
-Temporal coherence concerns the coherence of the field in one point. The absolute value of the degree of self coherence {eq}`eq:coh:self-coherence-degree` quantifies how strong the interference is of the field in the point of interest with the field in that same point at a later time. In contrast, spatial coherence is concerned with determining how coherent the fields in two different points are. This is done by letting the fields interfere using a mask with two small holes at the positions of the points of interest and observing the fringe contrast at a distant screen (Young's experiment).
+Temporal coherence concerns the coherence of the field in one point. The absolute value of the degree of self coherence {eq}`eq:coh:selfCoherenceDegree` quantifies how strong the interference is of the field in the point of interest with the field in that same point at a later time. In contrast, spatial coherence is concerned with determining how coherent the fields in two different points are. This is done by letting the fields interfere using a mask with two small holes at the positions of the points of interest and observing the fringe contrast at a distant screen (Young's experiment).
 
 While for temporal coherence we used a **Michelson interferometer**, the natural choice to characterize spatial coherence is
 **Young's experiment**, because it allows the fields in two points $P_1$, $P_2$ which are separated in space to interfere with each other.
 
 ```{figure} Images/06_06_spatial_coherence.png
-:name: Fig_5_04_Spatial_Coherence
+:name: fig:coh:spatialCoherence
 The spatial coherence of light from an extended source.
 ```
 
 Let $\mathbf{r}_1$and $\mathbf{r}_2$ be the position vectors of the points $P_1$ and $P_2$, respectively.
-We write the complex field in $P_1$ as a superposition of monochromatic fields as in {eq}`eq:coh:complex-field-integral`:
+We write the complex field in $P_1$ as a superposition of monochromatic fields as in {eq}`eq:coh:complexFieldIntegral`:
 
 ```{math}
-:label: eq:coh:complex-field-p1
+:label: eq:coh:complexFieldP1
 \begin{align*}
 U(\mathbf{r}_1,t) = \int A_\omega(\mathbf{r}_1) e^{-i\omega t}\ \, \text{d} \omega.
 \end{align*}
@@ -578,18 +578,18 @@ The reason for doing this is that for a monochromatic field in the pinhole, i.e.
 In fact, according to the Huygens-Fresnel Principle, a monochromatic disturbance with frequency $\omega$ in the pinhole at $\mathbf{r}_1$ generates a radiating spherical wave with the same frequency $\omega$, such that in a point $\mathbf{r}$ behind the mask the field is:
 
 ```{math}
-:label: eq:coh:time-harmonic-spherical
+:label: eq:coh:timeHarmonicSpherical
 \begin{align*}
 {\cal S} A_\omega(\mathbf{r}_1)\, \frac{\omega}{c} \,\frac{e^{-i \omega(t- |\mathbf{r}-\mathbf{r}_1|/c)}}{ |\mathbf{r}-\mathbf{r}_1|},
 \end{align*}
 ```
 where ${\cal S}$
 is the surface area of the pinhole.
-We assume that the frequency band is sufficiently small such that the frequency factor that multiplies $A_\omega$ can be replaced by the center frequency $\mathbf{a}r{\omega}$. Note that this should not be done in the exponent in {eq}`eq:coh:time-harmonic-spherical` because an error in the phase can easily lead to large errors in the total field.
+We assume that the frequency band is sufficiently small such that the frequency factor that multiplies $A_\omega$ can be replaced by the center frequency $\mathbf{a}r{\omega}$. Note that this should not be done in the exponent in {eq}`eq:coh:timeHarmonicSpherical` because an error in the phase can easily lead to large errors in the total field.
 The total field $U_1(\mathbf{r},t)$ in $\mathbf{r}$ due to the pinhole at $P_1$ is obtained by integrating the monochromatic components over frequency:
 
 ```{math}
-:label: eq:coh:huygens-fresnel
+:label: eq:coh:huygensFresnel
 \begin{align*}
 U_1(\mathbf{r},t) = {\cal S} \,\frac{\mathbf{a}r{\omega}}{c} \int A_\omega(\mathbf{r}_1)\frac{e^{-i \omega( t-|\mathbf{r}-\mathbf{r}_1|/c)}}{ |\mathbf{r}-\mathbf{r}_1|} \text{d} \omega ={\cal S}\, \frac{\mathbf{a}r{\omega}}{c}
 \frac{U(\mathbf{r}_1, t - |\mathbf{r}-\mathbf{r}_1|/c)}{ |\mathbf{r}-\mathbf{r}_1|}.
@@ -604,7 +604,7 @@ The field in $\mathbf{r}$ at time $t$ due to the pinhole at $\mathbf{r}_1$ is pr
 For the field in $\mathbf{r}$ due to pinhole 2 we have similarly
 
 ```{math}
-:label: eq:coh:huygens-fresnel-p2
+:label: eq:coh:huygensFresnelP2
 \begin{align*}
 U_2(\mathbf{r},t) = {\cal S}\, \frac{\mathbf{a}r{\omega}}{c}
 \frac{U(\mathbf{r}_2, t - |\mathbf{r}-\mathbf{r}_1|/c)}{ |\mathbf{r}-\mathbf{r}_2|}.
@@ -612,19 +612,19 @@ U_2(\mathbf{r},t) = {\cal S}\, \frac{\mathbf{a}r{\omega}}{c}
 ```
 The total field in $\mathbf{r}$ is the sum $U_1(\mathbf{r},t)+U_2(\mathbf{r},t)$.
 Because of the difference in propagation distance
-$\Delta R=|\mathbf{r}-\mathbf{r}_2|-|\mathbf{r}-\mathbf{r}_1|$, there is a time difference $\tau$ between when the two fields have been emitted by the two pinholes when they arrive at a given time $T$ IN point $\mathbf{r}$ on the screen in {numref}`Fig_5_04_Spatial_Coherence`. This time difference is given by
+$\Delta R=|\mathbf{r}-\mathbf{r}_2|-|\mathbf{r}-\mathbf{r}_1|$, there is a time difference $\tau$ between when the two fields have been emitted by the two pinholes when they arrive at a given time $T$ IN point $\mathbf{r}$ on the screen in {numref}`fig:coh:spatialCoherence`. This time difference is given by
 
 ```{math}
-:label: eq:coh:time-difference
+:label: eq:coh:timeDifference
 \begin{align*}
 \tau = \frac{\Delta R}{c}.
 \end{align*}
 ```
 Furthermore, the amplitudes are reduced by a factor proportional to the reciprocal distance which is different for the two fields. But if the distance of the screen to the mask is large enough, we may assume these factors to be the same and then omit them.
-Using {eq}`eq:coh:time-difference`, the interference pattern on the screen is then, apart from a constant factor, given by
+Using {eq}`eq:coh:timeDifference`, the interference pattern on the screen is then, apart from a constant factor, given by
 
 ```{math}
-:label: eq:coh:spatial-fringe
+:label: eq:coh:spatialFringe
 \begin{align*}
 I(\tau)&= \langle  \, |U_1(\mathbf{r},t) + U_2(\mathbf{r},t) |^2 \,  \rangle
 &= \langle \, | U(\mathbf{r}_1, t-|\mathbf{r}-\mathbf{r}_1||/c) + U(\mathbf{r}_2, t-|\mathbf{r}-\mathbf{r}_2||/c)|^2 \,  \rangle  \\
@@ -639,7 +639,7 @@ We define the **mutual coherence function** by:
 
 
 ```{math}
-:label: eq:coh:mutual-coherence
+:label: eq:coh:mutualCoherence
 \begin{align*}
 \Gamma_{12}(\tau)=\langle \,U(\mathbf{r}_1,t)U(\mathbf{r}_2,t-\tau)^*\, \rangle, \hspace{1.5cm} \mathbf{mutual coherence}.
 \end{align*}
@@ -659,7 +659,7 @@ I_2&=\langle \, |U(\mathbf{r}_2,t)|^2\,  \rangle = \Gamma_{22}(0).
 the **complex degree of mutual coherence** is defined by
 
 ```{math}
-:label: eq:coh:mutual-coherence-degree
+:label: eq:coh:mutualCoherenceDegree
 \begin{align*}
 \gamma_{12}(\tau)=\frac{\Gamma_{12}(\tau)}{\sqrt{ \Gamma_{11}(0)}\sqrt{\Gamma_{22}(0)}}, \quad \mathbf{complex degree of mutual coherence}.
 \end{align*}
@@ -668,11 +668,11 @@ the **complex degree of mutual coherence** is defined by
 It can be proved using Bessel's inequality that
 
 ```{math}
-:label: eq:coh:gamma12-bound
+:label: eq:coh:gamma12Bound
 |\gamma_{12}(\tau)| \leq 1.
 ```
 
-We can now write {eq}`eq:coh:spatial-fringe` as
+We can now write {eq}`eq:coh:spatialFringe` as
 
 ```{math}
 \begin{align*}
@@ -701,14 +701,14 @@ In that case
 and
 
 ```{math}
-:label: eq:coh:gamma-self-coherence
+:label: eq:coh:gammaSelfCoherence
 \Gamma_{11}(0)= |A(\mathbf{r}_1)|^2, \quad \Gamma_{22}(0)=|A(\mathbf{r}_2)|^2.
 ```
 
 So we get
 
 ```{math}
-:label: eq:coh:gamma12-monochromatic
+:label: eq:coh:gamma12Monochromatic
 \begin{align*}
 \gamma_{12} (\tau) = \frac{\Gamma_{12}(\tau)}{|A(\mathbf{r}_1)| |A(\mathbf{r}_2)|} = e^{-i \omega \tau + i \varphi},
 \end{align*}
@@ -718,7 +718,7 @@ $\gamma_{12}$ has modulus 1, as expected for a monochromatic field.
 The intensity on the screen becomes
 
 ```{math}
-:label: eq:coh:double-slit-interference
+:label: eq:coh:doubleSlitInterference
 \begin{align*}
 I(\tau)=|A(\mathbf{r}_1)|^2+|A(\mathbf{r}_2)|^2+2|A(\mathbf{r}_1)||A(\mathbf{r}_2)|\cos\left(\omega \tau -\varphi\right).
 \end{align*}
@@ -737,10 +737,10 @@ Because $\omega=c\frac{2\pi}{\lambda}$, and $\Delta R=c\tau$, we find that maxim
 \Delta R =0,\pm\lambda,\pm 2\lambda, \pm 3\lambda,\dots
 \end{align*}
 ```
-For large distance between the screen and the mask (in the Fraunhofer limit), these path length differences correspond to directions of the maxima given by the angles $\theta_m$ (see {numref}`Fig_5_04_Spatial_Coherence`):
+For large distance between the screen and the mask (in the Fraunhofer limit), these path length differences correspond to directions of the maxima given by the angles $\theta_m$ (see {numref}`fig:coh:spatialCoherence`):
 
 ```{math}
-:label: eq:coh:young-maxima-angles
+:label: eq:coh:youngMaximaAngles
 \begin{align*}
 \theta_m = \frac{\Delta R}{d} = m \frac{\lambda}{d},
 \end{align*}
@@ -754,7 +754,7 @@ where $d$ is the distance between the slits and $m$ is an integer[^5].
 
 2. As remarked above, by moving the point of observation $\mathbf{r}$ over the screen, one can obtain the real part of the complex degree of mutual coherence. To derive also the imaginary part, one can put a piece of glass behind one of the pinholes with thickness such that for the center frequency $\mathbf{a}r{\omega}$ an additional phase difference of $\pi/2$ is obtained of the fields in $\mathbf{r}_1$ and $\mathbf{r}_2$. If the frequency band $\Delta \omega$ is sufficiently narrow this phase difference applies in good approximations to all frequencies in the band.
 
-(section.scprop)=
+(sec:coh:scprop)=
 ## More on Spatial Coherence
 
 
@@ -764,7 +764,7 @@ In that case it is the fields in two points $P_1$, $P_2$
 somewhere in space are coherent if and only if the difference in time that it takes for light to propagate from $S$ to $P_1$ and from $S$ to $P_2$ is less than the coherence time $\Delta\tau_c$. Equivalently, for coherence the difference between the distances $SP_1$ and $SP_2$ must be less than the coherence length $\Delta l_c$.
 
 An extended classical light source consists of a large set of emitting point sources that emit by spontaneous emission.
-As we have explained in [](#subsection.cohsources), the wave trains emitted by different atoms (point sources) in the source suffer random phase jumps due to e.g. collisions and therefore the fields emitted by different point sources in an extended classical light source can not interfere. Such a light source is called **spatially incoherent**. For a spatially incoherent light source, the spatial coherence in any two points $P_1$ and $P_2$ is determined by measuring the fringe contrast on a distance screen when a mask is used that is perpendicular to the mean direction of propagation of the light and which contains pinholes at $P_1$ and $P_2$. The fringe contrast and hence the mutual coherence at $P_1$ and $P_2$ is determined by two effects:
+As we have explained in [](#sec:coh:cohsources), the wave trains emitted by different atoms (point sources) in the source suffer random phase jumps due to e.g. collisions and therefore the fields emitted by different point sources in an extended classical light source can not interfere. Such a light source is called **spatially incoherent**. For a spatially incoherent light source, the spatial coherence in any two points $P_1$ and $P_2$ is determined by measuring the fringe contrast on a distance screen when a mask is used that is perpendicular to the mean direction of propagation of the light and which contains pinholes at $P_1$ and $P_2$. The fringe contrast and hence the mutual coherence at $P_1$ and $P_2$ is determined by two effects:
 
 
 1. First of all it is determined by how coherent the contributions to the total field in $P_1$ and $P_2$ is of the individual point sources $S$ in the extended source. This coherence is determined by the extent to which the difference between the distance of $S$ to $P_1$ and of $S$ to $P_2$ is smaller than the coherence length. If these differences in distances are for all point sources larger than the coherence length, the fringe contrast on the screen n Young's experiment will be very low and hence the mutual coherence is very low.
@@ -783,37 +783,37 @@ The product of the angle subtended by the extended source at the midpoint of $P_
 To show this we consider two mutually incoherent point sources $S_1$ and $S_2$ in the $z=0$ plane. Their mutual coherence function satisfies:
 
 ```{math}
-:label: eq:coh:spatial-incoherence-a
+:label: eq:coh:spatialIncoherenceA
 \begin{align*}
 \Gamma_{S_1S_2}(\tau) &=
 0, \text{ for all $\tau$},
 \end{align*}
 ```
 ```{math}
-:label: eq:coh:spatial-incoherence-b
+:label: eq:coh:spatialIncoherenceB
 \begin{align*}
 \\
 \Gamma_{S_1S_1}(\tau)&=\Gamma_{S_2S_2}(\tau)= \Gamma_0(\tau),\end{align*}
 ```
 where $\Gamma_0$ is the self-coherence which we assume to be the same for both point sources. $\Gamma_0(\tau)$ has width given by the coherence time $\Delta \tau_c$ of the source and on average decreases with $\tau$ (although not always monotonically).
-{eq}`eq:coh:spatial-incoherence-a` expresses the fact that two point sources are mutually
+{eq}`eq:coh:spatialIncoherenceA` expresses the fact that two point sources are mutually
 incoherent. Using that the long-time average does not depend on the origin of
 time which was based on the assumption that the source is stationary, we find:
 
 ```{math}
-:label: eq:coh:gamma0-conjugate
+:label: eq:coh:gamma0Conjugate
 \begin{align*}
 \Gamma_0(-\tau)=<U(S_1,t) U(S_1,t+\tau)^*> = < U(S_1,t-\tau)U(S_1,t)^*> = \Gamma_0(\tau)^*.
 \end{align*}
 ```
 Furthermore, for $\tau=0$: $\Gamma_0(0)=I_0$, which is the intensity of either source.
 
-We assume for convenience that the two points $P_1$, $P_2$ to be at a large distance $z$ from the two point sources and that the line $P_1P_2$ is parallel to the extended source as shown in {numref}`Fig_5_06_Coherence_Propagation`. We will compute the mutual coherence $\Gamma_{P_1P_2}(0)$ for zero time delay $\tau=0$ (we can also compute the mutual coherence for more general time delays $\tau>0$, i.e. $\Gamma_{P_1P_2}(\tau)$, but it will suffice for our purpose to take $\tau=0$).
+We assume for convenience that the two points $P_1$, $P_2$ to be at a large distance $z$ from the two point sources and that the line $P_1P_2$ is parallel to the extended source as shown in {numref}`fig:coh:coherencePropagation`. We will compute the mutual coherence $\Gamma_{P_1P_2}(0)$ for zero time delay $\tau=0$ (we can also compute the mutual coherence for more general time delays $\tau>0$, i.e. $\Gamma_{P_1P_2}(\tau)$, but it will suffice for our purpose to take $\tau=0$).
 The fields in $P_1$ and $P_2$ are the sum of the fields emitted by $S_1$ and $S_2$.
-Since $S_1$ and $S_2$ are point sources they emit spherical waves. Therefore, similarly to {eq}`eq:coh:huygens-fresnel` we find that the field in $P_1$ is proportional to
+Since $S_1$ and $S_2$ are point sources they emit spherical waves. Therefore, similarly to {eq}`eq:coh:huygensFresnel` we find that the field in $P_1$ is proportional to
 
 ```{math}
-:label: eq:coh:field-p1
+:label: eq:coh:fieldP1
 \begin{align*}
 U(P_1, t) \propto \frac{U(S_1,t-|S_1P_1|/c)}{|S_1P_1|} + \frac{U(S_2,t-|S_2P_1|/c)}{|S_2P_1|},
 \end{align*}
@@ -821,21 +821,21 @@ U(P_1, t) \propto \frac{U(S_1,t-|S_1P_1|/c)}{|S_1P_1|} + \frac{U(S_2,t-|S_2P_1|/
 and
 
 ```{math}
-:label: eq:coh:field-p2
+:label: eq:coh:fieldP2
 \begin{align*}
 U(P_2, t) \propto \frac{U(S_1,t-|S_1P_2|/c)}{|S_1P_2|} + \frac{U(S_2,t-|S_2P_2|/c)}{|S_2P_2|},
 \end{align*}
 ```
-where we omitted the constant factors in front of {eq}`eq:coh:huygens-fresnel`.
+where we omitted the constant factors in front of {eq}`eq:coh:huygensFresnel`.
 ```{figure} Images/06_07_coherence_propagation.png
-:name: Fig_5_06_Coherence_Propagation
+:name: fig:coh:coherencePropagation
 Two incoherent point sources $S_1$, $S_2$ at a distance $a$ from each other and two points $P_1$, $P_2$ in a plane at large distance $z$ from the point sources.
 ```
 
-For $z$ sufficiently large all distances $|S_iP_j|$ in the denominators may be replaced by $z$ and then these equal distances can be omitted. By substituting {eq}`eq:coh:field-p1` and {eq}`eq:coh:field-p2` into {eq}`eq:coh:mutual-coherence` with $\tau=0$, we find for the mutual coherence of $P_1$ and $P_2$:
+For $z$ sufficiently large all distances $|S_iP_j|$ in the denominators may be replaced by $z$ and then these equal distances can be omitted. By substituting {eq}`eq:coh:fieldP1` and {eq}`eq:coh:fieldP2` into {eq}`eq:coh:mutualCoherence` with $\tau=0$, we find for the mutual coherence of $P_1$ and $P_2$:
 
 ```{math}
-:label: eq:coh:gamma-p1p2-full
+:label: eq:coh:gammaP1p2Full
 \begin{align*}
 \Gamma_{P_1P_2}(0) &= \langle \, U(P_1,t)U(P_2,t)^*\, \rangle  \\
 &= \Gamma_{S_1S_1}\left( \frac{ |S_1P_2|-|S_1P_1|}{c}\right)
@@ -844,11 +844,11 @@ For $z$ sufficiently large all distances $|S_iP_j|$ in the denominators may be r
 + \Gamma_{S_2S_2}\left( \frac{|S_2P_2|- |S_2P_1|}{c}\right).
 \end{align*}
 ```
-Now we use {eq}`eq:coh:spatial-incoherence-a` and {eq}`eq:coh:spatial-incoherence-b`
+Now we use {eq}`eq:coh:spatialIncoherenceA` and {eq}`eq:coh:spatialIncoherenceB`
 to get
 
 ```{math}
-:label: eq:coh:gamma-p1p2-simplified
+:label: eq:coh:gammaP1p2Simplified
 \begin{align*}
 \Gamma_{P_1P_2}(0) &= \Gamma_0\left( \frac{ |S_1P_2|-|S_1P_1|}{c}\right) + \Gamma_0\left( \frac{|S_2P_2|- |S_2P_1|}{c}\right).
 \end{align*}
@@ -856,20 +856,20 @@ to get
 Similarly,
 
 ```{math}
-:label: eq:coh:gamma-p1p1
+:label: eq:coh:gammaP1p1
 \begin{align*}
 \Gamma_{P_1P_1}(0) = \Gamma_{P_2P_2}(0)=2\Gamma_0(0)= 2I_0.
 \end{align*}
 ```
 Since the width of the self coherence function $\Gamma_0$ is the coherence time $\Delta \tau_c$,
-result {eq}`eq:coh:gamma-p1p2-simplified` confirms that for the fields in $P_1$ and $P_2$ to be coherent,
+result {eq}`eq:coh:gammaP1p2Simplified` confirms that for the fields in $P_1$ and $P_2$ to be coherent,
 the **difference in distance** of each of the source points to points $P_1$ and $P_2$ should be smaller than the coherence length $\Delta l_c = c \Delta \tau_c $.
 To express the result in the angle $\alpha$ subtended by the source at the midpoint of $P_1P_2$ we choose coordinates such that
-$P_j=(x_j,0,z)$ for $j=1,2$. If the distance to the source is so large that $S_1P_1$ and $S_1P_2$ are almost parallel, we see from {numref}`Fig_5_07_Coherence_Propagation`
+$P_j=(x_j,0,z)$ for $j=1,2$. If the distance to the source is so large that $S_1P_1$ and $S_1P_2$ are almost parallel, we see from {numref}`fig:coh:coherencePropagation`
 that
 
 ```{math}
-:label: eq:coh:path-difference-1
+:label: eq:coh:pathDifference1
 \begin{align*}
 |S_1P_2|-|S_1P_1|\approx |QP_2|
 = \frac{\alpha}{2}|x_1-x_2|.
@@ -878,20 +878,20 @@ that
 Similarly,
 
 ```{math}
-:label: eq:coh:path-difference-2
+:label: eq:coh:pathDifference2
 \begin{align*}
 |S_2P_1|-|S_2P_2|\approx \frac{\alpha}{2}|x_1-x_2|.
 \end{align*}
 ```
 ```{figure} Images/06_08_coherence_propagation.png
-:name: Fig_5_07_Coherence_Propagation
+:name: fig:coh:coherencePropagation
 For $z$ very large, $S_1P_1$ and $S_1P_2$ are almost parallel and $|S_1P_2|-|S_1P_1|\approx |QP_2|= |x_1-x_2| \alpha/2$.
 ```
 
-Hence, with $\Gamma_0(-\tau)=\Gamma_0(\tau)^*$, {eq}`eq:coh:gamma-p1p2-simplified` becomes
+Hence, with $\Gamma_0(-\tau)=\Gamma_0(\tau)^*$, {eq}`eq:coh:gammaP1p2Simplified` becomes
 
 ```{math}
-:label: eq:coh:gamma-p1p2-angle
+:label: eq:coh:gammaP1p2Angle
 \begin{align*}
 \Gamma_{P_1P_2}(0) = 2\text{Re}\, \Gamma_0\left( \frac{\alpha}{2} \frac{(x_1-x_2)}{c}\right).
 \end{align*}
@@ -902,10 +902,10 @@ The smaller this product is the higher the degree of spatial coherence of $P_1$ 
 The angle $\alpha$ decreases when the distance to the sources is increased and/or when the size of the source is decreased. Loosely speaking one can say that as the light propagates, it becomes more coherent. In both cases when the distance to the source increases and when the size of the source is decreased, the **difference in distance of all point source to $P_1$ and $P_2$** decreases and will ultimately become smaller than the coherence length. Furthermore, for smaller $\alpha$ the fringe patterns on the distant screen in Young's experiment due to different point sources more strongly overlap which leads to a stronger overall fringe contrast.
 
 As example consider quasi-monochromatic light for which (see
-{eq}`eq:coh:self-coherence-monochromatic`):
+{eq}`eq:coh:selfCoherenceMonochromatic`):
 
 ```{math}
-:label: eq:coh:quasi-monochromatic
+:label: eq:coh:quasiMonochromatic
 \begin{align*}
 \Gamma_0(\tau) = I_0 e^{-i\mathbf{a}r{\omega}\tau}, \text{ for all $\tau$}.
 \end{align*}
@@ -913,7 +913,7 @@ As example consider quasi-monochromatic light for which (see
 where $\mathbf{a}r{\omega}$ is the center frequency. In this case the coherence length $\Delta l_c$ of the source is so large that the contributions to the total field of all individual point sources are coherent. Hence the only remaining criterion for coherence of the total fields in $P_1$ and $P_2$ is that the fringe patterns due to the different point sources in Young's experiment sufficiently overlap. Indeed, in this case of very long coherence time $\Delta \tau_c$ we have
 
 ```{math}
-:label: eq:coh:gamma-p1p2-quasi
+:label: eq:coh:gammaP1p2Quasi
 \begin{align*}
 \Gamma_{P_1P_2}(0) = 2 I_0 \cos\left[\frac{\alpha}{2}\frac{\mathbf{a}r{\omega}|x_1-x_2|}{c}\right],
 \end{align*}
@@ -921,7 +921,7 @@ where $\mathbf{a}r{\omega}$ is the center frequency. In this case the coherence 
 and hence the degree of mutual coherence is:
 
 ```{math}
-:label: eq:coh:gamma-p1p2-quasi-degree
+:label: eq:coh:gammaP1p2QuasiDegree
 \begin{align*}
 \gamma_{P_1P_2}(0) &= \frac{\Gamma_{P_1P_2}(0)}{\sqrt{\Gamma_{P_1P_1}(0)} \sqrt{\Gamma_{P_2P_2}(0)}}  \\
 &= \cos\left[\frac{\alpha}{2}\frac{\mathbf{a}r{\omega}|x_1-x_2|}{c}\right].
@@ -930,7 +930,7 @@ and hence the degree of mutual coherence is:
 We see that when
 
 ```{math}
-:label: eq:coh:coherence-condition
+:label: eq:coh:coherenceCondition
 \begin{align*}
 |x_1-x_2| < \mathbf{a}r{\lambda}/(2 \alpha),
 \end{align*}
@@ -940,7 +940,7 @@ the fields in $P_1$ and $P_2$ are at least partially mutually coherent.
 **Example**. We determine the maximum distance $d$ between two points on earth for which sun light is coherent. The sun subtends on earth the angle:
 
 ```{math}
-:label: eq:coh:sun-angle
+:label: eq:coh:sunAngle
 \alpha = \frac{\text{AU}}{2R_\circ}\approx 0.015,
 ```
 
@@ -956,12 +956,12 @@ for appreciable mutual coherence, we find $d_{\max}\approx 20$ micron.
 
 ## Stellar Interferometry
 The property that the spatial coherence of two points decreases for increasing angle which the source subtends halfway between the two points, is used in **stellar interferometry**.
-It works as follows: we want to know the size of a certain star. The size of the star, being an extended spatially incoherent source, determines the spatial coherence of the light we receive on earth. Thus, by measuring the interference of the light collected by two transversely separated telescopes, one can effectively create a double-slit experiment, with which the degree of spatial coherence of the star light on earth can be measured, and thereby the angle which the star subtends on earth. The resolution in retrieving the angle from the spatial coherence is larger when the distance between the telescopes is larger (see&nbsp;{eq}`eq:coh:gamma-p1p2-quasi-degree`). Then, if we know the distance of the star by independent means, e.g. from its spectral brightness, we can deduce its size from its angular size.
+It works as follows: we want to know the size of a certain star. The size of the star, being an extended spatially incoherent source, determines the spatial coherence of the light we receive on earth. Thus, by measuring the interference of the light collected by two transversely separated telescopes, one can effectively create a double-slit experiment, with which the degree of spatial coherence of the star light on earth can be measured, and thereby the angle which the star subtends on earth. The resolution in retrieving the angle from the spatial coherence is larger when the distance between the telescopes is larger (see&nbsp;{eq}`eq:coh:gammaP1p2QuasiDegree`). Then, if we know the distance of the star by independent means, e.g. from its spectral brightness, we can deduce its size from its angular size.
 
 The method can also be used to derive the intensity distribution at the surface of the star. It can be shown that the degree of spatial coherence as function of the relative position of the telescopes is the Fourier transform of this intensity distribution. Hence, by moving the telescopes around and measuring the spatial coherence for many positions, the intensity distribution at the surface of the star can be derived from a back Fourier transform.
 
 ```{figure} Images/06_09_stellar_interferometry.png
-:name: Fig_5_08_Stellar_interferometry
+:name: fig:coh:stellarInterferometry
 Left: a stellar interferometer with two telescopes that can be moved around to measure the interference at many relative positions. Right: single telescope with two outer movable mirrors. The telescope can move around it axis. The larger the distance $d$ the higher the resolution.
 ```
 
@@ -969,7 +969,7 @@ Left: a stellar interferometer with two telescopes that can be moved around to m
 ## Fringe contrast
 
 We have seen that when the interference term
-$\text{Re} \langle  U_1 U_2^*  \rangle$ vanishes, no fringes form, while when this term is nonzero, there are fringes. The **fringe contrast** is expressed directly in measurable intensities. Given some interference intensity pattern $I(x)$ as in {numref}`Fig_5_09_Visibility`, the fringe contrast is defined as
+$\text{Re} \langle  U_1 U_2^*  \rangle$ vanishes, no fringes form, while when this term is nonzero, there are fringes. The **fringe contrast** is expressed directly in measurable intensities. Given some interference intensity pattern $I(x)$ as in {numref}`fig:coh:visibility`, the fringe contrast is defined as
 
 ```{math}
 \begin{align*}
@@ -979,7 +979,7 @@ $\text{Re} \langle  U_1 U_2^*  \rangle$ vanishes, no fringes form, while when th
 
 For example, if we have two perfectly coherent, monochromatic point sources emitting the fields $U_1$, $U_2$
 with intensities $I_1=|U_1|^2$, $I_2=|U_2|^2$, then the interference pattern is with
-{eq}`eq:coh:double-slit-interference`:
+{eq}`eq:coh:doubleSlitInterference`:
 
 ```{math}
 \begin{align*}
@@ -1019,29 +1019,29 @@ I_{\text{max}}=I_{\text{min}}=I_1+I_2,
 which gives $\mathcal{V}=0$.
 
 ```{figure} Images/06_10_visibility.png
-:name: Fig_5_09_Visibility
+:name: fig:coh:visibility
 Illustration of $I_{\text{max}}$ and $I_{\text{min}}$ of an interference pattern $I(x)$ that determines the fringe contrast$\mathcal{V}$.
 ```
 
 
-(section.fabryperot)=
+(sec:coh:fabryperot)=
 ## Fabry-Perot resonator
 
-In interferometry two mutually coherent waves are added and the intensity of the sum of the two fields is measured. This intensity contains information about the phase difference of the waves from which for example a path length difference can be deduced. One distinguishes between two types of interferometers: **wavefront splitting interferometers** and **amplitude splitting interferometers**. Examples of the first type are Young's two slit experiment and Lloyd's mirror ({numref}`Fig_5_10_Lloydsmirror`). Examples of amplitude splitting interferometers are the Michelson interferometer and the Fabry-Perot interferometer. The latter is not only a spectrometer of extremely high resolution but is also the resonance cavity in a laser.
+In interferometry two mutually coherent waves are added and the intensity of the sum of the two fields is measured. This intensity contains information about the phase difference of the waves from which for example a path length difference can be deduced. One distinguishes between two types of interferometers: **wavefront splitting interferometers** and **amplitude splitting interferometers**. Examples of the first type are Young's two slit experiment and Lloyd's mirror ({numref}`fig:coh:lloydsmirror`). Examples of amplitude splitting interferometers are the Michelson interferometer and the Fabry-Perot interferometer. The latter is not only a spectrometer of extremely high resolution but is also the resonance cavity in a laser.
 ```{figure} Images/06_11_lloyd_mirror.png
-:name: Fig_5_10_Lloydsmirror
+:name: fig:coh:lloydsmirror
 Lloyd's mirror as example of wavefront splitting interferometry.
 ```
 
 
-A Fabry-Perot interferometer consists of two parallel highly reflecting surfaces with vacuum or a dielectric in between. These surfaces can be optical flats which have been coated by a metal like silver on one side. Consider a coordinate system as in {numref}`Fig_FP1`
+A Fabry-Perot interferometer consists of two parallel highly reflecting surfaces with vacuum or a dielectric in between. These surfaces can be optical flats which have been coated by a metal like silver on one side. Consider a coordinate system as in {numref}`fig:coh:fp1`
 such that the reflecting surfaces are at $z=0$ and $z=d$. The refractive indices of the half spaces $z<0$ and $z>d$ are $n_1$ and $n_3$, respectively, and the refractive index of the medium between the surfaces is $n_2$. We will first assume that all refractive indices are real.
 
-Let there be a plane wave **with unit amplitude** incident from $z<0$ under angle $\theta_1$ with the normal as shown in {numref}`Fig_FP1`. The incident wave is assumed to be either s- or p-polarized. There are a reflected plane wave in $z<0$, two plane waves in medium 2 one propagating in the positive $z$-direction and the other in the negative $z$-direction and there is a transmitted plane wave in $z>d$. It follows from the boundary conditions that the tangential component of the electric and magnetic field are continuous across the interfaces, that the tangential components of the wave vectors of all these plane waves are identical.
+Let there be a plane wave **with unit amplitude** incident from $z<0$ under angle $\theta_1$ with the normal as shown in {numref}`fig:coh:fp1`. The incident wave is assumed to be either s- or p-polarized. There are a reflected plane wave in $z<0$, two plane waves in medium 2 one propagating in the positive $z$-direction and the other in the negative $z$-direction and there is a transmitted plane wave in $z>d$. It follows from the boundary conditions that the tangential component of the electric and magnetic field are continuous across the interfaces, that the tangential components of the wave vectors of all these plane waves are identical.
 
 Let $r_{ij}$ and $t_{ij}$ be the reflection and transmission coefficient for a wave that is incident from medium $i$ on the interface with medium $j$. When the wave is s-polarized, $r_{12}$ and $t_{12}$ are given by the Fresnel coefficients (see the Rayleigh-Sommerfeld Diffraction Integral section in the Diffraction chapter), whereas if the wave is p-polarized, they are given by the p-polarized Fresnel coefficients.
 ```{figure} Images/06_12_fabry_perot.png
-:name: Fig_FP1
+:name: fig:coh:fp1
 Fabry-Perot with 3 layers.The light comes from the bottom and is reflected by each interface.
 ```
 
@@ -1051,12 +1051,12 @@ $ 2d /\cos \theta_2$,
 the complex amplitude B of this wave in point B after transmission by the interface $z=0$ is
 
 ```{math}
-:label: eq:coh:round-trip
+:label: eq:coh:roundTrip
 t_{21} r_{23} t_{21} e^{ 2 i k_0 n_2 \frac{d}{\cos \theta_2}},
 ```
 
 where $k_0$ is the wave number in vacuum.
-To compute the interference of the directly reflected wave and the wave that has made one round trip in medium 2, the two fields should be evaluated at the same wavefront such as wavefront CB in {numref}`Fig_FP1`.
+To compute the interference of the directly reflected wave and the wave that has made one round trip in medium 2, the two fields should be evaluated at the same wavefront such as wavefront CB in {numref}`fig:coh:fp1`.
 The directly reflected field in C is obtained by propagating from B over the distance
 
 ```{math}
@@ -1069,7 +1069,7 @@ The directly reflected field in C is obtained by propagating from B over the dis
 \end{align*}
 ```
 where Snell's law: $n_1 \sin\theta_1 = n_2 sin \theta_2$ has been used.
-Hence the total field due to the direct reflection at $z=0$ and one round trip {eq}`eq:coh:round-trip`
+Hence the total field due to the direct reflection at $z=0$ and one round trip {eq}`eq:coh:roundTrip`
 
 ```{math}
 \begin{align*}
@@ -1094,7 +1094,7 @@ is the $z$-component of the wave vector in medium 2 of the wave that propagates 
 Incorporating the contributions of waves having made two or more round trips in the slab leads to the reflection coefficient of the Fabry-Perot when the field is incident from medium 1:
 
 ```{math}
-:label: eq:coh:fabry-perot-reflection
+:label: eq:coh:fabryPerotReflection
 \begin{align*}
 r &= r_{12} + t_{21}r_{13}t_{12} e^{2 i k^{(2)}_z d} \left[ 1 + r_{23} r_{21} e^{2 i k^{(2)}_z d} + ( r_{23} r_{21} e^{2 i k_z^{(2)} d})^2 + \ldots \right]  \\
 &= r_{12} + t_{21}r_{13}t_{12} e^{2 i k^{(2)}_z d}\frac{1}{ 1 - r_{23} r_{21} e^{2 i k_z^{(2)} d}}  \\
@@ -1113,7 +1113,7 @@ r_{12}&= -r_{21}
 Similarly, the amplitude of the transmitted field in $z=d$ gives the transmission coefficient of the Fabry-Perot when the field is incident from medium 1:
 
 ```{math}
-:label: eq:coh:fabry-perot-transmission
+:label: eq:coh:fabryPerotTransmission
 \begin{align*}
 t &= t_{12} t_{23} e^{i k^{(2)}_z d} \left[ 1 + r_{21}r_{23} e^{2 k_z^{(2)} d} + ( r_{21}r_{23} e^{i k^{(2)}_z d})^2 + \ldots \right]  \\
 &= \frac{ t_{12} t_{23} e^{i k^{(2)}_z d}}{1- r_{21} r_{23} e^{ 2 i k^{(2)}_z d}}.
@@ -1121,7 +1121,7 @@ t &= t_{12} t_{23} e^{i k^{(2)}_z d} \left[ 1 + r_{21}r_{23} e^{2 k_z^{(2)} d} +
 ```
 
 ```{figure} Images/06_13_fabry_perot_resonance.png
-:name: Fig_FP2
+:name: fig:coh:fp2
 Transmission coefficient versus the phase change $\delta$ due to the Fabry-Perot. One can see the resonances occurring at every multiple of $\pi$.
 ```
 
@@ -1129,7 +1129,7 @@ Transmission coefficient versus the phase change $\delta$ due to the Fabry-Perot
 Finally, the electric field between the reflectors is given by
 
 ```{math}
-:label: eq:coh:fabry-perot-internal
+:label: eq:coh:fabryPerotInternal
 \begin{align*}
 U(z) &= t_{12} e^{i k^{(2)}_z z} \left[ 1 + r_{21} r_{23} e^{2 i k^{(2)}_z d} +
 ( r_{21} r_{23} e^{2 i k^{(2)}_z d})^2+\ldots +\right]  \\
@@ -1144,14 +1144,14 @@ where the factor $\exp[i(k_x x+ k_y y)]$ which gives the dependence on $(x,y)$ h
 Define
 
 ```{math}
-:label: eq:coh:fabry-perot-g
+:label: eq:coh:fabryPerotG
 \begin{align*}
 G &= \frac{(|r_{12}|-|r_{23}|)^2}
 {(1-|r_{23}||r_{21}|)^2},
 \end{align*}
 ```
 ```{math}
-:label: eq:coh:fabry-perot-finesse
+:label: eq:coh:fabryPerotFinesse
 \begin{align*}
 \\
 F &= \frac{ 4|r_{23}||r_{21}|}{(1-|r_{23}||r_{21}|)^2}.\end{align*}
@@ -1159,14 +1159,14 @@ F &= \frac{ 4|r_{23}||r_{21}|}{(1-|r_{23}||r_{21}|)^2}.\end{align*}
 $F$ is called the **coefficient of Finesse** of the Fabry-Perot. It is large when the mirrors are very good reflectors. The reflected and transmitted powers, relative to the incident power are then
 
 ```{math}
-:label: eq:coh:fabry-perot-reflectance
+:label: eq:coh:fabryPerotReflectance
 R=|r|^2 = \frac{G + F \sin^2(k^{(2)}_z d)}{1+ F \sin^2(k^{(2)}_z d)},
 ```
 
 and
 
 ```{math}
-:label: eq:coh:fabry-perot-transmittance
+:label: eq:coh:fabryPerotTransmittance
 \begin{align*}
 T &= |t|^2 = 1- |R|^2  \\
 &= \frac{1-G}{1+ F \sin^2(k^{(2)}_z d)}.
@@ -1175,20 +1175,20 @@ T &= |t|^2 = 1- |R|^2  \\
 We define
 
 ```{math}
-:label: eq:coh:phase-change
+:label: eq:coh:phaseChange
 \delta = k^{(2)}_z d,
 ```
 
-which is the phase change due to one pass through the middle layer of the Fabry-Perot. Then {eq}`eq:coh:fabry-perot-reflectance` and {eq}`eq:coh:fabry-perot-transmittance` become
+which is the phase change due to one pass through the middle layer of the Fabry-Perot. Then {eq}`eq:coh:fabryPerotReflectance` and {eq}`eq:coh:fabryPerotTransmittance` become
 
 ```{math}
-:label: eq:coh:reflectance-delta
+:label: eq:coh:reflectanceDelta
 R = \frac{G + F \sin^2(k^{(2)}_z d)}{1+ F \sin^2 \delta}.
 ```
 
 
 ```{math}
-:label: eq:coh:transmittance-delta
+:label: eq:coh:transmittanceDelta
 T = \frac{1-G}{1+ F \sin^2 \delta}.
 ```
 
@@ -1196,14 +1196,14 @@ T = \frac{1-G}{1+ F \sin^2 \delta}.
 If the reflection by the mirrors is high: $|r_{21}|\approx 1$, $|r_{23}|\approx 1$, then $F$ is large. This implies
 
 ```{math}
-:label: eq:coh:high-reflectance
+:label: eq:coh:highReflectance
 R \approx 1, \quad T\approx 0,
 ```
 
 for all $\delta$ except when $\sin(\delta)=0$, i.e. when
 
 ```{math}
-:label: eq:coh:resonance-condition
+:label: eq:coh:resonanceCondition
 \delta = m\pi,
 ```
 
@@ -1211,7 +1211,7 @@ for some positive integer $m$.
 With $k_0=2\pi/\lambda_0$ this becomes in terms of wavelength:
 
 ```{math}
-:label: eq:coh:resonance-wavelength
+:label: eq:coh:resonanceWavelength
 \frac{2 d}{\lambda_0}n_2 \cos \theta_2 = m.
 ```
 
@@ -1225,21 +1225,21 @@ and they are therefore called resonances.
 The width $\Delta \delta$ at a resonance is defined as the full width at half maximum (FWHM) of the transmission, i.e.
 
 ```{math}
-:label: eq:coh:fwhm-condition
+:label: eq:coh:fwhmCondition
 \frac{1-G}{1+ \sin^2(m\pi + \Delta \delta/2)} = \frac{1}{2}(1-G),
 ```
 
 which implies with $\sin^2(m\pi + \Delta \delta/2) \approx (\Delta \delta/2)^2$:
 
 ```{math}
-:label: eq:coh:resonance-width
+:label: eq:coh:resonanceWidth
 \Delta \delta = \frac{2}{\sqrt{F}}.
 ```
 
 Using again $k_0=2\pi/\lambda_0$ and the fact that the width in terms of wavelength is small:
 
 ```{math}
-:label: eq:coh:wavelength-width
+:label: eq:coh:wavelengthWidth
 \begin{align*}
 \frac{|\Delta \lambda_0|}{\lambda_0} &\approx & \lambda_0 \Delta\left(\frac{1}{\lambda_0}\right) \\
 &= = \lambda_0 \frac{\Delta \delta}{2\pi n_2 d \cos\theta_2}  \\
@@ -1247,7 +1247,7 @@ Using again $k_0=2\pi/\lambda_0$ and the fact that the width in terms of wavelen
 &= \frac{2}{m \pi\sqrt{F}}
 \end{align*}
 ```
-where {eq}`eq:coh:resonance-wavelength` has been used. The resolution is defined as
+where {eq}`eq:coh:resonanceWavelength` has been used. The resolution is defined as
 
 ```{math}
 :label: eq:coh:resolution
@@ -1258,14 +1258,14 @@ where {eq}`eq:coh:resonance-wavelength` has been used. The resolution is defined
 The free spectral range is the distance between adjacent resonances:
 
 ```{math}
-:label: eq:coh:free-spectral-range
+:label: eq:coh:freeSpectralRange
 \Delta \delta_{free} = \pi
 ```
 
-With a similar derivation as for {eq}`eq:coh:wavelength-width`
+With a similar derivation as for {eq}`eq:coh:wavelengthWidth`
 
 ```{math}
-:label: eq:coh:free-spectral-wavelength
+:label: eq:coh:freeSpectralWavelength
 \begin{align*}
 \frac{|(\Delta \lambda_0)_{free}|}{\lambda_0}&\approx&
 -\lambda_0 \Delta\left(\frac{1}{\lambda_0}\right)_{free}  \\
@@ -1276,11 +1276,11 @@ With a similar derivation as for {eq}`eq:coh:wavelength-width`
 
 A Fabry-Perot can be used as a high resolution spectrometer. {eq}`eq:coh:resolution` implies that the resolution increases for higher order $m$.
 However, $M $ can not be made arbitrary large because increasing $m$ means
-according to {eq}`eq:coh:free-spectral-wavelength` that the free spectral range decreases.
+according to {eq}`eq:coh:freeSpectralWavelength` that the free spectral range decreases.
 The ratio
 
 ```{math}
-:label: eq:coh:resolution-ratio
+:label: eq:coh:resolutionRatio
 \frac{(\Delta \lambda_0)_{free}}{(\Delta \lambda_0) = \frac{\pi}{2} \sqrt{F}},
 ```
 
@@ -1306,7 +1306,7 @@ Suppose now that we have two real vector fields $\mathbf{\mathcal{E}}_1$, $\math
 If the two fields interfere, the instantaneous intensity is given by
 
 ```{math}
-:label: eq:coh:polarization-interference
+:label: eq:coh:polarizationInterference
 \begin{align*}
 (\mathbf{\mathcal{E}}_1+\mathbf{\mathcal{E}}_2)\cdot(\mathbf{\mathcal{E}}_1+\mathbf{\mathcal{E}}_2)
 = \mathbf{\mathcal{E}}_1\cdot \mathbf{\mathcal{E}}_1+\mathbf{\mathcal{E}}_2\cdot \mathbf{\mathcal{E}}_2+2\mathbf{\mathcal{E}}_1\cdot \mathbf{\mathcal{E}}_2,
@@ -1339,7 +1339,7 @@ Next we write the fields in terms of orthogonal components
 \mathcal{E}_{2\parallel} \end{pmatrix}.
 \end{align*}
 ```
-This is always possible, whether the fields are polarized or randomly polarized. Then {eq}`eq:coh:polarization-interference` becomes
+This is always possible, whether the fields are polarized or randomly polarized. Then {eq}`eq:coh:polarizationInterference` becomes
 
 ```{math}
 \begin{align*}

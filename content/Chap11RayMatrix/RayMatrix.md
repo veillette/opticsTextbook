@@ -11,7 +11,7 @@ downloads:
     title: Download Chapter DOCX
 ---
 
-(chapter.RayMatrices)=
+(chapter:ray)=
 # Ray Vectors and Ray Matrices
 
 ```{note} What you should know and be able to do after studying this chapter
@@ -35,15 +35,15 @@ With ray matrices it is easy to derive how the distance of a given ray to the op
 In any plane perpendicular to the $z$-axis, a ray is determined by the $y$-coordinate of the point of intersection of the ray with the plane and the angle $\alpha$ with the optical ($z$)-axis. This angle has a sign and is defined as follows. Let $(y_1,z_1)$ and $(y_2,z_2)$ be the coordinates of two points on the ray and let the light propagate from point 1 to point 2. Then we define
 
 ```{math}
-:label: eq:ray:angle-definition
+:label: eq:ray:angleDefinition
 \alpha = \frac{ y_2-y_1}{z_2-z_1}.
 ```
 
-Examples of positive and negative $\alpha$ are given in {numref}`Fig.alpha`. The case $z_2-z_1<0$ occurs when a ray propagates in the negative $z$-direction after it has been reflected by a mirror.
+Examples of positive and negative $\alpha$ are given in {numref}`fig:ray:figAlpha`. The case $z_2-z_1<0$ occurs when a ray propagates in the negative $z$-direction after it has been reflected by a mirror.
 According to the sign convention table in the Geometrical Optics chapter, the refractive index of the ambient medium should after the reflection be taken negative. After a second reflection due to which the ray propagates again in the positive $z$-direction the refractive index should be chosen positive again.
 
 ```{figure} Images/11_03_angle_definition.png
-:name: Fig.alpha
+:name: fig:ray:figAlpha
 Sign convention for the ray angle. In the upper two figures $\alpha>0$ while in the lower two figures $\alpha<0$.
 ```
 
@@ -51,7 +51,7 @@ Sign convention for the ray angle. In the upper two figures $\alpha>0$ while in 
 We define the ray vector
 
 ```{math}
-:label: eq:ray:ray-vector-definition
+:label: eq:ray:rayVectorDefinition
 \begin{align*}
 \left( \begin{array}{c}n\alpha \\y
 \end{array} \right),
@@ -61,7 +61,7 @@ where $n$ is the local refractive index. The definition with the refractive inde
 The ray vectors of a ray in any two planes $z=z_1$, $z=z_2$, with $z_2>z_1$, are related by a so-called ray matrix:
 
 ```{math}
-:label: eq:ray:general-ray-matrix
+:label: eq:ray:generalRayMatrix
 \begin{align*}
 \left( \begin{array}{c}n_2\alpha_2 \\y_2
 \end{array}\right) = {\cal M}
@@ -72,7 +72,7 @@ The ray vectors of a ray in any two planes $z=z_1$, $z=z_2$, with $z_2>z_1$, are
 where
 
 ```{math}
-:label: eq:ray:matrix-elements
+:label: eq:ray:matrixElements
 \begin{align*}
 {\cal M} =\left( \begin{array}{cc}A & B \\C & D
 \end{array}\right).
@@ -85,7 +85,7 @@ Using the paraxial Snell's law and small-angle approximations from the Geometric
 follows
 
 ```{math}
-:label: eq:ray:spherical-surface-angles
+:label: eq:ray:sphericalSurfaceAngles
 \begin{align*}
 n_1 \alpha_1 - n_2 \alpha_2 = \frac{(n_2-n_1)y_1}{R},
 \end{align*}
@@ -97,7 +97,7 @@ negative.
 Because furthermore $y_2=y_1$, we conclude
 
 ```{math}
-:label: eq:ray:spherical-surface-matrix
+:label: eq:ray:sphericalSurfaceMatrix
 \begin{align*}
 \left( \begin{array}{c}n_2\alpha_2 \\    y_2
 \end{array}\right) &= \left( \begin{array}{c}n_1 \alpha_1 - \frac{(n_2-n_1)y_1}{R} \\    y_1
@@ -111,7 +111,7 @@ Because furthermore $y_2=y_1$, we conclude
 where
 
 ```{math}
-:label: eq:ray:surface-power-definition
+:label: eq:ray:surfacePowerDefinition
 \begin{align*}
 {\cal P}= \frac{n_2-n_1}{R},
 \end{align*}
@@ -122,7 +122,7 @@ Next we consider a spherical mirror with radius of curvature $R$.
 We will show that the ray matrix between the planes just before and after the mirror is given by:
 
 ```{math}
-:label: eq:ray:spherical-mirror-matrix
+:label: eq:ray:sphericalMirrorMatrix
 \begin{align*}
 \left( \begin{array}{c}n_2\alpha_2 \\y_2
 \end{array}\right)
@@ -135,7 +135,7 @@ We will show that the ray matrix between the planes just before and after the mi
 where
 
 ```{math}
-:label: eq:ray:mirror-power
+:label: eq:ray:mirrorPower
 \begin{align*}
 {\cal P}= \frac{2n}{R},
 \end{align*}
@@ -148,24 +148,24 @@ n_2\alpha_2 = n_1 \alpha_1,
 \end{align*}
 ```
 
-which agrees with the fact that $n_2=-n_1$ and according to {eq}`eq:ray:angle-definition` $\alpha_2$ and $\alpha_1$ have opposite sign for a
+which agrees with the fact that $n_2=-n_1$ and according to {eq}`eq:ray:angleDefinition` $\alpha_2$ and $\alpha_1$ have opposite sign for a
 mirror.
 
 ```{figure} Images/11_04_concave_mirror.png
-:name: Fig_2_15_Mirror
+:name: fig:ray:mirror
 Reflection by a mirror.
 ```
 
 
-With all angles positive for the moment, it follows from {numref}`Fig_2_15_Mirror`
+With all angles positive for the moment, it follows from {numref}`fig:ray:mirror`
 
 ```{math}
-:label: eq:ray:mirror-incident-angle
+:label: eq:ray:mirrorIncidentAngle
 \begin{align*}
 \alpha_1&= \theta_i +\varphi, \end{align*}
 ```
 ```{math}
-:label: eq:ray:mirror-reflected-angle
+:label: eq:ray:mirrorReflectedAngle
 \begin{align*}
 \\
 \alpha_2 &= \varphi-\theta_r= \varphi-\theta_i.\end{align*}
@@ -173,7 +173,7 @@ With all angles positive for the moment, it follows from {numref}`Fig_2_15_Mirro
 Hence,
 
 ```{math}
-:label: eq:ray:mirror-angle-relation
+:label: eq:ray:mirrorAngleRelation
 \begin{align*}
 \alpha_2= -\alpha_1 + 2\varphi.
 \end{align*}
@@ -181,22 +181,22 @@ Hence,
 Now
 
 ```{math}
-:label: eq:ray:mirror-small-angle
+:label: eq:ray:mirrorSmallAngle
 \varphi\approx \frac{y_1}{R}
 ```
 
-In the situation drawn in {numref}`Fig_2_15_Mirror`, {eq}`eq:ray:angle-definition` implies that both $\alpha_2$ and $\alpha _1$ are
+In the situation drawn in {numref}`fig:ray:mirror`, {eq}`eq:ray:angleDefinition` implies that both $\alpha_2$ and $\alpha _1$ are
 positive. By choosing the refractive index negative after reflection,
-we conclude from {eq}`eq:ray:mirror-angle-relation` and {eq}`eq:ray:mirror-small-angle`:
+we conclude from {eq}`eq:ray:mirrorAngleRelation` and {eq}`eq:ray:mirrorSmallAngle`:
 
 ```{math}
-:label: eq:ray:mirror-ray-vector-relation
+:label: eq:ray:mirrorRayVectorRelation
 \begin{align*}
 n_2\alpha_2 = -n \alpha_2 = n \alpha_1 - \frac{2n}{R} y_1 = n_1\alpha_1 - \frac{2n}{R}.
 \end{align*}
 ```
 
-This proves {eq}`eq:ray:spherical-mirror-matrix`.
+This proves {eq}`eq:ray:sphericalMirrorMatrix`.
 
 
 We now consider the ray matrix when a ray propagates from a plane $z_1$ to a plane $z_2$ through a medium with refractive index $n$.
@@ -204,7 +204,7 @@ In that case we have
 $\alpha_2=\alpha_1$ and $y_2=y_1 + \alpha_1(z_2-z_1)$, hence
 
 ```{math}
-:label: eq:ray:homogeneous-propagation-matrix
+:label: eq:ray:homogeneousPropagationMatrix
 \begin{align*}
 {\cal M}=\left( \begin{array}{cc}1 & 0 \\\frac{z_2-z_1}{n} & 1
 \end{array}\right), \quad \mathbf{homogeneous space}.
@@ -218,23 +218,23 @@ In the ray matrix approach all rays stay in the same plane, namely the plane thr
 
 **Remarks**.
 
-1. In matrix {eq}`eq:ray:homogeneous-propagation-matrix` $z_1$ and $z_2$ are *
+1. In matrix {eq}`eq:ray:homogeneousPropagationMatrix` $z_1$ and $z_2$ are *
    *coordinates**, i.e. they have a sign.
 
 2. Instead of choosing the refractive index negative in ray vectors of rays that propagate from right to left, one can reverse the direction of the positive $z$-axis after every reflection. The convention to make the refractive index negative is however more convenient in ray tracing software.
 
-3. The determinant of the ray matrices {eq}`eq:ray:spherical-surface-matrix`,
-   {eq}`eq:ray:spherical-mirror-matrix` and
-   {eq}`eq:ray:homogeneous-propagation-matrix` are all 1. Since all ray matrices
+3. The determinant of the ray matrices {eq}`eq:ray:sphericalSurfaceMatrix`,
+   {eq}`eq:ray:sphericalMirrorMatrix` and
+   {eq}`eq:ray:homogeneousPropagationMatrix` are all 1. Since all ray matrices
    considered below are products of these elementary matrices, the determinant
    of every ray matrix considered is unity.
 
 ## The Lens Matrix
 We apply ray matrices to a lens.
-{numref}`Fig_2_16_Spherical_Lens_simplified` shows a lens with two spherical surfaces. The refractive index of the lens is $n_l$ and that of the media to the left and to the right of the lens is $n_1$ and $n_2$, respectively. Let the distance between the vertices be $d$.
+{numref}`fig:ray:sphericalLensSimplified` shows a lens with two spherical surfaces. The refractive index of the lens is $n_l$ and that of the media to the left and to the right of the lens is $n_1$ and $n_2$, respectively. Let the distance between the vertices be $d$.
 
 ```{figure} Images/11_05_spherical_lens_simplified.png
-:name: Fig_2_16_Spherical_Lens_simplified
+:name: fig:ray:sphericalLensSimplified
 A lens with thickness $d$. The ray matrix is defined between the planes immediately before and after the lens.
 ```
 
@@ -304,7 +304,7 @@ applet.setPreviewImage('data:image/gif;base64,R0lGODlhAQABAAAAADs=','https://www
 We will first derive the matrix which maps the ray vector in the plane **immediately in front** of the lens to that in the plane **immediately behind** the lens. Let
 
 ```{math}
-:label: eq:ray:lens-ray-vectors
+:label: eq:ray:lensRayVectors
 \begin{align*}
 \left( \begin{array}{c}n_1 \alpha_1 \\y_1
 \end{array}\right)
@@ -316,12 +316,12 @@ We will first derive the matrix which maps the ray vector in the plane **immedia
 
 be two vectors in the two planes which correspond to the same ray. The ray is
 first refracted by the spherical surface with radius $R_1$ and center $C_1$.
-Using {eq}`eq:ray:spherical-surface-matrix` and {eq}`eq:ray:surface-power-definition` it follows that the matrix between the ray
+Using {eq}`eq:ray:sphericalSurfaceMatrix` and {eq}`eq:ray:surfacePowerDefinition` it follows that the matrix between the ray
 vectors just before and just behind the spherical surface with radius $R_1$ and
 center $C_1$ is given by
 
 ```{math}
-:label: eq:ray:first-surface-matrix
+:label: eq:ray:firstSurfaceMatrix
 \begin{align*}
 {\cal M}_1= \left( \begin{array}{cc}1 & - {\cal P}_1 \\0 & 1
 \end{array}\right) ,
@@ -330,17 +330,17 @@ center $C_1$ is given by
 where
 
 ```{math}
-:label: eq:ray:first-surface-power
+:label: eq:ray:firstSurfacePower
 {\cal P}_1 = \frac{n_l-n_1}{R_1}.
 ```
 
 The ray propagates then over the distance $d$ through the material of which the
 lens is made. The matrix that maps ray vectors from the plane inside the lens
 immediately behind the left spherical surface to a ray vector in the plane
-immediately before the right spherical surface follows from {eq}`eq:ray:homogeneous-propagation-matrix`:
+immediately before the right spherical surface follows from {eq}`eq:ray:homogeneousPropagationMatrix`:
 
 ```{math}
-:label: eq:ray:lens-propagation-matrix
+:label: eq:ray:lensPropagationMatrix
 \begin{align*}
 {\cal M}_2=\left( \begin{array}{cc}1 & 0 \\\frac{d}{n_l} & 1
 \end{array}\right).
@@ -349,7 +349,7 @@ immediately before the right spherical surface follows from {eq}`eq:ray:homogene
 Finally, the matrix that maps ray vectors from the plane in the lens immediately before the second spherical surface to vectors in the plane immediately behind it is
 
 ```{math}
-:label: eq:ray:second-surface-matrix
+:label: eq:ray:secondSurfaceMatrix
 \begin{align*}
 {\cal M}_3= \left( \begin{array}{cc}1 & -{\cal P}_2 \\0 & 1
 \end{array}\right).
@@ -358,14 +358,14 @@ Finally, the matrix that maps ray vectors from the plane in the lens immediately
 with
 
 ```{math}
-:label: eq:ray:second-surface-power
+:label: eq:ray:secondSurfacePower
 {\cal P}_2 = \frac{n_2-n_l}{R_2}.
 ```
 
 Hence the matrix that maps ray vectors in the plane immediately before the lens to ray vectors in the plane immediately behind the lens is given by the matrix product:
 
 ```{math}
-:label: eq:ray:thick-lens-matrix
+:label: eq:ray:thickLensMatrix
 \begin{align*}
 {\cal M}&= {\cal M}_3 {\cal M}_2 {\cal M}_1  \\
 &= \left( \begin{array}{cc}1 - \frac{d}{n_l}P_2 & -P_1 - P_2 + \frac{d}{n_l} P_1P_2 \\\frac{d}{n_l} & 1 -\frac{d}{n_l}P_1
@@ -375,7 +375,7 @@ Hence the matrix that maps ray vectors in the plane immediately before the lens 
 The quantity
 
 ```{math}
-:label: eq:ray:lens-power
+:label: eq:ray:lensPower
 \begin{align*}
 {\cal P}={\cal P}_1+{\cal P}_2 - \frac{d}{n_l}{\cal P}_1{\cal P}_2
 \end{align*}
@@ -383,13 +383,13 @@ The quantity
 is called the **power** of the lens. It has dimension 1/length and is given in diopter (${\cal D}$), where $1 \,\, {\cal D}=\text{m}^{-1}$. The power can be positive and negative.
 The space to the left of the lens is called the **object space** and that to the right of the lens is called the **image space**.
 
-(subsection.focthin)=
+(sec:ray:focthin)=
 ## Focusing with a Thin Lens
 
-For a thin lens the vertices $V_1$ and $V_2$ coincide and $d=0$, hence {eq}`eq:ray:thick-lens-matrix` becomes
+For a thin lens the vertices $V_1$ and $V_2$ coincide and $d=0$, hence {eq}`eq:ray:thickLensMatrix` becomes
 
 ```{math}
-:label: eq:ray:thin-lens-matrix
+:label: eq:ray:thinLensMatrix
 \begin{align*}
 {\cal M} = \left( \begin{array}{cc}1 & -P\\0 & 1
 \end{array}\right), \quad \mathbf{thin lens},
@@ -398,7 +398,7 @@ For a thin lens the vertices $V_1$ and $V_2$ coincide and $d=0$, hence {eq}`eq:r
 where
 
 ```{math}
-:label: eq:ray:thin-lens-power
+:label: eq:ray:thinLensPower
 P=P_1+P_2 = \left( \frac{n_l-n_1}{R_1}-\frac{n_2-n_l}{R_2}\right),
 ```
 
@@ -408,7 +408,7 @@ By considering a ray in medium 1 which is parallel to the optical axis ($\alpha_
 $z$-coordinate $f_i$ s:
 
 ```{math}
-:label: eq:ray:thin-lens-image-focal
+:label: eq:ray:thinLensImageFocal
 \begin{align*}
 f_i = \frac{\alpha_2}{y_2} = \frac{n_2}{{\cal P}}.
 \end{align*}
@@ -422,7 +422,7 @@ n_1\alpha_1 = P y_1.
 If the power is positive: ${\cal P}>0$, the angle $\alpha_1$ has the same sign as $y_1$, which implies that the ray in object space has intersected the optical axis in a point $F_o$ with $z$-coordinate: $z=f_o$
 
 ```{math}
-:label: eq:ray:thin-lens-object-focal
+:label: eq:ray:thinLensObjectFocal
 \begin{align*}
 f_o = -\frac{y_1}{\alpha_1} = -\frac{n_1}{{\cal P}}.
 \end{align*}
@@ -437,7 +437,7 @@ Incident rays which are parallel to the optical axis are refracted away from the
 With the results obtained for the focal coordinates we can rewrite the lens matrix of a thin lens as
 
 ```{math}
-:label: eq:ray:thin-lens-matrix-focal
+:label: eq:ray:thinLensMatrixFocal
 \begin{align*}
 {\cal M} = \left( \begin{array}{cc}1 & -\frac{n_2}{f_i} \\0 & 1
 \end{array}\right), \quad \mathbf{thin lens}.
@@ -445,19 +445,19 @@ With the results obtained for the focal coordinates we can rewrite the lens matr
 ```
 
 
-(subsection.imagingthinlens)=
+(sec:ray:imagingthinlens)=
 ## Imaging with a Thin Lens
 
-We first consider a general ray matrix {eq}`eq:ray:general-ray-matrix`, {eq}`eq:ray:matrix-elements` between two planes $z=z_1$ and $z=z_2$ and ask the
+We first consider a general ray matrix {eq}`eq:ray:generalRayMatrix`, {eq}`eq:ray:matrixElements` between two planes $z=z_1$ and $z=z_2$ and ask the
 following question:
 what are the properties of the ray matrix such that the two planes are images of each other, or (as this is also called) are each other's conjugate?
 Clearly for these planes to be each other's image, we should have that for every point coordinate $y_1$ in the plane $z=z_1$ there is a point with some coordinate $y_2$ in the plane $z=z_2$ such that any ray through $(y_1,z_1)$ (within some cone of rays) will pass through point $(y_2,z_2)$.
 Hence for any angle $\alpha_1$ (in some interval of angles) there is an
-angle $\alpha_2$ such that {eq}`eq:ray:general-ray-matrix` is valid.
+angle $\alpha_2$ such that {eq}`eq:ray:generalRayMatrix` is valid.
 This means that for any $y_1$ there is a $y_2$ such that for all angles $\alpha_1$:
 
 ```{math}
-:label: eq:ray:imaging-y-coordinate
+:label: eq:ray:imagingYCoordinate
 \begin{align*}
 y_2=C n_1\alpha_1 + D y_1,
 \end{align*}
@@ -466,7 +466,7 @@ This requires that
 
 
 ```{math}
-:label: eq:ray:imaging-condition
+:label: eq:ray:imagingCondition
 \begin{align*}
 C=0, \quad \mathbf{condition for imaging}.
 \end{align*}
@@ -475,7 +475,7 @@ C=0, \quad \mathbf{condition for imaging}.
 The ratio of $y_2$ and $y_1$ IS the magnification $M$. Hence,
 
 ```{math}
-:label: eq:ray:magnification-definition
+:label: eq:ray:magnificationDefinition
 \begin{align*}
 M=\frac{y_2}{y_1} = D,
 \end{align*}
@@ -486,7 +486,7 @@ To determine the image by a thin lens we first derive the ray matrix between two
 This ray matrix is the product of the matrix for propagation from $z=z_1$ to the plane immediately in front of the lens, the matrix of the thin lens and the matrix for propagation from the plane immediately behind the lens to the plane $z=z_2$:
 
 ```{math}
-:label: eq:ray:thin-lens-plane-matrix
+:label: eq:ray:thinLensPlaneMatrix
 \begin{align*}
 {\cal M} &= \left( \begin{array}{cc}1 & 0 \\\frac{z_2}{n_2} & 1
 \end{array}\right) \left( \begin{array}{cc}1 & - {\cal P} \\0 & 1
@@ -498,21 +498,21 @@ This ray matrix is the product of the matrix for propagation from $z=z_1$ to the
 \end{align*}
 ```
 
-The imaging condition {eq}`eq:ray:imaging-condition` implies:
+The imaging condition {eq}`eq:ray:imagingCondition` implies:
 
 
 ```{math}
-:label: eq:ray:lensmaker-formula
+:label: eq:ray:lensmakerFormula
 \begin{align*}
 -\frac{n_1}{s_o} + \frac{n_2}{s_i}={\cal P},
 \quad \bf{Lensmaker's \;\; Formula},
 \end{align*}
 ```
 where we have written $s_o=z_1$ and $s_i=z_2$ for the $z$-coordinates of the object and the image.
-Because for the thin lens matrix {eq}`eq:ray:thin-lens-plane-matrix`: $D=1-z_2/f_i$, it follows by using {eq}`eq:ray:lensmaker-formula` that the magnification {eq}`eq:ray:magnification-definition` is given by
+Because for the thin lens matrix {eq}`eq:ray:thinLensPlaneMatrix`: $D=1-z_2/f_i$, it follows by using {eq}`eq:ray:lensmakerFormula` that the magnification {eq}`eq:ray:magnificationDefinition` is given by
 
 ```{math}
-:label: eq:ray:thin-lens-magnification
+:label: eq:ray:thinLensMagnification
 \begin{align*}
 M = \frac{y_i}{y_o}= 1-\frac{s_i}{f_i}= \frac{s_i}{s_o},
 \end{align*}
@@ -531,7 +531,7 @@ Problem 2.5.
 
 
 Analogous to the case of a single spherical surface, an image is called a **real image** if it is to the right of the lens ($s_i>0$) and is called a **virtual image** when it seems to be to the left of the lens ($s_i<0$). An object is called a **real object** if it is to the left of the lens ($s_o<0$) and is a **virtual object** if it seems to be right of the lens ($s_o>0$).
-For a positive lens: ${\cal P}>0$ and hence {eq}`eq:ray:lensmaker-formula`
+For a positive lens: ${\cal P}>0$ and hence {eq}`eq:ray:lensmakerFormula`
 implies that $s_i>0$ provided $|s_o|>|f_o|$, which means that the image by a
 convergent lens is real if the object is further from the lens than the object
 focal point $F_o$.
@@ -539,19 +539,19 @@ The case $s_o>0$ corresponds to a virtual object, i.e. to the case of a convergi
 A convergent lens ($f_i>0$) will then make an image between the lens and the second focal point. In contrast, a diverging lens ($f_i<0$) can turn the incident converging bundle into a real image only if the virtual object point is between the lens and the focal point. If the virtual object point has larger distance to the lens, the convergence of the incident bundle is too weak and the diverging lens then refracts this bundle into a diverging bundle of rays which seem to come from a virtual image point in front of the lens ($s_i<0$).
 
 Instead of using ray matrices, one can construct the image with a ruler.
-Consider the imaging of a finite object $S_1S_2$ as shown in {numref}`Fig_2_17_Real_Image` for the case that the media to the left and right lens are the same. Let $y_o$ be the y-coordinate of $S_2$. We have $y_o>0$ when the object is above the optical axis.
+Consider the imaging of a finite object $S_1S_2$ as shown in {numref}`fig:ray:realImage` for the case that the media to the left and right lens are the same. Let $y_o$ be the y-coordinate of $S_2$. We have $y_o>0$ when the object is above the optical axis.
 
 ```{figure} Images/11_06_real_image.png
-:name: Fig_2_17_Real_Image
+:name: fig:ray:realImage
 Object and image for a thin lens.
 ```
 
 Draw the ray through the focal point $F_o$ in object space and the ray through the center $V$ of the lens. The first ray becomes parallel in image space. The latter intersects both surfaces of the lens almost in their (almost coinciding) vertices and therefore the refraction is opposite at both surfaces and the ray exits the lens parallel to its direction of incidence. Furthermore, its lateral displacement can be neglected because the lens is thin. (Of course, this is not correct when the refractive indices to the left and right of the lens are different). Hence, **the ray through the center of a thin lens is not refracted**. The intersection in image space of the two rays gives the location of the image point $P_2$ of $S_2$. The image is real if the intersection occurs in image space and is virtual otherwise.
-For the case of a convergent lens with a real object with $y_o>0$ as shown in {numref}`Fig_2_17_Real_Image`, it follows from the similar triangles
+For the case of a convergent lens with a real object with $y_o>0$ as shown in {numref}`fig:ray:realImage`, it follows from the similar triangles
 $\Delta\,\text{BV}\text{F}_i$ and $\Delta\, \text{P}_2\text{P}_1\text{F}_i$ that
 
 ```{math}
-:label: eq:ray:similar-triangles-1
+:label: eq:ray:similarTriangles1
 \begin{align*}
 \frac{y_o}{|y_i|} = \frac{f_i}{s_i -f_i}.
 \end{align*}
@@ -560,19 +560,19 @@ $\Delta\,\text{BV}\text{F}_i$ and $\Delta\, \text{P}_2\text{P}_1\text{F}_i$ that
 From the similar triangles $\Delta\, \text{S}_2\text{S}_1\text{F}_o$ and $\Delta\, \text{AVF}_o$:
 
 ```{math}
-:label: eq:ray:similar-triangles-2
+:label: eq:ray:similarTriangles2
 \begin{align*}
 \frac{|y_i|}{y_o}=\frac{f_i}{f_o-s_o}.
 \end{align*}
 ```
 here we used $|f_o|=f_i$.
 (the absolute value of $y_i$ is taken because according to our sign
-convention $y_i$ in {numref}`Fig_2_17_Real_Image` is negative whereas {eq}`eq:ray:similar-triangles-2` is a ratio of lengths).
+convention $y_i$ in {numref}`fig:ray:realImage` is negative whereas {eq}`eq:ray:similarTriangles2` is a ratio of lengths).
 By multiplying these two equations we get the **Newtonian form** of the lens equation (valid when $n_2=n_1$):
 
 
 ```{math}
-:label: eq:ray:newton-lens-equation
+:label: eq:ray:newtonLensEquation
 \begin{align*}
 x_o x_i =- f_i^2=- f_o^2,
 \end{align*}
@@ -581,7 +581,7 @@ x_o x_i =- f_i^2=- f_o^2,
 where $x_o$ and $x_i$ are the $z$-coordinates of the object and image relative to those of the first and second focal point, respectively:
 
 ```{math}
-:label: eq:ray:focal-plane-coordinates
+:label: eq:ray:focalPlaneCoordinates
 \begin{align*}
 x_o = s_o-f_o, \;\;\; x_i = s_i-f_i.
 \end{align*}
@@ -591,49 +591,49 @@ Hence $x_o$ is negative if the object is to the left of $F_o$ and $x_i$ is posit
 The **transverse magnification** is
 
 ```{math}
-:label: eq:ray:transverse-magnification
+:label: eq:ray:transverseMagnification
 \begin{align*}
 M=\frac{y_i}{y_o} = \frac{s_i}{s_o} = -\frac{x_i}{f_i},
 \end{align*}
 ```
-where the second identity follows from considering the similar triangles $\Delta \text{P}_2\text{P}_1\text{F}_i$ and $\Delta \text{BVF}_i$ in {numref}`Fig_2_17_Real_Image`.
+where the second identity follows from considering the similar triangles $\Delta \text{P}_2\text{P}_1\text{F}_i$ and $\Delta \text{BVF}_i$ in {numref}`fig:ray:realImage`.
 A positive $M$ means that the image is erect, a negative $M$ means that the image is inverted.
 
 All equations are also valid for a thin negative lens and for virtual objects and images.
-Examples of real and virtual object and image points for a positive and a negative lens are shown in {numref}`Fig_2_18_Positive_Lens` and {numref}`Fig_2_19_Negative_Lens`.
+Examples of real and virtual object and image points for a positive and a negative lens are shown in {numref}`fig:ray:positiveLens` and {numref}`fig:ray:negativeLens`.
 
 ```{figure} Images/11_07_positive_lens.png
-:name: Fig_2_18_Positive_Lens
+:name: fig:ray:positiveLens
 Real and virtual objects and images for a convergent thin lens with the same refractive index left and right of the lens, i.e. $-f_o=f_i>0$. In (a) the object is real with $s_o<f_o$ and the image is real as well ($s_i>0$). In (b) the object is between the front focal point and the lens: $f_o< s_o<0$. Then the rays from the object are too divergent for the lens to make them convergent in image space and hence the image is virtual: $s_i<0$. In \(c\) there is a cone of converging rays incident on the lens from the left which, in the absence of the lens, would converge to point $S$ behind the lens. Therefore $S$ is a virtual object ($s_0>0$). The image is real and can be constructed with the two rays shown.
-		In (d) $s_i$ is shown as function of $s_o$ for a convergent lens (see {eq}`eq:ray:lensmaker-formula`).
+		In (d) $s_i$ is shown as function of $s_o$ for a convergent lens (see {eq}`eq:ray:lensmakerFormula`).
 ```
 
 ```{figure} Images/11_08_negative_lens.png
-:name: Fig_2_19_Negative_Lens
-Real and virtual objects and images for a divergent thin lens with the same refractive index to the left and right of the lens, i.e. $-f_o=f_i<0$. In (a) the object is real, i.e. $s_o<0$. The diverging lens makes the cone of rays from the object more divergent so that the image is virtual: $s_i<0$. When the object is virtual, there is a cone of converging rays incident from the left which after extension to the right of the lens (as if the lens is not present) intersect in the virtual object S ($s_o>0$). It depends on how strong the convergence is whether the diverging lens turns this cone into converging rays or whether the rays keep diverging. In (b) $0<s_o<-f_i$, and the image is real. In c) $s_o>-f_i$ and the image is virtual ($s_i<0$). In (d) $s_i$ is shown as function of $s_o$ for a divergent lens ($f_i<0$ (see {eq}`eq:ray:lensmaker-formula`).
+:name: fig:ray:negativeLens
+Real and virtual objects and images for a divergent thin lens with the same refractive index to the left and right of the lens, i.e. $-f_o=f_i<0$. In (a) the object is real, i.e. $s_o<0$. The diverging lens makes the cone of rays from the object more divergent so that the image is virtual: $s_i<0$. When the object is virtual, there is a cone of converging rays incident from the left which after extension to the right of the lens (as if the lens is not present) intersect in the virtual object S ($s_o>0$). It depends on how strong the convergence is whether the diverging lens turns this cone into converging rays or whether the rays keep diverging. In (b) $0<s_o<-f_i$, and the image is real. In c) $s_o>-f_i$ and the image is virtual ($s_i<0$). In (d) $s_i$ is shown as function of $s_o$ for a divergent lens ($f_i<0$ (see {eq}`eq:ray:lensmakerFormula`).
 ```
 
 
-(subsection.twolenses)=
+(sec:ray:twolenses)=
 ## Two Thin Lenses
 
 The ray matrix is a suitable method to study the imaging of a system consisting of several thin lenses. For two lenses however, the imaging can still easily be obtained by construction.
 We simply construct the image obtained by the first lens as if the second lens were not present and use this image as (possibly virtual) object for the second lens.
-In {numref}`Fig_2_20_Double_Lens` an example is shown where the distance between the lenses is larger than the sum of their focal lengths.
+In {numref}`fig:ray:doubleLens` an example is shown where the distance between the lenses is larger than the sum of their focal lengths.
 First the image $P'$ of $S$ is constructed as obtained by $L_1$ as if $L_2$ were not present.
 We construct the intermediate image $P'$ due to lens $L_1$ using ray 2 and 3. $P'$ is a real image for lens $L_1$ and also a real object for lens $L_2$. Ray 3 is parallel to the optical axis between the two lenses and is thus refracted by lens $L_2$ through its back focal point $F_{2i}$. Ray 4 is the ray from $P'$ through the center of lens $L_2$. The image point $P$ is the intersection of ray 3 and 4.
 
 ```{figure} Images/11_09_two_thin_lenses_separated.png
-:name: Fig_2_20_Double_Lens
+:name: fig:ray:doubleLens
 Two thin lenses separated by a distance that is larger than the sum of their focal lengths.
 ```
 
 
-In the case of {numref}`Fig_2_21_Two_Thin_Lenses_close` the distance $d$ between the two positive lenses is smaller than their focal lengths.
+In the case of {numref}`fig:ray:twoThinLensesClose` the distance $d$ between the two positive lenses is smaller than their focal lengths.
 The intermediate image $P'$ is a real image for $L_1$ obtained as the intersection of rays 2 and 4 passing through the object and image focal points $F_{o1}$ and $F_{i1}$ of lens $L_1$. $P'$ is now a virtual object for lens $L_2$. To find its image by $L_2$, draw ray 3 from $P'$ through the center of lens $L_2$ back to $S$ (this ray is refracted by lens $L_1$ but not by $L_2$) and draw ray 4 as refracted by lens $L_2$. Since ray 4 is parallel to the optical axis between the lenses, it passes through the back focal point $F_{2i}$ of lens $L_2$. The intersection point of ray 3 and 4 is the final image point $P$.
 
 ```{figure} Images/11_10_two_thin_lenses_close.png
-:name: Fig_2_21_Two_Thin_Lenses_close
+:name: fig:ray:twoThinLensesClose
 Two thin lenses at a distance smaller than their focal lengths.
 ```
 
@@ -642,7 +642,7 @@ It is easy to express the $z$-coordinate $s_i$ with respect to the coordinate sy
 The intermediate image $P'$ due to lens $L_1$ has $z$-coordinate $s_{1i}$ with respect to the coordinate system with origin at the vertex $V_1$, which satisfies:
 
 ```{math}
-:label: eq:ray:first-lens-imaging
+:label: eq:ray:firstLensImaging
 \begin{align*}
 -\frac{1}{s_o} + \frac{1}{s_{1i}}=\frac{1}{f_{1i}}.
 \end{align*}
@@ -651,17 +651,17 @@ As object for lens $L_2$, $P'$ has $z$-coordinate with respect to the coordinate
 $s_{2o}=s_{1i}-d$, where $d$ is the distance between the lenses. Hence, with $s_i=s_{2i}$ the Lensmaker's Formula for lens $L_2$ implies:
 
 ```{math}
-:label: eq:ray:second-lens-imaging
+:label: eq:ray:secondLensImaging
 \begin{align*}
 -\frac{1}{s_{1i}-d} + \frac{1}{s_i} = \frac{1}{f_{2i}}.
 \end{align*}
 ```
 
-By solving {eq}`eq:ray:first-lens-imaging` for $s_{1i}$ and substituting the
-result into {eq}`eq:ray:second-lens-imaging`, we find
+By solving {eq}`eq:ray:firstLensImaging` for $s_{1i}$ and substituting the
+result into {eq}`eq:ray:secondLensImaging`, we find
 
 ```{math}
-:label: eq:ray:two-lens-image-coordinate
+:label: eq:ray:twoLensImageCoordinate
 \begin{align*}
 s_i = \frac{ -d f_{1i}f_{2i} + f_{2i}(f_{i1}-d)s_o }{f_{1i}(f_{2i}-d) + (f_{1i}+f_{2i}-d) s_o}, \;\;\; \quad \mathbf{two thin lenses}.
 \end{align*}
@@ -669,28 +669,28 @@ s_i = \frac{ -d f_{1i}f_{2i} + f_{2i}(f_{i1}-d)s_o }{f_{1i}(f_{2i}-d) + (f_{1i}+
 By taking the limit $s_o \rightarrow -\infty$, we obtain the $z$-coordinate $f_i$ of the image focal point of the two lenses, while $s_i\rightarrow \infty$ gives the $z$-coordinate $f_o$ of the object focal point:
 
 ```{math}
-:label: eq:ray:two-lens-image-focal
+:label: eq:ray:twoLensImageFocal
 \begin{align*}
 f_i&= \frac{ (f_{1i}-d) f_{2i}}{f_{1i}+f_{2i}-d},
 \end{align*}
 ```
 
 ```{math}
-:label: eq:ray:two-lens-object-focal
+:label: eq:ray:twoLensObjectFocal
 \begin{align*}
 f_o &= -\frac{(f_{2i}-d)f_{1i}}{f_{1i}+f_{2i} - d},
 \end{align*}
 ```
 
-We found in [](#subsection.focthin) that when the refractive indices of the
+We found in [](#sec:ray:focthin) that when the refractive indices of the
 media before and after the lens are the same, the object and image focal lengths
-of a thin lens are the identical. However, as follows from {eq}`eq:ray:two-lens-image-focal` and {eq}`eq:ray:two-lens-object-focal` the object
+of a thin lens are the identical. However, as follows from {eq}`eq:ray:twoLensImageFocal` and {eq}`eq:ray:twoLensObjectFocal` the object
 and image focal lengths are in general different when there are several lenses.
 
 By construction using the intermediate image, it is clear that the magnification of the two-lens system is the product of the magnifications of the two lenses:
 
 ```{math}
-:label: eq:ray:two-lens-magnification
+:label: eq:ray:twoLensMagnification
 \begin{align*}
 M = M_1 M_2.
 \end{align*}
@@ -699,10 +699,10 @@ M = M_1 M_2.
 
 1. When $f_{1i}+f_{2i}=d$ the focal points are at infinity. Such a system is called **telecentric**.
 
-2. In the limit where the lenses are very close together: $d\rightarrow 0$, {eq}`eq:ray:two-lens-image-coordinate` becomes
+2. In the limit where the lenses are very close together: $d\rightarrow 0$, {eq}`eq:ray:twoLensImageCoordinate` becomes
 
 ```{math}
-:label: eq:ray:contact-lenses-imaging
+:label: eq:ray:contactLensesImaging
 \begin{align*}
 -\frac{1}{s_o } + \frac{1}{s_i} = \frac{1}{f_{1i}} + \frac{1}{f_{2i}}.
 \end{align*}
@@ -710,7 +710,7 @@ M = M_1 M_2.
 The focal length $ f_i$ of the system of two lenses in contact thus satisfies:
 
 ```{math}
-:label: eq:ray:contact-lenses-focal
+:label: eq:ray:contactLensesFocal
 \begin{align*}
 \frac{1}{f_i} = \frac{1}{f_{1i}} + \frac{1}{f_{2i}}.
 \end{align*}
@@ -719,40 +719,40 @@ In particular, by the using two identical lenses in contact, the focal length is
 
 3. Although for two lenses the image coordinate can still be expressed
    relatively easily in the object distance, for systems with more lenses
-   finding the overall ray matrix and then using the image condition {eq}`eq:ray:imaging-condition` is a much better strategy.
+   finding the overall ray matrix and then using the image condition {eq}`eq:ray:imagingCondition` is a much better strategy.
 
 ## The Thick Lens
 
-At the left of {numref}`Fig_2_22_Thick_Lens_Principle_plane` a thick lens is shown. The object focal point is defined as the point whose rays are refracted such that the emerging rays are parallel to the optical axis. By extending the incident and emerging rays by straight segments, the points of intersection are found to be on a curved surface, which close to the optical axis, i.e. in the paraxial approximation, is in good approximation a plane perpendicular to the optical axis. This plane is called the **primary principal plane** and its intersection with the optical axis is called the primary principal point $H_1$.
+At the left of {numref}`fig:ray:thickLensPrinciplePlane` a thick lens is shown. The object focal point is defined as the point whose rays are refracted such that the emerging rays are parallel to the optical axis. By extending the incident and emerging rays by straight segments, the points of intersection are found to be on a curved surface, which close to the optical axis, i.e. in the paraxial approximation, is in good approximation a plane perpendicular to the optical axis. This plane is called the **primary principal plane** and its intersection with the optical axis is called the primary principal point $H_1$.
 
 ```{figure} Images/11_11_thick_lens_principle_plane.png
-:name: Fig_2_22_Thick_Lens_Principle_plane
+:name: fig:ray:thickLensPrinciplePlane
 Principal planes of a thick lens, with front and back focal lengths: f.f.l and b.f.l.
 ```
 
-By considering incident rays which are parallel to the optical axis and therefore focused in the image focal point, the **secondary principal plane** and secondary principal point $H_2$ are defined in a similar way (see the drawing at the right in {numref}`Fig_2_22_Thick_Lens_Principle_plane`).
-The principal planes can be outside the lens. For meniscus lenses, this is usually the case as shown in {numref}`Fig_2_23_Principle_planes`.
-It can be seen from {numref}`Fig_2_22_Thick_Lens_Principle_plane`
+By considering incident rays which are parallel to the optical axis and therefore focused in the image focal point, the **secondary principal plane** and secondary principal point $H_2$ are defined in a similar way (see the drawing at the right in {numref}`fig:ray:thickLensPrinciplePlane`).
+The principal planes can be outside the lens. For meniscus lenses, this is usually the case as shown in {numref}`fig:ray:principlePlanes`.
+It can be seen from {numref}`fig:ray:thickLensPrinciplePlane`
 that the principal planes are images of each other, with unit magnification. Hence, if an object is placed in the primary principal plane (hypothetically if this plane is inside the lens), its image is in the secondary principal plane. The image is erect and has unit magnification.
 
 ```{figure} Images/11_12_principle_planes.png
-:name: Fig_2_23_Principle_planes
+:name: fig:ray:principlePlanes
 Position of the principal planes for several lenses.
 ```
 
 Now, if the object coordinates and object focal point are defined with respect
 to the origin at $H_1$ and the image coordinates and image focal point are
-defined with respect to the origin in $H_2$, the Lensmaker's formula {eq}`eq:ray:lensmaker-formula` can also be used for a thick lens.
+defined with respect to the origin in $H_2$, the Lensmaker's formula {eq}`eq:ray:lensmakerFormula` can also be used for a thick lens.
 
 
 *Proof*
 
-We recall the result {eq}`eq:ray:thick-lens-matrix` for the ray matrix between
+We recall the result {eq}`eq:ray:thickLensMatrix` for the ray matrix between
 the planes through the front and back vertices $V_1$, $V_2$ of a thick lens with
 refractive index $n_l$ and thickness $d$:
 
 ```{math}
-:label: eq:ray:thick-lens-matrix-full
+:label: eq:ray:thickLensMatrixFull
 \begin{align*}
 {\cal M}_{V_1V_2}
 &= \left( \begin{array}{cc}1 - \frac{d}{n_l}P_2 & -P \\\frac{d}{n_l} & 1 -\frac{d}{n_l}P_1
@@ -762,7 +762,7 @@ refractive index $n_l$ and thickness $d$:
 where
 
 ```{math}
-:label: eq:ray:surface-powers
+:label: eq:ray:surfacePowers
 \begin{align*}
 P_1= \frac{n_l-n_1}{R_1}, \quad P_2=\frac{n_2-n_l}{R_2},
 \end{align*}
@@ -770,18 +770,18 @@ P_1= \frac{n_l-n_1}{R_1}, \quad P_2=\frac{n_2-n_l}{R_2},
 and $n_1$, $n_2$ are the refractive indices to the left and the right of the lens, respectively, and where
 
 ```{math}
-:label: eq:ray:thick-lens-power
+:label: eq:ray:thickLensPower
 \begin{align*}
 P=P_1+P_2 - \frac{d}{n_l}P_1P_2.
 \end{align*}
 ```
 
 If $h_1$ is the $z$-coordinate of the first principal point $H_1$ with respect
-to the coordinate system with origin at vertex $V_1$, we have according to {eq}`eq:ray:homogeneous-propagation-matrix` for the ray matrix between the primary
+to the coordinate system with origin at vertex $V_1$, we have according to {eq}`eq:ray:homogeneousPropagationMatrix` for the ray matrix between the primary
 principal plane and the plane through vertex $V_1$
 
 ```{math}
-:label: eq:ray:principal-plane-1-matrix
+:label: eq:ray:principalPlane1Matrix
 \begin{align*}
 {\cal M}_1=\left( \begin{array}{cc}1 & 0 \\\frac{h_1}{n_1} & 1
 \end{array}\right).
@@ -790,7 +790,7 @@ principal plane and the plane through vertex $V_1$
 Similarly, if $h_2$ is the coordinate of the secondary principal point $H_2$ with respect to the coordinate system with $V_2$ as origin, the ray matrix between the plane through vertex $V_2$ and the secondary principal plane is
 
 ```{math}
-:label: eq:ray:principal-plane-2-matrix
+:label: eq:ray:principalPlane2Matrix
 \begin{align*}
 {\cal M}_2=\left( \begin{array}{cc}1 & 0 \\\frac{h_2}{n_2} & 1
 \end{array}\right).
@@ -799,32 +799,32 @@ Similarly, if $h_2$ is the coordinate of the secondary principal point $H_2$ wit
 The ray matrix between the two principle planes is then
 
 ```{math}
-:label: eq:ray:principal-planes-matrix
+:label: eq:ray:principalPlanesMatrix
 \begin{align*}
 {\cal M}_{H_1H_2}= {\cal M}_2 {\cal M}_{V_1V_2}{\cal M}_1.
 \end{align*}
 ```
 The coordinates $h_1$ and $h_2$ can be found by imposing to the resulting matrix the imaging condition
-{eq}`eq:ray:imaging-condition`: $C=0$ and the condition that the magnification
-should be unity: $D=1$, which follows from {eq}`eq:ray:magnification-definition`.
+{eq}`eq:ray:imagingCondition`: $C=0$ and the condition that the magnification
+should be unity: $D=1$, which follows from {eq}`eq:ray:magnificationDefinition`.
 We omit the details and only give the resulting expressions here:
 
 ```{math}
-:label: eq:ray:first-principal-distance
+:label: eq:ray:firstPrincipalDistance
 \begin{align*}
 h_1 &= \frac{n_1}{n_l} \frac{P_2}{P} d, \end{align*}
 ```
 ```{math}
-:label: eq:ray:second-principal-distance
+:label: eq:ray:secondPrincipalDistance
 \begin{align*}
 \\
 h_2 &= -\frac{n_2}{n_l} \frac{P_1}{P} d.\end{align*}
 ```
 
-With these results, {eq}`eq:ray:principal-planes-matrix` becomes
+With these results, {eq}`eq:ray:principalPlanesMatrix` becomes
 
 ```{math}
-:label: eq:ray:principal-planes-thin-form
+:label: eq:ray:principalPlanesThinForm
 \begin{align*}
 {\cal M}_{H_1H_2}= \left( \begin{array}{cc}1 & -P \\0 & 1
 \end{array}\right).
@@ -832,11 +832,11 @@ With these results, {eq}`eq:ray:principal-planes-matrix` becomes
 ```
 
 We see that **the ray matrix between the principal planes is identical to the
-ray matrix of a thin lens** {eq}`eq:ray:thin-lens-matrix`.
-We therefore conclude that if the coordinates in object space are chosen with respect to the origin in the primary principal point $H_1$, and the coordinates in image space are chosen with respect to the origin in the secondary principal point $H_2$, the expressions for the first and second focal points and for the coordinates of the image point in terms of that of the object point are identical to that for a thin lens. An example of imaging by a thick lens is shown in {numref}`Fig_2_24_Thick_Lens_Imaging`.
+ray matrix of a thin lens** {eq}`eq:ray:thinLensMatrix`.
+We therefore conclude that if the coordinates in object space are chosen with respect to the origin in the primary principal point $H_1$, and the coordinates in image space are chosen with respect to the origin in the secondary principal point $H_2$, the expressions for the first and second focal points and for the coordinates of the image point in terms of that of the object point are identical to that for a thin lens. An example of imaging by a thick lens is shown in {numref}`fig:ray:thickLensImaging`.
 
 ```{figure} Images/11_13_thick_lens_imaging.png
-:name: Fig_2_24_Thick_Lens_Imaging
+:name: fig:ray:thickLensImaging
 Thick-lens geometry. There holds
 	 $f_i=f_o$ if the ambient medium left of the lens is the same as to the right of the lens. All coordinates in object and image space are with respect to the origin in $H_1$ and $H_2$, respectively.
 ```

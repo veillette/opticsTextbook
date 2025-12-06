@@ -14,7 +14,7 @@ tags:
   - mathematics
 ---
 
-(appendix:mathematical-notation)=
+(appendix:mathematicalNotation)=
 # Mathematical Notation Index
 
 This appendix provides a comprehensive reference for the mathematical symbols, operators, and notation used throughout this textbook. The notation follows standard conventions in optics and electromagnetic theory.

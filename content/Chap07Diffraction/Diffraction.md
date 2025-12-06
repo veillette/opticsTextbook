@@ -22,7 +22,7 @@ downloads:
     title: Download Chapter DOCX
 ---
 
-(chapter.diffraction)=
+(chapter:diff)=
 # Scalar Diffraction Optics
 
 
@@ -42,7 +42,7 @@ In this chapter we will study how light propagates as a wave. In the study of th
 
 But a precise description of the propagation of light is not only important for fundamental science, it also has many practical applications. For example, if a sample must be analysed by illuminating it and measuring the scattered light, the fact that the detected light has not only been affected by the sample, but by both the sample and propagation has to be taken into account. Another example is lithography. If a pattern has to be printed onto a substrate using a mask that is illuminated and there is a certain distance between the mask and the photoresist, the light which reaches the resist does not have the exact shape of the mask due to propagation effects. Thus, the mask needs to be designed to compensate for these effects.
 ```{figure} Images/07_01_propagation_example.png
-:name: Fig_6_01_Propagation_Example
+:name: fig:diff:propagationExample
 A quantitative model of the propagation of light is required to predict the properties of propagation and to apply it in sample analyses and lithography.
 ```
 
@@ -61,21 +61,21 @@ where $k=\omega\sqrt{\epsilon \mu_0}$ is the wave number of the light in matter 
 When the refractive index is not constant, Maxwell's equations are no longer equivalent to the wave equation for the individual electromagnetic field components and there is then coupling between the components due to the curl operators in Maxwell's equation. When the variation of the refractive index is slow on the scale of the wavelength, the scalar wave equation may still be a good approximation, but for structures that vary on the scale of the wavelength (i.e. on the scale of ten microns or less), the scalar wave equation is not sufficiently accurate.
 
 ## Propagation of light through a homogenous medium
-We will describe two equivalent methods to compute the propagation of the field through homogeneous matter, namely the angular spectrum method and the Rayleigh-Sommerfeld diffraction formula. Our goal is to derive the field in some point $(x,y,z)$ with $z>0$, given the field in the plane $z=0$, as is illustrated in {numref}`Fig_6_02_Propagation_Math`.
+We will describe two equivalent methods to compute the propagation of the field through homogeneous matter, namely the angular spectrum method and the Rayleigh-Sommerfeld diffraction formula. Our goal is to derive the field in some point $(x,y,z)$ with $z>0$, given the field in the plane $z=0$, as is illustrated in {numref}`fig:diff:propagationMath`.
 Although both methods in the end describe the same, they give physical insight into different aspects of propagation.
 
-(sec:angularspectrum)=
+(sec:diff:angularspectrum)=
 ### Angular Spectrum Method
 
 
 ```{figure} Images/07_02_propagation_math.png
-:name: Fig_6_02_Propagation_Math
+:name: fig:diff:propagationMath
 Given the field $U(x,y,0)$, we want to find $U$ in a point $(x,y,z)$ with $z>0$. It is assumed that the field propagates in the positive $z$-direction, which means that all sources are in the region $z<0$.
 ```
 
 
 ```{math}
-:label: eq:diff:fourier-field
+:label: eq:diff:fourierField
 \begin{align*}
 \mathcal{F}(U_0)(\xi,\eta) = \int\!\int U_0(x,y) e^{-2\pi i(\xi x + \eta y)} \, \text{d}x \text{d} y,
 \end{align*}
@@ -83,24 +83,24 @@ Given the field $U(x,y,0)$, we want to find $U$ in a point $(x,y,z)$ with $z>0$.
 The inverse Fourier transform implies:
 
 ```{math}
-:label: eq:diff:fourier-inverse
+:label: eq:diff:fourierInverse
 \begin{align*}
 U_0(x,y)&= \int\!\int {\cal F}(U_0)(\xi,\eta) e^{2\pi i (\xi x + \eta y)}\, \text{d}\xi \text{d} \eta \\
 &= \mathcal{F}^{-1}\{{\cal F}(U_0)\}(x,y).
 \end{align*}
 ```
 The Fourier transform has important properties that are essential for this analysis.
-By defining $k_x=2\pi \xi$, $k_y=2\pi \eta$, {eq}`eq:diff:fourier-inverse` can be written as
+By defining $k_x=2\pi \xi$, $k_y=2\pi \eta$, {eq}`eq:diff:fourierInverse` can be written as
 
 ```{math}
-:label: eq:diff:fourier-wavevector
+:label: eq:diff:fourierWavevector
 \begin{align*}
 U_0(x,y)= \frac{1}{4\pi^2} \int\!\int {\cal F}(U_0)\left(\frac{k_x}{2\pi},\frac{k_y}{2\pi}\right) e^{ i (k_x x + k_y y)}\, \text{d} k_x \text{d} k_y.
 \end{align*}
 ```
 The variables in the Fourier plane: $(\xi,\eta)$ and $(k_x, k_y)$ are called **spatial frequencies**.
 
-{eq}`eq:diff:fourier-wavevector` says that we can write $U_0(x,y)=U(x,y,z=0)$ as an integral (a
+{eq}`eq:diff:fourierWavevector` says that we can write $U_0(x,y)=U(x,y,z=0)$ as an integral (a
 sum) of plane waves[^1] with wave vector $\mathbf{k}=(k_x,k_y, k_z)^T$, each
 with its own weight (i.e. complex
 amplitude) ${\cal F}(U_0)\left(\frac{k_x}{2\pi},\frac{k_y}{2\pi}\right)$.
@@ -115,7 +115,7 @@ Therefore, the field $U(x,y,z)$ in the plane $z$ (for some $z>0$) is given by
 
 
 ```{math}
-:label: eq:diff:plane-wave
+:label: eq:diff:planeWave
 \begin{align*}
 U(x,y,z)=\frac{1}{4\pi^2} \int\int {\cal F}(U_0)\left(\frac{k_x}{2\pi},\frac{k_y}{2\pi}\right)e^{i (k_x x + k_y y+k_z z)} \,\text{d}k_x\,\text{d}k_y,
 \end{align*}
@@ -124,15 +124,15 @@ U(x,y,z)=\frac{1}{4\pi^2} \int\int {\cal F}(U_0)\left(\frac{k_x}{2\pi},\frac{k_y
 where
 
 ```{math}
-:label: eq:diff:kz-component
+:label: eq:diff:kzComponent
 \begin{align*}
 k_z =\sqrt{\left(\frac{2\pi }{\lambda}\right)^2-k_x^2-k_y^2},
 \end{align*}
 ```
 with $\lambda$ the wavelength of the light as measured **in the material** (hence, $\lambda=\lambda_0/n$, with $\lambda_0$ the wavelength in vacuum).
-The sign in front of the square root in {eq}`eq:diff:kz-component` could in principle be chosen negative: one would then also obtain a solution of the Helmholtz equation. The choice of the sign of $k_z$ is determined by the direction in which the light propagates, which in turn depends on the location of the sources **and** on the convention chosen for the time dependance. We have to choose here the + sign in front of the square root because the sources are in $z<0$ and the time dependence of time-harmonic fields is (as always in this book) given by $e^{-i\omega t}$ with $\omega >0$.
+The sign in front of the square root in {eq}`eq:diff:kzComponent` could in principle be chosen negative: one would then also obtain a solution of the Helmholtz equation. The choice of the sign of $k_z$ is determined by the direction in which the light propagates, which in turn depends on the location of the sources **and** on the convention chosen for the time dependance. We have to choose here the + sign in front of the square root because the sources are in $z<0$ and the time dependence of time-harmonic fields is (as always in this book) given by $e^{-i\omega t}$ with $\omega >0$.
 
-{eq}`eq:diff:plane-wave` can be written alternatively as
+{eq}`eq:diff:planeWave` can be written alternatively as
 
 ```{math}
 \begin{align*}
@@ -142,7 +142,7 @@ U(x,y,z)=\mathcal{F}^{-1}\{\mathcal{F}(U_0)(\xi,\eta)e^{i k_z z}\}(x,y),
 where now $k_z$ has to be considered as a function of $(\xi, \eta)$:
 
 ```{math}
-:label: eq:diff:kz-spatial-freq
+:label: eq:diff:kzSpatialFreq
 \begin{align*}
 k_z = 2\pi \sqrt{ \left( \frac{1}{\lambda}\right)^2- \xi^2-\eta^2}.
 \end{align*}
@@ -161,7 +161,7 @@ These exponentially decaying waves are called **evanescent in the positive $z$-d
 
 The waves for which $k_z$ is real have constant amplitude: only their phase changes due to propagation. These waves therefore are called **propagating waves**.
 ```{figure} Images/07_03_angular_spectrum.png
-:name: Fig_6_03_Angular_Spectrum
+:name: fig:diff:angularSpectrum
 The spatial frequencies $k_x$, $k_y$ of the plane waves in the angular spectrum of a time-harmonic field which propagates in the $z$-direction. There are two types of waves: the propagating waves with spatial frequencies inside the circle $\sqrt{k_x^2+k_y^2}<k=2\pi/\lambda $ and which have phase depending on the propagation distance $z$ but constant amplitude, and the evanescent waves for which $\sqrt{k_x^2+k_y^2}>k$ and of which the amplitude decreases exponentially during propagation.
 ```
 
@@ -169,24 +169,24 @@ The spatial frequencies $k_x$, $k_y$ of the plane waves in the angular spectrum 
 **Remark**. In homogeneous space, the scalar Helmholtz equation for every electric field component is equivalent to Maxwell's equations and hence we may propagate each component $E_x$, $E_y$ and $E_z$ individually using the angular spectrum method. If the data in the plane $z=0$ of these field components are physically consistent, the electric field thus obtained will automatically satisfy the condition that the electric field is free of divergence, i.e.
 
 ```{math}
-:label: eq:diff:divergence-free
+:label: eq:diff:divergenceFree
 \begin{align*}
 \mathbf{\nabla} \cdot \mathbf{E}=0,
 \end{align*}
 ```
 everywhere in $z>0$.
 This is equivalent to the statement that the electric vectors of the plane waves in the angular spectrum are perpendicular to their wave vectors.
-Alternatively, one can propagate only the $E_x$- and $E_y$-components and afterwards determine $E_z$ from the condition that {eq}`eq:diff:divergence-free` must be satisfied.
+Alternatively, one can propagate only the $E_x$- and $E_y$-components and afterwards determine $E_z$ from the condition that {eq}`eq:diff:divergenceFree` must be satisfied.
 
 
-(sec:rayleighsommerfeld)=
+(sec:diff:rayleighsommerfeld)=
 ### Rayleigh-Sommerfeld Diffraction Integral
 
 Another method to propagate a wave field is by using the **Rayleigh-Sommerfeld** integral. A very good approximation of this integral states that each point in the plane $z=0$ emits spherical waves with amplitude proportional to the field in the plane $z=0$. To find the field in a point $(x, y,z)$, we have to add the contributions from all these point sources together. This corresponds to the Huygens-Fresnel principle postulated earlier in the Spatial Coherence section of the Interference chapter. Because a more rigorous derivation starting from the Helmholtz equation[^2] would be rather lengthy, we will just give the final result:
 
 ````{note}
 ```{math}
-:label: eq:diff:rayleigh-sommerfeld
+:label: eq:diff:rayleighSommerfeld
 \begin{align*}
 U(x,y,z)&= \frac{1}{i\lambda}\int\int U_0(x',y')\frac{ z \, e^{ik\sqrt{(x-x')^2+(y-y')^2+z^2}}}{(x-x')^2+(y-y')^2+z^2}\,\text{d}x'\,\text{d}y'
 &= \frac{1}{i\lambda}\int\int U_0(x',y')\frac{z}{r} \frac{e^{ikr}}{r}\,\text{d}x'\,\text{d}y',
@@ -197,21 +197,21 @@ U(x,y,z)&= \frac{1}{i\lambda}\int\int U_0(x',y')\frac{ z \, e^{ik\sqrt{(x-x')^2+
 where we wrote again $U_0(x,y)=U(x,y,0)$ and where
 
 ```{math}
-:label: eq:diff:distance-definition
+:label: eq:diff:distanceDefinition
 \begin{align*}
 r=\sqrt{(x-x')^2+(y-y')^2+z^2}.
 \end{align*}
 ```
 **Remarks**.
 
-1. The formula {eq}`eq:diff:rayleigh-sommerfeld` is not completely rigorous because a term that is a factor $1/(kr)$ smaller (and which in practice therefore is very much smaller) has been omitted.
+1. The formula {eq}`eq:diff:rayleighSommerfeld` is not completely rigorous because a term that is a factor $1/(kr)$ smaller (and which in practice therefore is very much smaller) has been omitted.
 
-2. In {eq}`eq:diff:rayleigh-sommerfeld` there is an additional factor
+2. In {eq}`eq:diff:rayleighSommerfeld` there is an additional factor
 $z/r$ that has been omitted in the standard time-harmonic spherical wave formulation. This factor means that the amplitudes of the spherical waves in the Rayleigh-Sommerfeld diffraction integral depend on direction (although their wave fronts are spherical), the amplitudes being largest in the forward direction.
 
 3. The angular spectrum method amounts to a multiplication by $\exp(i z k_z)$ in Fourier space, while the Rayleigh-Sommerfeld integral is a convolution with respect to $(x,y)$. It is a property of the Fourier transform that a multiplication in Fourier space corresponds to a convolution in real space and vice versa. Indeed a mathematical result called **Weyl's identity** implies that the rigorous Rayleigh-Sommerfeld formulation and the plane wave expansion (i.e. the angular spectrum method) give identical results.
 
-(sec:fourierintuition)=
+(sec:diff:fourierintuition)=
 ## Intuition for the Spatial Fourier Transform in Optics
 
 Since spatial Fourier transformations play an important role in our discussion of the propagation of light, it is important to understand them not just mathematically, but also intuitively.
@@ -230,9 +230,9 @@ by looking at the magnitude of its spatial Fourier transform $|\mathcal{F}(U_0)\
 
 Suppose $U_0(x,y)$ has sharp features, i.e. there are regions where $U_0(x,y)$ varies rapidly as a function of $x$ and $y$. To describe these features as a combination of plane waves, these waves must also vary rapidly as a function of $x$ and $y$, which means that the length of their wave vectors $\sqrt{k_x^2+k_y^2}$ must be large. Thus, the sharper the features that $U_0(x,y)$ has, the larger we can expect
 $|\mathcal{F}(U_0)\left(\frac{k_x}{2\pi},\frac{k_y}{2\pi}\right)|$ to be for large $\sqrt{k_x^2+k_y^2}$, i.e. high spatial frequencies can be expected to have large amplitude. Similarly, the slowly varying, broad features of $U_0(x,y)$ are described by slowly fluctuating waves, i.e. by
-$\mathcal{F}(U_0)\left(\frac{k_x}{2\pi},\frac{k_y}{2\pi}\right)$ for small $\sqrt{k_x^2+k_y^2}$, i.e. for low spatial frequencies. This is illustrated in {numref}`Fig_6_04_Spatial_Fourier_Transform`.
+$\mathcal{F}(U_0)\left(\frac{k_x}{2\pi},\frac{k_y}{2\pi}\right)$ for small $\sqrt{k_x^2+k_y^2}$, i.e. for low spatial frequencies. This is illustrated in {numref}`fig:diff:spatialFourierTransform`.
 
-To investigate these concepts further we choose a certain field, take its Fourier transform, remove the higher spatial frequencies and then invert the Fourier transform. We then expect that the resulting field has lost its sharp features and only retains its broad features, i.e. the image is blurred. Conversely, if we remove the lower spatial frequencies but retain the higher, then the result will only show its sharp features, i.e. its contours. These effects are shown in {numref}`Fig_6_05_FourierFilter`.
+To investigate these concepts further we choose a certain field, take its Fourier transform, remove the higher spatial frequencies and then invert the Fourier transform. We then expect that the resulting field has lost its sharp features and only retains its broad features, i.e. the image is blurred. Conversely, if we remove the lower spatial frequencies but retain the higher, then the result will only show its sharp features, i.e. its contours. These effects are shown in {numref}`fig:diff:fourierFilter`.
 Recall that when $k_x^2+k_y^2 > \left(\frac{2\pi}{\lambda}\right)^2$, the plane wave decays exponentially as the field propagates. Because by propagation through homogeneous space, the information contained in the high spatial frequencies corresponding to evanescent waves is lost (only exponentially small amplitudes of the evanescent waves remain), perfect imaging is impossible, no matter how well-designed an optical system is.
 
 ```{note}
@@ -241,13 +241,13 @@ Propagation of light leads to irrecoverable loss of resolution.
 
 It is this fact that motivates near-field microscopy, which tries to detect these evanescent waves by scanning close to the sample, thus obtaining subwavelength resolution.
 
-So we have seen how we can guess properties of some object field $U_0(x,y)$ given the amplitude of its spatial Fourier transform $|\mathcal{F}(U_0)\left(\frac{k_x}{2\pi},\frac{k_y}{2\pi}\right)|$. But what about the phase of $\mathcal{F}(U_0)\left(\frac{k_x}{2\pi},\frac{k_y}{2\pi}\right)$? Although one cannot really guess properties of $U_0(x,y)$ by looking at the phase of $\mathcal{F}(U_0)\left(\frac{k_x}{2\pi},\frac{k_y}{2\pi}\right)$ the same way as we can by looking at its amplitude, it is in fact the phase that plays a larger role in defining $U_0(x,y)$. This is illustrated in {numref}`Fig_6_06_FourierPhase`: if the amplitude information of $\mathcal{F}(U_0)\left(\frac{k_x}{2\pi},\frac{k_y}{2\pi}\right)$ is removed, features of the original $U_0(x,y)$ may still be retrieved. However, if we only know the amplitude $|\mathcal{F}(U_0)(k_x,k_y)|$ but not the phase, then the original object is completely lost. Thus, the phase of a field $\mathcal{F}(U_0)$ is very important, arguably often more important than its amplitude. However, we cannot measure the phase of a field directly, only its intensity $I=|\mathcal{F}(U_0)|^2$ from which we can calculate the amplitude $|\mathcal{F}(U_0)|$. It is this fact that makes **phase retrieval** an entire field of study on its own: how can we find the phase of a field, given that we can only perform intensity measurements? This question is related to a new field of optics called "lensless imaging", where amplitudes and phases are retrieved from intensity measurements and the image is reconstructed **computationally**. Interesting as this topic may be, we will not treat it in these notes and refer instead to master courses in optics [^3].
+So we have seen how we can guess properties of some object field $U_0(x,y)$ given the amplitude of its spatial Fourier transform $|\mathcal{F}(U_0)\left(\frac{k_x}{2\pi},\frac{k_y}{2\pi}\right)|$. But what about the phase of $\mathcal{F}(U_0)\left(\frac{k_x}{2\pi},\frac{k_y}{2\pi}\right)$? Although one cannot really guess properties of $U_0(x,y)$ by looking at the phase of $\mathcal{F}(U_0)\left(\frac{k_x}{2\pi},\frac{k_y}{2\pi}\right)$ the same way as we can by looking at its amplitude, it is in fact the phase that plays a larger role in defining $U_0(x,y)$. This is illustrated in {numref}`fig:diff:fourierPhase`: if the amplitude information of $\mathcal{F}(U_0)\left(\frac{k_x}{2\pi},\frac{k_y}{2\pi}\right)$ is removed, features of the original $U_0(x,y)$ may still be retrieved. However, if we only know the amplitude $|\mathcal{F}(U_0)(k_x,k_y)|$ but not the phase, then the original object is completely lost. Thus, the phase of a field $\mathcal{F}(U_0)$ is very important, arguably often more important than its amplitude. However, we cannot measure the phase of a field directly, only its intensity $I=|\mathcal{F}(U_0)|^2$ from which we can calculate the amplitude $|\mathcal{F}(U_0)|$. It is this fact that makes **phase retrieval** an entire field of study on its own: how can we find the phase of a field, given that we can only perform intensity measurements? This question is related to a new field of optics called "lensless imaging", where amplitudes and phases are retrieved from intensity measurements and the image is reconstructed **computationally**. Interesting as this topic may be, we will not treat it in these notes and refer instead to master courses in optics [^3].
 
-**Remark**. The importance of the phase for the field can also be seen by looking at the plane wave expansion {eq}`eq:diff:plane-wave`. We have seen that the field in a plane $z=\text{constant}$ can be obtained by propagating the plane waves by multiplying their amplitudes by the phase factors $\exp(i z k_z)$, which depends on the propagation distance $z$. If one leaves the evanescent waves out of consideration (since after some distance they hardly contribute to the field anyway), it follows that only the phases of the plane waves change upon propagation, while their amplitudes (the moduli of their complex amplitudes) do not change. Yet, depending on the propagation distance $z$, widely differing light patterns are obtained (see e.g. {numref}`Fig_6_08_FresnelFraunhoferSlit`).
+**Remark**. The importance of the phase for the field can also be seen by looking at the plane wave expansion {eq}`eq:diff:planeWave`. We have seen that the field in a plane $z=\text{constant}$ can be obtained by propagating the plane waves by multiplying their amplitudes by the phase factors $\exp(i z k_z)$, which depends on the propagation distance $z$. If one leaves the evanescent waves out of consideration (since after some distance they hardly contribute to the field anyway), it follows that only the phases of the plane waves change upon propagation, while their amplitudes (the moduli of their complex amplitudes) do not change. Yet, depending on the propagation distance $z$, widely differing light patterns are obtained (see e.g. {numref}`fig:diff:fresnelFraunhoferSlit`).
 
 
 ```{figure} Images/07_04_spatial_fourier_transform.png
-:name: Fig_6_04_Spatial_Fourier_Transform
+:name: fig:diff:spatialFourierTransform
 A qualitative interpretation of spatial Fourier transforms. The low spatial frequencies (i.e. small $\sqrt{k_x^2+k_y^2}$) represent slow fluctuations, and therefore contribute to the broad features of the real-space object. The high spatial frequencies (i.e. large $\sqrt{k_x^2+k_y^2}$) fluctuate rapidly, and can therefore form sharp features in the real-space object.
 ```
 
@@ -256,7 +256,7 @@ A qualitative interpretation of spatial Fourier transforms. The low spatial freq
 
 ```
 ```{figure} Images/07_06_remove_low.png
-:name: Fig_6_05_FourierFilter
+:name: fig:diff:fourierFilter
 (b) Removing the low spatial frequencies
 
 Demonstration of the roles of different spatial frequencies. By removing the high spatial frequencies, only the broad features of the image remain and resolution s lost. If the low spatial frequencies are removed, only the sharp features (i.e. the contours) remain.
@@ -266,7 +266,7 @@ Demonstration of the roles of different spatial frequencies. By removing the hig
 (a) Removing the amplitude information by setting the amplitude of propagating and evanescent waves to 1 and 0, respectively.
 ```
 ```{figure} Images/07_08_remove_phase.png
-:name: Fig_6_06_FourierPhase
+:name: fig:diff:fourierPhase
 (b) Removing the phase information by setting the phase equal to 0.
 
 Demonstration of the role of the phase of the spatial Fourier transform. If the amplitude information is removed, but phase information is kept, some features of the original image are still recognizable. However, if the phase information is removed but amplitude information is kept, the original image is completely lost.
@@ -281,7 +281,7 @@ Another aspect of the Fourier transform is the **uncertainty principle**. It sta
 \end{align*}
 ```
 which simply states that the more $h(x)$ is squeezed by increasing $a$, the more its Fourier transform
-$\mathcal{F}(h)$ spreads out. This principle is illustrated in {numref}`Fig_6_07_Uncertainty`. The uncertainty principle is familiar from quantum physics where it is stated that a particle cannot have both a definite momentum and a definite position. In fact, this is just one particular manifestation of the uncertainty principle just described. A quantum state $|\psi\rangle$ can be described in the position basis $\psi_{x}(x)$ as well as in the momentum basis $\psi_p(p)$. The basis transformation that links these two expressions is the Fourier transform
+$\mathcal{F}(h)$ spreads out. This principle is illustrated in {numref}`fig:diff:uncertainty`. The uncertainty principle is familiar from quantum physics where it is stated that a particle cannot have both a definite momentum and a definite position. In fact, this is just one particular manifestation of the uncertainty principle just described. A quantum state $|\psi\rangle$ can be described in the position basis $\psi_{x}(x)$ as well as in the momentum basis $\psi_p(p)$. The basis transformation that links these two expressions is the Fourier transform
 
 ```{math}
 \begin{align*}
@@ -304,15 +304,15 @@ The minimum feature size of a field after propagation is of the order of the wav
 This poses a fundamental limit to resolution given by the wavelength of the light.
 
 ```{figure} Images/07_09_uncertainty_principle.png
-:name: Fig_6_07_Uncertainty
+:name: fig:diff:uncertainty
 Demonstration of the uncertainty principle. The more confined $U(x,y)$ is, the larger the spread of $\mathcal{F}(U)\left(\frac{k_x}{2\pi},\frac{k_y}{2\pi}\right)$.
 ```
 
 
-(sec:fresnelfraunhofer)=
+(sec:diff:fresnelfraunhofer)=
 ## Fresnel and Fraunhofer Approximations
 
-The Fresnel and Fraunhofer approximation are two approximations of the Rayleigh-Sommerfeld integral {eq}`eq:diff:rayleigh-sommerfeld`. The approximations are accurate provided the propagation distance $z$ is sufficiently large. In the Fraunhofer approximation, $z$ has to be *quite* large, i.e. larger than for the Fresnel approximation, which is already accurate for typical distances occurring in optical systems. Putting it differently: in order of most accurate to least accurate (i.e. only valid for large propagation distances), the diffraction integrals would rank as:
+The Fresnel and Fraunhofer approximation are two approximations of the Rayleigh-Sommerfeld integral {eq}`eq:diff:rayleighSommerfeld`. The approximations are accurate provided the propagation distance $z$ is sufficiently large. In the Fraunhofer approximation, $z$ has to be *quite* large, i.e. larger than for the Fresnel approximation, which is already accurate for typical distances occurring in optical systems. Putting it differently: in order of most accurate to least accurate (i.e. only valid for large propagation distances), the diffraction integrals would rank as:
 
 ```{note}
 **[Most accurate]** Rayleigh-Sommerfeld $\rightarrow$ Fresnel $\rightarrow$ Fraunhofer **[Least accurate]**.
@@ -320,11 +320,11 @@ The Fresnel and Fraunhofer approximation are two approximations of the Rayleigh-
 
 ### Fresnel Approximation
 
-We assume that $z$ in {eq}`eq:diff:rayleigh-sommerfeld` is so large that in the denominator we can
+We assume that $z$ in {eq}`eq:diff:rayleighSommerfeld` is so large that in the denominator we can
 approximate $r$ by $z$:
 
 ```{math}
-:label: eq:diff:fresnel-1
+:label: eq:diff:fresnel1
 \begin{align*}
 U(x,y,z)&= \frac{1}{i\lambda}\int\int U_0(x',y')\frac{z}{r} \frac{e^{ikr}}{r}\,\text{d}x'\,\text{d}y'
 &\approx & \frac{1}{i\lambda z}\int\int U_0(x',y')e^{ikr}\,\text{d}x'\,\text{d}y'.
@@ -333,7 +333,7 @@ U(x,y,z)&= \frac{1}{i\lambda}\int\int U_0(x',y')\frac{z}{r} \frac{e^{ikr}}{r}\,\
 The reason why we can not apply the same approximation for $r$ in the exponent, is that in the exponent $r$ is multiplied by $k= 2\pi /\lambda$, which is a very large number at optical frequencies, so any error introduced by approximating $r$ would be drastically magnified by multiplying by $k$ which can easily lead to a completely different value of $\exp(ikr)=\cos(kr)+i\sin(kr)$. To approximate $r$ in $\exp(ikr)$ we must be more careful and apply a Taylor expansion. Recall that
 
 ```{math}
-:label: eq:diff:distance-approx
+:label: eq:diff:distanceApprox
 \begin{align*}
 r&= \sqrt{(x-x')^2+(y-y')^2+z^2}
 &= z\, \sqrt{\frac{(x-x')^2+(y-y')^2}{z^2}+1}.
@@ -342,7 +342,7 @@ r&= \sqrt{(x-x')^2+(y-y')^2+z^2}
 We know that the Taylor expansion around $s=0$ implies:
 
 ```{math}
-:label: eq:diff:paraxial-approx
+:label: eq:diff:paraxialApprox
 \begin{align*}
 \sqrt{s+1}=1+\frac{s}{2}-\frac{s^2}{8}+\dots.
 \end{align*}
@@ -350,7 +350,7 @@ We know that the Taylor expansion around $s=0$ implies:
 Since we assume that $z$ is large, $\frac{(x-x')^2+(y-y')^2}{z^2}$ is small, so we have
 
 ```{math}
-:label: eq:diff:fresnel-2
+:label: eq:diff:fresnel2
 \begin{align*}
 r&= z\sqrt{\frac{(x-x')^2+(y-y')^2}{z^2}+1}
 &\approx& z\left[1+\frac{(x-x')^2+(y-y')^2}{2 z^2}\right]
@@ -361,7 +361,7 @@ With this approximation, we arrive at the **Fresnel diffraction integral**, whic
 
 
 ```{math}
-:label: eq:diff:fresnel-integral
+:label: eq:diff:fresnelIntegral
 \begin{align*}
 \begin{split}
 U(x,y,z) &\approx
@@ -381,7 +381,7 @@ The Fresnel approximation is proportional to the Fourier transform of the field 
 
 Note that this propagator depends on the distance of propagation $z$.
 
-**Remark**. By Fourier transforming {eq}`eq:diff:fresnel-integral`, one can get the plane wave amplitudes of the Fresnel approximation.
+**Remark**. By Fourier transforming {eq}`eq:diff:fresnelIntegral`, one can get the plane wave amplitudes of the Fresnel approximation.
 It turns out that these amplitudes are equal to ${\cal F}(U_0)$ multiplied by a phase factor which is obtained from a paraxial approximation of the exact phase factor $\exp(i z k_z)$, i.e. $k_z$ is approximated by a quadratic function of $k_x, k_y$. Therefore the Fresnel approximation is also called the paraxial approximation. In fact, it can be shown that the Fresnel diffraction integral is a solution of the
 **paraxial wave equation** and conversely, that every solution of the paraxial wave equation can be written as a Fresnel diffraction integral[^5].
 
@@ -390,13 +390,13 @@ It turns out that these amplitudes are equal to ${\cal F}(U_0)$ multiplied by a 
 To obtain the Fraunhofer approximation, we will make one further approximation to $r$ in $\exp(ikr)$ in addition to the Fresnel approximation:
 
 ```{math}
-:label: eq:diff:fresnel-distance
+:label: eq:diff:fresnelDistance
 \begin{align*}
 r
 &\approx & z+\frac{(x-x')^2+(y-y')^2}{2 z} \quad\mathbf{Fresnel approximation} \end{align*}
 ```
 ```{math}
-:label: eq:diff:fraunhofer-distance
+:label: eq:diff:fraunhoferDistance
 \begin{align*}
 &\approx & z+\frac{x^2+y^2-2xx'-2yy'}{2 z} \quad\mathbf{Fraunhofer approximation}.\end{align*}
 ```
@@ -404,7 +404,7 @@ Hence we have omitted the quadratic terms $x'^2+y'^2$, and in comparison with th
 
 
 ```{math}
-:label: eq:diff:fraunhofer-integral
+:label: eq:diff:fraunhoferIntegral
 \begin{align*}
 U(x,y,z)\approx \frac{e^{ikz}e^{\frac{ik(x^2+y^2)}{2z}}}{i\lambda z} \mathcal{F}(U_0)\left(\frac{x }{ \lambda z},
 \frac {y}{\lambda z }\right).
@@ -428,13 +428,13 @@ Eventually, for sufficiently large propagation distances, i.e. in the Fraunhofer
 1. The Fresnel approximation is, like the Fraunhofer approximation, a Fourier transform of the field in the starting plane ($z=0$), evaluated in spatial frequencies which depend on the point of observation:
 
 ```{math}
-:label: eq:diff:spatial-frequency
+:label: eq:diff:spatialFrequency
 \begin{align*}
 \xi = \frac{x}{\lambda z}, \quad \eta=\frac{y}{\lambda z}.
 \end{align*}
 ```
 However, in contrast to the Fraunhofer approximation, the Fresnel approximation depends additionally in a different way on the propagation distance $z$, namely through the exponent of the Fresnel propagator in the integrand.
-Therefore the Fresnel approximation gives quite diverse patterns depending on the propagation distance $z$, as is shown in {numref}`Fig_6_08_FresnelFraunhoferSlit`.
+Therefore the Fresnel approximation gives quite diverse patterns depending on the propagation distance $z$, as is shown in {numref}`fig:diff:fresnelFraunhoferSlit`.
 
 
 2. In the Rayleigh-Sommerfeld diffraction integral, the field is written as a superposition of spherical waves. In the Fresnel approximation the spherical waves are approximated by parabolic waves. Finally, in the Fraunhofer approximation the propagation distance is so large that the parabolic waves can be approximated by plane waves.
@@ -453,12 +453,12 @@ In contrast, due to the additional quadratic phase factor in the integrand of th
 4. Suppose that $U_0$ is the field immediately behind an aperture ${\cal A}$ with diameter $D$ in an opaque screen. It can then be shown that points $(x,y,z)$ of observation, for which the Fresnel and Fraunhofer diffraction integrals are sufficiently accurate, satisfy:
 
 ```{math}
-:label: eq:diff:fresnel-condition
+:label: eq:diff:fresnelCondition
 \begin{align*}
 \frac{z}{\lambda} & \gg & \left( \frac{\max_{(x',y')\in{\cal A}}\sqrt{(x-x')^2+(y-y')^2}}{\lambda}\right)^{4/3}, \;\; \mathbf{Fresnel} \end{align*}
 ```
 ```{math}
-:label: eq:diff:fraunhofer-condition
+:label: eq:diff:fraunhoferCondition
 \begin{align*}
 \\
 \frac{z}{\lambda} & \gg & \left( \frac{D}{\lambda}\right)^{2}, \;\; \mathbf{Fraunhofer}\end{align*}
@@ -467,20 +467,20 @@ The Fresnel number is defined by
 
 
 ```{math}
-:label: eq:diff:fresnel-number
+:label: eq:diff:fresnelNumber
 \begin{align*}
 N_F = \frac{D^2}{\lambda z}, \;\;\; \mathbf{Fresnel number}.
 \end{align*}
 ```
 
-When $N_F < 0.1$ the Fraunhofer approximation is accurate, while for $N_F>0.1$ it is better to use the Fresnel approximation (see {numref}`Fig_6_08_FresnelFraunhoferSlit`).
+When $N_F < 0.1$ the Fraunhofer approximation is accurate, while for $N_F>0.1$ it is better to use the Fresnel approximation (see {numref}`fig:diff:fresnelFraunhoferSlit`).
 Suppose that $D= 1\text{ mm}$ and the wavelength is that of green light: $\lambda=550 \text{ nm}$, then Fraunhofer's approximation is accurate if $z> 10 \text{ m}$.
 
 
 5. The points of observation where the Fraunhofer approximation can be used must in any case satisfy:
 
 ```{math}
-:label: eq:diff:far-field-condition
+:label: eq:diff:farFieldCondition
 \begin{align*}
 \frac{x}{z} < 1, \quad \frac{y}{z} <1.
 \end{align*}
@@ -489,7 +489,7 @@ When $x/z>1$, the spatial frequency $k_x = \frac{2 \pi x}{z \lambda} > k$ associ
 
 6. In any expression for an optical field, one may always omit factors of constant phase, i.e. an overall phase which does not depend on position. If one is only interested in the field in certain planes $z=\text{constant}$, then a factor like $\exp(ikz)$ may also be omitted. Further, in some cases also a position dependent phase factor in front of the Fresnel and Fraunhofer diffraction integrals is omitted, namely when only the intensity is of interest. In exercises it is usually mentioned that this factor may be omitted: if this is not stated, it should be retained in the formulae.
 
-(section.examples)=
+(sec:diff:examples)=
 ### Examples of Fresnel and Fraunhofer approximations
 
 **Fresnel approximation of the field of two point sources.**
@@ -497,14 +497,14 @@ When $x/z>1$, the spatial frequency $k_x = \frac{2 \pi x}{z \lambda} > k$ associ
 Consider two mutual coherent time-harmonic point sources in $\mathbf{r}_s^+=(a/2,0,0)$ and $\mathbf{r}_s^-=(-a/2,0,0)$. The fields in $\mathbf{r}=(x,y,z)$ emitted are according to the time-harmonic field equation (see the Interference chapter) proportional to
 
 ```{math}
-:label: eq:diff:point-source-field
+:label: eq:diff:pointSourceField
 U_{\pm}(\mathbf{r}) = \frac{e^{i k |\mathbf{r}-\mathbf{r}_s^\pm|}}{|\mathbf{r} -\mathbf{r}_s^\pm|}.
 ```
 
 We apply the Fresnel approximation for large $z$:
 
 ```{math}
-:label: eq:diff:fresnel-point-source
+:label: eq:diff:fresnelPointSource
 \begin{align*}
 |\mathbf{r}-\mathbf{r}_s^\pm| &= z \sqrt{ 1 + \frac{(x∓ a/2)^2 + y^2}{z^2}}  \\
 & \approx & z + \frac{(x∓ a/2)^2 + y^2}{2 z}  \\
@@ -514,25 +514,25 @@ We apply the Fresnel approximation for large $z$:
 Hence,
 
 ```{math}
-:label: eq:diff:fresnel-field
+:label: eq:diff:fresnelField
 U_\pm(\mathbf{r}) \approx \frac{e^{ikz}}{z} e^{i k \frac{x^2+y^2}{2z} } e^{ i k\frac{ a^2}{8z}} \, e^{∓ i k \frac{a x}{2z}},
 ```
 
 where in the denominator we replaced $|\mathbf{r}-\mathbf{r}_s^\pm|$ by $z$. Note that the Fraunhofer approximation amounts to $e^{ i k a^2/(8z)} \approx 1$ while the phase factor $e^{i k \frac{x^2+y^2}{2z} } $ remains. The intensity on a screen $z=\text{constant}$ of the sum of the two fields for the case that the sources have equal strength and emit in phase is:
 
 ```{math}
-:label: eq:diff:total-intensity
+:label: eq:diff:totalIntensity
 \begin{align*}
 I_{tot}(\mathbf{r}) &= | U_+(\mathbf{r})+U_{-}(\mathbf{r}) |^2 = \frac{1}{z^2} |e^{-i k \frac{a x}{2z}} + e^{i k \frac{a x}{2z}}|^2  \\
 &= \frac{2}{z^2} \left[ 1 + \cos\left(2 \pi \frac{a x}{\lambda z}\right)\right].
 \end{align*}
 ```
-It is seen that the intensity results from the interference of two plane waves: $\exp[\pm i k ax/(\lambda z)]$ and is given by a cosine function (see {numref}`Fig_6_09_2_point_source`).
+It is seen that the intensity results from the interference of two plane waves: $\exp[\pm i k ax/(\lambda z)]$ and is given by a cosine function (see {numref}`fig:diff:pointSource`).
 Note that for two point sources, the intensity pattern is the same in the Fresnel and the Fraunhofer approximation. However, this is special for two point sources: when more than two point sources are considered, the Fresnel and Fraunhofer patterns are different. The intensity pattern is independent of $y$, and vanishes on lines
 
 
 ```{math}
-:label: eq:diff:bright-fringes
+:label: eq:diff:brightFringes
 \begin{align*}
 \frac{x}{z} = (2m+1)\frac{\lambda}{2a},
 \end{align*}
@@ -540,15 +540,15 @@ Note that for two point sources, the intensity pattern is the same in the Fresne
 and has maxima on lines
 
 ```{math}
-:label: eq:diff:dark-fringes
+:label: eq:diff:darkFringes
 \begin{align*}
 \frac{x}{z} = m\frac{\lambda}{a},
 \end{align*}
 ```
 for integer $m$.
 ```{figure} Images/07_10_point_source_light.png
-:name: Fig_6_09_2_point_source
-Intensity pattern of two mutually coherent point sources of equal strength and emitting in phase at the wavelength $\lambda =600$&nbsp;nm from {eq}`eq:diff:total-intensity`. The distance between the point source is 200&nbsp;nm. On the top the cross-section along along the $z$-axis is shown.
+:name: fig:diff:pointSource
+Intensity pattern of two mutually coherent point sources of equal strength and emitting in phase at the wavelength $\lambda =600$&nbsp;nm from {eq}`eq:diff:totalIntensity`. The distance between the point source is 200&nbsp;nm. On the top the cross-section along along the $z$-axis is shown.
 ```
 
 
@@ -557,7 +557,7 @@ Intensity pattern of two mutually coherent point sources of equal strength and e
 Let the screen be $z=0$ and the aperture be given by $-a/2 < x < a/2$, $-b/2 < y < b/2$. The transmission function $\tau(x,y)$ is:
 
 ```{math}
-:label: eq:diff:slit-transmission
+:label: eq:diff:slitTransmission
 \begin{align*}
 \tau(x,y)= 1_{[-a/2,a/2]}(x) 1_{[-b/2, b/2]}(y),
 \end{align*}
@@ -565,7 +565,7 @@ Let the screen be $z=0$ and the aperture be given by $-a/2 < x < a/2$, $-b/2 < y
 where
 
 ```{math}
-:label: eq:diff:indicator-function
+:label: eq:diff:indicatorFunction
 \begin{align*}
 1_{[-a/2, a/2]}(x) = \left\{ \begin{array}{l}1, \text{ if } -\frac{a}{2} \leq x \leq\frac{a}{2}, \\0, \text{ otherwise},
 \end{array}\right.
@@ -575,7 +575,7 @@ and similarly for $1_{[-b/2, b/2]}(y)$.
 Let the aperture be illuminated by a perpendicular incident plane wave with unit amplitude. Then the field immediately behind the screen is:
 
 ```{math}
-:label: eq:diff:slit-field
+:label: eq:diff:slitField
 \begin{align*}
 U_0(x,y)=\tau(x,y) = 1_{[-a/2,a/2]}(x) 1_{[-b/2, b/2]}(y),
 \end{align*}
@@ -583,7 +583,7 @@ U_0(x,y)=\tau(x,y) = 1_{[-a/2,a/2]}(x) 1_{[-b/2, b/2]}(y),
 We have
 
 ```{math}
-:label: eq:diff:slit-fourier
+:label: eq:diff:slitFourier
 \begin{align*}
 {\cal F}\left( 1_{[-a/2,a/2] }\right)(\xi) &= \int_{-a/2}^{a/2} e^{-2\pi i\xi x} \, \text{d} x  \\
 &= \frac{ e^{\pi i a \xi}-e^{-\pi i a\xi}}{2\pi i \xi}  \\
@@ -594,31 +594,31 @@ where $\text{ sinc}(u)=\sin(u)/u$.
 Hence,
 
 ```{math}
-:label: eq:diff:rectangular-aperture
+:label: eq:diff:rectangularAperture
 \begin{align*}
 {\cal F}(U_0)\left(\frac{x}{\lambda z},\frac{y}{\lambda z}\right) = a b \text{ sinc}\left(\frac{\pi a x}{\lambda z}\right) \text{ sinc}\left(\frac{\pi b y}{\lambda z}\right).
 \end{align*}
 ```
-The Fraunhofer far field at large distance $z$ from a rectangular aperture in mask is obtained by substituting {eq}`eq:diff:rectangular-aperture` into {eq}`eq:diff:fraunhofer-integral`.
+The Fraunhofer far field at large distance $z$ from a rectangular aperture in mask is obtained by substituting {eq}`eq:diff:rectangularAperture` into {eq}`eq:diff:fraunhoferIntegral`.
 
 **Remarks**.
 
 1. The first zero along the $x$-direction from the center $x=0$ occurs for
 
 ```{math}
-:label: eq:diff:zero-condition
+:label: eq:diff:zeroCondition
 \begin{align*}
 x= \pm \frac{\lambda z}{a}.
 \end{align*}
 ```
 The distance between the first two zeros along the $x$-axis is $2\lambda z/a$ and is thus larger when the width along the $x$-direction of the aperture is smaller.
 
-2. The inequalities {eq}`eq:diff:far-field-condition` imply that when $ a< \lambda$, the far field pattern does not have any zeros as function of $x$. When $a$ is further decreased it becomes more and more difficult to deduce the width $a$ from the Fraunhofer intensity. This is an illustration of the fact that information about features that are than the wavelength cannot propagate to the far field.
+2. The inequalities {eq}`eq:diff:farFieldCondition` imply that when $ a< \lambda$, the far field pattern does not have any zeros as function of $x$. When $a$ is further decreased it becomes more and more difficult to deduce the width $a$ from the Fraunhofer intensity. This is an illustration of the fact that information about features that are than the wavelength cannot propagate to the far field.
 
-3. As illustrated in {numref}`Fig_6_10_Fraunhofer`, the Fraunhofer diffraction pattern as function of diffraction angle is narrowest in the direction in which the aperture is widest.
+3. As illustrated in {numref}`fig:diff:fraunhofer`, the Fraunhofer diffraction pattern as function of diffraction angle is narrowest in the direction in which the aperture is widest.
 
 ```{figure} Images/07_11_fraunhofer_diffraction_aperture.png
-:name: Fig_6_10_Fraunhofer
+:name: fig:diff:fraunhofer
 Fraunhofer diffraction pattern of a rectangular aperture in an opaque screen.Left: the width of the aperture in the $y$-direction is twice that in the $x$-direction; middle: the width in the $y$-direction is 5 times that in the $x$-direction; right: the width in the $y$-direction is 10 times that in the $x$-direction.
 ```
 
@@ -626,14 +626,14 @@ Fraunhofer diffraction pattern of a rectangular aperture in an opaque screen.Lef
 **Fresnel approximation of a rectangular aperture in a mask**
 
 The integral in the Fresnel approximation for the field of a rectangular aperture in a mask can be computed analytically and leads to functions that are actually called "Fresnel integrals" which can be studied using the Cornu spirals. We will not go deeper in this matter but simply show the results of the simulations in
-{numref}`Fig_6_08_FresnelFraunhoferSlit`. The distance to the mask increases ($N_F$ decreases), from very close to the mask at the bottom right, to further from the mask at the bottom left, to rather far from the mask in the upper right, to Fraunhofer distance in the upper left figures. Note the change in scale along the axis in the figures and the decrease of intensity with propagation distance. It is seen that the pattern changes and broadens drastically with distance from what is more or less a copy of the aperture, to a patterns that is equal to the Fourier transform of the aperture. Once the Fraunhofer approximation is accurate, a further increase of distance only results in a widening of the pattern and a decrease of overall amplitude without change of shape. In contrast, in the region where the Fresnel approximation is accurate, the shape of the pattern is seen to change a lot with distance to the mask.
+{numref}`fig:diff:fresnelFraunhoferSlit`. The distance to the mask increases ($N_F$ decreases), from very close to the mask at the bottom right, to further from the mask at the bottom left, to rather far from the mask in the upper right, to Fraunhofer distance in the upper left figures. Note the change in scale along the axis in the figures and the decrease of intensity with propagation distance. It is seen that the pattern changes and broadens drastically with distance from what is more or less a copy of the aperture, to a patterns that is equal to the Fourier transform of the aperture. Once the Fraunhofer approximation is accurate, a further increase of distance only results in a widening of the pattern and a decrease of overall amplitude without change of shape. In contrast, in the region where the Fresnel approximation is accurate, the shape of the pattern is seen to change a lot with distance to the mask.
 
 
 +++
 
 
 ```{figure} Images/07_12_fresnel_diffraction_l_distance.png
-:name: Fig_6_08_FresnelFraunhoferSlit
+:name: fig:diff:fresnelFraunhoferSlit
 Diffraction patterns of a square opening in a mask with corresponding cross-sections along the $x$-axis, showing the transition from Fresnel to Fraunhofer approximations. The distance to the mask increases with the Fresnel number $N_F$ from the near field pattern close to the mask in the right bottom figures to the Fraunhofer diffraction pattern in the upper left. Note the different scales along the axis in the figures.
 ```
 
@@ -642,7 +642,7 @@ Diffraction patterns of a square opening in a mask with corresponding cross-sect
 
 We can now predict what is the diffraction pattern of an array of slits of finite width.
 It follows from the Fraunhofer pattern of a single rectangular aperture that, if the sides parallel to the $y$-direction are very long, the Fraunhofer diffraction pattern as function of angle in the $y$-direction is very narrow.
-In {numref}`Fig_6_10_Fraunhofer`b the Fraunhofer diffraction pattern of a rectangular aperture is shown, of which the width in the $y$-direction is 10 times that in the $x$-direction. The diffraction pattern is then strongly concentrated along the $x$-axis.
+In {numref}`fig:diff:fraunhofer`b the Fraunhofer diffraction pattern of a rectangular aperture is shown, of which the width in the $y$-direction is 10 times that in the $x$-direction. The diffraction pattern is then strongly concentrated along the $x$-axis.
 If we only consider the Fraunhofer pattern for $y/z=0$ while still considering it as a function of $x/z$, it suffices to compute the Fourier transform only with respect to $x$. The problem then becomes a diffraction problem for a one-dimensional slit.
 
 We consider now an array of such slits of which the long sides are all parallel to the $y$-axis and we neglect from now on the $y$-variable.
@@ -657,12 +657,12 @@ where $p$ is the distance of neighbouring slits, i.e. $p$ is the period of the r
 Then
 
 ```{math}
-:label: eq:diff:grating-sum
+:label: eq:diff:gratingSum
 \begin{align*}
 {\cal F}(U_0)(\xi) = {\cal F}(\tau)(\xi)=\sum_{m=1}^M {\cal F}(W_{slit})(\xi)\, e^{\pi i (M+1)p\xi } e^{-2\pi i m p \, \xi},
 \end{align*}
 ```
-where for a slit with width $a$ we have according to {eq}`eq:diff:slit-fourier`:
+where for a slit with width $a$ we have according to {eq}`eq:diff:slitFourier`:
 
 $$
 {\cal F}(W_{slit})(\xi) = a \frac{\sin(\pi a \xi)}{\pi a \xi}.
@@ -671,7 +671,7 @@ There must obviously hold $a< p$.
 Using
 
 ```{math}
-:label: eq:diff:geometric-series
+:label: eq:diff:geometricSeries
 \begin{align*}
 \sum_{m=1}^M e^{-2\pi i m p \, \xi } &= e^{-2\pi i p\xi } \frac{ 1- e^{-2\pi i M p \, \xi}}{1-e^{-2\pi i p \, \xi}}  \\
 &= e^{-\pi i (M +1) p \, \xi}\, \frac{ e^{i \pi M p \, \xi} - e^{-i \pi M p \, \xi}}{e^{i \pi p \, \xi}- e^{-i \pi p \, \xi}}  \\
@@ -681,7 +681,7 @@ Using
 we get
 
 ```{math}
-:label: eq:diff:grating-fourier-transform
+:label: eq:diff:gratingFourierTransform
 {\cal F}(U_0)(\xi) =
 {\cal F}(W_{slit})(\xi) \frac{\sin( \pi M p \xi)}{ \sin(\pi p \xi)}.
 ```
@@ -689,7 +689,7 @@ we get
 The intensity of the Fraunhofer far ield is:
 
 ```{math}
-:label: eq:diff:grating-fourier
+:label: eq:diff:gratingFourier
 \begin{align*}
 I(x,z)= \left| \frac{1}{\lambda z}\mathcal{F}(U_0)\left(\frac{x}{\lambda z}\right) \right|^2 = \frac{1}{\lambda^2 z^2}\,
 \left|{\cal F}(W_{slit})\left(\frac{\theta}{\lambda}\right)\right|^2 \,
@@ -699,18 +699,18 @@ I(x,z)= \left| \frac{1}{\lambda z}\mathcal{F}(U_0)\left(\frac{x}{\lambda z}\righ
 where $\theta=x/z$ is the diffraction angle. The factor
 
 ```{math}
-:label: eq:diff:fast-oscillation
+:label: eq:diff:fastOscillation
 \frac{\sin^2\left( \pi M \frac{p}{\lambda} \, \theta \right)}{ \sin^2\left(\pi \frac{p}{\lambda}\, \theta \right)},
 ```
 
 is, due to the factor $M$ under the sinus in the numerator, a fast oscillating function of $\theta$ while $|{\cal F}(W_{slit})(\theta/\lambda)|^2$ is a slowly varying envelope.
-This is a manifestation of the property of the Fourier transform that small details of a structure (e.g. the size of a single slit) cause large scale features of the far field pattern, whereas large scale properties such as the length $M p$ of the total structure, cause quickly changing features. This is illustrated in {numref}`Fig_6_11_MultipleSlits712`.
+This is a manifestation of the property of the Fourier transform that small details of a structure (e.g. the size of a single slit) cause large scale features of the far field pattern, whereas large scale properties such as the length $M p$ of the total structure, cause quickly changing features. This is illustrated in {numref}`fig:diff:multipleSlits712`.
 
-The diffraction amplitude is maximum for angles where both the denominator and numerator of {eq}`eq:diff:fast-oscillation` vanish:
+The diffraction amplitude is maximum for angles where both the denominator and numerator of {eq}`eq:diff:fastOscillation` vanish:
 
 
 ```{math}
-:label: eq:diff:grating-orderm
+:label: eq:diff:gratingOrderm
 \begin{align*}
 \theta_m= \frac{ m \lambda}{ p },\;\;\; m=0,\pm1, \pm 2, \ldots, \hspace{0.6cm} \mathbf{diffraction orders.}
 \end{align*}
@@ -719,7 +719,7 @@ The diffraction amplitude is maximum for angles where both the denominator and n
 These directions are called diffraction orders and since
 
 ```{math}
-:label: eq:diff:max-intensity
+:label: eq:diff:maxIntensity
 \frac{\sin^2\left( \pi M\frac{p}{\lambda} \, \theta_m \right)}{ \sin^2\left(\pi \frac{p}{\lambda}\, \theta_m \right)} = M^2,
 ```
 
@@ -732,12 +732,12 @@ which follows by applying l'H\^{o}pital's rule, the intensity of the m$^{th}$ or
 ```
 hence it is proportional to the square of the number of periods and to the squared modulus of the envelope in $\theta_m$.
 
-Between two adjacent diffraction orders, {eq}`eq:diff:fast-oscillation` has $M-1$ zeros and $M-2$ secondary maxima (see {numref}`Fig_6_11_MultipleSlits712`).
+Between two adjacent diffraction orders, {eq}`eq:diff:fastOscillation` has $M-1$ zeros and $M-2$ secondary maxima (see {numref}`fig:diff:multipleSlits712`).
 The angular width of a diffraction order is half the angular distance to the nearest zeros next to the order, i.e.
 
 
 ```{math}
-:label: eq:diff:order-width
+:label: eq:diff:orderWidth
 \begin{align*}
 \Delta \theta = \frac{\lambda}{M p},
 \hspace{1cm} \mathbf{angular width of a diffraction order.}
@@ -746,7 +746,7 @@ The angular width of a diffraction order is half the angular distance to the nea
 
 If there are more slits the intensity peaks into which the energy is diffracted are narrower and the peaks are higher.
 ```{figure} Images/07_13_multiple_slits712.png
-:name: Fig_6_11_MultipleSlits712
+:name: fig:diff:multipleSlits712
 An illustration of a diffraction pattern of a series of five slits.
 ```
 
@@ -754,7 +754,7 @@ An illustration of a diffraction pattern of a series of five slits.
 As explained above, there holds in the Fraunhofer far field: $\theta= x/z<1$. This sets a limit to the number of diffracted orders:
 
 ```{math}
-:label: eq:diff:finite-grating
+:label: eq:diff:finiteGrating
 \begin{align*}
 |m|\leq p/\lambda.
 \end{align*}
@@ -770,16 +770,16 @@ $$
 which implies with $\Delta \lambda=\lambda_2-\lambda_1$ and $\lambda=\lambda_1$ that
 
 ```{math}
-:label: eq:diff:grating-resolution
+:label: eq:diff:gratingResolution
 \frac{\Delta \lambda}{\lambda}> \frac{1}{m M}.
 ```
 
 It follows that the resolution is higher when there are more slits and for larger diffraction order. However, the disadvantage of using higer diffraction orders is that often their intensity is less.
 For a grating with 1000 periods one can obtain a resolution of $\Delta \lambda/\lambda =10^{-3}$ in the first order.
 
-It should be remarked that a grating is obtained for any periodic variation of the refractive index. If the proper transmission function for the unit cell of the grating is substituted for $W_{slit}$, the formulae above also give the Fraunhofer far field of such more general diffraction gratings. By changing the unit cell, the envelope of the diffraction pattern can be changed and a certain order can be given more intensity. In {numref}`Fig_6_12_Blazed_grating` a so-called blazed grating is shown which is used in reflection and which has a strong first diffracted order for a certain angle of incidence.
+It should be remarked that a grating is obtained for any periodic variation of the refractive index. If the proper transmission function for the unit cell of the grating is substituted for $W_{slit}$, the formulae above also give the Fraunhofer far field of such more general diffraction gratings. By changing the unit cell, the envelope of the diffraction pattern can be changed and a certain order can be given more intensity. In {numref}`fig:diff:blazedGrating` a so-called blazed grating is shown which is used in reflection and which has a strong first diffracted order for a certain angle of incidence.
 ```{figure} Images/07_14_blazed_grating.png
-:name: Fig_6_12_Blazed_grating
+:name: fig:diff:blazedGrating
 Diffraction grating used in reflection with a so-called blazed unit cell.
 ```
 
@@ -792,7 +792,7 @@ Electromagnetic waves with wavelength less than one Angstrom are called x-rays. 
 
 ## Fraunhofer Diffraction Revisited
 Fraunhofer diffraction patterns can qualitatively be explained by considering directions in which destructive and constructive interferences occur.
-Consider two mutually coherent point sources $S_1$, $S_2$ on the $x$-axis as shown in {numref}`Fig_6_13_2Sources`. We assume that these point sources are in phase. On a screen at large distance $z$ an interference pattern is observed. If the distance $z$ of the screen is very large, the spherical wave fronts emitted by the point sources are almost plane at the screen and the field is the Fraunhofer far field of the two point sources. In point $P$ on the screen at a distance $x$ above the $z$-axis the optical path differences of the waves emitted by the two sources is approximately given by $S_2Q=a \theta$, where $\theta=x/z$ is assumed small. Hence constructive interference occurs for angles $\theta$ such that
+Consider two mutually coherent point sources $S_1$, $S_2$ on the $x$-axis as shown in {numref}`fig:diff:twoSources`. We assume that these point sources are in phase. On a screen at large distance $z$ an interference pattern is observed. If the distance $z$ of the screen is very large, the spherical wave fronts emitted by the point sources are almost plane at the screen and the field is the Fraunhofer far field of the two point sources. In point $P$ on the screen at a distance $x$ above the $z$-axis the optical path differences of the waves emitted by the two sources is approximately given by $S_2Q=a \theta$, where $\theta=x/z$ is assumed small. Hence constructive interference occurs for angles $\theta$ such that
 $S_2Q=m\lambda$ for some integer $m$, i.e. when
 
 ```{math}
@@ -812,17 +812,17 @@ Destructive interference occurs when the path length difference satisfies $S_2Q=
 If the point sources have the same strength, their fields perfectly cancel for these angles.
 
 ```{figure} Images/07_15_2_sources.png
-:name: Fig_6_13_2Sources
+:name: fig:diff:twoSources
 Interference of to mutually coherent point sources. For $z$ very large points $P$ where constructive and destructive interference occurs are such that for some integer $m$: $S_2Q=m \lambda$ and $S_2Q=(1/2 + m) \lambda$, respectively.
 ```
 
 
-Now consider a slit as shown in {numref}`Fig_6_14_Slits` which is illuminated by a perpendicular incident plane wave.
-By the Huygens-Fresnel principle, the field at a screen far from the slit is the sum of the fields of point sources in the aperture, with strengths proportional to the field in the slit at the position of the point sources. When the slit is illuminated by a plane wave at perpendicular incidence, all point sources are in phase and have equal strength. Divide the slit in two equal halves as shown in {numref}`Fig_6_14_Slits`.
+Now consider a slit as shown in {numref}`fig:diff:slits` which is illuminated by a perpendicular incident plane wave.
+By the Huygens-Fresnel principle, the field at a screen far from the slit is the sum of the fields of point sources in the aperture, with strengths proportional to the field in the slit at the position of the point sources. When the slit is illuminated by a plane wave at perpendicular incidence, all point sources are in phase and have equal strength. Divide the slit in two equal halves as shown in {numref}`fig:diff:slits`.
 The point sources in the slit can be arranged into pairs, of which one point source is in the upper half of the slit and the other is at the equivalent position (at distance $a/2$ from the other point source) in the lower half of the slit. Let $\theta$ be an angle for which the two point sources of a pair cancel each other i.e.
 
 ```{math}
-:label: eq:diff:destructive-2
+:label: eq:diff:destructive2
 \begin{align*}
 \theta= (1/2+ m) \frac{\lambda}{a/2} = (1+ 2m)\frac{\lambda}{a},
 \end{align*}
@@ -831,22 +831,22 @@ since the distance between the point sources is $a/2$.
 By translating the pair of point sources through the slits, it follows that both half slits perfectly cancel each other for these angles. In this way we have found the angles $\theta = m\lambda/a$ with $m$ odd for which destructive interference occurs. Destructive interference for $m$ even can be derived by further subdivisions of the aperture.
 
 ```{figure} Images/07_16_slit.png
-:name: Fig_6_14_Slits
+:name: fig:diff:slits
 By dividing the slit into two slits of size $a/2$ each and considering pairs of point sources of which one is in the upper half of the slit and the other is at the corresponding position in the lower half, angles where destructive interference occurs between these point sources lead to minima in the diffraction pattern. Note that the point sources have corresponding positions in the two parts of the slit if their distance is $a/2$.
 ```
 
 
-In general it is easier to find the angles for which the far field vanishes than to find (local) maxima of the field. An exception is the case of a diffraction grating. It follows from {numref}`Fig_6_15_Grating` that there will be constructive interference between adjacent periods, and hence for all periods, for angles for which the distance $SQ$ in {numref}`Fig_6_15_Grating` is a multiple of the wavelength, i.e. for
+In general it is easier to find the angles for which the far field vanishes than to find (local) maxima of the field. An exception is the case of a diffraction grating. It follows from {numref}`fig:diff:grating` that there will be constructive interference between adjacent periods, and hence for all periods, for angles for which the distance $SQ$ in {numref}`fig:diff:grating` is a multiple of the wavelength, i.e. for
 
 ```{math}
-:label: eq:diff:grating-order
+:label: eq:diff:gratingOrder
 \begin{align*}
 \theta = m \frac{\lambda}{p},
 \end{align*}
 ```
-which corresponds to the direction of the diffraction orders. For other angles the phases of the fields of the different periods differ widely and therefore the fields almost cancel at these angles when there are many periods. This explains that for a diffraction grating of many periods, the far field intensity is highly concentrated in particular directions given by the orders {eq}`eq:diff:grating-order` which depend only on the ratio of the wavelength and the period.
+which corresponds to the direction of the diffraction orders. For other angles the phases of the fields of the different periods differ widely and therefore the fields almost cancel at these angles when there are many periods. This explains that for a diffraction grating of many periods, the far field intensity is highly concentrated in particular directions given by the orders {eq}`eq:diff:gratingOrder` which depend only on the ratio of the wavelength and the period.
 ```{figure} Images/07_17_grating.png
-:name: Fig_6_15_Grating
+:name: fig:diff:grating
 If the angle $\theta$ is such that $SQ$ is a multiple of the wavelength, two adjacent periods, and hence all periods of the grating, constructively interfere. These angles correspond to the diffraction orders.
 ```
 
@@ -856,12 +856,12 @@ In this section we apply diffraction theory to a lens.
 We consider in particular the focusing of a parallel beam and the imaging of an object.
 
 ### Focusing of a Parallel Beam
-A lens induces a local phase change to an incident field in proportion to the local thickness of the lens. Let a plane wave which propagates parallel to the optical axis be incident on a positive lens. In Gaussian geometrical optics the incident rays are all focused into the image focal point. According to the Principle of Fermat, all rays have traveled the **same optical distance** when they intersect in the image focal point where they constructively interfere and cause an intensity maximum. The wavefronts are in the focal region pats of **spheres with center the focal point** and cut off by the cone with the focal point as top and opening angle $2 a/f$, as shown in {numref}`Fig_6_16_Focusing_Lens`. Behind the focal point, there is a second cone with again spherical wavefronts, but there the light is propagating *away* from the focal point. According to Gaussian geometrical optics it is in image space completely dark outside of the two cones in {numref}`Fig_6_16_Focusing_Lens`. However, as we will show, in diffraction optics this is not true.
+A lens induces a local phase change to an incident field in proportion to the local thickness of the lens. Let a plane wave which propagates parallel to the optical axis be incident on a positive lens. In Gaussian geometrical optics the incident rays are all focused into the image focal point. According to the Principle of Fermat, all rays have traveled the **same optical distance** when they intersect in the image focal point where they constructively interfere and cause an intensity maximum. The wavefronts are in the focal region pats of **spheres with center the focal point** and cut off by the cone with the focal point as top and opening angle $2 a/f$, as shown in {numref}`fig:diff:focusingLens`. Behind the focal point, there is a second cone with again spherical wavefronts, but there the light is propagating *away* from the focal point. According to Gaussian geometrical optics it is in image space completely dark outside of the two cones in {numref}`fig:diff:focusingLens`. However, as we will show, in diffraction optics this is not true.
 
 We assume that the lens is thin and choose as origin of the coordinate system the center of the thin lens with the positive $z$-axis along the optical axis. Let $f_i$ be the $z$-coordinate of the image focal point according to Gaussian geometrical optics. Then $(0,0,f_i)$ is the image focal point. Let $(x,y,z)$ be a point between the lens and this focal point. According to geometrical optics the field in $(x,y,z)$ is proportional to
 
 ```{math}
-:label: eq:diff:spherical-wave
+:label: eq:diff:sphericalWave
 \left\{
 \begin{array}{lr}
 \frac{e^{- i k \sqrt{x^2 + y^2 + (z-f_i)^2}-i\omega t}}{\sqrt{x^2 + y^2 + (z-f_i)^2}},
@@ -881,13 +881,13 @@ where we have included the time-dependence. Indeed the surfaces of constant phas
 are spheres with center the focal point. For increasing time, these spheres converge to the focal point, while the amplitude increases as the distance to the focal point decreases, so that energy is preserved.
 
 **Remark**.
-For a point $(x,y,z)$ to the **right** of the focal point, i.e. for $z>f_i$, the spherical wave fronts propagate away from the focal point and therefore there $-ik$ should be replaced by $+ik$ in the exponent in {eq}`eq:diff:spherical-wave`.
+For a point $(x,y,z)$ to the **right** of the focal point, i.e. for $z>f_i$, the spherical wave fronts propagate away from the focal point and therefore there $-ik$ should be replaced by $+ik$ in the exponent in {eq}`eq:diff:sphericalWave`.
 
 
-The exit pupil of the lens is in the plane $z=0$ where, according to {eq}`eq:diff:spherical-wave`, the field is
+The exit pupil of the lens is in the plane $z=0$ where, according to {eq}`eq:diff:sphericalWave`, the field is
 
 ```{math}
-:label: eq:diff:lens-transmission-1
+:label: eq:diff:lensTransmission1
 \begin{align*}
 1_{⊙_a}(x,y) \frac{e^{-i k \sqrt{x^2 + y^2 + f_i^2}}}{
 \sqrt{ x^2 + y^2 + f_i^2}},
@@ -903,18 +903,18 @@ where the time dependence has been omitted and
 \end{align*}
 ```
 i.e. $1_{⊙_a}(x,y)=1$ for $(x,y)$ in the exit pupil of the lens and $=0$ otherwise.
-If $a/f_i$ is sufficiently small, we may replace the distance $\sqrt{x^2 +y^2 + f_i^2}$ between a point in the exit pupil and the image focal point in the denominator of {eq}`eq:diff:lens-transmission-1` by $f_i$. This is not allowed in the exponent, however, because of the multiplication by the large wave number $k$. In the exponent we therefore use instead the first two terms of the Taylor series {eq}`eq:diff:paraxial-approx`:
+If $a/f_i$ is sufficiently small, we may replace the distance $\sqrt{x^2 +y^2 + f_i^2}$ between a point in the exit pupil and the image focal point in the denominator of {eq}`eq:diff:lensTransmission1` by $f_i$. This is not allowed in the exponent, however, because of the multiplication by the large wave number $k$. In the exponent we therefore use instead the first two terms of the Taylor series {eq}`eq:diff:paraxialApprox`:
 
 ```{math}
-:label: eq:diff:paraxial-lens
+:label: eq:diff:paraxialLens
 \begin{align*}
 \sqrt{x^2 + y^2 + f_i^2} = f_i \sqrt{ 1 + \frac{x^2 + y^2 }{f_i^2}} \approx f_i + \frac{x^2 + y^2}{2f_i},
 \end{align*}
 ```
-which is valid for $a/f_i$ sufficiently small. Then {eq}`eq:diff:lens-transmission-1` becomes:
+which is valid for $a/f_i$ sufficiently small. Then {eq}`eq:diff:lensTransmission1` becomes:
 
 ```{math}
-:label: eq:diff:lens-transmission-2
+:label: eq:diff:lensTransmission2
 \begin{align*}
 1_{⊙_a}(x,y) e^{-i k \frac{x^2 + y^2}{2 f_i}},
 \end{align*}
@@ -923,7 +923,7 @@ where we dropped the constant factors $e^{i k f_i}$ and $1/f_i$.
 For a general field $U_0(x,y)$ incident on the lens, i.e. in the entrance pupil, the lens applies a transformation such that the field in the exit plane becomes:\\
 
 ```{math}
-:label: eq:diff:lens-field-output
+:label: eq:diff:lensFieldOutput
 \begin{align*}
 & U_0(x,y) \to U_0(x,y) 1_{⊙_a}(x,y) e^{- i k \frac{x^2 + y^2}{2 f_i}}, \end{align*}
 ```
@@ -931,26 +931,26 @@ For a general field $U_0(x,y)$ incident on the lens, i.e. in the entrance pupil,
 The function that multiplies $U_0(x,y)$ is the **transmission function of the lens**:
 
 ```{math}
-:label: eq:diff:lens-transform
+:label: eq:diff:lensTransform
 \begin{align*}
 \tau_{\text{lens}}(x,y) = 1_{⊙_a}(x,y) e^{-ik \frac{x^2 + y^2}{2 f_i}}.
 \end{align*}
 ```
 This result makes sense: in the center $(x,y)=0$ the lens is thickest, so the phase is shifted the most
 (but we can define this phase shift to be zero because only phase *differences* matter, not absolute phase).
-As is indicated by the minus-sign in the exponent, the further you move away from the center of the lens, the less the phase is shifted. For shorter $f_i$, the lens focuses more strongly, so the phase shift changes more rapidly as a function of the radial coordinate. Note that transmission function {eq}`eq:diff:lens-transform` has modulus 1 so that energy is conserved.
+As is indicated by the minus-sign in the exponent, the further you move away from the center of the lens, the less the phase is shifted. For shorter $f_i$, the lens focuses more strongly, so the phase shift changes more rapidly as a function of the radial coordinate. Note that transmission function {eq}`eq:diff:lensTransform` has modulus 1 so that energy is conserved.
 
-The field at the right of {eq}`eq:diff:lens-field-output` is used in diffraction optics as the field in the exit pupil. But instead of using ray tracing, the field in the focal region is computed using diffraction integrals.
-We substitute the field in the exit pupil in the Fresnel diffraction integral {eq}`eq:diff:fresnel-integral` and obtain:
+The field at the right of {eq}`eq:diff:lensFieldOutput` is used in diffraction optics as the field in the exit pupil. But instead of using ray tracing, the field in the focal region is computed using diffraction integrals.
+We substitute the field in the exit pupil in the Fresnel diffraction integral {eq}`eq:diff:fresnelIntegral` and obtain:
 
 ```{math}
 \begin{align*}
 U(x,y,z)=\frac{e^{ikz}e^{\frac{ik(x^2+y^2)}{2z}}}{i\lambda z} \mathcal{F}\left\{U_0(x',y') 1_{⊙_a}(x',y') e^{ik\frac{x'^2+y'^2}{2}\left(\frac{1}{z}-\frac{1}{f_i}\right)}\right\}\left(\frac{x}{\lambda z },\frac{y}{ \lambda z }\right).
 \end{align*}
 ```
-The intensity $I=|U|^2$ is shown at the bottom left of {numref}`Fig_6_16_Focusing_Lens`. It is seen that the intensity does not monotonically increase for decreasing distance to the focal point. Instead, secondary maxima occur along the optical axis. Also the boundary of the light cone is not sharp, as predicted by geometrical optics, but diffuse. The bottom right of {numref}`Fig_6_16_Focusing_Lens` shows the phase in the focal region. The wave fronts are close to but not exactly spherical inside the cones.
+The intensity $I=|U|^2$ is shown at the bottom left of {numref}`fig:diff:focusingLens`. It is seen that the intensity does not monotonically increase for decreasing distance to the focal point. Instead, secondary maxima occur along the optical axis. Also the boundary of the light cone is not sharp, as predicted by geometrical optics, but diffuse. The bottom right of {numref}`fig:diff:focusingLens` shows the phase in the focal region. The wave fronts are close to but not exactly spherical inside the cones.
 ```{figure} Images/07_18_focusing_lens_sketch_bw.png
-:name: Fig_6_16_Focusing_Lens
+:name: fig:diff:focusingLens
 Top: wavefronts of the incident plane wave and the focused field according to Gaussian geometrical optics. There is no light outside of the two cones. Bottom left: amplitude as predicted by diffraction optics. The boundary of the cones is diffuse and it is not absolutely dark outside of the cones. Furthermore, the intensity does not increase monotonically with decreasing distance to the focal point, as predicted by geometrical optics. Bottom right: phase of the focused field as predicted by diffraction optics.
 ```
 
@@ -958,7 +958,7 @@ Top: wavefronts of the incident plane wave and the focused field according to Ga
 For points in the image focal plane of the lens, i.e. $z=f_i$, we have
 
 ```{math}
-:label: eq:diff:fourier-lens
+:label: eq:diff:fourierLens
 \begin{align*}
 U(x,y,f_i)= \frac{e^{ikf_i}e^{\frac{ik(x^2+y^2)}{2f_i}}}{i\lambda f_i} \mathcal{F}\left\{U_0(x',y')1_{⊙_a}(x',y') \right\}\left(\frac{ x}{ \lambda f_i},\frac{ y}{ \lambda f_i }\right),
 \end{align*}
@@ -975,7 +975,7 @@ So a lens performs a Fourier transform. Let us see if that agrees with some of t
 1. We know from Gaussian geometrical optics that if we illuminate a positive lens with rays parallel to the optical axis, these rays all intersect in the image focal point. This corresponds with the fact that for $U_0(x,y)=1$ (i.e. plane wave illumination, neglecting the finite aperture of the lens, i.e. neglecting diffraction due to the finite size of the pupil), the Fourier transform of the pupil field is a delta peak:
 
 ```{math}
-:label: eq:diff:focal-plane-field
+:label: eq:diff:focalPlaneField
 \begin{align*}
 \mathcal{F}(U_0)\left(\frac{k_x}{2\pi},\frac{k_y}{2\pi}\right)=\delta\left(\frac{k_x}{2\pi}\right)\delta\left(\frac{k_y}{2\pi}\right),
 \end{align*}
@@ -991,18 +991,18 @@ $$
 which is indeed a shifted delta peak (i.e. a shifted focal spot).
 
 It seems that the diffraction model of light confirms what we know from geometrical optics. But in the previous two examples we discarded the influence of the finite size of the pupil, i.e. we have left out of consideration the function $1_{⊙_a}$ in calculating the Fourier transform. If $U_0(x,y)=1$ in the entrance pupil and we take the finite size of the pupil properly into account, the $\delta$-peaks become blurred: the focused field is then given by the Fourier transform of the circular disc with radius $a$, evaluated at spatial frequencies
-$\xi = \frac{x}{\lambda f_i}$, $\eta =\frac{ y}{\lambda f_i}$. This field is called the **Airy spot** and is given by (See {eq}`eq:diff:airy-pattern`):
+$\xi = \frac{x}{\lambda f_i}$, $\eta =\frac{ y}{\lambda f_i}$. This field is called the **Airy spot** and is given by (See {eq}`eq:diff:airyPattern`):
 
 
 ```{math}
-:label: eq:diff:airy-pattern
+:label: eq:diff:airyPattern
 \begin{align*}
 U(x,y,z)=\frac{ \pi a^2}{\lambda f_i} \, \frac{ 2 J_1\left(2\pi \frac{ a }{\lambda f_i } \sqrt{x^2 + y^2} \right) }
 { \frac{2\pi a }{\lambda f_i } \sqrt{x^2 + y^2} }, \hspace{1cm} \mathbf{Airy pattern for focusing},
 \end{align*}
 ```
 
-where $J_1$ is the Bessel function of the first kind and where the phase factors in front of the Fourier transform have been omitted. The pattern is shown in {numref}`Fig_6_17_AirySpot`. It is circular symmetric and consists of a central maximum surrounded by concentric rings of alternating zeros and secondary maxima with decreasing amplitudes. In cross-section, as function of $r=\sqrt{x^2+y^2}$, the Airy pattern is similar (but not identical) to the $\text{ sinc}$-function. From the uncertainty principle illustrated in {numref}`Fig_6_07_Uncertainty` it follows that the size of the focal spot decreases as $a$ increases, and from {eq}`eq:diff:airy-pattern` we see that the Airy function is a function of the dimensionless variable $a r/(\lambda f_i)$. Hence the focal spot becomes narrower as $a/(\lambda f_i)$ increases. The Numerical Aperture ($\text{NA}$) is defined by
+where $J_1$ is the Bessel function of the first kind and where the phase factors in front of the Fourier transform have been omitted. The pattern is shown in {numref}`fig:diff:airySpot`. It is circular symmetric and consists of a central maximum surrounded by concentric rings of alternating zeros and secondary maxima with decreasing amplitudes. In cross-section, as function of $r=\sqrt{x^2+y^2}$, the Airy pattern is similar (but not identical) to the $\text{ sinc}$-function. From the uncertainty principle illustrated in {numref}`fig:diff:uncertainty` it follows that the size of the focal spot decreases as $a$ increases, and from {eq}`eq:diff:airyPattern` we see that the Airy function is a function of the dimensionless variable $a r/(\lambda f_i)$. Hence the focal spot becomes narrower as $a/(\lambda f_i)$ increases. The Numerical Aperture ($\text{NA}$) is defined by
 
 ```{math}
 \begin{align*}
@@ -1014,14 +1014,14 @@ Since the first zero of the Airy pattern occurs for $a r/(\lambda f_i)= 0.61$, t
 
 
 ```{math}
-:label: eq:diff:resolution-limitution
+:label: eq:diff:resolutionLimitution
 \begin{align*}
 \mathbf{Size of focal spot} \approx 0.61 \frac{\lambda}{\text{NA}}
 \end{align*}
 ```
 
 ```{figure} Images/07_19_airy_disk_color.png
-:name: Fig_6_17_AirySpot
+:name: fig:diff:airySpot
 Left: cross section of the field of the Airy pattern. Right: intensity of the Airy pattern.
 ```
 
@@ -1032,13 +1032,13 @@ In the simple case of a single thin lens, the entrance and exit pupils coincide 
 It follows from the derivations in the previous section that the Airy pattern is the image of a point source infinitely far in front of a lens. In this section we study the imaging of a general object at finite distance to the lens.
 Consider first a real point object on the optical axis with coordinate $z=s_o<f_o$ to the left of the object focal point of a positive lens with image focal coordinate $f_i>0$. This lens will form a real image with positive coordinate $s_i>0$.
 
-The field in image space is derived using the Fresnel diffraction integral, similar to the focused field in the previous section. We postulate that the lens transforms the field radiated by the point object into a spherical wave in the exit pupil, which converges to the ideal image point of Gaussian geometrical optics. We substitute this spherical pupil field in the Fresnel diffraction integral to compute the field in image space. Then for an object point on the optical axis we find the same Airy pattern as in {numref}`Fig_6_17_AirySpot`, except that the variable $a r/(\lambda f_i)$ is replaced by
+The field in image space is derived using the Fresnel diffraction integral, similar to the focused field in the previous section. We postulate that the lens transforms the field radiated by the point object into a spherical wave in the exit pupil, which converges to the ideal image point of Gaussian geometrical optics. We substitute this spherical pupil field in the Fresnel diffraction integral to compute the field in image space. Then for an object point on the optical axis we find the same Airy pattern as in {numref}`fig:diff:airySpot`, except that the variable $a r/(\lambda f_i)$ is replaced by
 $a r/(\lambda s_i)$,
 where $s_i$ is the image coordinate as given by the Lensmaker's Formula. This field is called the Point Spread Function (PSF):
 
 
 ```{math}
-:label: eq:diff:point-spread-function
+:label: eq:diff:pointSpreadFunction
 \begin{align*}
 \text{PSF}(x,y) =\frac{ \pi a^2}{\lambda s_i} \frac{J_1\left(2\pi \frac{ a }{\lambda s_i } \sqrt{x^2 + y^2} \right) }{ \frac{2\pi a }{\lambda s_i } \sqrt{x^2 + y^2} }, \hspace{1cm} \mathbf{Airy pattern for imaging}.
 \end{align*}
@@ -1055,7 +1055,7 @@ where $(x_i, y_i)$ are the transverse coordinates of the image point according t
 The total image field is obtained by summing (integrating) over these PSFs, weighted by the field at the object points:
 
 ```{math}
-:label: eq:diff:imaging-equation
+:label: eq:diff:imagingEquation
 \begin{align*}
 U_{i}(x,y,s_i) =
 \int\!\int \text{PSF}\left(x-Mx_o, x-My_o \right) U_o(x_o,y_o,s_o)\, \text{d}x_o \text{d}y_o.
@@ -1064,17 +1064,17 @@ U_{i}(x,y,s_i) =
 where $x_o=x_i/M$, $y_o=y_i/M$ is the image point and $M$ is the magnification.
 The integral can be made into a convolution by using the coordinates $x_i, y_i$ as integration variables.
 
-It is clear from {eq}`eq:diff:point-spread-function` that larger radius $a$ of the lens and smaller wavelength $\lambda$ imply a narrower PSF.
+It is clear from {eq}`eq:diff:pointSpreadFunction` that larger radius $a$ of the lens and smaller wavelength $\lambda$ imply a narrower PSF.
 This in turn implies that the kernel in the convolution is more sharply peaked and hence that the resolution of the image is higher
 [^7].
 
 
 **Remark.**
 
-1. If laser light is used to illuminate the object, the object field may be considered perfectly coherent. This implies that a detector in the image plane would measure the squared modulus of the complex field {eq}`eq:diff:imaging-equation`:
+1. If laser light is used to illuminate the object, the object field may be considered perfectly coherent. This implies that a detector in the image plane would measure the squared modulus of the complex field {eq}`eq:diff:imagingEquation`:
 
 ```{math}
-:label: eq:diff:coherent-intensity
+:label: eq:diff:coherentIntensity
 \begin{align*}
 I_i(x,y,s_i) = \left| \int\!\int \text{PSF}\left(x-M x_o, y- My_o \right) U_o(x_o,y_o,s_o)\, \text{d}x_o \text{d}y_o \right|^2.
 \end{align*}
@@ -1084,7 +1084,7 @@ In this case the system is called a **coherent imaging system**.
 2. If the object is a spatially incoherent extended source, the fields emitted by the point sources of which extended source consists cannot interfere in the image plane. Therefore, in this case the intensity in the image plane is given by the incoherent sum:
 
 ```{math}
-:label: eq:diff:incoherent-intensity
+:label: eq:diff:incoherentIntensity
 \begin{align*}
 I_i(x,y,s_i) = \ \int\!\int \left|\text{PSF}\left(x-M x_o, y- M x_o \right)\right|^2 \, I_o(x_o,y_o,s_o)\, \text{d}x_o \text{d}y_o,
 \end{align*}
@@ -1101,13 +1101,13 @@ Hence the image intensity is expressed in the intensity of the source by a convo
 - **SLM.** The field in the entrance pupil of a lens, in particular its phase can be changed spatially by a so-called **spatial light modulator** (SLM). A SLM has thousands of pixels by which very general focused fields can be made.
 An example is a focused fields with only a longitudinal component in the focal point (i.e. only the $E_z$-component is nonzero at the focal point) [^9].
 
-- **Fourier filtering.** Suppose we have the setup as shown in {numref}`Fig_6_18_Fourier_Filtering`. With one lens we can create the Fourier transform of some field $U(x,y)$. Let a mask be put in the focal plane and a second lens be used to refocus the light.
+- **Fourier filtering.** Suppose we have the setup as shown in {numref}`fig:diff:fourierFiltering`. With one lens we can create the Fourier transform of some field $U(x,y)$. Let a mask be put in the focal plane and a second lens be used to refocus the light.
 This implies that the amplitude and/pf phase of the plane waves in the angular spectrum of the field are manipulated.
 The procedure is called Fourier filtering using lenses. An application of this idea is the phase contrast microscope.
 
 
 ```{figure} Images/07_20_fourier_filtering.png
-:name: Fig_6_18_Fourier_Filtering
+:name: fig:diff:fourierFiltering
 Set-up for Fourier filtering. The first lens creates a Fourier transform of $U(x,y)$, to which we can apply some operation (e.g. applying different phase shifts to different parts of the field). The second lens then applies another Fourier transform (which is the same as the inverse Fourier transform and a mirror transformation).
 ```
 
@@ -1118,14 +1118,14 @@ It was furthermore explained that when only paraxial rays are considered, i.e. w
 The resolution that can be obtained with an optical system consisting of lenses is less than follows from considering the loss of information due to evanescent waves, because propagating waves with spatial frequencies that are too large to be captured by the optical system (i.e. waves of which the angles with the optical axis are larger than the numerical aperture) cannot contribute to the image. Therefore the image of a point object has the size
 
 ```{math}
-:label: eq:diff:resolution-limit
+:label: eq:diff:resolutionLimit
 \begin{align*}
 \lambda/\text{NA}_i,
 \end{align*}
 ```
 where $\text{NA}_i=a/s_i$ is the numerical aperture in image space, i.e. it is the sinus of half the opening angle of the cone extended by the exit pupil at the Gaussian image point on the optical axis. This resolution limit is called the diffraction limit.
 
-The size of the image of a point as given by the PSF in {eq}`eq:diff:point-spread-function` is influenced by the magnification of the system. To characterize the resolution of a diffraction-limited system, it is therefore better to consider the numerical aperture on the object side: $\text{NA}_o = \text{NA}_i |M| = a/s_o$. The value of $\text{NA}_o$ is the sinus of the half angle of the cone subtended by the entrance pupil of the system on the object point on the optical axis. This is the cone of wave vectors emitted by this object point that can contribute to the image (they are "accepted" by the optical system). The larger the half angle of this cone, the more spatial frequencies can contribute to the image and hence the larger the information about finer details of the object that can reach the image plane.
+The size of the image of a point as given by the PSF in {eq}`eq:diff:pointSpreadFunction` is influenced by the magnification of the system. To characterize the resolution of a diffraction-limited system, it is therefore better to consider the numerical aperture on the object side: $\text{NA}_o = \text{NA}_i |M| = a/s_o$. The value of $\text{NA}_o$ is the sinus of the half angle of the cone subtended by the entrance pupil of the system on the object point on the optical axis. This is the cone of wave vectors emitted by this object point that can contribute to the image (they are "accepted" by the optical system). The larger the half angle of this cone, the more spatial frequencies can contribute to the image and hence the larger the information about finer details of the object that can reach the image plane.
 
 It should be clear by now that beating the diffraction limit is extremely difficult. Nevertheless, a lot of research in optics is directed towards realizing this goal. Many attempts have been made, some successful, others not so, but, whether successful or not, most were based on very ingenious ideas. To close this chapter on diffraction theory, we will give examples of attempts to achieve what is called super-resolution.
 
@@ -1133,17 +1133,17 @@ It should be clear by now that beating the diffraction limit is extremely diffic
 The resolution is roughly a factor 1.5 better than for normal imaging with full field of view using the same objective. The higher resolution is achieved thanks to the illumination by oblique plane waves that are present in the spatial Fourier transform of the illuminating spot. By illumination with plane waves with large angles of incidence, higher spatial frequencies of the object which under normal incidence are not accepted by the objective, are now ''folded back'' into the cone of plane waves accepted by the objective. The higher resolution comes at the prize of longer imaging time because of scanning. The confocal microscope was invented by Marvin Minsky in 1957.
 
 - **The Perfect Lens based on negative refraction.** It can be shown that a slab of a material with **negative permittivity** and **negative permeability**, which are opposite to the permittivity and permeability of the surrounding medium, there is no reflection at the interfaces. Furthermore, the phase velocity in a material with negative permittivity and negative permeability is opposite to the direction of the flow of energy and plane waves are refracted at the interface as if the refractive index in Snell's Law is negative. Therefore these media are called negative index media. Because the phase velocity is opposite to the energy velocity, it is as if time is reversed inside the slab. The change of phase of propagating waves of the field of point source due to propagating in the surrounding medium is reversed inside the slab and at some distance on the other side of the slab there is an image point where all propagating waves are in phase, as illustrated in
-{numref}`Fig_6_19_Pendry_Lens`. Furthermore, evanescent waves **gain** amplitude inside the slab and it turns out they have the same amplitude in the image point as in the source, hence the image point is perfect. Note that the increase of amplitude of an evanescent wave does not violate the conservation of energy, because an evanescent wave does not propagate energy in the direction in which it is evanescent.
+{numref}`fig:diff:pendryLens`. Furthermore, evanescent waves **gain** amplitude inside the slab and it turns out they have the same amplitude in the image point as in the source, hence the image point is perfect. Note that the increase of amplitude of an evanescent wave does not violate the conservation of energy, because an evanescent wave does not propagate energy in the direction in which it is evanescent.
 ```{figure} Images/07_21_pendry_lens.png
-:name: Fig_6_19_Pendry_Lens
+:name: fig:diff:pendryLens
 Pendry's perfect lens consists of a slab of a material with negative permittivity and negative permeability such that its absolute values are equal to the positive permittivity and positive permeability of the surrounding medium. Points outside the slab are imaged perfectly in two planes: one inside the slab and the other on the opposite side of the slab.
 ```
 
-The simple slab geometry seen in {numref}`Fig_6_19_Pendry_Lens` which acts as a perfect lens was proposed by John Pendry in 2000 [^10]. Unfortunately, a material with negative permittivity and negative permeability has not been found in nature. Therefore, many researchers have attempted to mimic such a material by mixing metals and dielectrics on a sub-wavelength scale. It seems that a negative index without absorption violates causality. But when there is absorption, the image is not anymore perfect.
+The simple slab geometry seen in {numref}`fig:diff:pendryLens` which acts as a perfect lens was proposed by John Pendry in 2000 [^10]. Unfortunately, a material with negative permittivity and negative permeability has not been found in nature. Therefore, many researchers have attempted to mimic such a material by mixing metals and dielectrics on a sub-wavelength scale. It seems that a negative index without absorption violates causality. But when there is absorption, the image is not anymore perfect.
 
 - **Hyperbolic materials.** Hyperbolic materials are anisotropic, i.e. the phase velocity of a plane wave depends on the polarization and on the direction of the wave vector. The permittivity of an anisotropic material is a tensor (loosely speaking a (3,3)-matrix). Normally the eigenvalues of the permittivity matrix are positive; however, in a hyperbolic material two eigenvalues are of equal sign and the third has opposite sign. In such a medium all waves with the so-called extraordinary state of polarization propagate, no matter how high the spatial frequencies are. Hence, for the extraordinary state of polarization evanescent waves do not exist and therefore super-resolution and perfect imaging should be possible in such a medium.
 ```{figure} Images/07_22_metamaterials.jpg
-:name: Fig_6_20_Multilayers
+:name: fig:diff:multilayers
 Examples of composite materials consisting of thin (sub-wavelength) layers of metals and dielectrics. These artificial materials are called metamaterials. (A. Poddubny, I. Iorsh, P. Belov, \& Y. Kivshar, *Hyperbolic Metamaterials*, {N}at. {P}hoton., 7(12), 948-957 [(2013)](https://doi.org/10.1038/nphoton.2013.243)).
 ```
 
@@ -1151,15 +1151,15 @@ A few natural hyperbolic media exist for visible frequencies, but there are more
 
 - **Nonlinear effects.** When the refractive index of a material depends on the local electric field, the material is nonlinear. At optical frequencies nonlinear effects are in general very small, but with a strong laser they can become significant. One effect is self-focusing, where the refractive index is proportional to the local light intensity. The locally higher intensity causes an increase of the refractive index, leading to a waveguiding effect due to which the beam focuses even more strongly. Hence the focused beam becomes more and more narrow while propagating, until finally the material breaks down.
 
-- **Stimulated Emission Depletion Microscopy (STED).** This technique was invented by V. A. Okhonin in 1986 in the USSR and was further developed by Stefan Hell and his co-workers in the nineties. Hell received the Nobel Prize in chemistry for his work in 2014. STED is a non-linear technique with which super-resolution in fluorescence microscopy can be achieved. Images made with a fluorescence microscope are blurred when the fluorescent molecules are very close together. In the STED microscope a special trick is used to ensure that molecules which fluoresce at the same time are sufficiently distant from each other so that they can be imaged individually. To achieve this two focused spots are used: the first spot excites the molecules to a higher level. The second spot is slightly red-shifted and has a doughnut shape (see {numref}`Fig_6_21_STED_Small`). It causes decay of the excited molecules to the lower level by stimulated emission (the excited state is depleted). Because of the doughnut shape of the second spot, the molecule in the center of the spot is not affected and will still fluoresce. Crucial is that a doughnut spot has a central dark region which is very narrow, i.e. it can be much smaller than the Airy spot and this is the reason for the super-resolution.
+- **Stimulated Emission Depletion Microscopy (STED).** This technique was invented by V. A. Okhonin in 1986 in the USSR and was further developed by Stefan Hell and his co-workers in the nineties. Hell received the Nobel Prize in chemistry for his work in 2014. STED is a non-linear technique with which super-resolution in fluorescence microscopy can be achieved. Images made with a fluorescence microscope are blurred when the fluorescent molecules are very close together. In the STED microscope a special trick is used to ensure that molecules which fluoresce at the same time are sufficiently distant from each other so that they can be imaged individually. To achieve this two focused spots are used: the first spot excites the molecules to a higher level. The second spot is slightly red-shifted and has a doughnut shape (see {numref}`fig:diff:stedSmall`). It causes decay of the excited molecules to the lower level by stimulated emission (the excited state is depleted). Because of the doughnut shape of the second spot, the molecule in the center of the spot is not affected and will still fluoresce. Crucial is that a doughnut spot has a central dark region which is very narrow, i.e. it can be much smaller than the Airy spot and this is the reason for the super-resolution.
 ```{figure} Images/07_23_sted_large.png
-:name: Fig_6_21_STED_Small
+:name: fig:diff:stedSmall
 Spot used for excitation (top left) and for depletion (top middle). Fluorescence signal top right.	In the lower figure the confocal image is compared to the STED image. (P.F. Rodriguez and al., *Building a fast scanning stimulated emission depletion microscope*, Materials Science [(2012)](https://www.semanticscholar.org/paper/Building-a-fast-scanning-stimulated-emission-a-step-Rodriguez-Wu/46d8c4148e93f30cf11e1ae4356620bd5fcd0475))
 ```
 
 
 ```{note} External sources in recommended order
-1. {cite}`SixtySymbols_Fourier` Basic explanation of Fourier transforms. Also see {ref}`sec:fourierintuition`.
+1. {cite}`SixtySymbols_Fourier` Basic explanation of Fourier transforms. Also see {ref}`sec:diff:fourierintuition`.
 1. {cite}`SixtySymbols_Heisenberg` Basic explanation of the uncertainty principle (though in the context of quantum physics).
 1. E. Hecht, *Optics*, &sect; 7.4.4, subsection '*Fourier Analysis and Diffraction*'.
 1. J. Goodman, *Introduction to Fourier Optics*, &sect;5.2.2: Several calculations on the Fourier transforming properties of lenses.
@@ -1167,7 +1167,7 @@ Spot used for excitation (top left) and for depletion (top middle). Fluorescence
 ```
 
 
-[^1]: {cite}`SixtySymbols_Fourier` Basic explanation of Fourier transforms. Also see {ref}`sec:fourierintuition`.
+[^1]: {cite}`SixtySymbols_Fourier` Basic explanation of Fourier transforms. Also see {ref}`sec:diff:fourierintuition`.
 
 [^2]: For a rigorous derivation see e.g. {cite}`Goodman_FourierOptics`, §3.3, §3.4, §3.5 - and *Lecture Notes of Advanced Photonics*, Delft University of Technology.
 

@@ -5,7 +5,7 @@ tags:
   - foundational
 ---
 
-(appendix:matrix-multiplication)=
+(appendix:matrixMultiplication)=
 # Appendix B: Matrix Multiplication in Optics
 
 > "In mathematics you don't understand things. You just get used to them."
@@ -115,7 +115,7 @@ This is how we transform optical states—the matrix represents the optical elem
 
 ```{list-table} Matrix Multiplication Properties
 :header-rows: 1
-:name: matrix-properties
+:name: table:matrixProperties
 
 * - Property
   - Mathematical Statement
@@ -187,7 +187,7 @@ $$\vec{E} = \begin{pmatrix} E_x \\ E_y \end{pmatrix} = \begin{pmatrix} E_x e^{i\
 
 ```{list-table} Common Polarization States
 :header-rows: 1
-:name: polarization-jones-vectors
+:name: table:polarizationJonesVectors
 
 * - Polarization Type
   - Jones Vector
@@ -287,7 +287,7 @@ $$\vec{r}_{out} = \begin{pmatrix} A & B \\ C & D \end{pmatrix}\vec{r}_{in} = \be
 
 ```{list-table} Ray Transfer Matrices
 :header-rows: 1
-:name: ray-transfer-matrices
+:name: table:transferMatrices
 
 * - Optical Element
   - ABCD Matrix
@@ -480,7 +480,7 @@ Matrix multiplication succeeds in optics because:
 
 ```{list-table} Fundamental Reasons for Matrix Success
 :header-rows: 1
-:name: matrix-success-reasons
+:name: table:matrixSuccessReasons
 
 * - Mathematical Property
   - Physical Principle

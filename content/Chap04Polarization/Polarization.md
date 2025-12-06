@@ -10,7 +10,7 @@ downloads:
     title: Download Chapter DOCX
 ---
 
-(chapter.polarization)=
+(chapter:pol)=
 # Polarization
 
 ```{note} What you should know and be able to do after studying this chapter
@@ -32,7 +32,7 @@ We have seen in [](#chapter.basics) that light is an electromagnetic wave which 
 From Maxwell's equations and the wave equation, we know that the (real) electric field $\mathbf{\mathcal{E}}(\mathbf{r},t)$ of a time-harmonic plane wave is always perpendicular to the direction of propagation, which is the direction of the wave vector $\mathbf{k}$ as well as the direction of the Poynting vector (the direction of the power flow). Let the wave propagate in the $z$-direction:
 
 ```{math}
-:label: eq:pol:wave-vector
+:label: eq:pol:waveVector
 \begin{align*}
 \mathbf{k}=
 \left( \begin{array}{c}0\\0\\ k
@@ -42,7 +42,7 @@ From Maxwell's equations and the wave equation, we know that the (real) electric
 Then the electric field vector does not have a $z$-component and hence the real electric field at $z$ and at time $t$ can be written as
 
 ```{math}
-:label: eq:pol:electric-field-vector
+:label: eq:pol:electricFieldVector
 \begin{align*}
 \mathbf{\mathcal{E}}(z,t) = \left(\begin{array}{c}{\cal A}_x \cos(kz-\omega t + \varphi_x) \\{\cal A}_y \cos(kz-\omega t + \varphi_y) \\0
 \end{array}\right).
@@ -68,7 +68,7 @@ e^{-i\omega t}
 The complex vector
 
 ```{math}
-:label: eq:pol:jones-vector-definition
+:label: eq:pol:jonesVectorDefinition
 \begin{align*}
 {\mathbf J}=
 \left(\begin{array}{c}E_x(0) \\E_y(0)
@@ -84,7 +84,7 @@ Let us see how, at a fixed position in space, the electric field vector behaves 
 When $\varphi_y-\varphi_x=0$ we have
 
 ```{math}
-:label: eq:pol:jones-linear-polarization
+:label: eq:pol:jonesLinearPolarization
 \begin{align*}
 {\mathbf J}=
 \left(\begin{array}{c}{\cal A}_x \\{\cal A}_y
@@ -103,12 +103,12 @@ Equality of the phases: $\varphi_y=\varphi_x$, means that the field components $
 \end{align*}
 ```
 which shows that for $\varphi_y-\varphi_x=0$ the electric field simply oscillates in one direction given by real the vector ${\cal A}_x \hat{\mathbf{x}} + {\cal A}_y \hat{\mathbf{y}}$.
-See {numref}`4_01_Dphi_000pi_f1_BW`.
+See {numref}`fig:pol:dphi000piF1Bw`.
 
 If $\varphi_y-\varphi_x=\pi$ we have
 
 ```{math}
-:label: eq:pol:jones-linear-polarization-phase
+:label: eq:pol:jonesLinearPolarizationPhase
 \begin{align*}
 {\mathbf J}=
 \left( \begin{array}{c}{\cal A}_x \\-{\cal A}_y
@@ -122,7 +122,7 @@ In this case ${\cal E}_x(z,t)$ and ${\cal E}_y(z,t)$ are out of phase and the el
 In this case the Jones vector is:
 
 ```{math}
-:label: eq:pol:jones-circular-polarization
+:label: eq:pol:jonesCircularPolarization
 \begin{align*}
 {\mathbf J}=
 \left(\begin{array}{c}1 \\\pm i
@@ -132,7 +132,7 @@ In this case the Jones vector is:
 The field components ${\cal E}_x(z,t)$ and ${\cal E}_y(z,t)$ are $\pi/2$ radian (90 degrees) out of phase: when ${\cal E}_x(z,t)$ is large, ${\cal E}_y(z,t)$ is small, and when ${\cal E}_x(z,t)$ is small, ${\cal E}_y(z,t)$ is large. We can write for $z=0$ and with $\varphi_x=0$:
 
 ```{math}
-:label: eq:pol:circular-polarization-time
+:label: eq:pol:circularPolarizationTime
 \begin{align*}
 \left(
 \begin{array}{c}{\cal E}_x(0,t) \\{\cal E}_y(0,t)
@@ -150,15 +150,15 @@ The field components ${\cal E}_x(z,t)$ and ${\cal E}_y(z,t)$ are $\pi/2$ radian 
 At a given position, the electric field vector moves along a circle as time
 proceeds. When for an observer looking towards the source, the electric field is
 rotating anti-clockwise, the polarization is called **left-circularly polarized
-** (+ sign in {eq}`eq:pol:circular-polarization-time`), while if the electric
+** (+ sign in {eq}`eq:pol:circularPolarizationTime`), while if the electric
 vector moves clockwise, the polarization is called **right-circularly polarized
-** (- sign in {eq}`eq:pol:circular-polarization-time`).
+** (- sign in {eq}`eq:pol:circularPolarizationTime`).
 
 **c) Elliptical polarization:** $\varphi_y-\varphi_x=\pm \pi/2$, ${\cal A}_x$ and ${\cal A}_y$ arbitrary.
 The Jones vector is:
 
 ```{math}
-:label: eq:pol:jones-elliptical-polarization
+:label: eq:pol:jonesEllipticalPolarization
 \begin{align*}
 {\mathbf J}=
 \left(\begin{array}{c}{\cal A}_x \\\pm i {\cal A}_y
@@ -166,7 +166,7 @@ The Jones vector is:
 \end{align*}
 ```
 
-In this case we get instead of {eq}`eq:pol:circular-polarization-time` (again
+In this case we get instead of {eq}`eq:pol:circularPolarizationTime` (again
 taking $\varphi_x=0$):
 
 ```{math}
@@ -184,7 +184,7 @@ which shows that the electric vector moves along an ellipse with major and minor
 The Jones vector is now the most general one:
 
 ```{math}
-:label: eq:pol:jones-general-elliptical
+:label: eq:pol:jonesGeneralElliptical
 \begin{align*}
 {\mathbf J}=
 \left(\begin{array}{c}{\cal A}_x e^{i \varphi_x} \\{\cal A}_y e^{i \varphi_y}
@@ -192,13 +192,13 @@ The Jones vector is now the most general one:
 \end{align*}
 ```
 It can be shown that the electric field vector moves always along an ellipse.
-The exact shape and orientation of this ellipse varies with the difference in phase $\varphi_y-\varphi_x$ and the ratio of the amplitude ${\cal A}_x,{\cal A}_y$ and, except when $\varphi_y-\varphi_x = \pm \pi/2$, the major and minor axis of the ellipse are not parallel to the $x$- and $y$-axis. See {numref}`4_03_Dphi_025pi_f1_BW`.
+The exact shape and orientation of this ellipse varies with the difference in phase $\varphi_y-\varphi_x$ and the ratio of the amplitude ${\cal A}_x,{\cal A}_y$ and, except when $\varphi_y-\varphi_x = \pm \pi/2$, the major and minor axis of the ellipse are not parallel to the $x$- and $y$-axis. See {numref}`fig:pol:dphi025piF1Bw`.
 
 **Remarks**.
 - Frequently the Jones vector is normalized such that
 
 ```{math}
-:label: eq:pol:jones-normalization
+:label: eq:pol:jonesNormalization
 \begin{align*}
 |J_x|^2 + |J_y|^2 =1.
 \end{align*}
@@ -206,7 +206,7 @@ The exact shape and orientation of this ellipse varies with the difference in ph
 The normalized vector represents of course the same polarization state as the unnormalized one. In general, multiplying the Jones vector by a complex number does not change the polarization state. If we multiply for example by $e^{i\theta}$, this has the same result as changing the instant that $t=0$, hence it does not change the polarization state. In fact:
 
 ```{math}
-:label: eq:pol:time-shift-equivalence
+:label: eq:pol:timeShiftEquivalence
 \begin{align*}
 \mathbf{\mathcal{E}}(0,t) = \text{Re} \left[ e^{i \theta} \mathbf{J} e^{-i\omega t} \right] = \text{Re} \left[ \mathbf{J} e^{-i\omega( t- \theta/\omega)}\right]
 \end{align*}
@@ -218,17 +218,17 @@ We can conclude that in any point of an arbitrary time-harmonic electromagnetic 
 
 
 ```{figure} Images/04_01_dphi_000pi_f1_bw.png
-:name: 4_01_Dphi_000pi_f1_BW
+:name: fig:pol:dphi000piF1Bw
 Linear polarization state of electromagnetic waves. The electric field vector oscillates along a single fixed direction perpendicular to the direction of propagation, tracing out a straight line in the plane perpendicular to the wave vector.
 ```
 
 ```{figure} Images/04_02_dphi_05pi_f1_bw.png
-:name: 4_02_Dphi_05pi_f1_BW
+:name: fig:pol:dphi05piF1Bw
 Circular polarization
 ```
 
 ```{figure} Images/04_03_dphi_025pi_f1_bw.png
-:name: 4_03_Dphi_025pi_f1_BW
+:name: fig:pol:dphi025piF1Bw
 Elliptical polarization
 
 Illustration of different types of polarization. The horizontal and vertical arrows indicate the momentary field components ${\cal E}_x, {\cal E}_y$. The thick arrow indicates the vector $\mathbf{\mathcal{E}}$. The black curve indicates the trajectory of $\mathbf{\mathcal{E}}(t)$.
@@ -252,7 +252,7 @@ What is special about such a crystal is that it has two refractive indices: ligh
 Suppose $n_e>n_o$ and that the fast axis, which corresponds to $n_o$ is aligned with ${\cal E}_x$, while the slow axis (which then has refractive index $n_e$) is aligned with ${\cal E}_y$. If the wave travels a distance $d$ through the crystal, ${\cal E}_y$ will accumulate a phase $\Delta \varphi_y=\frac{2\pi n_e}{\lambda}d$, and ${\cal E}_x$ will accumulate a phase $\Delta \varphi_x=\frac{2\pi n_o}{\lambda}d$. Thus, after propagation through the crystal the phase difference $\varphi_y-\varphi_x$ has increased by
 
 ```{math}
-:label: eq:pol:waveplate-phase-shift
+:label: eq:pol:waveplatePhaseShift
 \begin{align*}
 \Delta\varphi_y-\Delta\varphi_x = \frac{2\pi}{\lambda}d(n_e-n_o).
 \end{align*}
@@ -261,12 +261,12 @@ Suppose $n_e>n_o$ and that the fast axis, which corresponds to $n_o$ is aligned 
 ### Jones Matrices
 
 By letting light pass through crystals of different thicknesses $d$ we can create different phase differences between the orthogonal field components and in this way we can create different states of polarization.
-To be specific, let $\mathbf{J}$, as given by {eq}`eq:pol:jones-vector-definition`, be the Jones vector of the plane wave before
+To be specific, let $\mathbf{J}$, as given by {eq}`eq:pol:jonesVectorDefinition`, be the Jones vector of the plane wave before
 the crystal. Then we have, for the Jones vector after the passage through the
 crystal:
 
 ```{math}
-:label: eq:pol:jones-matrix-transformation
+:label: eq:pol:jonesMatrixTransformation
 \begin{align*}
 \mathbf{\tilde{J}}={\cal M}\mathbf{J},
 \end{align*}
@@ -274,7 +274,7 @@ crystal:
 where
 
 ```{math}
-:label: eq:pol:jones-matrix-waveplate
+:label: eq:pol:jonesMatrixWaveplate
 \begin{align*}
 {\cal M}= \left( \begin{array}{cc}e^{\frac{2\pi i}{\lambda } d n_o} & 0 \\0 & e^{\frac{2\pi i}{\lambda } d n_e}
 \end{array}\right) = e^{\frac{2\pi i}{\lambda } d n_o}
@@ -324,12 +324,12 @@ This can be done by passing the light through a crystal such that ${\cal E}_y$ a
 The matrix on the left is the Jones matrix describing the operation of a quarter-wave plate.
 
 Another important Jones matrix is the **rotation matrix**. In the preceding discussion it was assumed that the fast and slow axes were aligned with the $x$- and $y$-direction (i.e. they were parallel to ${\cal E}_x$ and ${\cal E}_y$). Suppose now that the slow and fast axes of the wave plate no longer coincide with $\widehat{\mathbf{x}}$ and
-$\widehat{\mathbf{y}}$, but rather with some other $\widehat{\mathbf{x}}'$ and $\widehat{\mathbf{y}}'$ as in {numref}`4_2_Rotation_Polarization`. In that case we apply a basis transformation: the electric field vector which is expressed in the $\widehat{\mathbf{x}}$, $\widehat{\mathbf{y}}$ basis should first be expressed in the $\widehat{\mathbf{x}}'$, $\widehat{\mathbf{y}}'$ basis before applying the Jones matrix of the wave plate to it. After applying the Jones matrix, the electric field has to be transformed back from the $\widehat{\mathbf{x}}'$, $\widehat{\mathbf{y}}'$ basis to the $ \widehat{\mathbf{x}}$, $\widehat{\mathbf{y}}$ basis.
+$\widehat{\mathbf{y}}$, but rather with some other $\widehat{\mathbf{x}}'$ and $\widehat{\mathbf{y}}'$ as in {numref}`fig:pol:rotationPolarization`. In that case we apply a basis transformation: the electric field vector which is expressed in the $\widehat{\mathbf{x}}$, $\widehat{\mathbf{y}}$ basis should first be expressed in the $\widehat{\mathbf{x}}'$, $\widehat{\mathbf{y}}'$ basis before applying the Jones matrix of the wave plate to it. After applying the Jones matrix, the electric field has to be transformed back from the $\widehat{\mathbf{x}}'$, $\widehat{\mathbf{y}}'$ basis to the $ \widehat{\mathbf{x}}$, $\widehat{\mathbf{y}}$ basis.
 
 Let $\mathbf{E}$ be given in terms of its components on the $\hat{\mathbf{x}}$, $\hat{\mathbf{y}}$ basis:
 
 ```{math}
-:label: eq:pol:field-xy-basis
+:label: eq:pol:fieldXyBasis
 \begin{align*}
 \mathbf{E}=E_x \widehat{\mathbf{x}} + E_y \widehat{\mathbf{y}}.
 \end{align*}
@@ -337,7 +337,7 @@ Let $\mathbf{E}$ be given in terms of its components on the $\hat{\mathbf{x}}$, 
 To find the components $E_{x'}$, $E_{y'}$ on the $\widehat{\mathbf{x}}'$, $\widehat{\mathbf{y}}'$ basis:
 
 ```{math}
-:label: eq:pol:field-rotated-basis
+:label: eq:pol:fieldRotatedBasis
 \begin{align*}
 \mathbf{E}=E_{x'} \widehat{\mathbf{x}}' + E_{y'} \widehat{\mathbf{y}}'.
 \end{align*}
@@ -345,24 +345,24 @@ To find the components $E_{x'}$, $E_{y'}$ on the $\widehat{\mathbf{x}}'$, $\wide
 we first write the unit vectors
 $\widehat{\mathbf{x}}'$ and $\widehat{\mathbf{y}}'$ in terms of the basis
 $\hat{\mathbf{x}}$, $\hat{\mathbf{y}}$
-(see {numref}`4_2_Rotation_Polarization`)
+(see {numref}`fig:pol:rotationPolarization`)
 
 ```{math}
-:label: eq:pol:x-prime-unit-vector
+:label: eq:pol:xPrimeUnitVector
 \begin{align*}
 \widehat{\mathbf{x}}' &= \cos\theta \, \widehat{\mathbf{x}} + \sin \theta \, \widehat{\mathbf{y}}, \end{align*}
 ```
 ```{math}
-:label: eq:pol:y-prime-unit-vector
+:label: eq:pol:yPrimeUnitVector
 \begin{align*}
 \\
 \widehat{\mathbf{y}}' &= -\sin\theta \, \widehat{\mathbf{x}} + \cos \theta \, \widehat{\mathbf{y}},\end{align*}
 ```
 
-By substituting {eq}`eq:pol:x-prime-unit-vector` and {eq}`eq:pol:y-prime-unit-vector` into {eq}`eq:pol:field-rotated-basis` we find
+By substituting {eq}`eq:pol:xPrimeUnitVector` and {eq}`eq:pol:yPrimeUnitVector` into {eq}`eq:pol:fieldRotatedBasis` we find
 
 ```{math}
-:label: eq:pol:field-basis-transformation
+:label: eq:pol:fieldBasisTransformation
 \begin{align*}
 \mathbf{E} &= E_{x'} \widehat{\mathbf{x}}' + E_{y'} \widehat{\mathbf{y}}'  \\
 &= E_{x'} ( \cos\theta \, \widehat{\mathbf{x}} + \sin \theta \, \widehat{\mathbf{y}} )+ E_{y'} (-\sin\theta \, \widehat{\mathbf{x}} + \cos \theta \, \widehat{\mathbf{y}}),
@@ -371,10 +371,10 @@ By substituting {eq}`eq:pol:x-prime-unit-vector` and {eq}`eq:pol:y-prime-unit-ve
 \end{align*}
 ```
 
-Comparing with {eq}`eq:pol:field-xy-basis` implies
+Comparing with {eq}`eq:pol:fieldXyBasis` implies
 
 ```{math}
-:label: eq:pol:rotation-matrix
+:label: eq:pol:rotationMatrix
 \begin{align*}
 \begin{pmatrix}
 E_{x} \\
@@ -395,13 +395,13 @@ where ${\cal R}_{\theta}$ is the rotation matrix over an angle $\theta$ in the a
 That ${\cal R}(\theta)$ indeed is a rotation over angle $\theta$ in the anti-clockwise direction is easy to see by considering what happens when ${\cal R}_\theta$ is applied to the vector $(1,0)^T$ {cite:p}`hecht`.
 
 This relationship expresses the components $E_{x'}$, $E_{y'}$ of the Jones vector on the $\widehat{\mathbf{x}}'$, $\widehat{\mathbf{y}}'$ basis, which is aligned with the fast and slow axes of the crystal, in terms of the components $E_x$ and $E_y$ on the original basis $\widehat{\mathbf{x}}$, $\widehat{\mathbf{y}}$.
-If the matrix ${\cal M}$ describes the Jones matrix as defined in {eq}`eq:pol:jones-matrix-waveplate`, then the matrix $M_{\theta}$ for the same wave
+If the matrix ${\cal M}$ describes the Jones matrix as defined in {eq}`eq:pol:jonesMatrixWaveplate`, then the matrix $M_{\theta}$ for the same wave
 plate but with $x'$ as slow and $y'$ as fast axis, is, with respect to
 the $\widehat{\mathbf{x}}$, $\widehat{\mathbf{y}}$ basis, given by:
 
 
 ```{math}
-:label: eq:pol:rotated-jones-matrix
+:label: eq:pol:rotatedJonesMatrix
 \begin{align*}
 	{\cal M}_{\theta}={\cal R}_{\theta}{\cal M} {\cal R}_{-\theta}.
 	\end{align*}
@@ -411,7 +411,7 @@ This is a standard result from linear algebra involving basis transformations.
 
 
 ```{figure} Images/04_04_rotation_polarization.png
-:name: 4_2_Rotation_Polarization
+:name: fig:pol:rotationPolarization
 If the wave plate is rotated, the fast and slow axis no longer correspond to $x$ and $y$. Instead, we have to introduce a new coordinate system ($x',y'$).
 ```
 
@@ -421,7 +421,7 @@ If the wave plate is rotated, the fast and slow axis no longer correspond to $x$
 A polarizer that only transmits horizontally polarized light is described by the Jones matrix:
 
 ```{math}
-:label: eq:pol:linear-polarizer-matrix
+:label: eq:pol:linearPolarizerMatrix
 \begin{align*}
 {\cal M}_{LP}=\left( \begin{array}{cc}1&0\\0&0
 \end{array}\right).
@@ -430,7 +430,7 @@ A polarizer that only transmits horizontally polarized light is described by the
 Clearly, horizontally polarized light is completely transmitted, while vertically polarized light is not transmitted at all. More generally, for light that is polarized at an angle $\alpha$, we get
 
 ```{math}
-:label: eq:pol:malus-law-derivation
+:label: eq:pol:malusLawDerivation
 \begin{align*}
 {\cal M}_\alpha={\cal M}_{LP}\left(\begin{array}{c}\cos\alpha\\\sin\alpha
 \end{array}\right)=\left(\begin{array}{cc}1&0\\0&0
@@ -448,14 +448,14 @@ The amplitude of the transmitted field is reduced by the factor $\cos\alpha$, wh
 
 Natural light such as sun light is unpolarized. The instantaneous polarization
 of unpolarized light fluctuates rapidly in a random manner. A linear polarizer
-produces linear polarized light from unpolarized light. It follows from {eq}`eq:pol:malus-law-derivation` that the intensity transmitted by a linear
+produces linear polarized light from unpolarized light. It follows from {eq}`eq:pol:malusLawDerivation` that the intensity transmitted by a linear
 polarizer when unpolarized light is incident, is the average value
 of $\cos^2\alpha$ namely $\frac{1}{2}$, times the incident intensity.
 
 Light that is a mixture of polarized and unpolarized light is called partially polarized. The **degree of polarization** is defined as the fraction of the total intensity that is polarized:
 
 ```{math}
-:label: eq:pol:degree-polarization
+:label: eq:pol:degreePolarization
 \begin{align*}
 \text{ degree of polarization} = \frac{I_{pol}}{I_{pol} + I_{unpol}}.
 \end{align*}
@@ -466,7 +466,7 @@ Light that is a mixture of polarized and unpolarized light is called partially p
 A quarter-wave plate has already been introduced above. It introduces a phase shift of $\pi/2$, so its Jones matrix is
 
 ```{math}
-:label: eq:pol:quarter-wave-plate-matrix
+:label: eq:pol:quarterWavePlateMatrix
 \begin{align*}
 {\cal M}_{QWP}=
 \left(\begin{array}{cc}1&0\\0& i
@@ -476,7 +476,7 @@ A quarter-wave plate has already been introduced above. It introduces a phase sh
 because $\exp(i\pi/2)=i$. To describe the actual transmission through the quarter-wave plate, the matrix should be multiplied by some global phase factor, but because we only care about the **phase difference** between the field components, this global phase factor can be omitted without problem. The quarter-wave plate is typically used to **convert linearly polarized light to elliptically polarized light and vice-versa**{cite:p}`saleh_teich`. If the incident light is linearly polarized at angle $\alpha$, the state of polarization after the quarter-wave plate is
 
 ```{math}
-:label: eq:pol:quarter-wave-transformation
+:label: eq:pol:quarterWaveTransformation
 \begin{align*}
 \left(\begin{array}{c}\cos\alpha\\ i\sin\alpha
 \end{array}\right)
@@ -515,10 +515,10 @@ A half-wave plate introduces a phase shift of $\pi$, so its Jones matrix is
 \end{array}\right),
 \end{align*}
 ```
-because $\exp(i\pi)=-1$. An important application of the half-wave plate is to **change the orientation of linearly polarized light**{cite:p}`fowles`. After all, what this matrix does is mirroring the polarization state in the $x$-axis. Thus, if we choose our mirroring axis correctly (i.e. if we choose the orientation of the wave plate correctly), we can change the direction in which the light is linearly polarized arbitrarily{cite:p}`goldstein`. To give an example: a wave with linear polarization parallel to the $x$-direction, can be rotated over angle $\alpha$ by rotating the crystal such that the fast axis makes angle $\alpha/2$ with the $x$-axis. Upon propagation through the crystal, the slow axis gets an additional phase of $\pi$, due to which the electric vector makes angle $\alpha$ with the $x$-axis (see {numref}`4_04_Rotation_polarization`). It is not difficult to verify that when the fast and slow axis are interchanged, the same linear state of polarization results.
+because $\exp(i\pi)=-1$. An important application of the half-wave plate is to **change the orientation of linearly polarized light**{cite:p}`fowles`. After all, what this matrix does is mirroring the polarization state in the $x$-axis. Thus, if we choose our mirroring axis correctly (i.e. if we choose the orientation of the wave plate correctly), we can change the direction in which the light is linearly polarized arbitrarily{cite:p}`goldstein`. To give an example: a wave with linear polarization parallel to the $x$-direction, can be rotated over angle $\alpha$ by rotating the crystal such that the fast axis makes angle $\alpha/2$ with the $x$-axis. Upon propagation through the crystal, the slow axis gets an additional phase of $\pi$, due to which the electric vector makes angle $\alpha$ with the $x$-axis (see {numref}`fig:pol:rotationPolarization`). It is not difficult to verify that when the fast and slow axis are interchanged, the same linear state of polarization results.
 
 ```{figure} Images/04_05_rotation_polarization.png
-:name: 4_04_Rotation_polarization
+:name: fig:pol:rotationPolarization
 Rotation of horizontally polarized light over an angle $\alpha$ using a half-wave plate.
 ```
 
@@ -527,7 +527,7 @@ Rotation of horizontally polarized light over an angle $\alpha$ using a half-wav
 
 A full-wave plate introduces a phase difference of $2\pi$, which is the same as introducing no phase difference between the two field components.
 So what can possibly be an application for a full-wave plate? We recall from
-{eq}`eq:pol:waveplate-phase-shift` that the phase difference is $2\pi$ only for
+{eq}`eq:pol:waveplatePhaseShift` that the phase difference is $2\pi$ only for
 a particular wavelength. If we send through linearly (say vertically) polarized
 light of other wavelengths, these will become elliptically polarized, while the
 light with the correct wavelength $\lambda_0$ will stay vertically polarized. If
@@ -541,7 +541,7 @@ wavelengths will be able to pass through at least partially. Therefore, *
 If the direction of either the slow or fast axis is given and the ordinary and
 extra-ordinary refractive indices $n_o$ and $n_e$, it is easy to write down the
 Jones matrix of a birefringent plate of given thickness $d$ using the rotation
-matrices, see {eq}`eq:pol:rotated-jones-matrix`. Instead of using the rotation
+matrices, see {eq}`eq:pol:rotatedJonesMatrix`. Instead of using the rotation
 matrices, one can also write down a system of equations for the elements of the
 Jones matrix. Suppose
 that $\hat{\mathbf{v_o}}=v_{o,x}+\hat{\mathbf{x}}+v_{o,y}\hat{\mathbf{y}}$
@@ -550,7 +550,7 @@ in the direction of the ordinary and the extra-ordinary axes, respectively. Then
 if the Jones matrix is
 
 ```{math}
-:label: eq:pol:general-jones-matrix
+:label: eq:pol:generalJonesMatrix
 {\cal M}=\left( \begin{array}{cc}a & b \\c & d
 \end{array}\right),
 ```
@@ -566,14 +566,14 @@ then
 which implies
 
 ```{math}
-:label: eq:pol:jones-eigenvector-system
+:label: eq:pol:jonesEigenvectorSystem
 \begin{array}{cc}a v_{o,x} + b v_{o,y} & = e^{i k n_o d} v_{o,x}, \\c v_{o,x} + d v_{o,y} & = e^{i k n_o d} v_{o,y}, \\a v_{e,x} + b v_{e,y} & = e^{i k n_e d} v_{e,x}, \\c v_{e,x} + d v_{e,y} & = e^{i k n_e d} v_{e,x}.
 \end{array}
 ```
 
 Similarly, for a linear polarizer it is simple to write down the Jones matrix if
 one knows the direction in which the polarizer absorbs or transmits all the
-light: use {eq}`eq:pol:linear-polarizer-matrix` in combination with the rotation
+light: use {eq}`eq:pol:linearPolarizerMatrix` in combination with the rotation
 matrices. Alternatively, if $\hat{\mathbf{v}}$ is in the direction of the linear
 polarizer and $\hat{\mathbf{w}}$ is perpendicular to it, we have
 
@@ -584,11 +584,11 @@ polarizer and $\hat{\mathbf{w}}$ is perpendicular to it, we have
 \end{align*}
 ```
 
-which is a system of equation of type {eq}`eq:pol:jones-eigenvector-system` for
+which is a system of equation of type {eq}`eq:pol:jonesEigenvectorSystem` for
 the elements of the Jones matrix.
 
 Suppose now that the complex (2,2)-matrix
-{eq}`eq:pol:general-jones-matrix` is given.
+{eq}`eq:pol:generalJonesMatrix` is given.
 How can one verify whether this matrix corresponds to a linear polarizer or to a wave plate?
 Note that the elements of a Jones matrix are in general complex.
 
@@ -609,7 +609,7 @@ where $d$ is the thickness of the plate and $k$ is the wave number. Hence to ver
 
 **3.** **Jones matrix for propagation through sugars** In sugars, left and right
 circular-polarized light propagate with their own refractive index. Therefore
-sugars are called **circular birefringent**. The matrix {eq}`eq:pol:general-jones-matrix` corresponds to propagation through sugar when
+sugars are called **circular birefringent**. The matrix {eq}`eq:pol:generalJonesMatrix` corresponds to propagation through sugar when
 there are two real orthogonal unit vectors
 $\hat{\mathbf{v}}$ and $\hat{\mathbf{w}}$ such that the circular polarization states
 
@@ -625,7 +625,7 @@ are eigenstates of ${\cal M}$ with complex eigenvalues with modulus 1.
 Any elliptical polarization state can be written as the sum of two perpendicular linear polarized states:
 
 ```{math}
-:label: eq:pol:elliptical-as-linear-sum
+:label: eq:pol:ellipticalAsLinearSum
 \begin{align*}
 J=
 \left(\begin{array}{cc}{\cal A}_x e^{i \varphi_x} \\{\cal A}_y e^{i \varphi_y}
@@ -637,7 +637,7 @@ J=
 Furthermore, any elliptical polarization state can be written as the sum of two circular polarization states, one right- and the other left-circular polarized:
 
 ```{math}
-:label: eq:pol:elliptical-as-circular-sum
+:label: eq:pol:ellipticalAsCircularSum
 \begin{align*}
 J=
 \left(\begin{array}{c}{\cal A}_x e^{i \varphi_x} \\{\cal A}_y e^{i \varphi_y}

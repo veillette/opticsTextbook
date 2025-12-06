@@ -5,7 +5,7 @@ tags:
   - electromagnetic-theory
 ---
 
-(appendix:vector-calculus)=
+(appendix:vectorCalculus)=
 # Appendix D: Vector Calculus for Electromagnetic Fields
 
 > "The theory of the electromagnetic field is the most successful physical theory we have. It describes precisely how electromagnetic fields propagate and interact with matter."
@@ -42,7 +42,7 @@ Vector calculus allows us to connect **local** properties (what happens at a poi
 
 ```{list-table} Local-Global Connections
 :header-rows: 1
-:name: local-global-connections
+:name: table:localGlobalConnections
 
 * - Local Property
   - Vector Operation
@@ -338,7 +338,7 @@ These identities are essential for manipulating Maxwell's equations:
 
 ```{list-table} Essential Vector Identities
 :header-rows: 1
-:name: vector-identities
+:name: table:vectorIdentities
 
 * - Identity
   - Mathematical Form
@@ -534,7 +534,7 @@ Vector calculus reveals the deep structure of electromagnetism:
 
 ```{list-table} Core Physical Insights
 :header-rows: 1
-:name: physical-insights
+:name: table:physicalInsights
 
 * - Vector Operation
   - Maxwell Equation

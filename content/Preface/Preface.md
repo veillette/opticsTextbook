@@ -4,7 +4,7 @@ tags:
   - introduction
 ---
 
-(chapter.preface)=
+(chapter:preface)=
 # Introduction to Optics
 
 Optics stands as one of the most elegant and practically significant branches of physics, bridging the fundamental principles of electromagnetic theory with technologies that shape our daily lives. From the corrective lenses we wear to the fiber optic networks that carry our communications, from the laser systems used in surgery to the advanced imaging techniques that probe the cosmos, optical phenomena surround us at every scale.

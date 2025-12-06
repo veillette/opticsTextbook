@@ -20,7 +20,7 @@ downloads:
     title: Download Chapter DOCX
 ---
 
-(chapter.basics)=
+(chapter:basics)=
 # Nature of Light
 
 ```{note} What you should know and be able to do after studying this chapter
@@ -55,7 +55,7 @@ Contemporary with Newton but representing a fundamentally different philosophica
 The early 19th century witnessed a decisive shift in scientific opinion with Thomas Young's ingenious double-slit experiment, an investigation that many consider one of the most beautiful and profound experiments in the history of physics. Young directed light through two closely spaced, parallel slits and observed the resulting pattern on a screen placed behind the slits. Instead of seeing two bright bands corresponding to light passing through each slit—as particle theory would predict—Young observed a series of alternating bright and dark fringes, a characteristic interference pattern that could only be explained if light behaved as waves. The bright fringes occurred where waves from the two slits arrived in phase, reinforcing each other through constructive interference, while the dark fringes appeared where the waves arrived out of phase, canceling each other through destructive interference. This elegant demonstration provided compelling, virtually irrefutable evidence for the wave nature of light and shifted the scientific consensus decisively away from Newton's particle theory toward Huygens' wave model. Young's experiment also allowed for the first accurate measurements of light's wavelength, revealing that different colors corresponded to different wavelengths, with red light having longer wavelengths than blue light, providing a physical basis for understanding the spectrum of colors that had fascinated natural philosophers since Newton's work with prisms.
 
 ```{figure} Images/01_01_newton_rings.jpg
-:name: fig:NewtonRings
+:name: fig:basics:newtonRings
 :align: center
 :width: 80%
 
@@ -91,21 +91,21 @@ Quantum mechanics provides a unified mathematical framework that describes both 
 The **relativistic energy-momentum relation** gives us:
 
 ```{math}
-:label: eq:basics:relativistic-momentum
+:label: eq:basics:relativisticMomentum
 p = \frac{\sqrt{E^2 - m^2c^4}}{c}
 ```
 
 The **de Broglie wavelength** relates the wave and particle aspects:
 
 ```{math}
-:label: eq:basics:de-broglie-wavelength
+:label: eq:basics:deBroglieWavelength
 \lambda = \frac{h}{p} = \frac{hc}{\sqrt{E^2 - m^2c^4}}
 ```
 
 The **relativistic velocity** can be expressed as:
 
 ```{math}
-:label: eq:basics:relativistic-velocity
+:label: eq:basics:relativisticVelocity
 v = \frac{pc^2}{E} = c\sqrt{1 - \frac{m^2c^4}{E^2}}
 ```
 
@@ -116,7 +116,7 @@ These equations apply universally to both massive particles and massless photons
 For photons, which have zero rest mass ($m = 0$), the fundamental equations reduce to elegant, simpler forms. Setting $m = 0$ in the relativistic energy-momentum relation yields:
 
 ```{math}
-:label: eq:basics:photon-momentum
+:label: eq:basics:photonMomentum
 p = \frac{E}{c}
 ```
 
@@ -125,7 +125,7 @@ This tells us that a photon's momentum is directly proportional to its energy, w
 The de Broglie wavelength for photons becomes:
 
 ```{math}
-:label: eq:basics:photon-wavelength
+:label: eq:basics:photonWavelength
 \lambda = \frac{hc}{E}
 ```
 
@@ -140,13 +140,13 @@ This universal speed is one of the defining characteristics of electromagnetic r
 
 To illustrate these concepts, consider an electron with kinetic energy $K = 2.5$ MeV. We can calculate its relativistic properties and compare them with a photon of the same total energy.
 
-For the electron, the total energy is $E = K + mc^2 = 2.5 + 0.511 = 3.011$ MeV. Using equation {eq}`eq:basics:relativistic-momentum`, the momentum is:
+For the electron, the total energy is $E = K + mc^2 = 2.5 + 0.511 = 3.011$ MeV. Using equation {eq}`eq:basics:relativisticMomentum`, the momentum is:
 $$p = \frac{\sqrt{(3.011)^2 - (0.511)^2}}{c} = \frac{2.97}{c} \text{ MeV}$$
 
-The de Broglie wavelength from equation {eq}`eq:basics:de-broglie-wavelength` is:
+The de Broglie wavelength from equation {eq}`eq:basics:deBroglieWavelength` is:
 $$\lambda = \frac{hc}{pc} = \frac{1.24 \times 10^{-6}}{2.97} = 4.18 \times 10^{-7} \text{ m}$$
 
-The electron's speed from equation {eq}`eq:basics:relativistic-velocity` is:
+The electron's speed from equation {eq}`eq:basics:relativisticVelocity` is:
 $$v = c\sqrt{1 - \frac{(0.511)^2}{(3.011)^2}} = 0.987c$$
 
 For a photon with the same total energy (3.011 MeV), the momentum would be $p = E/c = 3.011$ MeV/c, the wavelength would be $\lambda = hc/E = 4.12 \times 10^{-7}$ m, and the speed would be exactly $c$.
@@ -180,7 +180,7 @@ $$c = \lambda\nu $$
 This simple equation reveals an inverse relationship: as wavelength increases, frequency decreases proportionally. The energy of electromagnetic radiation is quantized in units called photons, with each photon carrying energy:
 
 ```{math}
-:label: eq:basics:photon-energy
+:label: eq:basics:photonEnergy
 E = h\nu
 ```
 
@@ -188,7 +188,7 @@ where $h$ is Planck's constant. This quantization means that electromagnetic wav
 
 
 ```{figure} Images/01_02_electromagnetic_spectrum_f1.png
-:name: fig:ElectromagneticSpectrum
+:name: fig:basics:electromagneticSpectrum
 :align: center
 :width: 80%
 
@@ -257,7 +257,7 @@ The first successful measurement of light's speed came from an unexpected source
 Roemer's brilliant insight was recognizing that this fluctuation resulted from light's finite travel time. When Earth moved away from Jupiter in its orbit, light from Io's eclipses had to travel increasingly greater distances to reach terrestrial observers. Conversely, when Earth approached Jupiter, the light path shortened, causing eclipses to appear to occur earlier than predicted.
 
 ```{figure} Images/01_03_roemer.png
-:name: fig:roemer
+:name: fig:basics:roemer
 :align: center
 :width: 80%
 
@@ -272,7 +272,7 @@ The first successful Earth-based measurement came in 1849 from French physicist 
 
 
 ```{figure} Images/01_04_fizeau.png
-:name: fig:fizeau
+:name: fig:basics:fizeau
 :align: center
 :width: 70%
 
@@ -290,7 +290,7 @@ Albert Michelson (1852–1931) continued improving these techniques throughout h
 Today, the speed of light in vacuum is known with extraordinary precision and serves as a fundamental physical constant:
 
 ```{math}
-:label: eq:basics:speed-light
+:label: eq:basics:speedLight
 c = 2.99792458 \times 10^8 \, \text{m/s} \approx 3.00 \times 10^8 \, \text{m/s}
 ```
 
@@ -305,7 +305,7 @@ When light travels through materials other than vacuum, it slows down due to int
 We quantify how much a material slows light using the **index of refraction**, denoted $n$:
 
 ```{math}
-:label: eq:basics:index-refraction
+:label: eq:basics:indexRefraction
 n = \frac{c}{v}
 ```
 
@@ -317,7 +317,7 @@ Since light in matter always travels slower than in vacuum (where $v = c$), the 
 
 ```{list-table} Index of Refraction for Various Media
 :header-rows: 1
-:name: table:refractive-indices
+:name: table:basics:refractiveIndices
 
 * - Medium
   - Temperature/Pressure
@@ -380,12 +380,12 @@ Notice that gases have indices very close to 1.0, which makes physical sense—a
 Let's calculate the speed of light in zircon, a material often used in jewelry as a diamond substitute.
 
 **Given:**
-- Index of refraction for zircon: $n = 1.923$ ([](#table:refractive-indices))
+- Index of refraction for zircon: $n = 1.923$ ([](#table:basics:refractiveIndices))
 - Speed of light in vacuum: $c = 3.00 \times 10^8 \, \text{m/s}$
 
 **Solution:**
 
-Rearranging {eq}`eq:basics:index-refraction` to solve for $v$:
+Rearranging {eq}`eq:basics:indexRefraction` to solve for $v$:
 
 $$v = \frac{c}{n} = \frac{3.00 \times 10^8 \, \text{m/s}}{1.923} = 1.56 \times 10^8 \, \text{m/s}$$
 
@@ -394,13 +394,13 @@ This speed is slightly larger than half the speed of light in vacuum—still inc
 ```{note} Check Your Understanding
 :class: warning
 
-From [](#table:refractive-indices), ethanol and fresh water have indices of refraction of 1.361 and 1.333, respectively. By what percentage do the speeds of light in these liquids differ?
+From [](#table:basics:refractiveIndices), ethanol and fresh water have indices of refraction of 1.361 and 1.333, respectively. By what percentage do the speeds of light in these liquids differ?
 
 *Hint: Calculate the speed in each medium, then find the percentage difference.*
 ```
 
 ```{figure} Images/01_05_refractive_index_glass_f1.png
-:name: fig:refractiveIndex
+:name: fig:basics:refractiveIndex
 :align: center
 :width: 90%
 
@@ -417,7 +417,7 @@ Light can travel from a source to an observer through three primary pathways:
 
 
 ```{figure} Images/01_06_light_paths.png
-:name: fig:light-paths
+:name: fig:basics:lightPaths
 :align: center
 :width: 90%
 
