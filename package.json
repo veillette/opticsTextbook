@@ -45,6 +45,14 @@
     "generate-icons": "node scripts/generate-pwa-icons.js",
     "generate-manifest": "node scripts/generate-pwa-manifest.js",
     "setup-pwa": "npm run generate-manifest && node scripts/setup-pwa.js",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "convert-fences": "node scripts/convert_fences.js",
+    "convert-fences:dry": "node scripts/convert_fences.js --dry-run",
+    "fix-admonitions": "node scripts/fix_admonitions.js",
+    "fix-split-refs": "node scripts/fix_split_equation_refs.js",
+    "fix-split-refs:dry": "node scripts/fix_split_equation_refs.js --dry-run",
     "find-unreferenced": "python3 scripts/find_unreferenced_images_myst.py",
     "find-unreferenced-dry": "python3 scripts/find_unreferenced_images_myst.py --dry-run",
     "clean-unreferenced": "python3 scripts/delete_unreferenced_images_myst.py",
@@ -58,6 +66,8 @@
     "lint:equations:verbose": "python3 scripts/lint_equation_labels.py --verbose"
   },
   "devDependencies": {
-    "husky": "^9.1.7"
+    "@types/jest": "^30.0.0",
+    "husky": "^9.1.7",
+    "jest": "^30.2.0"
   }
 }
