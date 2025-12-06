@@ -61,8 +61,10 @@
     "clean-unreferenced:python": "python3 scripts/delete_unreferenced_images_myst.py",
     "validate-enhanced": "python3 scripts/validate_references_enhanced.py",
     "validate-enhanced-quiet": "python3 scripts/validate_references_enhanced.py --quiet",
-    "lint": "python3 scripts/lint_myst_markdown.py",
-    "lint:fix": "python3 scripts/lint_myst_markdown.py --fix",
+    "lint": "node scripts/lint_myst_markdown.js",
+    "lint:fix": "node scripts/lint_myst_markdown.js --fix",
+    "lint:quiet": "node scripts/lint_myst_markdown.js --quiet",
+    "lint:python": "python3 scripts/lint_myst_markdown.py",
     "lint:equations": "python3 scripts/lint_equation_labels.py",
     "lint:equations:fix": "python3 scripts/lint_equation_labels.py --fix",
     "lint:equations:verbose": "python3 scripts/lint_equation_labels.py --verbose"
