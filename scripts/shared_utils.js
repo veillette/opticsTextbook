@@ -245,6 +245,95 @@ function getImageExtensions() {
   return _extensionsCache;
 }
 
+let _chapterCodesCache = null;
+
+function getChapterCodes() {
+  /**
+   * Get chapter code mappings for label prefixes.
+   *
+   * Returns a mapping of chapter directory names to short codes used in labels.
+   * For example: 'Chap02GeometricalOptics' -> 'geo'
+   *
+   * @returns {Object} Dictionary mapping chapter directory names to codes
+   */
+  if (_chapterCodesCache) {
+    return _chapterCodesCache;
+  }
+
+  const config = loadConfig();
+  const chapterCodesConfig = config.chapter_codes || {};
+
+  // If auto-generation is enabled, generate codes from chapter directories
+  if (chapterCodesConfig._auto_generate) {
+    const chapters = getChapters();
+    const codes = {};
+
+    // First, add any explicit mappings from config
+    for (const [dirName, code] of Object.entries(chapterCodesConfig)) {
+      if (!dirName.startsWith('_') && typeof code === 'string') {
+        codes[dirName] = code;
+      }
+    }
+
+    // For chapters without explicit codes, auto-generate from directory name
+    for (const chapterInfo of Object.values(chapters)) {
+      const dirName = path.basename(chapterInfo.dir);
+      if (!codes[dirName]) {
+        // Auto-generate code from directory name
+        // Extract the part after "Chap##" and create abbreviation
+        const match = dirName.match(/^Chap\d+(.+)$/);
+        if (match) {
+          const name = match[1];
+          // Simple abbreviation: take first 3-5 letters, lowercase
+          codes[dirName] = name.substring(0, Math.min(5, name.length)).toLowerCase();
+        }
+      }
+    }
+
+    _chapterCodesCache = codes;
+    return codes;
+  }
+
+  // Use only explicit mappings
+  const codes = {};
+  for (const [dirName, code] of Object.entries(chapterCodesConfig)) {
+    if (!dirName.startsWith('_') && typeof code === 'string') {
+      codes[dirName] = code;
+    }
+  }
+
+  _chapterCodesCache = codes;
+  return codes;
+}
+
+function getChapterCodeFromPath(filePath) {
+  /**
+   * Extract chapter code from a file path.
+   *
+   * @param {string} filePath - Path to a file in a chapter directory
+   * @returns {string|null} Chapter code or null if not found
+   */
+  const chapterCodes = getChapterCodes();
+
+  for (const [dirName, code] of Object.entries(chapterCodes)) {
+    if (filePath.includes(dirName)) {
+      return code;
+    }
+  }
+
+  // Check for appendices
+  if (filePath.includes('Appendix') || filePath.includes('Appendices')) {
+    return 'appendix';
+  }
+
+  // Check for Preface/Author
+  if (filePath.includes('Preface') || filePath.includes('Author')) {
+    return 'preface';
+  }
+
+  return null;
+}
+
 // ============================================================================
 // Path Handling Utilities
 // ============================================================================
@@ -700,6 +789,8 @@ module.exports = {
   autoDiscoverChapters,
   getChapters,
   getImageExtensions,
+  getChapterCodes,
+  getChapterCodeFromPath,
   // Path handling
   ensurePath,
   ensureDirectory,

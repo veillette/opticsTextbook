@@ -29,22 +29,10 @@
 
 const fs = require('fs');
 const path = require('path');
+const { getChapterCodes, getChapterCodeFromPath } = require('./shared_utils');
 
-// Chapter code mappings
-const CHAPTER_CODES = {
-  'Chap01Basics': 'basics',
-  'Chap02GeometricalOptics': 'geo',
-  'Chap03OpticalInstruments': 'inst',
-  'Chap04Polarization': 'pol',
-  'Chap05Wave': 'wave',
-  'Chap06InterferenceCoherence': 'coh',
-  'Chap07Diffraction': 'diff',
-  'Chap08Lasers': 'laser',
-  'Chap09AdvancedInstruments': 'adv',
-  'Chap10FiberOptics': 'fiber',
-  'Chap11RayMatrix': 'ray',
-};
-
+// Load chapter code mappings from configuration
+const CHAPTER_CODES = getChapterCodes();
 const VALID_CHAPTER_CODES = new Set(Object.values(CHAPTER_CODES));
 
 /**
@@ -69,13 +57,8 @@ class LabelIssue {
  * Extract chapter code from file path.
  */
 function getChapterCode(filePath) {
-  const pathStr = filePath.toString();
-  for (const [chapterDir, code] of Object.entries(CHAPTER_CODES)) {
-    if (pathStr.includes(chapterDir)) {
-      return code;
-    }
-  }
-  return null;
+  // Use shared utility function
+  return getChapterCodeFromPath(filePath);
 }
 
 /**

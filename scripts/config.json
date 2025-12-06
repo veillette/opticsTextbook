@@ -8,6 +8,23 @@
     "_content_directory": "content",
     "_chapter_pattern": "Chap*"
   },
+  "_chapter_codes_comment": "Optional: Map chapter directory names to short codes for label prefixes (e.g., 'fig:geo:lensdiagram'). If not specified, codes are auto-generated from directory names. Override specific chapters as needed.",
+  "chapter_codes": {
+    "_auto_generate": true,
+    "_generation_strategy": "abbreviate",
+    "_comment": "Explicit mappings override auto-generated codes. Format: 'ChapterDirName': 'code'",
+    "Chap01Basics": "basics",
+    "Chap02GeometricalOptics": "geo",
+    "Chap03OpticalInstruments": "inst",
+    "Chap04Polarization": "pol",
+    "Chap05Wave": "wave",
+    "Chap06InterferenceCoherence": "coh",
+    "Chap07Diffraction": "diff",
+    "Chap08Lasers": "laser",
+    "Chap09AdvancedInstruments": "adv",
+    "Chap10FiberOptics": "fiber",
+    "Chap11RayMatrix": "ray"
+  },
   "_image_extensions_comment": "Supported image file extensions (without leading dot)",
   "image_extensions": [
     "png",
