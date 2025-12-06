@@ -9,12 +9,8 @@ on:
       - 'myst.yml'
       - 'package.json'
       - 'package-lock.json'
-      - 'config/requirements.txt'
       - '.github/workflows/validate.yml'
   workflow_dispatch:
-
-env:
-  PYTHON_VERSION: '3.11'
 
 concurrency:
   group: validation-${{ github.ref }}
@@ -50,14 +46,8 @@ jobs:
         with:
           node-version: '20.x'
           cache: 'npm'
-
-      - name: Setup Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: ${{ env.PYTHON_VERSION }}
-          cache: 'pip'
-          # Note: Python only needed for unconverted scripts (lint, validate)
-          # Most maintenance scripts now use JavaScript (see CONVERSION_STATUS.md)
+          # Note: All scripts are now JavaScript - 100% conversion complete!
+          # See CONVERSION_STATUS.md for details
 
       - name: Record setup time
         run: |
@@ -84,23 +74,10 @@ jobs:
           echo "NPM_INSTALL_TIME=$DURATION" >> $GITHUB_ENV
           echo "STEP_START_TIME=$(date +%s)" >> $GITHUB_ENV
 
-      - name: Install Python dependencies
-        run: |
-          # Install Python dependencies (currently minimal - only for unconverted scripts)
-          # Most dependencies are now in package.json (JavaScript migration)
-          pip install -r config/requirements.txt
-
-      - name: Record pip install time
-        run: |
-          STEP_END_TIME=$(date +%s)
-          DURATION=$((STEP_END_TIME - STEP_START_TIME))
-          echo "PIP_INSTALL_TIME=$DURATION" >> $GITHUB_ENV
-          echo "STEP_START_TIME=$(date +%s)" >> $GITHUB_ENV
-
       - name: Run MyST Markdown Linter
         run: |
-          echo "🔍 Running MyST Markdown Linter..."
-          python3 scripts/lint_myst_markdown.py --quiet
+          echo "🔍 Running MyST Markdown Linter (JavaScript)..."
+          npm run lint:quiet
         continue-on-error: true
         id: lint
 
@@ -274,10 +251,9 @@ jobs:
           }
 
           add_row "Checkout repository" ${CHECKOUT_TIME:-0}
-          add_row "Setup (Node.js + Python)" ${SETUP_TIME:-0}
+          add_row "Setup Node.js" ${SETUP_TIME:-0}
           add_row "npm install" ${NPM_INSTALL_TIME:-0}
-          add_row "pip install" ${PIP_INSTALL_TIME:-0}
-          add_row "MyST Linter" ${LINT_TIME:-0}
+          add_row "MyST Linter (JS)" ${LINT_TIME:-0}
           add_row "Reference Validation" ${VALIDATE_TIME:-0}
           add_row "JavaScript Tests" ${TEST_TIME:-0}
           add_row "Doc Link Check" ${DOCLINK_TIME:-0}
@@ -315,7 +291,7 @@ jobs:
             echo "${BUILD_TIME:-0} Build HTML"
             echo "${TEST_TIME:-0} JavaScript Tests"
             echo "${VALIDATE_TIME:-0} Reference Validation"
-            echo "${LINT_TIME:-0} MyST Linter"
+            echo "${LINT_TIME:-0} MyST Linter (JS)"
             echo "${DOCLINK_TIME:-0} Doc Link Check"
             echo "${NPM_INSTALL_TIME:-0} npm install"
           } | sort -rn | head -3 | while read time name; do
