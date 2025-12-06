@@ -21,7 +21,7 @@ The chapter on Lasers ties together many previously discussed concepts, explorin
 
 ## Key Features
 
-The textbook combines comprehensive coverage with interactive elements in its digital version, all freely available under a Creative Commons Attribution 4.0 International License.
+The textbook combines comprehensive coverage with interactive elements in its digital version, all freely available under a Creative Commons Attribution-ShareAlike 4.0 International License.
 
 **Progressive Web App (PWA)**: The textbook is now available as a Progressive Web App, which means you can:
 - Install it on your device (desktop, mobile, or tablet) for app-like experience

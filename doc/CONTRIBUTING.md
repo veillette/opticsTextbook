@@ -1,6 +1,6 @@
-# Contributing to the Advanced Optics Textbook
+# Contributing to the Optics Textbook
 
-Thanks for your interest in improving the Advanced Optics Textbook! This project combines MyST Markdown content, Node.js tooling, Python utilities, and PWA features. Thoughtful contributions—whether fixing typos, polishing diagrams, or enhancing scripts—help students and educators worldwide.
+Thanks for your interest in improving the Optics Textbook! This project combines MyST Markdown content, Node.js tooling, Python utilities, and PWA features. Thoughtful contributions—whether fixing typos, polishing diagrams, or enhancing scripts—help students and educators worldwide.
 
 This guide covers the expectations and workflows for contributors. Please read it fully before opening a pull request.
 
@@ -191,4 +191,4 @@ These expectations align with widely adopted open-source norms such as the [Cont
 
 Unless stated otherwise, all contributions are licensed under the [Creative Commons Attribution-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-sa/4.0/). By submitting a pull request, you confirm that you have the right to license your work under this license.
 
-Thank you for helping make the Advanced Optics Textbook better for everyone!
+Thank you for helping make the Optics Textbook better for everyone!

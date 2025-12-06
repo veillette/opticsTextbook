@@ -327,28 +327,6 @@ When you commit, Husky automatically runs:
 - Example: "Fix broken cross-reference in Chapter 3 (#35)"
 - Example: "Add descriptive captions to figures for accessibility (#49)"
 
-## Common Pitfalls to Avoid
-
-1. **Don't use colon fences** (`:::`) - Use backtick fences (` ``` `) instead
-2. **Don't skip image optimization** - Images are auto-optimized during build
-3. **Don't commit without testing** - Always run `npm run build` first
-4. **Don't forget to update config.json** - Required when adding chapters
-5. **Don't bypass pre-commit hooks** - They catch issues early
-6. **Don't create files without reading existing code first**
-7. **Don't use WebP images** - Convert to PNG for PDF compatibility
-8. **Don't cache 404 responses** - Service worker now prevents this
-9. **Don't use `{index}` directives with `:name:`** - Use section labels instead
-10. **Don't put caption text on same line as `{table}`** - Use separate lines
-
-## Development Philosophy
-
-- **ALWAYS prefer editing existing files** over creating new ones
-- **Keep changes minimal** - Only change what's necessary
-- **Read before modifying** - Understand existing code first
-- **Test thoroughly** - Build and validate before committing
-- **Follow conventions** - Consistency is critical
-- **Document changes** - Update relevant docs when making structural changes
-
 ## Troubleshooting
 
 ### Build Fails
