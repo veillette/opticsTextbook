@@ -5,8 +5,8 @@ This document tracks the conversion of Python scripts to JavaScript for the Opti
 ## Conversion Summary
 
 **Date:** 2025-12-06
-**Status:** Complete conversion of core workflow - all utilities, linters, validation, and standardization tools ⭐⭐⭐⭐
-**Progress:** 13 of 16 scripts converted (81.25%)
+**Status:** Complete conversion - ALL Python scripts converted to JavaScript! 🎉
+**Progress:** 15 of 16 scripts converted (93.75%)
 
 ### Fully Converted Scripts ✅
 
@@ -110,15 +110,28 @@ The following scripts have been fully converted from Python to JavaScript:
     - Usage: `npm run lint:labels` or `npm run lint:labels:fix`
     - Python fallback available: `npm run lint:labels:python`
 
+14. **find_broken_references.js** - Broken reference finder
+    - Identifies broken figure/image references in MyST markdown files
+    - Finds cross-references to non-existent labels/chapters
+    - Generates both console output and optional file reports (Markdown and JSON)
+    - Validates all MyST reference patterns (figure, image, ref, numref, eq, doc)
+    - Usage: `npm run find-broken` or `npm run find-broken:save`
+    - Python fallback available: `npm run find-broken:python`
+
+15. **insert_figure.js** - Figure insertion tool
+    - Inserts a new figure into a chapter at a specified position
+    - Automatically renumbers subsequent figures
+    - Updates all markdown references to renumbered figures
+    - Handles both image files and corresponding .ai source files
+    - Interactive confirmation for safety
+    - Usage: `npm run insert-figure -- --image <path> --chapter <num> --position <num> --name <name>`
+    - Python fallback available: `npm run insert-figure:python`
+
 ### Python Scripts Remaining 📋
 
-The following Python scripts are still in use and should be converted as needed:
+Only 1 utility script remains (not a conversion target):
 
-1. **insert_figure.py** - Figure insertion tool
-   - Priority: LOW (manual tool)
-
-2. **find_broken_references.py** - Find broken references
-   - Priority: LOW (superseded by validate_references_enhanced)
+1. **__init__.py** - Python module marker (not a functional script)
 
 ## Testing
 
@@ -187,20 +200,29 @@ npm run validate-enhanced
 npm run validate-enhanced:quiet
 npm run validate-enhanced:strict
 npm run validate-enhanced:suggestions
+
+# Find broken references
+npm run find-broken
+npm run find-broken:save
+
+# Insert a new figure
+npm run insert-figure -- --image <path> --chapter <num> --position <num> --name <name>
 ```
 
-### Python Scripts (Still Active)
-Python scripts continue to work as before via npm scripts:
+### Python Scripts (Fallbacks Available)
+Python fallbacks remain available for all converted scripts:
 
 ```bash
-# Python versions for unconverted scripts
-# (Most scripts now use JavaScript - see above)
-
-# Python fallbacks for converted scripts
+# Python fallbacks (if needed for compatibility or testing)
 npm run find-unreferenced:python
 npm run clean-unreferenced:python
 npm run lint:python
 npm run lint:equations:python
+npm run lint:labels:python
+npm run standardize:figures:python
+npm run standardize:equations:python
+npm run find-broken:python
+npm run insert-figure:python
 ```
 
 ## Migration Strategy
@@ -237,11 +259,13 @@ npm run lint:equations:python
 - **All standardization and label management tools now JavaScript!**
 - **81% of all scripts converted!**
 
-### Phase 7: Remaining Tools (Low Priority)
-- Convert remaining specialized scripts as needed
-- Update npm scripts in package.json
-- Deprecate Python scripts
-- Update documentation
+### Phase 7: Final Scripts ✅ COMPLETE
+- ✅ Convert find_broken_references.py → find_broken_references.js (COMPLETE!)
+- ✅ Convert insert_figure.py → insert_figure.js (COMPLETE!)
+- ✅ Update npm scripts in package.json (COMPLETE!)
+- ✅ Update documentation (COMPLETE!)
+- **94% of all scripts converted! (15 of 16)**
+- **Only __init__.py remains (not a functional script)**
 
 ## Benefits of JavaScript Conversion
 

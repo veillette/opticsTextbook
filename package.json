@@ -81,7 +81,12 @@
     "standardize:figures:python": "python3 scripts/standardize_all_figures.py",
     "standardize:equations": "node scripts/standardize_equation_labels.js",
     "standardize:equations:check": "node scripts/standardize_equation_labels.js --check",
-    "standardize:equations:python": "python3 scripts/standardize_equation_labels.py"
+    "standardize:equations:python": "python3 scripts/standardize_equation_labels.py",
+    "find-broken": "node scripts/find_broken_references.js",
+    "find-broken:save": "node scripts/find_broken_references.js --output-file broken_references",
+    "find-broken:python": "python3 scripts/find_broken_references.py",
+    "insert-figure": "node scripts/insert_figure.js",
+    "insert-figure:python": "python3 scripts/insert_figure.py"
   },
   "devDependencies": {
     "@types/jest": "^30.0.0",
