@@ -56,6 +56,8 @@ jobs:
         with:
           python-version: ${{ env.PYTHON_VERSION }}
           cache: 'pip'
+          # Note: Python only needed for unconverted scripts (lint, validate)
+          # Most maintenance scripts now use JavaScript (see CONVERSION_STATUS.md)
 
       - name: Record setup time
         run: |
@@ -83,7 +85,10 @@ jobs:
           echo "STEP_START_TIME=$(date +%s)" >> $GITHUB_ENV
 
       - name: Install Python dependencies
-        run: pip install -r config/requirements.txt
+        run: |
+          # Install Python dependencies (currently minimal - only for unconverted scripts)
+          # Most dependencies are now in package.json (JavaScript migration)
+          pip install -r config/requirements.txt
 
       - name: Record pip install time
         run: |
@@ -120,10 +125,10 @@ jobs:
           echo "VALIDATE_TIME=$DURATION" >> $GITHUB_ENV
           echo "STEP_START_TIME=$(date +%s)" >> $GITHUB_ENV
 
-      - name: Run Python Unit Tests
+      - name: Run JavaScript Unit Tests
         run: |
-          echo "🧪 Running Python unit tests..."
-          pytest scripts/tests/ -v --tb=short
+          echo "🧪 Running JavaScript unit tests..."
+          npm test
         continue-on-error: true
         id: tests
 
@@ -249,7 +254,7 @@ jobs:
 
           echo "| MyST Linter | $(get_status '${{ steps.lint.outcome }}') ${{ steps.lint.outcome }} | $(format_time ${LINT_TIME:-0}) |" >> $GITHUB_STEP_SUMMARY
           echo "| Reference Validation | $(get_status '${{ steps.validate.outcome }}') ${{ steps.validate.outcome }} | $(format_time ${VALIDATE_TIME:-0}) |" >> $GITHUB_STEP_SUMMARY
-          echo "| Python Tests | $(get_status '${{ steps.tests.outcome }}') ${{ steps.tests.outcome }} | $(format_time ${TEST_TIME:-0}) |" >> $GITHUB_STEP_SUMMARY
+          echo "| JavaScript Tests | $(get_status '${{ steps.tests.outcome }}') ${{ steps.tests.outcome }} | $(format_time ${TEST_TIME:-0}) |" >> $GITHUB_STEP_SUMMARY
           echo "| Doc Link Check | $(get_status '${{ steps.doclinks.outcome }}') ${{ steps.doclinks.outcome }} | $(format_time ${DOCLINK_TIME:-0}) |" >> $GITHUB_STEP_SUMMARY
           echo "| Build HTML | $(get_status '${{ steps.build.outcome }}') ${{ steps.build.outcome }} | $(format_time ${BUILD_TIME:-0}) |" >> $GITHUB_STEP_SUMMARY
 
@@ -274,7 +279,7 @@ jobs:
           add_row "pip install" ${PIP_INSTALL_TIME:-0}
           add_row "MyST Linter" ${LINT_TIME:-0}
           add_row "Reference Validation" ${VALIDATE_TIME:-0}
-          add_row "Python Tests" ${TEST_TIME:-0}
+          add_row "JavaScript Tests" ${TEST_TIME:-0}
           add_row "Doc Link Check" ${DOCLINK_TIME:-0}
           add_row "Build HTML" ${BUILD_TIME:-0}
 
@@ -308,7 +313,7 @@ jobs:
           # Create sorted list of times
           {
             echo "${BUILD_TIME:-0} Build HTML"
-            echo "${TEST_TIME:-0} Python Tests"
+            echo "${TEST_TIME:-0} JavaScript Tests"
             echo "${VALIDATE_TIME:-0} Reference Validation"
             echo "${LINT_TIME:-0} MyST Linter"
             echo "${DOCLINK_TIME:-0} Doc Link Check"
@@ -329,7 +334,7 @@ jobs:
           echo ""
           echo "✓ MyST Linter: ${{ steps.lint.outcome }}"
           echo "✓ Reference Validation: ${{ steps.validate.outcome }}"
-          echo "✓ Python Tests: ${{ steps.tests.outcome }}"
+          echo "✓ JavaScript Tests: ${{ steps.tests.outcome }}"
           echo "✓ Doc Link Check: ${{ steps.doclinks.outcome }}"
           echo "✓ Build Status: ${{ steps.build.outcome }}"
           echo ""
