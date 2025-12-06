@@ -1,0 +1,22 @@
+{
+  "name": "@opticsTextbook/scripts",
+  "version": "1.0.0",
+  "description": "MyST Markdown project utility scripts - content-agnostic tools for maintaining and validating MyST projects",
+  "main": "index.js",
+  "type": "commonjs",
+  "keywords": [
+    "myst",
+    "markdown",
+    "validation",
+    "linting",
+    "utilities"
+  ],
+  "author": "OpticsTextbook Contributors",
+  "license": "CC-BY-SA-4.0",
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "dependencies": {
+    "js-yaml": "^4.1.1"
+  }
+}
