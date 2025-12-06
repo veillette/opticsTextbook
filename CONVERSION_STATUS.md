@@ -5,8 +5,8 @@ This document tracks the conversion of Python scripts to JavaScript for the Opti
 ## Conversion Summary
 
 **Date:** 2025-12-06
-**Status:** Core utilities, maintenance tools, and linter converted ⭐
-**Progress:** 8 of 16 scripts converted (50%)
+**Status:** Core utilities, maintenance tools, and all linters converted ⭐⭐
+**Progress:** 9 of 16 scripts converted (56%)
 
 ### Fully Converted Scripts ✅
 
@@ -64,6 +64,15 @@ The following scripts have been fully converted from Python to JavaScript:
    - Python fallback available: `npm run lint:python`
    - **Impact:** Core CI/CD workflow now JavaScript-native!
 
+9. **lint_equation_labels.js** - Equation label linter
+   - Checks equation label format consistency
+   - Supports camelCase format validation
+   - Auto-fix for non-standard labels
+   - Detects LaTeX inline labels
+   - Chapter code validation
+   - Usage: `npm run lint:equations` or `npm run lint:equations:fix`
+   - Python fallback available: `npm run lint:equations:python`
+
 ### Python Scripts Remaining 📋
 
 The following Python scripts are still in use and should be converted as needed:
@@ -72,23 +81,19 @@ The following Python scripts are still in use and should be converted as needed:
    - Used via: `npm run validate-enhanced`
    - Priority: HIGH (critical for validation)
 
-2. **lint_equation_labels.py** - Equation label linter
-   - Used via: `npm run lint:equations`
+2. **standardize_all_figures.py** - Figure standardization
    - Priority: MEDIUM
 
-3. **standardize_all_figures.py** - Figure standardization
+3. **standardize_equation_labels.py** - Equation label standardization
    - Priority: MEDIUM
 
-4. **standardize_equation_labels.py** - Equation label standardization
+4. **lint_all_labels.py** - Label linting
    - Priority: MEDIUM
 
-5. **lint_all_labels.py** - Label linting
-   - Priority: MEDIUM
-
-6. **insert_figure.py** - Figure insertion tool
+5. **insert_figure.py** - Figure insertion tool
    - Priority: LOW (manual tool)
 
-7. **find_broken_references.py** - Find broken references
+6. **find_broken_references.py** - Find broken references
    - Priority: LOW (superseded by validate_references_enhanced)
 
 ## Testing
@@ -135,6 +140,10 @@ npm run clean-unreferenced:dry
 npm run lint
 npm run lint:fix
 npm run lint:quiet
+
+# Lint equation labels
+npm run lint:equations
+npm run lint:equations:fix
 ```
 
 ### Python Scripts (Still Active)
@@ -142,12 +151,12 @@ Python scripts continue to work as before via npm scripts:
 
 ```bash
 npm run validate-enhanced
-npm run lint:equations
 
 # Python fallbacks for converted scripts
 npm run find-unreferenced:python
 npm run clean-unreferenced:python
 npm run lint:python
+npm run lint:equations:python
 ```
 
 ## Migration Strategy
@@ -167,10 +176,10 @@ npm run lint:python
 - Convert find_unreferenced_images_myst.py → find_unreferenced_images_myst.js
 - Convert delete_unreferenced_images_myst.py → delete_unreferenced_images_myst.js
 
-### Phase 4: Critical Complex Scripts 🚧 IN PROGRESS
+### Phase 4: Critical Complex Scripts ✅ COMPLETE
 - ✅ Convert lint_myst_markdown.py → lint_myst_markdown.js (COMPLETE!)
-- ⏳ Convert validate_references_enhanced.py → validate_references_enhanced.js (next)
-- ⏳ Convert lint_equation_labels.py → lint_equation_labels.js (next)
+- ✅ Convert lint_equation_labels.py → lint_equation_labels.js (COMPLETE!)
+- **All linters now JavaScript!**
 
 ### Phase 5: Specialized Scripts (Future Work)
 - Convert remaining specialized scripts as needed

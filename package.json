@@ -65,9 +65,10 @@
     "lint:fix": "node scripts/lint_myst_markdown.js --fix",
     "lint:quiet": "node scripts/lint_myst_markdown.js --quiet",
     "lint:python": "python3 scripts/lint_myst_markdown.py",
-    "lint:equations": "python3 scripts/lint_equation_labels.py",
-    "lint:equations:fix": "python3 scripts/lint_equation_labels.py --fix",
-    "lint:equations:verbose": "python3 scripts/lint_equation_labels.py --verbose"
+    "lint:equations": "node scripts/lint_equation_labels.js",
+    "lint:equations:fix": "node scripts/lint_equation_labels.js --fix",
+    "lint:equations:verbose": "node scripts/lint_equation_labels.js --verbose",
+    "lint:equations:python": "python3 scripts/lint_equation_labels.py"
   },
   "devDependencies": {
     "@types/jest": "^30.0.0",
