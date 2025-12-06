@@ -7,1558 +7,824 @@ tags:
 (appendix:glossary)=
 # Glossary of Optical Terms
 
-This glossary provides concise definitions of key terms used throughout this optics textbook. Terms are organized alphabetically for easy reference.
+This glossary provides concise definitions of key terms used throughout this optics textbook. Terms are presented in alphabetical order for easy reference.
 
-## A
+```{glossary}
 
-**Aberration**
-A departure from ideal behavior in an optical system where the system fails to focus all rays to a single point, resulting in image degradation.
+Aberration
+:  A departure from ideal behavior in an optical system where the system fails to focus all rays to a single point.
 
-**Absorption**
-The process by which light energy is converted to other forms (typically heat) as it passes through a material.
+Absorption
+:  The process by which light energy is converted to other forms, typically heat, as it passes through a material.
 
-**Accommodation**
-The ability of the eye to adjust its focal length to focus on objects at different distances by changing the shape of the lens.
+Accommodation
+:  The ability of the eye to adjust its focal length to focus on objects at different distances by changing lens shape.
 
-**Amplitude**
-The maximum displacement of a wave from its equilibrium position; determines the intensity of light.
+Amplitude
+:  The maximum displacement of a wave from its equilibrium position; determines the intensity of light.
 
-**Angstrom (Å)**
-A unit of length equal to 10⁻¹⁰ meters, commonly used to measure wavelengths of ultraviolet and visible light.
+Angstrom
+:  A unit of length equal to 10⁻¹⁰ meters, used to measure wavelengths of ultraviolet and visible light.
 
-**Angular Frequency (ω)**
-The rate of phase change per unit time, measured in radians per second, related to frequency by ω = 2πν.
+Angular Frequency
+:  The rate of phase change per unit time, measured in radians per second.
 
-**Anisotropic**
-A material whose optical properties (such as refractive index) depend on the direction of light propagation.
+Anisotropic
+:  A material whose optical properties depend on the direction of light propagation.
 
-**Antireflection Coating**
-A thin film applied to optical surfaces to reduce reflection through destructive interference.
+Antireflection Coating
+:  A thin film applied to optical surfaces to reduce reflection through destructive interference.
 
-## B
+Bandwidth
+:  The range of frequencies contained in a signal; determines the coherence length of light.
 
-**Bandwidth**
-The range of frequencies contained in a signal; determines the coherence length of light.
+Beam Splitter
+:  An optical device that divides light into two components, one reflected and one transmitted.
 
-**Beam Splitter**
-An optical device that divides light into two components, one reflected and one transmitted.
+Birefringence
+:  The property of certain materials to have two different refractive indices depending on polarization direction.
 
-**Birefringence**
-The property of certain materials to have two different refractive indices depending on the polarization and direction of light propagation.
+Brewster's Angle
+:  The angle of incidence at which reflected light is completely polarized.
 
-**Brewster's Angle**
-The angle of incidence at which reflected light is completely polarized, given by θB = arctan(n₂/n₁).
+Candela
+:  The SI unit of luminous intensity, measuring the perceived brightness of light.
 
-## C
+Coherence
+:  A measure of the correlation between different points in a light field.
 
-**Candela (cd)**
-The SI unit of luminous intensity, measuring the perceived brightness of light by the human eye.
+Coherence Length
+:  The length over which light maintains sufficient coherence to produce interference patterns.
 
-**Coherence**
-A measure of the correlation between different points in a light field, describing whether the light exhibits wave-like interference patterns.
+Coherence Time
+:  The duration over which a light wave maintains coherence.
 
-**Coherence Length**
-The length over which light maintains sufficient coherence to produce interference patterns, inversely related to spectral width.
+Collimation
+:  The process of making light rays parallel using a lens or mirror.
 
-**Coherence Time**
-The duration over which a light wave maintains coherence, related to coherence length by c·τc.
+Confocal Microscopy
+:  An advanced microscopy technique using a pinhole aperture to eliminate out-of-focus light.
 
-**Collimation**
-The process of making light rays parallel, typically using a lens or mirror to convert diverging light to parallel light.
+Constructive Interference
+:  The superposition of waves resulting in amplitude greater than any individual wave.
 
-**Confocal Microscopy**
-An advanced microscopy technique using a pinhole aperture to eliminate out-of-focus light, improving axial resolution.
+Cornea
+:  The transparent front surface of the eye that provides most of the refractive power.
 
-**Constructive Interference**
-The superposition of waves resulting in an amplitude greater than any individual wave, occurring when waves are in phase.
+Corpuscular Theory
+:  Newton's theory of light as consisting of streams of particles (photons).
 
-**Cornea**
-The transparent front surface of the eye that provides most of the refractive power for focusing light.
+Critical Angle
+:  The minimum angle of incidence at which total internal reflection occurs.
 
-**Corpuscular Theory**
-Newton's theory of light as consisting of streams of particles (photons), in contrast to the wave theory.
+Crystalline Lens
+:  The flexible lens in the eye behind the cornea that adjusts its curvature.
 
-**Critical Angle**
-The minimum angle of incidence at which total internal reflection occurs, given by θc = arcsin(n₂/n₁).
+Cylindrical Lens
+:  A lens with curved surface in one direction, focusing light differently in perpendicular directions.
 
-**Crystalline Lens**
-The flexible lens in the eye behind the cornea that adjusts its curvature for accommodation.
+Degree of Coherence
+:  A quantitative measure between 0 and 1 describing the visibility of interference fringes.
 
-**Cylindrical Lens**
-A lens with curved surface(s) only in one direction, focusing light differently in perpendicular directions.
+Degree of Polarization
+:  A measure between 0 and 1 describing what fraction of light is polarized versus unpolarized.
 
-## D
+Destructive Interference
+:  The superposition of waves resulting in amplitude smaller than the largest individual wave.
 
-**Degenerate**
-A state where multiple quantum levels have the same energy, or where multiple modes exist at the same frequency.
+Dichroic Mirror
+:  An optical mirror that reflects certain wavelengths while transmitting others.
 
-**Degree of Coherence**
-A quantitative measure between 0 and 1 describing the visibility of interference fringes.
+Diffraction
+:  The bending and spreading of light waves when passing through an aperture or around an obstacle.
 
-**Degree of Polarization**
-A measure between 0 and 1 describing what fraction of light is polarized versus unpolarized.
+Diffraction Grating
+:  A periodic structure with many slits or grooves that creates a diffraction pattern.
 
-**Destructive Interference**
-The superposition of waves resulting in an amplitude smaller than the largest individual wave, occurring when waves are out of phase.
+Diopter
+:  A unit of optical power equal to the reciprocal of focal length in meters.
 
-**Dichroic Mirror**
-An optical mirror that reflects certain wavelengths while transmitting others, commonly used in fluorescence microscopy.
+Dipole Moment
+:  A measure of the separation of positive and negative charge in an atom or molecule.
 
-**Diffraction**
-The bending and spreading of light waves when passing through an aperture or around an obstacle, due to wave nature of light.
+Dispersion
+:  The dependence of refractive index on wavelength.
 
-**Diffraction Grating**
-A periodic structure with many slits or reflective grooves that creates a diffraction pattern through interference.
+Divergence
+:  The spreading apart of light rays, characterized by increasing beam diameter with distance.
 
-**Diopter**
-A unit of optical power equal to the reciprocal of focal length in meters; used to specify lens strength.
+Evanescent Wave
+:  A non-propagating electromagnetic wave that decays exponentially from an interface.
 
-**Dipole Moment**
-A measure of the separation of positive and negative charge in an atom or molecule, important for understanding light-matter interaction.
+Extinction Ratio
+:  The ratio of transmitted light in one polarization state to the orthogonal state.
 
-**Dispersion**
-The dependence of refractive index on wavelength, causing different colors to travel at different speeds in a medium.
+Eye
+:  The biological optical instrument sensitive to visible light that forms images on the retina.
 
-**Divergence**
-The spreading apart of light rays, characterized by increasing beam diameter with distance from source.
+Fabry-Perot Interferometer
+:  An optical cavity formed by two parallel partially reflective surfaces.
 
-## E
+Far Field
+:  The region far from a source where light propagates as plane waves.
 
-**Earlobe**
-Not an optical term—included to note that optical instruments must be properly aligned!
+Fermat's Principle
+:  The principle that light travels between two points along the path of least or stationary time.
 
-**Evanescent Wave**
-A non-propagating electromagnetic wave that decays exponentially with distance from the interface at which it is generated, present in frustrated total internal reflection.
+Fiber Optics
+:  The technology of transmitting light through flexible fibers via total internal reflection.
 
-**Extinction Ratio**
-The ratio of transmitted light in one polarization state to the orthogonal polarization state for a polarizer.
+Field of View
+:  The angular extent of the observable world that an optical instrument can see.
 
-**Eye**
-The biological optical instrument sensitive to visible light (approximately 380-700 nm) that forms images on the retina.
+Filament
+:  The heated wire in an incandescent lamp that emits light through thermal radiation.
 
-## F
+Fluorescence
+:  The emission of light by a substance that has absorbed light or other radiation.
 
-**Fabry-Perot Interferometer**
-An optical cavity formed by two parallel partially reflective surfaces that creates sharp interference patterns through multiple reflections.
+Focal Length
+:  The distance from a lens or mirror to its focal point where parallel rays converge.
 
-**Far Field**
-The region far from a source where light propagates as plane waves, used in Fraunhofer diffraction analysis.
+Focal Point
+:  The location where light rays converge after passing through a lens or reflecting from a mirror.
 
-**Fermat's Principle**
-The principle that light travels between two points along the path that takes the least or stationary time.
+f-number
+:  The ratio of focal length to aperture diameter, characterizing the light gathering ability.
 
-**Fiber Optics**
-The technology of transmitting light through flexible transparent fibers via total internal reflection.
+Fraunhofer Diffraction
+:  Diffraction pattern observed far from an aperture where wavefronts are approximately planar.
 
-**Field of View (FOV)**
-The angular extent of the observable world that an optical instrument can see.
+Frequency
+:  The number of oscillations per unit time, measured in Hertz.
 
-**Filament**
-The heated wire in an incandescent lamp that emits light through thermal radiation.
+Fresnel Equations
+:  The equations describing the amplitude and phase of reflected and transmitted waves.
 
-**Fluorescence**
-The emission of light by a substance that has absorbed light or other radiation, with emission occurring within microseconds.
+Fresnel Lens
+:  A lens designed as concentric rings that approximates a thicker lens with reduced weight.
 
-**Focal Length**
-The distance from a lens or mirror to its focal point where parallel rays converge.
+Fresnel Rhomb
+:  A prism used to convert linear polarization to circular polarization.
 
-**Focal Point (Focus)**
-The location where light rays converge after passing through a lens or reflecting from a mirror.
+Fresnel Zone
+:  Imaginary circular zones in the Fresnel diffraction pattern.
 
-**f-number**
-The ratio of focal length to aperture diameter (f/# = f/D), characterizing the light gathering ability of an optical system.
+Fringe
+:  An alternating dark and bright band in an interference or diffraction pattern.
 
-**Fraunhofer Diffraction**
-Diffraction pattern observed far from an aperture or obstacle where wavefronts are approximately planar.
+Frustrated Total Internal Reflection
+:  The partial transmission of light that would otherwise be totally internally reflected.
 
-**Frequency (ν)**
-The number of oscillations per unit time, measured in Hertz (Hz); relates to wavelength by c = λν.
+Gain Medium
+:  The material in a laser that amplifies light through stimulated emission.
 
-**Fresnel Equations**
-The equations describing the amplitude and phase of reflected and transmitted waves at an interface.
+Gaussian Beam
+:  A beam whose electric field amplitude varies as a Gaussian function.
 
-**Fresnel Lens**
-A lens designed as a series of concentric rings that approximates the behavior of a thicker lens with reduced weight and thickness.
+Geometrical Optics
+:  The study of light propagation using ray concepts.
 
-**Fresnel Rhomb**
-A prism used to convert linear polarization to circular polarization through total internal reflection.
+Glare
+:  Excessive brightness in the visual field that reduces contrast and causes discomfort.
 
-**Fresnel Zone**
-Imaginary circular zones in the Fresnel diffraction pattern, where successive zones differ in phase by π.
+Gradient Index
+:  An optical material where the refractive index varies spatially.
 
-**Fringe**
-An alternating dark and bright band in an interference or diffraction pattern.
+Grating Equation
+:  The equation d sin(θ) = mλ relating diffraction angle, groove spacing, and wavelength.
 
-**Frustrated Total Internal Reflection (FTIR)**
-The partial transmission of light that would otherwise be totally internally reflected when the external medium is brought very close to the surface.
+Group Velocity
+:  The velocity at which the envelope of a wave packet propagates.
 
-## G
+Half-Wave Plate
+:  A wave plate that introduces a phase difference of π between orthogonal components.
 
-**Gain Medium**
-The material in a laser that amplifies light through stimulated emission (also called active medium).
+Harmonic Oscillation
+:  Motion described by simple sinusoidal functions, fundamental to wave theory.
 
-**Gaussian Beam**
-A beam whose electric field amplitude varies as a Gaussian function in the transverse direction, common in lasers.
+Huygens' Principle
+:  The principle that each point on a wavefront acts as a source of secondary wavelets.
 
-**Geometrical Optics**
-The study of light propagation using ray concepts, valid when wavelength is much smaller than system dimensions.
+Hyperopia
+:  Farsightedness; a refractive error where the eye has difficulty focusing on nearby objects.
 
-**Glare**
-Excessive brightness in the visual field that reduces contrast and causes discomfort.
+Illuminance
+:  The luminous flux incident on a surface per unit area, measured in lux.
 
-**Gradient Index (GRIN)**
-An optical material where the refractive index varies spatially, bending rays in curved paths.
+Incoherent Light
+:  Light where the phase relationships between different points are random.
 
-**Grating Equation**
-The equation d sin(θ) = mλ relating the diffraction angle, groove spacing, wavelength, and order.
+Index Matching
+:  The technique of using immersion fluids to match refractive indices and reduce reflections.
 
-**Group Velocity**
-The velocity at which the envelope of a wave packet propagates, given by vg = c/ng where ng is the group refractive index.
+Intensity
+:  The time-averaged power per unit area of a light beam.
 
-## H
+Interference
+:  The superposition of two or more waves resulting in a pattern of reinforcement and cancellation.
 
-**Half-Wave Plate**
-A wave plate that introduces a phase difference of π between orthogonal polarization components.
+Interferometer
+:  An optical instrument that uses interference of light to make precise measurements.
 
-**Harmonic Oscillation**
-Motion described by simple sinusoidal functions, fundamental to wave theory of light.
+Iris
+:  The colored, adjustable diaphragm of the eye that controls pupil diameter.
 
-**Huygens' Principle**
-The principle that each point on a wavefront acts as a source of secondary wavelets whose envelope forms the new wavefront.
+Isotropic
+:  A material whose optical properties are the same in all directions.
 
-**Hyperopia**
-Farsightedness; a refractive error where the eye is too short or the cornea too flat, causing difficulty focusing on nearby objects.
+Jones Matrix
+:  A 2×2 matrix used to represent the effect of an optical element on polarization.
 
-## I
+Jones Vector
+:  A two-component complex vector describing the polarization state of light.
 
-**Illuminance**
-The luminous flux incident on a surface per unit area, measured in lux.
+Kerr Effect
+:  The nonlinear optical effect where an electric field induces birefringence.
 
-**Incoherent Light**
-Light where the phase relationships between different points or frequencies are random or constantly changing.
+Laser
+:  Light Amplification by Stimulated Emission of Radiation; a device that produces coherent light.
 
-**Index Matching**
-The technique of using immersion fluids or optical coatings to match refractive indices and reduce reflections.
+Lasing Threshold
+:  The pump power level above which a laser begins to produce coherent light output.
 
-**Intensity**
-The time-averaged power per unit area of a light beam, proportional to the square of the amplitude.
+Lateral Magnification
+:  The ratio of image size to object size in the transverse direction.
 
-**Interference**
-The superposition of two or more waves resulting in a pattern of reinforcement and cancellation.
+Lens
+:  An optical element that refracts light to focus or diverge it.
 
-**Interferometer**
-An optical instrument that uses interference of light to make precise measurements.
+Lens Maker's Equation
+:  The equation relating focal length to refractive index and radii of curvature.
 
-**Iris**
-The colored, adjustable diaphragm of the eye that controls the diameter of the pupil to regulate light entering the eye.
+Light
+:  Electromagnetic radiation visible to the human eye, roughly 380-700 nm wavelength.
 
-**Isotropic**
-A material whose optical properties are the same in all directions.
+Linearly Polarized Light
+:  Light where the electric field oscillates along a fixed direction perpendicular to propagation.
 
-## J
+Lloyd's Mirror
+:  A simple interferometer using a mirror at grazing incidence.
 
-**Jones Matrix**
-A 2×2 matrix used to represent the effect of an optical element on the polarization state of light.
+Longitudinal Mode
+:  A standing wave pattern along the direction of propagation in a laser cavity.
 
-**Jones Vector**
-A two-component complex vector describing the polarization state of light.
+Lumen
+:  The SI unit of luminous flux.
 
-## K
+Luminance
+:  The luminous intensity per unit projected area of a light source.
 
-**Kerr Effect**
-The nonlinear optical effect where an electric field induces birefringence in a material.
+Luminous Efficiency
+:  The ratio of luminous flux to radiant flux.
 
-**Kilovolt (kV)**
-A unit of electrical potential equal to 1000 volts, used in X-ray tube specifications.
+Luminous Flux
+:  The total perceived power of light emission, measured in lumens.
 
-## L
+Lux
+:  The SI unit of illuminance, equal to one lumen per square meter.
 
-**Laser**
-Light Amplification by Stimulated Emission of Radiation; a device that produces coherent, monochromatic light.
+Magnification
+:  The ratio of image size to object size.
 
-**Lasing Threshold**
-The pump power level above which a laser begins to produce coherent light output.
+Magnifying Glass
+:  A simple magnifier using a single converging lens to produce a magnified image.
 
-**Lateral Magnification**
-The ratio of image size to object size in the transverse direction, given by m = -s'/s.
+Material Dispersion
+:  The variation of refractive index with wavelength in a material.
 
-**Lens**
-An optical element that refracts light to focus or diverge it, typically with spherical surfaces.
+Maxwell's Equations
+:  Four fundamental equations describing electric and magnetic fields.
 
-**Lens Maker's Equation**
-The equation relating focal length to refractive index and radii of curvature: 1/f = (n-1)[1/R₁ - 1/R₂].
+Meridional Ray
+:  A ray that passes through the optical axis of the system.
 
-**Lens-to-Film Distance**
-In imaging, the distance from the lens to the image plane, related to object distance and focal length by the lens equation.
+Michelson Interferometer
+:  An interferometer using a beam splitter and two mirrors.
 
-**Light**
-Electromagnetic radiation visible to the human eye, roughly 380-700 nm wavelength.
+Microscope
+:  An optical instrument that magnifies small objects.
 
-**Light Cone**
-In special relativity, the set of all possible light paths from a given event in spacetime.
+Microwaves
+:  Electromagnetic radiation with wavelengths from about 1 mm to 1 m.
 
-**Linearly Polarized Light**
-Light where the electric field oscillates along a fixed direction perpendicular to propagation.
+Mode
+:  A discrete solution to Maxwell's equations in a cavity.
 
-**Lloyd's Mirror**
-A simple interferometer using a mirror at grazing incidence to create interference between direct and reflected waves.
+Modulation
+:  The process of varying amplitude, frequency, or phase of a carrier wave.
 
-**Longitudinal Mode**
-A standing wave pattern along the direction of propagation in a laser cavity.
+Monochromatic
+:  Light consisting of a single wavelength or very narrow range.
 
-**Longitudinal Spherical Aberration**
-The variation in axial position of the focus for different zones of a lens.
+Nanometer
+:  A unit of length equal to 10⁻⁹ meters.
 
-**Lumen (lm)**
-The SI unit of luminous flux, equal to the light output from a candle in one steradian.
+Near Field
+:  The region close to a source where light propagates in a complex pattern.
 
-**Luminance**
-The luminous intensity per unit projected area of a light source, measured in candelas per square meter.
+Near Point
+:  The closest distance at which the eye can focus clearly.
 
-**Luminous Efficiency**
-The ratio of luminous flux to radiant flux, accounting for human eye sensitivity.
+Nearsightedness
+:  A refractive error where the eye has difficulty focusing on distant objects.
 
-**Luminous Flux**
-The total perceived power of light emission, measured in lumens.
+Negative Lens
+:  A diverging lens (thicker at edges than center) with negative focal length.
 
-**Lux (lx)**
-The SI unit of illuminance, equal to one lumen per square meter.
+Neutral Density Filter
+:  A filter that reduces light intensity equally across all wavelengths.
 
-## M
+Newton's Rings
+:  Concentric circular interference pattern formed between a plano-convex lens and flat surface.
 
-**Magnification**
-The ratio of image size (or apparent angular size) to object size, characterized by lateral and angular magnification.
+Nonlinear Optics
+:  The study of light interaction with matter where response is not linear.
 
-**Magnifying Glass**
-A simple magnifier using a single converging lens to produce a virtual magnified image.
+Nonpolarized Light
+:  Light with random, time-varying polarization at all points.
 
-**Material Dispersion**
-The variation of refractive index with wavelength in a material.
+Normal Incidence
+:  Light hitting a surface perpendicular to the surface.
 
-**Maxwell's Equations**
-Four fundamental equations describing the behavior of electric and magnetic fields and their interaction with charges and currents.
+Normal Dispersion
+:  The case where refractive index decreases with increasing wavelength.
 
-**Meridional Ray**
-A ray that passes through the optical axis of the system.
+Numerical Aperture
+:  A dimensionless number characterizing the range of angles focused by a lens.
 
-**Michelson Interferometer**
-An interferometer using a beam splitter and two mirrors to create interference patterns sensitive to path differences.
+Objective Lens
+:  The lens in a microscope closest to the object being observed.
 
-**Microscope**
-An optical instrument that magnifies small objects to produce a larger visible image.
+Oblique Incidence
+:  Light hitting a surface at an angle other than 90° to the surface normal.
 
-**Microwaves**
-Electromagnetic radiation with wavelengths from about 1 mm to 1 m.
+Optical Activity
+:  The ability of a substance to rotate the plane of polarization of light.
 
-**Mode**
-A discrete solution to Maxwell's equations in a cavity, characterized by resonance condition.
+Optical Axis
+:  The line passing through the centers of curvature of optical elements.
 
-**Mode Coupling**
-The interaction between different cavity modes that can exchange energy.
+Optical Bench
+:  A precision apparatus for arranging optical components.
 
-**Modulation**
-The process of varying amplitude, frequency, or phase of a carrier wave to encode information.
+Optical Cavity
+:  An enclosed volume that supports standing electromagnetic waves.
 
-**Modulation Index**
-The degree to which the amplitude or phase of a carrier is varied.
+Optical Fiber
+:  A thin transparent strand of glass or plastic that guides light.
 
-**Moiré Pattern**
-An interference pattern created by overlapping periodic structures with slightly different periods or orientations.
+Optical Microscope
+:  A microscope using light and lenses to magnify small objects.
 
-**Molar Absorptivity**
-A measure of how strongly a substance absorbs light at a particular wavelength.
+Optical Power
+:  The ability of a lens or mirror to converge or diverge light.
 
-**Monochromatic**
-Light consisting of a single wavelength or very narrow range of wavelengths.
+Optical Pumping
+:  The process of exciting atoms or ions using light, used in lasers.
 
-## N
+Optical Rotation
+:  The rotation of the polarization direction of linearly polarized light.
 
-**Nanometer (nm)**
-A unit of length equal to 10⁻⁹ meters, used to measure visible light wavelengths (380-700 nm).
+Optical Thickness
+:  The product of geometric thickness and refractive index.
 
-**Near Field**
-The region close to a source where light propagates in a complex pattern with evanescent components, used in Fresnel diffraction.
+Optics
+:  The branch of physics dealing with light and its applications.
 
-**Near Point**
-The closest distance at which the eye can focus clearly, typically about 25 cm for normal adults.
+Ordinary Ray
+:  In birefringent materials, the ray without the anomalous refractive index.
 
-**Nearsightedness (Myopia)**
-A refractive error where the eye is too long or the cornea too curved, causing difficulty focusing on distant objects.
+Order of Interference
+:  An integer m labeling the maxima in an interference pattern.
 
-**Negative Lens**
-A diverging lens (thicker at edges than center) with negative focal length.
+Paraxial Approximation
+:  The approximation valid for rays making small angles with the optical axis.
 
-**Neutral Density Filter**
-A filter that reduces light intensity equally across all wavelengths without changing color.
+Paraxial Optics
+:  The analysis of optical systems using the paraxial approximation.
 
-**Newton's Rings**
-Concentric circular interference pattern formed between a plano-convex lens and a flat surface.
+Partial Coherence
+:  A situation where light exhibits partial correlation.
 
-**Nodal Plane**
-A surface where the amplitude of a standing wave is zero.
+Partially Polarized Light
+:  Light that is a superposition of polarized and unpolarized light.
 
-**Noise**
-Unwanted random fluctuations in a signal.
+Particle Nature of Light
+:  The description of light as consisting of discrete photons.
 
-**Nonlinear Optics**
-The study of light interaction with matter where the response is not linear with intensity.
+Path Difference
+:  The difference in optical path lengths traveled by two light rays.
 
-**Nonpolarized Light**
-Light with random, time-varying polarization at all points.
+Phase
+:  The position within a wave cycle, measured in radians or degrees.
 
-**Normal Incidence**
-Light hitting a surface perpendicular to the surface (angle of incidence = 0°).
+Phase Contrast Microscopy
+:  A microscopy technique converting phase information into amplitude information.
 
-**Normal Dispersion**
-The typical case where refractive index decreases with increasing wavelength.
+Phase Velocity
+:  The velocity of a wave surface of constant phase.
 
-**Numerical Aperture (NA)**
-A dimensionless number characterizing the range of angles that can be focused by a lens, NA = n sin(θ).
+Photometry
+:  The measurement and science of visible light.
 
-## O
+Photon
+:  A quantum of light with energy E = hν.
 
-**Objective Lens**
-The lens in a microscope or telescope closest to the object being observed, responsible for primary magnification.
+Photosynthesis
+:  The biological process by which plants convert light energy into chemical energy.
 
-**Oblique Incidence**
-Light hitting a surface at an angle other than 90° to the surface normal.
+Planck's Constant
+:  The fundamental constant relating energy and frequency, h = 6.626 × 10⁻³⁴ J·s.
 
-**Optical Activity**
-The ability of a substance to rotate the plane of polarization of linearly polarized light.
+Plane Wave
+:  A wave where the phase is constant on surfaces perpendicular to propagation.
 
-**Optical Axis**
-The line passing through the centers of curvature of optical elements in a system.
+Polarimeter
+:  An instrument for measuring the degree and direction of polarization.
 
-**Optical Bench**
-A precision apparatus for arranging optical components in an aligned configuration for experiments and measurements.
+Polarization
+:  The orientation and type of oscillation of the electric field vector.
 
-**Optical Cavity (Resonator)**
-An enclosed volume that supports standing electromagnetic waves at particular resonant frequencies.
+Polarization Analyzer
+:  An optical element that measures the polarization state of light.
 
-**Optical Density**
-See optical thickness; a measure of the refractive index of a material.
+Polarizer
+:  An optical element that converts unpolarized light into polarized light.
 
-**Optical Fiber**
-A thin transparent strand of glass or plastic that guides light via total internal reflection.
+Principal Planes
+:  For thick lenses, the planes where the lens can be treated as thin.
 
-**Optical Isomerism**
-The existence of compounds that are mirror images of each other.
+Principal Points
+:  Special points on the optical axis including focal points.
 
-**Optical Microscope**
-A microscope using light and lenses to magnify small objects.
+Prism
+:  A transparent optical element with flat surfaces.
 
-**Optical Power**
-The ability of a lens or mirror to converge or diverge light, measured in diopters.
+Propagation Constant
+:  In waveguides, related to wavelength by β = 2π/λ.
 
-**Optical Pumping**
-The process of exciting atoms or ions to higher energy states using light, used in lasers.
+Pupil
+:  The opening in the iris through which light enters the eye.
 
-**Optical Rotation**
-The rotation of the polarization direction of linearly polarized light as it passes through an optically active material.
+Quantum Efficiency
+:  The ratio of charge carriers generated to incident photons.
 
-**Optical Thickness (Optical Path Length)**
-The product of geometric thickness and refractive index, t = n·d, determining phase accumulated through a material.
+Quantum Mechanics
+:  The theory describing the behavior of matter and light at atomic scales.
 
-**Optically Isotropic**
-A material that exhibits identical optical properties in all directions.
+Quarter-Wave Plate
+:  A wave plate introducing a phase difference of π/2 between orthogonal components.
 
-**Optics**
-The branch of physics dealing with light and its propagation, interaction with matter, and applications in optical instruments.
+Radiance
+:  The radiant intensity per unit projected area.
 
-**Ordinary Ray (o-ray)**
-In birefringent materials, the ray that does not experience the anomalous refractive index.
+Radiant Energy
+:  The total energy of electromagnetic radiation, measured in joules.
 
-**Order of Interference**
-An integer m labeling the maxima in an interference pattern, corresponding to path differences of mλ.
+Radiant Flux
+:  The total power of electromagnetic radiation, measured in watts.
 
-**Oscillation**
-A repetitive variation of a quantity about an equilibrium value.
+Radiant Intensity
+:  The radiant power per unit solid angle.
 
-## P
+Radiation Pressure
+:  The momentum transfer from photons to matter.
 
-**Paraxial Approximation**
-The approximation valid for rays making small angles with the optical axis, where sin(θ) ≈ θ and cos(θ) ≈ 1.
+Radiometry
+:  The measurement science for electromagnetic radiation.
 
-**Paraxial Ray Equation**
-The differential equation governing ray propagation in the paraxial approximation.
+Radius of Curvature
+:  The radius of the spherical surface approximating a curved optical element.
 
-**Paraxial Optics**
-The analysis of optical systems using the paraxial approximation, valid for small angles.
+Rayleigh Criterion
+:  The criterion for resolution of two point sources.
 
-**Partial Coherence**
-A situation where light exhibits partial correlation between different points or frequencies.
+Rayleigh Scattering
+:  Scattering of light by particles much smaller than the wavelength.
 
-**Partially Polarized Light**
-Light that is a superposition of polarized and unpolarized light components.
+Ray
+:  In geometrical optics, a line indicating the direction of light propagation.
 
-**Particle Nature of Light**
-The description of light as consisting of discrete photons, relevant for light-matter interactions.
+Ray Matrix
+:  A 2×2 matrix describing the transformation of ray position and angle.
 
-**Path Difference**
-The difference in optical path lengths traveled by two light rays, determining interference.
+Reciprocity Theorem
+:  The principle that the path of light through an optical system is reversible.
 
-**Phase**
-The position within a wave cycle, measured in radians or degrees.
+Rectilinear Propagation
+:  The principle that light travels in straight lines in uniform media.
 
-**Phase Contrast Microscopy**
-A microscopy technique that converts phase information into amplitude information for improved contrast of transparent specimens.
+Refracting Telescope
+:  A telescope using lenses to focus light.
 
-**Phase Matching**
-In nonlinear optics, the condition where interacting waves maintain constant phase relationship.
+Refraction
+:  The change in direction of light when passing from one medium to another.
 
-**Phase Velocity**
-The velocity of a wave surface of constant phase, given by vp = c/n.
+Refractive Index
+:  The ratio of the speed of light in vacuum to its speed in a medium.
 
-**Photometry**
-The measurement and science of visible light, accounting for human eye sensitivity.
+Reflectance
+:  The fraction of incident light reflected by a surface.
 
-**Photon**
-A quantum of light with energy E = hν and momentum p = h/λ.
+Reflection
+:  The change in direction of light when bouncing off a surface.
 
-**Photorefractive Effect**
-A nonlinear optical effect where light creates a persistent refractive index grating.
+Reflector
+:  An optical element used to reflect light.
 
-**Photosynthesis**
-The biological process by which plants convert light energy into chemical energy.
+Regular Reflection
+:  Reflection from a smooth surface where angle of incidence equals angle of reflection.
 
-**Phototransistor**
-A semiconductor device that converts photons into electrical current.
+Resolution
+:  The ability to distinguish between two closely spaced objects.
 
-**Photovoltaic Effect**
-The generation of electrical current when light strikes certain materials.
+Resonance
+:  The enhancement of response at a frequency matching the natural oscillation frequency.
 
-**Pinhole**
-A small aperture that approximates a point source of light or serves to block aberrated light in confocal microscopy.
+Resonant Cavity
+:  An enclosed region supporting standing waves at discrete resonant frequencies.
 
-**Pixel**
-The smallest addressable element of a digital image.
+Retina
+:  The light-sensitive tissue at the back of the eye.
 
-**Planck's Constant (h)**
-The fundamental constant relating energy and frequency of photons, h = 6.626 × 10⁻³⁴ J·s.
+Rods and Cones
+:  The photoreceptor cells in the retina.
 
-**Plane Wave**
-A wave where the phase is constant on surfaces perpendicular to the propagation direction.
+Sagittal Ray
+:  A ray in an optical system that does not pass through the optical axis.
 
-**Plasma**
-A state of matter where gas is ionized to form a conducting medium of ions and electrons.
+Saturation
+:  In lasers, the condition where further pump power increases produce no additional output.
 
-**Plate**
-In fiber optics, a flat optical element; also used in wave plates for polarization control.
+Scalar Diffraction Theory
+:  The approximation treating light as a scalar wave.
 
-**Polarimeter**
-An instrument for measuring the degree and direction of polarization of light.
+Scattering
+:  The redirection of light in many directions by small particles.
 
-**Polarization**
-The orientation and type of oscillation of the electric field vector in a light wave.
+Semiconductor
+:  A material used in photodetectors and laser diodes.
 
-**Polarization Analyzer**
-An optical element that measures the polarization state of light.
+Singlet
+:  An electronic state with antiparallel electron spins.
 
-**Polarizer**
-An optical element that converts unpolarized or partially polarized light into polarized light.
+Snell's Law
+:  The law of refraction relating angles on either side of an interface.
 
-**Polaroid**
-A commercial polarizing material based on oriented polymer films or dichroic crystals.
+Solid Angle
+:  The three-dimensional angle measured in steradians.
 
-**Pole**
-In optical systems, the intersection of a meridional ray with the optical axis.
+Solid State Laser
+:  A laser using a crystalline or glass host medium doped with active ions.
 
-**Positive Lens**
-A converging lens (thicker at center than edges) with positive focal length.
+Soliton
+:  A self-reinforcing wave that maintains its shape while propagating.
 
-**Principal Planes**
-For thick lenses, the two planes where the lens can be treated as a thin lens for ray tracing purposes.
+Source
+:  The origin of light, such as a light bulb or laser.
 
-**Principal Points**
-Special points on the optical axis including focal points and principal planes.
+Spatial Coherence
+:  The correlation of phase between different points across the wavefront.
 
-**Principal Ray**
-A ray in an optical system used for ray tracing; typically passes through the center of the entrance pupil.
+Spatial Filter
+:  An aperture passing only diffraction-limited light.
 
-**Prism**
-A transparent optical element with flat surfaces used to refract, reflect, or disperse light.
+Spectral Distribution
+:  The power per unit wavelength interval for a light source.
 
-**Proof**
-A rigorous mathematical or logical demonstration of a statement's validity.
+Spectral Purity
+:  A measure of how monochromatic light is.
 
-**Propagation Constant (β)**
-In waveguides, the imaginary part of the wave vector k = β + iα, related to wavelength by β = 2π/λ.
+Spectrometer
+:  An instrument for measuring the spectral distribution of light.
 
-**Pupil (eye)**
-The opening in the iris through which light enters the eye.
+Spectroscopy
+:  The study of interaction between light and matter.
 
-**Pupil (optical)**
-The image of an aperture stop as seen from object space (entrance pupil) or image space (exit pupil).
+Spectrum
+:  The distribution of power or intensity as a function of wavelength or frequency.
 
-**Purity of Polarization**
-A measure of how monochromatic the polarized component of partially polarized light is.
+Specular Reflection
+:  Reflection from a smooth surface.
 
-## Q
+Spherical Aberration
+:  Aberration where different zones of a lens have different focal lengths.
 
-**Quantum Efficiency**
-The ratio of charge carriers generated to incident photons in a photodetector.
+Spherical Mirror
+:  A mirror with a spherical surface.
 
-**Quantum Mechanics**
-The theory describing the behavior of matter and light at atomic scales.
+Spherical Wavefront
+:  A curved wavefront diverging from or converging to a point.
 
-**Quarter-Wave Plate**
-A wave plate introducing a phase difference of π/2 between orthogonal polarization components, converting linear to circular polarization or vice versa.
+Spontaneous Emission
+:  The random emission of photons by excited atoms.
 
-**Quartz**
-A transparent crystalline form of silicon dioxide (SiO₂) commonly used in optical applications due to its good transparency and low birefringence.
+Standing Wave
+:  An electromagnetic wave pattern where the field oscillates in place.
 
-## R
+Step Index Fiber
+:  An optical fiber with a sharp refractive index step.
 
-**Radial Mode**
-A standing wave pattern with variation in the radial direction in a laser cavity.
+Stokes Parameters
+:  Four real parameters completely describing the polarization state.
 
-**Radiance**
-The radiant intensity per unit projected area, measured in watts per steradian per square meter.
+Stokes Shift
+:  The difference between absorbed and emitted photon energies.
 
-**Radiant Energy**
-The total energy of electromagnetic radiation, measured in joules.
+Stop
+:  An aperture in an optical system that limits the size of light beams.
 
-**Radiant Flux (Radiant Power)**
-The total power of electromagnetic radiation, measured in watts.
+Stress-Optic Effect
+:  The change in refractive index due to mechanical stress.
 
-**Radiant Intensity**
-The radiant power per unit solid angle, measured in watts per steradian.
+Superposition
+:  The principle that multiple waves combine by adding their amplitudes.
 
-**Radiation Pressure**
-The momentum transfer from photons to matter, causing a force proportional to the intensity.
+Susceptibility
+:  The response of a material to an applied optical field.
 
-**Radiometry**
-The measurement science for electromagnetic radiation across all wavelengths.
+Temporal Coherence
+:  The correlation of phase at a single point over different times.
 
-**Radium**
-A radioactive element that emits radiation used historically in luminous watch dials.
+Thermal Lens Effect
+:  The lens-like behavior developing in a material due to non-uniform heating.
 
-**Radius of Curvature**
-The radius of the spherical surface that approximates a curved optical element.
+Thermal Radiation
+:  Light emitted by a hot object due to thermal agitation.
 
-**Rayleigh Criterion**
-The criterion for resolution stating that two point sources are just resolved when the central maximum of one coincides with the first minimum of the other.
+Thin Lens
+:  An idealized lens where thickness is negligible.
 
-**Rayleigh Scattering**
-Scattering of light by particles much smaller than the wavelength, intensity proportional to λ⁻⁴.
+Thin Lens Equation
+:  The equation 1/f = 1/s + 1/s' relating distances and focal length.
 
-**Ray**
-In geometrical optics, a line indicating the direction of light propagation.
+Three-Level System
+:  An atomic system with three energy levels.
 
-**Ray Matrix (ABCD Matrix)**
-A 2×2 matrix describing the transformation of ray position and angle through an optical system.
+Threshold
+:  The minimum pump power needed for lasing.
 
-**Reciprocity Theorem**
-The principle that the path of light through an optical system is reversible; swapping object and image gives a valid configuration.
+Threshold Condition
+:  In lasers, the condition where gain equals loss.
 
-**Rectilinear Propagation**
-The principle that light travels in straight lines in uniform media.
+Threshold Current
+:  In semiconductor lasers, the minimum current needed for stimulated emission.
 
-**Refracting Telescope**
-A telescope using lenses to focus light.
+Throughput
+:  The light-gathering ability of an optical system.
 
-**Refraction**
-The change in direction of light when passing from one medium to another due to change in speed.
+Tight Focus
+:  A strongly focused beam with small spot size and high intensity.
 
-**Refractive Index (n)**
-The ratio of the speed of light in vacuum to its speed in a medium, determining how much light bends; n = c/v.
+Titanium-Sapphire Laser
+:  A solid-state laser tunable across 700-1000 nm.
 
-**Reflectance**
-The fraction of incident light reflected by a surface, ranging from 0 to 1.
+TE Mode
+:  Transverse electric mode where the electric field is perpendicular to propagation.
 
-**Reflection**
-The change in direction of light when bouncing off a surface.
+TM Mode
+:  Transverse magnetic mode where the magnetic field is perpendicular to propagation.
 
-**Reflector**
-An optical element, typically a mirror, used to reflect light.
+Total Internal Reflection
+:  The complete reflection of light at an interface exceeding the critical angle.
 
-**Regenerative Feedback**
-In lasers, the recirculation of stimulated emission through the gain medium to build up coherent light.
+Total Internal Reflection Fluorescence
+:  Microscopy technique using evanescent waves to excite fluorescence.
 
-**Regular Reflection (Specular Reflection)**
-Reflection from a smooth surface where angle of incidence equals angle of reflection.
+Transfer Function
+:  A mathematical description of how a system modifies the input signal.
 
-**Reissue**
-The publication of a new edition or version of a document.
+Transition
+:  The change of an electron between two energy levels.
 
-**Resolution**
-The ability to distinguish between two closely spaced objects or points.
+Transmission
+:  The passage of light through a material.
 
-**Resonance**
-The enhancement of response at a frequency where the driving force matches the natural oscillation frequency.
+Transmittance
+:  The fraction of incident light transmitted by a material or component.
 
-**Resonant Cavity**
-An enclosed region supporting standing waves at discrete resonant frequencies.
+Transmitter
+:  A device that emits or sends optical signals.
 
-**Retina**
-The light-sensitive tissue at the back of the eye containing photoreceptors (rods and cones).
+Transverse Confinement
+:  In waveguides, the spatial confinement of light perpendicular to propagation.
 
-**Retinal Image**
-The image formed on the retina by the optical system of the eye.
+Transverse Electric Mode
+:  An electromagnetic mode where the electric field is perpendicular to propagation.
 
-**Retrofocus Lens**
-A wide-angle lens design where the back focal distance is shorter than the focal length.
+Transverse Electromagnetic Mode
+:  An electromagnetic mode where both fields are perpendicular to propagation.
 
-**Retroreflector (Corner Reflector)**
-An optical element that reflects light back toward the source regardless of incident angle.
+Transverse Magnetic Mode
+:  An electromagnetic mode where the magnetic field is perpendicular to propagation.
 
-**Reverse Bias**
-In photodiodes, the electrical bias that maximizes the photocurrent.
+Triplet State
+:  An excited state with parallel electron spins.
 
-**Rhodopsin**
-The light-sensitive pigment in rod cells of the retina that enables low-light vision.
+Tunable Laser
+:  A laser whose output wavelength can be adjusted over a range.
 
-**Rods and Cones**
-The photoreceptor cells in the retina; rods for low-light achromatic vision, cones for color vision.
+Turbulence
+:  Random fluctuations in refractive index causing atmospheric distortion.
 
-**Rotating Analyzer**
-An analyzer rotated at a constant rate to measure the polarization state of light.
+Two-Level System
+:  The simplest quantum system with ground and excited states.
 
-**Rotation Angle**
-The angle through which a polarizer or analyzer is rotated.
+Two-Photon Absorption
+:  A nonlinear optical process where two photons are absorbed simultaneously.
 
-## S
+Ultrafast Optics
+:  The field dealing with light pulses shorter than a few picoseconds.
 
-**Sagittal Ray**
-A ray in an optical system that does not pass through the optical axis.
+Ultraviolet
+:  Electromagnetic radiation with wavelengths from about 10 nm to 380 nm.
 
-**Saturation**
-In lasers, the condition where further increase in pump power produces no additional output.
+Unpolarized Light
+:  Light with completely random and rapidly fluctuating polarization.
 
-**Scalar Diffraction Theory**
-The approximation treating light as a scalar wave rather than a vector wave, valid when polarization effects are negligible.
+Vacuum
+:  Outer space or free space with refractive index n = 1.
 
-**Scalar Optics**
-The treatment of light using scalar wave theory, ignoring vector aspects of polarization.
+Vector Optics
+:  The treatment of light as a vector electromagnetic wave.
 
-**Scattering**
-The redirection of light in many directions by small particles or surface roughness.
+Velocity Matching
+:  In nonlinear optics, the condition where group velocities match.
 
-**Scintillation**
-Random fluctuations in light intensity caused by atmospheric turbulence, seen as twinkling of stars.
+Vignetting
+:  The darkening of image corners due to optical effects.
 
-**Sclera**
-The tough white outer covering of the eye.
+Visibility
+:  The contrast of interference fringes.
 
-**Secondary Aberrations**
-Higher-order aberrations beyond primary spherical aberration.
+Visible Light
+:  Electromagnetic radiation detectable by human eyes, roughly 380-700 nm.
 
-**Secondary Maximum**
-In diffraction patterns, maxima that are not the principal maximum, occurring between minima.
+Vitreous Humor
+:  The clear gel filling the interior of the eye.
 
-**Sectional Area**
-The cross-sectional area perpendicular to light propagation.
+Wave Equation
+:  The partial differential equation governing wave propagation.
 
-**Semiconductor**
-A material with electrical conductivity between conductors and insulators, used in photodetectors and laser diodes.
+Wave Front
+:  A surface of constant phase in a propagating wave.
 
-**Semilogarithmic Plot**
-A graph with one axis logarithmic and one linear.
+Wave Guide
+:  A structure confining electromagnetic waves to propagate in specific directions.
 
-**Semimajor Axis**
-The longer axis of an ellipse, relevant for elliptical polarization.
+Wave Number
+:  The spatial frequency of a wave, k = 2π/λ.
 
-**Sensor**
-A device that detects and converts optical signals into electrical signals.
+Wave Optics
+:  The treatment of light as electromagnetic waves.
 
-**Separation of Variables**
-A mathematical technique for solving partial differential equations by assuming solutions have separable form.
+Wave Packet
+:  A localized group of waves.
 
-**Setup**
-The arrangement and configuration of optical components for an experiment or measurement.
+Wave Vector
+:  A vector in the direction of propagation with magnitude equal to wave number.
 
-**Several Wavelengths**
-A phrase indicating the order of magnitude in optical system dimensions.
+Waveform
+:  The shape of a wave as it varies with time or space.
 
-**Shape Factor**
-A parameter characterizing the asymmetry of optical aberrations.
+Wavelength
+:  The distance between successive peaks of a wave.
 
-**Shift Invariance**
-The property that an optical system's response is the same regardless of where in the field the object is located.
+Waveguide
+:  A structure that confines and guides electromagnetic waves.
 
-**Short-Wavelength Limit**
-The ultraviolet region where wavelengths become very short and geometric optics breaks down.
+X-Ray
+:  Electromagnetic radiation with wavelengths from about 0.01 nm to 10 nm.
 
-**Side Lobe**
-Secondary maxima in a diffraction pattern adjacent to the main lobe.
+X-Ray Diffraction
+:  The diffraction of X-rays by crystal structures.
 
-**Signal-to-Noise Ratio (SNR)**
-The ratio of signal power to noise power, indicating data quality.
+X-Ray Fluorescence
+:  The emission of characteristic X-rays when a material is bombarded with X-rays.
 
-**Silica (Fused Silica)**
-Pure glass form of silicon dioxide used extensively in fiber optics and windows.
+Ytterbium Laser
+:  A fiber laser using ytterbium ions as the gain medium.
 
-**Single Mode**
-Operating at only one resonant frequency or propagation mode.
+Yttrium Aluminum Garnet
+:  A crystalline host material for laser ions.
 
-**Skew Ray**
-A ray that is neither meridional nor sagittal, following a helical path around the optical axis.
+Z-Axis
+:  Typically the optical axis or propagation direction in optical systems.
 
-**Skew Ray Approximation**
-The analysis of skew rays in optical systems, important for fiber mode structure.
+Zeeman Effect
+:  The splitting of spectral lines by a magnetic field.
 
-**Snell's Law**
-The law of refraction: n₁ sin(θ₁) = n₂ sin(θ₂), relating angles on either side of an interface.
+Zero Order
+:  In diffraction patterns, the central maximum.
 
-**Softness of Light**
-The diffuseness of light, inversely related to the quality of focus or the size of the source.
+Zone Plate
+:  A diffractive optical element consisting of concentric rings.
 
-**Solid Angle**
-The three-dimensional angle measured in steradians (sr).
+```
 
-**Solid State Laser**
-A laser using a crystalline or glass host medium doped with active ions, rather than gas or liquid.
+## Using This Glossary
 
-**Soliton**
-A self-reinforcing wave that maintains its shape while propagating, important in fiber optics.
+This glossary contains over 300 terms essential for understanding optics. When encountering unfamiliar terminology in the main text, refer to this glossary for quick definitions. The glossary uses MyST's standard glossary directive for easy integration with the rest of the textbook.
 
-**Source**
-The origin of light, such as a light bulb, laser, or self-luminous object.
-
-**Spatial Coherence**
-The correlation of phase between different points across the wavefront.
-
-**Spatial Filter**
-An aperture or optical element that passes only diffraction-limited light, removing high-frequency noise.
-
-**Spatial Frequency**
-The frequency of spatial variation in intensity, measured in cycles per unit length.
-
-**Spectral Band**
-A range of wavelengths or frequencies in the electromagnetic spectrum.
-
-**Spectral Distribution**
-The power per unit wavelength interval for a light source.
-
-**Spectral Purity**
-A measure of how monochromatic light is; the narrowness of its spectrum.
-
-**Spectral Radiance**
-The radiance per unit wavelength or frequency.
-
-**Spectral Reflectance**
-The reflectance as a function of wavelength.
-
-**Spectral Transmittance**
-The transmittance as a function of wavelength.
-
-**Spectrometer**
-An instrument for measuring the spectral distribution of light.
-
-**Spectroscopy**
-The study of interaction between light and matter using spectral measurements.
-
-**Spectrum**
-The distribution of power or intensity as a function of wavelength or frequency.
-
-**Specular Reflection**
-See regular reflection; reflection from a smooth surface.
-
-**Spherical Aberration**
-Aberration where different zones of a lens have different focal lengths.
-
-**Spherical Mirror**
-A mirror with a spherical surface, either converging or diverging.
-
-**Spherical Wavefront**
-A curved wavefront diverging from or converging to a point.
-
-**Spin Angular Momentum**
-The angular momentum associated with circular polarization of light.
-
-**Spiraling Behavior**
-The helical path of certain rays in optical systems.
-
-**Splitter**
-See beam splitter.
-
-**Spontaneous Emission**
-The random emission of photons by excited atoms, producing incoherent light.
-
-**Spot Size**
-The effective diameter of a laser beam or focused light spot.
-
-**Spread Function**
-See point spread function; the intensity distribution of the image of a point source.
-
-**Square Law Detector**
-A detector whose output is proportional to the square of the incident light intensity.
-
-**Stability Criterion**
-In laser cavities, the condition for a light ray to remain within the cavity after multiple reflections.
-
-**Standing Wave**
-An electromagnetic wave pattern where the field oscillates in place rather than propagating.
-
-**Step Index Fiber**
-An optical fiber with a sharp refractive index step at the core-cladding boundary.
-
-**Stereoscopy**
-The technique of using two slightly different images to create the perception of depth.
-
-**Steradian (sr)**
-The SI unit of solid angle, with 4π steradians in a complete sphere.
-
-**Steric Effects**
-Effects on optical behavior due to spatial arrangement of molecules.
-
-**Stokes Parameters**
-Four real parameters completely describing the polarization state of light.
-
-**Stokes Shift**
-The difference between absorbed and emitted photon energies in fluorescence.
-
-**Stop**
-An aperture in an optical system that limits the size of light beams.
-
-**Stray Light**
-Unwanted light scattered or reflected inside an optical instrument.
-
-**Stress-Optic Effect**
-The change in refractive index of a material due to mechanical stress.
-
-**Stretched Pulse**
-In fiber lasers, a pulse that is broadened in time within the cavity for higher peak power.
-
-**Strobo-Scopic Effect**
-The appearance of slow motion when pulsed light with the right frequency illuminates periodic motion.
-
-**Structure Factor**
-In X-ray diffraction, the sum of scattering amplitudes from atoms in the unit cell.
-
-**Subwavelength**
-Dimensions much smaller than the wavelength of light, below the diffraction limit.
-
-**Super-Resolution**
-Imaging techniques that exceed the classical diffraction limit of resolution.
-
-**Supercontinuum**
-Broadband light generated through nonlinear effects in fibers.
-
-**Supercritical Angle**
-The angle of incidence exceeding the critical angle, resulting in total internal reflection.
-
-**Superposition**
-The principle that multiple waves combine by adding their amplitudes.
-
-**Surface Plasmon**
-A electromagnetic wave oscillating at the interface between a metal and dielectric.
-
-**Surface Relief**
-The texture of a surface characterized by peaks and valleys.
-
-**Susceptibility (Optical)**
-The response of a material to an applied optical field.
-
-**Symmetric Configuration**
-An optical system symmetric about a central plane.
-
-## T
-
-**Tangential Aberration**
-Aberration in the focal surface tangential to the meridional plane.
-
-**Tapering**
-In fibers, the gradual reduction of diameter.
-
-**Temporal Coherence**
-The correlation of phase at a single point over different times.
-
-**Temporal Mode**
-In lasers, discrete frequencies supported in the frequency domain.
-
-**Tertiary Spectrum**
-Residual color aberration after chromatic aberration correction.
-
-**Tesla (T)**
-The SI unit of magnetic field strength.
-
-**Test Plate**
-A precision optical flat surface used for testing and measuring other optical elements.
-
-**Thermal Lens Effect**
-The lens-like behavior that develops in a material due to non-uniform heating.
-
-**Thermal Radiation**
-Light emitted by a hot object due to thermal agitation of atoms.
-
-**Thermopile**
-A detector consisting of multiple thermocouples for measuring radiant power.
-
-**Thick Lens**
-A lens where the thickness is comparable to the radii of curvature.
-
-**Thin Film**
-A very thin optical coating or material layer on a substrate.
-
-**Thin Lens**
-An idealized lens where thickness is negligible and can be treated as a thin optical element.
-
-**Thin Lens Approximation**
-The approximation that lens thickness is negligible, valid for lenses with small focal lengths compared to size.
-
-**Thin Lens Equation**
-See lens equation: 1/f = 1/s + 1/s' relating object distance, image distance, and focal length.
-
-**Third-Order Aberration**
-Aberration terms of third order in the ray angle or height from the optical axis.
-
-**Third Harmonic**
-In nonlinear optics, light generated at three times the fundamental frequency.
-
-**Three-Dimensional (3D)**
-Having extent in all three spatial dimensions.
-
-**Three-Level System**
-An atomic system with three energy levels, simple model for laser operation.
-
-**Threshold**
-The minimum pump power or current needed for lasing.
-
-**Threshold Condition**
-In lasers, the condition where gain equals loss, marking the onset of lasing.
-
-**Threshold Current**
-In semiconductor lasers, the minimum current needed to achieve stimulated emission.
-
-**Threshold Gain**
-The minimum optical gain required for laser oscillation.
-
-**Threshold Power**
-In lasers, the minimum optical or electrical power for lasing.
-
-**Threshold Wavelength**
-The longest wavelength (lowest photon energy) capable of causing a photochemical process.
-
-**Threshold Wavelength Shift**
-The shift in threshold wavelength due to changes in material or conditions.
-
-**Throughput (Optical)**
-The light-gathering ability of an optical system, proportional to étendue.
-
-**Tight Focus**
-A strongly focused beam with small spot size and high intensity.
-
-**Time Constant**
-The characteristic response time of an optical system or detector.
-
-**Timescale**
-The relevant time duration for a physical process.
-
-**Timing Jitter**
-Random fluctuations in pulse timing in pulsed lasers.
-
-**Tinplate**
-A steel plate coated with tin; not typically optical, but may have reflective properties.
-
-**Titanium-Sapphire Laser**
-A solid-state laser using Ti:Al₂O₃ crystal, tunable across 700-1000 nm.
-
-**TM Mode**
-Transverse magnetic mode in a waveguide where the magnetic field is perpendicular to the direction of propagation.
-
-**Tolerance**
-The acceptable range of variation in optical parameters for acceptable system performance.
-
-**Tolerancing**
-The process of specifying acceptable tolerances on optical properties and manufacturing.
-
-**Tomography**
-Imaging technique that reconstructs a three-dimensional structure from multiple two-dimensional projections.
-
-**Total Internal Reflection (TIR)**
-The complete reflection of light at an interface when the angle of incidence exceeds the critical angle.
-
-**Total Internal Reflection Fluorescence (TIRF)**
-Microscopy technique using evanescent waves to excite fluorescence only near a surface.
-
-**Trajectory**
-The path followed by light or a particle in space.
-
-**Transduction**
-The conversion of one form of energy to another, as in photodetection.
-
-**Transfer Function**
-A mathematical description of how a system modifies the input signal to produce output.
-
-**Transient**
-A temporary behavior before steady state is reached.
-
-**Transit Time**
-The time required for light to traverse an optical system.
-
-**Transition**
-The change of an electron between two energy levels.
-
-**Transition Bandwidth**
-The frequency range over which a component transitions between two states.
-
-**Transmission**
-The passage of light through a material.
-
-**Transmission Band**
-The range of wavelengths or frequencies transmitted by an optical component.
-
-**Transmissive**
-Allowing passage of light through with minimal absorption.
-
-**Transmittance**
-The fraction of incident light transmitted by a material or component, ranging from 0 to 1.
-
-**Transmitter**
-A device that emits or sends optical signals.
-
-**Transverse Confinement**
-In waveguides, the spatial confinement of light in directions perpendicular to propagation.
-
-**Transverse Electric (TE) Mode**
-An electromagnetic mode where the electric field is perpendicular to the direction of propagation.
-
-**Transverse Electromagnetic (TEM) Mode**
-An electromagnetic mode where both electric and magnetic fields are perpendicular to propagation.
-
-**Transverse Magnetic (TM) Mode**
-An electromagnetic mode where the magnetic field is perpendicular to the direction of propagation.
-
-**Traversal**
-The passage or crossing of light through an optical system.
-
-**Treatment**
-Processing applied to optical surfaces such as coatings or polishing.
-
-**Triode**
-A vacuum tube with three electrodes; early television and radar technology used tubes.
-
-**Triple (Optical)**
-An optical triplet is a combination of three lenses.
-
-**Triplet**
-In atomic spectroscopy, a set of three closely spaced lines; also refers to the triplet state.
-
-**Triplet State**
-An excited state with parallel electron spins (total spin = 1).
-
-**Tritium**
-A radioactive isotope of hydrogen used in luminous sources.
-
-**Troposphere**
-The lowest layer of Earth's atmosphere through which we view the sky.
-
-**True Color**
-Digital imaging representation that accurately displays the colors of the original scene.
-
-**Tunable Laser**
-A laser whose output wavelength can be adjusted over a range.
-
-**Tunable Laser Parameter**
-A parameter of a laser that can be adjusted to tune the output wavelength.
-
-**Tuning Curve**
-A graph showing how laser output wavelength depends on a tuning parameter.
-
-**Turbidity**
-The cloudiness of a medium due to suspended particles or scattering.
-
-**Turbulence**
-Random fluctuations in refractive index due to temperature variations, causing atmospheric distortion.
-
-**Twelve-Element Lens**
-A complex multi-element lens design with 12 components.
-
-**Twill**
-A woven fabric pattern; not optical but relevant for optical bench covers.
-
-**Twin Laser**
-Two coupled lasers operating in parallel.
-
-**Twin Lobe**
-Two symmetric secondary maxima in a diffraction pattern.
-
-**Twistor**
-A mathematical object used in theoretical physics; relevant to spin angular momentum of light.
-
-**Two-Dimensional (2D)**
-Having extent in two spatial dimensions.
-
-**Two-Level Atom**
-A simple model of an atom with only two relevant energy levels.
-
-**Two-Level System**
-The simplest quantum system with ground and excited states.
-
-**Two-Photon Absorption**
-A nonlinear optical process where two photons are absorbed simultaneously.
-
-**Type I Phase Matching**
-Phase matching in birefringent crystals where the extraordinary ray corresponds to one polarization.
-
-**Type II Phase Matching**
-Phase matching where the ordinary and extraordinary rays correspond to different polarizations.
-
-**Typst**
-A modern markup language and document preparation tool, used for generating PDFs from MyST.
-
-## U
-
-**Ultrafast Optics**
-The field dealing with light pulses shorter than a few picoseconds.
-
-**Ultraviolet (UV)**
-Electromagnetic radiation with wavelengths from about 10 nm to 380 nm.
-
-**Unaberrated Wavefront**
-A perfect plane or spherical wavefront with no phase distortion.
-
-**Unidirectional Operation**
-Operation in which light propagates in only one direction, as in optical isolators.
-
-**Uniform Illumination**
-An optical field with constant intensity across a region.
-
-**Uniform Medium**
-A material with constant refractive index and properties throughout.
-
-**Unipolar**
-A signal with only one polarity, typically positive.
-
-**Unique Axis**
-In birefringent materials, the optical axis along which no birefringence occurs.
-
-**Unit Cell**
-In crystallography, the smallest repeating unit of a crystal structure.
-
-**Unpolarized Light**
-Light with completely random and rapidly fluctuating polarization.
-
-**Unsharp Masking**
-An image processing technique that enhances edges and fine details.
-
-**Unstable Cavity**
-A laser cavity where most light rays escape after a few round trips.
-
-**Upper Level**
-The higher energy state in a two-level or multi-level atomic system.
-
-**Upstream**
-In a cascade of optical elements, elements encountered earlier by the light.
-
-**Upward Transition**
-A transition from lower to higher energy state, requiring absorption.
-
-**UV-VIS Spectroscopy**
-Spectroscopy in the ultraviolet and visible regions (200-700 nm).
-
-## V
-
-**Vacuum (Optical)**
-Outer space or free space with refractive index n = 1; the standard reference for optical properties.
-
-**Valence Band**
-In semiconductors, the energy band occupied by electrons associated with atoms.
-
-**Valley**
-A local minimum in a function or surface.
-
-**Vapor Pressure**
-The pressure of a gas in equilibrium with its condensed phase.
-
-**Variance**
-The mean square deviation from the average, a measure of statistical spread.
-
-**Vector Diffraction Theory**
-Diffraction theory including the vector nature of electromagnetic fields.
-
-**Vector Optics**
-The treatment of light as a vector electromagnetic wave, including polarization effects.
-
-**Velocity Matching**
-In nonlinear optics, the condition where group velocities of interacting waves are equal.
-
-**Velocity Selector**
-A device using crossed electric and magnetic fields to select particles of specific velocity.
-
-**Vignetting**
-The darkening of image corners due to geometric or optical effects in the lens system.
-
-**Virial Theorem**
-A relation between kinetic and potential energy in bound systems.
-
-**Visibility (Fringe Visibility)**
-The contrast of interference fringes, defined as (Imax - Imin)/(Imax + Imin).
-
-**Visible Light**
-Electromagnetic radiation detectable by human eyes, roughly 380-700 nm.
-
-**Vitreous Humor**
-The clear gel filling the interior of the eye between the lens and retina.
-
-**Volta Effect**
-The potential difference at the junction of dissimilar metals or materials.
-
-**Voltage-Tunable Laser**
-A laser whose output can be tuned by varying applied voltage.
-
-**Volume Bragg Grating**
-A grating whose diffraction is based on periodic variation throughout a volume.
-
-**Volume Hologram**
-A hologram recorded throughout the thickness of a material rather than just at the surface.
-
-**Voxel**
-A three-dimensional pixel; the smallest addressable unit in volumetric data.
-
-## W
-
-**Wafer**
-A thin slice of crystalline material, commonly used in semiconductor and optics manufacturing.
-
-**Watt (W)**
-The SI unit of power, equal to one joule per second.
-
-**Wave Equations**
-The partial differential equations governing wave propagation, such as Maxwell's equations.
-
-**Wave Front**
-A surface of constant phase in a propagating wave.
-
-**Wave Guide**
-A structure confining electromagnetic waves to propagate in specific directions and modes.
-
-**Wave Number (k)**
-The spatial frequency of a wave, k = 2π/λ = 2πν/c.
-
-**Wave Optics**
-The treatment of light as electromagnetic waves, including diffraction and interference.
-
-**Wave Packet**
-A localized group of waves, representing the quantum mechanical particle-like nature of light.
-
-**Wave Vector**
-A vector in the direction of propagation with magnitude equal to wave number.
-
-**Waveform**
-The shape of a wave as it varies with time or space.
-
-**Wavelength (λ)**
-The distance between successive peaks (or troughs) of a wave, related to frequency by c = λν.
-
-**Waveguide**
-See wave guide; a structure that confines and guides electromagnetic waves.
-
-**Wavemeter**
-An instrument for measuring the wavelength of light.
-
-**Wavenumber Spectrum**
-The distribution of intensity as a function of wave number.
-
-**Weak Measurement**
-A quantum measurement that only weakly perturbs the measured system.
-
-**Weber-Fechner Law**
-The psychophysical law relating perceived sensation to stimulus intensity logarithmically.
-
-**Wedge**
-An optical element with a small angle between surfaces, used to deviate light slightly.
-
-**Wedge Prism**
-A prism-like element with a wedge shape used for beam deviation or alignment.
-
-**Weight Function**
-A function used in integrals to give different importance to different regions.
-
-**Weighting**
-The process of applying different weights to different measurements or samples.
-
-**Well-Collimated Beam**
-A beam of light where rays are nearly parallel.
-
-**Wheatstone Bridge**
-An electrical circuit for measuring resistance; used in some optical sensors.
-
-**White Light**
-Visible light containing all wavelengths roughly equally, from an incandescent source.
-
-**White Light Interferometer**
-An interferometer using white light to measure very small distances or path differences.
-
-**Wiggler**
-In accelerators, a magnetic element causing electrons to wiggle, emitting synchrotron radiation.
-
-**Wigner Function**
-A quantum mechanical distribution function in phase space.
-
-**Wigner-Seitz Cell**
-In crystallography, the region of space closest to a given lattice point.
-
-**Wincillary**
-Not a real optical term; included humorously to note that optical terminology can be quite specific!
-
-**Wind-off**
-In fiber optics, the process of unwinding and straightening fiber.
-
-**Window**
-An optical element transparent to radiation in a specific wavelength range.
-
-**Window Material**
-A material transparent to light at desired wavelengths, used for protective windows.
-
-**Wing**
-In spectroscopy, the portion of a spectral line far from center.
-
-**Wire Grid Polarizer**
-A polarizer consisting of parallel metallic wires that absorb one polarization.
-
-**Wisps**
-Atmospheric turbulence causing rapidly changing phase distortion.
-
-**Wobble**
-Small periodic variations in optical properties or alignment.
-
-**Wood Anomaly**
-Anomalous behavior in diffraction from gratings related to grating periodicity.
-
-**Workbench (Optical)**
-See optical bench; apparatus for arranging and testing optical components.
-
-**Working Distance**
-In microscopy, the distance between the objective lens front surface and the specimen.
-
-**World Coordinate System**
-The fixed reference frame for describing positions and orientations.
-
-**Worse-Case Analysis**
-Analysis of optical system performance under worst allowable tolerances.
-
-**Worthiness**
-In optical systems, a measure of how well the system meets requirements.
-
-**Wraparound**
-In phase measurement, the ambiguity in phase due to 2π periodicity.
-
-**Wrapped Phase**
-Phase that is modulo 2π, requiring unwrapping to determine absolute phase.
-
-**Wrinkle**
-In optical surfaces, a small-amplitude undulation that affects wavefront quality.
-
-**Writt**
-Not a standard optical term; omitted from actual glossaries.
-
-## X
-
-**X-Ray**
-Electromagnetic radiation with wavelengths from about 0.01 nm to 10 nm.
-
-**X-Ray Diffraction**
-The diffraction of X-rays by crystal structures, used to determine crystal periodicity.
-
-**X-Ray Fluorescence**
-The emission of characteristic X-rays when a material is bombarded with X-rays.
-
-**Xenon Arc Lamp**
-A bright broadband light source based on an arc discharge in xenon gas.
-
-**Xerography**
-A printing technology based on electrostatic attraction; relevant to some optical applications.
-
-**Xi (ξ)**
-Greek letter often used as a variable symbol in optics equations.
-
-**X-Polarization**
-Polarization perpendicular to a reference direction.
-
-## Y
-
-**Yag Laser**
-A solid-state laser using neodymium-doped yttrium aluminum garnet, emitting at 1064 nm.
-
-**Yaw**
-A rotational motion about the vertical axis; important for optical alignment.
-
-**Year**
-A time period; note that optical researches' papers may refer to publication years.
-
-**Yellow Light**
-Light with wavelength around 570-590 nm, perceived as yellow by human eyes.
-
-**Yield**
-In optics manufacturing, the fraction of produced items meeting specifications.
-
-**Young's Double Slit Experiment**
-The classic experiment demonstrating interference of light from two slits.
-
-**Young's Modulus**
-The elastic modulus describing the stiffness of a material.
-
-**Y-Polarization**
-Polarization perpendicular to X-polarization, orthogonal linear polarization.
-
-**Ytterbium Laser**
-A fiber laser using ytterbium ions as the gain medium.
-
-**Yttrium Aluminum Garnet (YAG)**
-A crystalline host material for laser ions, commonly doped with neodymium or ytterbium.
-
-## Z
-
-**Z-Axis**
-Typically the optical axis or propagation direction in optical systems.
-
-**Zeeman Effect**
-The splitting of spectral lines by a magnetic field.
-
-**Zeiss**
-A major optical manufacturer of microscopes and other precision instruments.
-
-**Zenith**
-The point directly overhead in the sky, relevant to astronomical observations.
-
-**Zener Diode**
-A semiconductor diode operated in reverse bias to regulate voltage.
-
-**Zeolite**
-A porous crystalline material sometimes used in optical applications.
-
-**Zero Order**
-In diffraction patterns, the central maximum or m = 0 term in the grating equation.
-
-**Zero-Padding**
-In numerical methods, adding zeros to the end of a signal for computational purposes.
-
-**Zeta Potential**
-The electrical potential at the interface of a colloidal particle, affecting scattering.
-
-**Zinc Selenide (ZnSe)**
-An infrared optical material transparent to long wavelengths.
-
-**Zodiac**
-The band of constellations crossed by the ecliptic; relevant to astronomical observation.
-
-**Zonal Aberration**
-Optical aberration that varies from center to edge of a lens in zones.
-
-**Zone Plate**
-A diffractive optical element consisting of concentric rings that focuses light.
-
-**Zone Theorem**
-The theorem relating diffraction to the division of wavefronts into Fresnel zones.
-
-**Zoom**
-To magnify or reduce the field of view, typically using a variable magnification lens system.
-
-**Zoom Lens**
-A lens system with variable focal length and magnification.
-
-**Zoopraxiscope**
-An early optical device for displaying moving images, predecessor to the projector.
-
-**Z-Scan**
-A nonlinear optical technique measuring nonlinear refractive index by scanning sample position through focus.
-
----
-
-## Using the Glossary
-
-This glossary contains over 500 terms essential for understanding optics. Terms are presented alphabetically for easy reference. When encountering unfamiliar terminology in the main text, consult this glossary for quick definitions.
-
-**Note:** Many of these terms are used throughout the textbook chapters with cross-references provided in the chapter content. The definitions here provide foundational understanding, while the chapters offer detailed explanations, derivations, and applications of these concepts.
+**Tip:** Many of these terms are used throughout the textbook chapters. The definitions here provide foundational understanding, while the chapters offer detailed explanations, derivations, and applications of these concepts.
