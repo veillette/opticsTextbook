@@ -10,549 +10,549 @@ This index provides a comprehensive reference to major topics, concepts, and ter
 
 ## A
 
-**Aberration**, {ref}`Chap02GeometricalOptics` · {ref}`Chap03OpticalInstruments` · {ref}`Chap09AdvancedInstruments`
+**Aberration**, {ref}`chapter:geo` · {ref}`chapter:inst` · {ref}`chapter:adv`
 
-**Accommodation (eye)**, {ref}`Chap03OpticalInstruments`
+**Accommodation (eye)**, {ref}`chapter:inst`
 
-**Amplitude**, {ref}`Chap01Basics` · {ref}`Chap05Wave`
+**Amplitude**, {ref}`chapter:basics` · {ref}`chapter:wave`
 
-**Angular frequency**, {ref}`Chap05Wave` · {ref}`Chap06InterferenceCoherence`
+**Angular frequency**, {ref}`chapter:wave` · {ref}`chapter:coh`
 
-**Anisotropic materials**, {ref}`Chap04Polarization`
+**Anisotropic materials**, {ref}`chapter:pol`
 
-**Antireflection coatings**, {ref}`Chap02GeometricalOptics` · {ref}`Chap04Polarization`
+**Antireflection coatings**, {ref}`chapter:geo` · {ref}`chapter:pol`
 
-**Aperture**, {ref}`Chap03OpticalInstruments` · {ref}`Chap07Diffraction`
+**Aperture**, {ref}`chapter:inst` · {ref}`chapter:diff`
 
-**Astigmatism**, {ref}`Chap03OpticalInstruments` · {ref}`Chap09AdvancedInstruments`
+**Astigmatism**, {ref}`chapter:inst` · {ref}`chapter:adv`
 
 ## B
 
-**Bandwidth**, {ref}`Chap06InterferenceCoherence`
+**Bandwidth**, {ref}`chapter:coh`
 
-**Beam splitter**, {ref}`Chap06InterferenceCoherence`
+**Beam splitter**, {ref}`chapter:coh`
 
-**Birefringence**, {ref}`Chap04Polarization`
+**Birefringence**, {ref}`chapter:pol`
 
-**Brewster's angle**, {ref}`Chap02GeometricalOptics` · {ref}`Chap04Polarization`
+**Brewster's angle**, {ref}`chapter:geo` · {ref}`chapter:pol`
 
 ## C
 
-**Camera**, {ref}`Chap03OpticalInstruments`
+**Camera**, {ref}`chapter:inst`
 
-**Candela**, {ref}`Chap01Basics`
+**Candela**, {ref}`chapter:basics`
 
-**Chromatic aberration**, {ref}`Chap03OpticalInstruments` · {ref}`Chap09AdvancedInstruments`
+**Chromatic aberration**, {ref}`chapter:inst` · {ref}`chapter:adv`
 
-**Circular polarization**, {ref}`Chap04Polarization`
+**Circular polarization**, {ref}`chapter:pol`
 
-**Coherence**, {ref}`Chap06InterferenceCoherence`
+**Coherence**, {ref}`chapter:coh`
 
-**Coherence length**, {ref}`Chap06InterferenceCoherence`
+**Coherence length**, {ref}`chapter:coh`
 
-**Coherence time**, {ref}`Chap06InterferenceCoherence`
+**Coherence time**, {ref}`chapter:coh`
 
-**Collimation**, {ref}`Chap02GeometricalOptics`
+**Collimation**, {ref}`chapter:geo`
 
-**Color**, {ref}`Chap01Basics` · {ref}`Chap03OpticalInstruments`
+**Color**, {ref}`chapter:basics` · {ref}`chapter:inst`
 
-**Complex amplitude**, {ref}`Chap05Wave`
+**Complex amplitude**, {ref}`chapter:wave`
 
-**Cones (eye)**, {ref}`Chap03OpticalInstruments`
+**Cones (eye)**, {ref}`chapter:inst`
 
-**Confocal microscopy**, {ref}`Chap09AdvancedInstruments`
+**Confocal microscopy**, {ref}`chapter:adv`
 
-**Constructive interference**, {ref}`Chap06InterferenceCoherence` · {ref}`Chap07Diffraction`
+**Constructive interference**, {ref}`chapter:coh` · {ref}`chapter:diff`
 
-**Cornea**, {ref}`Chap03OpticalInstruments`
+**Cornea**, {ref}`chapter:inst`
 
-**Critical angle**, {ref}`Chap02GeometricalOptics` · {ref}`Chap10FiberOptics`
+**Critical angle**, {ref}`chapter:geo` · {ref}`chapter:fiber`
 
-**Cross-polarization**, {ref}`Chap04Polarization`
+**Cross-polarization**, {ref}`chapter:pol`
 
-**Crystal birefringence**, {ref}`Chap04Polarization`
+**Crystal birefringence**, {ref}`chapter:pol`
 
-**Cylindrical lens**, {ref}`Chap03OpticalInstruments`
+**Cylindrical lens**, {ref}`chapter:inst`
 
 ## D
 
-**Degree of coherence**, {ref}`Chap06InterferenceCoherence`
+**Degree of coherence**, {ref}`chapter:coh`
 
-**Degree of polarization**, {ref}`Chap04Polarization`
+**Degree of polarization**, {ref}`chapter:pol`
 
-**Destructive interference**, {ref}`Chap06InterferenceCoherence` · {ref}`Chap07Diffraction`
+**Destructive interference**, {ref}`chapter:coh` · {ref}`chapter:diff`
 
-**Dichroic mirror**, {ref}`Chap09AdvancedInstruments`
+**Dichroic mirror**, {ref}`chapter:adv`
 
-**Diffraction**, {ref}`Chap07Diffraction`
+**Diffraction**, {ref}`chapter:diff`
 
-**Diffraction grating**, {ref}`Chap07Diffraction`
+**Diffraction grating**, {ref}`chapter:diff`
 
-**Diffraction limit**, {ref}`Chap07Diffraction` · {ref}`Chap09AdvancedInstruments`
+**Diffraction limit**, {ref}`chapter:diff` · {ref}`chapter:adv`
 
-**Dipole**, {ref}`Chap01Basics`
+**Dipole**, {ref}`chapter:basics`
 
-**Dispersion**, {ref}`Chap02GeometricalOptics` · {ref}`Chap10FiberOptics`
+**Dispersion**, {ref}`chapter:geo` · {ref}`chapter:fiber`
 
-**Diopter**, {ref}`Chap03OpticalInstruments`
+**Diopter**, {ref}`chapter:inst`
 
-**Double refraction**, {ref}`Chap04Polarization`
+**Double refraction**, {ref}`chapter:pol`
 
 ## E
 
-**Electromagnetic spectrum**, {ref}`Chap01Basics`
+**Electromagnetic spectrum**, {ref}`chapter:basics`
 
-**Electromagnetic waves**, {ref}`Chap01Basics` · {ref}`Chap05Wave`
+**Electromagnetic waves**, {ref}`chapter:basics` · {ref}`chapter:wave`
 
-**Elliptical polarization**, {ref}`Chap04Polarization`
+**Elliptical polarization**, {ref}`chapter:pol`
 
-**Emission**, {ref}`Chap08Lasers`
+**Emission**, {ref}`chapter:laser`
 
-**Energy levels**, {ref}`Chap08Lasers`
+**Energy levels**, {ref}`chapter:laser`
 
-**Etalon**, {ref}`Chap06InterferenceCoherence`
+**Etalon**, {ref}`chapter:coh`
 
-**Evanescent waves**, {ref}`Chap02GeometricalOptics` · {ref}`Chap10FiberOptics`
+**Evanescent waves**, {ref}`chapter:geo` · {ref}`chapter:fiber`
 
-**Eye**, {ref}`Chap03OpticalInstruments`
+**Eye**, {ref}`chapter:inst`
 
 ## F
 
-**Fabry-Perot**, {ref}`Chap06InterferenceCoherence`
+**Fabry-Perot**, {ref}`chapter:coh`
 
-**Far field**, {ref}`Chap07Diffraction`
+**Far field**, {ref}`chapter:diff`
 
-**Fermat's principle**, {ref}`Chap02GeometricalOptics`
+**Fermat's principle**, {ref}`chapter:geo`
 
-**Fiber optics**, {ref}`Chap10FiberOptics`
+**Fiber optics**, {ref}`chapter:fiber`
 
-**Field of view**, {ref}`Chap03OpticalInstruments` · {ref}`Chap09AdvancedInstruments`
+**Field of view**, {ref}`chapter:inst` · {ref}`chapter:adv`
 
-**Fluorescence**, {ref}`Chap09AdvancedInstruments`
+**Fluorescence**, {ref}`chapter:adv`
 
-**Focal length**, {ref}`Chap02GeometricalOptics` · {ref}`Chap03OpticalInstruments`
+**Focal length**, {ref}`chapter:geo` · {ref}`chapter:inst`
 
-**Focal point**, {ref}`Chap02GeometricalOptics`
+**Focal point**, {ref}`chapter:geo`
 
-**f-number**, {ref}`Chap03OpticalInstruments`
+**f-number**, {ref}`chapter:inst`
 
-**Fraunhofer diffraction**, {ref}`Chap07Diffraction`
+**Fraunhofer diffraction**, {ref}`chapter:diff`
 
-**Frequency**, {ref}`Chap01Basics` · {ref}`Chap05Wave`
+**Frequency**, {ref}`chapter:basics` · {ref}`chapter:wave`
 
-**Fresnel coefficients**, {ref}`Chap02GeometricalOptics`
+**Fresnel coefficients**, {ref}`chapter:geo`
 
-**Fresnel diffraction**, {ref}`Chap07Diffraction`
+**Fresnel diffraction**, {ref}`chapter:diff`
 
-**Fresnel equations**, {ref}`Chap02GeometricalOptics`
+**Fresnel equations**, {ref}`chapter:geo`
 
-**Fresnel lens**, {ref}`Chap03OpticalInstruments`
+**Fresnel lens**, {ref}`chapter:inst`
 
-**Fresnel zones**, {ref}`Chap07Diffraction`
+**Fresnel zones**, {ref}`chapter:diff`
 
-**Fringe**, {ref}`Chap06InterferenceCoherence` · {ref}`Chap07Diffraction`
+**Fringe**, {ref}`chapter:coh` · {ref}`chapter:diff`
 
 ## G
 
-**Gain**, {ref}`Chap08Lasers`
+**Gain**, {ref}`chapter:laser`
 
-**Gaussian beam**, {ref}`Chap08Lasers`
+**Gaussian beam**, {ref}`chapter:laser`
 
-**Gaussian optics**, {ref}`Chap11RayMatrix`
+**Gaussian optics**, {ref}`chapter:ray`
 
-**Geometrical optics**, {ref}`Chap02GeometricalOptics` · {ref}`Chap11RayMatrix`
+**Geometrical optics**, {ref}`chapter:geo` · {ref}`chapter:ray`
 
-**Gradient index fiber**, {ref}`Chap10FiberOptics`
+**Gradient index fiber**, {ref}`chapter:fiber`
 
-**Grating**, {ref}`Chap07Diffraction`
+**Grating**, {ref}`chapter:diff`
 
-**Group velocity**, {ref}`Chap05Wave` · {ref}`Chap10FiberOptics`
+**Group velocity**, {ref}`chapter:wave` · {ref}`chapter:fiber`
 
 ## H
 
-**Half-wave plate**, {ref}`Chap04Polarization`
+**Half-wave plate**, {ref}`chapter:pol`
 
-**Harmonic oscillation**, {ref}`Chap05Wave`
+**Harmonic oscillation**, {ref}`chapter:wave`
 
-**Holography**, {ref}`Chap07Diffraction`
+**Holography**, {ref}`chapter:diff`
 
-**Huygens principle**, {ref}`Chap07Diffraction`
+**Huygens principle**, {ref}`chapter:diff`
 
-**Hyperopia**, {ref}`Chap03OpticalInstruments`
+**Hyperopia**, {ref}`chapter:inst`
 
 ## I
 
-**Image formation**, {ref}`Chap02GeometricalOptics` · {ref}`Chap03OpticalInstruments`
+**Image formation**, {ref}`chapter:geo` · {ref}`chapter:inst`
 
-**Immersion**, {ref}`Chap03OpticalInstruments` · {ref}`Chap09AdvancedInstruments`
+**Immersion**, {ref}`chapter:inst` · {ref}`chapter:adv`
 
-**Impedance matching**, {ref}`Chap02GeometricalOptics`
+**Impedance matching**, {ref}`chapter:geo`
 
-**Index matching**, {ref}`Chap10FiberOptics`
+**Index matching**, {ref}`chapter:fiber`
 
-**Intensity**, {ref}`Chap01Basics` · {ref}`Chap05Wave`
+**Intensity**, {ref}`chapter:basics` · {ref}`chapter:wave`
 
-**Interference**, {ref}`Chap06InterferenceCoherence`
+**Interference**, {ref}`chapter:coh`
 
-**Interferometer**, {ref}`Chap06InterferenceCoherence`
+**Interferometer**, {ref}`chapter:coh`
 
-**Iris**, {ref}`Chap03OpticalInstruments`
+**Iris**, {ref}`chapter:inst`
 
-**Irradiance**, {ref}`Chap01Basics`
+**Irradiance**, {ref}`chapter:basics`
 
-**Isotropic**, {ref}`Chap04Polarization`
+**Isotropic**, {ref}`chapter:pol`
 
 ## J
 
-**Jones matrix**, {ref}`Chap04Polarization`
+**Jones matrix**, {ref}`chapter:pol`
 
-**Jones vector**, {ref}`Chap04Polarization`
+**Jones vector**, {ref}`chapter:pol`
 
 ## K
 
-**Kerr effect**, {ref}`Chap04Polarization`
+**Kerr effect**, {ref}`chapter:pol`
 
 ## L
 
-**Laser**, {ref}`Chap08Lasers` · {ref}`Chap10FiberOptics`
+**Laser**, {ref}`chapter:laser` · {ref}`chapter:fiber`
 
-**Lasing threshold**, {ref}`Chap08Lasers`
+**Lasing threshold**, {ref}`chapter:laser`
 
-**Lateral magnification**, {ref}`Chap02GeometricalOptics` · {ref}`Chap03OpticalInstruments`
+**Lateral magnification**, {ref}`chapter:geo` · {ref}`chapter:inst`
 
-**Lens**, {ref}`Chap02GeometricalOptics` · {ref}`Chap03OpticalInstruments` · {ref}`Chap11RayMatrix`
+**Lens**, {ref}`chapter:geo` · {ref}`chapter:inst` · {ref}`chapter:ray`
 
-**Lens maker's equation**, {ref}`Chap02GeometricalOptics` · {ref}`Chap11RayMatrix`
+**Lens maker's equation**, {ref}`chapter:geo` · {ref}`chapter:ray`
 
-**Light**, {ref}`Chap01Basics`
+**Light**, {ref}`chapter:basics`
 
-**Linear polarization**, {ref}`Chap04Polarization`
+**Linear polarization**, {ref}`chapter:pol`
 
-**Lloyd's mirror**, {ref}`Chap06InterferenceCoherence`
+**Lloyd's mirror**, {ref}`chapter:coh`
 
-**Longitudinal mode**, {ref}`Chap08Lasers`
+**Longitudinal mode**, {ref}`chapter:laser`
 
-**Luminance**, {ref}`Chap01Basics`
+**Luminance**, {ref}`chapter:basics`
 
-**Luminous intensity**, {ref}`Chap01Basics`
+**Luminous intensity**, {ref}`chapter:basics`
 
-**Lux**, {ref}`Chap01Basics`
+**Lux**, {ref}`chapter:basics`
 
 ## M
 
-**Magnification**, {ref}`Chap02GeometricalOptics` · {ref}`Chap03OpticalInstruments` · {ref}`Chap09AdvancedInstruments`
+**Magnification**, {ref}`chapter:geo` · {ref}`chapter:inst` · {ref}`chapter:adv`
 
-**Magnifying glass**, {ref}`Chap03OpticalInstruments`
+**Magnifying glass**, {ref}`chapter:inst`
 
-**Material dispersion**, {ref}`Chap10FiberOptics`
+**Material dispersion**, {ref}`chapter:fiber`
 
-**Matrix method**, {ref}`Chap11RayMatrix`
+**Matrix method**, {ref}`chapter:ray`
 
-**Maxwell equations**, {ref}`Chap01Basics` · {ref}`Chap05Wave`
+**Maxwell equations**, {ref}`chapter:basics` · {ref}`chapter:wave`
 
-**Metallic reflection**, {ref}`Chap02GeometricalOptics`
+**Metallic reflection**, {ref}`chapter:geo`
 
-**Michelson interferometer**, {ref}`Chap06InterferenceCoherence`
+**Michelson interferometer**, {ref}`chapter:coh`
 
-**Microscope**, {ref}`Chap03OpticalInstruments` · {ref}`Chap09AdvancedInstruments`
+**Microscope**, {ref}`chapter:inst` · {ref}`chapter:adv`
 
-**Microwave**, {ref}`Chap01Basics`
+**Microwave**, {ref}`chapter:basics`
 
-**Miller indices**, {ref}`Chap04Polarization`
+**Miller indices**, {ref}`chapter:pol`
 
-**Mode**, {ref}`Chap08Lasers` · {ref}`Chap10FiberOptics`
+**Mode**, {ref}`chapter:laser` · {ref}`chapter:fiber`
 
-**Mode locking**, {ref}`Chap08Lasers`
+**Mode locking**, {ref}`chapter:laser`
 
-**Modulation**, {ref}`Chap04Polarization`
+**Modulation**, {ref}`chapter:pol`
 
-**Monochromatic light**, {ref}`Chap06InterferenceCoherence`
+**Monochromatic light**, {ref}`chapter:coh`
 
-**Monomode fiber**, {ref}`Chap10FiberOptics`
+**Monomode fiber**, {ref}`chapter:fiber`
 
-**Multimode fiber**, {ref}`Chap10FiberOptics`
+**Multimode fiber**, {ref}`chapter:fiber`
 
 ## N
 
-**Nanometer**, {ref}`Chap01Basics`
+**Nanometer**, {ref}`chapter:basics`
 
-**Near field**, {ref}`Chap07Diffraction`
+**Near field**, {ref}`chapter:diff`
 
-**Near point**, {ref}`Chap03OpticalInstruments`
+**Near point**, {ref}`chapter:inst`
 
-**Nearsightedness**, {ref}`Chap03OpticalInstruments`
+**Nearsightedness**, {ref}`chapter:inst`
 
-**Newton's rings**, {ref}`Chap06InterferenceCoherence`
+**Newton's rings**, {ref}`chapter:coh`
 
-**Nonlinear optics**, {ref}`Chap04Polarization`
+**Nonlinear optics**, {ref}`chapter:pol`
 
-**Nonpolarized light**, {ref}`Chap04Polarization`
+**Nonpolarized light**, {ref}`chapter:pol`
 
-**Normal incidence**, {ref}`Chap02GeometricalOptics`
+**Normal incidence**, {ref}`chapter:geo`
 
-**Numerical aperture**, {ref}`Chap03OpticalInstruments` · {ref}`Chap09AdvancedInstruments` · {ref}`Chap10FiberOptics`
+**Numerical aperture**, {ref}`chapter:inst` · {ref}`chapter:adv` · {ref}`chapter:fiber`
 
 ## O
 
-**Object distance**, {ref}`Chap02GeometricalOptics`
+**Object distance**, {ref}`chapter:geo`
 
-**Objective**, {ref}`Chap03OpticalInstruments` · {ref}`Chap09AdvancedInstruments`
+**Objective**, {ref}`chapter:inst` · {ref}`chapter:adv`
 
-**Oblique incidence**, {ref}`Chap02GeometricalOptics`
+**Oblique incidence**, {ref}`chapter:geo`
 
-**Optical activity**, {ref}`Chap04Polarization`
+**Optical activity**, {ref}`chapter:pol`
 
-**Optical axis**, {ref}`Chap04Polarization` · {ref}`Chap11RayMatrix`
+**Optical axis**, {ref}`chapter:pol` · {ref}`chapter:ray`
 
-**Optical cavity**, {ref}`Chap08Lasers`
+**Optical cavity**, {ref}`chapter:laser`
 
-**Optical fiber**, {ref}`Chap10FiberOptics`
+**Optical fiber**, {ref}`chapter:fiber`
 
-**Optical instruments**, {ref}`Chap03OpticalInstruments` · {ref}`Chap09AdvancedInstruments`
+**Optical instruments**, {ref}`chapter:inst` · {ref}`chapter:adv`
 
-**Optical path length**, {ref}`Chap02GeometricalOptics` · {ref}`Chap06InterferenceCoherence`
+**Optical path length**, {ref}`chapter:geo` · {ref}`chapter:coh`
 
-**Optical power**, {ref}`Chap02GeometricalOptics` · {ref}`Chap11RayMatrix`
+**Optical power**, {ref}`chapter:geo` · {ref}`chapter:ray`
 
-**Optical pumping**, {ref}`Chap08Lasers`
+**Optical pumping**, {ref}`chapter:laser`
 
-**Optical rotation**, {ref}`Chap04Polarization`
+**Optical rotation**, {ref}`chapter:pol`
 
-**Optical thickness**, {ref}`Chap02GeometricalOptics`
+**Optical thickness**, {ref}`chapter:geo`
 
-**Optics**, {ref}`Chap01Basics`
+**Optics**, {ref}`chapter:basics`
 
-**Order of diffraction**, {ref}`Chap07Diffraction`
+**Order of diffraction**, {ref}`chapter:diff`
 
-**Ordinary ray**, {ref}`Chap04Polarization`
+**Ordinary ray**, {ref}`chapter:pol`
 
-**Oscillation**, {ref}`Chap05Wave`
+**Oscillation**, {ref}`chapter:wave`
 
 ## P
 
-**Paraxial approximation**, {ref}`Chap02GeometricalOptics` · {ref}`Chap11RayMatrix`
+**Paraxial approximation**, {ref}`chapter:geo` · {ref}`chapter:ray`
 
-**Paraxial optics**, {ref}`Chap02GeometricalOptics` · {ref}`Chap11RayMatrix`
+**Paraxial optics**, {ref}`chapter:geo` · {ref}`chapter:ray`
 
-**Partial coherence**, {ref}`Chap06InterferenceCoherence`
+**Partial coherence**, {ref}`chapter:coh`
 
-**Partially polarized light**, {ref}`Chap04Polarization`
+**Partially polarized light**, {ref}`chapter:pol`
 
-**Particle nature**, {ref}`Chap01Basics`
+**Particle nature**, {ref}`chapter:basics`
 
-**Path difference**, {ref}`Chap06InterferenceCoherence`
+**Path difference**, {ref}`chapter:coh`
 
-**Phase**, {ref}`Chap05Wave` · {ref}`Chap06InterferenceCoherence`
+**Phase**, {ref}`chapter:wave` · {ref}`chapter:coh`
 
-**Phase contrast**, {ref}`Chap09AdvancedInstruments`
+**Phase contrast**, {ref}`chapter:adv`
 
-**Phase matching**, {ref}`Chap04Polarization`
+**Phase matching**, {ref}`chapter:pol`
 
-**Phase velocity**, {ref}`Chap05Wave`
+**Phase velocity**, {ref}`chapter:wave`
 
-**Photon**, {ref}`Chap01Basics` · {ref}`Chap08Lasers`
+**Photon**, {ref}`chapter:basics` · {ref}`chapter:laser`
 
-**Photoreceptor**, {ref}`Chap03OpticalInstruments`
+**Photoreceptor**, {ref}`chapter:inst`
 
-**Planck constant**, {ref}`Chap01Basics`
+**Planck constant**, {ref}`chapter:basics`
 
-**Plane wave**, {ref}`Chap05Wave` · {ref}`Chap06InterferenceCoherence`
+**Plane wave**, {ref}`chapter:wave` · {ref}`chapter:coh`
 
-**Plano-convex lens**, {ref}`Chap03OpticalInstruments`
+**Plano-convex lens**, {ref}`chapter:inst`
 
-**Polarimeter**, {ref}`Chap04Polarization`
+**Polarimeter**, {ref}`chapter:pol`
 
-**Polarization**, {ref}`Chap04Polarization`
+**Polarization**, {ref}`chapter:pol`
 
-**Polarization analyzer**, {ref}`Chap04Polarization`
+**Polarization analyzer**, {ref}`chapter:pol`
 
-**Polarizer**, {ref}`Chap04Polarization`
+**Polarizer**, {ref}`chapter:pol`
 
-**Population inversion**, {ref}`Chap08Lasers`
+**Population inversion**, {ref}`chapter:laser`
 
-**Power (optical)**, {ref}`Chap02GeometricalOptics` · {ref}`Chap03OpticalInstruments`
+**Power (optical)**, {ref}`chapter:geo` · {ref}`chapter:inst`
 
-**Principal planes**, {ref}`Chap11RayMatrix`
+**Principal planes**, {ref}`chapter:ray`
 
-**Principal points**, {ref}`Chap02GeometricalOptics` · {ref}`Chap11RayMatrix`
+**Principal points**, {ref}`chapter:geo` · {ref}`chapter:ray`
 
-**Prism**, {ref}`Chap02GeometricalOptics`
+**Prism**, {ref}`chapter:geo`
 
-**Propagation**, {ref}`Chap02GeometricalOptics` · {ref}`Chap05Wave` · {ref}`Chap10FiberOptics`
+**Propagation**, {ref}`chapter:geo` · {ref}`chapter:wave` · {ref}`chapter:fiber`
 
-**Pupil**, {ref}`Chap03OpticalInstruments` · {ref}`Chap09AdvancedInstruments`
+**Pupil**, {ref}`chapter:inst` · {ref}`chapter:adv`
 
 ## Q
 
-**Quarter-wave plate**, {ref}`Chap04Polarization`
+**Quarter-wave plate**, {ref}`chapter:pol`
 
-**Quantum efficiency**, {ref}`Chap03OpticalInstruments`
+**Quantum efficiency**, {ref}`chapter:inst`
 
-**Quantum mechanics**, {ref}`Chap01Basics` · {ref}`Chap08Lasers`
+**Quantum mechanics**, {ref}`chapter:basics` · {ref}`chapter:laser`
 
 ## R
 
-**Radiance**, {ref}`Chap01Basics`
+**Radiance**, {ref}`chapter:basics`
 
-**Radiant intensity**, {ref}`Chap01Basics`
+**Radiant intensity**, {ref}`chapter:basics`
 
-**Ray**, {ref}`Chap02GeometricalOptics` · {ref}`Chap11RayMatrix`
+**Ray**, {ref}`chapter:geo` · {ref}`chapter:ray`
 
-**Ray equation**, {ref}`Chap11RayMatrix`
+**Ray equation**, {ref}`chapter:ray`
 
-**Ray matrix**, {ref}`Chap11RayMatrix`
+**Ray matrix**, {ref}`chapter:ray`
 
-**Ray tracing**, {ref}`Chap02GeometricalOptics` · {ref}`Chap11RayMatrix`
+**Ray tracing**, {ref}`chapter:geo` · {ref}`chapter:ray`
 
-**Rayleigh criterion**, {ref}`Chap07Diffraction` · {ref}`Chap09AdvancedInstruments`
+**Rayleigh criterion**, {ref}`chapter:diff` · {ref}`chapter:adv`
 
-**Rayleigh scattering**, {ref}`Chap10FiberOptics`
+**Rayleigh scattering**, {ref}`chapter:fiber`
 
-**Reflection**, {ref}`Chap02GeometricalOptics`
+**Reflection**, {ref}`chapter:geo`
 
-**Reflectance**, {ref}`Chap02GeometricalOptics`
+**Reflectance**, {ref}`chapter:geo`
 
-**Refracting telescope**, {ref}`Chap03OpticalInstruments`
+**Refracting telescope**, {ref}`chapter:inst`
 
-**Refraction**, {ref}`Chap02GeometricalOptics`
+**Refraction**, {ref}`chapter:geo`
 
-**Refractive index**, {ref}`Chap01Basics` · {ref}`Chap02GeometricalOptics` · {ref}`Chap10FiberOptics`
+**Refractive index**, {ref}`chapter:basics` · {ref}`chapter:geo` · {ref}`chapter:fiber`
 
-**Resonator**, {ref}`Chap08Lasers`
+**Resonator**, {ref}`chapter:laser`
 
-**Resolution**, {ref}`Chap07Diffraction` · {ref}`Chap09AdvancedInstruments`
+**Resolution**, {ref}`chapter:diff` · {ref}`chapter:adv`
 
-**Retina**, {ref}`Chap03OpticalInstruments`
+**Retina**, {ref}`chapter:inst`
 
-**Rods**, {ref}`Chap03OpticalInstruments`
+**Rods**, {ref}`chapter:inst`
 
 ## S
 
-**Scalar diffraction theory**, {ref}`Chap07Diffraction`
+**Scalar diffraction theory**, {ref}`chapter:diff`
 
-**Scattering**, {ref}`Chap01Basics` · {ref}`Chap10FiberOptics`
+**Scattering**, {ref}`chapter:basics` · {ref}`chapter:fiber`
 
-**Sensitivity**, {ref}`Chap03OpticalInstruments`
+**Sensitivity**, {ref}`chapter:inst`
 
-**Single mode**, {ref}`Chap10FiberOptics`
+**Single mode**, {ref}`chapter:fiber`
 
-**Singlet state**, {ref}`Chap08Lasers`
+**Singlet state**, {ref}`chapter:laser`
 
-**Snell's law**, {ref}`Chap02GeometricalOptics`
+**Snell's law**, {ref}`chapter:geo`
 
-**Solid angle**, {ref}`Chap01Basics`
+**Solid angle**, {ref}`chapter:basics`
 
-**Solid state laser**, {ref}`Chap08Lasers`
+**Solid state laser**, {ref}`chapter:laser`
 
-**Source**, {ref}`Chap01Basics` · {ref}`Chap06InterferenceCoherence`
+**Source**, {ref}`chapter:basics` · {ref}`chapter:coh`
 
-**Spatial coherence**, {ref}`Chap06InterferenceCoherence`
+**Spatial coherence**, {ref}`chapter:coh`
 
-**Spatial filter**, {ref}`Chap07Diffraction`
+**Spatial filter**, {ref}`chapter:diff`
 
-**Spectral distribution**, {ref}`Chap06InterferenceCoherence`
+**Spectral distribution**, {ref}`chapter:coh`
 
-**Spectrometer**, {ref}`Chap03OpticalInstruments`
+**Spectrometer**, {ref}`chapter:inst`
 
-**Spectrum**, {ref}`Chap01Basics` · {ref}`Chap05Wave`
+**Spectrum**, {ref}`chapter:basics` · {ref}`chapter:wave`
 
-**Spherical aberration**, {ref}`Chap02GeometricalOptics` · {ref}`Chap03OpticalInstruments` · {ref}`Chap09AdvancedInstruments`
+**Spherical aberration**, {ref}`chapter:geo` · {ref}`chapter:inst` · {ref}`chapter:adv`
 
-**Spherical mirror**, {ref}`Chap02GeometricalOptics` · {ref}`Chap03OpticalInstruments`
+**Spherical mirror**, {ref}`chapter:geo` · {ref}`chapter:inst`
 
-**Spherical wavefront**, {ref}`Chap05Wave` · {ref}`Chap07Diffraction`
+**Spherical wavefront**, {ref}`chapter:wave` · {ref}`chapter:diff`
 
-**Slab waveguide**, {ref}`Chap10FiberOptics`
+**Slab waveguide**, {ref}`chapter:fiber`
 
-**Snell window**, {ref}`Chap02GeometricalOptics`
+**Snell window**, {ref}`chapter:geo`
 
-**Standing wave**, {ref}`Chap08Lasers`
+**Standing wave**, {ref}`chapter:laser`
 
-**Step index fiber**, {ref}`Chap10FiberOptics`
+**Step index fiber**, {ref}`chapter:fiber`
 
-**Stimulated emission**, {ref}`Chap08Lasers`
+**Stimulated emission**, {ref}`chapter:laser`
 
-**Stokes parameters**, {ref}`Chap04Polarization`
+**Stokes parameters**, {ref}`chapter:pol`
 
-**Stokes shift**, {ref}`Chap09AdvancedInstruments`
+**Stokes shift**, {ref}`chapter:adv`
 
-**Superposition**, {ref}`Chap05Wave` · {ref}`Chap06InterferenceCoherence`
+**Superposition**, {ref}`chapter:wave` · {ref}`chapter:coh`
 
 ## T
 
-**Telescope**, {ref}`Chap03OpticalInstruments`
+**Telescope**, {ref}`chapter:inst`
 
-**Temporal coherence**, {ref}`Chap06InterferenceCoherence`
+**Temporal coherence**, {ref}`chapter:coh`
 
-**Thick lens**, {ref}`Chap11RayMatrix`
+**Thick lens**, {ref}`chapter:ray`
 
-**Thin lens**, {ref}`Chap02GeometricalOptics` · {ref}`Chap11RayMatrix`
+**Thin lens**, {ref}`chapter:geo` · {ref}`chapter:ray`
 
-**Thin lens equation**, {ref}`Chap02GeometricalOptics` · {ref}`Chap11RayMatrix`
+**Thin lens equation**, {ref}`chapter:geo` · {ref}`chapter:ray`
 
-**Three-level system**, {ref}`Chap08Lasers`
+**Three-level system**, {ref}`chapter:laser`
 
-**Threshold**, {ref}`Chap08Lasers`
+**Threshold**, {ref}`chapter:laser`
 
-**Total internal reflection**, {ref}`Chap02GeometricalOptics` · {ref}`Chap10FiberOptics`
+**Total internal reflection**, {ref}`chapter:geo` · {ref}`chapter:fiber`
 
-**Transverse**, {ref}`Chap01Basics` · {ref}`Chap05Wave`
+**Transverse**, {ref}`chapter:basics` · {ref}`chapter:wave`
 
-**Transverse mode**, {ref}`Chap08Lasers` · {ref}`Chap10FiberOptics`
+**Transverse mode**, {ref}`chapter:laser` · {ref}`chapter:fiber`
 
-**Triplet state**, {ref}`Chap08Lasers`
+**Triplet state**, {ref}`chapter:laser`
 
-**Two-level system**, {ref}`Chap08Lasers`
+**Two-level system**, {ref}`chapter:laser`
 
 ## U
 
-**Ultraviolet**, {ref}`Chap01Basics`
+**Ultraviolet**, {ref}`chapter:basics`
 
-**Unpolarized light**, {ref}`Chap04Polarization`
+**Unpolarized light**, {ref}`chapter:pol`
 
 ## V
 
-**Vector diffraction**, {ref}`Chap07Diffraction`
+**Vector diffraction**, {ref}`chapter:diff`
 
-**Velocity**, {ref}`Chap01Basics` · {ref}`Chap05Wave`
+**Velocity**, {ref}`chapter:basics` · {ref}`chapter:wave`
 
-**Visibility**, {ref}`Chap06InterferenceCoherence` · {ref}`Chap07Diffraction`
+**Visibility**, {ref}`chapter:coh` · {ref}`chapter:diff`
 
-**Vitreous humor**, {ref}`Chap03OpticalInstruments`
+**Vitreous humor**, {ref}`chapter:inst`
 
 ## W
 
-**Wave**, {ref}`Chap05Wave`
+**Wave**, {ref}`chapter:wave`
 
-**Wave equation**, {ref}`Chap05Wave`
+**Wave equation**, {ref}`chapter:wave`
 
-**Wave front**, {ref}`Chap05Wave` · {ref}`Chap07Diffraction`
+**Wave front**, {ref}`chapter:wave` · {ref}`chapter:diff`
 
-**Wave number**, {ref}`Chap05Wave`
+**Wave number**, {ref}`chapter:wave`
 
-**Wave optics**, {ref}`Chap05Wave` · {ref}`Chap06InterferenceCoherence` · {ref}`Chap07Diffraction`
+**Wave optics**, {ref}`chapter:wave` · {ref}`chapter:coh` · {ref}`chapter:diff`
 
-**Wavefront**, {ref}`Chap05Wave`
+**Wavefront**, {ref}`chapter:wave`
 
-**Waveguide**, {ref}`Chap10FiberOptics`
+**Waveguide**, {ref}`chapter:fiber`
 
-**Wavelength**, {ref}`Chap01Basics` · {ref}`Chap05Wave`
+**Wavelength**, {ref}`chapter:basics` · {ref}`chapter:wave`
 
-**Working distance**, {ref}`Chap03OpticalInstruments` · {ref}`Chap09AdvancedInstruments`
+**Working distance**, {ref}`chapter:inst` · {ref}`chapter:adv`
 
 ## X
 
-**X-ray**, {ref}`Chap01Basics`
+**X-ray**, {ref}`chapter:basics`
 
 ## Y
 
-**Young's double slit**, {ref}`Chap06InterferenceCoherence` · {ref}`Chap07Diffraction`
+**Young's double slit**, {ref}`chapter:coh` · {ref}`chapter:diff`
 
 ## Z
 
-**Zeeman effect**, {ref}`Chap08Lasers`
+**Zeeman effect**, {ref}`chapter:laser`
 
-**Zone plate**, {ref}`Chap07Diffraction`
+**Zone plate**, {ref}`chapter:diff`
 
 ---
 
@@ -560,17 +560,17 @@ This index provides a comprehensive reference to major topics, concepts, and ter
 
 This index lists major concepts and topics covered in the optics textbook, with chapter references showing where each topic is primarily discussed. Topics are organized alphabetically for easy lookup.
 
-**Chapter Abbreviations:**
-- Chap01Basics - Nature of Light
-- Chap02GeometricalOptics - Geometrical Optics
-- Chap03OpticalInstruments - Optical Instruments
-- Chap04Polarization - Polarization
-- Chap05Wave - Wave Equations
-- Chap06InterferenceCoherence - Interference and Coherence
-- Chap07Diffraction - Diffraction
-- Chap08Lasers - Lasers
-- Chap09AdvancedInstruments - Advanced Optical Microscopes
-- Chap10FiberOptics - Fiber Optics
-- Chap11RayMatrix - Ray Vectors and Ray Matrices
+**Chapter Labels:**
+- `chapter:basics` - Nature of Light
+- `chapter:geo` - Geometrical Optics
+- `chapter:inst` - Optical Instruments
+- `chapter:pol` - Polarization
+- `chapter:wave` - Wave Equations
+- `chapter:coh` - Interference and Coherence
+- `chapter:diff` - Diffraction
+- `chapter:laser` - Lasers
+- `chapter:adv` - Advanced Optical Microscopes
+- `chapter:fiber` - Fiber Optics
+- `chapter:ray` - Ray Vectors and Ray Matrices
 
 **Tip:** Multiple chapter references indicate that a concept is discussed across multiple chapters, with the listed chapters providing the most comprehensive coverage. Use the glossary ({ref}`appendix:glossary`) for detailed definitions of technical terms.

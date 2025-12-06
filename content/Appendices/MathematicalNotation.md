@@ -347,7 +347,7 @@ In free space:
 ## Cross-References
 
 For related mathematical topics, see:
-- {ref}`appendix:complex-numbers` - Complex Numbers in Optics
-- {ref}`appendix:matrix-multiplication` - Matrix Multiplication
-- {ref}`appendix:fourier-transform` - Fourier Transform in Optics
-- {ref}`appendix:vector-calculus` - Vector Calculus for Electromagnetic Fields
+- {ref}`appendix:complexNumbers` - Complex Numbers in Optics
+- {ref}`appendix:matrixMultiplication` - Matrix Multiplication
+- {ref}`appendix:fourierTransform` - Fourier Transform in Optics
+- {ref}`appendix:vectorCalculus` - Vector Calculus for Electromagnetic Fields

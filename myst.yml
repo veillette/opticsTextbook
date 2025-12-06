@@ -243,6 +243,9 @@ project:
               file: content/Chap08Lasers/Problems/LasersExercise.md
         - title: Chapter 9 - Advanced Instruments
           file: content/Chap09AdvancedInstruments/AdvancedInstruments.md
+          children:
+            - title: Problems
+              file: content/Chap09AdvancedInstruments/Problems/AdvancedInstrumentsExercise.md
         - title: Chapter 10 - Fiber Optics
           file: content/Chap10FiberOptics/FiberOptics.md
           children:
