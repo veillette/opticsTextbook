@@ -51,7 +51,7 @@ In optics, the Fourier transform has profound physical meaning:
 
 ```{list-table} Fourier Transform Interpretations
 :header-rows: 1
-:name: fourier-interpretations
+:name: table:fourier-interpretations
 
 * - Domain
   - Variable
@@ -134,7 +134,7 @@ $$\int \int |f(x,y)|^2 dx dy = \frac{1}{(2\pi)^2} \int \int |F(k_x, k_y)|^2 dk_x
 
 ```{list-table} Essential Fourier Pairs
 :header-rows: 1
-:name: fourier-pairs
+:name: table:fourier-pairs
 
 * - Function f(x,y)
   - Fourier Transform F(k_x, k_y)
@@ -568,7 +568,7 @@ The Fourier transform succeeds in optics because it captures the wave nature of 
 
 ```{list-table} Core Insights
 :header-rows: 1
-:name: core-insights
+:name: table:core-insights
 
 * - Mathematical Property
   - Physical Principle

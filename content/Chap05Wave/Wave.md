@@ -6,7 +6,7 @@ downloads:
     title: Download Chapter DOCX
 ---
 
-(chapter.wave)=
+(chapter:wave)=
 # Wave Equations
 
 ```{note} What you should know and be able to do after studying this chapter

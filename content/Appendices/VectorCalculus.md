@@ -35,7 +35,7 @@ Vector calculus allows us to connect **local** properties (what happens at a poi
 
 ```{list-table} Local-Global Connections
 :header-rows: 1
-:name: local-global-connections
+:name: table:local-global-connections
 
 * - Local Property
   - Vector Operation
@@ -331,7 +331,7 @@ These identities are essential for manipulating Maxwell's equations:
 
 ```{list-table} Essential Vector Identities
 :header-rows: 1
-:name: vector-identities
+:name: table:vector-identities
 
 * - Identity
   - Mathematical Form
@@ -527,7 +527,7 @@ Vector calculus reveals the deep structure of electromagnetism:
 
 ```{list-table} Core Physical Insights
 :header-rows: 1
-:name: physical-insights
+:name: table:physical-insights
 
 * - Vector Operation
   - Maxwell Equation

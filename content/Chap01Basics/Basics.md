@@ -16,7 +16,7 @@ downloads:
     title: Download Chapter DOCX
 ---
 
-(chapter.basics)=
+(chapter:basics)=
 # Nature of Light
 
 ```{note} What you should know and be able to do after studying this chapter
@@ -51,7 +51,7 @@ Contemporary with Newton but representing a fundamentally different philosophica
 The early 19th century witnessed a decisive shift in scientific opinion with Thomas Young's ingenious double-slit experiment, an investigation that many consider one of the most beautiful and profound experiments in the history of physics. Young directed light through two closely spaced, parallel slits and observed the resulting pattern on a screen placed behind the slits. Instead of seeing two bright bands corresponding to light passing through each slit—as particle theory would predict—Young observed a series of alternating bright and dark fringes, a characteristic interference pattern that could only be explained if light behaved as waves. The bright fringes occurred where waves from the two slits arrived in phase, reinforcing each other through constructive interference, while the dark fringes appeared where the waves arrived out of phase, canceling each other through destructive interference. This elegant demonstration provided compelling, virtually irrefutable evidence for the wave nature of light and shifted the scientific consensus decisively away from Newton's particle theory toward Huygens' wave model. Young's experiment also allowed for the first accurate measurements of light's wavelength, revealing that different colors corresponded to different wavelengths, with red light having longer wavelengths than blue light, providing a physical basis for understanding the spectrum of colors that had fascinated natural philosophers since Newton's work with prisms.
 
 ```{figure} Images/01_01_newton_rings.jpg
-:name: fig:NewtonRings
+:name: fig:basics:newton-rings
 :align: center
 :width: 80%
 
@@ -184,7 +184,7 @@ where $h$ is Planck's constant. This quantization means that electromagnetic wav
 
 
 ```{figure} Images/01_02_electromagnetic_spectrum_f1.png
-:name: fig:ElectromagneticSpectrum
+:name: fig:basics:electromagnetic-spectrum
 :align: center
 :width: 80%
 
@@ -253,7 +253,7 @@ The first successful measurement of light's speed came from an unexpected source
 Roemer's brilliant insight was recognizing that this fluctuation resulted from light's finite travel time. When Earth moved away from Jupiter in its orbit, light from Io's eclipses had to travel increasingly greater distances to reach terrestrial observers. Conversely, when Earth approached Jupiter, the light path shortened, causing eclipses to appear to occur earlier than predicted.
 
 ```{figure} Images/01_03_roemer.png
-:name: fig:roemer
+:name: fig:basics:roemer
 :align: center
 :width: 80%
 
@@ -268,7 +268,7 @@ The first successful Earth-based measurement came in 1849 from French physicist 
 
 
 ```{figure} Images/01_04_fizeau.png
-:name: fig:fizeau
+:name: fig:basics:fizeau
 :align: center
 :width: 70%
 
@@ -313,7 +313,7 @@ Since light in matter always travels slower than in vacuum (where $v = c$), the 
 
 ```{list-table} Index of Refraction for Various Media
 :header-rows: 1
-:name: table:refractive-indices
+:name: table:basics:refractive-indices
 
 * - Medium
   - Temperature/Pressure
@@ -376,7 +376,7 @@ Notice that gases have indices very close to 1.0, which makes physical sense—a
 Let's calculate the speed of light in zircon, a material often used in jewelry as a diamond substitute.
 
 **Given:**
-- Index of refraction for zircon: $n = 1.923$ ([](#table:refractive-indices))
+- Index of refraction for zircon: $n = 1.923$ ([](#table:basics:refractive-indices))
 - Speed of light in vacuum: $c = 3.00 \times 10^8 \, \text{m/s}$
 
 **Solution:**
@@ -390,13 +390,13 @@ This speed is slightly larger than half the speed of light in vacuum—still inc
 ```{note} Check Your Understanding
 :class: warning
 
-From [](#table:refractive-indices), ethanol and fresh water have indices of refraction of 1.361 and 1.333, respectively. By what percentage do the speeds of light in these liquids differ?
+From [](#table:basics:refractive-indices), ethanol and fresh water have indices of refraction of 1.361 and 1.333, respectively. By what percentage do the speeds of light in these liquids differ?
 
 *Hint: Calculate the speed in each medium, then find the percentage difference.*
 ```
 
 ```{figure} Images/01_05_refractive_index_glass_f1.png
-:name: fig:refractiveIndex
+:name: fig:basics:refractive-index
 :align: center
 :width: 90%
 
@@ -413,7 +413,7 @@ Light can travel from a source to an observer through three primary pathways:
 
 
 ```{figure} Images/01_06_light_paths.png
-:name: fig:light-paths
+:name: fig:basics:light-paths
 :align: center
 :width: 90%
 

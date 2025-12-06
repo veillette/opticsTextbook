@@ -6,7 +6,7 @@ downloads:
     title: Download Chapter DOCX
 ---
 
-(chapter.polarization)=
+(chapter:pol)=
 # Polarization
 
 ```{note} What you should know and be able to do after studying this chapter
@@ -99,7 +99,7 @@ Equality of the phases: $\varphi_y=\varphi_x$, means that the field components $
 \end{align*}
 ```
 which shows that for $\varphi_y-\varphi_x=0$ the electric field simply oscillates in one direction given by real the vector ${\cal A}_x \hat{\mathbf{x}} + {\cal A}_y \hat{\mathbf{y}}$.
-See {numref}`4_01_Dphi_000pi_f1_BW`.
+See {numref}`fig:pol:dphi-000pi-f1-bw`.
 
 If $\varphi_y-\varphi_x=\pi$ we have
 
@@ -188,7 +188,7 @@ The Jones vector is now the most general one:
 \end{align*}
 ```
 It can be shown that the electric field vector moves always along an ellipse.
-The exact shape and orientation of this ellipse varies with the difference in phase $\varphi_y-\varphi_x$ and the ratio of the amplitude ${\cal A}_x,{\cal A}_y$ and, except when $\varphi_y-\varphi_x = \pm \pi/2$, the major and minor axis of the ellipse are not parallel to the $x$- and $y$-axis. See {numref}`4_03_Dphi_025pi_f1_BW`.
+The exact shape and orientation of this ellipse varies with the difference in phase $\varphi_y-\varphi_x$ and the ratio of the amplitude ${\cal A}_x,{\cal A}_y$ and, except when $\varphi_y-\varphi_x = \pm \pi/2$, the major and minor axis of the ellipse are not parallel to the $x$- and $y$-axis. See {numref}`fig:pol:dphi-025pi-f1-bw`.
 
 **Remarks**.
 - Frequently the Jones vector is normalized such that
@@ -214,17 +214,17 @@ We can conclude that in any point of an arbitrary time-harmonic electromagnetic 
 
 
 ```{figure} Images/04_01_dphi_000pi_f1_bw.png
-:name: 4_01_Dphi_000pi_f1_BW
+:name: fig:pol:dphi-000pi-f1-bw
 Linear polarization state of electromagnetic waves. The electric field vector oscillates along a single fixed direction perpendicular to the direction of propagation, tracing out a straight line in the plane perpendicular to the wave vector.
 ```
 
 ```{figure} Images/04_02_dphi_05pi_f1_bw.png
-:name: 4_02_Dphi_05pi_f1_BW
+:name: fig:pol:dphi-05pi-f1-bw
 Circular polarization
 ```
 
 ```{figure} Images/04_03_dphi_025pi_f1_bw.png
-:name: 4_03_Dphi_025pi_f1_BW
+:name: fig:pol:dphi-025pi-f1-bw
 Elliptical polarization
 
 Illustration of different types of polarization. The horizontal and vertical arrows indicate the momentary field components ${\cal E}_x, {\cal E}_y$. The thick arrow indicates the vector $\mathbf{\mathcal{E}}$. The black curve indicates the trajectory of $\mathbf{\mathcal{E}}(t)$.
@@ -320,7 +320,7 @@ This can be done by passing the light through a crystal such that ${\cal E}_y$ a
 The matrix on the left is the Jones matrix describing the operation of a quarter-wave plate.
 
 Another important Jones matrix is the **rotation matrix**. In the preceding discussion it was assumed that the fast and slow axes were aligned with the $x$- and $y$-direction (i.e. they were parallel to ${\cal E}_x$ and ${\cal E}_y$). Suppose now that the slow and fast axes of the wave plate no longer coincide with $\widehat{\mathbf{x}}$ and
-$\widehat{\mathbf{y}}$, but rather with some other $\widehat{\mathbf{x}}'$ and $\widehat{\mathbf{y}}'$ as in {numref}`4_2_Rotation_Polarization`. In that case we apply a basis transformation: the electric field vector which is expressed in the $\widehat{\mathbf{x}}$, $\widehat{\mathbf{y}}$ basis should first be expressed in the $\widehat{\mathbf{x}}'$, $\widehat{\mathbf{y}}'$ basis before applying the Jones matrix of the wave plate to it. After applying the Jones matrix, the electric field has to be transformed back from the $\widehat{\mathbf{x}}'$, $\widehat{\mathbf{y}}'$ basis to the $ \widehat{\mathbf{x}}$, $\widehat{\mathbf{y}}$ basis.
+$\widehat{\mathbf{y}}$, but rather with some other $\widehat{\mathbf{x}}'$ and $\widehat{\mathbf{y}}'$ as in {numref}`fig:pol:rotation-polarization`. In that case we apply a basis transformation: the electric field vector which is expressed in the $\widehat{\mathbf{x}}$, $\widehat{\mathbf{y}}$ basis should first be expressed in the $\widehat{\mathbf{x}}'$, $\widehat{\mathbf{y}}'$ basis before applying the Jones matrix of the wave plate to it. After applying the Jones matrix, the electric field has to be transformed back from the $\widehat{\mathbf{x}}'$, $\widehat{\mathbf{y}}'$ basis to the $ \widehat{\mathbf{x}}$, $\widehat{\mathbf{y}}$ basis.
 
 Let $\mathbf{E}$ be given in terms of its components on the $\hat{\mathbf{x}}$, $\hat{\mathbf{y}}$ basis:
 
@@ -341,7 +341,7 @@ To find the components $E_{x'}$, $E_{y'}$ on the $\widehat{\mathbf{x}}'$, $\wide
 we first write the unit vectors
 $\widehat{\mathbf{x}}'$ and $\widehat{\mathbf{y}}'$ in terms of the basis
 $\hat{\mathbf{x}}$, $\hat{\mathbf{y}}$
-(see {numref}`4_2_Rotation_Polarization`)
+(see {numref}`fig:pol:rotation-polarization`)
 
 ```{math}
 :label: eq:pol:x-prime-unit-vector
@@ -407,7 +407,7 @@ This is a standard result from linear algebra involving basis transformations.
 
 
 ```{figure} Images/04_04_rotation_polarization.png
-:name: 4_2_Rotation_Polarization
+:name: fig:pol:rotation-polarization
 If the wave plate is rotated, the fast and slow axis no longer correspond to $x$ and $y$. Instead, we have to introduce a new coordinate system ($x',y'$).
 ```
 
@@ -511,10 +511,10 @@ A half-wave plate introduces a phase shift of $\pi$, so its Jones matrix is
 \end{array}\right),
 \end{align*}
 ```
-because $\exp(i\pi)=-1$. An important application of the half-wave plate is to **change the orientation of linearly polarized light**{cite:p}`fowles`. After all, what this matrix does is mirroring the polarization state in the $x$-axis. Thus, if we choose our mirroring axis correctly (i.e. if we choose the orientation of the wave plate correctly), we can change the direction in which the light is linearly polarized arbitrarily{cite:p}`goldstein`. To give an example: a wave with linear polarization parallel to the $x$-direction, can be rotated over angle $\alpha$ by rotating the crystal such that the fast axis makes angle $\alpha/2$ with the $x$-axis. Upon propagation through the crystal, the slow axis gets an additional phase of $\pi$, due to which the electric vector makes angle $\alpha$ with the $x$-axis (see {numref}`4_04_Rotation_polarization`). It is not difficult to verify that when the fast and slow axis are interchanged, the same linear state of polarization results.
+because $\exp(i\pi)=-1$. An important application of the half-wave plate is to **change the orientation of linearly polarized light**{cite:p}`fowles`. After all, what this matrix does is mirroring the polarization state in the $x$-axis. Thus, if we choose our mirroring axis correctly (i.e. if we choose the orientation of the wave plate correctly), we can change the direction in which the light is linearly polarized arbitrarily{cite:p}`goldstein`. To give an example: a wave with linear polarization parallel to the $x$-direction, can be rotated over angle $\alpha$ by rotating the crystal such that the fast axis makes angle $\alpha/2$ with the $x$-axis. Upon propagation through the crystal, the slow axis gets an additional phase of $\pi$, due to which the electric vector makes angle $\alpha$ with the $x$-axis (see {numref}`fig:pol:rotation-polarization`). It is not difficult to verify that when the fast and slow axis are interchanged, the same linear state of polarization results.
 
 ```{figure} Images/04_05_rotation_polarization.png
-:name: 4_04_Rotation_polarization
+:name: fig:pol:rotation-polarization
 Rotation of horizontally polarized light over an angle $\alpha$ using a half-wave plate.
 ```
 

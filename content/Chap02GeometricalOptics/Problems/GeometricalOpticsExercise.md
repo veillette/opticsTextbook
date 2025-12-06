@@ -2,15 +2,15 @@
 
 1. Principle of Fermat and Snell's Law.
 
-Consider a layer of thickness $d$ and refractive index $n_2$ which is sandwiched between two half spaces with refractive index $n_1$ and $n_3$ as shown in {numref}`Fig_2_29_Slab`.
+Consider a layer of thickness $d$ and refractive index $n_2$ which is sandwiched between two half spaces with refractive index $n_1$ and $n_3$ as shown in {numref}`fig:geo:slab`.
 A ray from point $P=(x_P,y_P)$ with $y_P>d$ passes through point $Q=(x_Q,y_Q)$ with $y_Q<0$.
 
 ```{figure} ../Images/02_16_slab.png
-:name: Fig_2_29_Slab
+:name: fig:geo:slab
 A ray through points $P$ and $Q$.
 ```
 
-- **a)** Write a formula for the OPL of the ray from $P$ to $Q$ as shown in {numref}`Fig_2_29_Slab`.
+- **a)** Write a formula for the OPL of the ray from $P$ to $Q$ as shown in {numref}`fig:geo:slab`.
 
 - **b)** Find the equations to be satisfied by $x_A$ and $x_B$ such that the OPL is minimum.
 Hint: set the partial derivatives of the OPL with respect to $x_A$ and $x_B$ equal to zero.
@@ -37,7 +37,7 @@ From electromagnetic theory, the wave trains emitted by different atoms (point s
 
 2. Perfect focusing by an ellipsoid and a hyperboloid.
 
-Suppose that there are two media with refractive indices $n_1>n_2$ and that point $S$ is at infinity in the medium with refractive index $n_2$. We will construct a surface (interface) between the two media such that all rays from $S$ are focused into the same point $F$ (see {numref}`Fig_2_07_Focus-Right`a). Because $S$ is at very large distance, the rays entering from the right are parallel. Since all parallel rays have traveled the same distance when they hit the surface $DD'$ perpendicular to the rays, all parallel rays have the same phase at their intersection points with the plane $DD'$.
+Suppose that there are two media with refractive indices $n_1>n_2$ and that point $S$ is at infinity in the medium with refractive index $n_2$. We will construct a surface (interface) between the two media such that all rays from $S$ are focused into the same point $F$ (see {numref}`fig:geo:focus-right`a). Because $S$ is at very large distance, the rays entering from the right are parallel. Since all parallel rays have traveled the same distance when they hit the surface $DD'$ perpendicular to the rays, all parallel rays have the same phase at their intersection points with the plane $DD'$.
 - **a)** If point $A$ is on the interface sought, derive that
 
 ```{math}
@@ -50,17 +50,17 @@ the constant is the same for all points $A$ on the interface.
 
 - **b)** Show that by moving the plane $DD'$ parallel to itself we can achieve that for the new plane $DD'$ we get:
 
-- **c)** Suppose next that $n_2>n_1$. as shown at the right of {numref}`Fig_2_07_Focus-Right`. Show that now, by the same argument as above, the interface is a hyperboloid with $F$ as one of its focal points.
+- **c)** Suppose next that $n_2>n_1$. as shown at the right of {numref}`fig:geo:focus-right`. Show that now, by the same argument as above, the interface is a hyperboloid with $F$ as one of its focal points.
 
 ```{figure} ../Images/02_17_focus_left.png
-:name: Fig_2_07_Focus-Right
+:name: fig:geo:focus-right
 (a) Ellipsoid ($n_2<n_1$) and (b) hyperboloid ($n_2>n_1$) to perfectly focus a parallel beam incident from the medium with refractive index $n_2$ into a point in a medium with refractive index $n_1$.
 ```
 
 - **d)** Use the previous results to describe a lens with refractive index $n_2>n_1$ and having hyperboloid surfaces which perfectly images two given points S and P in the ambient medium with refractive index $n_1$.
 
 ```{figure} ../Images/02_18_perfect_imaging.png
-:name: Fig_2_08_Perfect_Imaging
+:name: fig:geo:perfect-imaging
 Lens with hyperboloid surfaces for perfect imaging of a pair of points.
 ```
 
@@ -70,7 +70,7 @@ Lens with hyperboloid surfaces for perfect imaging of a pair of points.
 Next we consider perfect focusing of parallel rays in air ($n=1$) by a mirror.
 Let there be a parallel bundle of rays in air ($n=1$) and suppose we want to focus all rays in point $F$.
 
-- **a)** We draw a plane $\Sigma_1$ perpendicular to the rays as shown in {numref}`Fig_2_09_Para_Mirror`. The rays that hit $\Sigma_1$ have traversed the same optical path length.
+- **a)** We draw a plane $\Sigma_1$ perpendicular to the rays as shown in {numref}`fig:geo:para-mirror`. The rays that hit $\Sigma_1$ have traversed the same optical path length.
 Draw a second surface $\Sigma_2$ parallel to $\Sigma_1$. Consider rays hitting the mirror in $A_1$ and $A_2$.
 Derive that
 
@@ -94,16 +94,16 @@ Derive that
 and conclude that the mirror is a paraboloid with $f$ as focus and $\Sigma_2$ as diretrix.
 
 ```{figure} ../Images/02_19_paraboloid_mirror_bw.png
-:name: Fig_2_09_Para_Mirror
+:name: fig:geo:para-mirror
 A paraboloid mirror.
 ```
 
 4. Imaging of a virtual object.
 
-A virtual object is at a distance $d_0$ behind a converging lens. The converging incident rays to the left of the lens, that correspond to the virtual object, are shown in {numref}`Fig_2_30_Virtual_Object`. The lens has focal length $f$.
+A virtual object is at a distance $d_0$ behind a converging lens. The converging incident rays to the left of the lens, that correspond to the virtual object, are shown in {numref}`fig:geo:virtual-object`. The lens has focal length $f$.
 
 ```{figure} ../Images/02_20_virtual_object.png
-:name: Fig_2_30_Virtual_Object
+:name: fig:geo:virtual-object
 An object is created by incoming rays.
 ```
 
@@ -116,10 +116,10 @@ An object is created by incoming rays.
 5. Suppose we have two thin lenses ${\cal L}_1$ and ${\cal L}_2$. Lens ${\cal L}_1$ is convergent (i.e. positive) with focal distance $f_1>0 $ and lens ${\cal L}_2$
 is divergent (i.e. negative) with focal distance $f_2<0$. The distance between the lenses is $d$.
 Let there be an object at distance $2f_1$ in front of lens ${\cal L}_1$, as shown in
-{numref}`Fig_2_32_Two_Thin_Lenses_C_D`.
+{numref}`fig:geo:two-thin-lenses-c-d`.
 
 ```{figure} ../Images/02_21_two_thin_lenses_c_d.png
-:name: Fig_2_32_Two_Thin_Lenses_C_D
+:name: fig:geo:two-thin-lenses-c-d
  Figure corresponding to Exercise "A convergent and divergent lens".
 ```
 
@@ -148,10 +148,10 @@ Show by construction using the paraxial version of Snell's Law that when the obj
 
 
 7. The purpose of this problem is to derive the Lensmaker's formula for a thin lens by applying the imaging formula of a spherical surface twice.
-The image $P$ of a point $S$ as shown in {numref}`Fig_2_33_Spherical_Lens` is computed in two steps. First the intermediate image $P'$ of $S$ by the spherical surface with vertex $V_1$ is computed and then this intermediate image is imaged by the spherical surface with vertex $V_2$.
+The image $P$ of a point $S$ as shown in {numref}`fig:geo:spherical-lens` is computed in two steps. First the intermediate image $P'$ of $S$ by the spherical surface with vertex $V_1$ is computed and then this intermediate image is imaged by the spherical surface with vertex $V_2$.
 
 ```{figure} ../Images/02_22_spherical_lens.png
-:name: Fig_2_33_Spherical_Lens
+:name: fig:geo:spherical-lens
 A spherical lens made of glass of index $n_l$ in a medium of index $n_m$. The point $S$ is imaged in $P$.
 ```
 
@@ -253,11 +253,11 @@ Consider a system of two lenses $L_1$ and $L_2$ with distance $d$. The left lens
 
 
 11. Diaphragm in a system of two thin lenses. The purpose of this problem is to determine the entrance and exit apertures of a system consisting of two thin lenses with a diaphragm using three methods: construction, applying the Lensmaker's formula and the matrix method.
-The situation is as shown in {numref}`Fig_2_34_Two_thin_lenses`. The focal distances of the two thin lenses are $f_1=10$ cm and $f_2=12$ cm and their distance
-$d = 6$ cm. Suppose that the aperture stop is as shown in {numref}`Fig_2_34_Two_thin_lenses`. It is at a distance of $ 1.5$ cm in front of the lens $L_1$ and has a diameter $D_a=5$ cm.
+The situation is as shown in {numref}`fig:geo:two-thin-lenses`. The focal distances of the two thin lenses are $f_1=10$ cm and $f_2=12$ cm and their distance
+$d = 6$ cm. Suppose that the aperture stop is as shown in {numref}`fig:geo:two-thin-lenses`. It is at a distance of $ 1.5$ cm in front of the lens $L_1$ and has a diameter $D_a=5$ cm.
 
 ```{figure} ../Images/02_23_two_thin_lenses.png
-:name: Fig_2_34_Two_thin_lenses
+:name: fig:geo:two-thin-lenses
 Optical system with two thin lenses and an aperture stop. Lens L₁ (focal length f₁ = 10 cm) and lens L₂ (focal length f₂ = 12 cm) are separated by distance d = 6 cm, with an aperture diaphragm (diameter Dₐ = 5 cm) positioned 1.5 cm in front of L₁. This configuration is used to analyze entrance and exit pupils.
 ```
 

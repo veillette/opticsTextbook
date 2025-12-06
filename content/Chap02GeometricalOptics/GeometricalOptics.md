@@ -12,7 +12,7 @@ downloads:
     title: Download Chapter DOCX
 ---
 
-(chapter.GeomOptics)=
+(chapter:geo)=
 # Geometrical Optics
 
 
@@ -47,11 +47,11 @@ Geometrical optics is based on the intuitive idea that light consists of a bundl
 A ray is an oriented curve which is everywhere perpendicular to the surfaces of constant phase and points in the direction of the flow of energy.
 ```
 
-Consider a point source at some distance before an opaque screen with an aperture. According to the ray picture, the light distribution on a second screen further away from the source and parallel to the first screen is simply an enlarged copy of the aperture (see {numref}`Fig_2_01_GeomDiffr`). The copy is enlarged due to the fanning out of the rays. However, this description is only accurate when the wavelength of the light is very small compared to the diameter of the aperture. If the aperture is only ten times the wavelength, the pattern is much broader due to the bending of the rays around the edge of the aperture. This phenomenon is called **diffraction**. Diffraction can not be explained by geometrical optics and will be studied in [](#chapter.diffraction).
+Consider a point source at some distance before an opaque screen with an aperture. According to the ray picture, the light distribution on a second screen further away from the source and parallel to the first screen is simply an enlarged copy of the aperture (see {numref}`fig:geo:geom-diffr`). The copy is enlarged due to the fanning out of the rays. However, this description is only accurate when the wavelength of the light is very small compared to the diameter of the aperture. If the aperture is only ten times the wavelength, the pattern is much broader due to the bending of the rays around the edge of the aperture. This phenomenon is called **diffraction**. Diffraction can not be explained by geometrical optics and will be studied in [](#chapter.diffraction).
 
 
 ```{figure} Images/02_01_figgeom.png
-:name: Fig_2_01_GeomDiffr
+:name: fig:geo:geom-diffr
 Light distribution on a screen due to a rectangular aperture. Left: for a large aperture, we get an enlarged copy of the aperture. Right: for an aperture that is of the order of the wavelength there is strong bending (diffraction) of the light.
 ```
 Geometrical optics is accurate when the sizes of the objects in the system are large compared to the wavelength. It is possible to derive geometrical optics from Maxwell's equations by formally expanding the electromagnetic field in a power series in the wavelength and retaining only the first term of this expansion[^geometrical_optics_derivation]. However, this derivation is not rigorous because the power series generally does not converge (it is a so-called asymptotic series).
@@ -116,7 +116,7 @@ Fermat's principle is thus equivalent to the statement that a ray follows the pa
 
 
 ```{figure} Images/02_02_theory_of_mirage.jpg
-:name: Fig_2_02_Theory_of_mirage
+:name: fig:geo:theory-of-mirage
 Because the temperature close to the ground is higher, the refractive index is lower there. Therefore the rays bend upwards, creating a mirror image of the tree below the ground. (From Popular Science Monthly Volume 5, Public Domain, [link](https://commons.wikimedia.org/w/index.php?curid=10770493)).
 ```
 
@@ -129,12 +129,12 @@ Actually, Fermat's principle as formulated above is not complete. There are circ
 In homogeneous matter, the refractive index is constant and therefore paths of shortest OPL are straight lines. Hence in homogeneous matter rays are straight lines.
 - **Inhomogeneous matter**
 
-When the refractive index is a function of position such as air with a temperature gradient, the rays bend towards regions of higher refractive index. In the case of {numref}`Fig_2_02_Theory_of_mirage` for example, the ray from the top of the tree to the eye of the observer passes on a warm day close to the ground because there the temperature is higher and hence the refractive index is smaller. Although the curved path is longer than the straight path, the total travel time of the light is less because near the ground the light speed is higher (since the refractive index is smaller). The observer gets the impression that the tree is upside down under the ground.
+When the refractive index is a function of position such as air with a temperature gradient, the rays bend towards regions of higher refractive index. In the case of {numref}`fig:geo:theory-of-mirage` for example, the ray from the top of the tree to the eye of the observer passes on a warm day close to the ground because there the temperature is higher and hence the refractive index is smaller. Although the curved path is longer than the straight path, the total travel time of the light is less because near the ground the light speed is higher (since the refractive index is smaller). The observer gets the impression that the tree is upside down under the ground.
 
 - **Law of reflection**
 
 
-Consider the mirror shown in {numref}`Fig_2_03_Descartes_Reflection`. Since the medium above th mirror is homogeneous, a ray from point $P$ can end up in $Q$ in two ways: by going along a straight line directly from $P$ to $Q$ or alternatively by straight lines via the mirror. Both possibilities have different path lengths and hence different travel times, and hence both are local minima mentioned at the end of the previous section. We consider here the path by means of reflection by the mirror.
+Consider the mirror shown in {numref}`fig:geo:descartes-reflection`. Since the medium above th mirror is homogeneous, a ray from point $P$ can end up in $Q$ in two ways: by going along a straight line directly from $P$ to $Q$ or alternatively by straight lines via the mirror. Both possibilities have different path lengths and hence different travel times, and hence both are local minima mentioned at the end of the previous section. We consider here the path by means of reflection by the mirror.
 Let the $x$-axis be the intersection of the mirror and the plane through the points $P$ and $Q$ and perpendicular to the mirror. Let the $y$-axis be normal to the mirror. Let $(x_P, y_P)$ and $(x_Q,y_Q)$ be the coordinates of $P$ and $Q$, respectively. If $(x,0)$ is the point where a ray from $P$ to $Q$ hits the mirror, the travel time of that ray is
 
 ```{math}
@@ -167,11 +167,11 @@ or
 \theta_r = \theta_i.
 \end{align*}
 ```
-where $\theta_i$ and $\theta_r$ are the angles of incidence and reflection as shown in {numref}`Fig_2_03_Descartes_Reflection`.
+where $\theta_i$ and $\theta_r$ are the angles of incidence and reflection as shown in {numref}`fig:geo:descartes-reflection`.
 
 
 ```{figure} Images/02_03_descartes_reflection.png
-:name: Fig_2_03_Descartes_Reflection
+:name: fig:geo:descartes-reflection
 Ray from $P$ to $Q$ via the mirror.
 ```
 
@@ -179,7 +179,7 @@ Ray from $P$ to $Q$ via the mirror.
 - **Snell's law of refraction**
 
 
-Next, we consider refraction at an interface. Let $y=0$ be the interface between a medium with refractive index $n_i$ in $y>0$ and a medium with refractive index $n_t$ in $y<0$. We use the same coordinate system as in the case of reflection above. Let $(x_P,y_P)$ and $(x_Q,y_Q)$ with $y_P>0$ and $y_Q<0$ be the coordinates of two points $P$ and $Q$ are shown in {numref}`Fig_2_04_Descartes_Refraction`. What path will a ray follow that goes from $P$ to $Q$? Since the refractive index is constant in both half spaces, the ray is a straight line in both media. Let $(x,0)$ be the coordinate of the intersection point of the ray with the interface. Then the travel time is
+Next, we consider refraction at an interface. Let $y=0$ be the interface between a medium with refractive index $n_i$ in $y>0$ and a medium with refractive index $n_t$ in $y<0$. We use the same coordinate system as in the case of reflection above. Let $(x_P,y_P)$ and $(x_Q,y_Q)$ with $y_P>0$ and $y_Q<0$ be the coordinates of two points $P$ and $Q$ are shown in {numref}`fig:geo:descartes-refraction`. What path will a ray follow that goes from $P$ to $Q$? Since the refractive index is constant in both half spaces, the ray is a straight line in both media. Let $(x,0)$ be the coordinate of the intersection point of the ray with the interface. Then the travel time is
 
 ```{math}
 :label: eq:geo:refraction-travel-time
@@ -205,10 +205,10 @@ where the travel time has been multiplied by the speed of light in vacuum. {eq}`
 n_i \sin \theta_i = n_t \sin \theta_t,
 \end{align*}
 ```
-where $\theta_i$ and $\theta_t$ are the angles between the ray and the normal to the surface in the upper half space and the lower half space, respectively ({numref}`Fig_2_04_Descartes_Refraction`).
+where $\theta_i$ and $\theta_t$ are the angles between the ray and the normal to the surface in the upper half space and the lower half space, respectively ({numref}`fig:geo:descartes-refraction`).
 
 ```{figure} Images/02_04_descartes_refraction.png
-:name: Fig_2_04_Descartes_Refraction
+:name: fig:geo:descartes-refraction
 Ray from $P$ to $Q$ refracted by an interface.
 ```
 
@@ -217,27 +217,27 @@ Ray from $P$ to $Q$ refracted by an interface.
 Hence we have derived the law of reflection and Snell's law from Fermat's principle. In {ref}`chapter.basics` the reflection law and Snell's law have been derived by a different method, namely from the continuity of the tangential electromagnetic field components at the interface.
 
 ## Perfect Imaging by Conic Sections
-In this section, the conic sections ellipse, hyperbole and parabola are important. In {numref}`Fig_2_05_ConicSection` their definitions are shown as a quick reminder[^3].
+In this section, the conic sections ellipse, hyperbole and parabola are important. In {numref}`fig:geo:conic-section` their definitions are shown as a quick reminder[^3].
 
 ```{figure} Images/02_05_conic_section.png
 
 Geometric construction of conic sections (ellipse, hyperbola, and parabola) showing their traditional definitions. The ellipse is the locus of points with constant sum of distances to two foci, the hyperbola has a constant difference of distances, and the parabola maintains equal distances to a focus and a directrix.
 ```
 ```{figure} Images/02_06_conic_section.png
-:name: Fig_2_05_ConicSection
+:name: fig:geo:conic-section
 Overview of conic sections. The lower figure shows a definition that unifies the three definitions in the figure above by introducing a parameter called the eccentricity $e$. The point $F$ is the focus and the line $e=\infty$ is the directrix of the conic sections.
 ```
 
 We start with explaining what in geometrical optics is meant by **perfect imaging**.
 Let $S$ be a point source. The rays perpendicular to the spherical wave fronts emitted by $S$ radially fan out from $S$. Due to objects such as lenses etc. the spherical wave fronts are deformed and the direction of the ray are made to deviate from the radial propagation direction.
-When there is a point $P$ and a cone of rays coming from point $S$ and all rays in that cone intersect in point $P$, then by Fermat's principle, all these rays have traversed paths of minimum travel time. In particular, their travel times are equal and therefore they **all add up in phase** when they arrive in $P$. Hence at $P$ there is a high light intensity. Hence, if there is a cone of rays from point $S$ which all intersect in a point $P$ as shown in {numref}`Fig_2_06_Perfect_Imaging`, point $P$ is called the **perfect image** of $S$.
+When there is a point $P$ and a cone of rays coming from point $S$ and all rays in that cone intersect in point $P$, then by Fermat's principle, all these rays have traversed paths of minimum travel time. In particular, their travel times are equal and therefore they **all add up in phase** when they arrive in $P$. Hence at $P$ there is a high light intensity. Hence, if there is a cone of rays from point $S$ which all intersect in a point $P$ as shown in {numref}`fig:geo:perfect-imaging`, point $P$ is called the **perfect image** of $S$.
 By reversing the direction of the rays, $S$ is similarly a perfect image of $P$.
 The optical system in which this happens is called **stigmatic for the two
 points $S$ and $P$**.
 
 
 ```{figure} Images/02_07_perfect_imaging.png
-:name: Fig_2_06_Perfect_Imaging
+:name: fig:geo:perfect-imaging
 Perfect imaging: a cone of rays which diverge from $S$ and all intersect in point $P$. The rays continue after $P$.
 ```
 
@@ -286,12 +286,12 @@ In Gaussian geometrical optics only paraxial rays and spherical surfaces are con
 ```
 
 
-(section.Gaussian_SSS)=
+(sec:geo:gaussian-sss)=
 ### Gaussian Imaging by a Single Spherical Surface
 
 We will first show that within Gaussian optics a single spherical surface
 between two media with refractive indices $n_1< n_2$ images all points
-perfectly ({numref}`Fig_2_10_Spherical_interface`). The sphere has radius $R$
+perfectly ({numref}`fig:geo:spherical-interface`). The sphere has radius $R$
 and center $C$ which is inside medium 2. We consider a point object $S$ to the
 left of the surface. We draw a ray from $S$ perpendicular to the surface. The
 point of intersection is $V$. Since for this ray the angle of incidence with the
@@ -303,7 +303,7 @@ be measured with respect to the local normal at $A$, i.e. with respect to $CA$.
 We assume that this ray intersects the first ray in point $P$. We will show that
 within the approximation of Gaussian geometrical optics, all rays from $S$ pass
 through $P$.
-Furthermore, with respect to a coordinate system $(y,z)$ with origin at $V$, the $z$-axis pointing from $V$ to $C$ and the $y$-axis positive upwards as shown in {numref}`Fig_2_10_Spherical_interface`, we have:
+Furthermore, with respect to a coordinate system $(y,z)$ with origin at $V$, the $z$-axis pointing from $V$ to $C$ and the $y$-axis positive upwards as shown in {numref}`fig:geo:spherical-interface`, we have:
 
 ```{math}
 :label: eq:geo:single-surface-imaging
@@ -318,16 +318,16 @@ where
 {\cal P} = \frac{n_2-n_1}{R},
 ```
 
-is called the power of the surface and where $s_o$ and $s_i$ are the $z$-**coordinates** of $S$ and $P$, respectively, hence $s_0<0$ and $s_i>0$ in {numref}`Fig_2_10_Spherical_interface`.
+is called the power of the surface and where $s_o$ and $s_i$ are the $z$-**coordinates** of $S$ and $P$, respectively, hence $s_0<0$ and $s_i>0$ in {numref}`fig:geo:spherical-interface`.
 
 ```{figure} Images/02_08_spherical_interface.png
-:name: Fig_2_10_Spherical_interface
+:name: fig:geo:spherical-interface
 Imaging by a spherical interface between two media with refractive indices $n_2>n_1$.
 ```
 
 *Proof*.
 
-It suffices to show that $P$ is independent of the ray, i.e. of $A$. We will do this by expressing $s_i$ into $s_o$ and showing that the result is independent of $A$. Let $\alpha_1$ and $\alpha_2$ be the angles of the rays $SA$ and $AP$ with the $z$-axis as shown in {numref}`Fig_2_10_Spherical_interface`.
+It suffices to show that $P$ is independent of the ray, i.e. of $A$. We will do this by expressing $s_i$ into $s_o$ and showing that the result is independent of $A$. Let $\alpha_1$ and $\alpha_2$ be the angles of the rays $SA$ and $AP$ with the $z$-axis as shown in {numref}`fig:geo:spherical-interface`.
 Let $\theta_i$ be the angle of incidence of ray $SA$ with the local normal $CA$ on the surface and $\theta_t$ be the angle of refraction. By considering the angles in triangle $\Delta \text{SCA}$ we find
 
 
@@ -449,20 +449,20 @@ With {eq}`eq:geo:image-focal-distance` and {eq}`eq:geo:object-focal-distance`,
 ```
 
 
-(subsection.virtualSSS)=
+(sec:geo:virtual-sss)=
 ### Virtual Images and Virtual Objects of a Single Spherical Surface
 
 If we adopt the sign convention listed in
-{numref}`table_signconv` below,
+{numref}`table:geo:signconv` below,
 it turns out that {eq}`eq:geo:single-surface-imaging` holds generally. So far we
 have considered a convex surface of which the center $C$ is to the right of the
 surface, but {eq}`eq:geo:single-surface-imaging` applies also to a concave
 surface of which the center is to the left of the surface, provided that the
 radius $R$ is chosen negative.
-The convention for the sign of the radius is illustrated in {numref}`Fig_2_11_Radius`.
+The convention for the sign of the radius is illustrated in {numref}`fig:geo:radius`.
 
 ```{figure} Images/02_09_radius_convention.png
-:name: Fig_2_11_Radius
+:name: fig:geo:radius
 Sign convention for the radius $R$ of a spherical surface
 ```
 
@@ -481,7 +481,7 @@ Note that also when the power is positive, a virtual image can occur, namely whe
 
 
 ```{figure} Images/02_10_concave_surface_real_object_1.png
-:name: Fig_2_12_Surf_Concave
+:name: fig:geo:surf-concave
 Imaging by a concave surface ($R<0$) with $n_2>n_1$. All image points are to the left of the surface, i.e. are virtual ($s_i<0$).
 ```
 
@@ -493,10 +493,10 @@ point by first determining the intermediate image by the most left surface and
 then use this intermediate image as the object for the next surface and so on.
 In such a case, it can easily happen that an intermediate image is to the right
 of the next surface and hence is a virtual object for that surface. In the case
-of {numref}`Fig_2_13_Convex_Virtual_Object` at the left, the power is positive,
+of {numref}`fig:geo:convex-virtual-object` at the left, the power is positive,
 hence the convergent bundle of incident rays is made even more convergent which
 leads to a real image point. Indeed when $s_o>0$ and ${\cal P}>0$ then {eq}`eq:geo:single-surface-imaging` implies that always $s_i>0$. At the right of
-{numref}`Fig_2_13_Convex_Virtual_Object` the power is negative but is not
+{numref}`fig:geo:convex-virtual-object` the power is negative but is not
 sufficiently strong to turn the convergent incident bundle into a divergent
 bundle. So the image is still real. However, the image will be virtual when the
 virtual object $S$ is to the right of $F_o$ (which in this case is to the right
@@ -505,18 +505,18 @@ surface turns is into a divergent bundle.
 
 
 ```{figure} Images/02_11_spherical_interface_concave.png
-:name: Fig_2_13_Convex_Virtual_Object
+:name: fig:geo:convex-virtual-object
 Imaging of a virtual object $S$ by a spherical interface with $R>0$ between two media with refractive indices $n_1>n_2$ (left) and $n_2>n_1$ (right).
 ```
 
-In conclusion: provided the sign convention listed in {numref}`table_signconv`
+In conclusion: provided the sign convention listed in {numref}`table:geo:signconv`
 is used, formula {eq}`eq:geo:single-surface-imaging`
 can always be used to determine the image of a given object by a spherical surface.
 
 The convention for $s_o$, $f_o$, $s_i$, $f_i$ follows from the fact that these are $z$-coordinates with the origin at vertex $V$ of the spherical surface (or the center of the thin lens) and the positive $z$-axis is pointing to the right. The convention for the $y$-coordinate follows from the fact that the $y$-axis is positive upwards.
 
 ```{table}
-:name: table_signconv
+:name: table:geo:signconv
 
 Sign convention for spherical surfaces and thin lenses
 
@@ -529,13 +529,13 @@ Sign convention for spherical surfaces and thin lenses
 ```
 
 
-(sec.stops)=
+(sec:geo:stops)=
 
 ### Stops
 
 An element such as the rim of a lens or a diaphragm which determines the set of rays that can contribute to the image, is called the **aperture stop**. An ordinary camera has a variable diaphragm.
 
-The **entrance pupil** is the image of the aperture stop by all elements to the left of the aperture stop. In constructing the entrance pupil, rays are used which propagate from the right to the left. The image can be real or virtual. If there are no lenses between object and aperture stop, the aperture stop itself is the entrance pupil. Similarly, the **exit pupil** is the image of the aperture stop by all elements to the right of it. This image can be real or virtual. The entrance pupil determines for a given object the cone of rays in object space that contribute to the image, while the cone of rays leaving the exit pupil are those taking part in the image formation pupil (see {numref}`Fig_2_25_Aperture_Stop`).
+The **entrance pupil** is the image of the aperture stop by all elements to the left of the aperture stop. In constructing the entrance pupil, rays are used which propagate from the right to the left. The image can be real or virtual. If there are no lenses between object and aperture stop, the aperture stop itself is the entrance pupil. Similarly, the **exit pupil** is the image of the aperture stop by all elements to the right of it. This image can be real or virtual. The entrance pupil determines for a given object the cone of rays in object space that contribute to the image, while the cone of rays leaving the exit pupil are those taking part in the image formation pupil (see {numref}`fig:geo:aperture-stop`).
 
 For any object point, the **chief ray** is the ray in the cone that passes through the center of the entrance pupil, and hence also through the centers of the aperture stop and the exit pupil. A marginal ray is the ray that for an object point on the optical axis passes through the rim of the entrance pupil (and hence also through the rims of the aperture stop and the exit pupil).
 
@@ -558,7 +558,7 @@ For example, f-number$=2$ means $f = 2D$. Since the exposure time is proportiona
 
 
 ```{figure} Images/02_12_aperture_stop.png
-:name: Fig_2_25_Aperture_Stop
+:name: fig:geo:aperture-stop
 Aperture stop (A.S.) between the second and third lens, with entrance pupil and exit pupil (in this case these pupils are virtual images of the aperture stop). Also shown are the chief ray and the marginal ray.
 ```
 
@@ -577,10 +577,10 @@ quantified by five monochromatic aberrations, the so-called **primary** or *
 *Seidel aberrations**. The best known is **spherical aberration**, which is
 caused by the fact that for a convergent spherical lens, the rays that make a
 large angle with the optical axis are focused closer to the lens than the
-paraxial rays (see {numref}`Fig_2_26_Aberration_Lens`).
+paraxial rays (see {numref}`fig:geo:aberration-lens`).
 
 ```{figure} Images/02_13_aberration_lens.png
-:name: Fig_2_26_Aberration_Lens
+:name: fig:geo:aberration-lens
 Spherical aberration of a planar-convex lens.
 ```
 
@@ -592,13 +592,13 @@ the thicknesses of the lenses and the distances between them.
 For high quality systems, a lens with an aspherical surface is sometimes used.
 Systems with very small aberrations are extremely expensive, in particular if the field of view is large,
 as is the case in lithographic imaging systems
-used in the manufacturing of integrated circuits as shown in the lithographic system in {numref}`Fig_2_27_ASML_EUV`.
+used in the manufacturing of integrated circuits as shown in the lithographic system in {numref}`fig:geo:asml-euv`.
 
 A comprehensive treatment of aberration theory can be found in Braat et al.[^4].
 
 
 ```{figure} Images/02_14_asml_euv.png
-:name: Fig_2_27_ASML_EUV
+:name: fig:geo:asml-euv
 The EUV stepper TWINSCAN NXE:3400B.Lithographic lens system for DUV (192 nm), costing more than € 500.000. Ray paths are shown in purple. The optical system consists of mirrors because there are no suitable lenses for this wavelength (Courtesy of [ASML](https://www.asml.com/en/news/media-library)).
 ```
 
@@ -609,12 +609,12 @@ According to a generally accepted criterion formulated first by Rayleigh, aberra
 When the aberrations are less than this, the system is called **diffraction limited**.
 
 ```{figure} Images/02_15_airy_disk.png
-:name: Fig_2_28_AirySpot
+:name: fig:geo:airy-spot
 Left: cross section of the field of the Airy pattern. Right: intensity pattern of the Airy pattern.
 ```
 
 
-Even if the wave transmitted by the exit pupil would be perfectly spherical (no aberrations), the wave front consists of only a circular section of a sphere since the field is limited by the aperture. An aperture causes **diffraction**, i.e. bending and spreading of the light. When one images a point object on the optical axis, diffraction causes inevitable blurring given by the so-called Airy spot, as shown in {numref}`Fig_2_28_AirySpot`. The Airy spot has full-width at half-maximum:
+Even if the wave transmitted by the exit pupil would be perfectly spherical (no aberrations), the wave front consists of only a circular section of a sphere since the field is limited by the aperture. An aperture causes **diffraction**, i.e. bending and spreading of the light. When one images a point object on the optical axis, diffraction causes inevitable blurring given by the so-called Airy spot, as shown in {numref}`fig:geo:airy-spot`. The Airy spot has full-width at half-maximum:
 
 ```{math}
 :label: eq:geo:airy-spot-resolution

@@ -174,22 +174,158 @@ Use standard LaTeX delimiters for equations:
 - **Sections**: `{ref}section-label`
 - **Tables**: `{numref}table-label`
 
+## Label Naming Conventions
+
+All labels follow a standardized format for consistency and maintainability.
+
+### Standard Format
+
+Labels use lowercase letters, numbers, and hyphens (no underscores or mixed case):
+
+**Chapter codes**:
+- `basics` - Chapter 1 (Basics)
+- `geo` - Chapter 2 (Geometrical Optics)
+- `inst` - Chapter 3 (Optical Instruments)
+- `pol` - Chapter 4 (Polarization)
+- `wave` - Chapter 5 (Wave Optics)
+- `coh` - Chapter 6 (Interference & Coherence)
+- `diff` - Chapter 7 (Diffraction)
+- `laser` - Chapter 8 (Lasers)
+- `adv` - Chapter 9 (Advanced Instruments)
+- `fiber` - Chapter 10 (Fiber Optics)
+- `ray` - Chapter 11 (Ray Matrix)
+
+### Equation Labels
+
+Format: `eq:chapter-code:descriptive-name`
+
+**Examples**:
+```markdown
+:label: eq:geo:speed-light-medium
+:label: eq:diff:helmholtz
+:label: eq:fiber:self-consistency-condition
+```
+
+### Figure Labels
+
+Format: `fig:chapter-code:descriptive-name`
+
+**Examples**:
+```markdown
+```{figure} Images/mirror.png
+:name: fig:geo:mirror
+:align: center
+
+Reflection from a curved mirror.
+```
+
+```{figure} Images/fresnel_zones.png
+:name: fig:diff:fresnel-zones
+:align: center
+
+Fresnel zone construction.
+```
+```
+
+### Table Labels
+
+Format: `table:chapter-code:descriptive-name`
+
+**Examples**:
+```markdown
+```{table} Sign convention for ray tracing
+:name: table:geo:sign-convention
+
+| Quantity | Positive | Negative |
+|----------|----------|----------|
+| ...      | ...      | ...      |
+```
+```
+
+### Section Labels
+
+Format: `(sec:chapter-code:descriptive-name)=`
+
+**Examples**:
+```markdown
+(sec:geo:gaussian-beams)=
+## Gaussian Beams
+
+(sec:fiber:total-internal-reflection)=
+### Total Internal Reflection
+```
+
+### Chapter Labels
+
+Format: `(chapter:chapter-code)=`
+
+**Examples**:
+```markdown
+(chapter:geo)=
+# Geometrical Optics
+
+(chapter:fiber)=
+# Fiber Optics
+```
+
+### Appendix Labels
+
+Format: `(appendix:descriptive-name)=`
+
+**Examples**:
+```markdown
+(appendix:complex-numbers)=
+# Complex Numbers
+
+(appendix:fourier-transform)=
+# Fourier Transform
+```
+
+### Naming Guidelines
+
+1. **Descriptive**: Labels should clearly indicate content (e.g., `fig:geo:mirror` not `fig:geo:01`)
+2. **Lowercase**: All labels use lowercase letters only
+3. **Hyphens**: Use hyphens to separate words (not underscores or camelCase)
+4. **Concise**: Keep labels reasonably short but meaningful
+5. **Unique**: Each label must be unique across the entire textbook
+
+**Good examples**:
+- `eq:wave:energy-density`
+- `fig:laser:cavity-modes`
+- `table:fiber:loss-mechanisms`
+- `sec:coh:temporal-coherence`
+
+**Bad examples**:
+- `eq:wave:EnergyDensity` (uses camelCase)
+- `fig:laser:Fig_8_01` (uses underscores and numbers)
+- `table_fiber_loss` (uses underscores)
+- `section.coherence` (uses dot notation)
+
 ## Linting Rules
 
 The project includes automated linting to enforce these conventions:
 
-1. **Directive fence check**: All MyST directives must use backtick fences (
-   ` ``` `)
-2. **Title placement**: Dropdown and card titles must be on separate line after
-   opening fence
+1. **Directive fence check**: All MyST directives must use backtick fences (` ``` `)
+2. **Title placement**: Dropdown and card titles must be on separate line after opening fence
 3. **Figure captions**: All figures must have non-empty caption text
-4. **Directive closure**: All directives must be properly closed with matching
-   fence
+4. **Directive closure**: All directives must be properly closed with matching fence
+5. **Equation labels**: Must follow `eq:chapter-code:descriptive-name` format
+6. **Figure/table/section labels**: Must follow standardized naming conventions
 
 Run linting with:
 
 ```bash
+# Check MyST directive syntax
 python3 scripts/lint_myst_markdown.py
+
+# Check equation labels only
+python3 scripts/lint_equation_labels.py
+
+# Check all labels (equations, figures, tables, sections, chapters)
+python3 scripts/lint_all_labels.py
+
+# Auto-fix label issues
+python3 scripts/lint_all_labels.py --fix
 ```
 
 ## Migration from Old Syntax

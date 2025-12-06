@@ -36,12 +36,12 @@ where $\Delta x = x_1-x_2$.
 
 - **d)** What should be the phase difference between the point sources such that for $x/z=0$ on the screen at large distance $z$ the intensity vanishes?
 
-2. Consider two slits of equal width $a$ in a non-transparent screen of thickness $d$ in the plane $z=0$ as shown in {numref}`Fig_7_24_Two_slits`. The screen is illuminated by a plane wave with unit amplitude and propagating in the positive $z$-direction.
+2. Consider two slits of equal width $a$ in a non-transparent screen of thickness $d$ in the plane $z=0$ as shown in {numref}`fig:diff:two-slits`. The screen is illuminated by a plane wave with unit amplitude and propagating in the positive $z$-direction.
 In the second slit there is a piece of glass with refractive index $n$ and thickness $d$.
 In the first slit there is vacuum.
 
 ```{figure} ../Images/07_24_01_two_slits_glass.png
-:name: Fig_7_24_Two_slits
+:name: fig:diff:two-slits
 Two slits centerd at $y=0$ and very long in the $y$-direction in a dark screen of thickness $d$. The lower slit is filled with glass, the upper is in vacuum.
 ```
 
@@ -74,7 +74,7 @@ take $Q_1=1$, $Q_2=e^{i \phi}$.
 $b=4 \lambda$ and $\phi=-\pi/2$. Explain where the envelope and the other factor that depends on $x/z$ are caused by.
 
 
-3. We consider the optical set-up shown at the left of {numref}`Fig_7_25_Lloyd_Mirror` where a point source at point $\mathbf{r}_s=(a, 0,0)$ is above a plane mirror in the plane $x=0$.
+3. We consider the optical set-up shown at the left of {numref}`fig:diff:lloyd-mirror` where a point source at point $\mathbf{r}_s=(a, 0,0)$ is above a plane mirror in the plane $x=0$.
 The time-harmonic field emitted by the point source **without the mirror being present** is in complex notation given by:
 
 ```{math}
@@ -84,7 +84,7 @@ U_s(x,y,z,t)= \frac{e^{i k \sqrt{ (x-a)^2 + y^2 + z^2}-i \omega t}}{\sqrt{(x-a)^
 ```
 
 ```{figure} ../Images/07_25_02_lloyd_mirror.png
-:name: Fig_7_25_Lloyd_Mirror
+:name: fig:diff:lloyd-mirror
 Lloyd mirror configuration with a point source (left) and a rectangular aperture in a dark screen (right), above a mirror and with a screen at distance $z$ where the field is observed.
 ```
 
@@ -119,7 +119,7 @@ x= \frac{\lambda}{3a}z
 
 
 - **f)** Next suppose that there is a square aperture with center at $(a,0,0)$ and sides of length $b<a$ parallel to the $x$- and $y$-directions in an opaque (i.e. dark) screen above the mirror as shown at the right of
-{numref}`Fig_7_25_Lloyd_Mirror`. The aperture is illuminated by a plane wave that propagates parallel to the $z$-axis, hence the field in the aperture has constant phase and amplitude. Compute the smallest positive $x$ for which a zero occurs at $(x,0,z)$ on the screen at large distance $z>0$.
+{numref}`fig:diff:lloyd-mirror`. The aperture is illuminated by a plane wave that propagates parallel to the $z$-axis, hence the field in the aperture has constant phase and amplitude. Compute the smallest positive $x$ for which a zero occurs at $(x,0,z)$ on the screen at large distance $z>0$.
 Use again path length differences and a drawing in your derivation.
 
 
@@ -200,10 +200,10 @@ If $b=a$ and $\Delta r=0.1 a$ this becomes
 \frac{U_{Bessel }}{U_{Airy}} = \sqrt{\frac{2 \Delta r}{ a}} \approx 0.44,
 \end{align*}
 ```
-which is the case shown in {numref}`Fig.Besselplot`.
+which is the case shown in {numref}`fig:diff:fig-besselplot`.
 
 ```{figure} ../Images/07_26_03_bessel_plot.png
-:name: Fig.Besselplot
+:name: fig:diff:fig-besselplot
 Amplitude in the focal plane of a Bessel beam and of an Airy spot with the same total energy. The lens pupil has diameter $a=10000 \lambda$, the ring aperture of the Bessel beam case is at the outer edge of the pupil ($b=a$) and has width $\Delta r = 0.1 a$ and the $\text{NA}=0.1$.
 ```
 
