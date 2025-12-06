@@ -10,6 +10,7 @@ downloads:
     title: Download Chapter DOCX
 ---
 
+(chapter:adv)=
 # Advanced Optical Microscopes
 
 ```{note} What you should know and be able to do after studying this chapter
