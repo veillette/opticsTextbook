@@ -1,12 +1,12 @@
 # Progressive Web App (PWA) Setup
 
-This document describes the PWA implementation for the Optics Textbook.
+This document describes the PWA implementation for MyST Markdown projects.
 
 ## Overview
 
-The Optics Textbook is now available as a Progressive Web App (PWA), which means:
+This MyST project is available as a Progressive Web App (PWA), which means:
 
-- **Installable**: Users can install the textbook on their devices (desktop, mobile, tablet)
+- **Installable**: Users can install the site on their devices (desktop, mobile, tablet)
 - **Offline Access**: Content is cached for offline reading
 - **App-like Experience**: Runs in standalone mode without browser UI
 - **Fast Loading**: Cached resources load quickly
@@ -35,11 +35,11 @@ The Optics Textbook is now available as a Progressive Web App (PWA), which means
 
 ### Installation
 
-Users can install the textbook by:
+Users can install the site by:
 
 1. **Desktop Browsers (Chrome, Edge, etc.)**:
    - Click the install icon in the address bar
-   - Or use browser menu > "Install Optics Textbook"
+   - Or use browser menu > "Install [Your Project Name]"
 
 2. **Mobile Browsers (Chrome, Safari, etc.)**:
    - Tap "Add to Home Screen" from browser menu
@@ -88,7 +88,7 @@ npm run setup-pwa
 ### File Structure
 
 ```
-opticsTextbook/
+your-project/
 ├── js/
 │   └── custom-scripts.js      # Custom JavaScript (keyboard nav, etc.)
 ├── pwa/
@@ -140,7 +140,7 @@ Run a Lighthouse audit to verify PWA compliance:
 3. Select "Progressive Web App" category
 4. Run audit
 
-The textbook should score highly on:
+The site should score highly on:
 - Installability
 - PWA optimized
 - Content available offline
@@ -170,7 +170,7 @@ The PWA works on:
 ### Cached Resources
 
 The service worker caches:
-- Main pages (chapters, exercises, appendices)
+- Main pages (content pages)
 - CSS and JavaScript assets
 - Images and fonts
 - Manifest and icons
@@ -228,7 +228,7 @@ Edit `pwa/manifest.json` to change app colors:
 
 ### Updating Icons
 
-1. Replace source logo: `img/advanced_optics_logo_white.png`
+1. Replace source logo (path defined in `myst.yml` under `site.options.logo`)
 2. Run: `npm run generate-icons`
 3. Rebuild: `npm run build`
 
