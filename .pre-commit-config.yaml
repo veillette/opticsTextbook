@@ -36,6 +36,19 @@ repos:
   #       files: ^scripts/.*\.py$
   #       additional_dependencies: [types-all]
 
+  # Local hooks for MyST content
+  - repo: local
+    hooks:
+      # Lint equation labels - ensures all labels follow eq:chapter:name format
+      - id: lint-equation-labels
+        name: Lint Equation Labels
+        description: Check that equation labels follow the standard format eq:chapter:name
+        entry: python scripts/lint_equation_labels.py --quiet
+        language: python
+        files: ^content/.*\.md$
+        pass_filenames: true
+        types: [markdown]
+
   # General file checks
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v5.0.0

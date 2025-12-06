@@ -52,11 +52,12 @@ Thick lens with principle planes.
 
 The transformation of a ray from the primary principle plane ${\cal H}_1$ to the secondary principle plane ${\cal H}_2$ is:
 
-$$
+```{math}
+:label: eq:ray:principal-plane-transform
 \left( \begin{array}{c}\alpha_1 \\y_1
 \end{array}\right) = {\cal L}_{{\cal H}_1{\cal H}_2} \left( \begin{array}{c}\alpha_2 \\y_2
 \end{array}\right),
-$$ (eq.matH1H2a)
+```
 
 where
 
@@ -100,10 +101,11 @@ T_1&= \frac{1-a_{11}}{a_{12}}
 
 With the solutions for $T_1$ and $T_2$ the system matrix between the principal planes becomes:
 
-$$
+```{math}
+:label: eq:ray:principal-plane-matrix
 {\cal L}_{{\cal H}_2{\cal H}_1} = \left( \begin{array}{cc}1 & a_{12} \\0 & 1
 \end{array}\right)
-$$ (eq.MatH1H2c)
+```
 
 which has the same shape as the transfer matrix for a thin lens.
 - **e)** Show that the back focal point is at distance $1/a_{12}$ from the secondary principle plane and that the front focal plane is at distance $1/a_{12}$ from the primary principle plane.

@@ -165,9 +165,10 @@ Modes in step-index fibers. (a) Apart from the linear self-consistency condition
 
 Optical fibers can be characterized by a number of parameters. Here we list a selection of these numbers.
 - **$\Delta$-parameter** -- The $\Delta$-parameter is directly related to the relative difference in core and cladding refractive index, see {numref}`figFiberTIR`. It is defined as
-	\begin{align*}\label{eqDelta}
-		\Delta=\frac{n_1^2-n_2^2}{2n_1^2}\approx \frac{n_1-n_2}{n_1}.
-	\end{align*}
+```{math}
+:label: eq:fiber:delta-parameter
+\Delta=\frac{n_1^2-n_2^2}{2n_1^2}\approx \frac{n_1-n_2}{n_1}.
+```
 The approximation, which entails the relative difference of $n_1$ and $n_2$ holds for the weakly guiding fibers under consideration in this chapter. It follows from setting $n_2=n_1-\Delta n$ and neglecting terms of order $\Delta n^2$. For $n_1=1.448$ and $n_2=1.444$, $\Delta=5.5\times 10^{-3}$.
 - **Numerical aperture (NA)** -- The NA relates the fiber and the (external) critical angle under which it accepts (or emits) light, $\bar{\theta}_{\text{e,c}}$. That is, the maximum value of $\bar{\theta}_{\text{e}}$ in {numref}`figFiberTIR` such that TIR occurs. The NA for fibers is defined as
 ```{math}
