@@ -71,7 +71,17 @@
     "lint:equations": "node scripts/lint_equation_labels.js",
     "lint:equations:fix": "node scripts/lint_equation_labels.js --fix",
     "lint:equations:verbose": "node scripts/lint_equation_labels.js --verbose",
-    "lint:equations:python": "python3 scripts/lint_equation_labels.py"
+    "lint:equations:python": "python3 scripts/lint_equation_labels.py",
+    "lint:labels": "node scripts/lint_all_labels.js",
+    "lint:labels:fix": "node scripts/lint_all_labels.js --fix",
+    "lint:labels:verbose": "node scripts/lint_all_labels.js --verbose",
+    "lint:labels:python": "python3 scripts/lint_all_labels.py",
+    "standardize:figures": "node scripts/standardize_all_figures.js",
+    "standardize:figures:dry": "node scripts/standardize_all_figures.js --dry-run",
+    "standardize:figures:python": "python3 scripts/standardize_all_figures.py",
+    "standardize:equations": "node scripts/standardize_equation_labels.js",
+    "standardize:equations:check": "node scripts/standardize_equation_labels.js --check",
+    "standardize:equations:python": "python3 scripts/standardize_equation_labels.py"
   },
   "devDependencies": {
     "@types/jest": "^30.0.0",

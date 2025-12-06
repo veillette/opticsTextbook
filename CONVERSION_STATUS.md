@@ -5,8 +5,8 @@ This document tracks the conversion of Python scripts to JavaScript for the Opti
 ## Conversion Summary
 
 **Date:** 2025-12-06
-**Status:** Core utilities, maintenance tools, all linters, and validation scripts converted ⭐⭐⭐
-**Progress:** 10 of 16 scripts converted (62.5%)
+**Status:** Complete conversion of core workflow - all utilities, linters, validation, and standardization tools ⭐⭐⭐⭐
+**Progress:** 13 of 16 scripts converted (81.25%)
 
 ### Fully Converted Scripts ✅
 
@@ -84,23 +84,40 @@ The following scripts have been fully converted from Python to JavaScript:
     - Python fallback available: `npm run validate-enhanced:python`
     - **Impact:** All core validation now JavaScript-native!
 
+11. **standardize_all_figures.js** - Figure filename standardization
+    - Standardizes figure filenames to ChapterNum_ImageNum_descriptiveName.ext
+    - Determines correct position based on order of appearance in markdown
+    - Updates all markdown references automatically
+    - Handles both image files and .ai source files
+    - Interactive confirmation for safety
+    - Usage: `npm run standardize:figures` or `npm run standardize:figures:dry`
+    - Python fallback available: `npm run standardize:figures:python`
+
+12. **standardize_equation_labels.js** - Equation label standardization
+    - Converts legacy equation labels to eq:chapter-code:descriptive-name format
+    - Chapter-specific label mappings for Chapters 6 & 7 (136 mappings)
+    - Converts dot notation to colon notation
+    - Updates all references automatically
+    - Usage: `npm run standardize:equations` or `npm run standardize:equations:check`
+    - Python fallback available: `npm run standardize:equations:python`
+
+13. **lint_all_labels.js** - Comprehensive label linter
+    - Lints all label types: figures, tables, sections, chapters, appendices
+    - Validates camelCase format for all labels
+    - Auto-fix mode for non-standard labels
+    - Category-specific filtering
+    - Updates all references automatically
+    - Usage: `npm run lint:labels` or `npm run lint:labels:fix`
+    - Python fallback available: `npm run lint:labels:python`
+
 ### Python Scripts Remaining 📋
 
 The following Python scripts are still in use and should be converted as needed:
 
-1. **standardize_all_figures.py** - Figure standardization
-   - Priority: MEDIUM
-
-2. **standardize_equation_labels.py** - Equation label standardization
-   - Priority: MEDIUM
-
-3. **lint_all_labels.py** - Label linting
-   - Priority: MEDIUM
-
-4. **insert_figure.py** - Figure insertion tool
+1. **insert_figure.py** - Figure insertion tool
    - Priority: LOW (manual tool)
 
-5. **find_broken_references.py** - Find broken references
+2. **find_broken_references.py** - Find broken references
    - Priority: LOW (superseded by validate_references_enhanced)
 
 ## Testing
@@ -152,6 +169,19 @@ npm run lint:quiet
 npm run lint:equations
 npm run lint:equations:fix
 
+# Lint all labels (figures, tables, sections, chapters, appendices)
+npm run lint:labels
+npm run lint:labels:fix
+npm run lint:labels:verbose
+
+# Standardize figure filenames
+npm run standardize:figures
+npm run standardize:figures:dry
+
+# Standardize equation labels
+npm run standardize:equations
+npm run standardize:equations:check
+
 # Validate references (enhanced)
 npm run validate-enhanced
 npm run validate-enhanced:quiet
@@ -200,7 +230,14 @@ npm run lint:equations:python
 - **All core validation now JavaScript!**
 - **CI/CD pipeline fully JavaScript-native!**
 
-### Phase 6: Specialized Scripts (Future Work)
+### Phase 6: Standardization & Label Management ✅ COMPLETE
+- ✅ Convert standardize_all_figures.py → standardize_all_figures.js (COMPLETE!)
+- ✅ Convert standardize_equation_labels.py → standardize_equation_labels.js (COMPLETE!)
+- ✅ Convert lint_all_labels.py → lint_all_labels.js (COMPLETE!)
+- **All standardization and label management tools now JavaScript!**
+- **81% of all scripts converted!**
+
+### Phase 7: Remaining Tools (Low Priority)
 - Convert remaining specialized scripts as needed
 - Update npm scripts in package.json
 - Deprecate Python scripts
