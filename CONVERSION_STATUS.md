@@ -40,44 +40,49 @@ The following scripts have been fully converted from Python to JavaScript:
    - Can be run standalone or via linter
    - Usage: `node scripts/fix_split_equation_refs.js [--dry-run]`
 
+6. **find_unreferenced_images_myst.js** - Find unreferenced images
+   - Finds unreferenced images and .ai files
+   - Uses MyST build output for accurate detection
+   - Usage: `npm run find-unreferenced` or `node scripts/find_unreferenced_images_myst.js`
+   - Python fallback available: `npm run find-unreferenced:python`
+
+7. **delete_unreferenced_images_myst.js** - Delete unreferenced images
+   - Safely deletes unreferenced images and .ai files
+   - Includes preview and confirmation
+   - Creates backup logs
+   - Usage: `npm run clean-unreferenced` or `node scripts/delete_unreferenced_images_myst.js`
+   - Python fallback available: `npm run clean-unreferenced:python`
+
 ### Python Scripts Remaining 📋
 
 The following Python scripts are still in use and should be converted as needed:
 
-1. **find_unreferenced_images_myst.py** - Find unreferenced images
-   - Used via: `npm run find-unreferenced`
-   - Priority: HIGH (frequently used)
-
-2. **delete_unreferenced_images_myst.py** - Delete unreferenced images
-   - Used via: `npm run clean-unreferenced`
-   - Priority: HIGH (frequently used)
-
-3. **lint_myst_markdown.py** - MyST markdown linter
+1. **lint_myst_markdown.py** - MyST markdown linter
    - Used via: `npm run lint` and `npm run lint:fix`
    - Priority: HIGH (critical for CI/CD)
 
-4. **validate_references_enhanced.py** - Enhanced reference validator
+2. **validate_references_enhanced.py** - Enhanced reference validator
    - Used via: `npm run validate-enhanced`
    - Priority: HIGH (critical for validation)
 
-5. **lint_equation_labels.py** - Equation label linter
+3. **lint_equation_labels.py** - Equation label linter
    - Used via: `npm run lint:equations`
    - Priority: MEDIUM
 
-6. **standardize_all_figures.py** - Figure standardization
+4. **standardize_all_figures.py** - Figure standardization
    - Priority: MEDIUM
 
-7. **standardize_equation_labels.py** - Equation label standardization
+5. **standardize_equation_labels.py** - Equation label standardization
    - Priority: MEDIUM
 
-8. **lint_all_labels.py** - Label linting
+6. **lint_all_labels.py** - Label linting
    - Priority: MEDIUM
 
-9. **insert_figure.py** - Figure insertion tool
+7. **insert_figure.py** - Figure insertion tool
    - Priority: LOW (manual tool)
 
-10. **find_broken_references.py** - Find broken references
-    - Priority: LOW (superseded by validate_references_enhanced)
+8. **find_broken_references.py** - Find broken references
+   - Priority: LOW (superseded by validate_references_enhanced)
 
 ## Testing
 
@@ -110,6 +115,14 @@ node scripts/fix_admonitions.js
 
 # Fix split equation references
 node scripts/fix_split_equation_refs.js --dry-run
+
+# Find unreferenced images
+npm run find-unreferenced
+npm run find-unreferenced:dry
+
+# Clean unreferenced images
+npm run clean-unreferenced
+npm run clean-unreferenced:dry
 ```
 
 ### Python Scripts (Still Active)
@@ -118,8 +131,11 @@ Python scripts continue to work as before via npm scripts:
 ```bash
 npm run lint
 npm run lint:fix
-npm run find-unreferenced
 npm run validate-enhanced
+
+# Python fallbacks for converted scripts
+npm run find-unreferenced:python
+npm run clean-unreferenced:python
 ```
 
 ## Migration Strategy
@@ -135,13 +151,15 @@ npm run validate-enhanced
 - Convert fix_admonitions.py → fix_admonitions.js
 - Convert fix_split_equation_refs.py → fix_split_equation_refs.js
 
-### Phase 3: Complex Scripts (Future Work)
-- Convert lint_myst_markdown.py → lint_myst_markdown.js
-- Convert validate_references_enhanced.py → validate_references_enhanced.js
+### Phase 3: High-Priority Scripts ✅ COMPLETE
 - Convert find_unreferenced_images_myst.py → find_unreferenced_images_myst.js
 - Convert delete_unreferenced_images_myst.py → delete_unreferenced_images_myst.js
 
-### Phase 4: Specialized Scripts (Future Work)
+### Phase 4: Remaining Complex Scripts (Future Work)
+- Convert lint_myst_markdown.py → lint_myst_markdown.js
+- Convert validate_references_enhanced.py → validate_references_enhanced.js
+
+### Phase 5: Specialized Scripts (Future Work)
 - Convert remaining specialized scripts as needed
 - Update npm scripts in package.json
 - Deprecate Python scripts
