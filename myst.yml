@@ -265,6 +265,10 @@ project:
           file: content/Appendices/VectorCalculus.md
         - title: Mathematical Notation Index
           file: content/Appendices/MathematicalNotation.md
+        - title: Glossary of Optical Terms
+          file: content/Appendices/Glossary.md
+        - title: Index of Key Concepts
+          file: content/Appendices/Index.md
     - title: Downloads
       file: content/Downloads.md
     - title: Author

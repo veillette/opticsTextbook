@@ -1,4 +1,9 @@
 ---
+tags:
+  - fiber-optics
+  - advanced
+  - applications
+  - theory
 downloads:
   - id: chapter-10-pdf
     title: Download Chapter PDF

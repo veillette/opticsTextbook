@@ -1,4 +1,9 @@
 ---
+tags:
+  - lasers
+  - advanced
+  - applications
+  - theory
 downloads:
   - id: chapter-08-pdf
     title: Download Chapter PDF

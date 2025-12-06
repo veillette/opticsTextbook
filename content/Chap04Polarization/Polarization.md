@@ -1,4 +1,8 @@
 ---
+tags:
+  - polarization
+  - intermediate
+  - theory
 downloads:
   - id: chapter-04-pdf
     title: Download Chapter PDF

@@ -1,4 +1,9 @@
 ---
+tags:
+  - wave-optics
+  - electromagnetic-theory
+  - intermediate
+  - theory
 downloads:
   - id: chapter-05-pdf
     title: Download Chapter PDF
