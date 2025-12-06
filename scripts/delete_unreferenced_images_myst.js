@@ -19,6 +19,7 @@
  *     --ai-only          Delete only .ai files (skip image files)
  *     --input-images     Custom path to unreferenced images list
  *     --input-ai         Custom path to unreferenced .ai files list
+ *     --content-dir      Content directory for empty directory cleanup (default: content)
  */
 
 const fs = require('fs');
@@ -375,7 +376,8 @@ async function main() {
     imagesOnly: args.includes('--images-only'),
     aiOnly: args.includes('--ai-only'),
     inputImages: 'reports/unreferenced_images.txt',
-    inputAi: 'reports/unreferenced_ai_files.txt'
+    inputAi: 'reports/unreferenced_ai_files.txt',
+    contentDir: 'content'
   };
 
   // Parse input-images
@@ -388,6 +390,12 @@ async function main() {
   const inputAiIdx = args.indexOf('--input-ai');
   if (inputAiIdx !== -1 && args[inputAiIdx + 1]) {
     options.inputAi = args[inputAiIdx + 1];
+  }
+
+  // Parse content-dir
+  const contentDirIdx = args.indexOf('--content-dir');
+  if (contentDirIdx !== -1 && args[contentDirIdx + 1]) {
+    options.contentDir = args[contentDirIdx + 1];
   }
 
   console.log('=== Enhanced Unreferenced Images Deletion Tool ===\n');
@@ -472,7 +480,7 @@ async function main() {
   let removedDirs = [];
   if (!options.dryRun && allDeleted.length > 0) {
     console.log('\nCleaning up empty directories...');
-    removedDirs = removeEmptyDirectories('content', options.dryRun);
+    removedDirs = removeEmptyDirectories(options.contentDir, options.dryRun);
   }
 
   // Summary

@@ -47,15 +47,16 @@ function fixSplitReferences(content) {
  *
  * @param {string} filePath - Path to file
  * @param {boolean} dryRun - Whether to perform a dry run
+ * @param {string} contentDir - Content directory for relative paths
  * @returns {number} Number of fixes made
  */
-function processFile(filePath, dryRun = false) {
+function processFile(filePath, dryRun = false, contentDir = 'content') {
   try {
     const originalContent = fs.readFileSync(filePath, 'utf8');
     const [newContent, changes] = fixSplitReferences(originalContent);
 
     if (changes.length > 0) {
-      const relativePath = path.relative('content', filePath);
+      const relativePath = path.relative(contentDir, filePath);
       console.log(`\n📄 ${relativePath}`);
       for (const change of changes) {
         console.log(`  ✓ ${change}`);
@@ -130,7 +131,7 @@ function main() {
   let filesModified = 0;
 
   for (const mdFile of mdFiles) {
-    const fixes = processFile(mdFile, options.dryRun);
+    const fixes = processFile(mdFile, options.dryRun, options.contentDir);
     if (fixes > 0) {
       totalFixes += fixes;
       filesModified++;
