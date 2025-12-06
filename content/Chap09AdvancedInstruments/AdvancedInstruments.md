@@ -1,4 +1,8 @@
 ---
+tags:
+  - optical-instruments
+  - advanced
+  - applications
 downloads:
   - id: chapter-09-pdf
     title: Download Chapter PDF

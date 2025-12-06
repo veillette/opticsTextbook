@@ -1,3 +1,10 @@
+---
+tags:
+  - mathematics
+  - reference
+  - foundational
+---
+
 (appendix:matrix-multiplication)=
 # Appendix B: Matrix Multiplication in Optics
 

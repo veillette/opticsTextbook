@@ -1,4 +1,9 @@
 ---
+tags:
+  - ray-matrices
+  - geometrical-optics
+  - advanced
+  - mathematics
 downloads:
   - id: chapter-11-pdf
     title: Download Chapter PDF

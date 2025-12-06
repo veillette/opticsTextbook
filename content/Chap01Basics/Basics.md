@@ -9,6 +9,10 @@ kernelspec:
   display_name: Python 3
   language: python
   name: python3
+tags:
+  - electromagnetic-theory
+  - foundational
+  - theory
 downloads:
   - id: chapter-01-pdf
     title: Download Chapter PDF

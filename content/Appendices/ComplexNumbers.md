@@ -1,3 +1,10 @@
+---
+tags:
+  - mathematics
+  - reference
+  - foundational
+---
+
 (appendix:complex-numbers)=
 # Appendix A: Complex Numbers in Optics
 

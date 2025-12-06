@@ -1,3 +1,10 @@
+---
+tags:
+  - mathematics
+  - reference
+  - advanced
+---
+
 (appendix:fourier-transform)=
 # Appendix C: Fourier Transform in Optics
 

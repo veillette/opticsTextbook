@@ -1,3 +1,9 @@
+---
+tags:
+  - foundational
+  - introduction
+---
+
 (chapter:preface)=
 # Introduction to Optics
 
