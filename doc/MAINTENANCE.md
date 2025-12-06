@@ -87,7 +87,7 @@ git commit --no-verify
 GitHub Actions automatically runs when you push:
 - MyST markdown linter
 - Reference validation
-- Python unit tests
+- JavaScript unit tests
 - HTML build (must succeed)
 - External link checking
 
@@ -148,7 +148,7 @@ git push
 **Option 1: Use the figure insertion script (RECOMMENDED)**
 ```bash
 # Preview first (dry run)
-python scripts/insert_figure.py \
+npm run insert-figure -- \
   --image ~/Downloads/my_figure.png \
   --chapter 5 \
   --position 3 \
@@ -156,7 +156,7 @@ python scripts/insert_figure.py \
   --dry-run
 
 # If preview looks good, remove --dry-run
-python scripts/insert_figure.py \
+npm run insert-figure -- \
   --image ~/Downloads/my_figure.png \
   --chapter 5 \
   --position 3 \
@@ -209,7 +209,7 @@ npm run lint:fix
 
 **Step 1: Preview what will be deleted**
 ```bash
-npm run find-unreferenced-dry
+npm run find-unreferenced:dry
 # Shows list of images not referenced anywhere
 ```
 
@@ -221,7 +221,7 @@ npm run find-unreferenced
 
 **Step 3: Delete with confirmation**
 ```bash
-python scripts/delete_unreferenced_images_myst.py
+npm run clean-unreferenced
 # Shows count and asks for confirmation before deleting
 ```
 
@@ -350,18 +350,13 @@ npm run validate-enhanced
 ### Tests are failing
 **Check what failed:**
 ```bash
-pytest scripts/tests/ -v
+npm test
 # Shows which tests failed and why
 ```
 
 **Common test failures:**
-- `test_with_dots`: Usually a string handling bug in `shared_utils.py`
 - Reference validation: Check that files exist and are referenced correctly
-
-**To run single test:**
-```bash
-pytest scripts/tests/test_shared_utils.py::TestToSnakeCase -v
-```
+- Script errors: Check that all JavaScript scripts are working properly
 
 ### GitHub Actions build failed
 **View the error:**
@@ -374,7 +369,7 @@ pytest scripts/tests/test_shared_utils.py::TestToSnakeCase -v
 **Common issues:**
 - Missing image files (fix with `npm run validate-enhanced`)
 - Broken references (fix with `npm run lint:fix`)
-- Test failures (run `pytest scripts/tests/ -v` locally)
+- Test failures (run `npm test` locally)
 
 ### I accidentally broke something and need to revert
 ```bash
@@ -402,12 +397,11 @@ cd opticsTextbook
 
 # Install dependencies
 npm install
-pip install -r config/requirements.txt
 
 # Verify setup
 npm run build
 npm run validate-enhanced
-pytest scripts/tests/ -q
+npm test
 ```
 
 ---
@@ -460,12 +454,12 @@ opticsTextbook/
 | `npm run lint:fix` | Auto-fix linting issues |
 | `npm run validate-enhanced` | Check references, citations, cross-refs |
 | `npm run validate-enhanced-quiet` | Same, but concise output |
-| `npm run find-unreferenced-dry` | Find unused images (preview) |
+| `npm run find-unreferenced:dry` | Find unused images (preview) |
 | `npm run find-unreferenced` | Find unused images (full report) |
 | `npm run optimize-images` | Compress large images |
 | `npm run checklinks` | Check external links |
 | `npm run clean` | Clear build cache |
-| `pytest scripts/tests/ -v` | Run unit tests |
+| `npm test` | Run unit tests |
 
 ---
 
