@@ -7,6 +7,7 @@
  * 2. Label standardization check
  * 3. Image reference validation
  * 4. Markdown lint checks
+ * 5. Style guide compliance
  *
  * Status: ACTIVE - Primary validation entry point
  *
@@ -23,6 +24,7 @@
  *   --skip-labels         Skip label validation
  *   --skip-images         Skip image validation
  *   --skip-lint           Skip markdown linting
+ *   --skip-style-guide    Skip style guide validation
  *
  * Exit codes:
  *   0: All validations passed
@@ -224,7 +226,8 @@ function main() {
     skipReferences: args.includes('--skip-references'),
     skipLabels: args.includes('--skip-labels'),
     skipImages: args.includes('--skip-images'),
-    skipLint: args.includes('--skip-lint')
+    skipLint: args.includes('--skip-lint'),
+    skipStyleGuide: args.includes('--skip-style-guide')
   };
 
   // Parse arguments
@@ -307,6 +310,21 @@ function main() {
       '📝 MARKDOWN LINTING'
     );
     result.name = 'Markdown Linting';
+    results.push(result);
+  }
+
+  // 5. Style Guide Validation
+  if (!options.skipStyleGuide) {
+    const validatorArgs = ['--content-dir', options.contentDir];
+    if (options.quiet) validatorArgs.push('--quiet');
+    if (options.strict) validatorArgs.push('--strict');
+
+    const result = runValidator(
+      path.join(scriptsDir, 'validate-style-guide.js'),
+      validatorArgs,
+      '📋 STYLE GUIDE VALIDATION'
+    );
+    result.name = 'Style Guide Validation';
     results.push(result);
   }
 
