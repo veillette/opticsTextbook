@@ -68,13 +68,33 @@ opticsTextbook/
 │   ├── ...                    # Chapters 1-11
 │   ├── Appendices/            # Mathematical appendices
 │   └── Preface/               # Textbook introduction
-├── scripts/                    # Utility scripts (JavaScript/Node.js)
+├── scripts/                    # Utility scripts (all Node.js/JavaScript)
+│   ├── build/                 # Build-time scripts
+│   │   ├── copy-export-files.js
+│   │   ├── generate-pwa-icons.js
+│   │   ├── generate-pwa-manifest.js
+│   │   ├── inject-custom-scripts.js
+│   │   ├── install-pwa-assets.js
+│   │   └── optimize-images.js
+│   ├── images/                # Image management
+│   │   ├── delete-unreferenced.js
+│   │   ├── find-unreferenced.js
+│   │   └── insert-figure.js
+│   ├── transform/             # Content transformation
+│   │   ├── fix-directive-syntax.js
+│   │   ├── fix-split-references.js
+│   │   ├── standardize-figures.js
+│   │   └── standardize-labels.js
+│   ├── validation/            # Validation and linting
+│   │   ├── lint-markdown.js
+│   │   ├── validate-all.js
+│   │   ├── validate-images.js
+│   │   └── validate-references.js
+│   ├── tests/                 # Jest unit tests
 │   ├── config.json            # Chapter mappings (IMPORTANT!)
-│   ├── validation/            # Validation scripts
-│   ├── transform/             # Content transformation scripts
-│   ├── build/                 # Build scripts
-│   ├── images/                # Image processing scripts
-│   └── tests/                 # Jest unit tests
+│   ├── shared-utils.js        # Shared utility functions
+│   ├── report-utils.js        # Reporting utilities
+│   └── index.js               # Common exports
 ├── doc/                        # Centralized documentation
 │   ├── MAINTENANCE.md         # Detailed workflows
 │   ├── MYST_CONVENTIONS.md    # MyST syntax rules
@@ -175,7 +195,7 @@ Custom callout box with title.
 
 **Use the script (recommended):**
 ```bash
-python scripts/insert_figure.py \
+npm run images:insert -- \
   --image ~/path/to/figure.png \
   --chapter 5 \
   --position 3 \
@@ -229,18 +249,18 @@ npm run docx               # Generate individual chapter DOCX files (11 files)
    }
    ```
 4. Update `myst.yml` table of contents
-5. Validate: `npm run validate-enhanced && npm run build`
+5. Validate: `npm run validate && npm run build`
 
 ### Fixing Broken References
 
 ```bash
 # Find all broken references
-npm run validate-enhanced
+npm run validate
 
 # Common fixes
 npm run lint:fix                    # Auto-fix many issues
-npm run find-unreferenced-dry       # Find orphaned images
-python3 scripts/fix_split_equation_refs.py --dry-run  # Check for split refs
+npm run images:find-unreferenced:dry  # Find orphaned images
+npm run fix:split-refs:dry          # Check for split refs
 ```
 
 ## Build Process
@@ -296,7 +316,6 @@ When you commit, Husky automatically runs:
 - **doc/scripts/README.md** - Documentation for utility scripts
 - **pwa/service-worker.js** - PWA service worker (handles offline caching)
 - **pwa/manifest.json** - PWA manifest (app metadata)
-- **config/requirements.txt** - Python dependencies
 
 ## Quality Standards
 
@@ -304,7 +323,8 @@ When you commit, Husky automatically runs:
 
 ✓ Run `npm run build` - Verify HTML builds successfully and exports generate
 ✓ Run `npm run lint:fix` - Auto-fix linting issues
-✓ Run `npm run validate-enhanced` - Check all references
+✓ Run `npm run validate` - Check all references
+✓ Run `npm test` - Run Jest unit tests
 ✓ Commit triggers pre-commit hook automatically
 ✓ Push triggers GitHub Actions validation and deployment
 
@@ -364,15 +384,15 @@ done
 ### Tests Fail
 
 ```bash
-pytest scripts/tests/ -v  # See what failed
+npm test  # See what failed
 # Fix issues, then retry commit
 ```
 
 ### Broken References
 
 ```bash
-npm run validate-enhanced  # Shows exactly what's broken
-npm run lint:fix           # Auto-fix common issues
+npm run validate  # Shows exactly what's broken
+npm run lint:fix  # Auto-fix common issues
 ```
 
 ### Pre-Commit Hook Blocked My Commit
@@ -488,24 +508,24 @@ downloads:
 
 ```bash
 # Optimize images (runs automatically in prebuild)
-node scripts/optimize-images.js
+npm run optimize-images
 
 # Find unreferenced images
-npm run find-unreferenced-dry
+npm run images:find-unreferenced:dry
 
 # Delete unreferenced images
-npm run clean-unreferenced
+npm run images:clean-unreferenced
 ```
 
 ### Reference Validation
 
 ```bash
-# Enhanced validation (checks all references and citations)
-npm run validate-enhanced
+# Validation (checks all references and citations)
+npm run validate
 
-# Fix split equation references
-python3 scripts/fix_split_equation_refs.py --dry-run
-python3 scripts/fix_split_equation_refs.py  # Apply fixes
+# Fix split references
+npm run fix:split-refs:dry
+npm run fix:split-refs  # Apply fixes
 ```
 
 ### Linting
@@ -584,7 +604,7 @@ The project has comprehensive validation:
 
 ```bash
 # Run all validation checks
-npm run validate-enhanced
+npm run validate
 
 # Expected output: "✅ No validation issues found!"
 ```

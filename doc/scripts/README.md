@@ -4,6 +4,16 @@ This directory contains JavaScript utility scripts for maintaining and validatin
 MyST Markdown project content. All scripts are written in Node.js and are integrated with
 npm for easy execution.
 
+## Directory Structure
+
+Scripts are organized into functional categories:
+
+- **`build/`** - Build-time scripts (PWA setup, image optimization, export copying)
+- **`images/`** - Image management utilities (find/delete unreferenced, insert figures)
+- **`transform/`** - Content transformation scripts (fix directives, standardize labels)
+- **`validation/`** - Validation and linting scripts (markdown linting, reference validation)
+- **`tests/`** - Jest unit tests for script functionality
+
 ## Available Scripts
 
 All scripts can be run via npm commands. See `package.json` for the complete list.
@@ -266,6 +276,13 @@ Scripts load configuration from `scripts/config.json`. Key settings include:
 - **naming_convention**: Filename templates
 - **image_optimization**: Settings for image compression
 
+### Shared Utilities
+
+Common functionality is provided by:
+- **`scripts/shared-utils.js`** - Core utilities (file operations, chapter info, content parsing)
+- **`scripts/report-utils.js`** - Reporting and output formatting utilities
+- **`scripts/index.js`** - Common exports for easy importing
+
 ## Troubleshooting
 
 ### "Command not found" errors
@@ -296,13 +313,18 @@ npm test -- --verbose
 
 When creating new utility scripts:
 
-1. Add the script to the `scripts/` directory
+1. Add the script to the appropriate subdirectory:
+   - `scripts/build/` for build-time operations
+   - `scripts/images/` for image management
+   - `scripts/transform/` for content transformations
+   - `scripts/validation/` for validation and linting
 2. Add an entry in `package.json` under `scripts`
 3. Follow the existing patterns for:
    - Argument parsing (using `process.argv` or a library)
    - Configuration loading from `config.json`
    - Dry-run mode support
    - Error handling
+   - Use shared utilities from `scripts/shared-utils.js` and `scripts/report-utils.js`
 
 ### Code Style
 

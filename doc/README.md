@@ -24,7 +24,6 @@ This directory contains all project documentation for the Optics Textbook.
 | Document | Description |
 |----------|-------------|
 | [scripts/README.md](scripts/README.md) | Utility scripts overview and usage |
-| [scripts/tests/README.md](scripts/tests/README.md) | Test suite documentation |
 
 ## Getting Started
 

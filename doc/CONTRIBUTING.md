@@ -1,6 +1,6 @@
 # Contributing to the Optics Textbook
 
-Thanks for your interest in improving the Optics Textbook! This project combines MyST Markdown content, Node.js tooling, Python utilities, and PWA features. Thoughtful contributions—whether fixing typos, polishing diagrams, or enhancing scripts—help students and educators worldwide.
+Thanks for your interest in improving the Optics Textbook! This project combines MyST Markdown content, Node.js tooling, and PWA features. Thoughtful contributions—whether fixing typos, polishing diagrams, or enhancing scripts—help students and educators worldwide.
 
 This guide covers the expectations and workflows for contributors. Please read it fully before opening a pull request.
 
@@ -38,7 +38,7 @@ This guide covers the expectations and workflows for contributors. Please read i
 
 - **Content improvements:** Clarify explanations, fix typos, add examples, or expand problem sets in `content/`.
 - **Figures & images:** Update diagrams, improve accessibility, or replace outdated graphics in `content/ChapXX.../Images/`.
-- **Tooling & scripts:** Enhance utilities inside `scripts/` (Python or Node) that automate validation, builds, or image processing.
+- **Tooling & scripts:** Enhance utilities inside `scripts/` (Node.js) that automate validation, builds, or image processing.
 - **Documentation:** Improve guides such as `README.md`, `doc/MAINTENANCE.md`, or this file.
 - **Tests & validation:** Strengthen unit tests (`scripts/tests/`) or add new checks for references and figures.
 
@@ -52,7 +52,6 @@ If you’re unsure where to start, look for issues labeled **good first issue**,
 | ----------- | ------------------- | ----- |
 | Node.js | 18+ LTS | Needed for MyST tooling, linting, build, and PWA scripts |
 | npm | 9+ | Installed with Node |
-| Python | 3.10+ | Required for validation, figure tooling, and tests |
 | Git | Latest stable | Standard distributed workflow |
 | LaTeX toolchain | texlive-xetex, latexmk | Required for PDF generation (`npm run build`) |
 
@@ -65,10 +64,6 @@ cd opticsTextbook
 
 # Install Node dependencies
 npm install
-
-# Install Python dependencies
-python -m venv .venv && source .venv/bin/activate  # optional but recommended
-pip install -r config/requirements.txt
 ```
 
 ### Helpful Scripts
@@ -76,8 +71,8 @@ pip install -r config/requirements.txt
 - `npm run start` – local dev server with live reload at http://localhost:3000
 - `npm run build` – full build (image optimization → exports → HTML → PWA)
 - `npm run lint:fix` – auto-fix common MyST and formatting issues
-- `npm run validate-enhanced` – validate references, citations, labels
-- `pytest scripts/tests/ -v` – run Python unit tests
+- `npm run validate` – validate references, citations, labels
+- `npm test` – run Jest unit tests
 
 ---
 
@@ -92,16 +87,16 @@ pip install -r config/requirements.txt
 4. **Run required checks locally.**
    ```bash
    npm run lint:fix
-   npm run validate-enhanced
+   npm run validate
    npm run build
-   pytest scripts/tests/ -v  # when Python tooling is touched
+   npm test  # run Jest unit tests
    ```
 5. **Review the diff.** Ensure only intentional files changed and no large binaries were added accidentally.
 6. **Commit with a descriptive message** (see [Commit Messages](#commit-messages--pull-requests)).
 7. **Open a pull request** against `main`, referencing any related issues (e.g., `Fixes #59`).
 8. **Respond to feedback promptly.** Reviewers may request adjustments for style, clarity, or tooling.
 
-> **Pre-commit hook:** Husky automatically runs the MyST linter and Python unit tests when you commit. Fix failures before retrying the commit.
+> **Pre-commit hook:** Husky automatically runs the MyST linter and Jest unit tests when you commit. Fix failures before retrying the commit.
 
 ---
 
@@ -116,7 +111,7 @@ pip install -r config/requirements.txt
 - **Tone:** Maintain an approachable, instructional tone. Avoid slang or colloquialisms.
 - **Citations:** Use the existing `references.bib` entries or add new ones when citing external material.
 
-Before submitting, run `npm run validate-enhanced` to catch missing labels, malformed directives, and split references.
+Before submitting, run `npm run validate` to catch missing labels, malformed directives, and split references.
 
 ---
 
@@ -124,7 +119,7 @@ Before submitting, run `npm run validate-enhanced` to catch missing labels, malf
 
 - **Preferred formats:** PNG or JPG for photos; SVG or PNG for diagrams. Avoid WebP (breaks PDF export).
 - **Naming convention:** `ChapterNumber_FigureNumber_description.ext` (e.g., `05_03_lens_diagram.png`).
-- **Insertion:** Use `python scripts/insert_figure.py` to automate file naming, numbering, and reference updates. If doing it manually, follow the format below:
+- **Insertion:** Use `npm run images:insert` to automate file naming, numbering, and reference updates. If doing it manually, follow the format below:
   ```markdown
   ```{figure} Images/05_03_lens_diagram.png
   :name: fig:lens_diagram
@@ -141,9 +136,14 @@ Before submitting, run `npm run validate-enhanced` to catch missing labels, malf
 
 ## Tooling & Code Changes
 
-- **Scripts directory:** Python utilities live in `scripts/`. Node scripts for PWA/build tasks also live here. Update `doc/scripts/README.md` when adding or changing behavior.
+- **Scripts directory:** All utility scripts are written in Node.js and organized by function in subdirectories:
+  - `scripts/build/` - Build-time operations (PWA, optimization)
+  - `scripts/images/` - Image management utilities
+  - `scripts/transform/` - Content transformation scripts
+  - `scripts/validation/` - Validation and linting
+  - Update `doc/scripts/README.md` when adding or changing behavior.
 - **Configuration:** Some scripts rely on `scripts/config.json` (chapter mappings) and `myst.yml` (TOC, exports). Update both when adding chapters or exports.
-- **Testing:** Add or update tests in `scripts/tests/` when you change Python utilities. For Node scripts, add practical instructions or unit tests when feasible.
+- **Testing:** Add or update Jest tests in `scripts/tests/` when you change scripts. Run `npm test` to verify.
 - **Service worker & PWA:** When modifying `pwa/service-worker.js` or `pwa/manifest.json`, bump cache versions and document changes in the PR description.
 
 ---

@@ -416,12 +416,32 @@ opticsTextbook/
 │   ├── Chap01Basics/
 │   ├── Chap02GeometricalOptics/
 │   └── ... (Chapters 1-11)
-├── scripts/                   # Utility scripts
+├── scripts/                   # Utility scripts (organized by function)
+│   ├── build/                # Build-time scripts
+│   │   ├── copy-export-files.js
+│   │   ├── generate-pwa-icons.js
+│   │   ├── generate-pwa-manifest.js
+│   │   ├── inject-custom-scripts.js
+│   │   ├── install-pwa-assets.js
+│   │   └── optimize-images.js
+│   ├── images/               # Image management
+│   │   ├── delete-unreferenced.js
+│   │   ├── find-unreferenced.js
+│   │   └── insert-figure.js
+│   ├── transform/            # Content transformation
+│   │   ├── fix-directive-syntax.js
+│   │   ├── fix-split-references.js
+│   │   ├── standardize-figures.js
+│   │   └── standardize-labels.js
+│   ├── validation/           # Validation and linting
+│   │   ├── lint-markdown.js
+│   │   ├── validate-all.js
+│   │   ├── validate-images.js
+│   │   └── validate-references.js
+│   ├── tests/                # Jest unit tests
 │   ├── config.json           # Chapter mappings
-│   ├── lint_myst_markdown.py
-│   ├── validate_references_enhanced.py
-│   ├── find_unreferenced_images_myst.py
-│   └── ...
+│   ├── shared-utils.js       # Shared utility functions
+│   └── report-utils.js       # Reporting utilities
 ├── .github/
 │   └── workflows/            # CI/CD automation
 │       ├── deploy-book.yml   # Deployment
