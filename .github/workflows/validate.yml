@@ -59,9 +59,14 @@ jobs:
       - name: Cache MyST build
         uses: actions/cache@v4
         with:
-          path: ./_build
-          key: myst-build-${{ github.sha }}
+          path: |
+            ./_build
+            ~/.cache/myst
+          key: myst-validate-${{ runner.os }}-${{ hashFiles('content/**/*.md', 'myst.yml', 'package-lock.json') }}
           restore-keys: |
+            myst-validate-${{ runner.os }}-
+            myst-validate-
+            myst-build-${{ runner.os }}-
             myst-build-
 
       - name: Install Node.js dependencies

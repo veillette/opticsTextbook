@@ -909,7 +909,6 @@ Fowles, G. R. (1989). *Introduction to Modern Optics* (2nd ed.). Dover Publicati
 
 Jackson, J. D. (1999). *Classical Electrodynamics* (3rd ed.). Wiley.
 : Advanced treatment of electromagnetic theory with sophisticated use of complex analysis.
-```
 
 ### A.13.4 Modern Computational Tools
 
