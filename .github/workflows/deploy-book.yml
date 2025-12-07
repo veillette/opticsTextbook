@@ -105,66 +105,106 @@ jobs:
           echo "TYPST_SETUP_TIME=$DURATION" >> $GITHUB_ENV
           echo "STEP_START_TIME=$(date +%s)" >> $GITHUB_ENV
 
-      - name: Cache build artifacts
+      - name: Cache MyST build artifacts
         uses: actions/cache@v4
         with:
-          path: ./_build
-          key: myst-build-${{ github.sha }}
+          path: |
+            ./_build
+            ~/.cache/myst
+          key: myst-build-${{ runner.os }}-${{ hashFiles('content/**/*.md', 'myst.yml', 'package-lock.json') }}
           restore-keys: |
+            myst-build-${{ runner.os }}-
             myst-build-
 
-      - name: Build PDF exports with Typst
+      - name: Cache Typst packages
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/typst
+          key: typst-packages-${{ runner.os }}-${{ hashFiles('_templates/typst/**/*') }}
+          restore-keys: |
+            typst-packages-${{ runner.os }}-
+
+      - name: Build PDF and DOCX exports in parallel
         run: |
-          echo "Building PDF exports using Typst"
-          npx myst build --pdf
+          echo "Building PDF and DOCX exports in parallel"
+          EXPORT_START_TIME=$(date +%s)
+
+          # Start PDF build in background
+          echo "Starting PDF build..."
+          (npx myst build --pdf 2>&1 | tee /tmp/pdf-build.log; echo $? > /tmp/pdf-exit-code) &
+          PDF_PID=$!
+
+          # Start DOCX build in background
+          echo "Starting DOCX build..."
+          (npx myst build --docx 2>&1 | tee /tmp/docx-build.log; echo $? > /tmp/docx-exit-code) &
+          DOCX_PID=$!
+
+          # Wait for both to complete
+          echo "Waiting for builds to complete..."
+          wait $PDF_PID
+          wait $DOCX_PID
+
+          EXPORT_END_TIME=$(date +%s)
+          EXPORT_DURATION=$((EXPORT_END_TIME - EXPORT_START_TIME))
+
+          # Check exit codes
+          PDF_EXIT=$(cat /tmp/pdf-exit-code 2>/dev/null || echo "1")
+          DOCX_EXIT=$(cat /tmp/docx-exit-code 2>/dev/null || echo "1")
+
+          echo ""
+          echo "=== Build Results ==="
+          echo "Total parallel build time: ${EXPORT_DURATION}s"
+
+          if [ "$PDF_EXIT" = "0" ]; then
+            echo "✅ PDF build succeeded"
+          else
+            echo "❌ PDF build failed (exit code: $PDF_EXIT)"
+            echo "PDF build log:"
+            cat /tmp/pdf-build.log
+          fi
+
+          if [ "$DOCX_EXIT" = "0" ]; then
+            echo "✅ DOCX build succeeded"
+          else
+            echo "❌ DOCX build failed (exit code: $DOCX_EXIT)"
+            echo "DOCX build log:"
+            cat /tmp/docx-build.log
+          fi
+
+          # Fail if either build failed
+          if [ "$PDF_EXIT" != "0" ] || [ "$DOCX_EXIT" != "0" ]; then
+            exit 1
+          fi
         env:
           NODE_OPTIONS: "--max-old-space-size=8192"
 
-      - name: Verify PDF exports were created
+      - name: Verify exports were created
         run: |
-          echo "=== Verifying PDF exports were generated ==="
+          echo "=== Verifying exports were generated ==="
           echo ""
+          echo "📄 PDF Exports:"
           echo "Full textbook PDF:"
           ls -lh exports/textbook.pdf 2>/dev/null && echo "✅ Found" || echo "❌ NOT FOUND"
           echo ""
           echo "Chapter PDFs:"
           ls -lh exports/chapters/*.pdf 2>/dev/null || echo "❌ No chapter PDFs found"
-          echo ""
           pdf_count=$(find exports -name "*.pdf" 2>/dev/null | wc -l)
           echo "Total PDF files: $pdf_count"
-
-      - name: Record PDF build time
-        run: |
-          STEP_END_TIME=$(date +%s)
-          DURATION=$((STEP_END_TIME - STEP_START_TIME))
-          echo "PDF_BUILD_TIME=$DURATION" >> $GITHUB_ENV
-          echo "STEP_START_TIME=$(date +%s)" >> $GITHUB_ENV
-
-      - name: Build DOCX exports
-        run: |
-          echo "Building DOCX exports"
-          npx myst build --docx
-        env:
-          NODE_OPTIONS: "--max-old-space-size=8192"
-
-      - name: Verify DOCX exports were created
-        run: |
-          echo "=== Verifying DOCX exports were generated ==="
           echo ""
+          echo "📝 DOCX Exports:"
           echo "Full textbook DOCX:"
           ls -lh exports/textbook.docx 2>/dev/null && echo "✅ Found" || echo "⚠️  Not found (expected - no combined DOCX)"
           echo ""
           echo "Chapter DOCX files:"
           ls -lh exports/chapters/*.docx 2>/dev/null || echo "❌ No chapter DOCX found"
-          echo ""
           docx_count=$(find exports -name "*.docx" 2>/dev/null | wc -l)
           echo "Total DOCX files: $docx_count"
 
-      - name: Record DOCX build time
+      - name: Record export build time
         run: |
           STEP_END_TIME=$(date +%s)
           DURATION=$((STEP_END_TIME - STEP_START_TIME))
-          echo "DOCX_BUILD_TIME=$DURATION" >> $GITHUB_ENV
+          echo "EXPORT_BUILD_TIME=$DURATION" >> $GITHUB_ENV
           echo "STEP_START_TIME=$(date +%s)" >> $GITHUB_ENV
 
       - name: Build other exports (MD, JATS, etc.)
@@ -370,8 +410,7 @@ jobs:
           add_row "Setup (Pages + Node.js)" ${SETUP_TIME:-0}
           add_row "npm install" ${NPM_INSTALL_TIME:-0}
           add_row "Setup Typst" ${TYPST_SETUP_TIME:-0}
-          add_row "Build PDF exports (Typst)" ${PDF_BUILD_TIME:-0}
-          add_row "Build DOCX exports" ${DOCX_BUILD_TIME:-0}
+          add_row "Build PDF + DOCX (parallel)" ${EXPORT_BUILD_TIME:-0}
           add_row "Build other exports (MD/JATS)" ${OTHER_BUILD_TIME:-0}
           add_row "Generate PWA icons" ${ICON_GEN_TIME:-0}
           add_row "Build HTML site" ${HTML_BUILD_TIME:-0}
@@ -410,8 +449,7 @@ jobs:
 
           # Create sorted list of times (simple approach)
           {
-            echo "${PDF_BUILD_TIME:-0} Build PDF exports (Typst)"
-            echo "${DOCX_BUILD_TIME:-0} Build DOCX exports"
+            echo "${EXPORT_BUILD_TIME:-0} Build PDF + DOCX (parallel)"
             echo "${OTHER_BUILD_TIME:-0} Build other exports (MD/JATS)"
             echo "${HTML_BUILD_TIME:-0} Build HTML site"
             echo "${NPM_INSTALL_TIME:-0} npm install"
