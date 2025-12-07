@@ -88,10 +88,10 @@ jobs:
           echo "LINT_TIME=$DURATION" >> $GITHUB_ENV
           echo "STEP_START_TIME=$(date +%s)" >> $GITHUB_ENV
 
-      - name: Run Reference Validation
+      - name: Run Comprehensive Validation
         run: |
-          echo "🔗 Validating references and citations..."
-          npm run validate-enhanced-quiet
+          echo "🔗 Running all validators (references, labels, images, lint)..."
+          npm run validate:quiet
         continue-on-error: true
         id: validate
 
