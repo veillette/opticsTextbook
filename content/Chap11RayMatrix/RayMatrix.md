@@ -40,7 +40,7 @@ In any plane perpendicular to the $z$-axis, a ray is determined by the $y$-coord
 ```
 
 Examples of positive and negative $\alpha$ are given in {numref}`fig:ray:figAlpha`. The case $z_2-z_1<0$ occurs when a ray propagates in the negative $z$-direction after it has been reflected by a mirror.
-According to the sign convention table in the Geometrical Optics chapter, the refractive index of the ambient medium should after the reflection be taken negative. After a second reflection due to which the ray propagates again in the positive $z$-direction the refractive index should be chosen positive again.
+According to the sign convention table in the {ref}`Geometrical Optics chapter <chapter:geo>`, the refractive index of the ambient medium should after the reflection be taken negative. After a second reflection due to which the ray propagates again in the positive $z$-direction the refractive index should be chosen positive again.
 
 ```{figure} Images/11_03_angle_definition.png
 :name: fig:ray:figAlpha
@@ -80,8 +80,8 @@ where
 ```
 The elements of matrix ${\cal M}$ depend on the optical components and materials between the planes $z=z_1$ and $z=z_2$.
 
-As an example consider the ray matrix that relates a ray vector in the plane immediately before a spherical surface (see the Geometrical Optics chapter for details on spherical interface imaging) to the corresponding ray vector in the plane immediately behind that surface.
-Using the paraxial Snell's law and small-angle approximations from the Geometrical Optics chapter, it
+As an example consider the ray matrix that relates a ray vector in the plane immediately before a spherical surface (see the {ref}`Geometrical Optics chapter <chapter:geo>` for details on spherical interface imaging) to the corresponding ray vector in the plane immediately behind that surface.
+Using the paraxial Snell's law and small-angle approximations from the {ref}`Geometrical Optics chapter <chapter:geo>`, it
 follows
 
 ```{math}
@@ -91,7 +91,7 @@ n_1 \alpha_1 - n_2 \alpha_2 = \frac{(n_2-n_1)y_1}{R},
 \end{align*}
 ```
 
-where we have replaced $\alpha_2$ by $-\alpha_2$ in the paraxial Snell's law equation from the Geometrical Optics chapter, because according to the sign convention, the
+where we have replaced $\alpha_2$ by $-\alpha_2$ in the paraxial Snell's law equation from the {ref}`Geometrical Optics chapter <chapter:geo>`, because according to the sign convention, the
 angle $\alpha_2$ should be taken
 negative.
 Because furthermore $y_2=y_1$, we conclude
@@ -521,7 +521,7 @@ where we have written now $y_o$ and $y_i$ instead of $y_1$ and $y_2$, respective
 
 **Remark.**
 The Lensmaker's formula for imaging by a thin lens can alternatively be derived
-by using the single-surface imaging formula from the Geometrical Optics chapter for the two
+by using the single-surface imaging formula from the {ref}`Geometrical Optics chapter <chapter:geo>` for the two
 spherical surfaces of the lens. We first image a given point $S$ by the left
 spherical surface using that imaging formula as if the second
 surface were absent. The obtained intermediate image $P'$ is then imaged by the
@@ -840,3 +840,17 @@ We therefore conclude that if the coordinates in object space are chosen with re
 Thick-lens geometry. There holds
 	 $f_i=f_o$ if the ambient medium left of the lens is the same as to the right of the lens. All coordinates in object and image space are with respect to the origin in $H_1$ and $H_2$, respectively.
 ```
+
+## Chapter Summary
+
+- **Ray vectors** $(n\alpha, y)^T$ describe a ray by its angle with the axis (weighted by refractive index) and its height.
+- **Ray matrices** (ABCD matrices) relate ray vectors before and after optical elements: $\begin{pmatrix}n_2\alpha_2 \\ y_2\end{pmatrix} = \begin{pmatrix}A & B \\ C & D\end{pmatrix}\begin{pmatrix}n_1\alpha_1 \\ y_1\end{pmatrix}$.
+- **System matrix**: For multiple elements, multiply matrices in reverse order of light propagation.
+- **Propagation matrix**: $\begin{pmatrix}1 & 0 \\ d/n & 1\end{pmatrix}$ for distance $d$ in medium with index $n$.
+- **Spherical surface matrix**: Power $\mathcal{P} = (n_2-n_1)/R$; matrix has $-\mathcal{P}$ in upper right.
+- **Thin lens matrix**: $\begin{pmatrix}1 & -\mathcal{P} \\ 0 & 1\end{pmatrix}$ where $\mathcal{P} = 1/f$ is the lens power.
+- **Imaging condition**: $C = 0$ means two planes are conjugate (image each other).
+- **Lensmaker's Formula**: $-\frac{n_1}{s_o} + \frac{n_2}{s_i} = \mathcal{P}$ relates object and image distances.
+- **Magnification**: $M = A$ when $C = 0$; **Newton's equation**: $x_o x_i = -f_o f_i$.
+- **Two-lens systems**: Combined power $\mathcal{P} = \mathcal{P}_1 + \mathcal{P}_2 - d\mathcal{P}_1\mathcal{P}_2$.
+- **Principal planes** for thick lenses: The ray matrix between principal planes equals that of a thin lens.

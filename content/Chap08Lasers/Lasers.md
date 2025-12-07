@@ -146,7 +146,7 @@ Damped oscillation (left) and frequency spectrum of a damped oscillation (right)
 ```
 
 
-The optical resonator  is a Fabry-Perot resonator filled with some material with refractive index $n$ bounded by two aligned, highly reflective mirrors at a distance $L$. The Fabry-Perot resonator is discussed extensively in the Fabry-Perot Interferometer section of the Interference chapter but to understand this chapter a detailed analysis of the Fabry-Perot is not needed.
+The optical resonator  is a Fabry-Perot resonator filled with some material with refractive index $n$ bounded by two aligned, highly reflective mirrors at a distance $L$. The Fabry-Perot resonator is discussed extensively in the {ref}`Fabry-Perot Interferometer section <sec:coh:fabryperot>` of the {ref}`Interference chapter <chapter:coh>` but to understand this chapter a detailed analysis of the Fabry-Perot is not needed.
 
 Let the $z$-axis be chosen along the axis of the cavity as shown in {numref}`fig:laser:fabryPerrotResonanceMode`, and assume that the transverse directions are so large that the light can be considered a plane wave bouncing back and forth along the $z$-axis between the two mirrors. Let $\omega$ be the frequency and $k_0=\omega/c$ the wave number in vacuum. The plane wave that propagates in the positive $z$-direction is given by:
 
@@ -192,7 +192,8 @@ for $m=1,2,\ldots$. Hence, provided dispersion of the medium can be neglected (.
 ```
 which is the so-called **free spectral range**. For a gas laser of length 1 m, the free spectral range is approximately 150 MHz.
 
-**Example**
+### Example: Cavity Mode Number
+
 Suppose that the cavity is 100 cm long and is filled with a material with refractive index $n=1$. Light with visible wavelength of $\lambda= 500$ nm corresponds to mode number $m=2L/\lambda = 4\times 10^6$ and the free spectral range is $\Delta \nu_f=c/(2L)=150$ MHz.
 
 
@@ -328,7 +329,8 @@ B_{12}=B_{21}, \;\;\; A_{21} = \frac{ℏ \omega^3}{\pi^2 c^3} B_{21}.
 ```
 
 
-**Example**
+### Example: Einstein Coefficients Ratio
+
 For green light of $\lambda=550$ nm, we have $\omega/c=2\pi/\lambda=2.8560 \times 10^6 \text{m}^{-1}$ and thus
 
 ```{math}
@@ -591,3 +593,17 @@ Semiconductor laser with active *p-n* junction, polished end faces and current s
 ```
 
 In a semiconductor laser as shown in {numref}`fig:laser:vcsel`, the pumping is done by electron current injection. It is one of the most compact lasers and yet it typically emits 20 mW of power. Transitions occur between the conduction and valence bands close to the *p-n* junction. Electrons from the *n*-layer conduction band will recombine with the holes in the *p*-layer. A cavity is obtained by polishing the end faces that are perpendicular to the junction to make them highly reflecting. Semiconductor lasers are produced for wavelengths from 700 nm to 30 $\mu$m and give continuous (CW) output.
+
+## Chapter Summary
+
+- **Laser** stands for Light Amplification by Stimulated Emission of Radiation.
+- **Key laser properties**: High intensity, monochromaticity, directionality (low divergence), and high temporal and spatial coherence.
+- **Einstein coefficients** describe absorption ($B_{12}$), stimulated emission ($B_{21}$), and spontaneous emission ($A_{21}$).
+- **Population inversion** ($N_2 > N_1$) is essential for amplification; it cannot occur in thermal equilibrium.
+- **Optical resonator** (cavity): Two mirrors select specific longitudinal modes; mode spacing is $\Delta\nu = c/2nL$.
+- **Gain medium** amplifies light through stimulated emission; the gain curve depends on the medium's energy levels.
+- **Threshold condition**: Gain must exceed losses (mirror transmission, scattering, absorption) for lasing.
+- **Three-level and four-level systems**: Four-level systems achieve population inversion more easily.
+- **Transverse modes** (TEM$_{mn}$): Higher-order modes have more complex spatial profiles; often suppressed for beam quality.
+- **Pumping mechanisms**: Optical (flashlamp, diode laser), electrical (gas discharge, current injection), or chemical.
+- **Laser types**: Solid-state (Nd:YAG, Ruby), gas (He-Ne, CO$_2$), semiconductor (diode lasers), and dye lasers.

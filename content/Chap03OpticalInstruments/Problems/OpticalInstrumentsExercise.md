@@ -17,7 +17,7 @@ between two planes.
 
 - **c)** Consider two thin lenses with distance $d$ and focal distances $f_1$ and $f_2$. Derive the transfer matrix linking the plane immediately before the first lens with the plane immediately behind the second lens. You may assume that the lenses are in air with refractive index $n=1$.
 
-- **d)** Use the condition that you found in a) to derive the back focal distance of a system consisting of two thin lenses with refractive index $f_1$ and $f_2$ and distance $d$. Verify that the result agrees with the distance for the back focal plane in Section 3.5.4.
+- **d)** Use the condition that you found in a) to derive the back focal distance of a system consisting of two thin lenses with refractive index $f_1$ and $f_2$ and distance $d$. Verify that the result agrees with the distance for the back focal plane in {ref}`sec:ray:twolenses`.
 Hint: let $f_b$ be the distance of the back focal point of the two-lens system to the second lens. Write the transfer matrix between the lens immediately before the first lens and the plane through the back focal point.
 
 - **e)** Add a third thin lens with refractive index $f_3$ in contact to the second lens. Answer question c) for this system.

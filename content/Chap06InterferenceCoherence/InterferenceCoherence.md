@@ -937,7 +937,9 @@ We see that when
 ```
 the fields in $P_1$ and $P_2$ are at least partially mutually coherent.
 
-**Example**. We determine the maximum distance $d$ between two points on earth for which sun light is coherent. The sun subtends on earth the angle:
+### Example: Solar Coherence Length
+
+We determine the maximum distance $d$ between two points on earth for which sun light is coherent. The sun subtends on earth the angle:
 
 ```{math}
 :label: eq:coh:sunAngle
@@ -1039,7 +1041,7 @@ such that the reflecting surfaces are at $z=0$ and $z=d$. The refractive indices
 
 Let there be a plane wave **with unit amplitude** incident from $z<0$ under angle $\theta_1$ with the normal as shown in {numref}`fig:coh:fp1`. The incident wave is assumed to be either s- or p-polarized. There are a reflected plane wave in $z<0$, two plane waves in medium 2 one propagating in the positive $z$-direction and the other in the negative $z$-direction and there is a transmitted plane wave in $z>d$. It follows from the boundary conditions that the tangential component of the electric and magnetic field are continuous across the interfaces, that the tangential components of the wave vectors of all these plane waves are identical.
 
-Let $r_{ij}$ and $t_{ij}$ be the reflection and transmission coefficient for a wave that is incident from medium $i$ on the interface with medium $j$. When the wave is s-polarized, $r_{12}$ and $t_{12}$ are given by the Fresnel coefficients (see the Rayleigh-Sommerfeld Diffraction Integral section in the Diffraction chapter), whereas if the wave is p-polarized, they are given by the p-polarized Fresnel coefficients.
+Let $r_{ij}$ and $t_{ij}$ be the reflection and transmission coefficient for a wave that is incident from medium $i$ on the interface with medium $j$. When the wave is s-polarized, $r_{12}$ and $t_{12}$ are given by the Fresnel coefficients (see the {ref}`Rayleigh-Sommerfeld Diffraction Integral section <sec:diff:rayleighsommerfeld>` in the {ref}`Diffraction chapter <chapter:diff>`), whereas if the wave is p-polarized, they are given by the p-polarized Fresnel coefficients.
 ```{figure} Images/06_12_fabry_perot.png
 :name: fig:coh:fp1
 Fabry-Perot with 3 layers.The light comes from the bottom and is reflected by each interface.
@@ -1287,8 +1289,9 @@ The ratio
 should therefore be large.
 
 
-**Example.**
-For a wavelength of $\lambda_0=600\text{nm}$ and $n_f d= 12 \text{mm}$ we have for normal incidence $m=40000$. Then, if the reflection coefficients satisfy $|r_{12}|^2=|r_{23}|^2=0.9$, we have $F=360$ and $G=0$. The resolution is more than one million which is better than the grating spectrometers, which will be discussed in the Fresnel and Fraunhofer examples section of the Diffraction chapter.
+### Example: Fabry-Perot Resolution
+
+For a wavelength of $\lambda_0=600\text{nm}$ and $n_f d= 12 \text{mm}$ we have for normal incidence $m=40000$. Then, if the reflection coefficients satisfy $|r_{12}|^2=|r_{23}|^2=0.9$, we have $F=360$ and $G=0$. The resolution is more than one million which is better than the grating spectrometers, which will be discussed in the {ref}`Fresnel and Fraunhofer examples section <sec:diff:examples>` of the {ref}`Diffraction chapter <chapter:diff>`.
 
 
 **Remark.** Although in the derivation we have assumed that all refractive indices are real, the final formulae also apply to the case that $n_2$ is complex. In that case $k^{(2)}_z$ and the reflection coefficients are complex.
@@ -1324,7 +1327,7 @@ where $2\mathbf{\mathcal{E}}_1\cdot \mathbf{\mathcal{E}}_2$ is the interference 
 ```
 Then $\mathbf{\mathcal{E}}_1\cdot \mathbf{\mathcal{E}}_2=0$, which means the two fields can not interfere. This observation is the
 
-```{note}
+```{important}
 **First Fresnel-Arago Law**: fields with orthogonal polarization cannot interfere.
 ```
 
@@ -1369,7 +1372,7 @@ This is qualitatively the same as what we would get if the fields had parallel p
 ```
 This leads to the
 
-```{note}
+```{important}
 **Second Fresnel-Arago Law**: two fields with parallel polarization interfere the same way as two fields that are randomly polarized.
 ```
 
@@ -1395,11 +1398,23 @@ which is **randomly polarized**. Suppose we separate the two polarizations, and 
 
 These fields can not interfere because $\mathcal{E}_{\bot}$
 and $\mathcal{E}_{\parallel}$ are incoherent. This leads to the
-```{note}
+```{important}
 **Third Fresnel-Arago Law**:
 the two constituent orthogonal linearly polarized states of natural light cannot interfere to form a readily observable interference pattern, even if rotated into alignment.
 ```
 
+## Chapter Summary
+
+- **Interference** occurs when two or more coherent waves overlap; the resulting intensity depends on their relative phase.
+- **Temporal coherence** measures how well a wave correlates with itself over time; related to bandwidth by $\tau_c \approx 1/\Delta f$.
+- **Coherence length** $L_c = c\tau_c$ is the path difference over which fringes remain visible.
+- **Spatial coherence** measures correlation between different points in a wave field at the same time.
+- **Young's double-slit experiment**: Fringe spacing $\Delta y = \lambda D/a$, where $D$ is screen distance and $a$ is slit separation.
+- **Michelson interferometer** measures path differences and coherence length; used for spectroscopy and surface metrology.
+- **Visibility** (fringe contrast) $V = (I_{max} - I_{min})/(I_{max} + I_{min})$ quantifies interference quality.
+- **Van Cittert-Zernike theorem**: The degree of spatial coherence equals the Fourier transform of the source intensity distribution.
+- **Fabry-Perot interferometer** uses multiple-beam interference for high-resolution spectroscopy; resolution increases with mirror reflectivity.
+- **Fresnel-Arago Laws**: Orthogonal polarizations cannot interfere; parallel polarizations interfere like unpolarized light.
 
 ```{note} External sources in recommended order
 1. [KhanAcademy - Interference of light waves](https://www.khanacademy.org/science/ap-physics-1/ap-mechanical-waves-and-sound/wave-interference-ap/v/wave-interference-pulses): Playlist on wave interference at secondary school level.

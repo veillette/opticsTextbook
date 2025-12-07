@@ -121,6 +121,18 @@ Because in SNOM the fiber is very close to the sample, either to illuminate the 
 Left: Topographic AFM image of a Photonics Band Gap (PBG) structure, imaged with a 150 nm AFM/NSOM cantilevered probe. Right: NSOM image of the PBG structure using 532 nm laser wavelength.
 ```
 
+## Chapter Summary
+
+- **Diffraction limit** constrains conventional optical microscopy to a resolution of approximately $0.61\lambda/\text{NA}$.
+- **Phase contrast microscopy** converts phase differences (in transparent samples) into intensity variations using a phase plate.
+- **Confocal microscopy** uses point illumination and a pinhole detector to achieve optical sectioning and improved axial resolution.
+- **Fluorescence microscopy** uses fluorescent labels (e.g., GFP) that emit at longer wavelengths than excitation; dichroic mirrors separate excitation and emission.
+- **Confocal fluorescence microscopy** combines fluorescence with confocal sectioning for 3D imaging of biological samples.
+- **Scanning Near-Field Optical Microscopy (SNOM)** achieves super-resolution by detecting evanescent waves using a sub-wavelength probe.
+- **Collection mode SNOM**: A sub-wavelength tip collects the near field while the sample is illuminated from far field.
+- **Excitation mode SNOM**: A sub-wavelength tip illuminates the sample, and far-field detection captures super-resolved information.
+- **Immersion microscopy** improves resolution by using high refractive index fluids to reduce the effective wavelength.
+- All near-field techniques require the probe to be very close to the sample, which may perturb the measurement.
 
 [^1]: Phys Rev. Lett. **85**, 3966, 2000
 
