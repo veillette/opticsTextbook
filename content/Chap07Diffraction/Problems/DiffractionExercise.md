@@ -212,7 +212,7 @@ Amplitude in the focal plane of a Bessel beam and of an Airy spot with the same 
 
 6. \* Stellar interferometry.
 
-We consider the emission by a star of light of a narrow frequency band with center frequency $\mathbf{a}r{\omega}$ and corresponding wavelength $\mathbf{a}r{\lambda}=c 2\pi/\mathbf{a}r{\omega}$
+We consider the emission by a star of light of a narrow frequency band with center frequency $\bar{\omega}$ and corresponding wavelength $\bar{\lambda}=c 2\pi/\bar{\omega}$
 The star is an extended spatially incoherent source. Let $I(x,y)$ be the intensity on the star's surface orientated towards the earth. The aim of the exercise is to determine $I(x,y)$ by stellar interferometry.
 
 Let $U_0(x,y,t)$ be the field emitted at the surface of the star. Then the mutual coherence function at points $S_1=(x_1,y_1)$, $S_2=(x_2, y_2)$ on the surface of the star is:
@@ -231,11 +231,11 @@ I(x_1,y_1) e^{i \omega \tau} \delta(x_1- x_2)\delta(y_1- y_2) \;\;\; \text{ for 
 
 ```{math}
 \begin{align*}
-\Gamma(P_e, \tilde{P}_e,\tau=0) = \int\int I(x_1,y_1) e^{2\pi i \left( \frac{x_e - \tilde{x}_e }{\mathbf{a}r{\lambda} z_e} x_1 +
-\frac{y_e -\tilde{y}_e }{\mathbf{a}r{\lambda} z_e}y_1\right) } \, dx_1 dy_1.
+\Gamma(P_e, \tilde{P}_e,\tau=0) = \int\int I(x_1,y_1) e^{2\pi i \left( \frac{x_e - \tilde{x}_e }{\bar{\lambda} z_e} x_1 +
+\frac{y_e -\tilde{y}_e }{\bar{\lambda} z_e}y_1\right) } \, dx_1 dy_1.
 \end{align*}
 ```
-i.e. the mutual coherence function between points on earth for time delay $\tau=0$ can be expressed in the Fourier transform of the intensity $I(x,y)$ emitted by the star, evaluated at spatial frequencies $\xi=\frac{x_e - \tilde{x}_e }{\mathbf{a}r{\lambda} z_e} $ and $\eta=\frac{y_e -\tilde{y}_e }{\mathbf{a}r{\lambda} z_e}$.
+i.e. the mutual coherence function between points on earth for time delay $\tau=0$ can be expressed in the Fourier transform of the intensity $I(x,y)$ emitted by the star, evaluated at spatial frequencies $\xi=\frac{x_e - \tilde{x}_e }{\bar{\lambda} z_e} $ and $\eta=\frac{y_e -\tilde{y}_e }{\bar{\lambda} z_e}$.
 
 - **c)** Explain how the mutual coherence for time delay $\tau=0$ can be measured on earth using interferometry and how this can lead to retrieving the intensity of the star.
 
