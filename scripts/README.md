@@ -2,36 +2,245 @@
 
 This directory contains reusable utility scripts for MyST Markdown projects. These scripts are **content-agnostic** and work with any MyST project structure.
 
-## Overview
+## 📁 Directory Structure
 
-The scripts have been designed to automatically discover project structure and configuration from your `myst.yml` file and content directory, making them portable across different MyST projects.
+The scripts are organized by responsibility:
 
-## Key Features
-
-- **Auto-discovery**: Automatically finds chapters/sections in your content directory
-- **Configuration-driven**: Reads project metadata from `myst.yml`
-- **Content-agnostic**: No hardcoded paths or project-specific values
-- **PWA support**: Generate Progressive Web App assets from project configuration
-
-## Prerequisites
-
-- Python 3.12+
-- Node.js 20+
-- MyST Markdown CLI (`mystmd`)
-
-## Installation
-
-```bash
-# Install Python dependencies (if using Python scripts)
-pip install -r config/requirements.txt
-
-# Install Node.js dependencies
-npm install
+```
+scripts/
+├── build/                  # Build & deployment scripts
+│   ├── copy-export-files.js
+│   ├── inject-custom-scripts.js
+│   ├── install-pwa-assets.js
+│   ├── generate-pwa-icons.js
+│   ├── generate-pwa-manifest.js
+│   └── optimize-images.js
+│
+├── validation/            # Content validation scripts
+│   ├── validate-all.js           # 🎯 Unified validator (runs all checks)
+│   ├── validate-references.js    # Reference & link validation
+│   ├── validate-images.js        # Image reference validation
+│   └── lint-markdown.js          # MyST markdown linting
+│
+├── transform/             # Content transformation scripts
+│   ├── fix-directive-syntax.js   # Fix MyST directive syntax issues
+│   ├── fix-split-references.js   # Fix split equation references
+│   ├── standardize-labels.js     # Standardize all label types
+│   └── standardize-figures.js    # Standardize figure naming
+│
+├── images/                # Image management scripts
+│   ├── find-unreferenced.js      # Find unused images
+│   ├── delete-unreferenced.js    # Delete unused images
+│   └── insert-figure.js          # Insert & renumber figures
+│
+├── shared-utils.js        # Shared utility functions
+├── report-utils.js        # Report generation utilities
+├── config.json            # Project configuration
+└── README.md             # This file
 ```
 
-## Configuration
+## 🚀 Quick Start
 
-### scripts/config.json
+### Primary Commands
+
+```bash
+# Build the project
+npm run build
+
+# Validate all content (recommended before commits)
+npm run validate
+
+# Lint and fix markdown issues
+npm run lint:fix
+
+# Standardize labels across the project
+npm run standardize:labels
+```
+
+## 📋 Complete Command Reference
+
+### Build & Deployment
+
+```bash
+# Standard build pipeline
+npm run build                      # Full build with PWA
+npm run build:no-pwa               # Build without PWA setup
+
+# Build components
+npm run copy-exports               # Copy PDF/DOCX exports to build
+npm run inject-scripts             # Inject custom scripts into HTML
+npm run optimize-images            # Optimize images for web
+
+# PWA setup
+npm run generate-icons             # Generate PWA icons from logo
+npm run generate-manifest          # Generate PWA manifest
+npm run setup-pwa                  # Complete PWA installation
+```
+
+### Validation
+
+```bash
+# Comprehensive validation
+npm run validate                   # Run all validators
+npm run validate:quiet             # Quiet mode (summary only)
+npm run validate:strict            # Fail on warnings
+npm run validate:fix               # Auto-fix issues where possible
+
+# Specific validators
+npm run validate:references        # Validate all references
+npm run validate:references:suggestions  # Include fix suggestions
+npm run validate:images            # Validate image references
+
+# Linting
+npm run lint                       # Check markdown syntax
+npm run lint:fix                   # Fix markdown issues
+npm run lint:quiet                 # Quiet mode
+```
+
+### Content Transformation
+
+```bash
+# Fix directive syntax
+npm run fix:directives             # Fix all directive issues
+npm run fix:directives:dry         # Dry run (preview changes)
+npm run fix:directives:fences      # Only fix fence types
+npm run fix:directives:admonitions # Only fix admonitions
+
+# Fix split references
+npm run fix:split-refs             # Fix split equation references
+npm run fix:split-refs:dry         # Dry run
+
+# Standardize labels
+npm run standardize:labels         # Standardize all label types
+npm run standardize:labels:check   # Check without fixing
+npm run standardize:labels:figures # Only figure labels
+npm run standardize:labels:equations # Only equation labels
+
+# Standardize figures
+npm run standardize:figures        # Standardize figure naming
+npm run standardize:figures:dry    # Dry run
+```
+
+### Image Management
+
+```bash
+# Find unreferenced images
+npm run images:find-unreferenced       # Find unused images
+npm run images:find-unreferenced:dry   # Dry run
+
+# Clean unreferenced images
+npm run images:clean-unreferenced      # Delete unused images
+npm run images:clean-unreferenced:dry  # Dry run (safer!)
+
+# Insert figures
+npm run images:insert              # Interactive figure insertion
+# Example: npm run images:insert -- --image new.png --chapter 3 --position 5
+```
+
+## 🎯 Common Workflows
+
+### Before Committing
+
+```bash
+# Validate everything
+npm run validate
+
+# Fix any issues
+npm run lint:fix
+npm run standardize:labels
+```
+
+### After Adding New Content
+
+```bash
+# Validate references
+npm run validate:references
+
+# Check for broken links
+npm run checklinks
+
+# Find any unreferenced images
+npm run images:find-unreferenced
+```
+
+### Cleaning Up the Project
+
+```bash
+# Find unused images (dry run first!)
+npm run images:find-unreferenced
+
+# Delete unused images (be careful!)
+npm run images:clean-unreferenced:dry
+npm run images:clean-unreferenced  # only after reviewing dry run
+```
+
+### Standardizing an Existing Project
+
+```bash
+# Step 1: Fix directive syntax
+npm run fix:directives:dry         # preview changes
+npm run fix:directives             # apply changes
+
+# Step 2: Standardize labels
+npm run standardize:labels:check   # check current state
+npm run standardize:labels         # fix labels
+
+# Step 3: Standardize figures
+npm run standardize:figures:dry    # preview changes
+npm run standardize:figures        # apply changes
+
+# Step 4: Validate everything
+npm run validate
+```
+
+## 📖 Detailed Script Documentation
+
+### Validation Scripts
+
+#### `validate-all.js` ⭐
+**Primary validation tool** - runs all validators in sequence.
+
+```bash
+node scripts/validation/validate-all.js [options]
+
+Options:
+  --quiet              Only show summary
+  --strict             Fail on warnings
+  --fix                Auto-fix issues
+  --skip-references    Skip reference validation
+  --skip-labels        Skip label validation
+  --skip-images        Skip image validation
+  --skip-lint          Skip markdown linting
+```
+
+Features:
+- Runs all validators automatically
+- Generates comprehensive reports
+- Shows duration for each validator
+- Saves JSON and Markdown reports
+
+#### `standardize-labels.js`
+Standardizes labels across all content types.
+
+Standard formats:
+- Figure: `fig:chapter-code:descriptiveName`
+- Table: `table:chapter-code:descriptiveName`
+- Section: `(sec:chapter-code:descriptiveName)=`
+- Chapter: `(chapter:chapter-code)=`
+- Appendix: `(appendix:descriptiveName)=`
+- Equation: `eq:chapter-code:descriptiveName`
+
+```bash
+# Standardize all labels
+npm run standardize:labels
+
+# Check specific type
+npm run standardize:labels -- --type figure --check
+```
+
+## 🔧 Configuration
+
+### `config.json`
 
 The main configuration file supports auto-discovery:
 
@@ -41,270 +250,52 @@ The main configuration file supports auto-discovery:
     "_auto_discover": true,
     "_content_directory": "content",
     "_chapter_pattern": "Chap*"
-  }
-}
-```
-
-- **_auto_discover**: Enable automatic chapter discovery (recommended)
-- **_content_directory**: Directory containing your content (default: "content")
-- **_chapter_pattern**: Glob pattern to match chapter directories (default: "Chap*")
-
-You can override auto-discovery by explicitly defining chapters:
-
-```json
-{
-  "chapters": {
-    "_auto_discover": true,
-    "1": {
-      "dir": "content/Chapter01",
-      "file": "main.md"
-    }
-  }
-}
-```
-
-## Python Scripts
-
-### Core Utilities
-
-**shared_utils.py** - Common utility functions
-- Auto-discovers chapters from content directory
-- Provides path handling and validation utilities
-- Works with any MyST project structure
-
-**report_utils.py** - Report generation utilities
-- Generate reports in multiple formats (Markdown, JSON, text)
-- Standardized report templates
-
-### Image Management
-
-**find_unreferenced_images_myst.py** - Find unused images
-```bash
-npm run find-unreferenced
-```
-
-**delete_unreferenced_images_myst.py** - Delete unused images
-```bash
-npm run clean-unreferenced-dry  # dry run
-npm run clean-unreferenced      # actual deletion
-```
-
-**optimize-images.js** - Optimize images for web
-```bash
-npm run optimize-images
-```
-
-### Validation
-
-**validate_references_enhanced.py** - Validate internal references
-```bash
-npm run validate-enhanced
-```
-
-**lint_myst_markdown.py** - Lint MyST markdown files
-```bash
-npm run lint       # check for issues
-npm run lint:fix   # fix issues automatically
-```
-
-## Build and Export Scripts
-
-### copy-exports.js
-
-Copies PDF and DOCX export files to the build directory for web access:
-
-```bash
-npm run copy-exports
-```
-
-**Purpose:**
-- Mirrors the behavior of the GitHub Actions workflow
-- Ensures local builds match production builds
-- Copies exports from `exports/` to `_build/html/exports/`
-- Creates `.nojekyll` file to prevent Jekyll processing on GitHub Pages
-
-**Actions:**
-- Copies full textbook PDF to `_build/html/exports/textbook.pdf`
-- Copies full textbook DOCX (if available)
-- Copies all chapter PDFs to `_build/html/exports/chapters/`
-- Copies all chapter DOCX files to `_build/html/exports/chapters/`
-- Creates `.nojekyll` file in `_build/html/`
-
-**Note:** This script is automatically run as part of `npm run build`, so you typically don't need to run it manually.
-
-## PWA (Progressive Web App) Scripts
-
-The PWA scripts automatically generate PWA assets from your `myst.yml` configuration.
-
-### generate-pwa-icons.js
-
-Generates PWA icons from your project logo defined in `myst.yml`:
-
-```bash
-npm run generate-icons
-```
-
-**Requirements:**
-- Logo defined in `myst.yml` under `site.options.logo`
-- Logo file must exist (PNG format recommended)
-
-**Generates:**
-- Multiple icon sizes (72x72 to 512x512)
-- Maskable icons for Android
-- Favicon
-- Apple Touch Icon
-
-### generate-pwa-manifest.js
-
-Generates `pwa/manifest.json` from template using `myst.yml`:
-
-```bash
-npm run generate-manifest
-```
-
-**Uses:**
-- `project.title` or `site.title` for app name
-- `site.options.logo_text` for short name
-- `project.description` for app description
-- `BASE_URL` environment variable for deployment path
-
-### setup-pwa.js
-
-Copies PWA files to build directory and injects PWA tags:
-
-```bash
-npm run setup-pwa  # runs generate-manifest first
-```
-
-**Actions:**
-- Generates manifest.json from template
-- Copies manifest, service worker, and offline page to build
-- Copies icons to build directory
-- Injects PWA meta tags into all HTML files
-- Injects service worker registration script
-
-### service-worker.js
-
-Content-agnostic service worker that:
-- Auto-detects base path from deployment URL
-- Auto-generates cache names from project path
-- Caches static assets and pages for offline access
-- Supports network-first strategy for fresh content
-
-## Using These Scripts in Your Project
-
-### 1. Copy the scripts directory
-
-```bash
-cp -r scripts /path/to/your/project/
-cp -r pwa /path/to/your/project/
-```
-
-### 2. Update package.json
-
-Add the required dependencies and scripts from this project's `package.json`:
-
-```json
-{
-  "dependencies": {
-    "js-yaml": "^4.1.0",
-    "sharp": "^0.33.2"
   },
-  "scripts": {
-    "generate-icons": "node scripts/generate-pwa-icons.js",
-    "generate-manifest": "node scripts/generate-pwa-manifest.js",
-    "copy-exports": "node scripts/copy-exports.js",
-    "setup-pwa": "npm run generate-manifest && node scripts/setup-pwa.js",
-    "build": "myst build --html && npm run copy-exports && npm run setup-pwa"
-  }
+  "image_extensions": ["png", "jpg", "jpeg", "gif", "svg", "webp"]
 }
 ```
 
-### 3. Ensure myst.yml has required fields
+## 📚 Migration from Old Structure
 
-```yaml
-project:
-  title: "Your Project Title"
-  description: "Your project description"
+### Old vs New Script Names
 
-site:
-  title: "Your Site Title"
-  options:
-    logo: img/your-logo.png
-    logo_text: "Short Name"
-```
+| Old Command | New Command |
+|------------|-------------|
+| `npm run validate-enhanced` | `npm run validate` or `npm run validate:references` |
+| `npm run find-unreferenced` | `npm run images:find-unreferenced` |
+| `npm run clean-unreferenced` | `npm run images:clean-unreferenced` |
+| `npm run lint:equations` | `npm run standardize:labels -- --type equation` |
+| `npm run lint:labels` | `npm run standardize:labels:check` |
+| `npm run convert-fences` | `npm run fix:directives:fences` |
+| `npm run fix-admonitions` | `npm run fix:directives:admonitions` |
+| `npm run find-broken` | `npm run validate:references` |
+| `npm run insert-figure` | `npm run images:insert` |
 
-### 4. Run the scripts
+### Updated Directory Locations
 
-```bash
-npm install
-npm run generate-icons
-npm run build
-```
+Scripts have been reorganized into clear categories:
+- **build/** - Build and deployment
+- **validation/** - All validation and linting
+- **transform/** - Content transformation and standardization
+- **images/** - Image management
 
-## Customization
+All imports updated from `shared_utils` to `shared-utils` for consistency.
 
-### Chapter Discovery Pattern
+## 🐛 Troubleshooting
 
-Modify `scripts/config.json` to match your content structure:
+### Script not found
 
-```json
-{
-  "chapters": {
-    "_auto_discover": true,
-    "_content_directory": "docs",
-    "_chapter_pattern": "chapter-*"
-  }
-}
-```
+Ensure you're using the new npm script names (see migration table above).
 
-### PWA Theme Colors
+### Import errors
 
-Edit `pwa/manifest.json.template` to customize colors:
+All imports have been updated. Old scripts with `require('./shared_utils')` now use `require('../shared-utils')`.
 
-```json
-{
-  "theme_color": "#your-color",
-  "background_color": "#your-bg-color"
-}
-```
-
-## Environment Variables
-
-- **BASE_URL**: Deployment base path (e.g., `/myproject/` for GitHub Pages)
-  ```bash
-  BASE_URL=/myproject/ npm run build
-  ```
-
-## Troubleshooting
-
-### Auto-discovery not finding chapters
-
-1. Check your content directory structure
-2. Verify `_chapter_pattern` matches your directory names
-3. Ensure directories contain `.md` files
-
-### PWA icon generation fails
-
-1. Verify logo path in `myst.yml` is correct
-2. Ensure logo file exists and is readable
-3. Check that Sharp library is installed (`npm install sharp`)
-
-### Manifest generation fails
-
-1. Ensure `myst.yml` exists and is valid YAML
-2. Check that `js-yaml` is installed (`npm install js-yaml`)
-3. Verify template file exists at `pwa/manifest.json.template`
-
-## Contributing
-
-When adding new scripts:
-
-1. Keep them content-agnostic
-2. Read configuration from `myst.yml` or `scripts/config.json`
-3. Use auto-discovery where possible
-4. Document in this README
-
-## License
+## 📄 License
 
 These scripts are part of the MyST Markdown ecosystem and can be freely used and modified for your projects.
+
+---
+
+**Last Updated:** December 2025
+**Version:** 2.0.0 (Reorganized structure)

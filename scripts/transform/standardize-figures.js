@@ -37,7 +37,7 @@ const {
   extractFigureReferences,
   extractDescriptiveName,
   findMarkdownFilesInChapter
-} = require('./shared_utils');
+} = require('../shared-utils');
 
 /**
  * Get all images in a chapter's Images directory.
