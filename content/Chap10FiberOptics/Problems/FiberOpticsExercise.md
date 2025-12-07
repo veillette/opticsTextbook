@@ -24,9 +24,9 @@
 
 **Problem 10.8** Estimate the loss (in dB) due to the following situations in which two single mode fibers are coupled incorrectly:
 
-**(a)** a fiber with a core diameter of $7.0\mu\text{ m}$ is coupled to a fiber with core diameter $6.0\mu\text{m}$ (see {numref}`figFiberCouplingLoss`).
+**(a)** a fiber with a core diameter of $7.0~\mu\text{m}$ is coupled to a fiber with core diameter $6.0~\mu\text{m}$ (see {numref}`figFiberCouplingLoss`).
 
-**(b)** an $500\mu\text{m}$-air gap exists in between two fibers (see {numref}`figFiberCouplingLoss`). Both have a numerical aperture equal to $0.12$ and a core diameter of $6.0\mu\text{m}$.
+**(b)** a $500~\mu\text{m}$-air gap exists in between two fibers (see {numref}`figFiberCouplingLoss`). Both have a numerical aperture equal to $0.12$ and a core diameter of $6.0~\mu\text{m}$.
 
 To make your estimation, neglect reflection due to refractive index mismatch and assume the incoming light has a Gaussian beam profile with intensity
 ```{math}

@@ -215,7 +215,7 @@ To answer this question, we must study the topic of coherence. One distinguishes
 
 An intuitive way to think about these concepts is in terms of the ability to form interference fringes. For example, with laser light, which usually is almost monochromatic and hence coherent, one can form an interference pattern with clear maxima and minima in intensities using a double slit, while with sunlight (which is incoherent) this is much more difficult. Every frequency in the spectrum of sunlight gives its own interference pattern with its own frequency dependent fringe pattern. These fringe patterns wash out due to superposition and the total intensity therefore shows little fringe contrast, i.e. the coherence is less.
 However, it is not impossible to create interference fringes with natural light{cite:p}`young_interference`.
-The trick is to let the two slits be so close together (of the order of $0.02 \, \text{mm}$) that the *difference* in distances from the slits to the sun is so small for the fields in the slits to be sufficiently coherent to interfere.
+The trick is to let the two slits be so close together (of the order of $0.02~\text{mm}$) that the *difference* in distances from the slits to the sun is so small for the fields in the slits to be sufficiently coherent to interfere.
 To understand the effect of polychromatic light, it is essential to understand that the degree to which the fields in two points are coherent, i.e. the ability to form fringes, is determined by the
 **difference in distances between these points and the source**. The distance itself to the source is **not** relevant.
 This will be made clear in this chapter.
@@ -288,7 +288,7 @@ Coherence time and coherence length of several sources
 | Source | Mean wavelength | Linewidth | Coherence Length | Coherence Time |
 | :--- | :--: | :--: | :--: | :--: |
 | | $\bar{\lambda}$ | $\Delta \lambda$ | $\bar{\lambda}^2/\Delta \lambda$ | $ \Delta \tau_c $ |
-| Mid-IR (3-5 $\mu\text{m}$) | 4.0 $\mu\text{m}$ | $2.0 \, \mu\text{m} $ | 8.0 $\mu\text{m}$| $2.66 \times10^{-14}$ s. |
+| Mid-IR (3-5 $\mu\text{m}$) | 4.0 $\mu\text{m}$ | $2.0~\mu\text{m}$ | 8.0 $\mu\text{m}$| $2.66 \times10^{-14}$ s. |
 | White light | 550 nm | $\approx 300 $ nm | $ \approx 900$ nm | $ \approx 3.0 \times 10^{-14}$s.|
 | Mercury arc | 546.1 nm | $\approx 1.0$ nm | $\approx 0.3$ mm | $ \approx 1.0 \times 10^{-12}$s. |
 | $\text{Kr}^{86}$ discharge lamp | 605.6 nm | $1.2 \times 10^{-3}$ nm | 0.3 m | $ 1.0 \times 10^{-9}$s. |
@@ -1291,7 +1291,7 @@ should therefore be large.
 
 ### Example: Fabry-Perot Resolution
 
-For a wavelength of $\lambda_0=600\text{nm}$ and $n_f d= 12 \text{mm}$ we have for normal incidence $m=40000$. Then, if the reflection coefficients satisfy $|r_{12}|^2=|r_{23}|^2=0.9$, we have $F=360$ and $G=0$. The resolution is more than one million which is better than the grating spectrometers, which will be discussed in the {ref}`Fresnel and Fraunhofer examples section <sec:diff:examples>` of the {ref}`Diffraction chapter <chapter:diff>`.
+For a wavelength of $\lambda_0=600~\text{nm}$ and $n_f d= 12~\text{mm}$ we have for normal incidence $m=40000$. Then, if the reflection coefficients satisfy $|r_{12}|^2=|r_{23}|^2=0.9$, we have $F=360$ and $G=0$. The resolution is more than one million which is better than the grating spectrometers, which will be discussed in the {ref}`Fresnel and Fraunhofer examples section <sec:diff:examples>` of the {ref}`Diffraction chapter <chapter:diff>`.
 
 
 **Remark.** Although in the derivation we have assumed that all refractive indices are real, the final formulae also apply to the case that $n_2$ is complex. In that case $k^{(2)}_z$ and the reflection coefficients are complex.

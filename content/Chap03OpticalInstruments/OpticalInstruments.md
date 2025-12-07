@@ -103,7 +103,7 @@ humour) differ. The power of the healthy relaxed eye is (see the thin lens matri
 ```{math}
 :label: eq:inst:eyeDioptricPower
 \begin{align*}
-\mathfrak{D} =\frac{n_{vh}}{f_i}= \frac{1.337}{0.024}= 55 \text{ Diopter}.
+\mathfrak{D} =\frac{n_{vh}}{f_i}= \frac{1.337}{0.024}= 55~\text{Diopter}.
 \end{align*}
 ```
 
@@ -169,7 +169,7 @@ The lens is best put in the front focal plane of the relaxed eye, i.e. at
 approximately 16 mm in front of the cornea. This follows from the Lensmaker's Formula (see the {ref}`Ray Matrix chapter <chapter:ray>`) and the fact that the distance of the retina to the
 eye lens is roughly 22 mm while the refractive index of the vitrous humor is
 1.337. Hence, the focal distance in air of the relaxed eye
-of $22/1.337 \approx 16 \text{ mm}$. The reason for putting the lens at the
+of $22/1.337 \approx 16~\text{mm}$. The reason for putting the lens at the
 focal distance is that in this case the magnification of the eye and the
 negative lens together are the same as for the uncorrected eye. To see this,
 draw a ray from the top of the object through the center of the negative lens.

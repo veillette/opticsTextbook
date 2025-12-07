@@ -12,14 +12,14 @@
 **(c)** $y_3 = 6e^{-(x-8t)^2}$
 **(d)** $y_4 = 3x^2 - 2t^2$
 
-**Problem 5.3** A harmonic wave is described by $y(x,t) = (0.25 \text{ m})\sin[(4.0\text{ m}^{-1})x + (30\text{ s}^{-1})t + \pi/3]$.
+**Problem 5.3** A harmonic wave is described by $y(x,t) = (0.25~\text{m})\sin[(4.0~\text{m}^{-1})x + (30~\text{s}^{-1})t + \pi/3]$.
 **(a)** What are the amplitude, wavelength, period, and frequency of this wave?
 **(b)** What is the phase velocity and in which direction does the wave travel?
 **(c)** What is the displacement at $x = 2.0$ m and $t = 0.5$ s?
 **(d)** At what time does the wave first reach its maximum positive displacement at $x = 0$?
 
 **Problem 5.4** Two harmonic waves travel in opposite directions along a string:
-$y_1 = (0.15 \text{ m})\sin(2x - 10t)$ and $y_2 = (0.10 \text{ m})\sin(2x + 10t)$
+$y_1 = (0.15~\text{m})\sin(2x - 10t)$ and $y_2 = (0.10~\text{m})\sin(2x + 10t)$
 where $x$ is in meters and $t$ is in seconds.
 **(a)** What is the wavelength and frequency of each wave?
 **(b)** Find the resultant wave $y = y_1 + y_2$.
@@ -35,7 +35,7 @@ where $x$ is in meters and $t$ is in seconds.
 **(b)** Calculate $z_1 + z_2$, $z_1 \cdot z_2$, and $z_1/z_2$.
 **(c)** Find $z_1^*$ and verify that $z_1 \cdot z_1^* = |z_1|^2$.
 
-**Problem 5.7** A harmonic wave is represented by the complex function $\tilde{y} = (2.0 \text{ m})e^{i(5x - 20t + \pi/6)}$.
+**Problem 5.7** A harmonic wave is represented by the complex function $\tilde{y} = (2.0~\text{m})e^{i(5x - 20t + \pi/6)}$.
 **(a)** What are the real and imaginary parts of this function?
 **(b)** If the real part represents the physical displacement, what are the amplitude, wavelength, frequency, and initial phase?
 **(c)** Verify that this complex function satisfies the wave equation.

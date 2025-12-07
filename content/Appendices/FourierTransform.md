@@ -512,13 +512,13 @@ An image contains high-frequency noise that you want to remove while preserving 
 **Filter design**: Place a circular aperture in the Fourier plane to block high spatial frequencies.
 
 **Cutoff frequency calculation**: If we want to preserve features larger than 10 μm, the cutoff spatial frequency is:
-$$k_c = \frac{2\pi}{10 \times 10^{-6}} = 6.28 \times 10^5 \text{ rad/m}$$
+$$k_c = \frac{2\pi}{10 \times 10^{-6}} = 6.28 \times 10^5~\text{rad/m}$$
 
 **Physical aperture size**: In the Fourier plane, spatial frequency maps to position:
 $$r = \frac{k_r \lambda f}{2\pi} = \frac{k_c \lambda f}{2\pi}$$
 
 For λ = 632.8 nm (He-Ne laser):
-$$r = \frac{6.28 \times 10^5 \times 632.8 \times 10^{-9} \times 0.2}{2\pi} = 12.7 \text{ mm}$$
+$$r = \frac{6.28 \times 10^5 \times 632.8 \times 10^{-9} \times 0.2}{2\pi} = 12.7~\text{mm}$$
 
 **Filter**: Circular aperture with radius 12.7 mm in the Fourier plane.
 ```
@@ -556,10 +556,10 @@ A microscope objective has numerical aperture NA = 1.4 and operates at λ = 400 
 **Rayleigh criterion**: Two point sources are just resolved when the peak of one Airy pattern coincides with the first zero of the other.
 
 **Resolution limit**: For a circular aperture:
-$$\Delta x = \frac{1.22\lambda}{2 \times NA} = \frac{1.22 \times 400 \times 10^{-9}}{2 \times 1.4} = 174 \text{ nm}$$
+$$\Delta x = \frac{1.22\lambda}{2 \times NA} = \frac{1.22 \times 400 \times 10^{-9}}{2 \times 1.4} = 174~\text{nm}$$
 
 **Spatial frequency cutoff**: The highest spatial frequency that can be transmitted is:
-$$k_c = \frac{2\pi \times NA}{\lambda} = \frac{2\pi \times 1.4}{400 \times 10^{-9}} = 2.2 \times 10^7 \text{ rad/m}$$
+$$k_c = \frac{2\pi \times NA}{\lambda} = \frac{2\pi \times 1.4}{400 \times 10^{-9}} = 2.2 \times 10^7~\text{rad/m}$$
 
 **Transfer function**: The optical transfer function is:
 $$H(k_x, k_y) = \begin{cases} 1 & \text{if } \sqrt{k_x^2 + k_y^2} \leq k_c \\ 0 & \text{otherwise} \end{cases}$$

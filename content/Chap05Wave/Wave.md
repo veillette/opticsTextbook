@@ -315,15 +315,15 @@ Because the wavefronts (surfaces of constant phase) are planar, these are called
 ### Sound Wave Example
 
 Consider sound waves in air, where the disturbance represents pressure variations around the equilibrium atmospheric pressure. A sound wave propagating in the x-direction might be described by:
-$$\psi = P - P_0 = (10 \text{ N/m}^2)\sin[(2\pi/\text{m})x - (680\pi/\text{s})t]$$
+$$\psi = P - P_0 = (10~\text{N/m}^2)\sin[(2\pi/\text{m})x - (680\pi/\text{s})t]$$
 
-where $P$ is the instantaneous pressure, $P_0 \approx 10^5 \text{ N/m}^2$ is the equilibrium atmospheric pressure, and $\psi$ represents the pressure fluctuation.
+where $P$ is the instantaneous pressure, $P_0 \approx 10^5~\text{N/m}^2$ is the equilibrium atmospheric pressure, and $\psi$ represents the pressure fluctuation.
 
 From this expression, we can identify:
-- Amplitude: $10 \text{ N/m}^2$
-- Wavelength: $\lambda = 2\pi/k = 1 \text{ m}$
-- Angular frequency: $\omega = 680\pi \text{ rad/s}$
-- Wave speed: $v = \omega/k = 340 \text{ m/s}$
+- Amplitude: $10~\text{N/m}^2$
+- Wavelength: $\lambda = 2\pi/k = 1~\text{m}$
+- Angular frequency: $\omega = 680\pi~\text{rad/s}$
+- Wave speed: $v = \omega/k = 340~\text{m/s}$
 
 The wavefronts are planes perpendicular to the x-axis, moving in the positive x-direction. In principle, these planes extend infinitely in the y and z directions, though in practice, this is an approximation valid for limited spatial regions.
 
@@ -515,11 +515,11 @@ Maxwell's equations predict that electromagnetic waves propagate in vacuum at a 
 $c = \frac{1}{\sqrt{\varepsilon_0\mu_0}}$
 
 where:
-- $\varepsilon_0 = 8.8542 \times 10^{-12} \text{ C}^2/\text{N} \cdot \text{m}^2$ is the permittivity of free space
-- $\mu_0 = 4\pi \times 10^{-7} \text{ kg} \cdot \text{m}/(\text{A} \cdot \text{s})^2$ is the permeability of free space
+- $\varepsilon_0 = 8.8542 \times 10^{-12}~\text{C}^2/\text{N} \cdot \text{m}^2$ is the permittivity of free space
+- $\mu_0 = 4\pi \times 10^{-7}~\text{kg} \cdot \text{m}/(\text{A} \cdot \text{s})^2$ is the permeability of free space
 
 Substituting these fundamental constants:
-$c = 2.998 \times 10^8 \text{ m/s}$
+$c = 2.998 \times 10^8~\text{m/s}$
 
 This is the speed of light in vacuum, one of the most important constants in physics. All electromagnetic radiation—radio waves, microwaves, infrared, visible light, ultraviolet, X-rays, and gamma rays—propagates at this speed in vacuum.
 
@@ -565,13 +565,13 @@ $E_e = \langle|\vec{S}|\rangle = \frac{1}{2\mu_0}E_0 B_0 = \frac{1}{2}\varepsilo
 
 **Solution**:
 The irradiance is:
-$E_e = \frac{\text{power}}{\text{area}} = \frac{6000 \text{ W}}{\pi(1.0 \times 10^{-3} \text{ m})^2} = 1.91 \times 10^9 \text{ W/m}^2$
+$E_e = \frac{\text{power}}{\text{area}} = \frac{6000~\text{W}}{\pi(1.0 \times 10^{-3}~\text{m})^2} = 1.91 \times 10^9~\text{W/m}^2$
 
 From the irradiance formula:
-$E_0 = \sqrt{\frac{2E_e}{\varepsilon_0 c}} = \sqrt{\frac{2 \times 1.91 \times 10^9}{8.854 \times 10^{-12} \times 2.998 \times 10^8}} = 1.20 \times 10^6 \text{ V/m}$
+$E_0 = \sqrt{\frac{2E_e}{\varepsilon_0 c}} = \sqrt{\frac{2 \times 1.91 \times 10^9}{8.854 \times 10^{-12} \times 2.998 \times 10^8}} = 1.20 \times 10^6~\text{V/m}$
 
 The magnetic field amplitude is:
-$B_0 = \frac{E_0}{c} = \frac{1.20 \times 10^6}{2.998 \times 10^8} = 4.00 \times 10^{-3} \text{ T}$
+$B_0 = \frac{E_0}{c} = \frac{1.20 \times 10^6}{2.998 \times 10^8} = 4.00 \times 10^{-3}~\text{T}$
 
 These are remarkably large field strengths, illustrating the intensity achievable with focused laser beams.
 
@@ -741,7 +741,7 @@ $0.0473 = v/c(1 + 1.0473) = 2.0473v/c$
 Therefore:
 $\frac{v}{c} = \frac{0.0473}{2.0473} = 0.0231$
 
-$v = 0.0231c = 0.0231 \times 2.998 \times 10^8 = 6.93 \times 10^6 \text{ m/s} = 6930 \text{ km/s}$
+$v = 0.0231c = 0.0231 \times 2.998 \times 10^8 = 6.93 \times 10^6~\text{m/s} = 6930~\text{km/s}$
 
 This galaxy is receding from Earth at approximately 6930 km/s, which is about 2.3% of the speed of light.
 
