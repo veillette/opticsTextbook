@@ -74,6 +74,12 @@ npm install
 - `npm run validate` – validate references, citations, labels
 - `npm test` – run Jest unit tests
 
+### Content Quality Tools
+
+- `npm run lint:spell` – check spelling across content (uses cspell with optics dictionary)
+- `npm run lint:grammar` – check grammar and style suggestions (uses write-good)
+- `npm run validate:alt-text` – check images have alt text for accessibility
+
 ---
 
 ## Development Workflow
@@ -96,7 +102,13 @@ npm install
 7. **Open a pull request** against `main`, referencing any related issues (e.g., `Fixes #59`).
 8. **Respond to feedback promptly.** Reviewers may request adjustments for style, clarity, or tooling.
 
-> **Pre-commit hook:** Husky automatically runs the MyST linter and Jest unit tests when you commit. Fix failures before retrying the commit.
+> **Pre-commit hook:** Husky automatically runs checks when you commit:
+> - MyST linter (warnings only)
+> - Spell checker on staged markdown files (warnings only)
+> - Alt text validation on staged images (warnings only)
+> - Jest unit tests (must pass or commit is blocked)
+>
+> Fix test failures before retrying the commit.
 
 ---
 
@@ -105,8 +117,8 @@ npm install
 - **File locations:** Each chapter lives in `content/ChapXX.../`. Exercises go under `content/ChapXX.../Problems/`.
 - **MyST syntax:** Use backtick fences for directives and follow the exact patterns documented in `doc/MYST_CONVENTIONS.md`. Never use `:::` fences.
 - **Sections & references:** Add section labels using `(label-name)=` syntax. Keep cross-references on a single line, e.g., `See {ref}`section:lasers``.
-- **Figures:** Every figure needs `:name:`, `:width:`, `:align:` (if not center), and a descriptive caption (>20 characters). Use `{numref}` for cross-references.
-- **Accessibility:** Write captions that explain what a figure shows and why it matters. Avoid purely decorative images.
+- **Figures:** Every figure needs `:name:`, `:width:`, `:alt:` (for accessibility), and a descriptive caption (>20 characters). Use `{numref}` for cross-references.
+- **Accessibility:** Write meaningful alt text describing image content. Run `npm run validate:alt-text` to check. Captions should explain what a figure shows and why it matters.
 - **Equations:** Label equations that are referenced later with `{eq}` labels.
 - **Tone:** Maintain an approachable, instructional tone. Avoid slang or colloquialisms.
 - **Citations:** Use the existing `references.bib` entries or add new ones when citing external material.

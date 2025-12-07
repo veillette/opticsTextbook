@@ -61,13 +61,17 @@ npm run validate
 ### Git Pre-Commit Hook (Automatic)
 When you try to commit, Husky automatically runs:
 1. **Markdown linter** - Shows warnings but allows commit
-2. **JavaScript unit tests** - Must pass or commit is blocked
+2. **Spell checker** - Checks staged .md files for spelling issues (warnings only)
+3. **Alt text validator** - Checks staged .md files for missing image alt text (warnings only)
+4. **JavaScript unit tests** - Must pass or commit is blocked
 
 **Example:**
 ```bash
 git add .
 git commit -m "Updated chapter 5"
 # ✓ Markdown linter runs (shows issues)
+# ✓ Spell checker runs (shows issues)
+# ✓ Alt text validator runs (shows issues)
 # ✓ Unit tests run (must all pass)
 # ✓ Commit succeeds if tests pass
 ```
@@ -434,8 +438,10 @@ opticsTextbook/
 │   │   ├── standardize-figures.js
 │   │   └── standardize-labels.js
 │   ├── validation/           # Validation and linting
+│   │   ├── check-grammar.js
 │   │   ├── lint-markdown.js
 │   │   ├── validate-all.js
+│   │   ├── validate-alt-text.js
 │   │   ├── validate-images.js
 │   │   └── validate-references.js
 │   ├── tests/                # Jest unit tests
@@ -473,7 +479,10 @@ opticsTextbook/
 | `npm run build` | Build HTML (optimizes images first) |
 | `npm run lint` | Check for linting issues |
 | `npm run lint:fix` | Auto-fix linting issues |
+| `npm run lint:spell` | Check spelling (cspell) |
+| `npm run lint:grammar` | Check grammar and style (write-good) |
 | `npm run validate` | Check references, citations, cross-refs |
+| `npm run validate:alt-text` | Check image alt text for accessibility |
 | `npm run validate-quiet` | Same, but concise output |
 | `npm run find-unreferenced:dry` | Find unused images (preview) |
 | `npm run find-unreferenced` | Find unused images (full report) |
