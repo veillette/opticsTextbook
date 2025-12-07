@@ -8,6 +8,21 @@ echo ""
 echo "📝 Checking markdown files..."
 npm run lint:quiet || true
 
+# Run spell check on staged markdown files (shows warnings, doesn't block)
+echo "📖 Checking spelling..."
+STAGED_MD=$(git diff --cached --name-only --diff-filter=ACM | grep '\.md$' || true)
+if [ -n "$STAGED_MD" ]; then
+    echo "$STAGED_MD" | xargs npx cspell --no-progress --no-must-find-files 2>/dev/null || true
+else
+    echo "   No markdown files staged"
+fi
+
+# Run alt text validation on staged markdown files (shows warnings, doesn't block)
+echo "🖼️  Checking image alt text..."
+if [ -n "$STAGED_MD" ]; then
+    echo "$STAGED_MD" | xargs node scripts/validation/validate-alt-text.js --quiet 2>/dev/null || true
+fi
+
 # Run JavaScript unit tests (must pass to commit)
 echo "🧪 Running unit tests..."
 npm test
@@ -30,7 +45,10 @@ else
     echo ""
     echo "✅ Pre-commit checks passed!"
     echo ""
-    echo "📝 Tip: Run 'npm run lint:fix' to auto-fix any linting issues"
+    echo "📝 Tips:"
+    echo "   • Run 'npm run lint:fix' to auto-fix linting issues"
+    echo "   • Run 'npm run lint:spell' for full spell check"
+    echo "   • Run 'npm run lint:grammar' for grammar suggestions"
     echo ""
     exit 0
 fi

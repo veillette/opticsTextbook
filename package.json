@@ -76,12 +76,20 @@
     "images:find-unreferenced:dry": "node scripts/images/find-unreferenced.js --dry-run",
     "images:clean-unreferenced": "node scripts/images/delete-unreferenced.js",
     "images:clean-unreferenced:dry": "node scripts/images/delete-unreferenced.js --dry-run",
-    "images:insert": "node scripts/images/insert-figure.js"
+    "images:insert": "node scripts/images/insert-figure.js",
+    "lint:spell": "cspell \"content/**/*.md\" --no-progress",
+    "lint:spell:fix": "cspell \"content/**/*.md\" --no-progress --words-only",
+    "lint:grammar": "node scripts/validation/check-grammar.js",
+    "lint:grammar:suggestions": "node scripts/validation/check-grammar.js --suggestions",
+    "validate:alt-text": "node scripts/validation/validate-alt-text.js",
+    "validate:alt-text:fix": "node scripts/validation/validate-alt-text.js --fix"
   },
   "devDependencies": {
     "@types/jest": "^30.0.0",
+    "cspell": "^8.17.0",
     "husky": "^9.1.7",
     "jest": "^30.2.0",
-    "markdownlint-cli2": "^0.16.0"
+    "markdownlint-cli2": "^0.16.0",
+    "write-good": "^1.0.8"
   }
 }

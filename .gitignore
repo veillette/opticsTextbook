@@ -22,7 +22,8 @@ exports/
 
 # IDE
 .idea/
-.vscode/
+.vscode/*
+!.vscode/*.code-snippets
 *.swp
 *.swo
 

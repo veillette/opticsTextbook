@@ -20,7 +20,9 @@ scripts/
 │   ├── validate-all.js           # 🎯 Unified validator (runs all checks)
 │   ├── validate-references.js    # Reference & link validation
 │   ├── validate-images.js        # Image reference validation
-│   └── lint-markdown.js          # MyST markdown linting
+│   ├── validate-alt-text.js      # Image alt text accessibility validation
+│   ├── lint-markdown.js          # MyST markdown linting
+│   └── check-grammar.js          # Grammar and style checker
 │
 ├── transform/             # Content transformation scripts
 │   ├── fix-directive-syntax.js   # Fix MyST directive syntax issues
@@ -95,6 +97,13 @@ npm run validate:images            # Validate image references
 npm run lint                       # Check markdown syntax
 npm run lint:fix                   # Fix markdown issues
 npm run lint:quiet                 # Quiet mode
+
+# Content Quality
+npm run lint:spell                 # Check spelling (cspell)
+npm run lint:grammar               # Check grammar (write-good)
+npm run lint:grammar:suggestions   # Grammar with detailed context
+npm run validate:alt-text          # Check image alt text
+npm run validate:alt-text:fix      # Add placeholder alt text
 ```
 
 ### Content Transformation
@@ -218,6 +227,39 @@ Features:
 - Generates comprehensive reports
 - Shows duration for each validator
 - Saves JSON and Markdown reports
+
+#### `check-grammar.js`
+Grammar and style checker using write-good.
+
+```bash
+node scripts/validation/check-grammar.js [options] [files...]
+
+Options:
+  --suggestions    Show detailed context for each issue
+  --quiet          Only show summary
+```
+
+Features:
+- Detects passive voice, weasel words, adverbs
+- Strips MyST syntax before analysis
+- Advisory only (doesn't fail builds)
+
+#### `validate-alt-text.js`
+Validates image alt text for accessibility compliance.
+
+```bash
+node scripts/validation/validate-alt-text.js [options] [files...]
+
+Options:
+  --fix            Add placeholder alt text to figures
+  --quiet          Only show summary
+  --strict         Check alt text quality (not just presence)
+```
+
+Features:
+- Checks MyST figures, images, and markdown syntax
+- Validates alt text is meaningful (not just filename)
+- Can auto-add placeholder alt text
 
 #### `standardize-labels.js`
 Standardizes labels across all content types.
