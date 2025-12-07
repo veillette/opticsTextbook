@@ -30,14 +30,18 @@ const fs = require('fs');
 const path = require('path');
 const readline = require('readline');
 const {
-  CHAPTERS,
-  IMAGE_EXTENSIONS,
+  getChapters,
+  getImageExtensions,
   toSnakeCase,
   isProperlyNamed,
   extractFigureReferences,
   extractDescriptiveName,
   findMarkdownFilesInChapter
 } = require('../shared-utils');
+
+// Load chapters and image extensions from config
+const CHAPTERS = getChapters();
+const IMAGE_EXTENSIONS = getImageExtensions();
 
 /**
  * Get all images in a chapter's Images directory.
@@ -296,12 +300,12 @@ function askConfirmation(question) {
  * @param {boolean} verbose - Whether to show verbose output
  */
 async function processChapter(chapterNum, dryRun = false, verbose = false) {
-  const [chapterDirName] = CHAPTERS[chapterNum];
-  const chapterDir = chapterDirName;
+  const chapterInfo = CHAPTERS[chapterNum];
+  const chapterDir = chapterInfo.dir;
   const imagesDir = path.join(chapterDir, 'Images');
 
   console.log('\n' + '='.repeat(80));
-  console.log(`Processing Chapter ${chapterNum}: ${chapterDirName}`);
+  console.log(`Processing Chapter ${chapterNum}: ${chapterDir}`);
   console.log('='.repeat(80));
 
   if (!fs.existsSync(chapterDir)) {
