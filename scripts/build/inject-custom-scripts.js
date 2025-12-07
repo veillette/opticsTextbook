@@ -16,7 +16,7 @@ const BUILD_DIR = path.join(ROOT_DIR, '_build', 'html');
 const CUSTOM_SCRIPTS_SRC = path.join(ROOT_DIR, 'js', 'custom-scripts.js');
 const CUSTOM_SCRIPTS_DEST = 'custom-scripts.js';
 
-// Base path for deployed site (e.g., /opticsTextbook for GitHub Pages)
+// Base path for deployed site (e.g., /myproject for GitHub Pages)
 const RAW_BASE_PATH = process.env.BASE_URL || '';
 const NORMALIZED_BASE_PATH = (() => {
   if (!RAW_BASE_PATH || RAW_BASE_PATH === '/') {

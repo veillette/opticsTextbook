@@ -22,7 +22,7 @@
  *     createFileListReport: Generate simple file listing reports
  *     printReportPaths: Pretty-print generated report paths
  *
- * Author: Optics Textbook Scripts Package
+ * Author: MyST Project Scripts Package
  * Version: 1.0.0
  */
 
