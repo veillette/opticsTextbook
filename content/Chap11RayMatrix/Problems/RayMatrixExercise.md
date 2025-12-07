@@ -1,4 +1,6 @@
-12. \* **Principal planes for a thick lens.**
+# Problems
+
+**Problem 11.1** \* Principal planes for a thick lens.
 
 
 In this problem the transfer matrix for a thick lens is derived. By finding the positions of the principal planes, you will derive that the transfer matrix has the same form as for a thin lens when object, image and focal distances are measured with respect to principle planes.
@@ -25,7 +27,7 @@ Thick lens geometry showing the two curved surfaces with vertices V₁ and V₂ 
 ```
 
 
-- **a)** Derive that the transfer matrix between the surfaces through the two vertices of the thick lens is given by:
+**(a)** Derive that the transfer matrix between the surfaces through the two vertices of the thick lens is given by:
 
 ```{math}
 :label: eq:ray:thickLensVertexMatrix
@@ -38,7 +40,7 @@ Thick lens geometry showing the two curved surfaces with vertices V₁ and V₂ 
 where $k_1= (n-1)/R_1$ and $k_2= (1-n)/R_2$
 
 
-- **b)** Show that for $d=0$ the transfer matrix is identical to that for a thin lens given by
+**(b)** Show that for $d=0$ the transfer matrix is identical to that for a thin lens given by
   {eq}`eq:ray:thin-lens-matrix`.
 
 
@@ -67,7 +69,7 @@ where
 \end{align*}
 ```
 
-- **c)** By using the following abbreviation for the matrix {eq}`eq:ray:thickLensVertexMatrix`:
+**(c)** By using the following abbreviation for the matrix {eq}`eq:ray:thickLensVertexMatrix`:
 
 ```{math}
 :label: eq:ray:matrixAbbreviation
@@ -88,7 +90,7 @@ derive that:
 \end{align*}
 ```
 
-- **d)** The principle planes are conjugate (i.e. they are each other images) with unit magnification. Derive from this fact that the locations of the principle planes are given by:
+**(d)** The principle planes are conjugate (i.e. they are each other images) with unit magnification. Derive from this fact that the locations of the principle planes are given by:
 
 
 ```{math}
@@ -108,4 +110,5 @@ With the solutions for $T_1$ and $T_2$ the system matrix between the principal p
 ```
 
 which has the same shape as the transfer matrix for a thin lens.
-- **e)** Show that the back focal point is at distance $1/a_{12}$ from the secondary principle plane and that the front focal plane is at distance $1/a_{12}$ from the primary principle plane.
+
+**(e)** Show that the back focal point is at distance $1/a_{12}$ from the secondary principle plane and that the front focal plane is at distance $1/a_{12}$ from the primary principle plane.
