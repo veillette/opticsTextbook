@@ -8,7 +8,7 @@ This is an **interactive optics textbook** built with MyST Markdown and deployed
 
 **Key Technologies:**
 - MyST Markdown for content
-- Node.js and Python for tooling
+- Node.js for tooling and automation
 - GitHub Actions for CI/CD
 - Progressive Web App features
 - PDF/DOCX export generation
@@ -43,16 +43,18 @@ npm run docx               # Generate DOCX exports only (individual chapters)
 npm run generate-exports   # Generate all exports (PDF)
 
 # Quality Control
-npm run lint               # Check for MyST markdown issues
-npm run lint:fix           # Auto-fix linting issues
-npm run validate-enhanced  # Validate all references and citations
-pytest scripts/tests/ -v   # Run unit tests
+npm run lint               # Check for MyST-specific issues
+npm run lint:fix           # Auto-fix MyST linting issues
+npm run lint:markdown      # Check general markdown formatting
+npm run lint:markdown:fix  # Auto-fix markdown formatting
+npm run validate           # Validate all references and citations
+npm test                   # Run unit tests
 
 # Before Committing
 npm run lint:fix
 npm run build              # Includes export generation
 git add .
-git commit -m "Clear description"  # Pre-commit hook runs automatically
+git commit -m "Clear description"  # Pre-commit hook runs linter and tests
 git push                   # Triggers GitHub Actions deployment
 ```
 
@@ -66,13 +68,13 @@ opticsTextbook/
 │   ├── ...                    # Chapters 1-11
 │   ├── Appendices/            # Mathematical appendices
 │   └── Preface/               # Textbook introduction
-├── scripts/                    # Utility scripts
+├── scripts/                    # Utility scripts (JavaScript/Node.js)
 │   ├── config.json            # Chapter mappings (IMPORTANT!)
-│   ├── lint_myst_markdown.py  # MyST linter
-│   ├── validate_references_enhanced.py
-│   ├── fix_split_equation_refs.py
-│   ├── optimize-images.js     # Image optimization
-│   └── setup-pwa.js           # PWA configuration
+│   ├── validation/            # Validation scripts
+│   ├── transform/             # Content transformation scripts
+│   ├── build/                 # Build scripts
+│   ├── images/                # Image processing scripts
+│   └── tests/                 # Jest unit tests
 ├── doc/                        # Centralized documentation
 │   ├── MAINTENANCE.md         # Detailed workflows
 │   ├── MYST_CONVENTIONS.md    # MyST syntax rules
@@ -89,8 +91,6 @@ opticsTextbook/
 │   ├── service-worker.js      # Service worker for offline caching
 │   └── offline.html           # Offline fallback page
 ├── config/                     # Configuration files
-│   ├── pyproject.toml         # Python project configuration
-│   └── requirements.txt        # Python dependencies
 ├── icons/                      # PWA icons (multiple sizes)
 ├── img/                        # Site assets (logos, favicon)
 ├── myst.yml                    # MyST configuration

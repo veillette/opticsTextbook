@@ -38,16 +38,7 @@ const { getChapterCodes, getChapterCodeFromPath } = require('../shared-utils');
 const CHAPTER_CODES = getChapterCodes();
 const VALID_CHAPTER_CODES = new Set(Object.values(CHAPTER_CODES));
 
-// Load equation label mappings (optional)
-let EQUATION_MAPPINGS = {};
-const MAPPINGS_FILE = path.join(__dirname, '..', 'equation_label_mappings.json');
-try {
-  if (fs.existsSync(MAPPINGS_FILE)) {
-    EQUATION_MAPPINGS = JSON.parse(fs.readFileSync(MAPPINGS_FILE, 'utf8'));
-  }
-} catch (error) {
-  // Mappings file is optional
-}
+// Equation label mappings removed - no longer needed after label standardization
 
 /**
  * Class representing a label issue.
@@ -207,12 +198,6 @@ const fixGenerators = {
   },
 
   equation: (oldLabel, chapterCode) => {
-    // Check mappings first
-    const mappings = EQUATION_MAPPINGS[chapterCode] || {};
-    if (mappings[oldLabel]) {
-      return mappings[oldLabel];
-    }
-
     let name = oldLabel;
     if (name.startsWith('eq.')) {
       name = name.substring(3);

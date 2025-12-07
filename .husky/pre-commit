@@ -4,13 +4,13 @@ echo ""
 echo "🔍 Running pre-commit validation checks..."
 echo ""
 
-# Run MyST linter (shows warnings, doesn't block commit)
-echo "📝 Checking MyST markdown..."
-python3 scripts/lint_myst_markdown.py --quiet
+# Run markdown linter (shows warnings, doesn't block commit)
+echo "📝 Checking markdown files..."
+npm run lint:quiet || true
 
-# Run Python unit tests (must pass to commit)
-echo "🧪 Running Python unit tests..."
-pytest scripts/tests/ -q
+# Run JavaScript unit tests (must pass to commit)
+echo "🧪 Running unit tests..."
+npm test
 TEST_EXIT=$?
 
 echo ""
