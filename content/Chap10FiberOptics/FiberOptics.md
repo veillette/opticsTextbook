@@ -382,7 +382,6 @@ In case an optical fiber bends, losses may occur if the bending radius is too sm
 Bending may occur on macro-scale ({numref}`fig:fiber:bendingLoss` (a)) while intentionally making a fiber bend during installation, or on micro-scale ({numref}`fig:fiber:bendingLoss` (b)). The latter may as a result of improper fiber handling, e.g. when the fiber is strained excessively.
 
 To prevent macro-bending losses, the critical radius of fibers should be noted. This parameter is listed in the fiber datasheet. Making bends tighter than this critical radius results in macro-bending losses.
-\begin{figure}[htbp]
 
 ```{figure} Images/10_12_bending_loss.png
 
@@ -560,6 +559,20 @@ Fiber lasers have been developed in which the gain medium is formed from a fiber
 Other areas of current and future development of fiber optic applications are photonic integrated circuits that integrate electronic and optical devices. Multicore fibers are being developed to further increase information density and microstructured fibers such as holey fibers and PBFs are further investigated and developed in order to find designs with optimal properties in terms of loss and dispersion. The same holds for evanescent wave sensing and FBGs for which new applications are being explored continuously, e.g. in the sectors of biosensing and health monitoring (in particular point of care diagnostics).
 
 With new applications of fiber optics arising in sectors such as agriculture, food, space, defense and energy, the field is steadily expanding. It holds a promise for developments making processes in those sectors better measurable, more cost effective and more energy efficient. This makes the field very interesting to follow in the upcoming years.
+
+## Chapter Summary
+
+- **Total internal reflection** confines light in optical fibers when $n_{core} > n_{cladding}$.
+- **Fiber modes** are discrete propagation patterns satisfying self-consistency; determined by the V-number: $V = \frac{2\pi a}{\lambda}\text{NA}$.
+- **Single-mode fibers** ($V < 2.405$) support only the fundamental mode; **multimode fibers** support many modes.
+- **Numerical aperture** (NA $= \sqrt{n_1^2 - n_2^2}$) determines the acceptance angle for light entering the fiber.
+- **Dispersion** causes pulse broadening: modal dispersion (multimode), material dispersion, and waveguide dispersion.
+- **Fiber losses** arise from Rayleigh scattering, absorption, bending, and coupling; minimized at $\lambda \approx 1550$ nm in silica.
+- **Step-index fibers** have uniform core index; **graded-index fibers** have gradual index variation reducing modal dispersion.
+- **Photonic crystal fibers** (holey fibers, photonic bandgap fibers) offer unique dispersion and single-mode properties.
+- **Fiber connections**: Connectors (LC, SC, FC) for temporary connections; splicing (fusion or mechanical) for permanent joins.
+- **Fiber components**: Couplers/splitters, isolators, circulators, wavelength-division multiplexers, and fiber amplifiers (EDFA).
+- **Applications**: Telecommunications, fiber sensors (FBGs), fiber lasers, and medical imaging.
 
 ```{note} External sources in recommended order
 General optics and theory of optical fibers:

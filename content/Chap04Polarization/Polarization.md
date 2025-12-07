@@ -650,6 +650,19 @@ We conclude that to study what happens to elliptic polarization, it suffices to 
 
 To see what happens to an arbitrary elliptical polarization state in a circular birefringent material, the incident light is best written as linear combination of left-and right-circular polarizations.
 
+## Chapter Summary
+
+- **Polarization** describes the orientation of the electric field vector oscillation in an electromagnetic wave.
+- **Linear polarization**: The electric field oscillates in a fixed direction; described by Jones vector with real components.
+- **Circular polarization**: The electric field rotates at constant amplitude; left-circular and right-circular have opposite handedness.
+- **Elliptical polarization**: The most general state; the electric field traces an ellipse, characterized by the ellipticity angle.
+- **Jones vectors** represent polarization states as 2D complex vectors; **Jones matrices** describe how optical elements transform polarization.
+- **Polarizers** transmit one polarization and block the orthogonal one; **Malus's Law** gives transmitted intensity as $I = I_0 \cos^2\theta$.
+- **Birefringence** occurs when a material has different refractive indices for different polarization directions.
+- **Wave plates**: Quarter-wave plates convert linear to circular polarization (and vice versa); half-wave plates rotate linear polarization.
+- **Optical activity** rotates the plane of polarization as light propagates through certain materials.
+- **Stokes parameters** provide a complete description of partially polarized light, including unpolarized components.
+
 ```{note} External sources in recommended order
 1. [Double Vision - Sixty Symbols](https://www.youtube.com/watch?v=k1oh3lXR5PE): Demonstration of double refraction by a calcite crystal due to birefringence.
 2. [MIT OCW - Linear Polarizer](https://ocw.mit.edu/resources/res-6-006-video-demonstrations-in-lasers-and-optics-spring-2008/demonstrations-in-physical-optics/linear-polarizer/): Demonstration of linear polarizers and linear polarization.

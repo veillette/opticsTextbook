@@ -184,7 +184,8 @@ Alternatively, one can propagate only the $E_x$- and $E_y$-components and afterw
 
 Another method to propagate a wave field is by using the **Rayleigh-Sommerfeld** integral. A very good approximation of this integral states that each point in the plane $z=0$ emits spherical waves with amplitude proportional to the field in the plane $z=0$. To find the field in a point $(x, y,z)$, we have to add the contributions from all these point sources together. This corresponds to the Huygens-Fresnel principle postulated earlier in the Spatial Coherence section of the Interference chapter. Because a more rigorous derivation starting from the Helmholtz equation[^2] would be rather lengthy, we will just give the final result:
 
-````{note}
+````{important}
+**Rayleigh-Sommerfeld Diffraction Integral**
 ```{math}
 :label: eq:diff:rayleighSommerfeld
 \begin{align*}
@@ -235,8 +236,8 @@ $\mathcal{F}(U_0)\left(\frac{k_x}{2\pi},\frac{k_y}{2\pi}\right)$ for small $\sqr
 To investigate these concepts further we choose a certain field, take its Fourier transform, remove the higher spatial frequencies and then invert the Fourier transform. We then expect that the resulting field has lost its sharp features and only retains its broad features, i.e. the image is blurred. Conversely, if we remove the lower spatial frequencies but retain the higher, then the result will only show its sharp features, i.e. its contours. These effects are shown in {numref}`fig:diff:fourierFilter`.
 Recall that when $k_x^2+k_y^2 > \left(\frac{2\pi}{\lambda}\right)^2$, the plane wave decays exponentially as the field propagates. Because by propagation through homogeneous space, the information contained in the high spatial frequencies corresponding to evanescent waves is lost (only exponentially small amplitudes of the evanescent waves remain), perfect imaging is impossible, no matter how well-designed an optical system is.
 
-```{note}
-Propagation of light leads to irrecoverable loss of resolution.
+```{important}
+**Diffraction Limit**: Propagation of light leads to irrecoverable loss of resolution.
 ```
 
 It is this fact that motivates near-field microscopy, which tries to detect these evanescent waves by scanning close to the sample, thus obtaining subwavelength resolution.
@@ -494,7 +495,7 @@ When $x/z>1$, the spatial frequency $k_x = \frac{2 \pi x}{z \lambda} > k$ associ
 
 **Fresnel approximation of the field of two point sources.**
 
-Consider two mutual coherent time-harmonic point sources in $\mathbf{r}_s^+=(a/2,0,0)$ and $\mathbf{r}_s^-=(-a/2,0,0)$. The fields in $\mathbf{r}=(x,y,z)$ emitted are according to the time-harmonic field equation (see the Interference chapter) proportional to
+Consider two mutual coherent time-harmonic point sources in $\mathbf{r}_s^+=(a/2,0,0)$ and $\mathbf{r}_s^-=(-a/2,0,0)$. The fields in $\mathbf{r}=(x,y,z)$ emitted are according to the time-harmonic field equation (see the {ref}`Interference chapter <chapter:coh>`) proportional to
 
 ```{math}
 :label: eq:diff:pointSourceField
@@ -1026,7 +1027,7 @@ Left: cross section of the field of the Airy pattern. Right: intensity of the Ai
 ```
 
 **Remark**.
-In the simple case of a single thin lens, the entrance and exit pupils coincide with the lens itself. As has been explained in the Stops section of the Geometrical Optics chapter, the exit pupil in systems consisting of several lenses is the real or virtual image of the aperture stop under all optical lenses to the right of the stop. To model the effect of diffraction in such more complicated systems, diffraction is assumed to take place entirely in the exit pupil. The field in the exit pupil is first determined by non-paraxial ray tracing and is then integrated over the exit pupil using the Fresnel diffraction integral.
+In the simple case of a single thin lens, the entrance and exit pupils coincide with the lens itself. As has been explained in the {ref}`Stops section <sec:geo:stops>` of the {ref}`Geometrical Optics chapter <chapter:geo>`, the exit pupil in systems consisting of several lenses is the real or virtual image of the aperture stop under all optical lenses to the right of the stop. To model the effect of diffraction in such more complicated systems, diffraction is assumed to take place entirely in the exit pupil. The field in the exit pupil is first determined by non-paraxial ray tracing and is then integrated over the exit pupil using the Fresnel diffraction integral.
 
 ### Imaging by a lens
 It follows from the derivations in the previous section that the Airy pattern is the image of a point source infinitely far in front of a lens. In this section we study the imaging of a general object at finite distance to the lens.
@@ -1092,7 +1093,7 @@ I_i(x,y,s_i) = \ \int\!\int \left|\text{PSF}\left(x-M x_o, y- M x_o \right)\righ
 where $I_o=|U_o|^2$ is the intensity distribution of the extended source.
 Hence the image intensity is expressed in the intensity of the source by a convolution with the intensity of the PSF. This system is called a **incoherent imaging system**.
 
-3. An object is often illuminated by a spatially incoherent extended light source and then imaged. According to the discussion in the Propagation of Mutual Coherence section of the Interference chapter, the field that illuminates the object is then partially coherent. It is more coherent when the angle that the source extends at the object is smaller. The intensity in the image plane can be computed by splitting the spatially incoherent source into sufficiently many mutually incoherent point sources and computing the intensities in the image plane due to the illumination of the object by each individual point source. The total intensity in the image plane is then the sum of these intensities.
+3. An object is often illuminated by a spatially incoherent extended light source and then imaged. According to the discussion in the {ref}`Propagation of Mutual Coherence section <sec:coh:scprop>` of the {ref}`Interference chapter <chapter:coh>`, the field that illuminates the object is then partially coherent. It is more coherent when the angle that the source extends at the object is smaller. The intensity in the image plane can be computed by splitting the spatially incoherent source into sufficiently many mutually incoherent point sources and computing the intensities in the image plane due to the illumination of the object by each individual point source. The total intensity in the image plane is then the sum of these intensities.
 
 4. We have considered only scalar diffraction theory. However, for a lens with numerical aperture larger than 0.6, the change of polarization can be important. Then a more general diffraction theory is needed [^8].
 
@@ -1157,6 +1158,19 @@ A few natural hyperbolic media exist for visible frequencies, but there are more
 Spot used for excitation (top left) and for depletion (top middle). Fluorescence signal top right.	In the lower figure the confocal image is compared to the STED image. (P.F. Rodriguez and al., *Building a fast scanning stimulated emission depletion microscope*, Materials Science [(2012)](https://www.semanticscholar.org/paper/Building-a-fast-scanning-stimulated-emission-a-step-Rodriguez-Wu/46d8c4148e93f30cf11e1ae4356620bd5fcd0475))
 ```
 
+## Chapter Summary
+
+- **Angular spectrum method** decomposes fields into plane waves; propagation multiplies each by $e^{ik_z z}$.
+- **Rayleigh-Sommerfeld integral** propagates fields by summing spherical wave contributions from each source point.
+- **Fresnel approximation** applies when the observation distance is much larger than the aperture size; quadratic phase approximation.
+- **Fraunhofer approximation** (far-field): The diffracted field is the Fourier transform of the aperture field.
+- **Single slit**: Intensity pattern $I \propto \text{sinc}^2(\pi a \sin\theta/\lambda)$; first minimum at $\sin\theta = \lambda/a$.
+- **Circular aperture**: Produces the Airy pattern; central disk radius $\approx 1.22\lambda/D$.
+- **Rayleigh criterion**: Two point sources are resolved when the maximum of one coincides with the first minimum of the other.
+- **Diffraction limit**: Resolution is fundamentally limited by $\Delta x \approx 0.61\lambda/\text{NA}$ due to loss of evanescent waves.
+- **Lenses perform Fourier transforms**: A lens in 2f-2f configuration gives the Fourier transform in its back focal plane.
+- **Point Spread Function (PSF)**: The image of a point source; the image of any object is a convolution with the PSF.
+- **Super-resolution techniques** (STED, near-field microscopy) can overcome the diffraction limit using special methods.
 
 ```{note} External sources in recommended order
 1. {cite}`SixtySymbols_Fourier` Basic explanation of Fourier transforms. Also see {ref}`sec:diff:fourierintuition`.

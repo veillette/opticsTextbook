@@ -756,3 +756,16 @@ This galaxy is receding from Earth at approximately 6930 km/s, which is about 2.
 **Satellite communications**: Doppler shifts must be compensated in satellite communication systems, especially for low Earth orbit satellites that have high relative velocities with respect to ground stations.
 
 The Doppler effect thus provides a powerful tool for measuring velocities across an enormous range of scales, from atomic motions to cosmic expansion, making it one of the most practically important wave phenomena in modern science and technology.
+
+## Chapter Summary
+
+- **The wave equation** $\frac{\partial^2 u}{\partial x^2} = \frac{1}{v^2}\frac{\partial^2 u}{\partial t^2}$ describes wave propagation in one dimension.
+- **Harmonic waves** have the form $u = A\cos(kx - \omega t + \phi)$, characterized by amplitude $A$, wave number $k$, and angular frequency $\omega$.
+- **Wavelength** ($\lambda = 2\pi/k$), **frequency** ($f = \omega/2\pi$), and **phase velocity** ($v = \omega/k = f\lambda$) are related by $v = f\lambda$.
+- **Complex notation** simplifies wave mathematics: $U = Ae^{i(kx-\omega t)}$ represents a traveling wave.
+- **Plane waves** propagate in 3D with wave vector $\mathbf{k}$; surfaces of constant phase are planes perpendicular to $\mathbf{k}$.
+- **Spherical waves** spread from point sources with amplitude decreasing as $1/r$ (intensity as $1/r^2$).
+- **Electromagnetic waves**: $\mathbf{E}$ and $\mathbf{B}$ are perpendicular to each other and to the propagation direction; $c = 1/\sqrt{\epsilon_0\mu_0}$.
+- **Intensity** is proportional to the time-averaged Poynting vector: $I = \frac{1}{2}\epsilon_0 c |E_0|^2$.
+- **Group velocity** $v_g = d\omega/dk$ describes the speed of wave packets and energy transport in dispersive media.
+- **The Doppler effect** shifts observed frequency when source and observer have relative motion: redshift for recession, blueshift for approach.

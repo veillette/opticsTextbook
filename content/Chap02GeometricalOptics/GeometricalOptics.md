@@ -69,7 +69,7 @@ Although it is possible to incorporate polarization into geometrical optics, thi
 
 The starting point of the treatment of geometrical optics is the
 
-```{note}
+```{important}
 **Principle of Fermat (1657)**. The path followed by a light ray between two points is the one that takes the least amount of time.
 ```
 
@@ -546,7 +546,7 @@ For any object point, the **chief ray** is the ray in the cone that passes throu
 For a fixed diameter $D$ of the exit pupil and for given $x_o$, the
 magnification of the system is according to the transverse magnification
 $M=y_i/y_o = s_i/s_o = -x_i/f_i$ and Newton's lens equation $x_o x_i = -f_i^2$
-(see the Ray Matrix chapter) given by $M=-x_i/f_i=f_i/x_o$. It follows that when $f_i$ is increased, the
+(see the {ref}`Ray Matrix chapter <chapter:ray>`) given by $M=-x_i/f_i=f_i/x_o$. It follows that when $f_i$ is increased, the
 magnification increases.
 A larger magnification means a lower energy density, hence a longer exposure time, i.e. **the speed of the lens is reduced**. Camera lenses are usually specified by two numbers: the focal length $f$, measured with respect to the exit pupil and the diameter $D$ of the exit pupil. The **$f$-number** is the ratio of the focal length to this diameter:
 
@@ -628,6 +628,16 @@ Even if the wave transmitted by the exit pupil would be perfectly spherical (no 
 ```
 where NA$=\arcsin(a/s_i)$ is the numerical aperture (i.e. 0<NA<1) with $a$ the radius of the exit pupil and $s_i$ the image distance as predicted by Gaussian geometrical optics. Diffraction depends on the wavelength, and hence it cannot be described by geometrical optics, which applies in the limit of vanishing wavelength.  We will treat diffraction by apertures in [](#chapter.diffraction).
 
+## Chapter Summary
+
+- **Fermat's Principle** states that light follows the path of least time, forming the foundation of geometrical optics.
+- In **Gaussian geometrical optics**, the paraxial (small angle) approximation enables analytical treatment of imaging by spherical surfaces.
+- The **Lensmaker's Formula** relates object and image distances: $\frac{n_1}{s_o} + \frac{n_2}{s_i} = \frac{n_2 - n_1}{R}$ for a single surface.
+- **Real images** form where rays converge; **virtual images** form where rays appear to diverge from.
+- **Spherical aberration** limits imaging quality for rays far from the optical axis; it can be minimized using aspherical surfaces or conic sections.
+- **Stops and pupils**: The aperture stop limits the light cone; entrance and exit pupils are its images as seen from object and image space.
+- The **f-number** (f/D) characterizes the speed of a camera lens.
+- Geometrical optics breaks down when feature sizes approach the wavelength, leading to **diffraction** effects described by the Airy pattern.
 
 [^1]: See Chapter 1 of M. Born \& E. Wolf, "Principles of Optics", Cambridge University Press (2013)
 

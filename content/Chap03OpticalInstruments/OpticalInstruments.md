@@ -98,7 +98,7 @@ In relaxed condition, the object focal distance of the lens system is $f_o=16$
 &nbsp;mm as measured from the cornea while the image focal distance is equal to
 the length of the eye: $f_i=24$&nbsp;mm. These focal distances are different,
 because the refractive indices of the surrounding medium (air and vitreous
-humour) differ. The power of the healthy relaxed eye is (see the thin lens matrix equations in the Ray Matrix chapter):
+humour) differ. The power of the healthy relaxed eye is (see the thin lens matrix equations in the {ref}`Ray Matrix chapter <chapter:ray>`):
 
 ```{math}
 :label: eq:inst:eyeDioptricPower
@@ -155,7 +155,7 @@ are focused in front of the retina by the relaxed eye. The far point is thus not
 at infinity, but closer. This can be corrected by a negative lens. Suppose the
 far point is at 2 m. If the concave lens makes a virtual image of a distant
 object at distance 2 m in front of the cornea, the relaxed eye can see it
-clearly. The Lensmaker's Formula $-n_1/s_o + n_2/s_i = \mathcal{P}$ (see the Ray Matrix chapter), with $s_o=-\infty$ implies
+clearly. The Lensmaker's Formula $-n_1/s_o + n_2/s_i = \mathcal{P}$ (see the {ref}`Ray Matrix chapter <chapter:ray>`), with $s_o=-\infty$ implies
 then $f_i=s_i= -2$ m. Hence the required power of the lens is:
 
 ```{math}
@@ -166,7 +166,7 @@ then $f_i=s_i= -2$ m. Hence the required power of the lens is:
 ```
 
 The lens is best put in the front focal plane of the relaxed eye, i.e. at
-approximately 16 mm in front of the cornea. This follows from the Lensmaker's Formula (see the Ray Matrix chapter) and the fact that the distance of the retina to the
+approximately 16 mm in front of the cornea. This follows from the Lensmaker's Formula (see the {ref}`Ray Matrix chapter <chapter:ray>`) and the fact that the distance of the retina to the
 eye lens is roughly 22 mm while the refractive index of the vitrous humor is
 1.337. Hence, the focal distance in air of the relaxed eye
 of $22/1.337 \approx 16 \text{ mm}$. The reason for putting the lens at the
@@ -318,7 +318,7 @@ The magnifying power of the entire system is the product of the transverse linea
 \end{align*}
 ```
 
-According to the transverse magnification equation (see the Ray Matrix chapter): $M_{T}=- x_i/f_i^{obj}$,
+According to the transverse magnification equation (see the {ref}`Ray Matrix chapter <chapter:ray>`): $M_{T}=- x_i/f_i^{obj}$,
 where $x_i$ is the distance of the image made by the objective to its back focal
 plane with focal distance $f_i^{obj}$. We have $x_i=L$ which is the tube length,
 i.e. the distance between the second focal point of the objective and the first
@@ -343,7 +343,7 @@ It is defined by:
 \text{NA} = n_{im} \sin\theta_{max}
 \end{align*}
 ```
-with $n_{im}$ the refractive index of the immersing medium, usually air, but it could be water or oil, and $\theta_{max}$ the half-angle of the maximum cone of light accepted by the lens. The numerical aperture is the second number etched in the barrel of the objective. It ranges from 0.07 (low-power objectives) to 1.4 for high-power objectives. Note that it depends on the object distance. In Chapter 7 it will be explained that $\text{NA}$ is, for a given object distance, proportional to the resolving power which is the minimum transverse distance between two object points that can be resolved in the image.
+with $n_{im}$ the refractive index of the immersing medium, usually air, but it could be water or oil, and $\theta_{max}$ the half-angle of the maximum cone of light accepted by the lens. The numerical aperture is the second number etched in the barrel of the objective. It ranges from 0.07 (low-power objectives) to 1.4 for high-power objectives. Note that it depends on the object distance. In {ref}`chapter:diff` it will be explained that $\text{NA}$ is, for a given object distance, proportional to the resolving power which is the minimum transverse distance between two object points that can be resolved in the image.
 
 
 ## The Telescope
@@ -372,3 +372,14 @@ $\text{MP} = \alpha_a/\alpha_u$ where $\alpha_u$ is the half angle of the cone o
 :name: fig:inst:raysTelescope
 Ray angles for a telescope
 ```
+
+## Chapter Summary
+
+- **The camera** uses a lens to form a real, inverted image on film or a sensor; exposure is controlled by the f-number and shutter speed.
+- **The human eye** is a variable-focus optical system where accommodation changes the lens power to focus objects at different distances.
+- **Vision defects**: Myopia (nearsightedness) is corrected with negative lenses; hyperopia (farsightedness) with positive lenses.
+- **The magnifying glass** produces a magnified virtual image; angular magnification is $\text{MP} = d_0/f$ for image at infinity.
+- **The compound microscope** uses an objective to form an intermediate real image, then an eyepiece for further magnification: $\text{MP} = -L \cdot d_0/(f_{obj} \cdot f_e)$.
+- **Numerical aperture** (NA $= n \sin\theta_{max}$) determines light-gathering ability and resolution of microscopes.
+- **The telescope** magnifies distant objects; angular magnification is $\text{MP} = -f_{obj}/f_e$ for objects at infinity.
+- Both microscopes and telescopes achieve magnification through the combined action of objective and eyepiece lenses.
