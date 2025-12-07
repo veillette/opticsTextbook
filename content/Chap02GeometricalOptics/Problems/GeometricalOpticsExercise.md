@@ -129,7 +129,7 @@ Let there be an object at distance $2f_1$ in front of lens ${\cal L}_1$, as show
 
 **(a)** Derive the condition on the distance $d$ between the lenses such that the final image is real.
 
-**(b)** Let $f_1=3 \text{ cm}$ and $f_2=-2 \text{ cm}$.
+**(b)** Let $f_1=3~\text{cm}$ and $f_2=-2~\text{cm}$.
 What should be the distance $d$ such that the final image is real and the magnification is 2?
 
 **Problem 2.6** System matrix for imaging by a spherical surface.
@@ -214,7 +214,7 @@ between two planes.
 **(d)** Use the condition that you found in a) to derive the image focal
   distance of a system consisting of two thin lenses with image focal
   distances $f_{1i}$ and $f_{2i}$ and distance $d$. Verify that the result
-  agrees with the distance for the image focal plane {eq}`eq:ray:two-lens-image-focal`.
+  agrees with the distance for the image focal plane {eq}`eq:ray:twoLensImageFocal`.
 Hint: let $f_i$ be the distance of the image focal point of the two-lens system to the second lens. Write the transfer matrix between the lens immediately before the first lens and the plane through the image focal point.
 
 **(e)** Add a third thin lens with image focal distance $f_{3i}$ is in contact to the second lens. Derive the ray matrix of this system.
@@ -245,15 +245,15 @@ f_i = \frac{P_1+P_2 + \frac{d}{n} {\cal P}_1{\cal P}_2}{n \left( 1 - \frac{d}{n}
 f_o = \frac{P_1+P_2 + \frac{d}{n} {\cal P}_1{\cal P}_2}{n \left( 1 - \frac{d}{n}\right){\cal P}_1 }.
 ```
 
-**(c)** Verify that these formulae are equivalent to {eq}`eq:ray:two-lens-object-focal`,{eq}`eq:ray:two-lens-image-focal`.
+**(c)** Verify that these formulae are equivalent to {eq}`eq:ray:twoLensObjectFocal`,{eq}`eq:ray:twoLensImageFocal`.
 
 
 **Problem 2.10** Entrance pupil of a system of two lenses.
 Consider a system of two lenses $L_1$ and $L_2$ with distance $d$. The left lens $L_1$ has image focal distance $f_{1i}$ and $a_1$, $a_2$ are the radii of the lens apertures of $L_1$ and $L_2$.
 
-**(a)** Let lens $L_1$ be convergent with $f_{1i}=2 \text{ cm}$ and let the distance be $d=1 \text{cm}$. Furthermore, let $a_1=2 \text{cm}$ and $a_2= 1\text{cm} $. Determine by construction with a ruler the entrance pupil. Compute also its position and radius using the Lensmakers' formula and derive the tangent of the angle that the marginal ray makes with the optical axis for an object on the optical axis at 4 cm to the left of $L_1$.
+**(a)** Let lens $L_1$ be convergent with $f_{1i}=2~\text{cm}$ and let the distance be $d=1~\text{cm}$. Furthermore, let $a_1=2~\text{cm}$ and $a_2=1~\text{cm}$. Determine by construction with a ruler the entrance pupil. Compute also its position and radius using the Lensmakers' formula and derive the tangent of the angle that the marginal ray makes with the optical axis for an object on the optical axis at 4 cm to the left of $L_1$.
 
-**(b)** Same question when $L_1$ is a divergent lens with $f_{1i}=-6 \text{ cm}$, $d=3 \text{ cm}$ and $a_1=a_2=1 \text{cm}$.
+**(b)** Same question when $L_1$ is a divergent lens with $f_{1i}=-6~\text{cm}$, $d=3~\text{cm}$ and $a_1=a_2=1~\text{cm}$.
 
 
 **Problem 2.11** Diaphragm in a system of two thin lenses. The purpose of this problem is to determine the entrance and exit apertures of a system consisting of two thin lenses with a diaphragm using three methods: construction, applying the Lensmaker's formula and the matrix method.

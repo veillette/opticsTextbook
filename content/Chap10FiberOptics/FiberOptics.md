@@ -48,9 +48,9 @@ Now consider Snell's law for the core-cladding boundary in {numref}`fig:fiber:ti
 n_1 \sin\left(\theta_{\text{i}}\right) = n_2 \sin\left(\theta_{\text{cl}}\right).
 \end{align*}
 ```
-For angles $\theta_{\text{i}}$ in excess of the angle $\theta_{\text{i,c}}=\arcsin(n_2/n_1)$ refraction no longer occurs (the maximum value of a sine is 1) and light is totally reflected back into the core. Therefore we will refer to $\theta_{\text{i,c}}$ as the internal critical angle. This automatically implies that the fiber does not accept light from all directions, which leads to the definition of the (external) critical angle $\bar{\theta}_{\text{e,c}}$. This angle will be further discussed in {ref}`sec:fiber:figuresMerit`. For $\text{SiO}_2$, in which $n_2\approx 1.444$ at telecom wavelengths ($\lambda=1550 \text{nm}$), TIR occurs if $\theta_1>85.7^{\circ}$ if the core $n_1=1.448$. Because this $\theta_{\text{i}}$ is close to $90^{\circ}$, fibers with $n_1\approx n_2$ are also referred to as ''weakly guiding''.
+For angles $\theta_{\text{i}}$ in excess of the angle $\theta_{\text{i,c}}=\arcsin(n_2/n_1)$ refraction no longer occurs (the maximum value of a sine is 1) and light is totally reflected back into the core. Therefore we will refer to $\theta_{\text{i,c}}$ as the internal critical angle. This automatically implies that the fiber does not accept light from all directions, which leads to the definition of the (external) critical angle $\bar{\theta}_{\text{e,c}}$. This angle will be further discussed in {ref}`sec:fiber:figuresMerit`. For $\text{SiO}_2$, in which $n_2\approx 1.444$ at telecom wavelengths ($\lambda=1550~\text{nm}$), TIR occurs if $\theta_1>85.7^{\circ}$ if the core $n_1=1.448$. Because this $\theta_{\text{i}}$ is close to $90^{\circ}$, fibers with $n_1\approx n_2$ are also referred to as ''weakly guiding''.
 
-Since the angle of reflection equals the angle of incidence upon reflection, TIR occurs at every core-cladding interface and the light remains confined to the core (strictly speaking, this argument only holds for straight fibers. The influence of bends in fibers is discussed in {ref}`sec:fiber:loss`). Because optical losses in $\text{SiO}_2$ are small (in the order of $0.1\text{dB/km}$,[^1] see {ref}`sec:fiber:loss`), this implies fibers can easily carry optical signals over distances in the order of several kilometers without considerable loss.
+Since the angle of reflection equals the angle of incidence upon reflection, TIR occurs at every core-cladding interface and the light remains confined to the core (strictly speaking, this argument only holds for straight fibers. The influence of bends in fibers is discussed in {ref}`sec:fiber:loss`). Because optical losses in $\text{SiO}_2$ are small (in the order of $0.1~\text{dB/km}$,[^1] see {ref}`sec:fiber:loss`), this implies fibers can easily carry optical signals over distances in the order of several kilometers without considerable loss.
 
 (sec:fiber:modes)=
 ## Fiber modes
@@ -259,7 +259,7 @@ In reality, light pulses in multimode waveguides contain many modes and are not 
 \frac{\Delta\tau^{\text{mod}}}{L}=\frac{n_1-n_2}{c}\left(1-\frac{\pi}{V}\right).
 \end{align*}
 ```
-Hence, for a step index fiber with $n_1=1.448$, $n_2=1.444$ and a V-number of $5$, $\Delta\tau/L=5\text{ns/km}$.
+Hence, for a step index fiber with $n_1=1.448$, $n_2=1.444$ and a V-number of $5$, $\Delta\tau/L=5~\text{ns/km}$.
 
 Up to this point we have implicitly assumed that the light transmitted through optical fibers is monochromatic. This is not the case: in telecommunication information is sent through fibers by means of short pulses of light. However, the shorter the pulse, the broader its wavelength spectrum, as schematically depicted in {numref}`figFiberDispersion (b). Apart from this effect, any light source has an intrinsic width of their emitted wavelength spectrum.
 
@@ -304,7 +304,7 @@ However, in practice often the dispersion is reported as
 	D^{\text{mat}}=\frac{\Delta\tau^{\text{mat}}}{L\Delta\lambda}=\frac{\lambda_0}{c}\frac{\mathrm{d}^2n}{\mathrm{d}\lambda^2}
 \end{align*}
 ```
-in units of $\text{ps}/(\text{km} \cdot \text{nm})$. That is, the increase in pulse width (in $\text{ps}$) per $\text{km}$ of fiber with the source's spectral width in $\text{nm}$. Typical values of this parameter are $10$ to $20\text{ps}/(\text{km}\cdot \text{nm})$.
+in units of $\text{ps}/(\text{km} \cdot \text{nm})$. That is, the increase in pulse width (in $\text{ps}$) per $\text{km}$ of fiber with the source's spectral width in $\text{nm}$. Typical values of this parameter are $10$ to $20~\text{ps}/(\text{km}\cdot \text{nm})$.
 
 A second effect of the spectral width of light pulses is that they disperse even
 if light propagates in a single mode. As observed from {eq}`eq:fiber:selfConsistencyCondition`, the angle $\bar{\theta}_m$ not only
@@ -321,11 +321,11 @@ For step-index optical fibers, waveguide dispersion can be calculated as
 	D^{\text{wav}}=-\frac{n_1-n_2}{c\lambda_0}.
 \end{align*}
 ```
-It should be noted that $D^{\text{wav}}<0$ as $n_1>n_2$ for TIR, see {ref}`sec:fiber:tir`. Typical values of this parameter are $-5$ to $-10\text{ps}/(\text{km}\cdot \text{nm})$.
+It should be noted that $D^{\text{wav}}<0$ as $n_1>n_2$ for TIR, see {ref}`sec:fiber:tir`. Typical values of this parameter are $-5$ to $-10~\text{ps}/(\text{km}\cdot \text{nm})$.
 
 ```{figure} Images/10_10_dispersion_fiber.png
 :name: fig:fiber:dispersionSiO2
-Material and waveguide dispersion for a SiO$_2$ SMF. Taking the sum of both effects allows to create dispersionless fibers for a wavelength of $1310\text{nm}$
+Material and waveguide dispersion for a SiO$_2$ SMF. Taking the sum of both effects allows to create dispersionless fibers for a wavelength of $1310~\text{nm}$
 ```
 
 Dispersion effects may cancel each other or engineered, such that dispersionless
@@ -334,7 +334,7 @@ dispersion play a role, the total dispersion is given
 as $D=D^{\text{mat}}+D^{\text{wav}}$. Notice from {eq}`eq:fiber:materialDispersion` and {eq}`eq:fiber:waveguideDispersion`
 that $D^{\text{mat}}$ and $D^{\text{wav}}$ have an opposite sign and if we plot
 both expressions using SiO$_2$ as fiber material, see {numref}`fig:fiber:dispersionSiO2`, it is observed that these dispersion effects cancel
-at $\lambda_0=1310\text{nm}$. This makes $1310\text{nm}$ a popular wavelength
+at $\lambda_0=1310~\text{nm}$. This makes $1310~\text{nm}$ a popular wavelength
 for building optical fiber networks.
 
 Dispersionless fibers can also be engineered, e.g. by using a technique similar to the fiber Bragg grating, to be discussed in {ref}`sec:fiber:applications`. However, it should be noted that these cancelation effects, whether intrinsic or engineered, only yield dispersionless fibers at a single wavelength. Also, as we will see below, dispersionless fibers come at a cost of increased optical transmission loss.
@@ -361,7 +361,7 @@ Rayleigh scattering occurs as a result of SiO$_2$ crystal imperfections in the f
 \alpha_{\text{R}}=\alpha_0^{\text{R}}\left(\frac{\lambda_0^{\text{R}}}{\lambda}\right)^4,
 \end{align*}
 ```
-where $\alpha_0^{\text{R}}$ is the loss factor experimentally measured at a wavelength $\lambda_0^{\text{R}}$. For SiO$_2$, $\alpha_0^{\text{R}}$ is approximately $0.15\text{dB/km}$ at $\lambda_0^{\text{R}}=1550\text{nm}$. This makes Rayleigh scattering the dominant loss mechanism in SiO$_2$ for lower wavelengths.
+where $\alpha_0^{\text{R}}$ is the loss factor experimentally measured at a wavelength $\lambda_0^{\text{R}}$. For SiO$_2$, $\alpha_0^{\text{R}}$ is approximately $0.15~\text{dB/km}$ at $\lambda_0^{\text{R}}=1550~\text{nm}$. This makes Rayleigh scattering the dominant loss mechanism in SiO$_2$ for lower wavelengths.
 
 At larger wavelengths infrared absorption becomes the dominant loss mechanism in SiO$_2$ fibers. Infrared light may excite vibrational states of SiO$_2$, which excitation energy is subsequently dissipated as heat in the fiber. The loss coefficient for infrared absorption is given by
 ```{math}
@@ -371,9 +371,9 @@ At larger wavelengths infrared absorption becomes the dominant loss mechanism in
 ```
 For SiO$_2$ fibers $\alpha_0^{\text{IR}}$ is in the order of $10^{12}$ dB/km and $\lambda_0^{\text{IR}}$ equals approximately $50\mu \text{m}$.
 
-Additionally, the three attenuation peaks at approximately $975$, $1225$ and $1400\text{nm}$ in {numref}`fig:fiber:loss` are due to absorption. These absorption bands are caused by the presence of hydroxyl (OH$^{-}$)-groups stemming from water vapour dissolved in the SiO$_2$ during fabrication. Apart from these bands, other bands may be present due to other contaminants such as Copper (Cu), Iron (Fe) and Nickel (Ni) (not depicted in {numref}`fig:fiber:loss`).
+Additionally, the three attenuation peaks at approximately $975$, $1225$ and $1400~\text{nm}$ in {numref}`fig:fiber:loss` are due to absorption. These absorption bands are caused by the presence of hydroxyl (OH$^{-}$)-groups stemming from water vapour dissolved in the SiO$_2$ during fabrication. Apart from these bands, other bands may be present due to other contaminants such as Copper (Cu), Iron (Fe) and Nickel (Ni) (not depicted in {numref}`fig:fiber:loss`).
 
-As can be observed in {numref}`fig:fiber:loss`, fiber losses in SiO$_2$-fibers are minimized for a wavelength of $1550\text{nm}$, which is therefore the wavelength of choice in applications that require minimization of loss, such as telecom networks.
+As can be observed in {numref}`fig:fiber:loss`, fiber losses in SiO$_2$-fibers are minimized for a wavelength of $1550~\text{nm}$, which is therefore the wavelength of choice in applications that require minimization of loss, such as telecom networks.
 
 Beside the intrinsic losses of Rayleigh scattering and absorption, losses also occur as a result of extrinsic factors, such as (excessive) bending and coupling.
 
@@ -423,7 +423,7 @@ Another fiber type is the so-called holey fiber, see {numref}`fig:fiber:holeyPbf
 
 ```{figure} Images/10_15_photonic_crystal_fiber_from_nrl.jpg
 :name: fig:fiber:holeyPbf
-SEM micrographs of US Naval Research Laboratory-produced photonic-crystal fiber. (left) The diameter of the solid core at the center of the fiber is $\sim 5\mu \text{m}$, while (right) the diameter of the holes is $4\sim \mu\text{m}$. (Image courtesy of US Naval Research Laboratory / CC BY-SA)
+SEM micrographs of US Naval Research Laboratory-produced photonic-crystal fiber. (left) The diameter of the solid core at the center of the fiber is $\sim 5~\mu\text{m}$, while (right) the diameter of the holes is $\sim 4~\mu\text{m}$. (Image courtesy of US Naval Research Laboratory / CC BY-SA)
 ```
 
 Related to the holey fiber, the photonic bandgap fiber also contain air holes, see {numref}`fig:fiber:holeyPbf`. However, in PBFs these holes are arranged in a fashion that a bandgap is created in the cladding. Such a bandgap does not allow light of certain wavelength(s) to transmit through the cladding, thus confining light of this wavelength to the core. This is fundamentally different from fibers based on changes in refractive index. Where the latter only has a cut-off wavelength above which no propagation occurs, PBFs only confine light of a narrow wavelength band with a typical width of a few tens of nanometres.
@@ -432,7 +432,7 @@ Apart from wavelength, light also carries the property of polarization. In the f
 
 In such applications, the light's polarization needs to be preserved throughout the fiber's length for which polarization maintaining fibers have been developed. In such fibers crosstalk between the different polarization modes is prevented and light exiting the fiber has the same polarization as that entering the fiber. PMFs are rarely used for long-distance communication, since optical losses are generally higher than in other fiber types. PMFs are more expensive as well.
 
-The final fiber type to be discussed is the plastic fiber. Plastic fibers are generally made with a PMMA (polymethyl methacrylate, $n_1=1.49$) core, whereas the cladding is fluorinated. This lowers the refractive index to approximately $n_2=1.40$, implying plastic fibers have a large NA. Apart from such step-index plastic fibers, GRIN plastic fibers are available. Plastic fibers are low-cost and more resilient to bending and handling than SiO$_2$ fibers. This is due to plastic fibers having a core diameter of typically $1\text{mm}$, instead of the fragile few-micrometer core diameter of SiO$_2$ fibers. Using plastic instead of SiO$_2$ comes, however, at a cost of higher losses in the order of $1\text{dB/m}$. Due to these properties, plastic fibers can be found in, e.g., home, company and car data networks.
+The final fiber type to be discussed is the plastic fiber. Plastic fibers are generally made with a PMMA (polymethyl methacrylate, $n_1=1.49$) core, whereas the cladding is fluorinated. This lowers the refractive index to approximately $n_2=1.40$, implying plastic fibers have a large NA. Apart from such step-index plastic fibers, GRIN plastic fibers are available. Plastic fibers are low-cost and more resilient to bending and handling than SiO$_2$ fibers. This is due to plastic fibers having a core diameter of typically $1~\text{mm}$, instead of the fragile few-micrometer core diameter of SiO$_2$ fibers. Using plastic instead of SiO$_2$ comes, however, at a cost of higher losses in the order of $1~\text{dB/m}$. Due to these properties, plastic fibers can be found in, e.g., home, company and car data networks.
 
 To distinguish fibers from each other, the fiber jacket is colored according to standard color codes. These codes can be found in, e.g., reference guide of the Fiber Optic Association (FOA). To give a few examples: MMF jackets are colored orange (most often), bright green or aqua, while SMF jackets are yellow (always) and PMF jackets are blue (always). In fiber bundles containing multiple fibers (so-called Multiple Position Optical (MPO) fibers), the fibers are color coded according to number: the first fiber in the bundle is blue, the second orange, the third green, etc.. Using such a standard color coding makes fibers discernible and recognizable, which prevents errors during installation.
 
@@ -450,17 +450,17 @@ Gallery of optical fiber connectors. For detailed comparison, see [fiber connect
 
 There is many types of connector. We report on the main ones here.
 
-**Lucent connector (LC)** -- The lucent connector, also referred to as the little connector, is the connector type most used today. In the tip of the connector, the fiber is protected by a so-called ferule ({numref}`fig:fiber:pc`), which for LCs is only $1.25\text{mm}$ in diameter. The connector snaps into place and can be detached using a push-pull motion. This makes installation an easy procedure. Due to its small footprint, it is ideal for high-density fiber applications such as in data centers.
+**Lucent connector (LC)** -- The lucent connector, also referred to as the little connector, is the connector type most used today. In the tip of the connector, the fiber is protected by a so-called ferule ({numref}`fig:fiber:pc`), which for LCs is only $1.25~\text{mm}$ in diameter. The connector snaps into place and can be detached using a push-pull motion. This makes installation an easy procedure. Due to its small footprint, it is ideal for high-density fiber applications such as in data centers.
 
-**Standard connector (SC)** -- The standard, or ''square'', connector was an early attempt to standardize fiber connectors. With a $2.5\text{mm}$-diameter ferule, it is larger than the previous LC connector, but still well-suited for use in data centers and passive networks due to its excellent performance, especially in the area of polarization maintaining applications. The SC connector is attached and detached in a similar way as the LC connector, making its installation easy.
+**Standard connector (SC)** -- The standard, or ''square'', connector was an early attempt to standardize fiber connectors. With a $2.5~\text{mm}$-diameter ferule, it is larger than the previous LC connector, but still well-suited for use in data centers and passive networks due to its excellent performance, especially in the area of polarization maintaining applications. The SC connector is attached and detached in a similar way as the LC connector, making its installation easy.
 
-**Straight tip (ST) connector** -- The straight tip connector has a $2.5\text{mm}$-diameter spring-loaded ferule. This implies that the ferule is pushed onto the device it is connected to thereby improving the transmission. Typically used for multimode fibers, it has a bayonet mount, which secures itself after turning it by a half twist.
+**Straight tip (ST) connector** -- The straight tip connector has a $2.5~\text{mm}$-diameter spring-loaded ferule. This implies that the ferule is pushed onto the device it is connected to thereby improving the transmission. Typically used for multimode fibers, it has a bayonet mount, which secures itself after turning it by a half twist.
 
-**Ferrule core (FC) connector** -- The ferule core connector it typically used for SMF and high precision applications, such as optical time domain reflectometry (OTDR). Its springloaded ferule is $2.5\text{mm}$ in diameter. It has an alignment key ensuring the connector is always inserted to the device in the same orientation. Secondly, the connector is secured using a threaded collet. Although this connector is thus more complex in installation, as well as in manufacturing, the repeatable accuracy with which it can be installed gives the precision in afore mentioned applications.
+**Ferrule core (FC) connector** -- The ferule core connector it typically used for SMF and high precision applications, such as optical time domain reflectometry (OTDR). Its springloaded ferule is $2.5~\text{mm}$ in diameter. It has an alignment key ensuring the connector is always inserted to the device in the same orientation. Secondly, the connector is secured using a threaded collet. Although this connector is thus more complex in installation, as well as in manufacturing, the repeatable accuracy with which it can be installed gives the precision in afore mentioned applications.
 
 **Multi-position optical (MPO) connector** -- The multi-position optical connector, also known under its trade name Multi-fiber Termination Push-on (MTP) connector, is designed for connecting MPO fibers containing $12$ or $24$ optical fibers in one bundle. Such fibers are often used for high-bandwidth optical parallel connections in, e.g., data centers and servers.
 
-**Physical contact (PC)** -- All of the above connectors are available in three forms of physical contact of the ferule, see {numref}`fig:fiber:pc`. PC indicates that the connectors are designed such that fibers are brought into physical contact upon coupling a connector to a photonic device or another connector. As a result of polishing, the air gap in a fiber connection is diminished, thus improving the transmission of light through the connection (and reducing the back-reflection). Ordinary PC connectors have a back reflection below $-40\text{dB}$. As variations, ultra-physical contact (UPC, connector colored blue) and angled physical contact (APC, colored green) connectors are available. UPC connectors have a finer polish which decreases back reflection to below $-50\text{dB}$. APC are polished under an angle of $8^{\circ}$, which changes the direction of the reflected light. As such, back-reflection of less than $-60\text{dB}$ is achieved. Improving physical contact comes with increased cost: PC connectors are cheapest, and UPC connectors most expensive of the three. Importantly, it should be noted that PC and UPC connectors are compatible, whereas APC connectors are incompatible with both. Connecting PC and APC fibers leads to a large air gap between the fibers, see {numref}`fig:fiber:couplingLoss`-(c), and thus to large losses.
+**Physical contact (PC)** -- All of the above connectors are available in three forms of physical contact of the ferule, see {numref}`fig:fiber:pc`. PC indicates that the connectors are designed such that fibers are brought into physical contact upon coupling a connector to a photonic device or another connector. As a result of polishing, the air gap in a fiber connection is diminished, thus improving the transmission of light through the connection (and reducing the back-reflection). Ordinary PC connectors have a back reflection below $-40~\text{dB}$. As variations, ultra-physical contact (UPC, connector colored blue) and angled physical contact (APC, colored green) connectors are available. UPC connectors have a finer polish which decreases back reflection to below $-50~\text{dB}$. APC are polished under an angle of $8^{\circ}$, which changes the direction of the reflected light. As such, back-reflection of less than $-60~\text{dB}$ is achieved. Improving physical contact comes with increased cost: PC connectors are cheapest, and UPC connectors most expensive of the three. Importantly, it should be noted that PC and UPC connectors are compatible, whereas APC connectors are incompatible with both. Connecting PC and APC fibers leads to a large air gap between the fibers, see {numref}`fig:fiber:couplingLoss`-(c), and thus to large losses.
 
 ```{figure} Images/10_17_contact.png
 :name: fig:fiber:pc
@@ -481,8 +481,8 @@ In order to couple light into or out of fiber setups from free space, collimator
 ```
 
 where $f_{\text{coll}}$ is the focal length of the collimating
-lens. $w_{\text{coll}}$ is in the order of $1\text{mm}$ for a typical fiber NA
-of $0.1$ and an $f_{\text{coll}}=1\text{cm}$. On the other hand, it should be
+lens. $w_{\text{coll}}$ is in the order of $1~\text{mm}$ for a typical fiber NA
+of $0.1$ and an $f_{\text{coll}}=1~\text{cm}$. On the other hand, it should be
 realized that upon coupling light into a fiber from a collimated beam, the (
 incoming) beam width should be smaller the value resulting from {eq}`eq:fiber:collimatorBeamWidth`. If the beam is broader, some light will not
 couple into the fiber and is therefore lost. This results
@@ -529,7 +529,7 @@ compensate for fiber losses in long-distance fiber connections.
 
 Optical attenuation can be achieved by the methods that have so far been considered as a negative influence to light transmission: scattering, absorption and air gaps, see {ref}`sec:fiber:loss`. Attenuators can either be fixed or variable in their attenuation. The latter can be tuned continuously or step-wise by hand or electronically to the desired attenuation level. This allows for testing a network under variable attenuation level without making hardware changes. It should be noted that attenuators tend to have a high reflection. If these reflections are unwanted, attenuators can be applied in combination with isolators, such that the reflected light power does not back-propagate through the network.
 
-For optical amplification, an intense pump signal is coupled into an amplifier, along with the signal-to-be-amplified. The pump can be provided by a laser, or by an electronic signal. Due to stimulated emission in the amplifier, a little of the energy of the pump signal is transferred to the signal-to-be-amplified, thus increasing (amplifying) its intensity. The most well-known fiber amplifier is the Erbium-doped fiber amplifier (EDFA) that works for signals with wavelengths between approximately $1480$ and $1600\text{nm}$, enabling transatlantic optical communication at telecom wavelengths ($\lambda_0=1550\text{nm}$). This fiber is doped with Er-atoms causing stimulated emission. However, fiber amplifiers based on other rare-earth dopants are also available, in particular neodymium, ytterbium, praseodymium, or thulium.
+For optical amplification, an intense pump signal is coupled into an amplifier, along with the signal-to-be-amplified. The pump can be provided by a laser, or by an electronic signal. Due to stimulated emission in the amplifier, a little of the energy of the pump signal is transferred to the signal-to-be-amplified, thus increasing (amplifying) its intensity. The most well-known fiber amplifier is the Erbium-doped fiber amplifier (EDFA) that works for signals with wavelengths between approximately $1480$ and $1600~\text{nm}$, enabling transatlantic optical communication at telecom wavelengths ($\lambda_0=1550~\text{nm}$). This fiber is doped with Er-atoms causing stimulated emission. However, fiber amplifiers based on other rare-earth dopants are also available, in particular neodymium, ytterbium, praseodymium, or thulium.
 
 With polarization controllers the polarization of the light within an optical fiber can be influenced. These controllers consist of two or three ''flaps'' around which the fiber is wound, see {numref}`fig:fiber:polarizationControler`. By adjusting the position of these flaps, either manually or electronically, the polarization state of the propagating light is controlled as a result of stresses applied to the fiber. As such each input polarization state can be changed to any output polarization state.
 

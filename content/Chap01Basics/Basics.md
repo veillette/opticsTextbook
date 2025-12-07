@@ -141,10 +141,10 @@ This universal speed is one of the defining characteristics of electromagnetic r
 To illustrate these concepts, consider an electron with kinetic energy $K = 2.5$ MeV. We can calculate its relativistic properties and compare them with a photon of the same total energy.
 
 For the electron, the total energy is $E = K + mc^2 = 2.5 + 0.511 = 3.011$ MeV. Using equation {eq}`eq:basics:relativisticMomentum`, the momentum is:
-$$p = \frac{\sqrt{(3.011)^2 - (0.511)^2}}{c} = \frac{2.97}{c} \text{ MeV}$$
+$$p = \frac{\sqrt{(3.011)^2 - (0.511)^2}}{c} = \frac{2.97}{c}~\text{MeV}$$
 
 The de Broglie wavelength from equation {eq}`eq:basics:deBroglieWavelength` is:
-$$\lambda = \frac{hc}{pc} = \frac{1.24 \times 10^{-6}}{2.97} = 4.18 \times 10^{-7} \text{ m}$$
+$$\lambda = \frac{hc}{pc} = \frac{1.24 \times 10^{-6}}{2.97} = 4.18 \times 10^{-7}~\text{m}$$
 
 The electron's speed from equation {eq}`eq:basics:relativisticVelocity` is:
 $$v = c\sqrt{1 - \frac{(0.511)^2}{(3.011)^2}} = 0.987c$$

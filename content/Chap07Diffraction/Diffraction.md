@@ -475,7 +475,7 @@ N_F = \frac{D^2}{\lambda z}, \;\;\; \mathbf{Fresnel number}.
 ```
 
 When $N_F < 0.1$ the Fraunhofer approximation is accurate, while for $N_F>0.1$ it is better to use the Fresnel approximation (see {numref}`fig:diff:fresnelFraunhoferSlit`).
-Suppose that $D= 1\text{ mm}$ and the wavelength is that of green light: $\lambda=550 \text{ nm}$, then Fraunhofer's approximation is accurate if $z> 10 \text{ m}$.
+Suppose that $D= 1~\text{mm}$ and the wavelength is that of green light: $\lambda=550~\text{nm}$, then Fraunhofer's approximation is accurate if $z> 10~\text{m}$.
 
 
 5. The points of observation where the Fraunhofer approximation can be used must in any case satisfy:
