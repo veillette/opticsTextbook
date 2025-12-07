@@ -10,6 +10,7 @@ ENV/
 # Distribution / packaging
 dist/
 build/
+!scripts/build/
 exports/
 **/_build
 *.egg-info/
