@@ -30,7 +30,7 @@ npm run lint:fix
 
 ### Validate Everything Before Pushing
 ```bash
-npm run validate-enhanced
+npm run validate
 # Checks references, citations, cross-refs
 # Shows detailed report of any issues
 ```
@@ -44,12 +44,12 @@ npm run validate-enhanced
 - Check if build time is increasing (report if >2 minutes)
 
 ### Monthly
-- Run full validation: `npm run validate-enhanced`
+- Run full validation: `npm run validate`
 - Check for unreferenced images: `npm run find-unreferenced-dry`
 - Auto-fix linting: `npm run lint:fix`
 
 ### Before Major Changes
-1. Run full validation: `npm run validate-enhanced`
+1. Run full validation: `npm run validate`
 2. Make changes
 3. Test with: `npm run build`
 4. Push (GitHub Actions will verify again)
@@ -60,15 +60,15 @@ npm run validate-enhanced
 
 ### Git Pre-Commit Hook (Automatic)
 When you try to commit, Husky automatically runs:
-1. **MyST linter** - Shows warnings but allows commit
-2. **Unit tests** - Must pass or commit is blocked
+1. **Markdown linter** - Shows warnings but allows commit
+2. **JavaScript unit tests** - Must pass or commit is blocked
 
 **Example:**
 ```bash
 git add .
 git commit -m "Updated chapter 5"
-# ✓ Linter runs (shows issues)
-# ✓ Tests run (must all pass)
+# ✓ Markdown linter runs (shows issues)
+# ✓ Unit tests run (must all pass)
 # ✓ Commit succeeds if tests pass
 ```
 
@@ -85,7 +85,8 @@ git commit --no-verify
 
 ### CI/CD Validation (Automatic on Push)
 GitHub Actions automatically runs when you push:
-- MyST markdown linter
+- MyST markdown linter (custom validation)
+- Markdown linter (general formatting)
 - Reference validation
 - JavaScript unit tests
 - HTML build (must succeed)
@@ -129,7 +130,7 @@ touch content/Chap12MyTopic/Problems/MyTopicExercise.md
 
 **Step 5: Validate and test**
 ```bash
-npm run validate-enhanced
+npm run validate
 npm run build
 npm run lint:fix  # Auto-fix any issues
 ```
@@ -179,7 +180,7 @@ npm run insert-figure -- \
 Caption describing the figure.
 ```
 ```
-3. Validate: `npm run validate-enhanced`
+3. Validate: `npm run validate`
 
 ---
 
@@ -187,7 +188,7 @@ Caption describing the figure.
 
 **Find broken references:**
 ```bash
-npm run validate-enhanced
+npm run validate
 # Shows which references are broken, where they are, and why
 ```
 
@@ -228,7 +229,7 @@ npm run clean-unreferenced
 **Step 4: Verify build still works**
 ```bash
 npm run build
-npm run validate-enhanced
+npm run validate
 ```
 
 ---
@@ -315,7 +316,7 @@ npm run build
 **Solution:** Check JSON syntax (missing commas, quotes, etc.)
 ```bash
 # Validate JSON syntax
-npm run validate-enhanced
+npm run validate
 ```
 
 ### Linting shows 433 issues and I panic
@@ -334,7 +335,7 @@ npm run build
 **Cause:** Cross-reference or figure reference doesn't exist
 **Solution:**
 ```bash
-npm run validate-enhanced
+npm run validate
 # Shows exactly which references are broken and where
 ```
 
@@ -367,7 +368,7 @@ npm test
 5. Fix locally and push again
 
 **Common issues:**
-- Missing image files (fix with `npm run validate-enhanced`)
+- Missing image files (fix with `npm run validate`)
 - Broken references (fix with `npm run lint:fix`)
 - Test failures (run `npm test` locally)
 
@@ -400,7 +401,7 @@ npm install
 
 # Verify setup
 npm run build
-npm run validate-enhanced
+npm run validate
 npm test
 ```
 
@@ -452,8 +453,8 @@ opticsTextbook/
 | `npm run build` | Build HTML (optimizes images first) |
 | `npm run lint` | Check for linting issues |
 | `npm run lint:fix` | Auto-fix linting issues |
-| `npm run validate-enhanced` | Check references, citations, cross-refs |
-| `npm run validate-enhanced-quiet` | Same, but concise output |
+| `npm run validate` | Check references, citations, cross-refs |
+| `npm run validate-quiet` | Same, but concise output |
 | `npm run find-unreferenced:dry` | Find unused images (preview) |
 | `npm run find-unreferenced` | Find unused images (full report) |
 | `npm run optimize-images` | Compress large images |
@@ -479,7 +480,7 @@ opticsTextbook/
 ### Before Pushing
 1. `npm run build` - Verify HTML builds
 2. `npm run lint:fix` - Fix linting
-3. `npm run validate-enhanced` - Verify all references
+3. `npm run validate` - Verify all references
 4. `git commit` - Local tests must pass (Husky hook)
 5. `git push` - GitHub Actions verifies again
 

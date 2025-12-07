@@ -58,6 +58,8 @@
     "lint": "node scripts/validation/lint-markdown.js",
     "lint:fix": "node scripts/validation/lint-markdown.js --fix",
     "lint:quiet": "node scripts/validation/lint-markdown.js --quiet",
+    "lint:markdown": "markdownlint-cli2 \"content/**/*.md\" \"*.md\"",
+    "lint:markdown:fix": "markdownlint-cli2 --fix \"content/**/*.md\" \"*.md\"",
     "fix:directives": "node scripts/transform/fix-directive-syntax.js",
     "fix:directives:dry": "node scripts/transform/fix-directive-syntax.js --dry-run",
     "fix:directives:fences": "node scripts/transform/fix-directive-syntax.js --fences-only",
@@ -79,6 +81,7 @@
   "devDependencies": {
     "@types/jest": "^30.0.0",
     "husky": "^9.1.7",
-    "jest": "^30.2.0"
+    "jest": "^30.2.0",
+    "markdownlint-cli2": "^0.16.0"
   }
 }
