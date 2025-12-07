@@ -7,7 +7,7 @@ const fs = require('fs');
 const path = require('path');
 const yaml = require('js-yaml');
 
-const ROOT_DIR = path.join(__dirname, '..');
+const ROOT_DIR = path.join(__dirname, '../..');
 const TEMPLATE_PATH = path.join(ROOT_DIR, 'pwa', 'manifest.json.template');
 const OUTPUT_PATH = path.join(ROOT_DIR, 'pwa', 'manifest.json');
 

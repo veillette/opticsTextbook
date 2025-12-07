@@ -11,7 +11,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const ROOT_DIR = path.join(__dirname, '..');
+const ROOT_DIR = path.join(__dirname, '../..');
 const BUILD_DIR = path.join(ROOT_DIR, '_build', 'html');
 const CUSTOM_SCRIPTS_SRC = path.join(ROOT_DIR, 'js', 'custom-scripts.js');
 const CUSTOM_SCRIPTS_DEST = 'custom-scripts.js';

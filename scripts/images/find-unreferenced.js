@@ -25,8 +25,8 @@
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
-const { runMystCommand } = require('./shared_utils');
-const { ReportGenerator } = require('./report_utils');
+const { runMystCommand } = require('../shared-utils');
+const { ReportGenerator } = require('../report-utils');
 
 /**
  * Use MyST build to identify referenced images.

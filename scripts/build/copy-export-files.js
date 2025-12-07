@@ -7,7 +7,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const ROOT_DIR = path.join(__dirname, '..');
+const ROOT_DIR = path.join(__dirname, '../..');
 const EXPORTS_DIR = path.join(ROOT_DIR, 'exports');
 const BUILD_DIR = path.join(ROOT_DIR, '_build', 'html');
 const BUILD_EXPORTS_DIR = path.join(BUILD_DIR, 'exports');

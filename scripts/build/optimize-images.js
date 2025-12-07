@@ -4,7 +4,7 @@ const fs = require('fs').promises;
 const path = require('path');
 
 // Load configuration
-const CONFIG_PATH = path.join(__dirname, 'config.json');
+const CONFIG_PATH = path.join(__dirname, '..', 'config.json');
 let config;
 
 async function loadConfig() {

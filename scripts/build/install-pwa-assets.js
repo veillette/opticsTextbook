@@ -8,7 +8,7 @@ const fs = require('fs');
 const path = require('path');
 const yaml = require('js-yaml');
 
-const ROOT_DIR = path.join(__dirname, '..');
+const ROOT_DIR = path.join(__dirname, '../..');
 const BUILD_DIR = path.join(ROOT_DIR, '_build', 'html');
 const ICONS_DIR = path.join(ROOT_DIR, 'icons');
 const BUILD_ICONS_DIR = path.join(BUILD_DIR, 'icons');

@@ -40,8 +40,8 @@
 
 const fs = require('fs');
 const path = require('path');
-const { ensureDirectory } = require('./shared_utils');
-const { ReportGenerator, MarkdownReportBuilder } = require('./report_utils');
+const { ensureDirectory } = require('../shared-utils');
+const { ReportGenerator, MarkdownReportBuilder } = require('../report-utils');
 
 class MystLinter {
   constructor(fixMode = false, contentDir = 'content') {

@@ -25,8 +25,8 @@
 const fs = require('fs');
 const path = require('path');
 const readline = require('readline');
-const { ReportGenerator, getTimestamp } = require('./report_utils');
-const { formatFileSize } = require('./shared_utils');
+const { ReportGenerator, getTimestamp } = require('../report-utils');
+const { formatFileSize } = require('../shared-utils');
 
 /**
  * Read a list of files from a text file, ignoring comments.

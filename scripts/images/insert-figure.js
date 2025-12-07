@@ -32,7 +32,7 @@
 const fs = require('fs');
 const path = require('path');
 const readline = require('readline');
-const { getChapters, toSnakeCase } = require('./shared_utils');
+const { getChapters, toSnakeCase } = require('../shared-utils');
 
 /**
  * Get all existing figures in a chapter sorted by position number.

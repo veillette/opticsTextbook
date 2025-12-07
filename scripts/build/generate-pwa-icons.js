@@ -10,7 +10,7 @@ const path = require('path');
 const yaml = require('js-yaml');
 
 const ICON_SIZES = [72, 96, 128, 144, 152, 192, 384, 512];
-const ROOT_DIR = path.join(__dirname, '..');
+const ROOT_DIR = path.join(__dirname, '../..');
 const ICONS_DIR = path.join(ROOT_DIR, 'icons');
 
 /**
