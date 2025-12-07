@@ -884,7 +884,7 @@ Similarly,
 \end{align*}
 ```
 ```{figure} Images/06_08_coherence_propagation.png
-:name: fig:coh:coherencePropagation
+:name: fig:coh:coherencePropagationGeometry
 For $z$ very large, $S_1P_1$ and $S_1P_2$ are almost parallel and $|S_1P_2|-|S_1P_1|\approx |QP_2|= |x_1-x_2| \alpha/2$.
 ```
 
@@ -1283,7 +1283,7 @@ The ratio
 
 ```{math}
 :label: eq:coh:resolutionRatio
-\frac{(\Delta \lambda_0)_{free}}{(\Delta \lambda_0) = \frac{\pi}{2} \sqrt{F}},
+\frac{(\Delta \lambda_0)_{free}}{\Delta \lambda_0} = \frac{\pi}{2} \sqrt{F},
 ```
 
 should therefore be large.
