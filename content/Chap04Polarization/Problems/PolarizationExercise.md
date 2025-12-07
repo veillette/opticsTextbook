@@ -53,8 +53,8 @@ $$
 1\end{pmatrix},
 \quad
 \mathcal{P}_{\pi/4}\begin{pmatrix}1\\
-\end{pmatrix}=\begin{pmatrix}0\\
-\end{pmatrix}.
+-1\end{pmatrix}=\begin{pmatrix}0\\
+0\end{pmatrix}.
 $$
 
 
