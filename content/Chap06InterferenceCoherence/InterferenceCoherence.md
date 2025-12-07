@@ -884,7 +884,7 @@ Similarly,
 \end{align*}
 ```
 ```{figure} Images/06_08_coherence_propagation.png
-:name: fig:coh:coherencePropagation
+:name: fig:coh:coherencePropagationGeometry
 For $z$ very large, $S_1P_1$ and $S_1P_2$ are almost parallel and $|S_1P_2|-|S_1P_1|\approx |QP_2|= |x_1-x_2| \alpha/2$.
 ```
 
@@ -947,7 +947,7 @@ We determine the maximum distance $d$ between two points on earth for which sun 
 ```
 
 where $\text{AU}$ and $R_\circ$ are the distance of the sun to the earth and the radius of the sun.
-Hence, for green light $\lambda=550 nm$ and by requiring
+Hence, for green light $\lambda=550~\text{nm}$ and by requiring
 
 $$
 d < \frac{\bar{\lambda}}{4\alpha}
@@ -1283,7 +1283,7 @@ The ratio
 
 ```{math}
 :label: eq:coh:resolutionRatio
-\frac{(\Delta \lambda_0)_{free}}{(\Delta \lambda_0) = \frac{\pi}{2} \sqrt{F}},
+\frac{(\Delta \lambda_0)_{free}}{\Delta \lambda_0} = \frac{\pi}{2} \sqrt{F},
 ```
 
 should therefore be large.

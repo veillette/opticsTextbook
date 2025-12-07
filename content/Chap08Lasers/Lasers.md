@@ -51,7 +51,7 @@ A spectral lamp, like a gas discharge lamp based on Mercury vapor, can have a sp
 \frac{\Delta \lambda}{\lambda}=\frac{\Delta \nu}{\nu},
 \end{align*}
 ```
-and hence for $\lambda=550 nm$, $\Delta \lambda$ of a spectral lamp is of the order of $0.1$ nm.
+and hence for $\lambda=550~\text{nm}$, $\Delta \lambda$ of a spectral lamp is of the order of $0.1~\text{nm}$.
 A laser can however easily have a frequency band that is a factor of $100$ smaller, i.e. less than 10 MHz=$10^7$ Hz in the visible. For a wavelength of $550$ nm this means that the linewidth is only $0.001$ nm.
 As has been explained in Chapter 7, the coherence time $\tau_c$ of the emitted light is the reciprocal of the frequency bandwidth:
 

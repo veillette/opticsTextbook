@@ -192,7 +192,7 @@ we conclude from {eq}`eq:ray:mirrorAngleRelation` and {eq}`eq:ray:mirrorSmallAng
 ```{math}
 :label: eq:ray:mirrorRayVectorRelation
 \begin{align*}
-n_2\alpha_2 = -n \alpha_2 = n \alpha_1 - \frac{2n}{R} y_1 = n_1\alpha_1 - \frac{2n}{R}.
+n_2\alpha_2 = -n \alpha_2 = n \alpha_1 - \frac{2n}{R} y_1 = n_1\alpha_1 - \frac{2n}{R} y_1.
 \end{align*}
 ```
 

@@ -214,7 +214,7 @@ between two planes.
 **(d)** Use the condition that you found in a) to derive the image focal
   distance of a system consisting of two thin lenses with image focal
   distances $f_{1i}$ and $f_{2i}$ and distance $d$. Verify that the result
-  agrees with the distance for the image focal plane {eq}`eq:ray:two-lens-image-focal`.
+  agrees with the distance for the image focal plane {eq}`eq:ray:twoLensImageFocal`.
 Hint: let $f_i$ be the distance of the image focal point of the two-lens system to the second lens. Write the transfer matrix between the lens immediately before the first lens and the plane through the image focal point.
 
 **(e)** Add a third thin lens with image focal distance $f_{3i}$ is in contact to the second lens. Derive the ray matrix of this system.
@@ -245,7 +245,7 @@ f_i = \frac{P_1+P_2 + \frac{d}{n} {\cal P}_1{\cal P}_2}{n \left( 1 - \frac{d}{n}
 f_o = \frac{P_1+P_2 + \frac{d}{n} {\cal P}_1{\cal P}_2}{n \left( 1 - \frac{d}{n}\right){\cal P}_1 }.
 ```
 
-**(c)** Verify that these formulae are equivalent to {eq}`eq:ray:two-lens-object-focal`,{eq}`eq:ray:two-lens-image-focal`.
+**(c)** Verify that these formulae are equivalent to {eq}`eq:ray:twoLensObjectFocal`,{eq}`eq:ray:twoLensImageFocal`.
 
 
 **Problem 2.10** Entrance pupil of a system of two lenses.

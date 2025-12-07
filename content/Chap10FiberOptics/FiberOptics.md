@@ -325,7 +325,7 @@ It should be noted that $D^{\text{wav}}<0$ as $n_1>n_2$ for TIR, see {ref}`sec:f
 
 ```{figure} Images/10_10_dispersion_fiber.png
 :name: fig:fiber:dispersionSiO2
-Material and waveguide dispersion for a SiO$_2$ SMF. Taking the sum of both effects allows to create dispersionless fibers for a wavelength of $1310\text{nm}$
+Material and waveguide dispersion for a SiO$_2$ SMF. Taking the sum of both effects allows to create dispersionless fibers for a wavelength of $1310~\text{nm}$
 ```
 
 Dispersion effects may cancel each other or engineered, such that dispersionless
@@ -334,7 +334,7 @@ dispersion play a role, the total dispersion is given
 as $D=D^{\text{mat}}+D^{\text{wav}}$. Notice from {eq}`eq:fiber:materialDispersion` and {eq}`eq:fiber:waveguideDispersion`
 that $D^{\text{mat}}$ and $D^{\text{wav}}$ have an opposite sign and if we plot
 both expressions using SiO$_2$ as fiber material, see {numref}`fig:fiber:dispersionSiO2`, it is observed that these dispersion effects cancel
-at $\lambda_0=1310\text{nm}$. This makes $1310\text{nm}$ a popular wavelength
+at $\lambda_0=1310~\text{nm}$. This makes $1310~\text{nm}$ a popular wavelength
 for building optical fiber networks.
 
 Dispersionless fibers can also be engineered, e.g. by using a technique similar to the fiber Bragg grating, to be discussed in {ref}`sec:fiber:applications`. However, it should be noted that these cancelation effects, whether intrinsic or engineered, only yield dispersionless fibers at a single wavelength. Also, as we will see below, dispersionless fibers come at a cost of increased optical transmission loss.
@@ -361,7 +361,7 @@ Rayleigh scattering occurs as a result of SiO$_2$ crystal imperfections in the f
 \alpha_{\text{R}}=\alpha_0^{\text{R}}\left(\frac{\lambda_0^{\text{R}}}{\lambda}\right)^4,
 \end{align*}
 ```
-where $\alpha_0^{\text{R}}$ is the loss factor experimentally measured at a wavelength $\lambda_0^{\text{R}}$. For SiO$_2$, $\alpha_0^{\text{R}}$ is approximately $0.15\text{dB/km}$ at $\lambda_0^{\text{R}}=1550\text{nm}$. This makes Rayleigh scattering the dominant loss mechanism in SiO$_2$ for lower wavelengths.
+where $\alpha_0^{\text{R}}$ is the loss factor experimentally measured at a wavelength $\lambda_0^{\text{R}}$. For SiO$_2$, $\alpha_0^{\text{R}}$ is approximately $0.15~\text{dB/km}$ at $\lambda_0^{\text{R}}=1550~\text{nm}$. This makes Rayleigh scattering the dominant loss mechanism in SiO$_2$ for lower wavelengths.
 
 At larger wavelengths infrared absorption becomes the dominant loss mechanism in SiO$_2$ fibers. Infrared light may excite vibrational states of SiO$_2$, which excitation energy is subsequently dissipated as heat in the fiber. The loss coefficient for infrared absorption is given by
 ```{math}
@@ -371,9 +371,9 @@ At larger wavelengths infrared absorption becomes the dominant loss mechanism in
 ```
 For SiO$_2$ fibers $\alpha_0^{\text{IR}}$ is in the order of $10^{12}$ dB/km and $\lambda_0^{\text{IR}}$ equals approximately $50\mu \text{m}$.
 
-Additionally, the three attenuation peaks at approximately $975$, $1225$ and $1400\text{nm}$ in {numref}`fig:fiber:loss` are due to absorption. These absorption bands are caused by the presence of hydroxyl (OH$^{-}$)-groups stemming from water vapour dissolved in the SiO$_2$ during fabrication. Apart from these bands, other bands may be present due to other contaminants such as Copper (Cu), Iron (Fe) and Nickel (Ni) (not depicted in {numref}`fig:fiber:loss`).
+Additionally, the three attenuation peaks at approximately $975$, $1225$ and $1400~\text{nm}$ in {numref}`fig:fiber:loss` are due to absorption. These absorption bands are caused by the presence of hydroxyl (OH$^{-}$)-groups stemming from water vapour dissolved in the SiO$_2$ during fabrication. Apart from these bands, other bands may be present due to other contaminants such as Copper (Cu), Iron (Fe) and Nickel (Ni) (not depicted in {numref}`fig:fiber:loss`).
 
-As can be observed in {numref}`fig:fiber:loss`, fiber losses in SiO$_2$-fibers are minimized for a wavelength of $1550\text{nm}$, which is therefore the wavelength of choice in applications that require minimization of loss, such as telecom networks.
+As can be observed in {numref}`fig:fiber:loss`, fiber losses in SiO$_2$-fibers are minimized for a wavelength of $1550~\text{nm}$, which is therefore the wavelength of choice in applications that require minimization of loss, such as telecom networks.
 
 Beside the intrinsic losses of Rayleigh scattering and absorption, losses also occur as a result of extrinsic factors, such as (excessive) bending and coupling.
 
