@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * MyST Markdown Linter for Optics Textbook
+ * MyST Markdown Linter
  *
  * This script checks for common MyST markdown issues that can cause rendering problems.
  *

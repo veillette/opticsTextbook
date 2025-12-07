@@ -1,5 +1,5 @@
 {
-  "name": "@opticsTextbook/scripts",
+  "name": "@myst-project/scripts",
   "version": "1.0.0",
   "description": "MyST Markdown project utility scripts - content-agnostic tools for maintaining and validating MyST projects",
   "main": "index.js",
@@ -11,7 +11,7 @@
     "linting",
     "utilities"
   ],
-  "author": "OpticsTextbook Contributors",
+  "author": "MyST Project Contributors",
   "license": "CC-BY-SA-4.0",
   "engines": {
     "node": ">=20.0.0"
