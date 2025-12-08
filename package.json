@@ -81,6 +81,9 @@
     "validate:references": "node scripts/validation/validate-references.js",
     "validate:references:suggestions": "node scripts/validation/validate-references.js --fix-suggestions",
     "validate:images": "node scripts/validation/validate-images.js",
+    "validate:style": "node scripts/validation/validate-style-guide.js",
+    "validate:style:quiet": "node scripts/validation/validate-style-guide.js --quiet",
+    "validate:style:strict": "node scripts/validation/validate-style-guide.js --strict",
     "validate:alt-text": "node scripts/validation/validate-alt-text.js",
     "validate:alt-text:fix": "node scripts/validation/validate-alt-text.js --fix"
   },
