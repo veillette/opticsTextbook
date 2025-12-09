@@ -64,8 +64,11 @@ function stripMystSyntax(content) {
   // Remove frontmatter
   cleaned = cleaned.replace(/^---[\s\S]*?---/m, '');
 
-  // Remove HTML tags
-  cleaned = cleaned.replace(/<[^>]+>/g, '');
+  // Remove HTML tags (repeat until gone)
+  do {
+    var prev = cleaned;
+    cleaned = cleaned.replace(/<[^>]+>/g, '');
+  } while (cleaned !== prev);
 
   // Remove markdown links but keep text
   cleaned = cleaned.replace(/\[([^\]]+)\]\([^)]+\)/g, '$1');
