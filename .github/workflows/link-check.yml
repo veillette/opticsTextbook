@@ -1,4 +1,6 @@
 name: Weekly Link Check
+permissions:
+  contents: read
 
 on:
   schedule:
