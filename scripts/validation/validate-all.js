@@ -33,7 +33,7 @@
 
 const fs = require('fs');
 const path = require('path');
-const { execSync } = require('child_process');
+const { execFileSync } = require('child_process');
 
 /**
  * Run a validation script and capture results.
@@ -48,10 +48,14 @@ function runValidator(scriptPath, args = [], label = '') {
   let output = '';
 
   try {
-    output = execSync(`node ${scriptPath} ${args.join(' ')}`, {
-      encoding: 'utf8',
-      stdio: 'pipe'
-    });
+    output = execFileSync(
+      'node',
+      [scriptPath, ...args],
+      {
+        encoding: 'utf8',
+        stdio: 'pipe'
+      }
+    );
     console.log(output);
   } catch (error) {
     output = error.stdout || '';
