@@ -23,7 +23,7 @@
     "npm": ">=9.0.0"
   },
   "dependencies": {
-    "js-yaml": "^4.1.1",
+    "js-yaml": "^4.2.0",
     "mystmd": "^1.6.2",
     "sharp": "^0.33.2"
   },
