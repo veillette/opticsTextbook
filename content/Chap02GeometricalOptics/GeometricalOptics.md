@@ -75,7 +75,7 @@ The starting point of the treatment of geometrical optics is the
 **Principle of Fermat (1657)**. The path followed by a light ray between two points is the one that takes the least amount of time.
 ```
 
-The speed of light in a material with refractive index $n$ is $c/n$, where $c=3\times 10^8$ m/s is the speed of light in vacuum. At the time of Fermat, the conviction was that the speed of light must be finite, but nobody could suspect how incredibly large it actually is. In 1676 the Danish astronomer Ole R&ouml;mer computed the speed from inspecting the eclipses of a moon of Jupiter and arrived at an estimate that was only 30\% too low.
+The speed of light in a material with refractive index $n$ is $c/n$, where $c=3\times 10^8$ m/s is the speed of light in vacuum. At the time of Fermat, the conviction was that the speed of light must be finite, but nobody could suspect how incredibly large it actually is. In 1676 the Danish astronomer Ole Rømer computed the speed from inspecting the eclipses of a moon of Jupiter and arrived at an estimate that was only 30\% too low.
 
 Let $\mathbf{r}(s)$ be a ray with $s$ the length parameter. The ray links two points $S$ and $P$.
 Suppose that the refractive index varies with position: $n(\mathbf{r})$. Over the infinitesimal distance from $s$ to

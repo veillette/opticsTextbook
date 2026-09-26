@@ -523,7 +523,7 @@ multiplied by a large factor.
 EM-fields in optical fibers are not confined to the core but extend in the cladding. By bringing two fiber cores in close proximity, light can be coupled from one fiber into another.
 ```
 
-In isolators, light is able to propagate in one direction, but not in the other. As such optical devices can be isolated from each other, with the result that light reflected from one device cannot back-propagate to another device. This is important to protect e.g. a laser from incoming light back-reflected from another device. The working principle of isolators is based on light polarization and birefringency. This causes forward-propagating light to be coupled out of the device, whereas the back-propagating light path is diverted and the light is absorbed.
+In isolators, light is able to propagate in one direction, but not in the other. As such optical devices can be isolated from each other, with the result that light reflected from one device cannot back-propagate to another device. This is important to protect e.g. a laser from incoming light back-reflected from another device. The working principle of isolators is based on light polarization and birefringence. This causes forward-propagating light to be coupled out of the device, whereas the back-propagating light path is diverted and the light is absorbed.
 
 A similar mechanism lies at the basis of circulators. These components have three, four or six ports and light coupled into one port is only transmitted to one other port. Thus, in a three-port circulator, port $1$ is coupled to port $2$, $2$ to $3$ and $3$ to $1$. Using circulators, a single fiber can be used to transmit and receive a (reflected) signal. Both are then separated using this component, which is relevant for Fiber Bragg gratings (discussed in {ref}`sec:fiber:applications`) and Michelson-Morley-type interferometers.
 
@@ -538,10 +538,10 @@ Optical attenuation can be achieved by the methods that have so far been conside
 
 For optical amplification, an intense pump signal is coupled into an amplifier, along with the signal-to-be-amplified. The pump can be provided by a laser, or by an electronic signal. Due to stimulated emission in the amplifier, a little of the energy of the pump signal is transferred to the signal-to-be-amplified, thus increasing (amplifying) its intensity. The most well-known fiber amplifier is the Erbium-doped fiber amplifier (EDFA) that works for signals with wavelengths between approximately $1480$ and $1600~\text{nm}$, enabling transatlantic optical communication at telecom wavelengths ($\lambda_0=1550~\text{nm}$). This fiber is doped with Er-atoms causing stimulated emission. However, fiber amplifiers based on other rare-earth dopants are also available, in particular neodymium, ytterbium, praseodymium, or thulium.
 
-With polarization controllers the polarization of the light within an optical fiber can be influenced. These controllers consist of two or three ''flaps'' around which the fiber is wound, see {numref}`fig:fiber:polarizationControler`. By adjusting the position of these flaps, either manually or electronically, the polarization state of the propagating light is controlled as a result of stresses applied to the fiber. As such each input polarization state can be changed to any output polarization state.
+With polarization controllers the polarization of the light within an optical fiber can be influenced. These controllers consist of two or three ''flaps'' around which the fiber is wound, see {numref}`fig:fiber:polarizationController`. By adjusting the position of these flaps, either manually or electronically, the polarization state of the propagating light is controlled as a result of stresses applied to the fiber. As such each input polarization state can be changed to any output polarization state.
 
 ```{figure} Images/10_20_fiber_polarization_controller_a1_780.jpg
-:name: fig:fiber:polarizationControler
+:name: fig:fiber:polarizationController
 A fiber polarization controller (courtesy of [Thorlabs](https://www.thorlabs.com/newgrouppage9.cfm?objectgroup_id=343)).
 ```
 

@@ -25,7 +25,7 @@ downloads:
 
 In the early 1950s a new source of microwave radiation, **the maser**, was invented by C.H. Townes in the USA and A.M. Prokhorov and N.G. Basov in the USSR. Maser stands for "Microwave Amplification by Stimulated Emission of Radiation". In 1958, A.L. Schawlow and Townes formulated the physical conditions for realizing a similar device for visible light. This resulted in 1960 in the first optical maser by T.H. Maiman in the USA.
 This device has since been called **L**ight **A**mplification by **S**timulated **E**mission of **R**adiation or **laser**.
-It has revolutionised science and engineering and has many applications, e.g.
+It has revolutionized science and engineering and has many applications, e.g.
 - bar code readers,
 - compact discs,
 - computer printers,

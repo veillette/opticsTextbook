@@ -58,7 +58,7 @@ electromagnetic field satisfies the scalar Helmholtz {eq}`eq:diff:helmholtz`:
 ```
 where $k=\omega\sqrt{\epsilon \mu_0}$ is the wave number of the light in matter with permittivity $\epsilon$ and refractive index $n=\sqrt{\epsilon/\epsilon_0}$.
 
-When the refractive index is not constant, Maxwell's equationss are no longer equivalent to the wave equation for the individual electromagnetic field components and there is then coupling between the components due to the curl operators in Maxwell's equation. When the variation of the refractive index is slow on the scale of the wavelength, the scalar wave equation may still be a good approximation, but for structures that vary on the scale of the wavelength (i.e. on the scale of ten microns or less), the scalar wave equation is not sufficiently accurate.
+When the refractive index is not constant, Maxwell's equations are no longer equivalent to the wave equation for the individual electromagnetic field components and there is then coupling between the components due to the curl operators in Maxwell's equation. When the variation of the refractive index is slow on the scale of the wavelength, the scalar wave equation may still be a good approximation, but for structures that vary on the scale of the wavelength (i.e. on the scale of ten microns or less), the scalar wave equation is not sufficiently accurate.
 
 ## Propagation of light through a homogeneous medium
 We will describe two equivalent methods to compute the propagation of the field through homogeneous matter, namely the angular spectrum method and the Rayleigh-Sommerfeld diffraction formula. Our goal is to derive the field at some point $(x,y,z)$ with $z>0$, given the field in the plane $z=0$, as is illustrated in {numref}`fig:diff:propagationMath`.
@@ -147,7 +147,7 @@ where now $k_z$ has to be considered as a function of $(\xi, \eta)$:
 k_z = 2\pi \sqrt{ \left( \frac{1}{\lambda}\right)^2- \xi^2-\eta^2}.
 \end{align*}
 ```
-Note that one can interpret this as a diagonalisation of the propagation operator.
+Note that one can interpret this as a diagonalization of the propagation operator.
 
 We can observe something interesting: if $k_x^2+k_y^2 > \left(\frac{2\pi }{\lambda}\right)^2$, then $k_z$ becomes imaginary, and $\exp(i k_z z)$ decays exponentially for increasing $z$:
 
@@ -1128,7 +1128,7 @@ Set-up for Fourier filtering. The first lens creates a Fourier transform of $U(x
 
 
 ## Super-resolution
-We have emphasised that evanescent waves set the ultimate limit to resolution in optics. In {ref}`chapter:geo` it was explained that, although within geometrical optics one can image a single point perfectly using conical surfaces, several points, let alone an extended object, cannot be imaged perfectly.
+We have emphasized that evanescent waves set the ultimate limit to resolution in optics. In {ref}`chapter:geo` it was explained that, although within geometrical optics one can image a single point perfectly using conical surfaces, several points, let alone an extended object, cannot be imaged perfectly.
 It was furthermore explained that when only paraxial rays are considered, i.e. within Gaussian geometrical optics, perfect imaging of extended objects *is* possible. However, rays whose angle with the optical axis is large cause aberrations. But even if perfect imaging were possible in geometrical optics, a real image can never be perfect due to the fact that information contained in the amplitudes and phase of the evanescent waves cannot propagate.
 The resolution that can be obtained with an optical system consisting of lenses is less than would follow from considering the loss of information due to evanescent waves, because propagating waves with spatial frequencies that are too large to be captured by the optical system (i.e. waves of which the angles with the optical axis are larger than the numerical aperture) cannot contribute to the image. Therefore the image of a point object has the size
 
