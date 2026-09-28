@@ -1,55 +1,86 @@
-# Optics Textbook Style Guide
+# AGENTS.md
 
-This document outlines the formatting and structural conventions for the Optics Textbook.
+## Standard
 
-## Problem Sets
+This book follows the [QuadriviumPress MyST baseline](https://github.com/QuadriviumPress/bindery/blob/main/doc/myst-baseline.md) and the [presentation skill](https://github.com/QuadriviumPress/bindery/blob/main/skills/quadrivium-myst-presentation/SKILL.md).
 
-- **Format**: `**Problem X.Y: Title**`
-  - X = chapter number
-  - Y = problem number within chapter
-  - Example: `**Problem 3.1: Snell's Law Application**`
-- **Sub-parts**: Use **(a)**, **(b)**, **(c)** in bold
-  - Example: `**(a)** Calculate the angle of refraction.`
-- **Units**: All problems should include units in given values
-  - Example: "A beam of light with wavelength 550 nm..."
+## Commands
 
-## Cross-References
+```bash
+npm run start
+npm run prebuild
+npm run build
+npm run verify
+npm run check
+npm run test
+npm run test:coverage
+npm run test:watch
+npm run build:no-pwa
+npm run checklinks
+npm run clean
+npm run copy-exports
+npm run docx
+npm run export
+npm run fix:directives
+npm run fix:directives:admonitions
+npm run fix:directives:dry
+npm run fix:directives:fences
+npm run fix:split-refs
+npm run fix:split-refs:dry
+npm run generate-exports
+npm run generate-icons
+npm run generate-manifest
+npm run images:clean-unreferenced
+npm run images:clean-unreferenced:dry
+npm run images:find-unreferenced
+npm run images:find-unreferenced:dry
+npm run images:insert
+npm run inject-scripts
+npm run lint
+npm run lint:fix
+npm run lint:grammar
+npm run lint:grammar:suggestions
+npm run lint:markdown
+npm run lint:markdown:fix
+npm run lint:quiet
+npm run lint:spell
+npm run lint:spell:fix
+npm run optimize-images
+npm run pdf
+npm run serve
+npm run setup-pwa
+npm run standardize:figures
+npm run standardize:figures:dry
+npm run standardize:labels
+npm run standardize:labels:check
+npm run standardize:labels:equations
+npm run standardize:labels:figures
+npm run validate
+npm run validate:alt-text
+npm run validate:alt-text:fix
+npm run validate:fix
+npm run validate:images
+npm run validate:quiet
+npm run validate:references
+npm run validate:references:suggestions
+npm run validate:strict
+npm run validate:style
+npm run validate:style:quiet
+npm run validate:style:strict
+```
 
-- **Use MyST `{ref}` and `{eq}` syntax exclusively**
-- **Equation labels**: `eq:chap-abbrev:descriptiveName`
-  - Format: `eq:` + chapter abbreviation + `:` + descriptive name
-  - Example: `{eq}\`eq:geo:snellLaw\``
-- **Figure labels**: `fig:chap-abbrev:descriptiveName`
-  - Format: `fig:` + chapter abbreviation + `:` + descriptive name
-  - Example: `{ref}\`fig:geo:refraction\``
+`npm run check` is the production-equivalent verification and HTML build.
 
-## Callout Boxes
+## Intentional differences
 
-Use MyST admonition syntax with the following conventions:
+- `dependencies` keeps `js-yaml`. `mystmd` and `sharp` are in `devDependencies`.
+- Optional `package.json` keys: `keywords`, `repository`, `bugs`, `homepage`, `overrides` (pins `smol-toml` for `markdownlint-cli2`).
+- `build` optimizes images, generates exports, copies them into the site, injects scripts, and installs PWA assets through `npm run setup-pwa`. It does not call `scripts/setup-pwa.mjs`.
+- `verify` runs the optics lint, reference, label, image, style, and alt-text checks, then Jest.
+- Extra script groups: `export`, `pdf`, `docx`, `lint:*`, `validate:*`, `fix:*`, `images:*`, `standardize:*`, `test`, `test:watch`, `test:coverage`, `clean`, `serve`, `build:no-pwa`.
+- Source lives under `content/ChapNN…/`, not `chapters/ch-NN-slug.md`.
+- The human style guide is [`doc/STYLE_GUIDE.md`](doc/STYLE_GUIDE.md). The longer assistant runbook is [`doc/AGENTS.md`](doc/AGENTS.md).
 
-- **`{note}`**: Learning objectives, external resources
-  - Example: Links to PhET simulations, video lectures
-- **`{important}`**: Key equations, laws, principles
-  - Example: Snell's Law, Fermat's Principle
-- **`{tip}`**: Practical advice, shortcuts
-  - Example: Problem-solving strategies, approximations
-- **`{warning}`**: Common mistakes, pitfalls
-  - Example: Sign conventions, unit conversions
+## Presentation gap
 
-## Chapter Structure
-
-Each chapter should follow this structure:
-
-1. **Learning objectives** (in a `{note}` box)
-2. **Main content** with examples
-3. **Advanced topics** (if applicable)
-4. **External resources** (in a `{note}` box)
-5. **Chapter summary**
-
-## Additional Guidelines
-
-- Use consistent notation throughout the textbook
-- Include worked examples after introducing new concepts
-- Provide clear diagrams with proper labels
-- Ensure all equations are numbered and labeled for cross-referencing
-- Use SI units unless otherwise specified
+Problems are bold `**Problem X.Y**` on child pages, as described in [`doc/STYLE_GUIDE.md`](doc/STYLE_GUIDE.md). Callouts already use `{note}`, `{important}`, `{tip}`, and `{warning}`. There is no `{exercise}` or `{solution}` directive. Rewriting problem sets is deferred.

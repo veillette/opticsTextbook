@@ -182,6 +182,7 @@ Before submitting, run `npm run validate` to catch missing labels, malformed dir
   - [`MAINTENANCE.md`](MAINTENANCE.md)
   - [`MYST_CONVENTIONS.md`](MYST_CONVENTIONS.md)
   - [`scripts/README.md`](scripts/README.md)
+  - [`STYLE_GUIDE.md`](STYLE_GUIDE.md)
   - [`AGENTS.md`](AGENTS.md)
 
 ---
