@@ -149,7 +149,7 @@ The field components ${\cal E}_x(z,t)$ and ${\cal E}_y(z,t)$ are $\pi/2$ radians
 
 At a given position, the electric field vector moves along a circle as time
 proceeds. For an observer looking towards the source, when the electric field
-rotates anti-clockwise, the polarization is called **left-circularly polarized
+rotates counterclockwise, the polarization is called **left-circularly polarized
 ** (+ sign in {eq}`eq:pol:circularPolarizationTime`), while if the electric
 vector moves clockwise, the polarization is called **right-circularly polarized
 ** (- sign in {eq}`eq:pol:circularPolarizationTime`).
@@ -397,9 +397,9 @@ E_{y'}
 \end{pmatrix},
 \end{align*}
 ```
-where ${\cal R}_{\theta}$ is the rotation matrix over an angle $\theta$ in the anti-clockwise direction: {cite:p}`hecht`.
+where ${\cal R}_{\theta}$ is the rotation matrix over an angle $\theta$ in the counterclockwise direction: {cite:p}`hecht`.
 
-That ${\cal R}(\theta)$ indeed is a rotation through an angle $\theta$ in the anti-clockwise direction is easy to see by considering what happens when ${\cal R}_\theta$ is applied to the vector $(1,0)^T$ {cite:p}`hecht`.
+That ${\cal R}(\theta)$ indeed is a rotation through an angle $\theta$ in the counterclockwise direction is easy to see by considering what happens when ${\cal R}_\theta$ is applied to the vector $(1,0)^T$ {cite:p}`hecht`.
 
 This relationship expresses the components $E_{x'}$, $E_{y'}$ of the Jones vector on the $\widehat{\mathbf{x}}'$, $\widehat{\mathbf{y}}'$ basis, which is aligned with the fast and slow axes of the crystal, in terms of the components $E_x$ and $E_y$ on the original basis $\widehat{\mathbf{x}}$, $\widehat{\mathbf{y}}$.
 If the matrix ${\cal M}$ describes the Jones matrix as defined in {eq}`eq:pol:jonesMatrixWaveplate`, then the matrix $M_{\theta}$ for the same wave

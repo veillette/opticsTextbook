@@ -40,7 +40,7 @@ downloads:
 ## Introduction
 In this chapter we will study how light propagates as a wave. In the study of the double-slit experiment we concluded from the interference pattern observed on a screen that light is a wave. To demonstrate more convincingly that light is indeed a wave, we require a detailed quantitative model of the propagation of light, which gives experimentally verifiable predictions.
 
-But a precise description of the propagation of light is not only important for fundamental science; it also has many practical applications. For example, if a sample must be analysed by illuminating it and measuring the scattered light, the fact that the detected light has been affected not only by the sample but also by propagation has to be taken into account. Another example is lithography. If a pattern has to be printed onto a substrate using a mask that is illuminated and there is a certain distance between the mask and the photoresist, the light which reaches the resist does not have the exact shape of the mask due to propagation effects. Thus, the mask needs to be designed to compensate for these effects.
+But a precise description of the propagation of light is not only important for fundamental science; it also has many practical applications. For example, if a sample must be analyzed by illuminating it and measuring the scattered light, the fact that the detected light has been affected not only by the sample but also by propagation has to be taken into account. Another example is lithography. If a pattern has to be printed onto a substrate using a mask that is illuminated and there is a certain distance between the mask and the photoresist, the light which reaches the resist does not have the exact shape of the mask due to propagation effects. Thus, the mask needs to be designed to compensate for these effects.
 ```{figure} Images/07_01_propagation_example.png
 :name: fig:diff:propagationExample
 A quantitative model of the propagation of light is required to predict the properties of propagation and to apply it in sample analyses and lithography.
@@ -654,7 +654,7 @@ Suppose $W_{\text{slit}}(x)$ is the function that describes the transmission of 
 \tau(x)=\sum_{m=1}^{M} W_{\text{slit}}\left(x+ (M+1)\frac{p}{2}- mp\right),
 \end{align*}
 ```
-where $p$ is the distance between neighbouring slits, i.e. $p$ is the period of the row. If the illumination is by a perpendicular incident plane wave with unit amplitude, the transmitted near field $U_0(x)$ is simply $\tau(x)$.
+where $p$ is the distance between neighboring slits, i.e. $p$ is the period of the row. If the illumination is by a perpendicular incident plane wave with unit amplitude, the transmitted near field $U_0(x)$ is simply $\tau(x)$.
 Then
 
 ```{math}

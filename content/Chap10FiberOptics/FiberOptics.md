@@ -378,7 +378,7 @@ At larger wavelengths infrared absorption becomes the dominant loss mechanism in
 ```
 For SiO$_2$ fibers $\alpha_0^{\text{IR}}$ is on the order of $10^{12}$ dB/km and $\lambda_0^{\text{IR}}$ equals approximately $50\mu \text{m}$.
 
-Additionally, the three attenuation peaks at approximately $975$, $1225$ and $1400~\text{nm}$ in {numref}`fig:fiber:loss` are due to absorption. These absorption bands are caused by the presence of hydroxyl (OH$^{-}$)-groups stemming from water vapour dissolved in the SiO$_2$ during fabrication. Apart from these bands, other bands may be present due to other contaminants such as Copper (Cu), Iron (Fe) and Nickel (Ni) (not depicted in {numref}`fig:fiber:loss`).
+Additionally, the three attenuation peaks at approximately $975$, $1225$ and $1400~\text{nm}$ in {numref}`fig:fiber:loss` are due to absorption. These absorption bands are caused by the presence of hydroxyl (OH$^{-}$)-groups stemming from water vapor dissolved in the SiO$_2$ during fabrication. Apart from these bands, other bands may be present due to other contaminants such as Copper (Cu), Iron (Fe) and Nickel (Ni) (not depicted in {numref}`fig:fiber:loss`).
 
 As can be observed in {numref}`fig:fiber:loss`, fiber losses in SiO$_2$-fibers are minimized for a wavelength of $1550~\text{nm}$, which is therefore the wavelength of choice in applications that require minimization of loss, such as telecom networks.
 

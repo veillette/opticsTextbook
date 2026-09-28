@@ -80,7 +80,7 @@ The human eye is made of an almost spherical (24 mm long and 22 mm across) gelat
 Cross section of a human eye (from [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Three_Internal_chambers_of_the_Eye.png) by Holly Fischer / CC BY).
 ```
 
-After passing the cornea, the rays reach the **aqueous humour** ($n\approx$1.336) with the **iris** or pupil. The pupil can expand or contract from 2&nbsp;mm (bright sun) to 8&nbsp;mm (low light) in diameter to adapt to the light intensity. The iris gives color to the eye. After the iris, the rays reach the flexible **crystalline lens** which has the size of a bean (9&nbsp;mm in diameter, and 4&nbsp;mm thick in relaxed condition). Its index of refraction varies from 1.406 in the center to 1.386 at the edge.
+After passing the cornea, the rays reach the **aqueous humor** ($n\approx$1.336) with the **iris** or pupil. The pupil can expand or contract from 2&nbsp;mm (bright sun) to 8&nbsp;mm (low light) in diameter to adapt to the light intensity. The iris gives color to the eye. After the iris, the rays reach the flexible **crystalline lens** which has the size of a bean (9&nbsp;mm in diameter, and 4&nbsp;mm thick in relaxed condition). Its index of refraction varies from 1.406 in the center to 1.386 at the edge.
 
 ```{figure} Images/03_06_focus_in_an_eye_a.png
 
@@ -105,7 +105,7 @@ In the relaxed condition, the object focal distance of the lens system is $f_o=1
 &nbsp;mm as measured from the cornea while the image focal distance is equal to
 the length of the eye: $f_i=24$&nbsp;mm. These focal distances are different,
 because the refractive indices of the surrounding medium (air and vitreous
-humour) differ. The power of the healthy relaxed eye is (see the thin lens matrix equations in the {ref}`Ray Matrix chapter <chapter:ray>`):
+humor) differ. The power of the healthy relaxed eye is (see the thin lens matrix equations in the {ref}`Ray Matrix chapter <chapter:ray>`):
 
 ```{math}
 :label: eq:inst:eyeDioptricPower

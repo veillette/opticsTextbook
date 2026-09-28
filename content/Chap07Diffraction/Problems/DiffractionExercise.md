@@ -177,7 +177,7 @@ U_{Bessel}(x,y,f_i)= 2\pi A b \Delta r J_0\left( k \frac{b r}{f}\right).
 
 **(b)** The beam obtained this way is called a Bessel beam. Explain why this beam has a very long focal depth.
 
-**(c)** Suppose that the Airy spot obtained by focussing of a unit amplitude plane wave and the Bessel beam carry the same amount of energy. Show that then the amplitude of the Bessel beam is given by
+**(c)** Suppose that the Airy spot obtained by focusing of a unit amplitude plane wave and the Bessel beam carry the same amount of energy. Show that then the amplitude of the Bessel beam is given by
 
 ```{math}
 \begin{align*}

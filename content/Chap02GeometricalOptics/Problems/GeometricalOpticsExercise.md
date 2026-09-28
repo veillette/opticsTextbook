@@ -72,7 +72,7 @@ Lens with hyperboloid surfaces for perfect imaging of a pair of points.
 ```
 
 
-**Problem 2.3** Perfect focussing by a parabolic mirror
+**Problem 2.3** Perfect focusing by a parabolic mirror
 
 Next we consider perfect focusing of parallel rays in air ($n=1$) by a mirror.
 Let there be a parallel bundle of rays in air ($n=1$) and suppose we want to focus all rays at point $F$.

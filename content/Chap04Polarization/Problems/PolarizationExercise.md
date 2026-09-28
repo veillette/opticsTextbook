@@ -45,7 +45,7 @@ Schematic of a simple optical isolator.
 
 **(a)** Give the Jones matrix for a linear polarizer $\mathcal{P}$ that polarizes light in the vertical direction (i.e. the $y$-direction).
 
-**(b)** Now we rotate the linear polarizer by $\theta=\pi/4$ anti-clockwise. Find the Jones matrix for the rotated polarizer $\mathcal{P}_{\pi/4}$. Check your result by verifying that:
+**(b)** Now we rotate the linear polarizer by $\theta=\pi/4$ counterclockwise. Find the Jones matrix for the rotated polarizer $\mathcal{P}_{\pi/4}$. Check your result by verifying that:
 
 $$
 \mathcal{P}_{\pi/4}\begin{pmatrix}1\\
