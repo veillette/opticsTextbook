@@ -24,7 +24,7 @@ What is the Jones matrix of this linear polarizer?
 
 **(g)** What is the intensity of the transmitted beam?
 
-**(h)** What happens to the difference in energy between the incident and transmitted beams?
+**(h)** Where can the energy removed from the transmitted beam go in an absorptive polarizer and in a reflective polarizer?
 
 
 **Problem 4.2** Partial linear polarization.
@@ -36,11 +36,12 @@ $$
 $$
 Here, $I_{max}$ and $I_{min}$ are the maximum and minimum intensities of the light transmitted through a linear polarizer when it is turned through 360 degrees.
 
-**Problem 4.3** In this problem we consider an optical isolator as shown in {numref}`fig:pol:opticalIsolator`. In the setup, light can pass in one direction, but it cannot go back. This can, for example, be used to prevent laser light from going back into the laser source, thereby preventing unwanted effects such as intensity and frequency instabilities.
+**Problem 4.3** Consider the polarizer, quarter-wave plate, and normally reflecting mirror in {numref}`fig:pol:opticalIsolator`. At the intended wavelength, this arrangement can reject light returning from the mirror toward the source. It illustrates suppression of a specific back-reflection; the mirror blocks forward transmission, so the diagram is not a general two-port optical isolator.
 
 ```{figure} ../Images/04_06_4_optical_isolator.png
 :name: fig:pol:opticalIsolator
-Schematic of a simple optical isolator.
+:alt: Light travels through a linear polarizer and quarter-wave plate to a mirror, then returns through the plate and polarizer along the same path.
+Polarizer, quarter-wave plate, and mirror used to reject an ideal normal-incidence back-reflection.
 ```
 
 **(a)** Give the Jones matrix for a linear polarizer $\mathcal{P}$ that polarizes light in the vertical direction (i.e. the $y$-direction).
@@ -61,9 +62,9 @@ $$
 **(c)** Give the Jones matrix $\mathcal{Q}$ for the quarter-wave plate of which the slow axis points in the vertical direction (i.e. the $y$-direction).
 
 
-**(d)** Suppose we send light through the linear polarizer and the quarter-wave plate. Then the light is partially transmitted and partially reflected by the mirror. The reflected light passes again through the quarter-wave plate and the polarizer. Using Jones matrices, calculate the state of the light that exits.
+**(d)** Use the polarizer rotated in part (b), followed by the quarter-wave plate in part (c). Model the normal-incidence mirror as multiplying both transverse field components by the same reflection coefficient. In fixed laboratory $x,y$ axes, the reflected light traverses the quarter-wave plate and the same rotated polarizer again. Using Jones matrices, calculate the returned field after the polarizer and explain the role of the $45^\circ$ angle.
 
-A video demonstration of this optical isolator can be viewed at [^1] (or search for "MIT optical isolator" on YouTube).
+A related demonstration of optical isolation is linked in [^1]. Compare its optical elements with the mirror-return arrangement in this problem.
 
 **Problem 4.4** Phase plates.
 
@@ -110,7 +111,7 @@ $$
 \end{array}\right)
 $$
 
-**(d)** Determine the Jones matrix for the case of a wave plate of thickness equal to the wavelength, with fast axis parallel to the vector
+**(d)** Determine the Jones matrix, up to an overall phase, for a wave plate of thickness equal to the **vacuum** wavelength $\lambda_0$, with fast axis parallel to the vector
 
 $$
 \left( \begin{array}{c}1 \\-1

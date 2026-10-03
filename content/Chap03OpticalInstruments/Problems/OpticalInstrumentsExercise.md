@@ -8,7 +8,7 @@
 \end{array}\right)
 ```
 
-between two planes.
+between two planes, acting on the ray vector $(n\alpha,y)^T$ with reduced angle first and height second.
 
 
 **(a)** Suppose that any ray that is parallel to the optical axis in the first plane goes through a point on the optical axis in the second plane. This means that the second plane is the focal plane of the system. What does this imply for the elements of the transfer matrix?
@@ -37,20 +37,20 @@ The distance between the retina and the lens is $d_r$. Let us call the focal len
 
 [https://www.geogebra.org/m/schcyhz3](https://www.geogebra.org/m/schcyhz3).
 
-**(d)** Calculate the magnification of the system by using the transfer matrices. Assume for simplicity that throughout the entire system $n=1$. How does the magnification of the object depend on $f$? Verify your answer with the applet.
+**(d)** Use transfer matrices to calculate the transverse magnification from the object plane to the retina when the eye is relaxed and the object is positioned as in part (c). Assume $n=1$ throughout. How does the magnification depend on $f$? Verify your answer with the applet.
 
 **Problem 3.3** Increasing the angular field of view.
 
-Patients with tunnel vision have only a limited field of view because only the central region of their retina is light sensitive. Suppose that the sensitive region of the retina is circular and has radius $r=2 \text{cm}$.
-The length of the eye is 24 \text{cm} and the cornea and crystalline lens are treated together as a single thin lens.
+Patients with tunnel vision have only a limited field of view because only the central region of their retina is light sensitive. Suppose that the sensitive region of the retina is circular and has radius $r=2\,\text{mm}$.
+The length of the eye is $24\,\text{mm}$ and the cornea and crystalline lens are treated together as a single thin lens at the front of the eye.
 
 **(a)** Show that the angular field of view of distant objects is
 
 $$
-\alpha_u= 6.4^o.
+\alpha_u\approx 6.4^\circ.
 $$
 
-Take into account that the ray which enters the center of the eye lens is refracted because the vitreous humor has refractive index $n=1.337$).
+Here $\alpha_u$ is the half-angle of the field of view. Use the paraxial approximation and take into account that the ray entering the center of the eye lens is refracted into vitreous humor of refractive index $n=1.337$.
 
 **(b)** Use a negative lens with focal distance $f<0$ at a distance $d$ in front of the eye. Show that when
 
@@ -59,17 +59,17 @@ d=9 |f|,
 $$
 the angular field of view is increased by a factor 10.
 
-**(c)** We require that the virtual images of all distant objects are at least as far away as the normal near point. This implies that we require that $d+|f_2|> 25 \text{cm}$.
-Derive $d$ and the strength of the negative lens in diopters.
+**(c)** Require the virtual images of distant objects to be at least as far from the eye as the 25 cm reference distance; thus $d+|f|\geq25\,\text{cm}$. Combined with part (b), find the minimum possible $d$ and the corresponding negative-lens power in diopters.
 
 ```{figure} ../Images/03_15_eye.png
 :name: fig:inst:eyeFieldOfView
-Angular view $\alpha_u$ without and with the use of a negative lens.
+:alt: Ray diagrams compare the unaided narrow retinal field of view with the wider external field seen through a negative lens in front of the eye.
+Half-angle $\alpha_u$ of the unaided field of view and the field enlarged by a negative lens.
 ```
 
 
 **Problem 3.4** \* Imaging with a planar interface.
-In this problem we investigate whether it is possible to image an object with a single planar interface.
+In this problem we investigate whether a single planar interface can image an object in the paraxial approximation. Allow the second medium to have a negative refractive index, as in an idealized negative-index material.
 
 **(a)** We have two media with refractive indices $n_1$ and $n_2$, separated by a planar interface. Give the transfer matrix $\mathcal{T}$ for refraction at a planar interface using the paraxial approximation.
 
@@ -77,7 +77,8 @@ In this problem we investigate whether it is possible to image an object with a 
 
 ```{figure} ../Images/03_16_planar_interface.png
 :name: fig:inst:planarInterface
-Planar interface between two media with different refractive indices. An object at distance d from the interface on the left side can potentially form an image at distance d on the right side, demonstrating the principle of a Veselago lens when the refractive index condition is satisfied.
+:alt: Rays from an object at distance d to the left of a planar interface refract toward an image plane at distance d to the right.
+Planar interface between media of indices $n_1$ and $n_2$, with object and candidate image planes each at distance $d$ from the interface.
 ```
 
-**(c)** Assuming that $d>0$, what condition has to be fulfilled in order to create an image in the plane behind the interface? Such an imaging system is called a **Veselago lens**.
+**(c)** Assuming $d>0$, what condition on $n_1$ and $n_2$ makes the matrix image the object plane onto the plane behind the interface? Explain why ordinary positive-index media cannot satisfy this condition. The negative-refraction arrangement is related to the principle of a **Veselago lens**.

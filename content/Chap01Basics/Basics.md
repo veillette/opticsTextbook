@@ -54,9 +54,16 @@ Light has been one of physics' most fascinating challenges; even 60 years after 
 
 The scientific understanding of light has undergone a remarkable evolution spanning more than three centuries, shaped by competing theories, groundbreaking experiments, and revolutionary insights that fundamentally changed our view of physical reality. This journey from classical mechanics to quantum theory represents one of the most profound intellectual transformations in the history of science, revealing the subtle and counterintuitive nature of light itself.
 
-In the 17th century, Isaac Newton proposed his influential particle theory, suggesting that light consisted of streams of tiny, massless particles—which he called "corpuscles"—traveling through space in perfectly straight lines at enormous speeds. This mechanistic approach was deeply rooted in Newton's broader philosophical framework, which sought to explain all natural phenomena through the motion and interaction of particles governed by mathematical laws. Newton's particle theory elegantly explained many observed optical phenomena: the formation of sharp, well-defined shadows could be understood as particles blocked by opaque objects, while the laws of reflection followed naturally from elastic collisions between light particles and smooth surfaces, much like billiard balls bouncing off cushions. The phenomenon of refraction, where light bends when passing from one medium to another, was explained by assuming that light particles experienced different forces in different materials, causing them to accelerate or decelerate and change direction accordingly. Despite the theory's explanatory power, Newton was troubled by certain observations that seemed difficult to reconcile with his particle hypothesis, particularly the colorful interference patterns known as Newton's rings, which appeared when light passed between closely spaced glass surfaces. Although these phenomena hinted at wave-like behavior, Newton's immense scientific authority and the general success of his mechanical worldview ensured that his particle theory dominated scientific thinking for well over a century.
+In the 17th century, Isaac Newton proposed an influential particle theory:
+light consisted of tiny "corpuscles" traveling along paths that could
+explain sharp shadows and reflection. He modeled refraction through forces
+acting near an interface. Thin-film colors, including the rings produced
+by a curved lens on a flat plate, required additional assumptions. Newton
+studied these rings in detail, though he did not interpret them as evidence
+for a wave theory. His particle account remained influential for more
+than a century.
 
-Contemporary with Newton but representing a fundamentally different philosophical approach, the Dutch physicist Christiaan Huygens advanced a sophisticated wave theory of light that would prove remarkably prescient. Huygens proposed that light propagated as waves through an all-pervading, invisible medium called the "luminiferous ether," much as sound waves travel through air or water waves move across the ocean's surface. According to Huygens' principle, every point on an advancing wavefront could be considered as a source of secondary wavelets, and the envelope of these wavelets determined the new position of the wavefront as it propagated through space. This elegant geometric construction successfully explained not only the familiar phenomena of reflection and refraction but also more complex behaviors that challenged Newton's particle theory. Huygens' wave model provided a natural explanation for the double refraction observed in calcite crystals, where a single incident ray splits into two refracted rays with different polarizations—a phenomenon that seemed to require light to have some form of internal structure or orientation that pure particles could not possess. Perhaps most significantly, the wave theory could account for the fact that when two light beams intersect, they pass through each other completely unmodified, emerging with their original properties intact, much as water waves pass through one another without permanent alteration. This behavior was difficult to explain with particle theory, which would predict collisions and scattering when particles from different beams encountered each other.
+Contemporary with Newton but representing a fundamentally different philosophical approach, the Dutch physicist Christiaan Huygens advanced a sophisticated wave theory of light that would prove remarkably prescient. Huygens proposed that light propagated as waves through an all-pervading, invisible medium called the "luminiferous ether," much as sound waves travel through air or water waves move across the ocean's surface. According to Huygens' principle, every point on an advancing wavefront could be considered as a source of secondary wavelets, and the envelope of these wavelets determined the new position of the wavefront as it propagated through space. This elegant geometric construction successfully explained not only the familiar phenomena of reflection and refraction but also more complex behaviors that challenged Newton's particle theory. Huygens' construction also addressed double refraction in calcite, where an incident beam splits into two rays; their distinct polarizations were understood later. The superposition of crossing light beams is natural in a linear wave model.
 
 The early 19th century witnessed a decisive shift in scientific opinion with Thomas Young's ingenious double-slit experiment, an investigation that many consider one of the most beautiful and profound experiments in the history of physics. Young directed light through two closely spaced, parallel slits and observed the resulting pattern on a screen placed behind the slits. Instead of seeing two bright bands corresponding to light passing through each slit—as particle theory would predict—Young observed a series of alternating bright and dark fringes, a characteristic interference pattern that could only be explained if light behaved as waves. The bright fringes occurred where waves from the two slits arrived in phase, reinforcing each other through constructive interference, while the dark fringes appeared where the waves arrived out of phase, canceling each other through destructive interference. This elegant demonstration provided compelling, virtually irrefutable evidence for the wave nature of light and shifted the scientific consensus decisively away from Newton's particle theory toward Huygens' wave model. Young's experiment also allowed for the first accurate measurements of light's wavelength, revealing that different colors corresponded to different wavelengths, with red light having longer wavelengths than blue light, providing a physical basis for understanding the spectrum of colors that had fascinated natural philosophers since Newton's work with prisms.
 
@@ -64,18 +71,23 @@ The early 19th century witnessed a decisive shift in scientific opinion with Tho
 :name: fig:basics:newtonRings
 :align: center
 :width: 80%
+:alt: Photograph of a curved glass lens on a flat plate, showing colored concentric interference rings around a contact region near the right side.
 
-Newton's Rings Interference Pattern - When a slightly curved glass lens is placed in contact with a flat glass plate, concentric circular fringes of alternating bright and dark regions appear around the contact point. These interference fringes, known as Newton's rings, are created by the interference between light rays reflected from the bottom surface of the lens and the top surface of the glass plate.
-The varying air gap thickness between the surfaces causes different path differences for the reflected rays, producing constructive interference (bright rings) where the path difference equals a whole number of wavelengths, and destructive interference (dark rings) where the path difference equals an odd number of half-wavelengths. This phenomenon puzzled Newton because it suggested wave-like behavior that was difficult to reconcile with his particle theory of light. The radius of each ring depends on the wavelength of light used, making Newton's rings a precise method for measuring wavelengths and testing the flatness of optical surfaces.
+Newton's rings arise from interference between reflections at the two
+surfaces of the thin air gap. Its thickness increases away from contact.
+One reflected ray reverses phase, so a zero-thickness contact is dark in
+reflected monochromatic light; successive bright and dark rings follow
+as the round-trip path changes. White light gives the colored rings in
+the photograph. Their radii depend on wavelength and surface curvature.
 ```
 
 The triumph of wave theory in the early 1800s sparked a period of remarkable theoretical and experimental progress that would define 19th-century optics. Augustin Fresnel made fundamental contributions to understanding polarized light, demonstrating that light waves were transverse rather than longitudinal—meaning that the oscillations occurred perpendicular to the direction of propagation, like waves on a string, rather than parallel to it, like sound waves in air. Fresnel's mathematical analysis of polarization phenomena led to his famous equations, which accurately predicted the fraction of light reflected and transmitted when electromagnetic waves encounter interfaces between materials with different optical properties. These equations became cornerstone tools for optical design and engineering, enabling the development of sophisticated optical instruments and technologies. Meanwhile, experimental investigations revealed increasingly subtle wave phenomena, including circular and elliptical polarization, optical activity in certain crystals and solutions, and the precise mathematical relationships governing diffraction patterns created by various apertures and obstacles. The wave theory seemed to provide a complete and satisfying account of all optical phenomena, requiring only the assumption of an ether medium to support the propagation of light waves through apparently empty space.
 
-The intellectual culmination of 19th-century wave theory came with James Clerk Maxwell's revolutionary electromagnetic theory, developed in the 1860s, which unified electricity, magnetism, and light into a single, elegant theoretical framework. Maxwell's equations predicted that oscillating electric and magnetic fields could propagate through space as self-sustaining electromagnetic waves, with the electric and magnetic components oscillating perpendicular to each other and to the direction of propagation. Most remarkably, when Maxwell calculated the speed of these electromagnetic waves using only electrical and magnetic constants measured in laboratory experiments, he found that they traveled at precisely the speed of light—a result so striking that it could hardly be coincidental. This mathematical prediction, confirmed by subsequent measurements, established that light was simply electromagnetic radiation within a specific frequency range, visible to human eyes by evolutionary accident rather than fundamental physical necessity. Maxwell's theory implied the existence of electromagnetic radiation spanning a vast spectrum of frequencies, from radio waves with wavelengths of kilometers to gamma rays with wavelengths smaller than atomic nuclei, with visible light occupying only a tiny sliver of this electromagnetic spectrum. The experimental confirmation of radio waves by Heinrich Hertz in the 1880s provided dramatic validation of Maxwell's theoretical predictions and seemed to establish electromagnetic wave theory as one of the great triumphs of 19th-century physics.
+The intellectual culmination of 19th-century wave theory came with James Clerk Maxwell's revolutionary electromagnetic theory, developed in the 1860s, which unified electricity, magnetism, and light into a single, elegant theoretical framework. Maxwell's equations predicted that oscillating electric and magnetic fields could propagate through space as self-sustaining electromagnetic waves, with the electric and magnetic components oscillating perpendicular to each other and to the direction of propagation. Most remarkably, Maxwell found a wave speed close to the measured speed of light using independently measured electrical and magnetic constants. This mathematical prediction, confirmed by subsequent measurements, established that light was simply electromagnetic radiation within a specific frequency range, visible to human eyes by evolutionary accident rather than fundamental physical necessity. Maxwell's theory implied the existence of electromagnetic radiation spanning a vast spectrum of frequencies, from radio waves with wavelengths of kilometers to gamma rays with wavelengths smaller than atomic nuclei, with visible light occupying only a tiny sliver of this electromagnetic spectrum. The experimental confirmation of radio waves by Heinrich Hertz in the 1880s provided dramatic validation of Maxwell's theoretical predictions and seemed to establish electromagnetic wave theory as one of the great triumphs of 19th-century physics.
 
 However, the dawn of the 20th century brought a series of experimental discoveries that would shatter the comfortable certainty of classical wave theory and usher in the quantum revolution that continues to shape modern physics. The crisis began with Max Planck's investigation of blackbody radiation—the electromagnetic energy emitted by hot objects—which revealed that classical physics made predictions that disagreed dramatically with experimental observations. To resolve this "ultraviolet catastrophe," Planck made the desperate assumption that energy could only be emitted or absorbed in discrete packets, or "quanta," with energies given by $E = h\nu$, where $h$ was a new fundamental constant of nature (now called Planck's constant) and $\nu$ was the frequency of the radiation. Although Planck initially viewed this quantization as a mathematical artifice rather than a fundamental feature of nature, his quantum hypothesis marked the beginning of a new era in physics that would revolutionize our understanding of light and matter.
 
-Einstein's explanation of the photoelectric effect provided the next crucial step in establishing the particle nature of light, earning him the Nobel Prize and helping to establish the reality of photons as discrete packets of electromagnetic energy. Einstein demonstrated that when light strikes a metal surface, electrons are ejected with kinetic energies that depend on the frequency of the incident light rather than its intensity—a result that could not be explained by classical wave theory but followed naturally if light consisted of photons with energy $E = h\nu$. Each photon could transfer its entire energy to a single electron, providing enough energy to overcome the metal's work function and eject the electron from the surface. Arthur Compton's scattering experiments in the 1920s provided additional confirmation of photon reality by demonstrating that X-rays scattered from electrons behaved exactly like particles with momentum $p = E/c = h\nu/c$, experiencing billiard-ball-like collisions that conserved both energy and momentum according to relativistic mechanics.
+Einstein's explanation of the photoelectric effect provided the next crucial step in establishing the particle nature of light, earning him the Nobel Prize and helping to establish the reality of photons as discrete packets of electromagnetic energy. Einstein explained why, above a material-dependent threshold frequency, the maximum photoelectron kinetic energy depends on incident frequency, while intensity chiefly changes the emission rate. This follows from photons with energy $E=h\nu$. Each photon could transfer its entire energy to a single electron, providing enough energy to overcome the metal's work function and eject the electron from the surface. Arthur Compton's scattering experiments in the 1920s provided additional confirmation of photon reality by demonstrating that X-rays scattered from electrons behaved exactly like particles with momentum $p = E/c = h\nu/c$, experiencing billiard-ball-like collisions that conserved both energy and momentum according to relativistic mechanics.
 
 The quantum revolution reached its philosophical climax with Louis de Broglie's audacious proposal that the wave-particle duality observed in light was a universal feature of nature, extending to matter itself through the relationship $\lambda = h/p$, where matter particles with momentum $p$ should exhibit wave properties with wavelength $\lambda$. This hypothesis, initially met with skepticism, was dramatically confirmed by electron diffraction experiments that showed electrons creating interference patterns identical to those produced by light waves, revealing that the classical distinction between waves and particles was an artifact of limited experimental resolution rather than a fundamental feature of reality. The subsequent development of quantum mechanics by Schrödinger, Heisenberg, Born, and others established that all quantum objects—photons, electrons, atoms, and even large molecules—exhibit both wave and particle characteristics depending on how they are observed and measured, with the apparent contradiction resolved through the probabilistic interpretation of quantum mechanical wavefunctions that describe the likelihood of finding particles at particular locations when measurements are performed.
 
@@ -137,8 +149,8 @@ The de Broglie wavelength for photons becomes:
 
 This relationship directly connects the wave property (wavelength) with the particle property (energy) through Planck's constant $h$.
 
-Finally, all photons travel at the same speed regardless of their energy:
-$$v = c $$
+In vacuum, photons of every energy travel at $c$:
+$$v_{\rm vacuum} = c.$$
 
 This universal speed is one of the defining characteristics of electromagnetic radiation and forms the basis for Einstein's special theory of relativity.
 
@@ -150,12 +162,17 @@ For the electron, the total energy is $E = K + mc^2 = 2.5 + 0.511 = 3.011$ MeV. 
 $$p = \frac{\sqrt{(3.011)^2 - (0.511)^2}}{c} = \frac{2.97}{c}~\text{MeV}$$
 
 The de Broglie wavelength from equation {eq}`eq:basics:deBroglieWavelength` is:
-$$\lambda = \frac{hc}{pc} = \frac{1.24 \times 10^{-6}}{2.97} = 4.18 \times 10^{-7}~\text{m}$$
+$$\lambda = \frac{hc}{pc}
+= \frac{1.240 \times 10^{-12}\ \text{MeV m}}{2.97\ \text{MeV}}
+= 4.18 \times 10^{-13}\ \text{m}.$$
 
 The electron's speed from equation {eq}`eq:basics:relativisticVelocity` is:
-$$v = c\sqrt{1 - \frac{(0.511)^2}{(3.011)^2}} = 0.987c$$
+$$v = c\sqrt{1 - \frac{(0.511)^2}{(3.011)^2}} = 0.9855c.$$
 
-For a photon with the same total energy (3.011 MeV), the momentum would be $p = E/c = 3.011$ MeV/c, the wavelength would be $\lambda = hc/E = 4.12 \times 10^{-7}$ m, and the speed would be exactly $c$.
+For a photon with the same total energy (3.011 MeV), the momentum is
+$p = E/c = 3.011\ \text{MeV}/c$, the wavelength is
+$\lambda = hc/E = 4.12\times10^{-13}\ \text{m}$, and its vacuum speed is
+$c$. Both wavelengths are on the picometer scale.
 
 ## Statistical Behavior
 
@@ -197,8 +214,13 @@ where $h$ is Planck's constant. This quantization means that electromagnetic wav
 :name: fig:basics:electromagneticSpectrum
 :align: center
 :width: 80%
+:alt: Diagram ordered from long-wavelength radio waves at left through microwaves, infrared, visible light, ultraviolet, X-rays, and short-wavelength gamma rays at right. Wavelength and frequency scales run in opposite directions, with object-size comparisons, an atmospheric-transmission band, and an approximate blackbody-temperature strip.
 
-The complete electromagnetic spectrum showing the continuous range of electromagnetic radiation from radio waves (longest wavelength, lowest frequency) to gamma rays (shortest wavelength, highest frequency). Wavelengths are given in meters, with visible light occupying only a narrow band from approximately 400-700 nanometers. Note the logarithmic scale spanning over 20 orders of magnitude in both wavelength and frequency, illustrating the vast range of electromagnetic phenomena from everyday radio communications to high-energy cosmic radiation.
+An overview of the electromagnetic spectrum, from radio through gamma
+rays. The illustrated wavelength and frequency axes cover roughly 15–16
+orders of magnitude; the visible band is only a small interval. The
+region boundaries and atmospheric-transmission strip are schematic,
+not sharp limits.
 ```
 
 ## The Electromagnetic Spectrum Regions
@@ -215,13 +237,13 @@ An accelerating charge and the electromagnetic disturbance it radiates. Move the
 ```
 
 ### Microwaves
-With wavelengths from about one meter down to one millimeter, microwaves occupy the transition region between radio waves and infrared radiation. They are extensively used in radar systems, where their ability to reflect off objects enables distance and velocity measurements. Microwave ovens operate at 2.45 GHz, causing water molecules to rotate and generate heat through friction. Satellite communications and cellular phone networks also rely heavily on microwave frequencies.
+With wavelengths from about one meter down to one millimeter, microwaves occupy the transition region between radio waves and infrared radiation. They are extensively used in radar systems, where their ability to reflect off objects enables distance and velocity measurements. Microwave ovens operate near 2.45 GHz; absorption by water and other polar or ionic components dissipates electromagnetic energy as heat. Satellite communications and cellular networks also use microwave bands.
 
 ### Infrared Radiation
-Infrared (IR) radiation spans wavelengths from 770 nanometers to about one millimeter. All objects above absolute zero emit thermal infrared radiation, with the peak wavelength determined by temperature according to Wien's displacement law. Infrared radiation is subdivided into near-infrared (closest to visible light), mid-infrared, and far-infrared regions. Night-vision equipment detects infrared emission from warm objects, while infrared spectroscopy identifies molecular vibrations for chemical analysis.
+Infrared (IR) radiation spans roughly 700 nanometers to one millimeter. Objects above absolute zero emit thermal radiation; warm objects emit substantial infrared radiation, while the peak wavelength depends on temperature according to Wien's displacement law. Infrared radiation is subdivided into near-infrared (closest to visible light), mid-infrared, and far-infrared regions. Night-vision equipment detects infrared emission from warm objects, while infrared spectroscopy identifies molecular vibrations for chemical analysis.
 
 ### Visible Light
-The visible portion of the electromagnetic spectrum represents only a tiny fraction of the total range, spanning approximately 380 to 770 nanometers. Human eyes have evolved to detect this narrow band because it corresponds to the peak output of our Sun and the wavelengths that penetrate Earth's atmosphere most effectively. Within this range, different wavelengths correspond to different colors: violet (380-450 nm), blue (450-495 nm), green (495-570 nm), yellow (570-590 nm), orange (590-620 nm), and red (620-770 nm).
+The visible portion of the electromagnetic spectrum represents only a tiny fraction of the total range, spanning roughly 380 to 750 nanometers, with perceptual limits varying between observers and conditions. Human eyes have evolved to detect this narrow band because it corresponds to the peak output of our Sun and the wavelengths that penetrate Earth's atmosphere most effectively. Within this range, different wavelengths correspond to different colors: violet (380-450 nm), blue (450-495 nm), green (495-570 nm), yellow (570-590 nm), orange (590-620 nm), and red (620-770 nm).
 
 ```{phet} color-vision
 :label: fig:basics-color-vision-sim
@@ -230,13 +252,13 @@ How the eye's RGB cone responses combine, and how additive mixing of red, green,
 ```
 
 ### Ultraviolet Radiation
-Ultraviolet (UV) radiation extends from the violet edge of visible light (380 nm) down to about 10 nanometers. This region is further subdivided based on biological effects and atmospheric absorption: UV-A (315-400 nm) penetrates the atmosphere and can cause skin aging; UV-B (280-315 nm) is partially absorbed by ozone and causes sunburn; UV-C (100-280 nm) is completely absorbed by the atmosphere and is germicidal. UV radiation has sufficient energy to break chemical bonds and ionize atoms, making it both useful for sterilization and potentially harmful to living tissue.
+Ultraviolet (UV) radiation extends from the violet edge of visible light to shorter wavelengths. The commonly used biological bands are UV-A (315–400 nm), UV-B (280–315 nm), and UV-C (100–280 nm). The atmosphere absorbs solar UV-C and most UV-B before they reach the ground; artificial UV-C sources still pose exposure hazards. UV photons can drive chemical reactions and damage tissue. Ionization depends on both photon energy and the target, so it is not a property of every UV photon.
 
 ### X-rays
 X-rays occupy wavelengths from about 10 nanometers down to 10⁻⁴ nanometers. They are typically produced when high-energy electrons bombard a metal target, causing the emission of characteristic X-rays as inner electron shells are disturbed. X-rays penetrate soft tissue but are absorbed by denser materials like bone, making them invaluable for medical imaging. X-ray crystallography uses the wave nature of X-rays to determine atomic structure in crystals through diffraction patterns.
 
 ### Gamma Rays
-Gamma rays represent the shortest wavelengths in the electromagnetic spectrum, typically less than 0.1 nanometers. They originate from nuclear decay processes, nuclear reactions, and high-energy astronomical phenomena. Gamma rays have enormous penetrating power and require thick lead or concrete shielding. In medicine, controlled gamma radiation is used for cancer treatment, while gamma-ray astronomy reveals the most energetic processes in the universe.
+Gamma rays often have very short wavelengths and can originate in nuclear transitions and high-energy astrophysical processes. Their energies overlap those of X-rays; origin is often a more useful distinction than a fixed wavelength boundary. Shielding requirements depend on photon energy and source strength. In medicine, controlled gamma radiation is used for cancer treatment, while gamma-ray astronomy reveals the most energetic processes in the universe.
 
 ## Energy Quantization and Detection
 
@@ -244,11 +266,11 @@ A crucial concept for understanding electromagnetic radiation is that its energy
 
 ## Example 1-2: Radar Detection and Photon Statistics
 
-Consider a radar receiver detecting electromagnetic radiation at different wavelengths. For a 10-meter radio wave (30 MHz), each photon carries energy $E = h\nu = (6.63 \times 10^{-34})(3 \times 10^7) = 2.0 \times 10^{-26}$ J. A typical radar signal might deliver $10^{-12}$ watts to the receiver, corresponding to about $3 \times 10^{13}$ photons per second—far too many to detect individually.
+Consider a radar receiver detecting electromagnetic radiation at different wavelengths. For a 10-meter radio wave (30 MHz), each photon carries energy $E = h\nu = (6.63 \times 10^{-34})(3 \times 10^7) = 2.0 \times 10^{-26}$ J. A $10^{-12}$ W received signal at this frequency corresponds to about $5.0\times10^{13}$ photon energies per second. Ordinary radar measures the collective electromagnetic field rather than resolving single microwave photons.
 
-In contrast, X-ray photons with wavelength 0.1 nm have energy $E = hc/\lambda = 2.0 \times 10^{-15}$ J—about $10^{11}$ times more energetic than the radio photons. The same power level would correspond to only about 300 X-ray photons per second, easily counted by modern detectors.
+In contrast, 0.1 nm X-ray photons have energy $E=hc/\lambda\approx2.0\times10^{-15}$ J, about $10^{11}$ times the radio photon energy. If the **received** X-ray power were also $10^{-12}$ W, it would deliver about 500 photons per second to a detector with perfect collection and detection efficiency.
 
-This dramatic difference in photon flux explains why radio astronomy requires large dish antennas to collect sufficient signal, while X-ray astronomy can operate with much smaller collection areas but requires specialized detectors capable of registering individual photons.
+Photon energy changes the number of photons at a fixed received power; it does not by itself determine telescope size. Radio dishes also need collecting area for faint sources and aperture for angular resolution, while X-ray telescopes require suitable focusing optics and photon-sensitive detectors.
 
 The electromagnetic spectrum thus represents a continuum of radiation unified by common physical principles yet displaying remarkably diverse properties and applications across its vast range of wavelengths and frequencies.
 
@@ -264,13 +286,20 @@ By the end of this section, you will be able to:
 - Calculate the speed of light in various materials using the index of refraction
 ```
 
-The speed of light in a vacuum, denoted as $c$, stands as one of physics' most fundamental constants. This remarkable value not only defines the ultimate speed limit of the universe but also serves as a cornerstone of Einstein's theory of relativity. What makes the speed of light truly extraordinary is its invariance—all observers, regardless of their motion, measure the same value for light's speed in a vacuum. However, when light travels through matter, its speed decreases in a predictable and measurable way, leading to phenomena that have profound implications for our understanding of optics and the nature of light itself.
+The speed of light in vacuum, $c$, is a defining SI constant. Inertial
+observers measure the same vacuum value. In a material, phase velocity
+depends on frequency and the medium; pulse or signal propagation can
+involve a different group velocity.
 
 ## Historical Measurements of Light's Speed
 
 ### Roemer's Astronomical Method
 
-The first successful measurement of light's speed came from an unexpected source: the moons of Jupiter. In 1675, Danish astronomer Ole Roemer (1644–1710) was studying Io, one of Jupiter's four largest moons, when he noticed something peculiar. While Io maintained a consistent orbital period of 42.5 hours around Jupiter, the timing of its eclipses appeared to fluctuate by several seconds depending on Earth's position in its orbit around the Sun.
+The first strong evidence for a finite light-travel time came from Io's
+eclipses. In 1676, Danish astronomer Ole Rømer (1644–1710) observed
+that eclipse times accumulated a delay when Earth was moving away from
+Jupiter and an advance when it was approaching. Io's orbital period
+was not changing by the accumulated amount.
 
 Roemer's brilliant insight was recognizing that this fluctuation resulted from light's finite travel time. When Earth moved away from Jupiter in its orbit, light from Io's eclipses had to travel greater distances to reach terrestrial observers. Conversely, when Earth approached Jupiter, the light path shortened, causing eclipses to appear to occur earlier than predicted.
 
@@ -278,11 +307,15 @@ Roemer's brilliant insight was recognizing that this fluctuation resulted from l
 :name: fig:basics:roemer
 :align: center
 :width: 80%
+:alt: Two panels show Earth at successive orbital positions while Io circles Jupiter. Light paths from Io to Earth lengthen in one part of Earth's orbit and shorten in the other, changing apparent eclipse times.
 
 Roemer's method for measuring the speed of light using observations of Io's eclipses. The apparent timing of eclipses varies as Earth's distance from Jupiter changes throughout the year.
 ```
 
-By carefully measuring these timing differences and calculating the variations in Earth-Jupiter distance, Roemer determined that light traveled at approximately $2.0 \times 10^8 \, \text{m/s}$—remarkably close to the actual value, differing by only 33%.
+Rømer's timing argument established that light takes time to cross the
+changing Earth–Jupiter distance. A historical estimate using the
+then-known planetary distances was about $2.0\times10^8\ \text{m/s}$,
+roughly one-third below the modern value.
 
 ### Terrestrial Measurements
 
@@ -293,6 +326,7 @@ The first successful Earth-based measurement came in 1849 from French physicist 
 :name: fig:basics:fizeau
 :align: center
 :width: 70%
+:alt: Light from a lamp passes through a gap in a rotating toothed wheel, travels to a distant mirror, and returns toward the wheel; an arrow indicates the wheel's rotation.
 
 Fizeau's rotating wheel method. Light passes through the gaps between the teeth to reach the mirror, but returning light is blocked when the wheel rotates at the correct speed.
 ```
@@ -301,11 +335,15 @@ From the wheel's rotation rate, the number of teeth, and the distance to the mir
 
 Jean Bernard Léon Foucault (1819–1868) refined this approach by replacing the toothed wheel with a rotating mirror, achieving even greater accuracy. By 1862, he measured the speed of light as $2.98 \times 10^8 \, \text{m/s}$, within 0.6% of today's accepted value.
 
-Albert Michelson (1852–1931) continued improving these techniques throughout his career, beginning his measurements in 1878 and refining them until 1926, when he achieved a precision of $(2.99796 \pm 4) \times 10^8 \, \text{m/s}$.
+Albert Michelson (1852–1931) continued refining optical speed
+measurements. His 1926 result was reported as
+$(299{,}796\pm4)\ \text{km/s}$, with the uncertainty expressed in
+kilometers per second.
 
 ## The Modern Value
 
-Today, the speed of light in vacuum is known with extraordinary precision and serves as a fundamental physical constant:
+Since the 1983 definition of the metre, the speed of light in vacuum
+has this exact SI value:
 
 ```{math}
 :label: eq:basics:speedLight
@@ -320,16 +358,21 @@ When light travels through materials other than vacuum, it slows down due to int
 
 ### Index of Refraction
 
-We quantify how much a material slows light using the **index of refraction**, denoted $n$:
+For a monochromatic wave in an isotropic material, the **phase refractive
+index**, $n$, relates vacuum speed to phase velocity:
 
 ```{math}
 :label: eq:basics:indexRefraction
-n = \frac{c}{v}
+n = \frac{c}{v_{\mathrm{phase}}}
 ```
 
-where $v$ represents the observed speed of light in the material.
+This definition describes motion of a constant-phase wavefront.
+It is the appropriate $n$ for the refraction and wavelength examples below.
+The group speed of a pulse generally differs in a dispersive medium.
 
-Since light in matter always travels slower than in vacuum (where $v = c$), the index of refraction is always greater than or equal to one: $n \geq 1$. In vacuum, $n = 1$ exactly.
+For the transparent visible-light examples below, $n>1$ and
+$v_{\mathrm{phase}}<c$. This is not a universal inequality: an X-ray
+phase index can be below one. In vacuum, $n=1$ exactly.
 
 ### Representative Values
 
@@ -391,7 +434,11 @@ Since light in matter always travels slower than in vacuum (where $v = c$), the 
 These values correspond to light with a wavelength of 589 nm in vacuum. The index of refraction varies slightly with wavelength, leading to phenomena such as dispersion.
 ```
 
-Notice that gases have indices very close to 1.0, which makes physical sense—atoms in gases are widely separated, so light spends most of its time traveling at speed $c$ through the vacuum between atoms. For most practical purposes, we can approximate $n = 1$ for gases unless high precision is required.
+Gases at ordinary pressure have indices close to 1 because their
+optical response per unit volume is small. This is a collective wave
+response, not a sequence of vacuum flights interrupted by atoms.
+For rough estimates in air, $n\approx1$ is often adequate; precision
+work uses wavelength, temperature, pressure, and humidity.
 
 ### Example: Speed of Light in Gemstones
 
@@ -403,9 +450,12 @@ Let's calculate the speed of light in zircon, a material often used in jewelry a
 
 **Solution:**
 
-Rearranging {eq}`eq:basics:indexRefraction` to solve for $v$:
+Rearranging {eq}`eq:basics:indexRefraction` to solve for
+$v_{\mathrm{phase}}$:
 
-$$v = \frac{c}{n} = \frac{3.00 \times 10^8 \, \text{m/s}}{1.923} = 1.56 \times 10^8 \, \text{m/s}$$
+$$v_{\mathrm{phase}} = \frac{c}{n}
+= \frac{3.00 \times 10^8\ \text{m/s}}{1.923}
+= 1.56 \times 10^8\ \text{m/s}.$$
 
 This speed is slightly larger than half the speed of light in vacuum—still incredibly fast by everyday standards, yet significantly reduced from light's maximum speed.
 
@@ -421,6 +471,7 @@ From [](#table:basics:refractiveIndices), ethanol and fresh water have indices o
 :name: fig:basics:refractiveIndex
 :align: center
 :width: 90%
+:alt: Plot of refractive index versus wavelength from 0.3 to 1.6 micrometers for six optical glasses. Every curve decreases with wavelength; dense flint glasses have the highest indices and fluorite crown the lowest.
 
 Refractive index as a function of wavelength for several types of glasses.
 ```
@@ -438,6 +489,7 @@ Light can travel from a source to an observer through three primary pathways:
 :name: fig:basics:lightPaths
 :align: center
 :width: 90%
+:alt: Three panels show sunlight traveling toward Earth, a woman viewing scenery through a window, and a person seeing their face in a mirror; arrows indicate direct travel, transmission through glass, and reflection.
 
 Three ways light can travel from source to observer: (a) direct transmission through vacuum, (b) transmission through media, and (c) reflection from surfaces.
 ```
@@ -461,7 +513,7 @@ These laws, combined with the ray model, provide powerful tools for analyzing op
 :class: note
 
 - The speed of light in vacuum ($c = 3.00 \times 10^8 \, \text{m/s}$) is a fundamental constant
-- Light slows down in matter, described by the index of refraction $n = c/v$
+- In ordinary transparent visible-light materials, the phase index is $n=c/v_{\mathrm{phase}}$; pulse speed can differ
 - The ray model applies when light interacts with objects much larger than its wavelength
 - Geometric optics uses straight-line ray propagation and geometric principles to analyze optical systems
 ```

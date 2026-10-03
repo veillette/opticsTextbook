@@ -9,7 +9,7 @@ U_1(x,y,z) = Q_1 \frac{e^{ik \sqrt{(x-x_1)^2 + y^2 + z^2}}}{\sqrt{(x-x_1)^2 + y^
 ```
 where $Q_1$ is a given complex number whose modulus is proportional to the source strength.
 
-**(a)** Derive that for fixed $z_1$ and for sufficiently large $z>0$ the field can be approximated by
+**(a)** Derive that for fixed $x_1$ and sufficiently large $z>0$ such that the source-dependent phase $kx_1^2/(2z)$ is negligible, the field can be approximated by
 
 ```{math}
 :label: eq:diff:farFieldApproximation
@@ -32,17 +32,18 @@ U(x,y,z) \approx U_{1,far}(x,y,z)\left( 1 + e^{i\phi} e^{i \frac{k \Delta x x}{z
 ```
 where $\Delta x = x_1-x_2$.
 
-**(c)** For which angles $\theta=x/z$ does the intensity in far field vanish? Show that the distance between the point sources $\Delta x$ can be determined from the angular separation of the zeros of the intensity. Does the angular separation depend on the phase difference $\phi$?
+**(c)** For which small angles $\theta\simeq x/z$ does the far-field intensity vanish? Show that the distance between the point sources $\Delta x$ can be determined from the angular separation of the zeros of the intensity. Does the angular separation depend on the phase difference $\phi$?
 
 **(d)** What should be the phase difference between the point sources such that for $x/z=0$ on the screen at large distance $z$ the intensity vanishes?
 
 **Problem 7.2** Consider two slits of equal width $a$ in a non-transparent screen of thickness $d$ in the plane $z=0$ as shown in {numref}`fig:diff:twoSlits`. The screen is illuminated by a plane wave with unit amplitude and propagating in the positive $z$-direction.
 In the second slit there is a piece of glass with refractive index $n$ and thickness $d$.
-In the first slit there is vacuum.
+In the first slit there is vacuum. Neglect interface reflections, absorption, and the small lateral displacement inside the glass; treat it as an ideal phase-only insert.
 
 ```{figure} ../Images/07_24_01_two_slits_glass.png
+:alt: Two equal slits separated by b in an opaque screen, one containing glass, with diffracted light measured to the right.
 :name: fig:diff:twoSlits
-Two slits centered at $y=0$ and very long in the $y$-direction in a dark screen of thickness $d$. The lower slit is filled with glass, the upper is in vacuum.
+Two slits with centers separated along $x$ and long sides parallel to $y$ in a dark screen of thickness $d$. The lower slit is filled with glass, the upper is in vacuum.
 ```
 
 **(a)** If the field immediately behind slit 1 has complex amplitude equal to $1$, explain that the field immediately behind slit 2 is given by
@@ -53,7 +54,7 @@ e^{ i \phi}
 \end{align*}
 ```
 with
-$\phi= k (n-1)d$.
+$\phi=k_0(n-1)d$, where $k_0=2\pi/\lambda_0$ is the vacuum wave number.
 
 **(b)** Derive (using {eq}`eq:diff:farFieldApproximation` or in another way)
   that the Fraunhofer intensity pattern on a screen along the line $y=0$
@@ -83,6 +84,7 @@ U_s(x,y,z,t)= \frac{e^{i k \sqrt{ (x-a)^2 + y^2 + z^2}-i \omega t}}{\sqrt{(x-a)^
 ```
 
 ```{figure} ../Images/07_25_02_lloyd_mirror.png
+:alt: A source and an aperture above a horizontal mirror each send direct and reflected light to a distant screen.
 :name: fig:diff:lloydMirror
 Lloyd mirror configuration with a point source (left) and a rectangular aperture in a dark screen (right), above a mirror and with a screen at distance $z$ where the field is observed.
 ```
@@ -124,7 +126,7 @@ Use again path length differences and a drawing in your derivation.
 
 **Problem 7.4** Note: to answer the following questions it is **NOT** necessary to compute diffraction integrals.
 
-**(a)** Consider two equally strong point sources which with respect to a coordinate system $(x,y,z)$ are at $(-a/2,0,0)$ and $(a/2,0,0)$, where the $z$-axis is the optical axis. Suppose the point sources are mutually coherent and suppose that they emit in phase. The maximum intensity on a screen at large (i.e. Fraunhofer) distance is then on the optical axis.
+**(a)** Consider two equally strong point sources which with respect to a coordinate system $(x,y,z)$ are at $(-a/2,0,0)$ and $(a/2,0,0)$, where the $z$-axis is the optical axis. Suppose the point sources are mutually coherent, emit in phase, and have separation $a\gg\lambda$ so that the first zero is within the paraxial range. The maximum intensity on a screen at large (i.e. Fraunhofer) distance is then on the optical axis.
 Show that the smallest angle with the optical axis at which there is a zero on this screen is given by $\lambda/(2a)$.
 
 **(b)** What is the smallest angle with the optical axis at which there is a zero on the screen when the two point sources emit with phase difference $\pi/2$?
@@ -135,7 +137,7 @@ Show that the smallest angle with the optical axis at which there is a zero on t
 
 **(d)** Consider now two identical apertures in an opaque screen at $z=0$. One aperture has its center at $(-a/2,0,0)$ and the other has its center at $(a/2,0,0)$.
 The apertures are illuminated by a time-harmonic plane wave at perpendicular incidence to the screen (i.e. propagating parallel to the $z$-axis).
-Explain that whatever the shape of these apertures, the smallest angle for which a zero occurs in the far field intensity is at $\lambda/(2a)$.
+Show that the two-aperture **interference factor** vanishes at $\theta\simeq\lambda/(2a)$, whatever their identical shape. Could zeros of the single-aperture envelope occur at smaller angles?
 
 **(e)** Suppose that the plane wave is incident at some angle different from $90^o$. Let its complex field be given by
 
@@ -144,9 +146,9 @@ Explain that whatever the shape of these apertures, the smallest angle for which
 U(x,z)= e^{i (k_x x + k_z z)}
 \end{align*}
 ```
-where $\sqrt{k_x^2+k_z^2}=k$. Suppose that $k_x a =\pi/2$ (modulo $2\pi$). What is now the smallest angle where a zero occurs on the screen in far field? Explain your answer.
+where $\sqrt{k_x^2+k_z^2}=k$. Suppose that $k_x a =\pi/2$ (modulo $2\pi$). Find the signed angle of the interference zero closest to the optical axis, assuming the single-aperture envelope does not vanish first. Explain how the oblique illumination shifts the pattern.
 
-**(f)** Now imagine that both (identical) apertures are filled with glass plates with thickness that varies with position. The two glass plates are identical and they are identically positioned in each of the two apertures. Imagine that we illuminate the apertures with a plane wave at perpendicular incidence. The field transmitted by each aperture is now a rather complicated function of position, however the transmitted fields behind both apertures are identical. Does the far field intensity still vanish for angle $\lambda/(2a)$ or will it be modified by the presence of the glass plates? Explain your answer.
+**(f)** Now imagine that both (identical) apertures are filled with glass plates with thickness that varies with position. The two glass plates are identical and they are identically positioned in each of the two apertures. Imagine that we illuminate the apertures with a plane wave at perpendicular incidence. The field transmitted by each aperture is now a rather complicated function of position, however the transmitted fields behind both apertures are identical. Does the two-aperture interference zero remain at $\theta\simeq\lambda/(2a)$, or do the identical glass plates shift it? What can change about the envelope? Explain your answer.
 
 
 **Problem 7.5** Bessel beams.
@@ -167,17 +169,17 @@ U_{Bessel}(x,y)= \left\{ \begin{array}{l}A, \;\;\; \text{ if } b-\Delta r < \sqr
 \int_0^{2\pi} e^{i \zeta \cos \psi} \mathrm{d}\psi = 2\pi J_0(\zeta).
 \end{align*}
 ```
-to derive that for sufficiently small $\Delta r$, the field in the focal plane is in good approximation given by
+to derive that for sufficiently small $\Delta r$, the field in the focal plane, apart from the common lens-propagation prefactor and quadratic phase, is approximately
 
 ```{math}
 \begin{align*}
-U_{Bessel}(x,y,f_i)= 2\pi A b \Delta r J_0\left( k \frac{b r}{f}\right).
+U_{Bessel}(x,y,f_i)= 2\pi A b \Delta r J_0\left(k\frac{br}{f_i}\right).
 \end{align*}
 ```
 
 **(b)** The beam obtained this way is called a Bessel beam. Explain why this beam has a very long focal depth.
 
-**(c)** Suppose that the Airy spot obtained by focusing of a unit amplitude plane wave and the Bessel beam carry the same amount of energy. Show that then the amplitude of the Bessel beam is given by
+**(c)** In the thin-ring approximation $\Delta r\ll b$, suppose that a full circular pupil illuminated with unit amplitude and the ring pupil carry the same incident power. Show that then the amplitude of the Bessel beam is given by
 
 ```{math}
 \begin{align*}
@@ -196,46 +198,35 @@ If $b=a$ and $\Delta r=0.1 a$ this becomes
 
 ```{math}
 \begin{align*}
-\frac{U_{Bessel }}{U_{Airy}} = \sqrt{\frac{2 \Delta r}{ a}} \approx 0.44,
+\frac{U_{Bessel }}{U_{Airy}} = \sqrt{\frac{2 \Delta r}{ a}} \approx 0.45,
 \end{align*}
 ```
-which is the case shown in {numref}`fig:diff:figBesselplot`.
+The finite ring in the plotted example gives about 0.44 when its exact area is used; the displayed formula uses the thin-ring approximation. This is the case shown in {numref}`fig:diff:figBesselplot`.
 
 ```{figure} ../Images/07_26_03_bessel_plot.png
+:alt: Radial plot comparing an Airy central peak with a lower Bessel peak and stronger Bessel side lobes.
 :name: fig:diff:figBesselplot
-Amplitude in the focal plane of a Bessel beam and of an Airy spot with the same total energy. The lens pupil has diameter $a=10000 \lambda$, the ring aperture of the Bessel beam case is at the outer edge of the pupil ($b=a$) and has width $\Delta r = 0.1 a$ and the $\text{NA}=0.1$.
+Amplitude in the focal plane of a Bessel beam and of an Airy spot with the same total energy. The lens pupil has radius $a=10000\lambda$, the ring aperture of the Bessel beam case is at the outer edge of the pupil ($b=a$) and has width $\Delta r = 0.1 a$ and the $\text{NA}=0.1$.
 ```
 
 **(e)** The Bessel beam has stronger side lobes than the Airy spot. Explain the reason.
 
 
-**Problem 7.6** \* Stellar interferometry.
+**Problem 7.6** Stellar interferometry.
 
-We consider the emission by a star of light of a narrow frequency band with center frequency $\bar{\omega}$ and corresponding wavelength $\bar{\lambda}=c 2\pi/\bar{\omega}$.
-The star is an extended spatially incoherent source. Let $I(x,y)$ be the intensity on the star's surface orientated towards the earth. The aim of the exercise is to determine $I(x,y)$ by stellar interferometry.
+Observe a star through a narrow spectral band centered at vacuum wavelength $\lambda$. Model it as a distant spatially incoherent source with angular brightness $B(\theta_x,\theta_y)$, where $(\theta_x,\theta_y)$ specifies the transverse propagation direction of light arriving at Earth. Assume paraxial propagation, negligible temporal decorrelation across the instrument paths, and equal collection efficiencies. Let two collectors have transverse positions $\mathbf r_1$ and $\mathbf r_2$ and baseline $\mathbf b=\mathbf r_1-\mathbf r_2$.
 
-Let $U_0(x,y,t)$ be the field emitted at the surface of the star. Then the mutual coherence function at points $S_1=(x_1,y_1)$, $S_2=(x_2, y_2)$ on the surface of the star is:
+**(a)** Show that one source element at direction $\boldsymbol\theta=(\theta_x,\theta_y)$ contributes a plane-wave factor $\exp[i(2\pi/\lambda)\boldsymbol\theta\cdot\mathbf r]$ at collector position $\mathbf r$, apart from a common phase.
 
+**(b)** Use the independence of different source elements to derive the mutual coherence
 ```{math}
-\begin{align*}
-\Gamma(S_1,S_2, \tau)&= \braket{ U_0(S_1,t)^* U_0(S_2,t+\tau)}  \\
-&=
-I(x_1,y_1) e^{i \omega \tau} \delta(x_1- x_2)\delta(y_1- y_2) \;\;\; \text{ for all } \tau.
-\end{align*}
+\Gamma(\mathbf b)\propto
+\iint B(\boldsymbol\theta)
+e^{i(2\pi/\lambda)\mathbf b\cdot\boldsymbol\theta}
+\,\mathrm d^2\boldsymbol\theta.
 ```
+State the normalized complex visibility $V(\mathbf b)=\Gamma(\mathbf b)/\Gamma(\mathbf 0)$.
 
-**(a)** Let $z_e$ be the distance of the star from earth. Use the quasi-monochromatic approximation to derive the field at a point $P_e=(x_e,y_e)$ on earth.
+**(c)** If the two collected beams have equal mean intensity, how is the measured fringe contrast related to $|V(\mathbf b)|$? What additional phase information is needed to reconstruct an image from measurements at many baselines?
 
-**(b)** Show that the mutual coherence function at two points $P_e=(x_e,y_e)$ and $\tilde{P}_2=(\tilde{x}_e, \tilde{y}_e)$ on earth is for $\tau=0$ given by
-
-```{math}
-\begin{align*}
-\Gamma(P_e, \tilde{P}_e,\tau=0) = \int\int I(x_1,y_1) e^{2\pi i \left( \frac{x_e - \tilde{x}_e }{\bar{\lambda} z_e} x_1 +
-\frac{y_e -\tilde{y}_e }{\bar{\lambda} z_e}y_1\right) } \, dx_1 dy_1.
-\end{align*}
-```
-i.e. the mutual coherence function between points on earth for time delay $\tau=0$ can be expressed as the Fourier transform of the intensity $I(x,y)$ emitted by the star, evaluated at spatial frequencies $\xi=\frac{x_e - \tilde{x}_e }{\bar{\lambda} z_e} $ and $\eta=\frac{y_e -\tilde{y}_e }{\bar{\lambda} z_e}$.
-
-**(c)** Explain how the mutual coherence for time delay $\tau=0$ can be measured on earth using interferometry and how this can lead to retrieving the intensity of the star.
-
-**(d)** What determines the resolution that can be achieved?
+**(d)** Estimate the angular scale probed by a largest baseline $B_{\max}$. Explain why limited baseline coverage and measurement noise also affect the reconstructed image.

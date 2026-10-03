@@ -13,18 +13,25 @@ This textbook is designed for undergraduate students encountering optics for the
 
 ## Organization and Approach
 
-The text is structured to build understanding progressively, beginning with geometric optics, polarization, interference and diffraction. Later chapters delve into modern topics including laser physics and fiber optics, providing students with exposure to current research frontiers.
+The text builds understanding from the nature of light and geometric optics
+through optical instruments, polarization, waves, interference, and
+diffraction. Later chapters cover lasers, fiber optics, and ray matrices.
 
-Each chapter opens with clear learning objectives and concludes with a comprehensive problem set ranging from conceptual questions to challenging quantitative exercises. Worked examples throughout the text demonstrate problem-solving techniques and reinforce key principles. Special attention is given to experimental methods and real-world applications, helping students connect theoretical concepts to observable phenomena.
+Chapters include learning objectives, worked examples, and linked problem
+pages with conceptual and quantitative questions. Experimental methods and
+applications connect the models to observable phenomena.
 
-The field of optics continues to evolve rapidly, with new discoveries and applications emerging regularly. While this text provides a solid foundation in established principles, I encourage students to view it as a launching point for further exploration of this fascinating and vital area of physics.
+The field of optics continues to develop. This text provides a foundation
+in established principles and a starting point for further study.
 
 ## Accessing This Textbook
 
-This textbook is available online and can be accessed in multiple formats:
-- **Web Version**: Read directly in your browser with full navigation and search capabilities
-- **PDF Version**: A PDF download option will appear at the top right once generated (requires LaTeX installation)
-- **Source Files**: Markdown source files are available via the repository linked above
+This textbook is available in several formats:
+
+- **Web:** Read with navigation and search.
+- **PDF:** Use the download link when the generated export is available.
+  The print export uses Typst.
+- **Source:** Read the MyST Markdown in the linked repository.
 
 This QuadriviumPress edition is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
 It is adapted from *Interactive Optics — 2nd edition* by Aurèle J.L. Adam,

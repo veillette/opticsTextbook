@@ -7,12 +7,13 @@ A ray from point $P=(x_P,y_P)$ with $y_P>d$ passes through point $Q=(x_Q,y_Q)$ w
 
 ```{figure} ../Images/02_16_slab.png
 :name: fig:geo:slab
+:alt: Ray from P above a slab of thickness d crosses at A, travels through the slab, exits at B, and reaches Q below.
 A ray through points $P$ and $Q$.
 ```
 
 **(a)** Write a formula for the OPL of the ray from $P$ to $Q$ as shown in {numref}`fig:geo:slab`.
 
-**(b)** Find the equations to be satisfied by $x_A$ and $x_B$ such that the OPL is minimum.
+**(b)** Find the equations satisfied by $x_A$ and $x_B$ at a stationary OPL.
 Hint: set the partial derivatives of the OPL with respect to $x_A$ and $x_B$ equal to zero.
 
 **(c)** Express the equations derived under b) in terms of $\sin \theta_1$, $\sin \theta_2$ and $\sin \theta_3$ and derive that Snell's Law holds for the angles $\theta_1$ and $\theta_3$:
@@ -35,7 +36,11 @@ Explain your answer.
 
 **Problem 2.2** Perfect focusing by an ellipsoid and a hyperboloid.
 
-Suppose that there are two media with refractive indices $n_1>n_2$ and that point $S$ is at infinity in the medium with refractive index $n_2$. We will construct a surface (interface) between the two media such that all rays from $S$ are focused into the same point $F$ (see {numref}`fig:geo:focusRight`a). Because $S$ is at a very large distance, the rays entering from the right are parallel. Since all parallel rays have traveled the same distance when they hit the surface $DD'$ perpendicular to the rays, all parallel rays have the same phase at their intersection points with the plane $DD'$.
+Suppose that two media have indices $n_1>n_2$ and the source $S$
+is far to the left in medium $n_2$. We seek an interface that focuses
+the parallel incident rays at $F$ in medium $n_1$, as in
+{numref}`fig:geo:focusRight`. A plane $DD'$ perpendicular to the
+incident beam is a constant-phase reference plane.
 
 **(a)** If point $A$ is on the interface sought, derive that
 
@@ -55,19 +60,24 @@ e|DA| = |AF|,
 \end{align*}
 ```
 
-where $e = n_2/n_1 < 1$. This is the directrix definition of an ellipsoid with focus $F$.
+where $e=n_2/n_1<1$. This is the focus–directrix definition of
+an ellipse in cross section, or an ellipsoid of revolution.
 
-**(c)** Suppose next that $n_2>n_1$, as shown at the right of {numref}`fig:geo:focusRight`. Show that now, by the same argument as above, the interface is a hyperboloid with $F$ as one of its focal points.
+**(c)** Suppose next that $n_2>n_1$. By the same phase-matching
+argument, show that the interface is a hyperboloid with $F$ as a focus.
 
 ```{figure} ../Images/02_17_focus_left.png
 :name: fig:geo:focusRight
-(a) Ellipsoid ($n_2<n_1$) and (b) hyperboloid ($n_2>n_1$) to perfectly focus a parallel beam incident from the medium with refractive index $n_2$ into a point in a medium with refractive index $n_1$.
+:alt: Parallel rays in medium n2 enter a curved interface and converge at focus F in medium n1; an incident reference plane DD prime is marked.
+Ellipsoidal interface ($n_2<n_1$) focusing a parallel beam from medium
+$n_2$ at $F$ in medium $n_1$. The hyperboloidal case is derived separately.
 ```
 
 **(d)** Use the previous results to describe a lens with refractive index $n_2>n_1$ and having hyperboloid surfaces which perfectly image two given points S and P in the ambient medium with refractive index $n_1$.
 
 ```{figure} ../Images/02_18_perfect_imaging.png
 :name: fig:geo:perfectImagingProblem
+:alt: Lens-shaped region n2 between lower-index surroundings n1 transforms rays diverging from S into rays converging at P.
 Lens with hyperboloid surfaces for perfect imaging of a pair of points.
 ```
 
@@ -100,20 +110,28 @@ Derive that
 **(c)** Show that
   {eq}`eq:geo:parabolicMirrorOpl1` is satisfied for points $A$ for
   which $|AF|=|AD|$,
-and conclude that the mirror is a paraboloid with $f$ as focus and $\Sigma_2$ as directrix.
+and conclude that the mirror is a paraboloid with $F$ as focus and
+$\Sigma_2$ as directrix.
 
 ```{figure} ../Images/02_19_paraboloid_mirror_bw.png
 :name: fig:geo:paraMirror
+:alt: Parallel rays from reference plane Sigma1 reflect at two points of a parabolic mirror and reach focus F; a second reference plane Sigma2 is shown.
 A paraboloid mirror.
 ```
 
 **Problem 2.4** Imaging of a virtual object.
 
-A virtual object is at a distance $d_0$ behind a converging lens. The converging incident rays to the left of the lens that correspond to the virtual object are shown in {numref}`fig:geo:virtualObject`. The lens has focal length $f$.
+A virtual object is at a distance $d_0$ behind a converging lens.
+The incoming rays would converge there if the lens were absent, as their
+dashed continuations in {numref}`fig:geo:virtualObject` show. Construct
+the refracted rays for a lens of focal length $f$.
 
 ```{figure} ../Images/02_20_virtual_object.png
 :name: fig:geo:virtualObject
-An object is created by incoming rays.
+:alt: Incoming rays converge toward a point behind a thin lens; dashed continuations locate the virtual object and a focal point on the axis.
+Converging incoming rays define a virtual object to the right of the lens;
+the dashed lines show their continuations before the lens's refraction is
+constructed.
 ```
 
 **(a)** Construct the image when $f=2$ cm, $d_0=4$ cm and the height of the object is 1 cm.
@@ -129,7 +147,9 @@ Let there be an object at distance $2f_1$ in front of lens ${\cal L}_1$, as show
 
 ```{figure} ../Images/02_21_two_thin_lenses_c_d.png
 :name: fig:geo:twoThinLensesCD
- Figure corresponding to Exercise "A convergent and divergent lens".
+:alt: Object before converging lens L1 and diverging lens L2; their focal points and lens separation d are labeled.
+Converging lens $L_1$ followed by diverging lens $L_2$ at separation $d$;
+their object and image focal points are labeled.
 ```
 
 
@@ -161,6 +181,7 @@ The image $P$ of a point $S$ as shown in {numref}`fig:geo:sphericalLens` is comp
 
 ```{figure} ../Images/02_22_spherical_lens.png
 :name: fig:geo:sphericalLens
+:alt: Two spherical lens surfaces with vertices V1 and V2 and centers C1 and C2; rays from S form an intermediate image P prime and final image P.
 A spherical lens made of glass of index $n_l$ in a medium of index $n_m$. The point $S$ is imaged in $P$.
 ```
 
@@ -229,45 +250,56 @@ Hint: let $f_i$ be the distance of the image focal point of the two-lens system 
 
 **Problem 2.9** Matrix for two thin lenses.
 
-**(a)** Consider two thin lenses which are surrounded by a medium with refractive index $n$. Let the left and right lenses have powers ${\cal P}_1$ and ${\cal P}_2$, respectively and let the distance between their vertices be $d$.
+**(a)** Consider two thin lenses in a medium of refractive index $n$.
+Their powers are $\mathcal{P}_1$ and $\mathcal{P}_2$, and the
+distance between them is $d$. Use the ray vector
+$(n\alpha,y)^{T}$, with angle $\alpha$ first and height $y$ second.
 Derive that the matrix between the planes immediately to the left of the first lens and the plane immediately to the right of the second lens is given by
 
 ```{math}
 :label: eq:geo:twoLensMatrix
-\left( \begin{array}{cc}1-\frac{d}{n}{\cal P}_1 & -{\cal P}_1-{\cal P}_2 - \frac{d}{n}{\cal P}_1{\cal P}_2 \\\frac{d}{n} & 1-\frac{d}{n}{\cal P}_2
+\left( \begin{array}{cc}1-\frac{d}{n}{\cal P}_2 & -{\cal P}_1-{\cal P}_2 + \frac{d}{n}{\cal P}_1{\cal P}_2 \\\frac{d}{n} & 1-\frac{d}{n}{\cal P}_1
 \end{array}\right).
 ```
 
-**(b)** Show that the coordinates of the image and object focal points are given by:
+**(b)** Define the combined power
+$\mathcal{P}_{\mathrm{eff}}=\mathcal{P}_1+\mathcal{P}_2-(d/n)\mathcal{P}_1\mathcal{P}_2$.
+Show that the image focal coordinate measured from the second lens and
+the object focal coordinate measured from the first lens are:
 
 ```{math}
 :label: eq:geo:imageFocalTwoLens
-f_i = \frac{P_1+P_2 + \frac{d}{n} {\cal P}_1{\cal P}_2}{n \left( 1 - \frac{d}{n}\right){\cal P}_2 }
+f_i = \frac{n-d\mathcal{P}_1}{\mathcal{P}_{\mathrm{eff}}}.
 ```
 
 
 ```{math}
 :label: eq:geo:objectFocalTwoLens
-f_o = \frac{P_1+P_2 + \frac{d}{n} {\cal P}_1{\cal P}_2}{n \left( 1 - \frac{d}{n}\right){\cal P}_1 }.
+f_o = -\frac{n-d\mathcal{P}_2}{\mathcal{P}_{\mathrm{eff}}}.
 ```
 
-**(c)** Verify that these formulae are equivalent to {eq}`eq:ray:twoLensObjectFocal`,{eq}`eq:ray:twoLensImageFocal`.
+**(c)** With $\mathcal{P}_j=n/f_{ji}$, verify that these formulae
+agree with {eq}`eq:ray:twoLensObjectFocal` and
+{eq}`eq:ray:twoLensImageFocal`.
 
 
 **Problem 2.10** Entrance pupil of a system of two lenses.
 Consider a system of two lenses $L_1$ and $L_2$ with distance $d$. The left lens $L_1$ has image focal distance $f_{1i}$ and $a_1$, $a_2$ are the radii of the lens apertures of $L_1$ and $L_2$.
 
-**(a)** Let lens $L_1$ be convergent with $f_{1i}=2~\text{cm}$ and let the distance be $d=1~\text{cm}$. Furthermore, let $a_1=2~\text{cm}$ and $a_2=1~\text{cm}$. Determine by construction with a ruler the entrance pupil. Compute also its position and radius using the Lensmaker's formula and derive the tangent of the angle that the marginal ray makes with the optical axis for an object on the optical axis at 4 cm to the left of $L_1$.
+**(a)** Let lens $L_1$ be convergent with $f_{1i}=2~\text{cm}$ and let the distance be $d=1~\text{cm}$. Furthermore, let $a_1=2~\text{cm}$ and $a_2=1~\text{cm}$. Determine by construction with a ruler the entrance pupil. Compute also its position and radius using the thin-lens imaging equation and derive the tangent of the angle that the marginal ray makes with the optical axis for an object on the optical axis at 4 cm to the left of $L_1$.
 
 **(b)** Same question when $L_1$ is a divergent lens with $f_{1i}=-6~\text{cm}$, $d=3~\text{cm}$ and $a_1=a_2=1~\text{cm}$.
 
 
-**Problem 2.11** Diaphragm in a system of two thin lenses. The purpose of this problem is to determine the entrance and exit pupils of a system consisting of two thin lenses with a diaphragm using three methods: construction, application of the Lensmaker's formula, and the matrix method.
+**Problem 2.11** Diaphragm in a system of two thin lenses. Determine
+the entrance and exit pupils by ray construction, thin-lens imaging,
+and the matrix method.
 The situation is as shown in {numref}`fig:geo:twoThinLenses`. The focal distances of the two thin lenses are $f_1=10$ cm and $f_2=12$ cm and their distance
 $d = 6$ cm. Suppose that the aperture stop is as shown in {numref}`fig:geo:twoThinLenses`. It is at a distance of $ 1.5$ cm in front of the lens $L_1$ and has a diameter $D_a=5$ cm.
 
 ```{figure} ../Images/02_23_two_thin_lenses.png
 :name: fig:geo:twoThinLenses
+:alt: A diaphragm before two converging thin lenses L1 and L2; object and image focal points, lens spacing, and stop diameter are labeled.
 Optical system with two thin lenses and an aperture stop. Lens L₁ (focal length f₁ = 10 cm) and lens L₂ (focal length f₂ = 12 cm) are separated by distance d = 6 cm, with an aperture diaphragm (diameter Dₐ = 5 cm) positioned 1.5 cm in front of L₁. This configuration is used to analyze entrance and exit pupils.
 ```
 

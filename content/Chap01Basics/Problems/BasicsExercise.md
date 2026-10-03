@@ -15,9 +15,9 @@
 
 **Problem 1.4** For a relativistic electron with total energy E = 2.0 MeV:
 **(a)** Find the kinetic energy
-**(b)** Calculate the momentum using equation 1-3
+**(b)** Calculate the momentum using {eq}`eq:basics:relativisticMomentum`
 **(c)** Determine the de Broglie wavelength
-**(d)** Find the speed using equation 1-5
+**(d)** Find the speed using {eq}`eq:basics:relativisticVelocity`
 
 **Problem 1.5** A helium-neon laser emits light at a wavelength of 632.8 nm with a power of 5.0 mW. How many photons does it emit per second?
 
@@ -29,7 +29,7 @@ Which has the shorter wavelength?
 **Problem 1.7** An X-ray photon has an energy of 50 keV. Calculate:
 **(a)** its wavelength
 **(b)** its momentum
-**(c)** the momentum of an electron with the same energy
+**(c)** the momentum of an electron with the same **kinetic** energy
 
 **Problem 1.8** The average wavelength of sunlight is approximately 550 nm, and the solar constant (irradiance at Earth's distance) is 1360 W/m². Calculate:
 **(a)** the energy per photon

@@ -1,6 +1,6 @@
 # Problems
 
-**Problem 5.1** A wave pulse on a string is described by the function $y(x,t) = \frac{3.0}{x^2 + (2.0t - 5.0)^2}$ where $x$ is in meters and $t$ is in seconds.
+**Problem 5.1** A wave pulse on a string is described by $y(x,t)=\dfrac{3.0\,\mathrm{m}}{1+[(x-(2.0\,\mathrm{m/s})t-5.0\,\mathrm{m})/(1.0\,\mathrm{m})]^2}$, where $x$ is in meters and $t$ is in seconds.
 **(a)** In which direction is the wave traveling?
 **(b)** What is the speed of the wave?
 **(c)** Sketch the wave pulse at $t = 0$ and $t = 1.0$ s.
@@ -23,7 +23,7 @@ $y_1 = (0.15~\text{m})\sin(2x - 10t)$ and $y_2 = (0.10~\text{m})\sin(2x + 10t)$
 where $x$ is in meters and $t$ is in seconds.
 **(a)** What are the wavelength and frequency of each wave?
 **(b)** Find the resultant wave $y = y_1 + y_2$.
-**(c)** Identify the locations of nodes (points where $y = 0$ always).
+**(c)** Do fixed nodes (points where $y=0$ at all times) exist when the two amplitudes differ? Explain using the resultant wave.
 
 **Problem 5.5** A wave generator produces harmonic waves with frequency 25 Hz. The waves travel at 340 m/s.
 **(a)** What is the wavelength?
@@ -57,15 +57,15 @@ where $x$ is in meters and $t$ is in seconds.
 **(b)** If the wavelength is 2.0 m, write the propagation vector $\vec{k}$.
 **(c)** Write the equation for a plane wave with amplitude 5.0 units and frequency 150 Hz.
 
-**Problem 5.12** A spherical wave emanates from a point source at the origin. At a distance of 10 m from the source, the amplitude is 0.5 units.
+**Problem 5.12** A spherical wave emanates from a point source at the origin. At a distance of 10 m from the source, the amplitude is 0.5 units. Assume zero initial phase.
 **(a)** What is the amplitude at distances of 5 m and 20 m?
 **(b)** If the frequency is 1000 Hz and the wave speed is 340 m/s, write the complete wave equation.
 **(c)** At what distance from the source is the amplitude reduced to 10% of its value at 1 m?
 
-**Problem 5.13** Compare the intensity (power per unit area) of:
-**(a)** A plane wave with amplitude $A$
-**(b)** A spherical wave with the same amplitude $A$ at the source, measured at distance $r$
-**(c)** A cylindrical wave with the same amplitude $A$ at unit distance, measured at distance $\rho$
+**Problem 5.13** Compare the distance dependence of intensity for waves of the same frequency in the same lossless medium. Normalize each to intensity $I_1$ at a reference distance of 1 m from its source (or reference plane):
+**(a)** a plane wave;
+**(b)** a spherical wave at distance $r>0$;
+**(c)** a cylindrical wave in its far field at distance $\rho>0$.
 
 **Problem 5.14** A Gaussian beam has a beam waist of $w_0 = 1.0$ mm at $z = 0$ and a wavelength $\lambda = 633$ nm.
 **(a)** Calculate the Rayleigh range $z_R$.
@@ -80,8 +80,8 @@ where $x$ is in meters and $t$ is in seconds.
 **Problem 5.16** An electromagnetic wave in vacuum has an electric field amplitude of $E_0 = 500$ V/m.
 **(a)** What is the magnetic field amplitude?
 **(b)** Calculate the time-averaged irradiance (power per unit area).
-**(c)** What is the total electromagnetic energy density?
-**(d)** If this wave is focused to a spot with diameter 2.0 mm, what is the total power?
+**(c)** What are the maximum instantaneous and time-averaged total electromagnetic energy densities?
+**(d)** If the same irradiance is uniform over a circular spot of diameter 2.0 mm, what is the power crossing that spot?
 
 **Problem 5.17** A radio wave with frequency 100 MHz propagates in the +z direction. The electric field oscillates in the x-direction with amplitude $E_0 = 0.01$ V/m.
 **(a)** Write the complete expressions for $\vec{E}(z,t)$ and $\vec{B}(z,t)$.
@@ -105,28 +105,28 @@ where $x$ is in meters and $t$ is in seconds.
 **(b)** What is the irradiance after the second filter?
 **(c)** What percentage of the original light is transmitted?
 
-**Problem 5.21** A police radar gun operates at 24.1 GHz. A car approaches the radar gun at 25 m/s.
+**Problem 5.21** A police radar gun operates at 24.1 GHz. A car approaches the radar gun at 25 m/s. Account for the Doppler shift on both the outgoing and reflected paths.
 **(a)** What is the frequency of the radar waves reflected from the car?
 **(b)** What is the beat frequency between the transmitted and received signals?
 **(c)** How would the result change if the car were moving away from the radar gun?
 
-**Problem 5.22** The hydrogen Balmer-α line has a rest wavelength of 656.3 nm. In the spectrum of a distant quasar, this line is observed at 890.5 nm.
+**Problem 5.22** The hydrogen Balmer-α line has a rest wavelength of 656.3 nm. In the spectrum of a distant quasar, this line is observed at 890.5 nm. Treat a special-relativistic Doppler speed as an equivalent speed for comparison; the observed redshift of a distant quasar is generally cosmological.
 **(a)** Calculate the redshift $z = (\lambda' - \lambda)/\lambda$.
-**(b)** Find the recession velocity of the quasar using the relativistic Doppler formula.
+**(b)** Find the Doppler-equivalent recession speed using the relativistic formula.
 **(c)** Compare with the result using the non-relativistic approximation.
 
-**Problem 5.23** A double star system consists of two stars orbiting their common center of mass. Star A has an orbital velocity of 50 km/s. Assume the system is observed from Earth.
+**Problem 5.23** In a circular, edge-on double-star orbit, Star A moves at 50 km/s about the common center of mass. Neglect the system's center-of-mass velocity relative to Earth.
 **(a)** What is the maximum Doppler shift of spectral lines from Star A?
 **(b)** If a spectral line has a rest wavelength of 500 nm, what are the maximum and minimum observed wavelengths?
 **(c)** Sketch how the wavelength varies over one orbital period.
 
-**Problem 5.24** A laser beam propagating in the +z direction is described by a Gaussian profile: $E(x,y,z,t) = E_0 \frac{w_0}{w(z)} \exp\left(-\frac{x^2+y^2}{w^2(z)}\right) \sin(kz - \omega t)$, where $w(z) = w_0\sqrt{1 + (z/z_R)^2}$ and $z_R = \pi w_0^2/\lambda$.
-**(a)** Show that on the beam axis ($x = y = 0$), this reduces to a plane wave.
-**(b)** Calculate the total power carried by the beam.
+**Problem 5.24** For irradiance calculations, model a linearly polarized laser beam by the simplified field $E(x,y,z,t)=E_0\frac{w_0}{w(z)}\exp[-(x^2+y^2)/w^2(z)]\sin(kz-\omega t)$, where $w(z)=w_0\sqrt{1+(z/z_R)^2}$ and $z_R=\pi w_0^2/\lambda$. This model omits the wavefront-curvature and Gouy phases of a full Gaussian beam.
+**(a)** Find the axial field amplitude as a function of $z$. Explain why the given expression is not a plane wave on the axis.
+**(b)** In the paraxial approximation, integrate the time-averaged irradiance over the transverse plane to calculate the total power carried by the beam in terms of $E_0$ and $w_0$.
 **(c)** Find the beam divergence angle in the far field ($z >> z_R$).
 
 **Problem 5.25** Consider the interference of two plane waves with the same frequency but different propagation directions: $\vec{k}_1 = k\hat{z}$ and $\vec{k}_2 = k(\sin\theta\hat{x} + \cos\theta\hat{z})$.
 **(a)** Write the total wave function $\psi = \psi_1 + \psi_2$.
-**(b)** Show that the interference produces a standing wave pattern.
-**(c)** Find the spacing between nodes in the x-direction.
+**(b)** For equal-amplitude, equally polarized waves, show that their interference produces stationary spatial fringes. Explain why two non-opposite propagation directions do not form a one-dimensional standing wave.
+**(c)** At fixed $z$, find the spacing between adjacent dark fringes in the $x$-direction.
 **(d)** This configuration is used in holographic recording. Explain why.

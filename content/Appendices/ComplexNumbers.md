@@ -104,7 +104,7 @@ $$z = r e^{i\theta} = r(\cos\theta + i\sin\theta)$$
 
 where:
 - $r = |z| = \sqrt{a^2 + b^2}$ is the **magnitude** or **modulus**
-- $\theta = \arg(z) = \arctan(b/a)$ is the **argument** or **phase**
+- $\theta = \arg(z) = \operatorname{atan2}(b,a)$ is the **argument** or **phase** when $z\ne0$; it is undefined at $z=0$
 
 ```{note} Example A.3: Converting to Polar Form
 For $z = 3 + 4i$:
@@ -204,7 +204,7 @@ Several important special cases emerge from Euler's formula:
 
 **Important:** **Euler's Identity**: $e^{i\pi} + 1 = 0$
 
-This equation connects five fundamental mathematical constants ($e$, $i$, $\pi$, $1$, and $0$) in a single, elegant relationship. Richard Feynman called it "the most remarkable formula in mathematics."
+This equation connects five fundamental mathematical constants ($e$, $i$, $\pi$, $1$, and $0$).
 ```
 
 ### A.2.5 Properties of Complex Exponentials
@@ -325,20 +325,17 @@ This gives us the famous interference pattern:
 
 ### A.4.2 Intensity and the Complex Conjugate
 
-The intensity of light is proportional to the time-averaged square of the electric field. For a complex field $E(t)$, the intensity is:
+The intensity of light is proportional to the time-averaged square of the **real** electric field. If $E_{\rm phys}(t)=\operatorname{Re}[\mathcal E e^{-i\omega t}]$, with complex peak amplitude $\mathcal E$, then
 
-$$I \propto \langle|E(t)|^2\rangle = \langle E(t) \cdot E^*(t)\rangle$$
+$$\langle E_{\rm phys}^2(t)\rangle=\frac{|\mathcal E|^2}{2},\qquad
+I=\frac{n\varepsilon_0c}{2}|\mathcal E|^2$$
 
-```{note}
-:class: tip
+in a nonmagnetic, lossless medium of refractive index $n$. Thus **relative** intensities in the same medium are proportional to $|\mathcal E|^2$; the factor $1/2$ comes from averaging the real oscillation.
 
-**Tip:** The time averaging $\langle \cdot \rangle$ removes the rapidly oscillating terms at frequency $2\omega$, leaving only the slowly varying envelope.
-```
-
-For our two-wave interference example:
-$$I \propto |E_1 + E_2|^2 = (E_1 + E_2)(E_1^* + E_2^*)$$
-$$= |E_1|^2 + |E_2|^2 + E_1E_2^* + E_1^*E_2$$
-$$= |E_1|^2 + |E_2|^2 + 2\text{Re}(E_1E_2^*)$$
+For our two-wave example, use the phasors $\mathcal E_1=E_{01}e^{i\phi_1}$ and $\mathcal E_2=E_{02}e^{i\phi_2}$. Their common space-time factor cancels in the modulus:
+$$I \propto |\mathcal E_1 + \mathcal E_2|^2
+=|\mathcal E_1|^2+|\mathcal E_2|^2+
+2\operatorname{Re}(\mathcal E_1\mathcal E_2^*).$$
 
 The last term is the **interference term**—it's what creates the bright and dark fringes in interference patterns. Without complex numbers, deriving this result would involve tedious trigonometric identities.
 
@@ -347,68 +344,44 @@ The last term is the **interference term**—it's what creates the bright and da
 ### A.5.1 Beyond Simple Refraction
 
 When light propagates through most materials, two important effects occur:
-1. The wave slows down (refraction)
+1. The phase velocity changes (refraction)
 2. The wave weakens (absorption)
 
-A **complex refractive index** elegantly describes both effects:
+A **complex refractive index** describes phase propagation and attenuation at a given frequency:
 
-$$\tilde{n} = n + ik$$
+$$\tilde{n} = n + i\kappa$$
 
 where:
 - $n$ is the familiar refractive index (affects phase velocity)
-- $k$ is the **extinction coefficient** (causes absorption)
+- $\kappa$ is the **extinction coefficient** (causes absorption); we reserve $k$ for wave number
 
 ### A.5.2 Wave Propagation in Absorbing Media
 
 When a wave propagates through a medium with complex refractive index $\tilde{n}$, the wave number becomes complex:
 
-$$\tilde{k} = \frac{\omega \tilde{n}}{c} = \frac{\omega(n + ik)}{c} = \frac{\omega n}{c} + i\frac{\omega k}{c}$$
+$$\tilde{k} = \frac{\omega \tilde{n}}{c} = \frac{\omega(n + i\kappa)}{c} = \frac{\omega n}{c} + i\frac{\omega \kappa}{c}$$
 
 The wave in the medium becomes:
-$$E(z) = E_0 e^{i\tilde{k}z} = E_0 e^{i(\omega n/c)z} e^{-(\omega k/c)z}$$
+$$\mathcal E(z) = E_0 e^{i\tilde{k}z} = E_0 e^{i(\omega n/c)z} e^{-(\omega \kappa/c)z}$$
 
 ```{warning}
 :class: important
 
 **Important:** This expression reveals the physical meaning of the complex refractive index:
 - The real part $n$ gives oscillatory behavior: $e^{i(\omega n/c)z}$
-- The imaginary part $k$ gives exponential decay: $e^{-(\omega k/c)z}$
+- The imaginary part $\kappa$ gives exponential decay: $e^{-(\omega \kappa/c)z}$
 
-The intensity decreases as $I(z) = I_0 e^{-2(\omega k/c)z}$, defining the absorption coefficient $\alpha = 2\omega k/c$.
+The intensity decreases as $I(z) = I_0 e^{-2(\omega \kappa/c)z}$, defining the bulk intensity-absorption coefficient $\alpha = 2\omega\kappa/c$.
 ```
 
 ### A.5.3 Physical Examples
 
-```{list-table} Complex Refractive Index Examples
-:header-rows: 1
-:name: table:complexIndexExamples
-
-* - Material
-  - Wavelength
-  - $n$ (real part)
-  - $k$ (imaginary part)
-  - Physical Effect
-* - Glass
-  - 500 nm
-  - 1.5
-  - $\sim 10^{-7}$
-  - Transparent, minimal absorption
-* - Water
-  - 500 nm
-  - 1.33
-  - $\sim 10^{-9}$
-  - Transparent in thin layers
-* - Gold
-  - 500 nm
-  - 0.47
-  - 2.4
-  - Highly reflective, strong absorption
-* - Silver
-  - 500 nm
-  - 0.05
-  - 3.2
-  - Excellent mirror, opaque
-```
+Transparent glass and water have relatively small $\kappa$ in much of the
+visible spectrum, so a thin sample can transmit light. Metals such as gold
+and silver have substantial extinction and also reflect strongly at their
+surfaces. Numerical optical constants depend on wavelength, temperature,
+and the sample; they should be taken from a specified measured dataset
+when a quantitative calculation is needed.
 
 ## A.6 Advanced Applications in Optics
 
@@ -429,9 +402,9 @@ $\sin\theta_2 = \frac{n_1}{n_2}\sin\theta_1 > 1$
 
 This makes $\cos\theta_2 = \sqrt{1 - \sin^2\theta_2}$ imaginary! The reflection coefficient becomes complex:
 
-$$r_s = \frac{n_1\cos\theta_1 - in_2\sqrt{\sin^2\theta_1 - (n_2/n_1)^2}}{n_1\cos\theta_1 + in_2\sqrt{\sin^2\theta_1 - (n_2/n_1)^2}}$$
+$$r_s = \frac{n_1\cos\theta_1 - in_1\sqrt{\sin^2\theta_1 - (n_2/n_1)^2}}{n_1\cos\theta_1 + in_1\sqrt{\sin^2\theta_1 - (n_2/n_1)^2}}$$
 
-The magnitude is $|r_s| = 1$ (perfect reflection), but the phase changes upon reflection. This phase shift is crucial for understanding phenomena like the Goos-Hänchen effect.
+Here $n_2\cos\theta_2=i\sqrt{n_1^2\sin^2\theta_1-n_2^2}$ for the decaying transmitted field. The magnitude is $|r_s| = 1$ for lossless media, but the phase changes upon reflection.
 ```
 
 ### A.6.2 Polarization States
@@ -490,11 +463,11 @@ In Fourier optics, we think of any optical field as a superposition of plane wav
 
 ### A.7.1 Time Averaging with Complex Fields
 
-A common calculation in optics involves time averaging oscillatory quantities. For a field $E(t) = E_0 e^{-i\omega t}$:
+A common calculation in optics involves time averaging oscillatory quantities. For the real field $E_{\rm phys}(t)=\operatorname{Re}[E_0e^{-i\omega t}]$:
 
-$$\langle E(t) E^*(t) \rangle = \langle E_0 e^{-i\omega t} \cdot E_0^* e^{+i\omega t} \rangle = |E_0|^2 \langle e^0 \rangle = |E_0|^2$$
+$$\langle E_{\rm phys}^2(t)\rangle=\frac{|E_0|^2}{2}.$$
 
-The rapidly oscillating terms average to zero, leaving only the slowly varying envelope.
+The terms oscillating at $2\omega$ average to zero. By contrast, $|E_0e^{-i\omega t}|^2=|E_0|^2$ is the squared modulus of the complex representation and does not itself perform this real-field average.
 
 ### A.7.2 Differentiation in the Frequency Domain
 
@@ -582,7 +555,7 @@ Modern optics relies heavily on numerical computation. Complex numbers enable:
 ```{warning}
 **Pitfall**: Forgetting to use complex conjugates when calculating intensities.
 
-**Solution**: Remember that intensity $I \propto |E|^2 = E \cdot E^*$, not $E^2$. For real fields these are the same, but for complex fields they're different.
+**Solution**: For a monochromatic wave in a lossless medium, form the squared modulus of the complex **peak amplitude** to obtain intensity up to the factor $n\varepsilon_0c/2$. The physical field is real, and its squared time average is half the squared peak amplitude.
 ```
 
 ## A.10 Summary and Looking Forward
@@ -634,7 +607,7 @@ With time, these operations will become as natural as ordinary arithmetic, and y
 ### A.11.1 Young's Double-Slit Interference
 
 ```{note} Problem Setup
-Two coherent sources separated by distance $d$ illuminate a screen at distance $L \gg d$. Find the intensity pattern on the screen using complex analysis.
+Two coherent, equally bright, identically polarized sources separated by $d$ illuminate a screen at distance $L\gg d$. In the far-field, small-angle approximation, ignore each source's diffraction envelope and find the interference intensity.
 ```
 
 **Solution:**
@@ -657,7 +630,9 @@ $|E_{\text{total}}|^2 = |E_0|^2 |1 + e^{ikyd/L}|^2$
 
 Using $|1 + e^{i\phi}|^2 = (1 + e^{i\phi})(1 + e^{-i\phi}) = 2 + 2\cos\phi$:
 
-$I(y) = 2|E_0|^2[1 + \cos(kyd/L)] = 4|E_0|^2 \cos^2\left(\frac{kyd}{2L}\right)$
+If $I_s=(n\varepsilon_0c/2)|E_0|^2$ is the intensity from either source alone at the screen, then
+$I(y)=2I_s[1+\cos(kyd/L)]
+=4I_s\cos^2\left(\frac{kyd}{2L}\right)$.
 
 ```{note}
 This derivation using complex numbers is much more straightforward than the traditional approach using trigonometric identities. The key insight is that $|1 + e^{i\phi}|^2$ automatically gives us the interference pattern.
@@ -666,7 +641,7 @@ This derivation using complex numbers is much more straightforward than the trad
 ### A.11.2 Transmission Through an Absorbing Slab
 
 ```{note} Problem Setup
-Light with intensity $I_0$ passes through a glass slab of thickness $t$ with complex refractive index $\tilde{n} = 1.5 + 0.01i$. Find the transmitted intensity, accounting for both reflection losses and absorption.
+Light at vacuum wavelength $\lambda_0$ enters from air into an illustrative absorbing slab of thickness $t$ with complex refractive index $\tilde{n}=1.5+0.01i$, then exits into air. Estimate the transmitted intensity, neglecting multiple internal reflections and coherent interference.
 ```
 
 **Solution:**
@@ -681,37 +656,36 @@ The Fresnel reflection coefficient for normal incidence is:
 $r_{12} = \frac{1 - \tilde{n}}{1 + \tilde{n}} = \frac{1 - (1.5 + 0.01i)}{1 + (1.5 + 0.01i)} = \frac{-0.5 - 0.01i}{2.5 + 0.01i}$
 
 To compute this, multiply numerator and denominator by the complex conjugate of the denominator:
-$r_{12} = \frac{(-0.5 - 0.01i)(2.5 - 0.01i)}{(2.5 + 0.01i)(2.5 - 0.01i)} = \frac{-1.25 + 0.02i}{6.25 + 0.0001} \approx -0.1998 + 0.0032i$
+$r_{12} = \frac{(-0.5 - 0.01i)(2.5 - 0.01i)}{(2.5 + 0.01i)(2.5 - 0.01i)} = \frac{-1.2501 - 0.0200i}{6.2501} \approx -0.200013 - 0.003200i$
 
-The reflectance is $R_1 = |r_{12}|^2 \approx 0.0399$.
+The reflectance is $R_1=|r_{12}|^2\approx0.040015$.
 
-The transmission coefficient is $t_{12} = 1 + r_{12} \approx 0.8002 + 0.0032i$.
+The transmitted field coefficient at the front surface is $t_{12}=1+r_{12}\approx0.799987-0.003200i$.
 
 **Step 2: Propagation through the slab**
 The wave number in the material is:
-$k = \frac{2\pi}{\lambda_0}\tilde{n} = \frac{2\pi}{\lambda_0}(1.5 + 0.01i)$
+$\tilde{k} = \frac{2\pi}{\lambda_0}\tilde{n} = \frac{2\pi}{\lambda_0}(1.5 + 0.01i)$
 
 After propagating a distance $t$, the field is multiplied by:
-$e^{ik t} = e^{i(2\pi/\lambda_0)(1.5 + 0.01i)t} = e^{i(2\pi/\lambda_0)(1.5t)} e^{-(2\pi/\lambda_0)(0.01t)}$
+$e^{i\tilde{k}t} = e^{i(2\pi/\lambda_0)(1.5 + 0.01i)t} = e^{i(2\pi/\lambda_0)(1.5t)} e^{-(2\pi/\lambda_0)(0.01t)}$
 
 The absorption factor is $e^{-(2\pi/\lambda_0)(0.01t)}$.
 
 **Step 3: Second interface (glass to air)**
-By reciprocity, $r_{21} = -r_{12}$ and the reflectance is the same: $R_2 = 0.0399$.
+The reverse field-reflection coefficient is $r_{21}=-r_{12}$. For this small extinction coefficient, approximate the exit-surface power loss by the same reflectance $R_2\approx R_1$.
 
 **Step 4: Total transmission**
-The transmitted intensity fraction is:
-$T = (1-R_1)(1-R_2)e^{-2(2\pi/\lambda_0)(0.01t)}$
-$= (1-0.0399)^2 e^{-(4\pi \cdot 0.01t)/\lambda_0}$
-$= 0.922 \cdot e^{-0.126t/\lambda_0}$
+In the stated single-pass approximation, the transmitted intensity fraction is
+$T\approx(1-R_1)(1-R_2)e^{-(4\pi\cdot0.01)t/\lambda_0}
+\approx0.9216e^{-0.1257t/\lambda_0}$.
 
 ```{warning}
 :class: important
 
-**Important:** For typical glass at $\lambda_0 = 500$ nm and $t = 1$ mm:
-$T = 0.922 \cdot e^{-0.126 \times 10^{-3}/(500 \times 10^{-9})} = 0.922 \cdot e^{-252} \approx 0$
+**Important:** At $\lambda_0=500$ nm and $t=1$ mm, this illustrative material gives
+$T\approx0.9216e^{-251.3}\approx0$.
 
-The slab is essentially opaque! This shows why the imaginary part of the refractive index must be very small for transparent materials.
+The slab is essentially opaque at this thickness; the assumed extinction coefficient is too large for a transparent millimetre-scale sample.
 ```
 
 ### A.11.3 Circular Polarization Analysis
@@ -724,7 +698,7 @@ Light passes through a linear polarizer oriented at 45° to the x-axis, then thr
 
 **Initial state**: Unpolarized light can be represented as an incoherent mixture of all polarization states.
 
-**After linear polarizer at 45°**: The transmitted field is linearly polarized:
+**After linear polarizer at 45°**: The transmitted field is linearly polarized. Let $E_0$ denote its peak amplitude after the polarizer:
 $\vec{E}_1 = E_0 \frac{(\hat{x} + \hat{y})}{\sqrt{2}}$
 
 **Quarter-wave plate action**: A quarter-wave plate introduces a phase difference of $\pi/2$ between its fast and slow axes. With the fast axis along x, it multiplies the y-component by $e^{i\pi/2} = i$:
@@ -796,9 +770,9 @@ d) Plot the intensity as a function of $\phi$ from 0 to $4\pi$
 ```{note} Solution to Problem A.2
 :class: dropdown
 
-a) $E_{\text{total}} = E_0(1 + e^{i\phi}) = E_0(1 + \cos\phi + i\sin\phi)$
+a) The total complex amplitude is $\mathcal E_{\text{total}} = E_0(1 + e^{i\phi}) = E_0(1 + \cos\phi + i\sin\phi)$, with magnitude $|\mathcal E_{\text{total}}|=2E_0|\cos(\phi/2)|$.
 
-   $|E_{\text{total}}|^2 = E_0^2[(1 + \cos\phi)^2 + \sin^2\phi] = E_0^2[1 + 2\cos\phi + \cos^2\phi + \sin^2\phi]$
+   $|\mathcal E_{\text{total}}|^2 = E_0^2[(1 + \cos\phi)^2 + \sin^2\phi] = E_0^2[1 + 2\cos\phi + \cos^2\phi + \sin^2\phi]$
 
    $= E_0^2[2 + 2\cos\phi] = 2E_0^2(1 + \cos\phi) = 4E_0^2\cos^2(\phi/2)$
 
@@ -806,7 +780,7 @@ b) Maximum when $\cos(\phi/2) = \pm 1$, i.e., $\phi = 0, 2\pi, 4\pi, \ldots$
 
 c) Minimum when $\cos(\phi/2) = 0$, i.e., $\phi = \pi, 3\pi, 5\pi, \ldots$
 
-d) $I(\phi) = I_0 \cos^2(\phi/2)$ where $I_0 = 4E_0^2$ is the maximum intensity.
+d) $I(\phi)=4I_s\cos^2(\phi/2)$, where $I_s=(n\varepsilon_0c/2)E_0^2$ is the intensity of either wave alone in a lossless medium.
 ```
 
 ### A.12.3 Complex Refractive Index
@@ -826,7 +800,7 @@ d) What fraction of the intensity remains after traveling 10 μm?
 
 a) Phase velocity: $v = c/n = 3 \times 10^8 / 1.6 = 1.875 \times 10^8$ m/s
 
-b) Absorption coefficient: $\alpha = 2\omega k/c = 4\pi k/\lambda_0 = 4\pi \times 0.05/(600 \times 10^{-9}) = 1.047 \times 10^6$ m$^{-1}$
+b) Absorption coefficient: $\alpha=2\omega\kappa/c=4\pi\kappa/\lambda_0=4\pi\times0.05/(600\times10^{-9})=1.047\times10^6$ m$^{-1}$
 
 c) Intensity drops to 1/e when $e^{-\alpha z} = 1/e$, so $\alpha z = 1$
    $z = 1/\alpha = 1/(1.047 \times 10^6) = 9.55 \times 10^{-7}$ m = 0.955 μm
@@ -875,7 +849,7 @@ The development of complex numbers and their application to physics is a fascina
 - **1799**: Gauss proves the fundamental theorem of algebra using complex numbers
 - **1806**: Argand develops the geometric representation (complex plane)
 - **1864**: Maxwell's equations are formulated, setting the stage for complex analysis in optics
-- **1900**: Complex analysis becomes essential for quantum mechanics and modern physics
+- **1920s**: Complex amplitudes become central to modern quantum mechanics
 
 ### A.13.2 Connections to Other Fields
 

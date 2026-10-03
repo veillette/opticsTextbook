@@ -25,15 +25,15 @@ Matrix multiplication provides one of the most powerful and systematic approache
 ```{note}
 :class: tip
 
-**Tip:** Linear transformations are fundamental in optics because Maxwell's equations are linear—if you have two solutions, their sum is also a solution. This linearity propagates through all optical phenomena.
+**Tip:** In linear materials, Maxwell's equations obey superposition: a sum of two solutions is also a solution. Nonlinear optical effects require additional models.
 ```
 
-Most optical phenomena can be described as **linear transformations**—processes that take input light and produce output light in a predictable, systematic way. Consider some common examples:
+Many optical operations in a specified linear regime can be described as **linear transformations** of suitable state vectors. Examples include:
 
-- A polarizer transforms unpolarized light into linearly polarized light
+- A polarizer acts on a fully polarized Jones vector (unpolarized light needs a different description)
 - A wave plate changes the polarization state of light
 - A lens transforms a parallel beam into a converging beam
-- A prism separates white light into its component colors
+- A sequence of paraxial interfaces changes a ray's height and angle
 
 Each of these transformations can be represented mathematically as a matrix operation, where the input state is multiplied by a transformation matrix to yield the output state.
 
@@ -60,6 +60,14 @@ $$\vec{E} = \begin{pmatrix} E_x \\ E_y \end{pmatrix}$$
 $$\vec{r} = \begin{pmatrix} y \\ \theta \end{pmatrix}$$
 
 where $y$ is the ray height and $\theta$ is the ray angle.
+
+This appendix uses the common $(y,\theta)^T$ ray-vector order. Chapter 11
+instead uses $(n\alpha,y)^T$, so its matrix entries occupy different
+positions. Both conventions describe the same paraxial rays once the
+coordinates and refractive-index factors are converted. In this
+$(y,\theta)^T$ convention, two transverse planes are conjugate when
+$B=0$; in Chapter 11's $(n\alpha,y)^T$ convention, the corresponding
+condition is $C=0$.
 
 ### Why Matrix Multiplication Works for Optics
 
@@ -135,7 +143,7 @@ This is how we transform optical states—the matrix represents the optical elem
 ```
 
 ```{warning}
-**Order Matters!** In optics, $\mathbf{AB}$ means "apply element A first, then element B." This is because we read matrix multiplication from right to left when transforming vectors.
+**Order Matters!** With column vectors, $\mathbf{AB}\vec v$ applies element B first and then element A. The rightmost matrix acts first.
 ```
 
 ## Special Matrices in Optics
@@ -149,7 +157,7 @@ For any matrix $\mathbf{A}$ or vector $\vec{v}$:
 - $\mathbf{AI} = \mathbf{IA} = \mathbf{A}$
 - $\mathbf{I}\vec{v} = \vec{v}$
 
-**Physical meaning**: An optical element that doesn't change the light state (like a perfect window or empty space).
+**Physical meaning**: No change between two coincident reference planes. Propagation over a finite distance changes ray height and has its own matrix.
 
 ### Rotation Matrices
 
@@ -174,16 +182,20 @@ $$\mathbf{A}\mathbf{A}^{-1} = \mathbf{A}^{-1}\mathbf{A} = \mathbf{I}$$
 For a 2×2 matrix:
 $$\mathbf{A}^{-1} = \frac{1}{\det(\mathbf{A})} \begin{pmatrix} a_{22} & -a_{12} \\ -a_{21} & a_{11} \end{pmatrix}$$
 
-where $\det(\mathbf{A}) = a_{11}a_{22} - a_{12}a_{21}$ is the **determinant**.
+where $\det(\mathbf{A}) = a_{11}a_{22} - a_{12}a_{21}$ is the **determinant**, provided $\det(\mathbf A)\ne0$.
 
-**Physical meaning**: The inverse represents the "reverse" operation—if a matrix transforms state A to state B, its inverse transforms state B back to state A.
+**Physical meaning**: For an invertible transformation, the inverse maps an output state back to its input. An ideal polarizer is singular and cannot be inverted.
 
 ## Jones Matrices: Polarization Optics
 
 ### Representing Polarized Light
 
 In **Jones calculus**, we represent polarized light as a complex 2D vector:
-$$\vec{E} = \begin{pmatrix} E_x \\ E_y \end{pmatrix} = \begin{pmatrix} E_x e^{i\phi_x} \\ E_y e^{i\phi_y} \end{pmatrix}$$
+$$\mathbf E = \begin{pmatrix} \mathcal E_x \\ \mathcal E_y \end{pmatrix}
+= \begin{pmatrix} A_x e^{i\phi_x} \\ A_y e^{i\phi_y} \end{pmatrix},\qquad A_x,A_y\ge0.$$
+
+The physical field is $\operatorname{Re}[\mathbf E e^{-i\omega t}]$.
+Jones vectors describe fully polarized, coherent fields.
 
 ```{list-table} Common Polarization States
 :header-rows: 1
@@ -203,10 +215,10 @@ $$\vec{E} = \begin{pmatrix} E_x \\ E_y \end{pmatrix} = \begin{pmatrix} E_x e^{i\
   - Equal x and y components, in phase
 * - Right circular
   - $\frac{1}{\sqrt{2}}\begin{pmatrix} 1 \\ -i \end{pmatrix}$
-  - x leads y by 90°
+  - Quadrature components; clockwise rotation when viewed toward the source
 * - Left circular
   - $\frac{1}{\sqrt{2}}\begin{pmatrix} 1 \\ i \end{pmatrix}$
-  - y leads x by 90°
+  - Quadrature components; counterclockwise rotation when viewed toward the source
 ```
 
 ### Jones Matrices for Common Optical Elements
@@ -219,10 +231,14 @@ $$\mathbf{P}(\theta) = \begin{pmatrix} \cos^2\theta & \cos\theta\sin\theta \\ \c
 - Vertical polarizer ($\theta = 90°$): $\mathbf{P}_V = \begin{pmatrix} 0 & 0 \\ 0 & 1 \end{pmatrix}$
 
 **Quarter-Wave Plate (fast axis at angle $\theta$):**
-$$\mathbf{Q}(\theta) = \mathbf{R}(-\theta) \begin{pmatrix} 1 & 0 \\ 0 & i \end{pmatrix} \mathbf{R}(\theta)$$
+$$\mathbf{Q}(\theta) = \mathbf{R}(\theta) \begin{pmatrix} 1 & 0 \\ 0 & i \end{pmatrix} \mathbf{R}(-\theta)$$
 
 **Half-Wave Plate (fast axis at angle $\theta$):**
-$$\mathbf{H}(\theta) = \mathbf{R}(-\theta) \begin{pmatrix} 1 & 0 \\ 0 & -1 \end{pmatrix} \mathbf{R}(\theta)$$
+$$\mathbf{H}(\theta) = \mathbf{R}(\theta) \begin{pmatrix} 1 & 0 \\ 0 & -1 \end{pmatrix} \mathbf{R}(-\theta)$$
+
+These forms follow from the active rotation matrix $\mathbf R$ defined above:
+rotate into the element's axes with $\mathbf R(-\theta)$, apply its
+principal-axis matrix, then rotate back.
 
 ### Worked Example: Polarization Analysis
 
@@ -246,7 +262,12 @@ $$\mathbf{P}_V = \begin{pmatrix} 0 & 0 \\ 0 & 1 \end{pmatrix}$$
 $$\vec{E}_2 = \mathbf{P}_V\vec{E}_1 = \begin{pmatrix} 0 & 0 \\ 0 & 1 \end{pmatrix}\begin{pmatrix} 1/2 \\ 1/2 \end{pmatrix} = \begin{pmatrix} 0 \\ 1/2 \end{pmatrix}$$
 
 **Combined effect:**
-$$\vec{E}_2 = \mathbf{P}_V\mathbf{P}_{45°}\vec{E}_0 = \begin{pmatrix} 0 & 0 \\ 0 & 1 \end{pmatrix}\begin{pmatrix} 1/2 & 1/2 \\ 1/2 & 1/2 \end{pmatrix} = \begin{pmatrix} 0 & 0 \\ 1/2 & 1/2 \end{pmatrix}$$
+$$\mathbf P_V\mathbf P_{45°}
+= \begin{pmatrix} 0 & 0 \\ 0 & 1 \end{pmatrix}
+\begin{pmatrix} 1/2 & 1/2 \\ 1/2 & 1/2 \end{pmatrix}
+= \begin{pmatrix} 0 & 0 \\ 1/2 & 1/2 \end{pmatrix},\qquad
+\vec E_2=(\mathbf P_V\mathbf P_{45°})\vec E_0
+=\begin{pmatrix}0\\1/2\end{pmatrix}.$$
 
 **Intensity:** $I = |\vec{E}_2|^2 = |1/2|^2 = 1/4$ of the original intensity.
 
@@ -298,9 +319,9 @@ $$\vec{r}_{out} = \begin{pmatrix} A & B \\ C & D \end{pmatrix}\vec{r}_{in} = \be
 * - **Thin lens (focal length f)**
   - $\begin{pmatrix} 1 & 0 \\ -1/f & 1 \end{pmatrix}$
   - Height unchanged, angle changes
-* - **Curved mirror (radius R)**
+* - **Curved mirror ($R>0$ for a focusing concave mirror; unfolded path)**
   - $\begin{pmatrix} 1 & 0 \\ -2/R & 1 \end{pmatrix}$
-  - Reflection and focusing
+  - Reflection and focusing with the optical axis unfolded after reflection
 * - **Flat interface (n₁ to n₂)**
   - $\begin{pmatrix} 1 & 0 \\ 0 & n_1/n_2 \end{pmatrix}$
   - Refraction changes angle
@@ -330,11 +351,12 @@ $$\mathbf{M} = \mathbf{L}_2 \mathbf{D} \mathbf{L}_1$$
 
 **Step 1:** $\mathbf{D}\mathbf{L}_1 = \begin{pmatrix} 1 & 120 \\ 0 & 1 \end{pmatrix}\begin{pmatrix} 1 & 0 \\ -1/100 & 1 \end{pmatrix} = \begin{pmatrix} -0.2 & 120 \\ -0.01 & 1 \end{pmatrix}$
 
-**Step 2:** $\mathbf{M} = \begin{pmatrix} 1 & 0 \\ -1/20 & 1 \end{pmatrix}\begin{pmatrix} -0.2 & 120 \\ -0.01 & 1 \end{pmatrix} = \begin{pmatrix} -0.2 & 120 \\ -0.0105 & -5 \end{pmatrix}$
+**Step 2:** $\mathbf{M} = \begin{pmatrix} 1 & 0 \\ -1/20 & 1 \end{pmatrix}\begin{pmatrix} -0.2 & 120 \\ -0.01 & 1 \end{pmatrix} = \begin{pmatrix} -0.2 & 120 \\ 0 & -5 \end{pmatrix}$
 
 **Analysis:**
-- **Magnification:** $M = -A = 0.2$ (0.2× magnification, inverted)
-- **Angular magnification:** $M_θ = -1/A = 5$ (5× angular magnification)
+- $C=0$, so an on-axis parallel input bundle leaves parallel: this telescope is afocal.
+- The output beam-height ratio for a parallel input bundle is $A=-0.2$; its magnitude is one fifth of the input beam height.
+- The signed angular ratio is $D=-5$ for a ray entering on the axis, so the angular magnification has magnitude 5 and the view is inverted. A finite-plane lateral image magnification is not defined for this afocal setup.
 ```
 
 ### Physical Meaning of ABCD Elements
@@ -344,8 +366,8 @@ Each element of the ABCD matrix has physical significance:
 $$\begin{pmatrix} y_{out} \\ \theta_{out} \end{pmatrix} = \begin{pmatrix} A & B \\ C & D \end{pmatrix}\begin{pmatrix} y_{in} \\ \theta_{in} \end{pmatrix}$$
 
 - **A**: Height magnification ($y_{out}/y_{in}$ when $\theta_{in} = 0$)
-- **B**: Height displacement per unit input angle (mm/mrad)
-- **C**: Angle change per unit input height (optical power, m⁻¹)
+- **B**: Height displacement per unit input angle (length per radian)
+- **C**: Angle change per unit input height (radians per length)
 - **D**: Angle magnification ($\theta_{out}/\theta_{in}$ when $y_{in} = 0$)
 
 ```{warning}
@@ -353,7 +375,7 @@ $$\begin{pmatrix} y_{out} \\ \theta_{out} \end{pmatrix} = \begin{pmatrix} A & B 
 
 **Important:** **Determinant Rule**: For any optical system in the same medium: $AD - BC = 1$
 
-This constraint comes from the reversibility of light rays and ensures energy conservation.
+This follows from the paraxial ray invariant for a system whose input and output media have the same refractive index. With the $(y,\theta)^T$ convention across different media, the determinant is $n_{\rm in}/n_{\rm out}$.
 ```
 
 ## Practical Applications and Examples
@@ -369,34 +391,46 @@ Design a system to convert right-handed circular polarization to 30° linear pol
 
 **Target:** $\vec{E}_{target} = \begin{pmatrix} \cos 30° \\ \sin 30° \end{pmatrix} = \begin{pmatrix} \sqrt{3}/2 \\ 1/2 \end{pmatrix}$ (30° linear)
 
-**Step 1:** Convert circular to linear using a quarter-wave plate
-QWP with fast axis at -45°: $\mathbf{Q}_{-45°} = \begin{pmatrix} (1+i)/2 & (1-i)/2 \\ (1-i)/2 & (1+i)/2 \end{pmatrix}$
+**Step 1:** A quarter-wave plate with fast axis at $-45°$ gives
 
-**Step 2:** Rotate the linear polarization using a half-wave plate
-HWP at appropriate angle to rotate from resulting linear state to 30°
+$$\mathbf Q_{-45°}
+=\frac12\begin{pmatrix}1+i&i-1\\i-1&1+i\end{pmatrix},
+\qquad
+\mathbf E_1=\mathbf Q_{-45°}\mathbf E_{\rm in}
+=\frac{1+i}{\sqrt2}\begin{pmatrix}1\\0\end{pmatrix}.$$
 
-This systematic approach using matrix multiplication makes complex polarization manipulations manageable.
+The output is horizontal linear polarization, up to an overall phase.
+
+**Step 2:** A half-wave plate with fast axis at $15°$ rotates horizontal
+linear polarization to $30°$:
+
+$$\mathbf H_{15°}=\begin{pmatrix}\cos30°&\sin30°\\
+\sin30°&-\cos30°\end{pmatrix},\qquad
+\mathbf E_{\rm out}=\frac{1+i}{\sqrt2}
+\begin{pmatrix}\cos30°\\\sin30°\end{pmatrix}.$$
+
+The prefactor has unit modulus, so ideal plates preserve intensity.
 ```
 
 ### Optical System Design
 
 ```{note} Example: Beam Expander Design
-Design a Galilean beam expander with 3× magnification using lenses with focal lengths 50 mm and -150 mm.
+Design a Galilean beam expander with a threefold increase in the width of a collimated beam, using lenses with focal lengths $-50$ mm and $+150$ mm.
 
 **Solution:**
 
-**System layout:** Positive lens → Distance d → Negative lens
+**System layout:** Negative lens → distance $d$ → positive lens
 
 **Matrices:**
-- $\mathbf{L}_1 = \begin{pmatrix} 1 & 0 \\ -1/50 & 1 \end{pmatrix}$ (f = 50 mm)
+- $\mathbf{L}_1 = \begin{pmatrix} 1 & 0 \\ 1/50 & 1 \end{pmatrix}$ ($f_1=-50$ mm)
 - $\mathbf{D} = \begin{pmatrix} 1 & d \\ 0 & 1 \end{pmatrix}$ (distance d)
-- $\mathbf{L}_2 = \begin{pmatrix} 1 & 0 \\ 1/150 & 1 \end{pmatrix}$ (f = -150 mm)
+- $\mathbf{L}_2 = \begin{pmatrix} 1 & 0 \\ -1/150 & 1 \end{pmatrix}$ ($f_2=150$ mm)
 
-**For 3× expansion:** We need the A element = -3
+**For an afocal threefold expansion:** $C=0$ and $A=3$ for parallel incident rays. These conditions give $d=f_1+f_2=100$ mm.
 
 **System matrix:** $\mathbf{M} = \mathbf{L}_2\mathbf{D}\mathbf{L}_1$
 
-Working through the multiplication with the constraint A = -3 gives us the required spacing d.
+Multiplication gives $\mathbf M=\begin{pmatrix}3&100\ {\rm mm}\\0&1/3\end{pmatrix}$, so a collimated input beam exits three times wider with one third the angular spread.
 ```
 
 ## Common Pitfalls and How to Avoid Them
@@ -450,7 +484,7 @@ $$\begin{pmatrix} 1 & d_1 \\ 0 & 1 \end{pmatrix}\begin{pmatrix} 1 & d_2 \\ 0 & 1
 Two thin lenses in contact: $\mathbf{L}_{total} = \mathbf{L}_2\mathbf{L}_1$
 $$\begin{pmatrix} 1 & 0 \\ -1/f_2 & 1 \end{pmatrix}\begin{pmatrix} 1 & 0 \\ -1/f_1 & 1 \end{pmatrix} = \begin{pmatrix} 1 & 0 \\ -1/f_{eff} & 1 \end{pmatrix}$$
 
-where $\frac{1}{f_{eff}} = \frac{1}{f_1} + \frac{1}{f_2}$ (thin lens equation!)
+where $\frac{1}{f_{eff}} = \frac{1}{f_1} + \frac{1}{f_2}$ is the power-addition rule for thin lenses in contact.
 
 ### Computational Tips
 
@@ -491,9 +525,9 @@ Matrix multiplication succeeds in optics because:
 * - **Composition**
   - Sequential operations
   - Multi-element systems
-* - **Group structure**
-  - Reversibility
-  - Time-reversed paths
+* - **Invertible subset**
+  - Invertibility of lossless ray propagation
+  - Reverse tracing through lenses
 * - **Representation theory**
   - Symmetries
   - Crystal optics, polarization
@@ -528,7 +562,7 @@ Calculate the following matrix products:
 
 a) $\begin{pmatrix} 2 & 1 \\ 0 & 3 \end{pmatrix}\begin{pmatrix} 1 & 4 \\ 2 & 1 \end{pmatrix}$
 
-b) $\begin{pmatrix} 1 & 0 \\ -1/50 & 1 \end{pmatrix}\begin{pmatrix} 1 & 100 \\ 0 & 1 \end{pmatrix}$ (lens followed by free space)
+b) $\begin{pmatrix} 1 & 0 \\ -1/50 & 1 \end{pmatrix}\begin{pmatrix} 1 & 100 \\ 0 & 1 \end{pmatrix}$ (100 mm of free space followed by a 50 mm lens)
 
 c) $\begin{pmatrix} \cos\theta & -\sin\theta \\ \sin\theta & \cos\theta \end{pmatrix}^2$ (double rotation)
 ```
@@ -551,12 +585,12 @@ Find the final Jones vector and intensity (as a fraction of input).
 ```{note} Problem 3
 :class: exercise
 
-A thick lens can be modeled as:
-- Front surface: curved interface (power $P_1 = 1/R_1$)
-- Thickness: $t$ in material with index $n$
-- Back surface: curved interface (power $P_2 = -1/R_2$)
+A thick lens in air has material index $n$, axial thickness $t$, and signed
+surface radii $R_1$ and $R_2$. Define the front and back surface powers
+$P_1=(n-1)/R_1$ and $P_2=(1-n)/R_2$.
 
-Find the ABCD matrix for the complete thick lens.
+Find the ABCD matrix between the two vertex planes using the
+$(y,\theta)^T$ ray-vector convention.
 ```
 
 ### System Design
@@ -564,12 +598,13 @@ Find the ABCD matrix for the complete thick lens.
 ```{note} Problem 4
 :class: exercise
 
-Design a 4f optical processor (two lenses separated by sum of focal lengths) using:
+Design a 4f optical processor with an object plane one focal length before
+the first lens and an image plane one focal length after the second, using:
 - Input lens: f₁ = 200 mm
 - Output lens: f₂ = 100 mm
 
-a) Find the distances for proper 4f configuration
-b) Calculate the system ABCD matrix
+a) Find all three propagation distances
+b) Calculate the ABCD matrix from object plane to image plane
 c) What is the lateral magnification?
 d) What happens to the angular magnification?
 ```
@@ -581,7 +616,7 @@ d) What happens to the angular magnification?
 
 a) $\begin{pmatrix} 2 & 1 \\ 0 & 3 \end{pmatrix}\begin{pmatrix} 1 & 4 \\ 2 & 1 \end{pmatrix} = \begin{pmatrix} 4 & 9 \\ 6 & 3 \end{pmatrix}$
 
-b) $\begin{pmatrix} 1 & 0 \\ -1/50 & 1 \end{pmatrix}\begin{pmatrix} 1 & 100 \\ 0 & 1 \end{pmatrix} = \begin{pmatrix} 1 & 100 \\ -1/50 & 1 \end{pmatrix}$
+b) $\begin{pmatrix} 1 & 0 \\ -1/50 & 1 \end{pmatrix}\begin{pmatrix} 1 & 100 \\ 0 & 1 \end{pmatrix} = \begin{pmatrix} 1 & 100 \\ -1/50 & -1 \end{pmatrix}$
 
 c) $\begin{pmatrix} \cos 2\theta & -\sin 2\theta \\ \sin 2\theta & \cos 2\theta \end{pmatrix}$ (rotation by $2\theta$)
 ```
@@ -589,25 +624,62 @@ c) $\begin{pmatrix} \cos 2\theta & -\sin 2\theta \\ \sin 2\theta & \cos 2\theta 
 ```{note} Solution to Problem 2
 :class: dropdown
 
-This requires step-by-step matrix multiplication through all three elements. The QWP converts the 45° linear to circular, the HWP rotates the polarization, and the final polarizer extracts the component along 60°. The calculation involves complex arithmetic due to the QWP matrix.
+For unit input amplitude, $\mathbf E_{\rm in}=(1,1)^T/\sqrt2$.
+The quarter-wave plate gives $\mathbf E_1=(1,i)^T/\sqrt2$.
+The half-wave plate has matrix
+
+$$\mathbf H_{22.5°}=\frac1{\sqrt2}
+\begin{pmatrix}1&1\\1&-1\end{pmatrix},\qquad
+\mathbf E_2=\frac12\begin{pmatrix}1+i\\1-i\end{pmatrix}.$$
+
+The final polarizer transmits along
+$\mathbf p=(1/2,\sqrt3/2)^T$, so
+
+$$\mathbf E_{\rm out}
+=\mathbf p(\mathbf p^T\mathbf E_2)
+=\frac{(1+\sqrt3)+i(1-\sqrt3)}4
+\begin{pmatrix}1/2\\\sqrt3/2\end{pmatrix}.$$
+
+The transmitted intensity fraction is
+$|\mathbf p^T\mathbf E_2|^2=1/2$.
 ```
 
 ```{note} Solution to Problem 3
 :class: dropdown
 
-The thick lens matrix is the product of three matrices:
-$$\mathbf{M} = \mathbf{M}_{back} \cdot \mathbf{M}_{thickness} \cdot \mathbf{M}_{front}$$
+The interface matrix in $(y,\theta)^T$ coordinates is
+$\begin{pmatrix}1&0\\-(n_2-n_1)/(n_2R)&n_1/n_2\end{pmatrix}$.
+Thus
 
-where each matrix represents refraction at interfaces and propagation through the material.
+$$\mathbf M
+=\underbrace{\begin{pmatrix}1&0\\-P_2&n\end{pmatrix}}_{\rm back}
+\underbrace{\begin{pmatrix}1&t\\0&1\end{pmatrix}}_{\rm glass}
+\underbrace{\begin{pmatrix}1&0\\-P_1/n&1/n\end{pmatrix}}_{\rm front}
+=\begin{pmatrix}
+1-tP_1/n&t/n\\
+-P_1-P_2+tP_1P_2/n&1-tP_2/n
+\end{pmatrix}.$$
+
+The determinant is one because the exterior medium is air on both sides.
 ```
 
 ```{note} Solution to Problem 4
 :class: dropdown
 
-a) Distances: 200 mm + 100 mm = 300 mm separation
-b) The 4f system has the special property that A = -1, B = 0, giving perfect imaging
-c) Lateral magnification = -f₂/f₁ = -0.5
-d) Angular magnification = -f₁/f₂ = -2
+a) The object plane is 200 mm before lens 1, the lenses are 300 mm apart,
+and the image plane is 100 mm after lens 2.
+
+b) With $\mathbf D(d)=\begin{pmatrix}1&d\\0&1\end{pmatrix}$ and
+$\mathbf L(f)=\begin{pmatrix}1&0\\-1/f&1\end{pmatrix}$,
+
+$$\mathbf M=\mathbf D(100)\mathbf L(100)\mathbf D(300)
+\mathbf L(200)\mathbf D(200)
+=\begin{pmatrix}-1/2&0\\0&-2\end{pmatrix}.$$
+
+c) Since $B=0$ in this $(y,\theta)^T$ convention, the two planes are
+conjugate and the lateral magnification is $A=-f_2/f_1=-0.5$.
+
+d) The angular magnification is $D=-f_1/f_2=-2$.
 ```
 
 ## Final Thoughts: The Elegance of Linear Algebra in Physics
